@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
+import heroImg from './assets/hero.webp'
 import './App.css'
 
 /* ==========================================================================
