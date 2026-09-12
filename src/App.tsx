@@ -641,6 +641,28 @@ function Footer({
 }) {
   return (
     <footer className="site-footer">
+
+      {/* ==================================================================
+          TNI FOOTER — EDUCATIONAL & RESEARCH DISCLAIMER
+          ================================================================== */}
+      <div className="footer-disclaimer">
+        <strong>Educational &amp; Research Purposes Only</strong>
+
+        <p>
+          All content, data, charts, research, analysis, and tools provided by
+          TradingNInvestment (TNI) are for educational and research purposes
+          only and do not constitute investment, financial, trading, legal, or
+          tax advice. Information may contain errors, omissions, or delays.
+          Users should independently verify information, conduct their own due
+          diligence, and consult qualified professionals where appropriate
+          before making investment or commercial decisions. Past performance
+          does not guarantee future results.
+        </p>
+      </div>
+
+      {/* ==================================================================
+          TNI FOOTER — BRAND & NAVIGATION
+          ================================================================== */}
       <div className="footer-main">
         <div className="footer-brand">
           <span className="brand-mark">
@@ -668,14 +690,21 @@ function Footer({
             About
           </button>
 
-          <a href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer">
+          <a
+            href="https://tni-frontend.onrender.com/live/news"
+            target="_blank"
+            rel="noreferrer"
+          >
             Launch TNI
           </a>
         </nav>
       </div>
 
+      {/* ==================================================================
+          TNI FOOTER — COPYRIGHT
+          ================================================================== */}
       <div className="footer-bottom">
-        <span>© 2026 TradingNInvestment</span>
+        <span>© 2026 TradingNInvestment (TNI)</span>
 
         <span>
           Research and information. Not investment advice.
