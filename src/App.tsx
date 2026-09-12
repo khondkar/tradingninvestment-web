@@ -152,7 +152,7 @@ function Header({
             </svg>
           </button>
 
-          <a className="launch-tni" href="/live/news">
+          <a className="launch-tni" href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer">
             Launch TNI
             <span>→</span>
           </a>
@@ -229,7 +229,7 @@ function ResearchPage({
                 <span>→</span>
               </a>
 
-              <a href="/live/news" className="secondary-action">
+              <a href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer" className="secondary-action">
                 Launch TNI
                 <span>→</span>
               </a>
@@ -621,7 +621,7 @@ function AboutPage() {
           </p>
         </div>
 
-        <a href="/live/news" className="primary-action">
+        <a href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer" className="primary-action">
           Launch TNI
           <span>→</span>
         </a>
@@ -668,7 +668,7 @@ function Footer({
             About
           </button>
 
-          <a href="/live/news">
+          <a href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer">
             Launch TNI
           </a>
         </nav>
