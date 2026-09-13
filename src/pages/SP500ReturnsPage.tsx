@@ -165,6 +165,81 @@ function calculateMedian(
   return sorted[middle]
 }
 
+
+// ============================================================================
+// TNI S&P 500 RETURNS — COMPLETED CALENDAR-YEAR PERIOD RETURNS
+//
+// Uses the same verified annual-return dataset that powers the chart.
+// Current YTD is excluded from 1Y / 3Y / 5Y / 10Y / 20Y calculations.
+// ============================================================================
+
+type CompletedPeriodReturn = {
+  years: number
+  startYear: number
+  endYear: number
+  cumulativeReturnPct: number
+  annualizedReturnPct: number
+}
+
+function calculateCompletedPeriodReturn(
+  years: number,
+): CompletedPeriodReturn | null {
+  const completedYears =
+    dataset.data
+      .filter(
+        (row) =>
+          row.year <
+          dataset.current_year.year,
+      )
+      .sort(
+        (a, b) =>
+          a.year - b.year,
+      )
+
+  if (
+    completedYears.length <
+    years
+  ) {
+    return null
+  }
+
+  const selectedYears =
+    completedYears.slice(
+      -years,
+    )
+
+  const growthFactor =
+    selectedYears.reduce(
+      (growth, row) =>
+        growth *
+        (1 + row.value / 100),
+      1,
+    )
+
+  const cumulativeReturnPct =
+    (growthFactor - 1) * 100
+
+  const annualizedReturnPct =
+    (
+      Math.pow(
+        growthFactor,
+        1 / years,
+      ) - 1
+    ) * 100
+
+  return {
+    years,
+    startYear:
+      selectedYears[0].year,
+    endYear:
+      selectedYears[
+        selectedYears.length - 1
+      ].year,
+    cumulativeReturnPct,
+    annualizedReturnPct,
+  }
+}
+
 // ============================================================================
 // TNI RETURN EXPLORER — MAIN PAGE
 // ============================================================================
@@ -179,15 +254,22 @@ export default function SP500ReturnsPage() {
 
   useEffect(() => {
     const seoTitle =
-      'S&P 500 Returns by Year (1928–2026) | Historical Returns & Average Return'
+      'S&P 500 Returns by Year: 100-Year History & Performance'
 
     const seoDescription =
-      'Explore S&P 500 returns by year from 1928 through 2026 YTD, including historical annual returns, average return, positive and negative years, market performance, and interactive return statistics.'
+      'Explore S&P 500 returns by year from 1928 to present, including current-year, 1-year, 3-year, 5-year, 10-year and 20-year returns, average historical returns, positive and negative years, and long-term market performance.'
 
     const canonicalUrl =
       'https://tradingninvestment.com/sp-500-returns/'
 
+    const authorUrl =
+      'https://tradingninvestment.com/about/'
+
     document.title = seoTitle
+
+    // ========================================================================
+    // TNI SEO — META DESCRIPTION
+    // ========================================================================
 
     let description =
       document.querySelector<HTMLMetaElement>(
@@ -209,6 +291,34 @@ export default function SP500ReturnsPage() {
     description.content =
       seoDescription
 
+    // ========================================================================
+    // TNI SEO — ROBOTS DIRECTIVE
+    // ========================================================================
+
+    let robots =
+      document.querySelector<HTMLMetaElement>(
+        'meta[name="robots"]',
+      )
+
+    if (!robots) {
+      robots =
+        document.createElement('meta')
+
+      robots.name =
+        'robots'
+
+      document.head.appendChild(
+        robots,
+      )
+    }
+
+    robots.content =
+      'index, follow, max-image-preview:large'
+
+    // ========================================================================
+    // TNI SEO — HISTORICAL CANONICAL URL
+    // ========================================================================
+
     let canonical =
       document.querySelector<HTMLLinkElement>(
         'link[rel="canonical"]',
@@ -228,6 +338,166 @@ export default function SP500ReturnsPage() {
 
     canonical.href =
       canonicalUrl
+
+    // ========================================================================
+    // TNI S&P 500 RETURNS — ARTICLE STRUCTURED DATA
+    //
+    // Reinforces the existing identity relationship:
+    // Kamal Khondkar -> Quant Researcher -> TradingNInvestment research.
+    // ========================================================================
+
+    const articleSchema = {
+      '@context':
+        'https://schema.org',
+      '@type':
+        'Article',
+      headline:
+        'S&P 500 Returns by Year: 1928 to Present',
+      description:
+        seoDescription,
+      url:
+        canonicalUrl,
+      mainEntityOfPage: {
+        '@type':
+          'WebPage',
+        '@id':
+          canonicalUrl,
+      },
+      author: {
+        '@type':
+          'Person',
+        name:
+          'Kamal Khondkar',
+        jobTitle:
+          'Quant Researcher',
+        url:
+          authorUrl,
+      },
+      publisher: {
+        '@type':
+          'Organization',
+        name:
+          'TradingNInvestment',
+        url:
+          'https://tradingninvestment.com/',
+      },
+      about: {
+        '@type':
+          'Thing',
+        name:
+          'S&P 500 Historical Returns',
+      },
+      isAccessibleForFree:
+        true,
+    }
+
+    let articleSchemaElement =
+      document.querySelector<HTMLScriptElement>(
+        '#tni-sp500-article-schema',
+      )
+
+    if (!articleSchemaElement) {
+      articleSchemaElement =
+        document.createElement(
+          'script',
+        )
+
+      articleSchemaElement.id =
+        'tni-sp500-article-schema'
+
+      articleSchemaElement.type =
+        'application/ld+json'
+
+      document.head.appendChild(
+        articleSchemaElement,
+      )
+    }
+
+    articleSchemaElement.textContent =
+      JSON.stringify(
+        articleSchema,
+      )
+
+    // ========================================================================
+    // TNI S&P 500 RETURNS — DATASET STRUCTURED DATA
+    //
+    // The underlying market data is sourced separately. TNI is credited for
+    // the research organization, calculations, analysis and presentation.
+    // No DataDownload block is declared until a public CSV is verified live.
+    // ========================================================================
+
+    const datasetSchema = {
+      '@context':
+        'https://schema.org',
+      '@type':
+        'Dataset',
+      name:
+        'S&P 500 Historical Annual Returns: 1928 to Present',
+      alternateName:
+        'TradingNInvestment S&P 500 Historical Return Research Dataset',
+      description:
+        'Historical S&P 500 annual price-return research from 1928 to the latest available market data, including current-year performance and 1-year, 3-year, 5-year, 10-year and 20-year return statistics.',
+      url:
+        canonicalUrl,
+      temporalCoverage:
+        `${dataset.summary.start_year}/..`,
+      creator: {
+        '@type':
+          'Person',
+        name:
+          'Kamal Khondkar',
+        jobTitle:
+          'Quant Researcher',
+        url:
+          authorUrl,
+      },
+      publisher: {
+        '@type':
+          'Organization',
+        name:
+          'TradingNInvestment',
+        url:
+          'https://tradingninvestment.com/',
+      },
+      variableMeasured: [
+        'S&P 500 annual price return',
+        'Current year return',
+        '1-year return',
+        '3-year annualized return',
+        '5-year annualized return',
+        '10-year annualized return',
+        '20-year annualized return',
+      ],
+      isAccessibleForFree:
+        true,
+    }
+
+    let datasetSchemaElement =
+      document.querySelector<HTMLScriptElement>(
+        '#tni-sp500-dataset-schema',
+      )
+
+    if (!datasetSchemaElement) {
+      datasetSchemaElement =
+        document.createElement(
+          'script',
+        )
+
+      datasetSchemaElement.id =
+        'tni-sp500-dataset-schema'
+
+      datasetSchemaElement.type =
+        'application/ld+json'
+
+      document.head.appendChild(
+        datasetSchemaElement,
+      )
+    }
+
+    datasetSchemaElement.textContent =
+      JSON.stringify(
+        datasetSchema,
+      )
   }, [])
 
   // ==========================================================================
@@ -590,6 +860,32 @@ export default function SP500ReturnsPage() {
     rangePreset !== 'all'
 
   // ==========================================================================
+  // TNI S&P 500 RETURNS — EVERGREEN PERIOD RETURN STATISTICS
+  //
+  // These are independent of interactive filters and are calculated from the
+  // latest completed calendar years in the verified annual-return dataset.
+  // ==========================================================================
+
+  const periodReturns =
+    useMemo(
+      () =>
+        [1, 3, 5, 10, 20]
+          .map(
+            (years) =>
+              calculateCompletedPeriodReturn(
+                years,
+              ),
+          )
+          .filter(
+            (
+              result,
+            ): result is CompletedPeriodReturn =>
+              result !== null,
+          ),
+      [],
+    )
+
+  // ==========================================================================
   // TNI S&P 500 RETURN CENTER — PAGE
   // ==========================================================================
 
@@ -643,8 +939,7 @@ export default function SP500ReturnsPage() {
               Dedicated typography prevents multi-line headline overlap.
           ============================================================= */}
           <h1 className="tni-sp500-research-title">
-            S&amp;P 500 Returns by Year (1928–2026): Historical Annual Returns
-            and Market Performance
+            S&amp;P 500 Returns by Year: 1928 to Present
           </h1>
 
           <p
@@ -661,11 +956,236 @@ export default function SP500ReturnsPage() {
               lineHeight: 1.7,
             }}
           >
-            Explore historical S&P 500 returns by year from 1928 through{' '}
-            {dataset.current_year.label}. Analyze positive and negative years,
-            S&P 500 average returns, and 3-year, 5-year, 10-year and 20-year
-            performance periods using the interactive research explorer.
+            Explore S&amp;P 500 returns by year from 1928 to present.
+            Analyze the current-year return, 1-year, 3-year, 5-year, 10-year
+            and 20-year returns, average historical returns, positive and
+            negative market years, and long-term market performance using the
+            interactive research explorer.
           </p>
+
+          {/* =============================================================
+              TNI S&P 500 RESEARCH — VISIBLE AUTHORSHIP & ENTITY SIGNAL
+
+              Keeps the visible page consistent with Article/Dataset schema.
+          ============================================================= */}
+          <p
+            style={{
+              margin: '12px 0 0',
+              color: '#6b7b90',
+              fontSize: '13px',
+              lineHeight: 1.6,
+            }}
+          >
+            Research &amp; Analysis by{' '}
+            <a
+              href="/about/"
+              rel="author"
+              style={{
+                color: '#10233f',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              Kamal Khondkar
+            </a>{' '}
+            • Quant Researcher • TradingNInvestment
+          </p>
+        </section>
+
+        {/* =================================================================
+            TNI S&P 500 RETURNS — EVERGREEN CRAWLABLE HISTORICAL STATISTICS
+            Full-history metrics remain independent of interactive filters.
+        ================================================================= */}
+
+        <section
+          aria-labelledby="sp500-100-year-statistics"
+          style={{
+            marginBottom: '34px',
+          }}
+        >
+          <h2
+            id="sp500-100-year-statistics"
+            style={{
+              margin: '0 0 8px',
+              color: '#10233f',
+              fontSize: '24px',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            S&amp;P 500 or Market 100 Year Historical Return Statistics
+          </h2>
+
+          <p
+            style={{
+              maxWidth: '900px',
+              margin: '0 0 16px',
+              color: '#6b7b90',
+              fontSize: '13px',
+              lineHeight: 1.7,
+            }}
+          >
+            Historical S&amp;P 500 annual price-return statistics from{' '}
+            {dataset.summary.start_year} to present, with the current year
+            reported separately as year-to-date.
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns:
+                'repeat(auto-fit, minmax(180px, 1fr))',
+              gap: '12px',
+            }}
+          >
+            <StatCard
+              label="Historical Coverage"
+              value={`${dataset.summary.start_year} to Present`}
+              detail="Latest verified market data"
+            />
+
+            <StatCard
+              label="Average Annual Return"
+              value={formatReturn(
+                dataset.summary
+                  .average_annual_return_pct,
+              )}
+              detail="Completed calendar years"
+            />
+
+            <StatCard
+              label="Median Annual Return"
+              value={formatReturn(
+                dataset.summary
+                  .median_annual_return_pct,
+              )}
+              detail="Completed calendar years"
+            />
+
+            <StatCard
+              label="Positive / Non-Negative Years"
+              value={`${dataset.summary.positive_years}`}
+              detail={`${dataset.summary.positive_year_pct.toFixed(
+                2,
+              )}% of completed years`}
+            />
+
+            <StatCard
+              label="Negative Years"
+              value={`${dataset.summary.negative_years}`}
+              detail={`${dataset.summary.negative_year_pct.toFixed(
+                2,
+              )}% of completed years`}
+            />
+
+            <StatCard
+              label="Best Year"
+              value={formatReturn(
+                dataset.summary
+                  .best_year
+                  .return_pct,
+              )}
+              detail={`${dataset.summary.best_year.year}`}
+            />
+
+            <StatCard
+              label="Worst Year"
+              value={formatReturn(
+                dataset.summary
+                  .worst_year
+                  .return_pct,
+              )}
+              detail={`${dataset.summary.worst_year.year}`}
+            />
+
+            <StatCard
+              label="Current Year Return"
+              value={formatReturn(
+                dataset.current_year
+                  .return_pct,
+              )}
+              detail={`${dataset.current_year.label} • YTD`}
+            />
+          </div>
+        </section>
+
+        {/* =================================================================
+            TNI S&P 500 RETURNS — 1Y / 3Y / 5Y / 10Y / 20Y RETURNS
+            Compounded from the latest completed calendar-year observations.
+        ================================================================= */}
+
+        <section
+          aria-labelledby="sp500-period-returns"
+          style={{
+            marginBottom: '34px',
+          }}
+        >
+          <h2
+            id="sp500-period-returns"
+            style={{
+              margin: '0 0 8px',
+              color: '#10233f',
+              fontSize: '24px',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            S&amp;P 500 1-Year, 3-Year, 5-Year, 10-Year and 20-Year Returns
+          </h2>
+
+          <p
+            style={{
+              maxWidth: '900px',
+              margin: '0 0 16px',
+              color: '#6b7b90',
+              fontSize: '13px',
+              lineHeight: 1.7,
+            }}
+          >
+            Period returns are compounded from the latest completed
+            calendar-year S&amp;P 500 price returns. Multi-year cards also
+            show the annualized return for the same completed-year period.
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns:
+                'repeat(auto-fit, minmax(180px, 1fr))',
+              gap: '12px',
+            }}
+          >
+            {/* ===========================================================
+                TNI S&P 500 RETURNS — SEO-FRIENDLY PERIOD RETURN VALUES
+
+                1Y  = cumulative completed-calendar-year return.
+                3Y+ = annualized return (CAGR) for easier comparison.
+            =========================================================== */}
+            {periodReturns.map(
+              (period) => {
+                const isOneYear =
+                  period.years === 1
+
+                const displayedReturn =
+                  isOneYear
+                    ? period.cumulativeReturnPct
+                    : period.annualizedReturnPct
+
+                return (
+                  <StatCard
+                    key={period.years}
+                    label={`${period.years}-Year Return`}
+                    value={formatReturn(
+                      displayedReturn,
+                    )}
+                    detail={
+                      isOneYear
+                        ? `${period.endYear} completed calendar year`
+                        : `${period.startYear}–${period.endYear} • Annualized`
+                    }
+                  />
+                )
+              },
+            )}
+          </div>
         </section>
 
         {/* =================================================================
@@ -1121,14 +1641,36 @@ export default function SP500ReturnsPage() {
         >
           {filteredData.length >
           0 ? (
-            <SP500AnnualReturnsChart
-              data={
-                filteredData
-              }
-              rangeLabel={
-                `Showing ${rangeSummary}`
-              }
-            />
+            <figure
+              style={{
+                margin: 0,
+              }}
+            >
+              <SP500AnnualReturnsChart
+                data={
+                  filteredData
+                }
+                rangeLabel={
+                  `Showing ${rangeSummary}`
+                }
+              />
+
+              {/* =========================================================
+                  TNI S&P 500 CHART — RESEARCH / PROVENANCE CREDIT
+              ========================================================= */}
+              <figcaption
+                style={{
+                  marginTop: '10px',
+                  color: '#7a899c',
+                  fontSize: '12px',
+                  lineHeight: 1.6,
+                }}
+              >
+                TradingNInvestment research visualization. Historical return
+                calculations, analysis and presentation by Kamal Khondkar.
+                Underlying market data source: {dataset.source}.
+              </figcaption>
+            </figure>
           ) : (
             <div className="tni-no-filter-results">
               No S&P 500 annual returns match this filter combination.
@@ -1192,8 +1734,8 @@ export default function SP500ReturnsPage() {
               }}
             >
               Share the interactive chart, embed it in an article or website,
-              or use the static research visualization subject to the usage
-              terms below.
+              download the annual-return data as CSV, or use the static
+              research visualization subject to the usage terms below.
             </p>
           </div>
 
@@ -1228,6 +1770,30 @@ export default function SP500ReturnsPage() {
               }}
             >
               View Interactive Embed
+            </a>
+
+            {/* =============================================================
+                TNI S&P 500 RETURNS — VERIFIED ANNUAL DATA CSV DOWNLOAD
+            ============================================================= */}
+            <a
+              href="/data/sp500-annual-returns.csv"
+              download
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '42px',
+                padding: '0 16px',
+                border: '1px solid #1677ff',
+                borderRadius: '9px',
+                background: '#ffffff',
+                color: '#0b63ce',
+                fontSize: '13px',
+                fontWeight: 800,
+                textDecoration: 'none',
+              }}
+            >
+              Download S&amp;P 500 Annual Returns CSV
             </a>
 
             <button
@@ -1419,7 +1985,7 @@ export default function SP500ReturnsPage() {
                     '-0.02em',
                 }}
               >
-                S&P 500 Returns by Year
+                S&amp;P 500 Annual Returns by Year: 1928 to Present
               </h2>
 
               <p
@@ -1753,8 +2319,8 @@ export default function SP500ReturnsPage() {
                 1.6,
             }}
           >
-            2026 is reported as year-to-date (YTD). Historical figures are
-            price returns and exclude dividends.
+            The current year is reported as year-to-date (YTD). Historical
+            figures shown on this page are S&amp;P 500 price returns.
           </div>
         </section>
 
@@ -1782,7 +2348,7 @@ export default function SP500ReturnsPage() {
                 '-0.02em',
             }}
           >
-            S&P 500 Return Statistics
+            Interactive S&amp;P 500 Return Statistics
           </h2>
 
           <p
@@ -1914,7 +2480,7 @@ export default function SP500ReturnsPage() {
         >
           <InfoCard
             label="Historical Coverage"
-            value={`${dataset.summary.start_year}–${dataset.current_year.year}`}
+            value={`${dataset.summary.start_year} to Present`}
           />
 
           <InfoCard
@@ -1932,7 +2498,7 @@ export default function SP500ReturnsPage() {
             TNI ANNUAL RETURNS — METHODOLOGY & SOURCE
         ================================================================= */}
 
-        
+
         {/* ==================================================================
             TNI S&P 500 RETURNS — LONG-FORM HISTORICAL RESEARCH ARTICLE
             Crawlable HTML content for the canonical /sp-500-returns/ page.
@@ -2026,8 +2592,8 @@ export default function SP500ReturnsPage() {
                 1.8,
             }}
           >
-            Data Source: Yahoo Finance — S&P 500 Index (^GSPC). These figures
-            represent price returns and do not include dividends.
+            Data Source: Yahoo Finance — S&amp;P 500 Index (^GSPC). Return
+            Type: S&amp;P 500 Price Return.
           </p>
         </section>
       </div>
