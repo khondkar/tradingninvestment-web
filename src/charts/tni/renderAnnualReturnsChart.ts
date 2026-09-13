@@ -62,12 +62,17 @@ function getYearLabelInterval(
   dataLength: number,
   width: number
 ): number {
-  if (width < 520) {
-    if (dataLength > 80) return 20;
-    if (dataLength > 50) return 10;
-    if (dataLength > 25) return 5;
+  // ==========================================================
+  // TNI RESPONSIVE YEAR LABEL DENSITY
+  // Prioritize readable labels over maximum label count
+  // ==========================================================
 
-    return 2;
+  if (width < 720) {
+    if (dataLength > 80) return 30;
+    if (dataLength > 50) return 20;
+    if (dataLength > 25) return 10;
+
+    return 5;
   }
 
   if (dataLength > 80) return 10;
@@ -112,11 +117,66 @@ export function renderAnnualReturnsChart(
 
   const width = containerWidth;
 
-  const height =
-    config.height ??
-    theme.chart.defaultHeight;
+  // ==========================================================
+  // TNI RESPONSIVE CHART MODE
+  // Mobile and desktop receive dedicated spacing and typography
+  // ==========================================================
 
-  const margin = theme.spacing;
+  const isMobile =
+    width < 720;
+
+  // ==========================================================
+  // TNI RESPONSIVE CHART HEIGHT
+  // Mobile remains compact while reserving a clean footer zone
+  // ==========================================================
+
+  const height =
+    isMobile
+      ? 420
+      : config.height ??
+        theme.chart.defaultHeight;
+
+  // ==========================================================
+  // TNI RESPONSIVE CHART MARGINS
+  //
+  // IMPORTANT:
+  // Extra bottom space is intentional.
+  // It separates:
+  //   1. Year labels
+  //   2. Source attribution
+  //   3. TradingNInvestment watermark
+  // ==========================================================
+
+  const margin =
+    isMobile
+      ? {
+          top: 34,
+          right: 12,
+          bottom: 124,
+          left: 58,
+        }
+      : {
+          ...theme.spacing,
+          bottom:
+            theme.spacing.bottom + 24,
+        };
+
+  // ==========================================================
+  // TNI RESPONSIVE AXIS TYPOGRAPHY
+  //
+  // Desktop is larger than the original chart.
+  // Mobile remains substantially larger but avoids overlap.
+  // ==========================================================
+
+  const axisFontSize =
+    isMobile
+      ? 22
+      : 15;
+
+  const yearFontSize =
+    isMobile
+      ? 20
+      : 15;
 
   const innerWidth =
     Math.max(
@@ -420,7 +480,13 @@ export function renderAnnualReturnsChart(
     )
     .attr(
       "font-size",
-      theme.typography.axisSize
+      axisFontSize
+    )
+    .attr(
+      "font-weight",
+      isMobile
+        ? 650
+        : 600
     );
 
 
@@ -438,17 +504,83 @@ export function renderAnnualReturnsChart(
   const firstYear =
     data[0].year;
 
-  const visibleYears =
-    data
-      .map(
-        (point) =>
-          point.year
-      )
-      .filter(
+  const lastYear =
+    data[data.length - 1].year;
+
+  // ==========================================================
+  // TNI MOBILE YEAR LABEL CONTROL
+  //
+  // Mobile:
+  // - Maximum 4 visible year labels
+  // - Always keep first year
+  // - Always keep latest year
+  // - Suppress the year immediately before latest
+  //   when enough observations exist
+  //
+  // Desktop:
+  // - Preserve existing interval-based behavior
+  // ==========================================================
+
+  const allYears =
+    data.map(
+      (point) =>
+        point.year
+    );
+
+  let visibleYears: number[];
+
+  if (isMobile) {
+    if (allYears.length <= 4) {
+      visibleYears =
+        [...allYears];
+    } else {
+      const interiorYears =
+        allYears.slice(
+          1,
+          -2
+        );
+
+      const firstInterior =
+        interiorYears[
+          Math.floor(
+            interiorYears.length / 3
+          )
+        ];
+
+      const secondInterior =
+        interiorYears[
+          Math.floor(
+            (interiorYears.length * 2) / 3
+          )
+        ];
+
+      visibleYears = [
+        firstYear,
+        firstInterior,
+        secondInterior,
+        lastYear,
+      ].filter(
+        (
+          year,
+          index,
+          years
+        ) =>
+          Number.isFinite(year) &&
+          years.indexOf(year) === index
+      );
+    }
+  } else {
+    visibleYears =
+      allYears.filter(
         (year) =>
           year === firstYear ||
-          year % yearInterval === 0
+          year === lastYear ||
+          (
+            year !== 1930 &&
+            year % yearInterval === 0
+          )
       );
+  }
 
   const xAxis = d3
     .axisBottom(xScale)
@@ -490,11 +622,19 @@ export function renderAnnualReturnsChart(
     )
     .attr(
       "font-size",
-      theme.typography.axisSize
+      yearFontSize
+    )
+    .attr(
+      "font-weight",
+      isMobile
+        ? 650
+        : 600
     )
     .attr(
       "dy",
-      "1.1em"
+      isMobile
+        ? "1.05em"
+        : "1.1em"
     );
 
 
@@ -803,16 +943,21 @@ export function renderAnnualReturnsChart(
       .append("text")
       .attr(
         "x",
-        width -
-          margin.right
+        isMobile
+          ? margin.left
+          : width - margin.right
       )
       .attr(
         "y",
-        height - 12
+        isMobile
+          ? height - 16
+          : height - 14
       )
       .attr(
         "text-anchor",
-        "end"
+        isMobile
+          ? "start"
+          : "end"
       )
       .attr(
         "fill",
@@ -820,7 +965,9 @@ export function renderAnnualReturnsChart(
       )
       .attr(
         "font-size",
-        theme.typography.watermarkSize
+        isMobile
+          ? 13
+          : theme.typography.watermarkSize
       )
       .attr(
         "font-weight",
@@ -849,7 +996,9 @@ export function renderAnnualReturnsChart(
       )
       .attr(
         "y",
-        height - 12
+        isMobile
+          ? height - 44
+          : height - 14
       )
       .attr(
         "fill",
@@ -857,7 +1006,13 @@ export function renderAnnualReturnsChart(
       )
       .attr(
         "font-size",
-        11
+        isMobile
+          ? 12
+          : 12
+      )
+      .attr(
+        "font-weight",
+        500
       )
       .text(
         `Source: ${config.branding.sourceLabel}`

@@ -3317,3 +3317,763 @@ button.primary-action {
   }
 }
 
+
+
+/* ==========================================================================
+   TNI S&P 500 ANNUAL RETURNS — TABLE INTRO TYPOGRAPHY
+   Desktop readability + accessibility-first mobile typography
+   ========================================================================== */
+
+.tni-annual-table-description {
+  font-size: 16px;
+}
+
+.tni-return-legend {
+  gap: 20px;
+  font-size: 16px;
+}
+
+
+/* ==========================================================================
+   TNI S&P 500 ANNUAL RETURNS — THREE-COLUMN TABLE
+   Keep Year / Return / Category visible without horizontal scrolling
+   ========================================================================== */
+
+.tni-annual-table-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.tni-annual-returns-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tni-annual-returns-table th:nth-child(1),
+.tni-annual-returns-table td:nth-child(1) {
+  width: 28%;
+}
+
+.tni-annual-returns-table th:nth-child(2),
+.tni-annual-returns-table td:nth-child(2) {
+  width: 38%;
+}
+
+.tni-annual-returns-table th:nth-child(3),
+.tni-annual-returns-table td:nth-child(3) {
+  width: 34%;
+}
+
+
+/* ==========================================================================
+   TNI S&P 500 ANNUAL RETURNS — MOBILE READABILITY
+   Large text, compact columns, no horizontal table scroll
+   ========================================================================== */
+
+@media (max-width: 720px) {
+
+  .tni-annual-table-description {
+    font-size: 26px;
+    line-height: 1.35 !important;
+  }
+
+  .tni-return-legend {
+    gap: 14px 20px;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .tni-return-legend span {
+    white-space: nowrap;
+  }
+
+  .tni-annual-returns-table {
+    table-layout: fixed;
+  }
+
+  .tni-annual-returns-table th {
+    padding: 11px 6px !important;
+    font-size: 11px !important;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  .tni-annual-returns-table td {
+    padding: 11px 6px !important;
+    font-size: 14px !important;
+  }
+
+  .tni-annual-returns-table th:nth-child(1),
+  .tni-annual-returns-table td:nth-child(1) {
+    width: 27%;
+  }
+
+  .tni-annual-returns-table th:nth-child(2),
+  .tni-annual-returns-table td:nth-child(2) {
+    width: 39%;
+  }
+
+  .tni-annual-returns-table th:nth-child(3),
+  .tni-annual-returns-table td:nth-child(3) {
+    width: 34%;
+  }
+
+  .tni-annual-returns-table td:nth-child(2) span {
+    min-width: 0 !important;
+    padding: 5px 6px !important;
+    font-size: 14px !important;
+  }
+
+  .tni-annual-returns-table td:nth-child(3) {
+    font-size: 13px !important;
+    white-space: nowrap;
+  }
+}
+
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — PRODUCT DIFFERENTIATOR
+   Prominent desktop + mobile filter system
+   ========================================================================== */
+
+.tni-return-explorer {
+  margin-bottom: 22px;
+  overflow: hidden;
+  border: 1px solid #a9d2ff;
+  border-radius: 14px;
+  background: #f4f9ff;
+  box-shadow: 0 8px 24px rgba(15, 82, 156, 0.07);
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — HIGH-CONTRAST HEADER
+   ========================================================================== */
+
+.tni-return-explorer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 17px 20px;
+  background: linear-gradient(
+    135deg,
+    #0969da 0%,
+    #1677ff 100%
+  );
+  color: #ffffff;
+}
+
+.tni-return-explorer-title {
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.tni-return-explorer-subtitle {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.tni-return-explorer-status {
+  flex-shrink: 0;
+  min-width: 185px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9px;
+  background: rgba(0, 40, 100, 0.18);
+  text-align: center;
+}
+
+.tni-return-explorer-status strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.tni-return-explorer-status span {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 11px;
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — DESKTOP CONTROL GRID
+   ========================================================================== */
+
+.tni-return-explorer-controls {
+  display: grid;
+  grid-template-columns:
+    minmax(250px, 0.9fr)
+    minmax(340px, 1.2fr)
+    minmax(280px, 1fr);
+  gap: 0;
+  padding: 18px 20px;
+}
+
+.tni-filter-group {
+  min-width: 0;
+  padding: 0 18px;
+  border-right: 1px solid #d6e7f8;
+}
+
+.tni-filter-group:first-child {
+  padding-left: 0;
+}
+
+.tni-filter-group:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.tni-filter-label {
+  margin-bottom: 8px;
+  color: #15395f;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — FILTER BUTTONS
+   ========================================================================== */
+
+.tni-filter-button-row {
+  display: flex;
+  gap: 7px;
+  flex-wrap: nowrap;
+}
+
+.tni-filter-button {
+  min-height: 42px;
+  padding: 0 15px;
+  border: 1px solid #bdd2e7;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #193653;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.tni-filter-button:hover {
+  border-color: #1677ff;
+  color: #0b63ce;
+  box-shadow: 0 3px 10px rgba(22, 119, 255, 0.12);
+}
+
+.tni-filter-button:active {
+  transform: translateY(1px);
+}
+
+.tni-filter-button-active {
+  border-color: #0b6fdb;
+  background: #0b6fdb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(11, 111, 219, 0.22);
+}
+
+.tni-filter-button-active:hover {
+  border-color: #075fbf;
+  background: #075fbf;
+  color: #ffffff;
+}
+
+.tni-filter-period-row .tni-filter-button {
+  flex: 1 1 auto;
+  min-width: 48px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — CUSTOM YEAR RANGE
+   ========================================================================== */
+
+.tni-custom-range {
+  display: grid;
+  grid-template-columns:
+    minmax(90px, 1fr)
+    22px
+    minmax(90px, 1fr);
+  align-items: end;
+  gap: 8px;
+}
+
+.tni-custom-select-wrap {
+  min-width: 0;
+}
+
+.tni-custom-select-wrap span {
+  display: block;
+  margin-bottom: 5px;
+  color: #50677f;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.tni-custom-select-wrap select {
+  width: 100%;
+  height: 42px;
+  padding: 0 31px 0 11px;
+  border: 1px solid #bdd2e7;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17324d;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.tni-custom-select-wrap select:focus {
+  outline: 2px solid rgba(22, 119, 255, 0.18);
+  outline-offset: 1px;
+  border-color: #1677ff;
+}
+
+.tni-custom-range-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  color: #35526f;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — ACTIVE FILTER SUMMARY
+   ========================================================================== */
+
+.tni-return-explorer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 11px 20px;
+  border-top: 1px solid #dbeaf8;
+  background: #eaf5ff;
+  color: #35526f;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.tni-return-explorer-footer strong {
+  color: #12385f;
+  font-weight: 850;
+}
+
+.tni-filter-reset {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  border: 0;
+  background: transparent;
+  color: #0b63ce;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.tni-filter-reset:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — EMPTY RESULT STATE
+   ========================================================================== */
+
+.tni-no-filter-results {
+  padding: 34px 18px;
+  color: #6b7b90;
+  font-size: 13px;
+  font-weight: 650;
+  text-align: center;
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — TABLET
+   ========================================================================== */
+
+@media (max-width: 980px) {
+  .tni-return-explorer-controls {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 22px;
+  }
+
+  .tni-filter-group {
+    border-right: 0;
+    padding: 0;
+  }
+
+  .tni-filter-custom-group {
+    grid-column: 1 / -1;
+    padding-top: 18px;
+    border-top: 1px solid #d6e7f8;
+  }
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — MOBILE
+   Large touch targets without weakening the chart
+   ========================================================================== */
+
+@media (max-width: 680px) {
+  .tni-return-explorer {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 12px;
+  }
+
+  .tni-return-explorer-header {
+    display: block;
+    padding: 16px;
+  }
+
+  .tni-return-explorer-title {
+    font-size: 20px;
+  }
+
+  .tni-return-explorer-subtitle {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+  .tni-return-explorer-status {
+    width: 100%;
+    min-width: 0;
+    margin-top: 13px;
+    padding: 9px 10px;
+    box-sizing: border-box;
+  }
+
+  .tni-return-explorer-status strong {
+    font-size: 13px;
+  }
+
+  .tni-return-explorer-status span {
+    font-size: 12px;
+  }
+
+  .tni-return-explorer-controls {
+    display: block;
+    padding: 16px;
+  }
+
+  .tni-filter-group {
+    padding: 0 0 19px;
+    margin: 0 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid #d6e7f8;
+  }
+
+  .tni-filter-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .tni-filter-label {
+    margin-bottom: 9px;
+    font-size: 12px;
+  }
+
+  .tni-filter-button-row {
+    display: grid;
+    gap: 8px;
+  }
+
+  .tni-filter-group:first-child .tni-filter-button-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tni-filter-period-row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .tni-filter-button {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 7px;
+    font-size: 13px;
+  }
+
+  .tni-filter-period-row .tni-filter-button {
+    min-width: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .tni-custom-range {
+    grid-template-columns:
+      minmax(0, 1fr)
+      20px
+      minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .tni-custom-select-wrap span {
+    font-size: 12px;
+  }
+
+  .tni-custom-select-wrap select {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .tni-custom-range-arrow {
+    height: 46px;
+  }
+
+  .tni-return-explorer-footer {
+    display: block;
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .tni-filter-reset {
+    display: block;
+    margin-top: 6px;
+    padding: 4px 0;
+    font-size: 12px;
+  }
+}
+
+/* ==========================================================================
+   TNI RETURN EXPLORER — VERY SMALL MOBILE
+   Prevent period controls from overflowing narrow screens
+   ========================================================================== */
+
+@media (max-width: 390px) {
+  .tni-filter-period-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ==========================================================================
+   TNI S&P 500 RETURNS — LONG-FORM HISTORICAL RESEARCH ARTICLE
+   Purpose:
+   - Highly readable long-form research
+   - Short visual reading blocks
+   - Institutional styling
+   - Green = positive history
+   - Red = negative history
+   - TNI blue = neutral research/context
+   ========================================================================== */
+
+.sp500-research-article {
+  width: 100%;
+  max-width: 1040px;
+  margin: 72px auto 24px;
+  color: #172033;
+  line-height: 1.78;
+}
+
+.sp500-research-header {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e7ebf1;
+}
+
+.sp500-research-eyebrow,
+.research-section-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #2563eb;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.sp500-research-header h2 {
+  margin: 0 0 22px;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.sp500-research-lead {
+  color: #334155;
+  font-size: 1.18rem;
+  line-height: 1.75;
+}
+
+.sp500-research-article p {
+  max-width: 850px;
+  margin: 0 0 18px;
+  font-size: 1.02rem;
+}
+
+.sp500-research-article strong {
+  font-weight: 750;
+}
+
+.sp500-research-section {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 28px;
+  padding: 32px 34px;
+  border: 1px solid #e6eaf0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    0 8px 24px rgba(15, 23, 42, 0.035);
+}
+
+.sp500-research-section h3 {
+  margin: 0 0 22px;
+  color: #0f172a;
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.sp500-research-section h4 {
+  margin: 30px 0 14px;
+  color: #1e3a8a;
+  font-size: 1.14rem;
+  line-height: 1.35;
+}
+
+.sp500-research-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   TNI RESEARCH ARTICLE — POSITIVE RETURN SECTIONS
+   ========================================================================== */
+
+.sp500-research-section.research-positive {
+  border-left: 5px solid #16a34a;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(22, 163, 74, 0.045) 0%,
+      rgba(255, 255, 255, 1) 18%
+    );
+}
+
+.research-positive .research-section-kicker,
+.research-positive h3,
+.research-positive h4 {
+  color: #08783e;
+}
+
+
+/* ==========================================================================
+   TNI RESEARCH ARTICLE — NEGATIVE RETURN SECTIONS
+   ========================================================================== */
+
+.sp500-research-section.research-negative {
+  border-left: 5px solid #dc2626;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(220, 38, 38, 0.042) 0%,
+      rgba(255, 255, 255, 1) 18%
+    );
+}
+
+.research-negative .research-section-kicker,
+.research-negative h3,
+.research-negative h4 {
+  color: #b42318;
+}
+
+
+/* ==========================================================================
+   TNI RESEARCH ARTICLE — NEUTRAL / GENERAL RESEARCH SECTIONS
+   ========================================================================== */
+
+.sp500-research-section.research-neutral {
+  border-left: 5px solid #2563eb;
+}
+
+.research-neutral .research-section-kicker {
+  color: #2563eb;
+}
+
+
+/* ==========================================================================
+   TNI RESEARCH ARTICLE — CONCLUSION
+   ========================================================================== */
+
+.sp500-research-section.research-conclusion {
+  border-left: 5px solid #0f4cbd;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(37, 99, 235, 0.055),
+      rgba(255, 255, 255, 1) 55%
+    );
+}
+
+.research-conclusion .research-section-kicker,
+.research-conclusion h3 {
+  color: #174ea6;
+}
+
+.research-closing-statement {
+  margin-top: 28px !important;
+  padding-top: 24px;
+  border-top: 1px solid #dbe3ef;
+  color: #0f172a;
+  font-size: 1.08rem !important;
+}
+
+
+/* ==========================================================================
+   TNI S&P 500 RESEARCH ARTICLE — MOBILE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .sp500-research-article {
+    margin-top: 48px;
+  }
+
+  .sp500-research-header {
+    margin-bottom: 30px;
+  }
+
+  .sp500-research-header h2 {
+    font-size: 2rem;
+  }
+
+  .sp500-research-lead {
+    font-size: 1.06rem;
+  }
+
+  .sp500-research-section {
+    margin-bottom: 20px;
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .sp500-research-section h3 {
+    font-size: 1.45rem;
+  }
+
+  .sp500-research-article p {
+    font-size: 0.98rem;
+    line-height: 1.72;
+  }
+}

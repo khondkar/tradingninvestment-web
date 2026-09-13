@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import heroImg from './assets/hero.webp'
+import SP500ReturnsPage from './pages/SP500ReturnsPage'
+import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import './App.css'
 
 /* ==========================================================================
@@ -720,6 +722,21 @@ function Footer({
 
 function App() {
   const [page, setPage] = useState<PageName>('research')
+
+  const normalizedPath =
+    window.location.pathname.replace(/\/+$/, '') || '/'
+
+  if (normalizedPath === '/sp-500-returns') {
+    return <SP500ReturnsPage />
+  }
+
+  // ==========================================================================
+  // TNI S&P 500 RETURNS — PUBLISHER EMBED ROUTE
+  // ==========================================================================
+
+  if (normalizedPath === '/embed/sp-500-returns') {
+    return <SP500ReturnsEmbedPage />
+  }
 
   return (
     <div className="site">
