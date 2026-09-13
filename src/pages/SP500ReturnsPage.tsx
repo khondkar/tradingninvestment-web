@@ -638,7 +638,11 @@ export default function SP500ReturnsPage() {
             TradingNInvestment Research
           </div>
 
-          <h1>
+          {/* =============================================================
+              TNI S&P 500 RETURNS — PRIMARY RESEARCH HEADLINE
+              Dedicated typography prevents multi-line headline overlap.
+          ============================================================= */}
+          <h1 className="tni-sp500-research-title">
             S&amp;P 500 Returns by Year (1928–2026): Historical Annual Returns
             and Market Performance
           </h1>

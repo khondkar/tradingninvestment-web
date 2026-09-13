@@ -2499,8 +2499,14 @@ button.primary-action {
     display: none;
   }
 
+  /* ========================================================================
+     TNI MOBILE FEATURED RESEARCH — KEEP RESEARCH LINK VISIBLE
+     Ensures the S&P 500 research page remains accessible on mobile.
+     ======================================================================== */
+
   .featured-copy .primary-action {
-    display: none;
+    display: inline-flex;
+    margin-top: 14px;
   }
 
   .chart-panel {
@@ -4075,5 +4081,742 @@ button.primary-action {
   .sp500-research-article p {
     font-size: 0.98rem;
     line-height: 1.72;
+  }
+}
+
+/* ==========================================================================
+   TNI S&P 500 RETURNS — PRIMARY RESEARCH HEADLINE
+   Keeps the long SEO headline readable across desktop and mobile.
+   ========================================================================== */
+
+.tni-sp500-research-title {
+  max-width: 1100px;
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(38px, 4.2vw, 64px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+@media (max-width: 768px) {
+  .tni-sp500-research-title {
+    font-size: 36px;
+    line-height: 1.15;
+    letter-spacing: -1.4px;
+  }
+}
+
+@media (max-width: 385px) {
+  .tni-sp500-research-title {
+    font-size: 32px;
+    line-height: 1.17;
+    letter-spacing: -1px;
+  }
+}
+
+/* ==========================================================================
+   TNI HOMEPAGE — FLAGSHIP FEATURED ARTICLE
+   Gives the S&P 500 research article more visual importance while the
+   research library is still growing.
+   ========================================================================== */
+
+.featured-card {
+  grid-template-columns: 36% minmax(0, 64%);
+}
+
+.featured-copy {
+  padding: 40px 36px;
+}
+
+.featured-copy h3 {
+  font-size: 30px;
+  line-height: 1.12;
+}
+
+.featured-copy p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.featured-metrics {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #e8eef5;
+}
+
+.featured-metrics > div {
+  border-right: 1px solid #e8eef5;
+  border-bottom: 0;
+}
+
+.featured-metrics > div:last-child {
+  border-right: 0;
+}
+
+/* ==========================================================================
+   TNI HOMEPAGE — HIDE PLACEHOLDER ARTICLE LIBRARY
+   Re-enable after additional real TradingNInvestment research is published.
+   ========================================================================== */
+
+.latest-section {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .featured-card {
+    display: block;
+  }
+
+  .featured-copy {
+    padding: 22px 18px 18px;
+  }
+
+  .featured-copy h3 {
+    font-size: 24px;
+  }
+
+  .featured-copy p {
+    display: block;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .featured-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   TNI HOMEPAGE — FEATURED ARTICLE EDITORIAL LAYOUT
+   Replaces the previous dashboard-style preview with a true article feature.
+   ========================================================================== */
+
+.featured-article-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+  grid-template-areas:
+    "image copy"
+    "metrics metrics";
+  overflow: hidden;
+}
+
+.featured-article-image-link {
+  grid-area: image;
+  display: block;
+  min-width: 0;
+  background: #f7faff;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   TNI FEATURED ARTICLE — FULL STATIC CHART VISIBILITY
+   Preserve the complete research image without cropping the title or metrics.
+   ========================================================================== */
+
+.featured-article-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.featured-article-copy {
+  grid-area: copy;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 42px 38px;
+  border-left: 1px solid #e8eef5;
+}
+
+.featured-article-copy h3 {
+  margin: 12px 0 10px;
+  font-size: clamp(28px, 2.5vw, 38px);
+  line-height: 1.12;
+}
+
+.featured-article-copy h4 {
+  margin: 0 0 18px;
+  color: #48627e;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.featured-article-copy p {
+  margin: 0 0 26px;
+  color: #607086;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.featured-article-copy .primary-action {
+  align-self: flex-start;
+}
+
+.featured-article-card .featured-metrics {
+  grid-area: metrics;
+}
+
+@media (max-width: 900px) {
+  .featured-article-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "copy"
+      "metrics";
+  }
+
+  .featured-article-image {
+    min-height: 0;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .featured-article-copy {
+    border-left: 0;
+    border-top: 1px solid #e8eef5;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-article-copy {
+    padding: 24px 20px;
+  }
+
+  .featured-article-copy h3 {
+    font-size: 25px;
+  }
+
+  .featured-article-copy h4 {
+    font-size: 15px;
+  }
+
+  .featured-article-copy p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}
+
+
+/* ==========================================================================
+   TNI ARTICLES — REAL PUBLISHED RESEARCH CARD
+   ========================================================================== */
+
+.tni-real-article-card {
+  overflow: hidden;
+}
+
+.tni-real-article-image-link {
+  display: block;
+  background: #f7faff;
+  text-decoration: none;
+}
+
+.tni-real-article-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tni-article-read-link {
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.tni-article-read-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   TNI ABOUT — CLEAN RESEARCH STATEMENT
+   ========================================================================== */
+
+.tni-about-statement {
+  max-width: 900px;
+  margin: 0 auto 72px;
+  padding: 44px 0;
+  border-top: 1px solid #e5edf5;
+  border-bottom: 1px solid #e5edf5;
+}
+
+.tni-about-statement h2 {
+  max-width: 760px;
+  margin: 12px 0 22px;
+  color: var(--navy);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+}
+
+.tni-about-statement p {
+  max-width: 760px;
+  margin: 0 0 16px;
+  color: #536b84;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .tni-about-statement {
+    margin-bottom: 48px;
+    padding: 32px 0;
+  }
+
+  .tni-about-statement h2 {
+    font-size: 30px;
+    line-height: 1.17;
+  }
+
+  .tni-about-statement p {
+    font-size: 16px;
+  }
+}
+
+/* ==========================================================================
+   TNI HOMEPAGE — LATEST MARKET INTELLIGENCE
+   Professional delayed public preview of TNI Live News.
+   Designed as the primary conversion module into real-time TNI intelligence.
+   ========================================================================== */
+
+.latest-market-intelligence {
+  max-width: 1180px;
+  margin: 0 auto 56px;
+  background: #ffffff;
+  border: 1px solid #e4ebf3;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(22, 43, 70, 0.06);
+}
+
+.market-intelligence-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 30px 32px 26px;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.market-intelligence-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+  color: #38516d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.market-intelligence-live-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 7px;
+  border-radius: 999px;
+  background: #1e73e8;
+}
+
+.market-intelligence-delay-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 3px 8px;
+  border: 1px solid #d8e3ef;
+  border-radius: 999px;
+  background: #f7faff;
+  color: #60758d;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.market-intelligence-header h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(27px, 3vw, 38px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.2px;
+}
+
+.market-intelligence-header p {
+  max-width: 620px;
+  margin: 10px 0 0;
+  color: #667a90;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.market-intelligence-top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-top: 13px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.market-intelligence-top-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — TABLE HEADER
+   ========================================================================== */
+
+.market-intelligence-columns {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) 125px 120px;
+  gap: 22px;
+  padding: 12px 32px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e8eef5;
+  color: #8191a4;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.25px;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — STORY ROW
+   Entire row is clickable and routes into TNI Live News.
+   ========================================================================== */
+
+.market-intelligence-row {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) 125px 120px;
+  gap: 22px;
+  align-items: center;
+  min-height: 118px;
+  padding: 20px 32px;
+  border-bottom: 1px solid #edf2f7;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.market-intelligence-row:last-child {
+  border-bottom: 0;
+}
+
+.market-intelligence-row:hover {
+  background: #f8fbff;
+}
+
+.market-intelligence-time {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.market-intelligence-time strong {
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.market-intelligence-time span {
+  color: #8392a4;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.55px;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — STORY CONTENT
+   ========================================================================== */
+
+.market-intelligence-story {
+  min-width: 0;
+}
+
+.market-intelligence-ticker {
+  margin-bottom: 7px;
+  color: #1d4f91;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+}
+
+.market-intelligence-story h3 {
+  margin: 0;
+  color: #152a42;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.42;
+}
+
+.market-intelligence-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 8px;
+  margin-top: 9px;
+  color: #7a899a;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.3px;
+}
+
+.market-intelligence-meta span:not(:last-child)::after {
+  content: "·";
+  margin-left: 8px;
+  color: #c1cbd6;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — IMPACT / SENTIMENT
+   ========================================================================== */
+
+.market-intelligence-impact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.market-intelligence-impact strong {
+  color: #223b58;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.market-intelligence-impact span {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.65px;
+}
+
+.market-intelligence-impact .is-positive {
+  color: #16835a;
+}
+
+.market-intelligence-impact .is-negative {
+  color: #c84949;
+}
+
+.market-intelligence-impact .is-neutral {
+  color: #6f7e8e;
+}
+
+.market-intelligence-impact .is-mixed {
+  color: #a26b17;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — AFFECTED TICKERS
+   ========================================================================== */
+
+.market-intelligence-affected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.market-intelligence-affected strong {
+  color: #1a3554;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.55px;
+}
+
+.market-intelligence-affected span {
+  color: var(--blue);
+  font-size: 18px;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — STATUS STATES
+   No fabricated fallback news is shown.
+   ========================================================================== */
+
+.market-intelligence-status {
+  padding: 38px 32px;
+  color: #697d92;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — CONVERSION FOOTER
+   ========================================================================== */
+
+.market-intelligence-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 32px;
+  background: #f8fafc;
+  border-top: 1px solid #e8eef5;
+}
+
+.market-intelligence-footer p {
+  margin: 0;
+  color: #77899c;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.market-intelligence-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.market-intelligence-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — TABLET
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .latest-market-intelligence {
+    margin-bottom: 44px;
+  }
+
+  .market-intelligence-header {
+    padding: 26px 24px 22px;
+  }
+
+  .market-intelligence-columns,
+  .market-intelligence-row {
+    grid-template-columns: 100px minmax(0, 1fr) 105px;
+  }
+
+  .market-intelligence-columns span:last-child {
+    display: none;
+  }
+
+  .market-intelligence-affected {
+    display: none;
+  }
+
+  .market-intelligence-row {
+    padding: 18px 24px;
+  }
+
+  .market-intelligence-columns {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .market-intelligence-footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — MOBILE
+   Converts the table into clean intelligence cards without horizontal scroll.
+   ========================================================================== */
+
+@media (max-width: 680px) {
+  .latest-market-intelligence {
+    margin-bottom: 36px;
+    border-radius: 14px;
+  }
+
+  .market-intelligence-header {
+    display: block;
+    padding: 22px 18px 20px;
+  }
+
+  .market-intelligence-header h2 {
+    font-size: 28px;
+  }
+
+  .market-intelligence-header p {
+    font-size: 13px;
+  }
+
+  .market-intelligence-top-link {
+    margin-top: 16px;
+  }
+
+  .market-intelligence-columns {
+    display: none;
+  }
+
+  .market-intelligence-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px 16px;
+    min-height: 0;
+    padding: 19px 18px;
+  }
+
+  .market-intelligence-time {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .market-intelligence-time strong {
+    font-size: 13px;
+  }
+
+  .market-intelligence-time span {
+    font-size: 8px;
+  }
+
+  .market-intelligence-story {
+    grid-column: 1;
+  }
+
+  .market-intelligence-story h3 {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .market-intelligence-meta {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .market-intelligence-impact {
+    grid-column: 2;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  .market-intelligence-impact strong {
+    font-size: 17px;
+  }
+
+  .market-intelligence-impact span {
+    font-size: 9px;
+  }
+
+  .market-intelligence-footer {
+    display: block;
+    padding: 16px 18px;
+  }
+
+  .market-intelligence-footer p {
+    margin-bottom: 11px;
+  }
+
+  .market-intelligence-footer a {
+    font-size: 11px;
   }
 }
