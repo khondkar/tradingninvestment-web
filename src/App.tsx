@@ -390,10 +390,18 @@ function ResearchPage({
               market cycles.
             </p>
 
-            <button className="primary-action" type="button">
+            {/* ============================================================
+                TNI HOMEPAGE — S&P 500 FEATURED RESEARCH LINK
+                Preserves historical indexed URL:
+                /sp-500-returns/
+            ============================================================ */}
+            <a
+              className="primary-action"
+              href="/sp-500-returns/"
+            >
               View Full Research
               <span>→</span>
-            </button>
+            </a>
           </div>
 
           <div className="chart-panel">
