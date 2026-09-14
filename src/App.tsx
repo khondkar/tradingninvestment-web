@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
+import NVDAReturnsPage from './pages/NVDAReturnsPage'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import LatestMarketIntelligence from './components/news/LatestMarketIntelligence'
 import './App.css'
@@ -23,6 +24,19 @@ function Header({
   setPage: (page: PageName) => void
 }) {
   function navigate(nextPage: PageName) {
+    const currentPath =
+      window.location.pathname.replace(/\/+$/, '') || '/'
+
+    if (currentPath !== '/') {
+      const target =
+        nextPage === 'research'
+          ? '/'
+          : '/?page=' + nextPage
+
+      window.location.assign(target)
+      return
+    }
+
     setPage(nextPage)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -616,13 +630,48 @@ function Footer({
    ========================================================================== */
 
 function App() {
-  const [page, setPage] = useState<PageName>('research')
+  const requestedPage =
+    new URLSearchParams(
+      window.location.search
+    ).get('page')
+
+  const [page, setPage] =
+    useState<PageName>(
+      requestedPage === 'articles' ||
+      requestedPage === 'about'
+        ? requestedPage
+        : 'research'
+    )
 
   const normalizedPath =
     window.location.pathname.replace(/\/+$/, '') || '/'
 
   if (normalizedPath === '/sp-500-returns') {
-    return <SP500ReturnsPage />
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <SP500ReturnsPage />
+      </div>
+    )
+  }
+
+  // ========================================================================
+  // TNI NVDA RETURNS — PUBLIC RESEARCH ROUTE
+  // ========================================================================
+
+  if (normalizedPath === '/nvda-returns') {
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <NVDAReturnsPage />
+      </div>
+    )
   }
 
   // ==========================================================================

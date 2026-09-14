@@ -1,18 +1,16 @@
 // ============================================================================
-// TNI S&P 500 ANNUAL RETURNS — REACT / D3 CHART WRAPPER
+// TNI S&P 500 ANNUAL RETURNS — THIN ADAPTER OVER GENERIC CHART
 // ============================================================================
 
 import {
-  useEffect,
   useMemo,
-  useRef,
 } from 'react'
 
 import sp500AnnualReturns from '../../data/charts/sp500AnnualReturns.json'
 
-import {
-  renderAnnualReturnsChart,
-} from '../../charts/tni/renderAnnualReturnsChart'
+import { sp500AnnualReturnsConfig } from '../../research/annual-returns/sp500'
+import { buildAnnualReturnsChartSubtitle } from '../../research/annual-returns/labels'
+import GenericAnnualReturnsChart from '../../templates/GenericAnnualReturnsChart'
 
 import type {
   TNIAnnualReturnPoint,
@@ -31,14 +29,14 @@ type SP500JsonRecord = {
 }
 
 type SP500JsonData = {
+  current_year: {
+    year: number
+  }
   data: SP500JsonRecord[]
 }
 
 // ============================================================================
 // TNI S&P 500 ANNUAL RETURNS — COMPONENT PROPS
-//
-// `data` allows the Return Explorer to control the chart.
-// If no data is supplied, the chart falls back to the complete verified set.
 // ============================================================================
 
 type SP500AnnualReturnsChartProps = {
@@ -61,53 +59,50 @@ const fullChartData: TNIAnnualReturnPoint[] =
   }))
 
 // ============================================================================
-// TNI S&P 500 ANNUAL RETURNS — COMPONENT
+// TNI S&P 500 ANNUAL RETURNS — THIN ADAPTER COMPONENT
 // ============================================================================
 
 export default function SP500AnnualReturnsChart({
   data,
   rangeLabel,
 }: SP500AnnualReturnsChartProps) {
-  const containerRef =
-    useRef<HTMLDivElement | null>(null)
-
-  // ==========================================================================
-  // TNI CHART — FILTERED OR COMPLETE DATA
-  // ==========================================================================
-
   const chartData =
     useMemo<TNIAnnualReturnPoint[]>(() => {
       return data ?? fullChartData
     }, [data])
 
-  // ==========================================================================
-  // TNI CHART — CONFIGURATION
-  // ==========================================================================
-
   const chartConfig =
-    useMemo<TNIAnnualReturnsChartConfig>(() => {
+    useMemo<
+      Omit<
+        TNIAnnualReturnsChartConfig,
+        'data'
+      >
+    >(() => {
       return {
         id:
-          'sp500-historical-annual-returns',
+          sp500AnnualReturnsConfig.chart.id,
 
         title:
-          'S&P 500 Historical Annual Returns by Year',
+          sp500AnnualReturnsConfig.chart.title,
 
         subtitle:
           rangeLabel
-            ? `${rangeLabel}. Interactive S&P 500 price-return history.`
-            : 'Interactive S&P 500 price-return history from 1928 through 2026 YTD.',
+            ? `${rangeLabel}. ${sp500AnnualReturnsConfig.chart.rangeSubtitleSuffix}`
+            : buildAnnualReturnsChartSubtitle(
+                sp500AnnualReturnsConfig,
+                dataset.current_year.year,
+              ),
 
-        symbol: '^GSPC',
+        symbol: sp500AnnualReturnsConfig.symbol,
 
         metricLabel:
-          'Annual price return',
+          sp500AnnualReturnsConfig.chart.metricLabel,
 
         positiveLabel:
-          'Positive year',
+          sp500AnnualReturnsConfig.chart.positiveLabel,
 
         negativeLabel:
-          'Negative year',
+          sp500AnnualReturnsConfig.chart.negativeLabel,
 
         branding: {
           brandName:
@@ -117,51 +112,21 @@ export default function SP500AnnualReturnsChart({
             'TradingNInvestment.com | TNI Research',
 
           sourceLabel:
-            'Yahoo Finance — S&P 500 Index (^GSPC)',
+            sp500AnnualReturnsConfig.sourceLabel,
         },
 
         showZeroLine: true,
         showWatermark: true,
         showSource: true,
 
-        height: 540,
-
-        data: chartData,
+        height: sp500AnnualReturnsConfig.chart.height,
       }
-    }, [chartData, rangeLabel])
-
-  // ==========================================================================
-  // TNI CHART — D3 RENDER LIFECYCLE
-  // ==========================================================================
-
-  useEffect(() => {
-    const container =
-      containerRef.current
-
-    if (!container) {
-      return
-    }
-
-    const cleanup =
-      renderAnnualReturnsChart(
-        container,
-        chartConfig,
-      )
-
-    return cleanup
-  }, [chartConfig])
-
-  // ==========================================================================
-  // TNI CHART — RESPONSIVE CONTAINER
-  // ==========================================================================
+    }, [rangeLabel])
 
   return (
-    <div
-      ref={containerRef}
-      style={{
-        width: '100%',
-        minWidth: 0,
-      }}
+    <GenericAnnualReturnsChart
+      data={chartData}
+      config={chartConfig}
     />
   )
 }

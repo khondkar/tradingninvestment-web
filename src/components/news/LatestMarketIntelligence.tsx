@@ -186,7 +186,21 @@ function directionClass(direction?: string) {
    TNI MARKET INTELLIGENCE — COMPONENT
    ========================================================================== */
 
-export default function LatestMarketIntelligence() {
+type LatestMarketIntelligenceProps = {
+  preferredSymbols?: string[]
+  maxStories?: number
+}
+
+/* ==========================================================================
+   TNI MARKET INTELLIGENCE — RESEARCH PAGE OPTIONS
+   preferredSymbols selects the newest matching eligible story first.
+   If no symbol match exists, the newest eligible market story is used.
+   ========================================================================== */
+
+export default function LatestMarketIntelligence({
+  preferredSymbols = [],
+  maxStories = MAX_PUBLIC_STORIES,
+}: LatestMarketIntelligenceProps = {}) {
   const [stories, setStories] =
     useState<LiveNewsStory[]>([])
 
@@ -267,32 +281,69 @@ export default function LatestMarketIntelligence() {
     const publicCutoff =
       Date.now() - PUBLIC_DELAY_MS
 
-    return stories
-      .map((story) => ({
-        story,
-        publishedAt: parseNewsTimestamp(
-          story.time_published
-        ),
-      }))
-      .filter(
-        (
-          item
-        ): item is {
-          story: LiveNewsStory
-          publishedAt: Date
-        } =>
-          item.story.top_rank_eligible === true &&
-          item.publishedAt !== null &&
-          item.publishedAt.getTime() <=
-            publicCutoff
+    const eligibleStories =
+      stories
+        .map((story) => ({
+          story,
+          publishedAt: parseNewsTimestamp(
+            story.time_published
+          ),
+        }))
+        .filter(
+          (
+            item
+          ): item is {
+            story: LiveNewsStory
+            publishedAt: Date
+          } =>
+            item.story.top_rank_eligible === true &&
+            item.publishedAt !== null &&
+            item.publishedAt.getTime() <=
+              publicCutoff
+        )
+        .sort(
+          (a, b) =>
+            b.publishedAt.getTime() -
+            a.publishedAt.getTime()
+        )
+
+    const normalizedSymbols =
+      preferredSymbols.map(
+        (symbol) => symbol.toUpperCase()
       )
-      .sort(
-        (a, b) =>
-          b.publishedAt.getTime() -
-          a.publishedAt.getTime()
-      )
-      .slice(0, MAX_PUBLIC_STORIES)
-  }, [stories])
+
+    if (normalizedSymbols.length > 0) {
+      const matchingStory =
+        eligibleStories.find(({ story }) => {
+          const primaryTicker =
+            story.primary_ticker?.toUpperCase()
+
+          const affectedTickers =
+            story.affected_tickers?.map(
+              (ticker) => ticker.toUpperCase()
+            ) ?? []
+
+          return normalizedSymbols.some(
+            (symbol) =>
+              primaryTicker === symbol ||
+              affectedTickers.includes(symbol)
+          )
+        })
+
+      if (matchingStory) {
+        return [matchingStory]
+      }
+    }
+
+    return eligibleStories.slice(
+      0,
+      maxStories
+    )
+  }, [
+    stories,
+    preferredSymbols,
+    maxStories,
+  ])
 
   /* ========================================================================
      TNI MARKET INTELLIGENCE — NO FAKE FALLBACK CONTENT

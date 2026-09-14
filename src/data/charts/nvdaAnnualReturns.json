@@ -1,0 +1,200 @@
+{
+  "symbol": "NVDA",
+  "ticker": "NVDA",
+  "metric": "annual_return_pct",
+  "return_type": "price_return",
+  "source": "Yahoo Finance",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Calendar-year price return using Yahoo Finance closing prices, which are normalized for stock splits. Dividends are excluded.",
+    "current_year": "Current-year return is year-to-date through the latest available closing price."
+  },
+  "summary": {
+    "completed_years_analyzed": 26,
+    "start_year": 2000,
+    "end_year": 2025,
+    "positive_years": 19,
+    "negative_years": 7,
+    "positive_year_pct": 73.08,
+    "negative_year_pct": 26.92,
+    "average_annual_return_pct": 65.24,
+    "median_annual_return_pct": 47.4,
+    "best_year": {
+      "year": 2001,
+      "return_pct": 308.36
+    },
+    "worst_year": {
+      "year": 2002,
+      "return_pct": -82.8
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 13.56
+  },
+  "data": [
+    {
+      "year": 2000,
+      "value": 39.614,
+      "label": "2000",
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "value": 308.3561,
+      "label": "2001",
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "value": -82.7952,
+      "label": "2002",
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "value": 101.5628,
+      "label": "2003",
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "value": 1.5517,
+      "label": "2004",
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "value": 55.1787,
+      "label": "2005",
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "value": 102.4614,
+      "label": "2006",
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "value": 37.8817,
+      "label": "2007",
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "value": -76.2787,
+      "label": "2008",
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "value": 131.4746,
+      "label": "2009",
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "value": -17.5589,
+      "label": "2010",
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "value": -10.0,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": -11.544,
+      "label": "2012",
+      "status": "negative"
+    },
+    {
+      "year": 2013,
+      "value": 30.6688,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 25.1561,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": 64.389,
+      "label": "2015",
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "value": 223.8471,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 81.2816,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -31.0078,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 76.2547,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 121.9295,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 125.2853,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -50.3111,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 238.8668,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 171.1724,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 38.8786,
+      "label": "2025",
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "value": 13.563,
+      "label": "2026 YTD",
+      "status": "positive"
+    }
+  ]
+}
