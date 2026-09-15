@@ -13,6 +13,11 @@ export type AnnualReturnsAssetConfig = {
   // Existing assets fall back to "TradingNInvestment Research".
   intelligenceEyebrow?: string
 
+  // Static annual-return research image.
+  // Used as an indexable/shareable visual on the published research page.
+  annualReturnImage?: string
+  annualReturnImageAlt?: string
+
   canonicalPath: string
   embedPath: string
   csvPath: string

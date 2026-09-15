@@ -27,6 +27,12 @@ export const msftAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   intelligenceEyebrow:
     "MICROSOFT STOCK INTELLIGENCE",
 
+  annualReturnImage:
+    "/images/msft-annual-stock-returns.png",
+
+  annualReturnImageAlt:
+    "Microsoft MSFT annual stock returns by year from 1987 through 2026 YTD",
+
   canonicalPath: "/msft-stock-returns/",
   embedPath: "/embed/msft-stock-returns/",
   csvPath: "/data/msft-annual-returns.csv",

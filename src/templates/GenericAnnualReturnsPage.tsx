@@ -1349,6 +1349,43 @@ export default function GenericAnnualReturnsPage({
         </section>
 
         {/* =================================================================
+            TNI STATIC ANNUAL RETURN CHART — SEARCH / SOCIAL VISUAL
+
+            The static chart is generated from the same verified annual-return
+            dataset as the interactive research experience. It provides an
+            indexable research image while preserving the interactive chart
+            below as the primary analytical experience.
+        ================================================================= */}
+
+        {config.annualReturnImage && (
+          <figure
+            style={{
+              margin: '0 0 30px',
+            }}
+          >
+            <img
+              src={config.annualReturnImage}
+              alt={
+                config.annualReturnImageAlt ??
+                `${config.name} annual stock returns by year`
+              }
+              width="1200"
+              height="630"
+              loading="eager"
+              decoding="async"
+              style={{
+                display: 'block',
+                width: '100%',
+                height: 'auto',
+                borderRadius: '12px',
+                border: '1px solid #e7edf5',
+                background: '#ffffff',
+              }}
+            />
+          </figure>
+        )}
+
+        {/* =================================================================
             TNI RETURN EXPLORER — PRODUCT DIFFERENTIATOR
         ================================================================= */}
 
