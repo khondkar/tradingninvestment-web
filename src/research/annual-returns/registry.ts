@@ -7,6 +7,7 @@
 // should derive from this registry.
 // ============================================================================
 
+import { msftAnnualReturnsConfig } from "./msft"
 import { nvdaAnnualReturnsConfig } from "./nvda"
 import { sp500AnnualReturnsConfig } from "./sp500"
 import type { AnnualReturnsAssetConfig } from "./types"
@@ -31,6 +32,10 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: nvdaAnnualReturnsConfig,
+      featured: false,
+    },
+    {
+      config: msftAnnualReturnsConfig,
       featured: false,
     },
   ]

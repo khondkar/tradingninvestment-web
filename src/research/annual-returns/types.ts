@@ -9,6 +9,10 @@ export type AnnualReturnsAssetConfig = {
   shortName: string
   startYear: number
 
+  // Optional company-level intelligence identity shown above the research H1.
+  // Existing assets fall back to "TradingNInvestment Research".
+  intelligenceEyebrow?: string
+
   canonicalPath: string
   embedPath: string
   csvPath: string

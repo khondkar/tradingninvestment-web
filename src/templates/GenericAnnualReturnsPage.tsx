@@ -949,7 +949,8 @@ export default function GenericAnnualReturnsPage({
                 'uppercase',
             }}
           >
-            TradingNInvestment Research
+            {config.intelligenceEyebrow ??
+              'TradingNInvestment Research'}
           </div>
 
           {/* =============================================================

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
 import NVDAReturnsPage from './pages/NVDAReturnsPage'
+import MSFTReturnsPage from './pages/MSFTReturnsPage'
 import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import LatestMarketIntelligence from './components/news/LatestMarketIntelligence'
@@ -740,6 +741,25 @@ function App() {
           setPage={setPage}
         />
         <SP500ReturnsPage />
+      </div>
+    )
+  }
+
+  // ========================================================================
+  // TNI MICROSOFT STOCK RETURNS — PUBLIC RESEARCH ROUTE
+  //
+  // Canonical URL:
+  // /msft-stock-returns/
+  // ========================================================================
+
+  if (normalizedPath === '/msft-stock-returns') {
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <MSFTReturnsPage />
       </div>
     )
   }
