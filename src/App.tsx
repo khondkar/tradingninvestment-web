@@ -2,6 +2,7 @@ import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
 import NVDAReturnsPage from './pages/NVDAReturnsPage'
+import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import LatestMarketIntelligence from './components/news/LatestMarketIntelligence'
 import './App.css'
@@ -352,6 +353,77 @@ function ResearchPage({
           </div>
 
         </article>
+
+        {/* ====================================================================
+            TNI HOMEPAGE — AUTOMATIC PUBLISHED RESEARCH
+            Non-featured published assets are rendered from the central
+            annual-return research registry.
+            ==================================================================== */}
+
+        <div className="article-library tni-research-secondary">
+          {annualReturnsResearchRegistry
+            .filter((entry) => !entry.featured)
+            .map((entry) => {
+              const { config, previewImage } = entry
+
+              return (
+                <article
+                  className="library-card tni-real-article-card"
+                  key={config.slug}
+                >
+                  <a
+                    className={
+                      previewImage
+                        ? "tni-real-article-image-link"
+                        : "tni-real-article-image-link tni-research-placeholder"
+                    }
+                    href={config.canonicalPath}
+                    aria-label={"View " + config.name + " returns research"}
+                  >
+                    {previewImage ? (
+                      <img
+                        className="tni-real-article-image"
+                        src={previewImage}
+                        alt={config.name + " historical annual returns"}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <>
+                        <strong>{config.symbol}</strong>
+                        <span>ANNUAL RETURNS</span>
+                      </>
+                    )}
+                  </a>
+
+                  <div className="library-content">
+                    <span className="content-tag">
+                      {config.categories.includes("index")
+                        ? "MARKET HISTORY"
+                        : "STOCK HISTORY"}
+                    </span>
+
+                    <h2>{config.seo.socialTitle}</h2>
+
+                    <p>{config.seo.socialDescription}</p>
+
+                    <div>
+                      <small>
+                        Historical Annual Returns and Market Performance
+                      </small>
+
+                      <a
+                        className="tni-article-read-link"
+                        href={config.canonicalPath}
+                      >
+                        View Full Research →
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
+        </div>
+
       </section>
 
     </main>
@@ -395,51 +467,65 @@ function ArticlesPage() {
           ================================================================== */}
 
       <section className="article-library">
-        <article className="library-card tni-real-article-card">
+        {annualReturnsResearchRegistry.map((entry) => {
+          const { config, previewImage } = entry
 
-          <a
-            className="tni-real-article-image-link"
-            href="/sp-500-returns/"
-            aria-label="View S&P 500 Returns by Year research"
-          >
-            <img
-              className="tni-real-article-image"
-              src="/images/sp500-annual-returns-preview.svg"
-              alt="S&P 500 historical annual price returns by year from 1928 through 2026 YTD"
-              loading="lazy"
-            />
-          </a>
-
-          <div className="library-content">
-            <span className="content-tag">
-              MARKET HISTORY
-            </span>
-
-            <h2>
-              S&amp;P 500 Returns by Year (1928–2026)
-            </h2>
-
-            <p>
-              Explore nearly a century of S&amp;P 500 annual returns,
-              including positive and negative years, average historical
-              performance, major market declines, recoveries, and 2026 YTD.
-            </p>
-
-            <div>
-              <small>
-                Historical Annual Returns and Market Performance
-              </small>
-
+          return (
+            <article
+              className="library-card tni-real-article-card"
+              key={config.slug}
+            >
               <a
-                className="tni-article-read-link"
-                href="/sp-500-returns/"
+                className={
+                  previewImage
+                    ? "tni-real-article-image-link"
+                    : "tni-real-article-image-link tni-research-placeholder"
+                }
+                href={config.canonicalPath}
+                aria-label={"View " + config.name + " returns research"}
               >
-                View Full Research →
+                {previewImage ? (
+                  <img
+                    className="tni-real-article-image"
+                    src={previewImage}
+                    alt={config.name + " historical annual returns"}
+                    loading="lazy"
+                  />
+                ) : (
+                  <>
+                    <strong>{config.symbol}</strong>
+                    <span>ANNUAL RETURNS</span>
+                  </>
+                )}
               </a>
-            </div>
-          </div>
 
-        </article>
+              <div className="library-content">
+                <span className="content-tag">
+                  {config.categories.includes("index")
+                    ? "MARKET HISTORY"
+                    : "STOCK HISTORY"}
+                </span>
+
+                <h2>{config.seo.socialTitle}</h2>
+
+                <p>{config.seo.socialDescription}</p>
+
+                <div>
+                  <small>
+                    Historical Annual Returns and Market Performance
+                  </small>
+
+                  <a
+                    className="tni-article-read-link"
+                    href={config.canonicalPath}
+                  >
+                    View Full Research →
+                  </a>
+                </div>
+              </div>
+            </article>
+          )
+        })}
       </section>
 
     </main>
