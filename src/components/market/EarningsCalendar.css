@@ -1,0 +1,1642 @@
+/* ==========================================================================
+   TNI EARNINGS CALENDAR
+   Clean, scan-first institutional interface
+   ========================================================================== */
+
+.earnings-calendar {
+  display: grid;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+/* PAGE TITLE */
+
+.earnings-page-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0;
+  color: #0b2d55;
+}
+
+.earnings-page-title > span {
+  font: inherit;
+}
+
+.earnings-page-title > small {
+  color: #718096;
+  font-size: 0.48em;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+/* TOOLBAR */
+
+.earnings-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 12px 16px;
+
+  background: #f8fafc;
+  border: 1px solid #e4eaf1;
+  border-radius: 12px;
+}
+
+.earnings-range-tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.earnings-range-tabs button {
+  min-height: 39px;
+  padding: 9px 16px;
+
+  color: #66788d;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 120ms ease,
+    color 120ms ease;
+}
+
+.earnings-range-tabs button:hover {
+  color: #0b4f94;
+  background: #edf4fb;
+}
+
+.earnings-range-tabs button.active {
+  color: #ffffff;
+  background: #0b67c8;
+}
+
+.earnings-range-tabs button:focus-visible {
+  outline: 2px solid #0b67c8;
+  outline-offset: 2px;
+}
+
+.earnings-updated {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.earnings-updated span {
+  color: #9aa6b4;
+  font-size: 0.67rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+}
+
+.earnings-updated strong {
+  color: #38516d;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+/* DATE GROUPS */
+
+.earnings-days {
+  display: grid;
+  gap: 22px;
+}
+
+.earnings-day {
+  overflow: hidden;
+
+  background: #ffffff;
+  border: 1px solid #e1e7ee;
+  border-radius: 12px;
+}
+
+.earnings-day.today {
+  border-color: #b8d6f5;
+  box-shadow: 0 8px 26px rgba(26, 83, 139, 0.06);
+}
+
+.earnings-day-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 15px 20px;
+
+  background: #f8fafc;
+  border-bottom: 1px solid #e7ecf2;
+}
+
+.earnings-day.today .earnings-day-header {
+  background:
+    linear-gradient(
+      90deg,
+      #f1f7fd,
+      #fbfdff
+    );
+}
+
+.earnings-day-header span {
+  display: block;
+  margin-bottom: 3px;
+
+  color: #0878e8;
+
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+}
+
+.earnings-day-header h2 {
+  margin: 0;
+
+  color: #102f51;
+
+  font-size: 1.12rem;
+  font-weight: 760;
+  line-height: 1.25;
+}
+
+.earnings-day-header > strong {
+  color: #8795a5;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/* COMPANY LIST */
+
+.earnings-list {
+  display: grid;
+}
+
+button.earnings-company {
+  appearance: none;
+
+  display: grid;
+  grid-template-columns:
+    minmax(300px, 1fr)
+    minmax(105px, 0.24fr)
+    minmax(145px, 0.28fr)
+    20px;
+
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  min-height: 76px;
+  padding: 12px 20px;
+
+  color: inherit;
+  text-align: left;
+
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #edf1f5;
+
+  font: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background 120ms ease,
+    box-shadow 120ms ease;
+}
+
+button.earnings-company:last-child {
+  border-bottom: 0;
+}
+
+button.earnings-company:hover {
+  background: #f8fbff;
+}
+
+button.earnings-company:focus-visible {
+  position: relative;
+  z-index: 1;
+
+  outline: 2px solid #1680e8;
+  outline-offset: -2px;
+}
+
+/* COMPANY IDENTITY */
+
+.earnings-symbol {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.earnings-ticker {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 55px;
+  height: 40px;
+
+  color: #0a5bab;
+  background: #eff7ff;
+  border: 1px solid #d8eafa;
+  border-radius: 7px;
+
+  font-size: 0.9rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+}
+
+.earnings-symbol > div:last-child {
+  min-width: 0;
+}
+
+.earnings-symbol strong {
+  display: block;
+  overflow: hidden;
+
+  color: #152f4d;
+
+  font-size: 0.98rem;
+  font-weight: 760;
+  line-height: 1.25;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.earnings-symbol span {
+  display: block;
+  margin-top: 3px;
+
+  overflow: hidden;
+
+  color: #8c9aaa;
+
+  font-size: 0.76rem;
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* EPS */
+
+.earnings-metric span {
+  display: block;
+  margin-bottom: 3px;
+
+  color: #9aa6b3;
+
+  font-size: 0.64rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+}
+
+.earnings-metric strong {
+  color: #173754;
+
+  font-size: 0.96rem;
+  font-weight: 760;
+  font-variant-numeric: tabular-nums;
+}
+
+/* TIMING */
+
+.earnings-timing {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+
+  color: #758599;
+
+  font-size: 0.79rem;
+  font-weight: 720;
+
+  white-space: nowrap;
+}
+
+.earnings-timing i {
+  flex: 0 0 auto;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+  background: #a4afbc;
+}
+
+.earnings-timing.before {
+  color: #16724d;
+}
+
+.earnings-timing.before i {
+  background: #0d9d61;
+}
+
+.earnings-timing.after {
+  color: #315f91;
+}
+
+.earnings-timing.after i {
+  background: #236fc2;
+}
+
+.earnings-timing.unknown {
+  color: #8794a4;
+}
+
+.earnings-open {
+  color: #9eabb8;
+
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1;
+
+  transition:
+    color 120ms ease,
+    transform 120ms ease;
+}
+
+button.earnings-company:hover .earnings-open {
+  color: #0878e8;
+  transform: translateX(2px);
+}
+
+/* EMPTY */
+
+.earnings-empty {
+  display: grid;
+  gap: 8px;
+
+  padding: 44px 24px;
+
+  text-align: center;
+
+  background: #f8fafc;
+  border: 1px solid #e3e9f1;
+  border-radius: 12px;
+}
+
+.earnings-empty strong {
+  color: #173552;
+  font-size: 1rem;
+}
+
+.earnings-empty span {
+  color: #8b99aa;
+  font-size: 0.84rem;
+}
+
+/* METHODOLOGY */
+
+.earnings-methodology {
+  max-width: 780px;
+  margin: 6px auto 12px;
+
+  text-align: center;
+}
+
+.earnings-methodology strong {
+  color: #40566e;
+
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.earnings-methodology p {
+  margin: 7px 0;
+
+  color: #8794a3;
+
+  font-size: 0.79rem;
+  line-height: 1.65;
+}
+
+.earnings-methodology span {
+  color: #a0aab5;
+  font-size: 0.72rem;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+  .earnings-page-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .earnings-page-title > small {
+    font-size: 0.45em;
+  }
+
+  button.earnings-company {
+    grid-template-columns:
+      minmax(210px, 1fr)
+      95px
+      minmax(125px, auto)
+      18px;
+
+    gap: 13px;
+  }
+}
+
+/* ==========================================================================
+   TNI EARNINGS CALENDAR — CANONICAL RESPONSIVE SYSTEM
+   ========================================================================== */
+
+/* EPS is intentionally visually distinct */
+.earnings-metric strong {
+  color: #6d3fc0;
+}
+
+/* Actual ticker badge */
+.earnings-ticker {
+  color: #0878ff;
+  background: #edf6ff;
+  border: 1px solid #c9e2ff;
+}
+
+
+/* --------------------------------------------------------------------------
+   TABLET
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+  button.earnings-company {
+    grid-template-columns:
+      minmax(0, 1fr)
+      90px
+      minmax(120px, auto)
+      18px;
+
+    gap: 12px;
+  }
+
+  .earnings-ticker {
+    flex-basis: 50px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   MOBILE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+  .earnings-calendar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .earnings-calendar *,
+  .earnings-calendar *::before,
+  .earnings-calendar *::after {
+    box-sizing: border-box;
+  }
+
+
+  /* TOOLBAR */
+
+  .earnings-toolbar {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 10px;
+
+    padding: 10px;
+  }
+
+  .earnings-range-tabs {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 4px;
+  }
+
+  .earnings-range-tabs button {
+    width: 100%;
+    min-width: 0;
+
+    padding: 9px 4px;
+
+    font-size: 0.72rem;
+
+    white-space: nowrap;
+  }
+
+  .earnings-updated {
+    align-items: flex-start;
+
+    padding: 0 4px 2px;
+  }
+
+
+  /* DAYS */
+
+  .earnings-days,
+  .earnings-day,
+  .earnings-list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .earnings-days {
+    gap: 16px;
+  }
+
+  .earnings-day {
+    overflow: hidden;
+
+    border-radius: 10px;
+  }
+
+  .earnings-day-header {
+    min-width: 0;
+
+    gap: 8px;
+  }
+
+
+  /* ==============================================================
+     MOBILE COMPANY ROW
+
+     Row 1:
+     [TICKER] Company                     EPS      >
+
+     Row 2:
+              Sector                     Timing
+     ============================================================== */
+
+  button.earnings-company {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      76px
+      16px;
+
+    grid-template-rows:
+      auto
+      auto;
+
+    column-gap: 9px;
+    row-gap: 4px;
+
+    align-items: center;
+
+    min-height: 76px;
+
+    padding: 12px 11px;
+  }
+
+
+  /* LEFT SIDE */
+
+  .earnings-symbol {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    width: 100%;
+    min-width: 0;
+
+    overflow: hidden;
+  }
+
+  .earnings-ticker {
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 36px;
+
+    padding: 0;
+
+    border: 1px solid #c9e2ff;
+    border-radius: 6px;
+
+    background: #edf6ff;
+    color: #0878ff;
+
+    font-size: 0.76rem;
+    font-weight: 850;
+    letter-spacing: 0.025em;
+
+    white-space: nowrap;
+  }
+
+  .earnings-symbol > div:last-child {
+    flex: 1 1 auto;
+
+    width: 0;
+    min-width: 0;
+
+    overflow: hidden;
+  }
+
+  .earnings-symbol strong {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #152f4d;
+
+    font-size: 0.86rem;
+    font-weight: 760;
+    line-height: 1.2;
+  }
+
+  .earnings-symbol span {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 3px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 0.66rem;
+    line-height: 1.2;
+  }
+
+
+  /* EPS */
+
+  .earnings-metric {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 76px;
+    min-width: 0;
+
+    align-self: end;
+    justify-self: end;
+
+    text-align: right;
+  }
+
+  .earnings-metric span {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 0.52rem;
+    line-height: 1;
+    letter-spacing: 0.055em;
+  }
+
+  .earnings-metric strong {
+    display: block;
+
+    color: #6d3fc0;
+
+    font-size: 0.88rem;
+    line-height: 1.1;
+
+    white-space: nowrap;
+  }
+
+
+  /* TIMING */
+
+  .earnings-timing {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 4px;
+
+    width: 76px;
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    font-size: 0.59rem;
+    line-height: 1.15;
+
+    white-space: nowrap;
+  }
+
+  .earnings-timing i {
+    flex: 0 0 6px;
+
+    width: 6px;
+    height: 6px;
+  }
+
+
+  /* OPEN ARROW */
+
+  .earnings-open {
+    grid-column: 3;
+    grid-row: 1 / 3;
+
+    align-self: center;
+    justify-self: end;
+
+    width: 16px;
+
+    font-size: 1.2rem;
+  }
+
+
+  /* METHODOLOGY */
+
+  .earnings-methodology {
+    max-width: 100%;
+
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   SMALL PHONE
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 390px) {
+
+  button.earnings-company {
+    grid-template-columns:
+      minmax(0, 1fr)
+      68px
+      13px;
+
+    column-gap: 6px;
+
+    padding-left: 9px;
+    padding-right: 8px;
+  }
+
+  .earnings-symbol {
+    gap: 7px;
+  }
+
+  .earnings-ticker {
+    flex-basis: 41px;
+
+    width: 41px;
+    height: 34px;
+
+    font-size: 0.68rem;
+  }
+
+  .earnings-symbol strong {
+    font-size: 0.8rem;
+  }
+
+  .earnings-symbol span {
+    font-size: 0.61rem;
+  }
+
+  .earnings-metric,
+  .earnings-timing {
+    width: 68px;
+  }
+
+  .earnings-metric strong {
+    font-size: 0.82rem;
+  }
+
+  .earnings-timing {
+    font-size: 0.54rem;
+  }
+
+  .earnings-open {
+    width: 13px;
+  }
+}
+
+
+/* TNI EARNINGS INTELLIGENCE DRAWER */
+
+/* ==========================================================================
+   DRAWER LAYER
+   ========================================================================== */
+
+.earnings-drawer-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.earnings-drawer-backdrop {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  border: 0;
+
+  background: rgba(7, 20, 38, 0.34);
+
+  cursor: default;
+}
+
+
+/* ==========================================================================
+   DESKTOP DRAWER
+   ========================================================================== */
+
+.earnings-drawer {
+  position: relative;
+  z-index: 1;
+
+  width: min(520px, 92vw);
+  height: 100%;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+
+  padding: 0 28px 30px;
+
+  background: #ffffff;
+
+  border-left: 1px solid #dfe7f0;
+
+  box-shadow:
+    -18px 0 50px
+    rgba(7, 29, 63, 0.14);
+}
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.earnings-drawer-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 78px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.earnings-drawer-header > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.earnings-drawer-header span {
+  color: #718299;
+
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+}
+
+.earnings-drawer-header strong {
+  color: #0878ff;
+
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.earnings-drawer-close {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+
+  color: #62748a;
+  background: #f5f8fb;
+
+  border: 1px solid #e3eaf2;
+  border-radius: 50%;
+
+  font: inherit;
+  font-size: 1.45rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease;
+}
+
+.earnings-drawer-close:hover {
+  color: #071d3f;
+  background: #edf3f9;
+  border-color: #ccd9e7;
+}
+
+.earnings-drawer-close:focus-visible {
+  outline: 2px solid #0878ff;
+  outline-offset: 2px;
+}
+
+
+/* ==========================================================================
+   COMPANY IDENTITY
+   ========================================================================== */
+
+.earnings-drawer-company {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 28px 0 25px;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.earnings-drawer-ticker {
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 64px;
+
+  width: 64px;
+  height: 48px;
+
+  color: #0878ff;
+  background: #edf6ff;
+
+  border: 1px solid #c9e2ff;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.035em;
+
+  white-space: nowrap;
+}
+
+.earnings-drawer-company > div:last-child {
+  min-width: 0;
+}
+
+.earnings-drawer-company h2 {
+  margin: 0;
+
+  overflow: hidden;
+
+  color: #071d3f;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+
+  text-overflow: ellipsis;
+}
+
+.earnings-drawer-company p {
+  margin: 5px 0 0;
+
+  overflow: hidden;
+
+  color: #8392a5;
+
+  font-size: 0.78rem;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ==========================================================================
+   SECTION LABEL
+   ========================================================================== */
+
+.earnings-drawer-section-label {
+  display: block;
+
+  color: #0878ff;
+
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.095em;
+}
+
+
+/* ==========================================================================
+   UPCOMING EARNINGS
+   ========================================================================== */
+
+.earnings-drawer-event {
+  padding: 26px 0;
+
+  border-bottom: 1px solid #edf1f5;
+}
+
+.earnings-drawer-event-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-top: 14px;
+}
+
+.earnings-drawer-event-grid > div {
+  min-width: 0;
+
+  padding: 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e7edf4;
+  border-radius: 9px;
+}
+
+.earnings-drawer-event-grid span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #94a0ae;
+
+  font-size: 0.57rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+}
+
+.earnings-drawer-event-grid strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #173754;
+
+  font-size: 0.86rem;
+  font-weight: 760;
+  line-height: 1.3;
+
+  text-overflow: ellipsis;
+}
+
+.earnings-drawer-event-grid
+.earnings-drawer-eps {
+  color: #6d3fc0;
+
+  font-size: 1.05rem;
+  font-weight: 850;
+}
+
+
+/* ==========================================================================
+   TNI NEWS INTELLIGENCE
+   ========================================================================== */
+
+.earnings-drawer-news {
+  padding: 27px 0;
+}
+
+.earnings-drawer-news-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.earnings-drawer-news-heading > div {
+  min-width: 0;
+}
+
+.earnings-drawer-news-heading h3 {
+  margin: 6px 0 0;
+
+  color: #173754;
+
+  font-size: 1rem;
+  font-weight: 780;
+  line-height: 1.3;
+}
+
+.earnings-drawer-live {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  min-height: 24px;
+
+  padding: 0 8px;
+
+  color: #0878ff;
+  background: #edf6ff;
+
+  border: 1px solid #d3e8ff;
+  border-radius: 999px;
+
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.earnings-drawer-news-placeholder {
+  margin-top: 16px;
+
+  padding: 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e6edf5;
+  border-radius: 10px;
+}
+
+.earnings-drawer-news-placeholder strong {
+  display: block;
+
+  color: #173754;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.earnings-drawer-news-placeholder p {
+  margin: 7px 0 0;
+
+  color: #75869a;
+
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.earnings-drawer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: 10px;
+  padding-top: 20px;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.earnings-drawer-footer span {
+  color: #173754;
+
+  font-size: 0.65rem;
+  font-weight: 850;
+  letter-spacing: 0.055em;
+}
+
+.earnings-drawer-footer small {
+  color: #9aa6b3;
+
+  font-size: 0.62rem;
+}
+
+
+/* ==========================================================================
+   TABLET
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+  .earnings-drawer {
+    width: min(500px, 94vw);
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE — BOTTOM SHEET
+   ========================================================================== */
+
+@media (max-width: 700px) {
+
+  .earnings-drawer-layer {
+    align-items: flex-end;
+  }
+
+  .earnings-drawer {
+    width: 100%;
+    max-width: 100%;
+
+    height: min(88vh, 760px);
+
+    padding:
+      0 17px
+      calc(
+        22px +
+        env(safe-area-inset-bottom)
+      );
+
+    border-left: 0;
+
+    border-radius:
+      18px
+      18px
+      0
+      0;
+
+    box-shadow:
+      0 -18px 45px
+      rgba(7, 29, 63, 0.16);
+  }
+
+  .earnings-drawer-header {
+    min-height: 64px;
+  }
+
+  .earnings-drawer-close {
+    width: 34px;
+    height: 34px;
+
+    font-size: 1.3rem;
+  }
+
+  .earnings-drawer-company {
+    gap: 12px;
+
+    padding: 20px 0;
+  }
+
+  .earnings-drawer-ticker {
+    flex-basis: 54px;
+
+    width: 54px;
+    height: 42px;
+
+    font-size: 0.78rem;
+  }
+
+  .earnings-drawer-company h2 {
+    font-size: 1.08rem;
+  }
+
+  .earnings-drawer-company p {
+    font-size: 0.72rem;
+  }
+
+  .earnings-drawer-event {
+    padding: 20px 0;
+  }
+
+  .earnings-drawer-event-grid {
+    gap: 8px;
+
+    margin-top: 12px;
+  }
+
+  .earnings-drawer-event-grid > div {
+    padding: 12px;
+  }
+
+  .earnings-drawer-event-grid strong {
+    font-size: 0.8rem;
+  }
+
+  .earnings-drawer-event-grid
+  .earnings-drawer-eps {
+    font-size: 0.98rem;
+  }
+
+  .earnings-drawer-news {
+    padding: 21px 0;
+  }
+
+  .earnings-drawer-news-placeholder {
+    padding: 15px;
+  }
+
+  .earnings-drawer-footer {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 4px;
+  }
+}
+
+
+/* ==========================================================================
+   SMALL MOBILE
+   ========================================================================== */
+
+@media (max-width: 390px) {
+
+  .earnings-drawer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .earnings-drawer-header span {
+    font-size: 0.59rem;
+  }
+
+  .earnings-drawer-company h2 {
+    font-size: 1rem;
+  }
+
+  .earnings-drawer-event-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .earnings-drawer-event-grid > div {
+    padding: 10px;
+  }
+
+  .earnings-drawer-event-grid span {
+    font-size: 0.52rem;
+  }
+
+  .earnings-drawer-event-grid strong {
+    font-size: 0.74rem;
+  }
+
+  .earnings-drawer-news-heading h3 {
+    font-size: 0.92rem;
+  }
+}
+
+
+/* TNI DRAWER LIVE NEWS */
+
+.earnings-drawer-news-state {
+  margin-top: 16px;
+  padding: 18px;
+
+  background: #f8fafc;
+  border: 1px solid #e6edf5;
+  border-radius: 10px;
+}
+
+.earnings-drawer-news-state strong {
+  display: block;
+
+  color: #173754;
+
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.earnings-drawer-news-state p {
+  margin: 7px 0 0;
+
+  color: #75869a;
+
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+
+/* STORY LIST */
+
+.earnings-drawer-story-list {
+  display: grid;
+
+  gap: 13px;
+
+  margin-top: 16px;
+}
+
+.earnings-drawer-story {
+  padding: 17px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4ebf3;
+  border-radius: 11px;
+
+  box-shadow:
+    0 3px 12px
+    rgba(7, 29, 63, 0.045);
+}
+
+
+/* TNI ASSESSMENT */
+
+.earnings-drawer-story-assessment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.earnings-news-direction,
+.earnings-news-impact {
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+}
+
+.earnings-news-direction.positive {
+  color: #087a55;
+}
+
+.earnings-news-direction.negative {
+  color: #c33d49;
+}
+
+.earnings-news-direction.neutral {
+  color: #65758a;
+}
+
+.earnings-news-impact {
+  color: #65758a;
+}
+
+
+/* SCORES */
+
+.earnings-drawer-story-scores {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 11px;
+}
+
+.earnings-drawer-story-scores > span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 5px 7px;
+
+  color: #8b98a8;
+  background: #f6f8fb;
+
+  border-radius: 5px;
+
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+}
+
+.earnings-drawer-story-scores strong {
+  color: #173754;
+
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+
+
+/* HEADLINE */
+
+.earnings-drawer-story h4 {
+  margin: 14px 0 0;
+
+  color: #0b2747;
+
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.32;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* SUMMARY */
+
+.earnings-drawer-story > p {
+  margin: 8px 0 0;
+
+  color: #66798e;
+
+  font-size: 0.73rem;
+  line-height: 1.55;
+}
+
+
+/* SOURCE */
+
+.earnings-drawer-story-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: 14px;
+  padding-top: 11px;
+
+  border-top: 1px solid #edf1f5;
+}
+
+.earnings-drawer-story-footer span {
+  overflow: hidden;
+
+  color: #8a98a8;
+
+  font-size: 0.63rem;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.earnings-drawer-story-footer a {
+  flex: 0 0 auto;
+
+  color: #0878ff;
+
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.045em;
+
+  text-decoration: none;
+}
+
+.earnings-drawer-story-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .earnings-drawer-story {
+    padding: 14px;
+  }
+
+  .earnings-drawer-story h4 {
+    font-size: 0.86rem;
+  }
+
+  .earnings-drawer-story > p {
+    font-size: 0.7rem;
+  }
+
+  .earnings-drawer-story-scores {
+    gap: 5px;
+  }
+
+  .earnings-drawer-story-footer {
+    align-items: flex-start;
+  }
+}
