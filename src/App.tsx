@@ -4,6 +4,10 @@ import SP500ReturnsPage from './pages/SP500ReturnsPage'
 import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
 import NVDAReturnsPage from './pages/NVDAReturnsPage'
 import MSFTReturnsPage from './pages/MSFTReturnsPage'
+import StockMarketTodayPage from './pages/StockMarketTodayPage'
+import StockMarketHeatmapPage from './pages/StockMarketHeatmapPage'
+import StockMarketSectorHealthPage from './pages/StockMarketSectorHealthPage'
+import StockMarketEarningsCalendarPage from './pages/StockMarketEarningsCalendarPage'
 import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
 import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
@@ -14,7 +18,7 @@ import './App.css'
    TNI PUBLIC WEBSITE — PAGE TYPES
    ========================================================================== */
 
-type PageName = 'research' | 'articles' | 'about'
+type PageName = 'research' | 'market' | 'articles' | 'about'
 
 const publishedResearchRegistry = [
   ...annualReturnsResearchRegistry.map((entry) => ({
@@ -83,6 +87,14 @@ function Header({
             onClick={() => navigate('research')}
           >
             Research
+          </button>
+
+          <button
+            type="button"
+            className={page === 'market' ? 'active' : ''}
+            onClick={() => window.location.assign('/stock-market-today/')}
+          >
+            Stock Market Today
           </button>
 
           <button
@@ -757,6 +769,65 @@ function App() {
 
   const normalizedPath =
     window.location.pathname.replace(/\/+$/, '') || '/'
+
+  // ============================================================================
+  // TNI STOCK MARKET TODAY — LIVE MARKET DASHBOARD
+  // Canonical URL: /stock-market-today/
+  // ============================================================================
+
+  if (normalizedPath === '/stock-market-today/earnings-calendar') {
+    return (
+      <div className="site">
+        <Header
+          page="market"
+          setPage={setPage}
+        />
+
+        <StockMarketEarningsCalendarPage />
+
+        <Footer setPage={setPage} />
+      </div>
+    )
+  }
+
+  if (normalizedPath === '/stock-market-today/sector-health') {
+    return (
+      <div className="site">
+        <Header
+          page="market"
+          setPage={setPage}
+        />
+
+        <StockMarketSectorHealthPage />
+
+        <Footer setPage={setPage} />
+      </div>
+    )
+  }
+
+  if (normalizedPath === '/stock-market-today/heatmap') {
+    return (
+      <div className="site">
+        <Header
+          page="market"
+          setPage={setPage}
+        />
+        <StockMarketHeatmapPage />
+      </div>
+    )
+  }
+
+  if (normalizedPath === '/stock-market-today') {
+    return (
+      <div className="site">
+        <Header
+          page="market"
+          setPage={setPage}
+        />
+        <StockMarketTodayPage />
+      </div>
+    )
+  }
 
   if (normalizedPath === '/sp-500-returns') {
     return (

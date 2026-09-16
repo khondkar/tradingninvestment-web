@@ -1,0 +1,387 @@
+.sector-horizon-board {
+  display: grid;
+  gap: 34px;
+  margin-top: 28px;
+}
+
+.sector-horizon-section {
+  position: relative;
+  overflow: hidden;
+  padding: 34px 36px 30px;
+  border: 1px solid #e2e9f2;
+  border-radius: 18px;
+}
+
+.sector-horizon-live {
+  background:
+    linear-gradient(
+      135deg,
+      #f5faff 0%,
+      #ffffff 58%
+    );
+  border-color: #c9ddf5;
+  box-shadow:
+    0 16px 45px rgba(20, 67, 116, 0.08);
+}
+
+.sector-horizon-light {
+  background: #ffffff;
+}
+
+.sector-horizon-panel {
+  background: #f7f9fc;
+  border-color: #dce4ee;
+}
+
+.sector-horizon-number {
+  position: absolute;
+  right: 24px;
+  top: 10px;
+  color: rgba(9, 50, 92, 0.035);
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.sector-horizon-header {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e5ebf2;
+}
+
+.sector-horizon-eyebrow {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #0878ff;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.11em;
+}
+
+.sector-horizon-header h2 {
+  margin: 0;
+  color: #071d3f;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.sector-horizon-freshness {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+
+  text-align: right;
+}
+
+.sector-horizon-freshness strong {
+  color: #071d3f;
+  font-size: 0.69rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.sector-horizon-freshness span {
+  color: #78889b;
+  font-size: 0.72rem;
+}
+
+.sector-bars {
+  display: grid;
+  gap: 5px;
+  padding: 24px 0;
+}
+
+.sector-bar-row {
+  display: grid;
+  grid-template-columns:
+    minmax(180px, 1.15fr)
+    74px
+    minmax(240px, 2.2fr)
+    74px;
+
+  align-items: center;
+  gap: 13px;
+
+  min-height: 37px;
+}
+
+.sector-bar-name {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sector-bar-name strong {
+  overflow: hidden;
+  color: #142b49;
+  font-size: 0.78rem;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sector-bar-name span {
+  flex: 0 0 auto;
+  color: #9aa7b6;
+  font-size: 0.62rem;
+}
+
+.sector-bar-value {
+  text-align: right;
+}
+
+.sector-bar-value strong {
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.sector-bar-track {
+  position: relative;
+  height: 20px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(223, 51, 65, 0.035) 0%,
+      rgba(223, 51, 65, 0.01) 49.5%,
+      rgba(0, 168, 90, 0.01) 50.5%,
+      rgba(0, 168, 90, 0.035) 100%
+    );
+
+  border-radius: 4px;
+}
+
+.sector-bar-zero {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: 50%;
+  width: 1px;
+  background: #aab6c4;
+}
+
+.sector-bar-fill {
+  position: absolute;
+  top: 3px;
+  height: 14px;
+  min-width: 2px;
+  border-radius: 3px;
+}
+
+.sector-bar-fill.positive {
+  background:
+    linear-gradient(
+      90deg,
+      #55c98a,
+      #079e58
+    );
+}
+
+.sector-bar-fill.negative {
+  background:
+    linear-gradient(
+      270deg,
+      #ef6973,
+      #d93645
+    );
+}
+
+.sector-bar-fill.neutral {
+  background: #8b98a7;
+}
+
+.positive {
+  color: #078c4d;
+}
+
+.negative {
+  color: #d53c49;
+}
+
+.neutral {
+  color: #718093;
+}
+
+.sector-bar-breadth {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+
+  color: #8492a3;
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.sector-horizon-summary {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(220px, 1.25fr);
+
+  gap: 12px;
+
+  padding-top: 18px;
+  border-top: 1px solid #e5ebf2;
+}
+
+.sector-horizon-summary > div {
+  min-width: 0;
+  padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #e6ecf3;
+  border-radius: 9px;
+}
+
+.sector-horizon-summary span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #8b99aa;
+  font-size: 0.59rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.sector-horizon-summary strong {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  color: #152d4c;
+  font-size: 0.72rem;
+}
+
+.sector-horizon-summary b {
+  font-size: 0.71rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.sector-participation strong {
+  justify-content: flex-start;
+}
+
+.sector-participation i {
+  width: 1px;
+  height: 13px;
+  margin: 0 4px;
+  background: #d8e0e9;
+}
+
+.sector-health-methodology {
+  max-width: 850px;
+  margin: 0 auto 10px;
+
+  color: #8593a4;
+  font-size: 0.7rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .sector-horizon-section {
+    padding: 27px 20px 23px;
+  }
+
+  .sector-bar-row {
+    grid-template-columns:
+      minmax(145px, 1fr)
+      66px
+      minmax(150px, 1.7fr);
+
+    gap: 9px;
+  }
+
+  .sector-bar-breadth {
+    display: none;
+  }
+
+  .sector-horizon-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sector-participation {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .sector-horizon-board {
+    gap: 24px;
+  }
+
+  .sector-horizon-section {
+    padding: 23px 15px 19px;
+    border-radius: 13px;
+  }
+
+  .sector-horizon-header {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 17px;
+  }
+
+  .sector-horizon-freshness {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .sector-bars {
+    gap: 10px;
+    padding: 19px 0;
+  }
+
+  .sector-bar-row {
+    grid-template-columns: 1fr 64px;
+    gap: 5px 10px;
+  }
+
+  .sector-bar-name {
+    grid-column: 1;
+  }
+
+  .sector-bar-name span {
+    display: none;
+  }
+
+  .sector-bar-value {
+    grid-column: 2;
+  }
+
+  .sector-bar-track {
+    grid-column: 1 / -1;
+    height: 15px;
+  }
+
+  .sector-bar-fill {
+    top: 2px;
+    height: 11px;
+  }
+
+  .sector-horizon-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .sector-participation {
+    grid-column: auto;
+  }
+
+  .sector-horizon-number {
+    font-size: 4.4rem;
+  }
+}

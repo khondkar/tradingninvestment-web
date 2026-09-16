@@ -1,0 +1,858 @@
+.market-today-page {
+  width: min(1400px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 58px 0 90px;
+  text-align: left;
+}
+
+.market-today-hero {
+  max-width: 760px;
+}
+
+.market-eyebrow,
+.top-movers-intro > span,
+.market-breadth span,
+.heatmap-heading > div > span,
+.movers-kicker {
+  display: block;
+  color: #0878ff;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 1.25px;
+}
+
+.market-today-hero h1 {
+  margin: 9px 0 12px;
+  color: #071d3f;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 780;
+  line-height: .98;
+  letter-spacing: -2.8px;
+}
+
+.market-today-hero p {
+  max-width: 680px;
+  color: #6c7d94;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.market-update-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: #718299;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .45px;
+}
+
+.market-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0bac60;
+  box-shadow: 0 0 0 4px rgba(11, 172, 96, .1);
+}
+
+.market-index-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 40px;
+  overflow: hidden;
+  border: 1px solid #e3eaf3;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 10px 35px rgba(7, 29, 63, .045);
+}
+
+.market-index-card {
+  min-height: 116px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: center;
+  gap: 4px 12px;
+  padding: 20px 23px;
+  border-right: 1px solid #e8edf4;
+}
+
+.market-index-card:last-child {
+  border-right: 0;
+}
+
+.market-index-card > span {
+  grid-column: 1 / -1;
+  color: #8391a4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .35px;
+}
+
+.market-index-card strong {
+  color: #071d3f;
+  font-size: 22px;
+  font-weight: 850;
+}
+
+.market-index-card b {
+  align-self: center;
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.positive { color: #079958; }
+.negative { color: #dc3945; }
+
+.top-movers-intro {
+  margin: 74px auto 27px;
+  text-align: center;
+}
+
+.top-movers-intro h2 {
+  margin: 8px 0 8px;
+  color: #071d3f;
+  font-size: clamp(30px, 4vw, 45px);
+  font-weight: 780;
+  letter-spacing: -1.5px;
+}
+
+.top-movers-intro p {
+  color: #718299;
+  font-size: 14px;
+}
+
+.top-movers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.movers-card {
+  overflow: hidden;
+  border: 1px solid #e1e8f1;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 16px 45px rgba(7, 29, 63, .065);
+}
+
+.movers-card-header {
+  min-height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.movers-card-up .movers-kicker {
+  color: #079958;
+}
+
+.movers-card-down .movers-kicker {
+  color: #dc3945;
+}
+
+.movers-card-header h2 {
+  margin: 5px 0 0;
+  color: #071d3f;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -.7px;
+}
+
+.movers-period {
+  padding: 7px 10px;
+  border: 1px solid #e4eaf2;
+  border-radius: 7px;
+  color: #718299;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1px;
+}
+
+.movers-column-labels {
+  display: grid;
+  grid-template-columns: 1fr 90px 88px;
+  padding: 11px 24px 11px 82px;
+  background: #f8fafc;
+  color: #9aa6b5;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1px;
+}
+
+.movers-column-labels span:nth-child(2),
+.movers-column-labels span:nth-child(3) {
+  text-align: right;
+}
+
+.mover-row {
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: 32px 40px minmax(0, 1fr) 90px 88px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+  border-bottom: 1px solid #edf1f6;
+  transition:
+    background .15s ease,
+    transform .15s ease;
+}
+
+.mover-row:last-child {
+  border-bottom: 0;
+}
+
+.mover-row:hover {
+  position: relative;
+  z-index: 2;
+  background: #f7faff;
+  transform: translateX(2px);
+}
+
+.mover-rank {
+  color: #a7b1bf;
+  font-size: 11px;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
+.mover-logo {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f7f9fc;
+  color: #17395f;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.mover-identity {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mover-identity strong {
+  color: #071d3f;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -.2px;
+}
+
+.mover-identity span {
+  overflow: hidden;
+  color: #66788f;
+  font-size: 11px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mover-identity small {
+  margin-top: 1px;
+  color: #a1adbb;
+  font-size: 9px;
+}
+
+.mover-price {
+  color: #455b76;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.mover-change {
+  font-size: 18px;
+  font-weight: 900;
+  text-align: right;
+  letter-spacing: -.35px;
+  font-variant-numeric: tabular-nums;
+}
+
+.mover-change.up {
+  color: #079958;
+}
+
+.mover-change.down {
+  color: #dc3945;
+}
+
+.market-breadth {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 26px;
+  overflow: hidden;
+  border: 1px solid #e2e9f2;
+  border-radius: 14px;
+  background: white;
+}
+
+.market-breadth > div {
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 24px;
+  border-right: 1px solid #e8edf4;
+}
+
+.market-breadth > div:last-child {
+  border-right: 0;
+}
+
+.market-breadth strong {
+  margin-top: 5px;
+  color: #071d3f;
+  font-size: 27px;
+  line-height: 1;
+}
+
+.market-breadth small {
+  margin-top: 5px;
+  color: #78889c;
+  font-size: 11px;
+}
+
+.market-breadth .breadth-highlight {
+  background: #f5f9ff;
+}
+
+.heatmap-shell {
+  margin-top: 64px;
+}
+
+.heatmap-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 22px;
+}
+
+.heatmap-heading h2 {
+  margin: 7px 0 5px;
+  color: #071d3f;
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.heatmap-heading p {
+  color: #74859a;
+  font-size: 13px;
+}
+
+.heatmap-periods {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f7f9fc;
+}
+
+.heatmap-periods button {
+  min-height: 34px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #8290a2;
+  font-size: 10px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.heatmap-periods button.active {
+  background: #071d3f;
+  color: white;
+}
+
+.heatmap-placeholder {
+  min-height: 510px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dce5ef;
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)),
+    repeating-linear-gradient(
+      45deg,
+      #edf2f7 0,
+      #edf2f7 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  color: #8392a5;
+}
+
+.heatmap-placeholder span {
+  color: #0878ff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.heatmap-placeholder strong {
+  margin-top: 8px;
+  color: #17395f;
+  font-size: 22px;
+}
+
+.heatmap-placeholder small {
+  margin-top: 7px;
+}
+
+@media (max-width: 900px) {
+  .market-today-page {
+    width: min(100% - 28px, 680px);
+    padding-top: 34px;
+  }
+
+  .market-index-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .market-index-card {
+    border-bottom: 1px solid #e8edf4;
+  }
+
+  .top-movers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .market-breadth {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heatmap-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .heatmap-periods {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .heatmap-periods button {
+    flex: 1;
+    padding: 0 6px;
+  }
+}
+
+@media (max-width: 560px) {
+  .market-today-page {
+    width: calc(100% - 20px);
+  }
+
+  .market-index-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .market-index-card {
+    min-height: 82px;
+  }
+
+  .movers-card-header {
+    padding: 0 15px;
+  }
+
+  .movers-column-labels {
+    grid-template-columns: 1fr 72px;
+    padding-left: 63px;
+    padding-right: 15px;
+  }
+
+  .movers-column-labels span:nth-child(2) {
+    display: none;
+  }
+
+  .mover-row {
+    grid-template-columns: 25px 34px minmax(0, 1fr) 76px;
+    gap: 7px;
+    padding: 0 14px;
+  }
+
+  .mover-logo {
+    width: 31px;
+    height: 31px;
+  }
+
+  .mover-price {
+    display: none;
+  }
+
+  .mover-change {
+    font-size: 16px;
+  }
+
+  .market-breadth {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .market-breadth > div {
+    padding: 15px;
+  }
+
+  .heatmap-placeholder {
+    min-height: 360px;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/* ==========================================================================
+   TNI STOCK MARKET TODAY — SECONDARY NAVIGATION
+   ========================================================================== */
+
+.market-subnav {
+  position: sticky;
+  top: 74px;
+  z-index: 90;
+
+  width: 100%;
+
+  border-bottom: 1px solid #e3eaf3;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.market-subnav-inner {
+  width: min(1400px, calc(100% - 48px));
+  min-height: 53px;
+
+  display: flex;
+  align-items: center;
+  gap: 34px;
+
+  margin: 0 auto;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.market-subnav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.market-subnav a {
+  position: relative;
+
+  min-height: 53px;
+
+  display: inline-flex;
+  align-items: center;
+
+  flex: 0 0 auto;
+
+  color: #718299;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.market-subnav a:hover {
+  color: #0878ff;
+}
+
+.market-subnav a.active {
+  color: #071d3f;
+  font-weight: 850;
+}
+
+.market-subnav a.active::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3px;
+
+  border-radius: 3px 3px 0 0;
+
+  background: #0878ff;
+}
+
+
+/* ==========================================================================
+   TNI MARKET SECTION — ANCHOR POSITIONING
+   ========================================================================== */
+
+#overview,
+#top-movers,
+#market-breadth,
+#heatmap,
+#sp500-stocks {
+  scroll-margin-top: 150px;
+}
+
+
+/* ==========================================================================
+   MOBILE MARKET NAVIGATION
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .market-subnav {
+    top: 74px;
+  }
+
+  .market-subnav-inner {
+    width: 100%;
+    min-height: 48px;
+
+    gap: 25px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+  }
+
+  .market-subnav a {
+    min-height: 48px;
+
+    font-size: 11px;
+  }
+
+  #overview,
+  #top-movers,
+  #market-breadth,
+  #heatmap,
+  #sp500-stocks {
+    scroll-margin-top: 140px;
+  }
+}
+
+/* ==========================================================================
+   TNI EARNINGS CALENDAR
+   ========================================================================== */
+
+.earnings-calendar-shell {
+  margin-top: 68px;
+  scroll-margin-top: 150px;
+}
+
+.earnings-calendar-heading > span {
+  display: block;
+  color: #0878ff;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 1.25px;
+}
+
+.earnings-calendar-heading h2 {
+  margin: 7px 0 6px;
+  color: #071d3f;
+  font-size: clamp(29px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.earnings-calendar-heading p {
+  margin: 0;
+  color: #718299;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.earnings-calendar-placeholder {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  padding: 30px;
+  border: 1px solid #dce5ef;
+  border-radius: 18px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.earnings-calendar-placeholder > span {
+  color: #0878ff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.earnings-calendar-placeholder strong {
+  margin-top: 8px;
+  color: #17395f;
+  font-size: 22px;
+  font-weight: 850;
+}
+
+.earnings-calendar-placeholder small {
+  margin-top: 8px;
+  color: #8392a5;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+#overview,
+#top-movers,
+#sector-health,
+#heatmap,
+#earnings-calendar,
+#sp500-stocks {
+  scroll-margin-top: 150px;
+}
+
+@media (max-width: 560px) {
+  .earnings-calendar-placeholder {
+    min-height: 160px;
+    padding: 24px 18px;
+  }
+
+  .earnings-calendar-placeholder strong {
+    font-size: 19px;
+  }
+}
+
+
+/* TNI MARKET SECONDARY NAV — SEPARATE TABS */
+
+.market-today-subnav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  margin: 20px 0 30px;
+  padding: 0;
+
+  overflow-x: auto;
+
+  background: transparent;
+  border: 0;
+
+  scrollbar-width: none;
+}
+
+.market-today-subnav::-webkit-scrollbar {
+  display: none;
+}
+
+.market-today-subnav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0 20px;
+
+  flex: 0 0 auto;
+
+  background: #ffffff;
+  border: 1px solid #e3eaf3;
+  border-radius: 9px;
+
+  color: #53677f;
+
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+
+  box-shadow: 0 2px 6px rgba(7, 29, 63, 0.035);
+
+  transition:
+    border-color 140ms ease,
+    color 140ms ease,
+    background 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.market-today-subnav a:hover {
+  color: #071d3f;
+  border-color: #b9cbe0;
+
+  box-shadow: 0 4px 12px rgba(7, 29, 63, 0.07);
+
+  transform: translateY(-1px);
+}
+
+.market-today-subnav a.active,
+.market-today-subnav a[aria-current='page'] {
+  color: #0878ff;
+
+  background: #eaf4ff;
+  border-color: #9dc8ff;
+
+  box-shadow: 0 3px 10px rgba(8, 120, 255, 0.10);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+  .market-today-subnav {
+    gap: 8px;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    padding: 2px 0 6px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .market-today-subnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .market-today-subnav a {
+    flex: 0 0 auto;
+
+    min-height: 40px;
+    padding: 0 15px;
+
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+}
+
+/* DAILY HEATMAP — COMPACT PAGE TITLE */
+
+.market-today-hero .heatmap-page-title {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: #071d3f;
+}
+
