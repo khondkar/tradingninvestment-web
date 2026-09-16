@@ -610,43 +610,7 @@ export default function GenericMonthlyReturnsPage({
       ==================================================================== */}
 
       
-      {config.symbol === '^GSPC' && (
-        <section
-          className="monthly-seo-content"
-          aria-labelledby="sp500-monthly-history-heading"
-        >
-          <h2 id="sp500-monthly-history-heading">
-            S&amp;P 500 Monthly Returns, History and Performance
-          </h2>
 
-          <p>
-            Explore S&amp;P 500 returns and stock market returns
-            from 1928 to the present. This historical S&amp;P 500
-            chart and data set shows S&amp;P 500 history by month
-            and year, including the S&amp;P 500 average return for
-            each calendar month, monthly stock market returns,
-            positive and negative return frequency, SPX performance,
-            and current month-to-date performance. The interactive
-            S&amp;P 500 chart and research tools make it possible
-            to compare long-term market behavior across decades and
-            identify how monthly performance has changed through
-            different market cycles.
-          </p>
-
-          <p>
-            The historical data also provides detailed SPX monthly
-            data for studying seasonality, the best and worst months
-            for the S&amp;P 500, average monthly return percentages,
-            and long-term stock market returns and performance
-            history. Investors researching SPY historical data or
-            index fund returns can use S&amp;P 500 index history as
-            related benchmark research, although the calculations on
-            this page represent the S&amp;P 500 index itself rather
-            than SPY ETF returns. Annual performance is available
-            separately in TNI's S&amp;P 500 annual returns research.
-          </p>
-        </section>
-      )}
 
       <section className="tni-monthly-methodology">
 
@@ -689,6 +653,45 @@ export default function GenericMonthlyReturnsPage({
         </div>
 
       </section>
+
+
+      {config.symbol === '^GSPC' && (
+        <section
+          className="monthly-seo-content"
+          aria-labelledby="sp500-monthly-history-heading"
+        >
+          <h2 id="sp500-monthly-history-heading">
+            S&amp;P 500 Monthly Returns, History and Performance
+          </h2>
+
+          <p>
+            Explore S&amp;P 500 returns and stock market returns
+            from 1928 to the present. This historical S&amp;P 500
+            chart and data set shows S&amp;P 500 history by month
+            and year, including the S&amp;P 500 average return for
+            each calendar month, monthly stock market returns,
+            positive and negative return frequency, SPX performance,
+            and current month-to-date performance. The interactive
+            S&amp;P 500 chart and research tools make it possible
+            to compare long-term market behavior across decades and
+            identify how monthly performance has changed through
+            different market cycles.
+          </p>
+
+          <p>
+            The historical data also provides detailed SPX monthly
+            data for studying seasonality, the best and worst months
+            for the S&amp;P 500, average monthly return percentages,
+            and long-term stock market returns and performance
+            history. Investors researching SPY historical data or
+            index fund returns can use S&amp;P 500 index history as
+            related benchmark research, although the calculations on
+            this page represent the S&amp;P 500 index itself rather
+            than SPY ETF returns. Annual performance is available
+            separately in TNI's S&amp;P 500 annual returns research.
+          </p>
+        </section>
+      )}
 
 
       {/* ====================================================================

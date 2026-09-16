@@ -5,6 +5,7 @@ import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
 import NVDAReturnsPage from './pages/NVDAReturnsPage'
 import MSFTReturnsPage from './pages/MSFTReturnsPage'
 import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
+import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import LatestMarketIntelligence from './components/news/LatestMarketIntelligence'
 import './App.css'
@@ -14,6 +15,17 @@ import './App.css'
    ========================================================================== */
 
 type PageName = 'research' | 'articles' | 'about'
+
+const publishedResearchRegistry = [
+  ...annualReturnsResearchRegistry.map((entry) => ({
+    ...entry,
+    researchType: 'annual' as const,
+  })),
+  ...monthlyReturnsRegistry.map((entry) => ({
+    ...entry,
+    researchType: 'monthly' as const,
+  })),
+]
 
 /* ==========================================================================
    TNI PUBLIC WEBSITE — HEADER
@@ -363,7 +375,7 @@ function ResearchPage({
             ==================================================================== */}
 
         <div className="article-library tni-research-secondary">
-          {annualReturnsResearchRegistry
+          {publishedResearchRegistry
             .filter((entry) => !entry.featured)
             .map((entry) => {
               const { config, previewImage } = entry
@@ -386,13 +398,17 @@ function ResearchPage({
                       <img
                         className="tni-real-article-image"
                         src={previewImage}
-                        alt={config.name + " historical annual returns"}
+                        alt={config.name + " historical returns research"}
                         loading="lazy"
                       />
                     ) : (
                       <>
                         <strong>{config.symbol}</strong>
-                        <span>ANNUAL RETURNS</span>
+                        <span>
+                          {entry.researchType === 'monthly'
+                            ? 'MONTHLY RETURNS'
+                            : 'ANNUAL RETURNS'}
+                        </span>
                       </>
                     )}
                   </a>
@@ -410,7 +426,9 @@ function ResearchPage({
 
                     <div>
                       <small>
-                        Historical Annual Returns and Market Performance
+                        {entry.researchType === 'monthly'
+                          ? 'Historical Monthly Returns and Market Performance'
+                          : 'Historical Annual Returns and Market Performance'}
                       </small>
 
                       <a
@@ -469,7 +487,7 @@ function ArticlesPage() {
           ================================================================== */}
 
       <section className="article-library">
-        {annualReturnsResearchRegistry.map((entry) => {
+        {publishedResearchRegistry.map((entry) => {
           const { config, previewImage } = entry
 
           return (
@@ -490,13 +508,17 @@ function ArticlesPage() {
                   <img
                     className="tni-real-article-image"
                     src={previewImage}
-                    alt={config.name + " historical annual returns"}
+                    alt={config.name + " historical returns research"}
                     loading="lazy"
                   />
                 ) : (
                   <>
                     <strong>{config.symbol}</strong>
-                    <span>ANNUAL RETURNS</span>
+                    <span>
+                          {entry.researchType === 'monthly'
+                            ? 'MONTHLY RETURNS'
+                            : 'ANNUAL RETURNS'}
+                        </span>
                   </>
                 )}
               </a>
@@ -514,7 +536,9 @@ function ArticlesPage() {
 
                 <div>
                   <small>
-                    Historical Annual Returns and Market Performance
+                    {entry.researchType === 'monthly'
+                          ? 'Historical Monthly Returns and Market Performance'
+                          : 'Historical Annual Returns and Market Performance'}
                   </small>
 
                   <a
