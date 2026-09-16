@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
+import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
 import NVDAReturnsPage from './pages/NVDAReturnsPage'
 import MSFTReturnsPage from './pages/MSFTReturnsPage'
 import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
@@ -751,6 +752,24 @@ function App() {
   // Canonical URL:
   // /msft-stock-returns/
   // ========================================================================
+
+
+  // ============================================================================
+  // TNI S&P 500 MONTHLY RETURNS — PUBLIC RESEARCH ROUTE
+  // Canonical URL: /sp-500-monthly-returns/
+  // ============================================================================
+
+  if (normalizedPath === '/sp-500-monthly-returns') {
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <SP500MonthlyReturnsPage />
+      </div>
+    )
+  }
 
   if (normalizedPath === '/msft-stock-returns') {
     return (

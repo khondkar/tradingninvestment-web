@@ -1,0 +1,8513 @@
+{
+  "symbol": "^GSPC",
+  "ticker": "SP500",
+  "name": "S&P 500",
+  "metric": "monthly_return_pct",
+  "return_type": "price_return",
+  "source": "Yahoo Finance — ^GSPC",
+  "methodology": "Calendar-month price return calculated from the final closing price of each month relative to the final closing price of the previous month. Dividends are excluded. The current month is month-to-date through the latest available close.",
+  "range": {
+    "start_year": 1928,
+    "start_month": 1,
+    "end_year": 2026,
+    "end_month": 9,
+    "observations": 1185
+  },
+  "current_month": {
+    "year": 2026,
+    "month": 9,
+    "month_name": "September",
+    "label": "September 2026 MTD",
+    "return_pct": -1.3064,
+    "through_date": "2026-09-15"
+  },
+  "leaders": {
+    "highest_positive_frequency": {
+      "month_name": "December",
+      "positive_pct": 72.45,
+      "positive_count": 71,
+      "negative_count": 27
+    },
+    "highest_negative_frequency": {
+      "month_name": "September",
+      "negative_pct": 54.08,
+      "negative_count": 53,
+      "positive_count": 44
+    },
+    "highest_average_return": {
+      "month_name": "July",
+      "average_return_pct": 1.6741
+    },
+    "lowest_average_return": {
+      "month_name": "September",
+      "average_return_pct": -1.1172
+    }
+  },
+  "month_statistics": [
+    {
+      "month": 1,
+      "month_name": "January",
+      "observations": 99,
+      "positive_count": 62,
+      "negative_count": 37,
+      "flat_count": 0,
+      "positive_pct": 62.63,
+      "negative_pct": 37.37,
+      "average_return_pct": 1.213,
+      "median_return_pct": 1.5485,
+      "best_return_pct": 13.1767,
+      "worst_return_pct": -8.5657
+    },
+    {
+      "month": 2,
+      "month_name": "February",
+      "observations": 99,
+      "positive_count": 51,
+      "negative_count": 48,
+      "flat_count": 0,
+      "positive_pct": 51.52,
+      "negative_pct": 48.48,
+      "average_return_pct": -0.1075,
+      "median_return_pct": 0.1963,
+      "best_return_pct": 11.365,
+      "worst_return_pct": -18.4438
+    },
+    {
+      "month": 3,
+      "month_name": "March",
+      "observations": 99,
+      "positive_count": 60,
+      "negative_count": 39,
+      "flat_count": 0,
+      "positive_pct": 60.61,
+      "negative_pct": 39.39,
+      "average_return_pct": 0.4225,
+      "median_return_pct": 0.998,
+      "best_return_pct": 11.7034,
+      "worst_return_pct": -25.0441
+    },
+    {
+      "month": 4,
+      "month_name": "April",
+      "observations": 99,
+      "positive_count": 65,
+      "negative_count": 34,
+      "flat_count": 0,
+      "positive_pct": 65.66,
+      "negative_pct": 34.34,
+      "average_return_pct": 1.3572,
+      "median_return_pct": 0.9425,
+      "best_return_pct": 33.8462,
+      "worst_return_pct": -20.2462
+    },
+    {
+      "month": 5,
+      "month_name": "May",
+      "observations": 99,
+      "positive_count": 60,
+      "negative_count": 39,
+      "flat_count": 0,
+      "positive_pct": 60.61,
+      "negative_pct": 39.39,
+      "average_return_pct": 0.1275,
+      "median_return_pct": 1.0674,
+      "best_return_pct": 23.1162,
+      "worst_return_pct": -23.9541
+    },
+    {
+      "month": 6,
+      "month_name": "June",
+      "observations": 99,
+      "positive_count": 56,
+      "negative_count": 43,
+      "flat_count": 0,
+      "positive_pct": 56.57,
+      "negative_pct": 43.43,
+      "average_return_pct": 0.7858,
+      "median_return_pct": 0.2996,
+      "best_return_pct": 24.7033,
+      "worst_return_pct": -16.4557
+    },
+    {
+      "month": 7,
+      "month_name": "July",
+      "observations": 99,
+      "positive_count": 60,
+      "negative_count": 39,
+      "flat_count": 0,
+      "positive_pct": 60.61,
+      "negative_pct": 39.39,
+      "average_return_pct": 1.6741,
+      "median_return_pct": 1.6224,
+      "best_return_pct": 36.1174,
+      "worst_return_pct": -11.5189
+    },
+    {
+      "month": 8,
+      "month_name": "August",
+      "observations": 99,
+      "positive_count": 58,
+      "negative_count": 41,
+      "flat_count": 0,
+      "positive_pct": 58.59,
+      "negative_pct": 41.41,
+      "average_return_pct": 0.6976,
+      "median_return_pct": 0.8833,
+      "best_return_pct": 39.1376,
+      "worst_return_pct": -14.5797
+    },
+    {
+      "month": 9,
+      "month_name": "September",
+      "observations": 98,
+      "positive_count": 44,
+      "negative_count": 53,
+      "flat_count": 1,
+      "positive_pct": 44.9,
+      "negative_pct": 54.08,
+      "average_return_pct": -1.1172,
+      "median_return_pct": -0.417,
+      "best_return_pct": 14.4007,
+      "worst_return_pct": -29.9423
+    },
+    {
+      "month": 10,
+      "month_name": "October",
+      "observations": 98,
+      "positive_count": 58,
+      "negative_count": 40,
+      "flat_count": 0,
+      "positive_pct": 59.18,
+      "negative_pct": 40.82,
+      "average_return_pct": 0.5472,
+      "median_return_pct": 1.0284,
+      "best_return_pct": 16.3047,
+      "worst_return_pct": -21.763
+    },
+    {
+      "month": 11,
+      "month_name": "November",
+      "observations": 98,
+      "positive_count": 61,
+      "negative_count": 37,
+      "flat_count": 0,
+      "positive_pct": 62.24,
+      "negative_pct": 37.76,
+      "average_return_pct": 1.0073,
+      "median_return_pct": 1.6271,
+      "best_return_pct": 11.9926,
+      "worst_return_pct": -13.3747
+    },
+    {
+      "month": 12,
+      "month_name": "December",
+      "observations": 98,
+      "positive_count": 71,
+      "negative_count": 27,
+      "flat_count": 0,
+      "positive_pct": 72.45,
+      "negative_pct": 27.55,
+      "average_return_pct": 1.2656,
+      "median_return_pct": 1.4788,
+      "best_return_pct": 11.1588,
+      "worst_return_pct": -14.5263
+    }
+  ],
+  "data": [
+    {
+      "year": 1928,
+      "month": 1,
+      "month_name": "January",
+      "value": -0.5096,
+      "status": "negative"
+    },
+    {
+      "year": 1928,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.7644,
+      "status": "negative"
+    },
+    {
+      "year": 1928,
+      "month": 3,
+      "month_name": "March",
+      "value": 11.7034,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 4,
+      "month_name": "April",
+      "value": 2.4378,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.2658,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 6,
+      "month_name": "June",
+      "value": -4.3,
+      "status": "negative"
+    },
+    {
+      "year": 1928,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.5152,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 8,
+      "month_name": "August",
+      "value": 7.4112,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 9,
+      "month_name": "September",
+      "value": 1.2937,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.5544,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 11,
+      "month_name": "November",
+      "value": 11.9926,
+      "status": "positive"
+    },
+    {
+      "year": 1928,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.2883,
+      "status": "positive"
+    },
+    {
+      "year": 1929,
+      "month": 1,
+      "month_name": "January",
+      "value": 5.7084,
+      "status": "positive"
+    },
+    {
+      "year": 1929,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.5827,
+      "status": "negative"
+    },
+    {
+      "year": 1929,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.2345,
+      "status": "negative"
+    },
+    {
+      "year": 1929,
+      "month": 4,
+      "month_name": "April",
+      "value": 1.606,
+      "status": "positive"
+    },
+    {
+      "year": 1929,
+      "month": 5,
+      "month_name": "May",
+      "value": -4.2791,
+      "status": "negative"
+    },
+    {
+      "year": 1929,
+      "month": 6,
+      "month_name": "June",
+      "value": 10.3907,
+      "status": "positive"
+    },
+    {
+      "year": 1929,
+      "month": 7,
+      "month_name": "July",
+      "value": 5.363,
+      "status": "positive"
+    },
+    {
+      "year": 1929,
+      "month": 8,
+      "month_name": "August",
+      "value": 9.7992,
+      "status": "positive"
+    },
+    {
+      "year": 1929,
+      "month": 9,
+      "month_name": "September",
+      "value": -4.888,
+      "status": "negative"
+    },
+    {
+      "year": 1929,
+      "month": 10,
+      "month_name": "October",
+      "value": -19.9271,
+      "status": "negative"
+    },
+    {
+      "year": 1929,
+      "month": 11,
+      "month_name": "November",
+      "value": -13.3747,
+      "status": "negative"
+    },
+    {
+      "year": 1929,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.5335,
+      "status": "positive"
+    },
+    {
+      "year": 1930,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.2471,
+      "status": "positive"
+    },
+    {
+      "year": 1930,
+      "month": 2,
+      "month_name": "February",
+      "value": 2.1501,
+      "status": "positive"
+    },
+    {
+      "year": 1930,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.7371,
+      "status": "positive"
+    },
+    {
+      "year": 1930,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.1056,
+      "status": "positive"
+    },
+    {
+      "year": 1930,
+      "month": 5,
+      "month_name": "May",
+      "value": -1.6466,
+      "status": "negative"
+    },
+    {
+      "year": 1930,
+      "month": 6,
+      "month_name": "June",
+      "value": -16.4557,
+      "status": "negative"
+    },
+    {
+      "year": 1930,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.6657,
+      "status": "positive"
+    },
+    {
+      "year": 1930,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.7544,
+      "status": "positive"
+    },
+    {
+      "year": 1930,
+      "month": 9,
+      "month_name": "September",
+      "value": -13.0089,
+      "status": "negative"
+    },
+    {
+      "year": 1930,
+      "month": 10,
+      "month_name": "October",
+      "value": -8.8757,
+      "status": "negative"
+    },
+    {
+      "year": 1930,
+      "month": 11,
+      "month_name": "November",
+      "value": -3.3058,
+      "status": "negative"
+    },
+    {
+      "year": 1930,
+      "month": 12,
+      "month_name": "December",
+      "value": -6.3492,
+      "status": "negative"
+    },
+    {
+      "year": 1931,
+      "month": 1,
+      "month_name": "January",
+      "value": 5.5411,
+      "status": "positive"
+    },
+    {
+      "year": 1931,
+      "month": 2,
+      "month_name": "February",
+      "value": 11.365,
+      "status": "positive"
+    },
+    {
+      "year": 1931,
+      "month": 3,
+      "month_name": "March",
+      "value": -7.4321,
+      "status": "negative"
+    },
+    {
+      "year": 1931,
+      "month": 4,
+      "month_name": "April",
+      "value": -9.5866,
+      "status": "negative"
+    },
+    {
+      "year": 1931,
+      "month": 5,
+      "month_name": "May",
+      "value": -13.7177,
+      "status": "negative"
+    },
+    {
+      "year": 1931,
+      "month": 6,
+      "month_name": "June",
+      "value": 13.9017,
+      "status": "positive"
+    },
+    {
+      "year": 1931,
+      "month": 7,
+      "month_name": "July",
+      "value": -7.4174,
+      "status": "negative"
+    },
+    {
+      "year": 1931,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.9468,
+      "status": "positive"
+    },
+    {
+      "year": 1931,
+      "month": 9,
+      "month_name": "September",
+      "value": -29.9423,
+      "status": "negative"
+    },
+    {
+      "year": 1931,
+      "month": 10,
+      "month_name": "October",
+      "value": 7.415,
+      "status": "positive"
+    },
+    {
+      "year": 1931,
+      "month": 11,
+      "month_name": "November",
+      "value": -8.9166,
+      "status": "negative"
+    },
+    {
+      "year": 1931,
+      "month": 12,
+      "month_name": "December",
+      "value": -14.5263,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 1,
+      "month_name": "January",
+      "value": -2.2167,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 2,
+      "month_name": "February",
+      "value": 4.4081,
+      "status": "positive"
+    },
+    {
+      "year": 1932,
+      "month": 3,
+      "month_name": "March",
+      "value": -11.8215,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 4,
+      "month_name": "April",
+      "value": -20.2462,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 5,
+      "month_name": "May",
+      "value": -23.3276,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.8949,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 7,
+      "month_name": "July",
+      "value": 36.1174,
+      "status": "positive"
+    },
+    {
+      "year": 1932,
+      "month": 8,
+      "month_name": "August",
+      "value": 39.1376,
+      "status": "positive"
+    },
+    {
+      "year": 1932,
+      "month": 9,
+      "month_name": "September",
+      "value": -3.6949,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 10,
+      "month_name": "October",
+      "value": -13.8614,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 11,
+      "month_name": "November",
+      "value": -5.8908,
+      "status": "negative"
+    },
+    {
+      "year": 1932,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.6489,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 1,
+      "month_name": "January",
+      "value": 0.289,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 2,
+      "month_name": "February",
+      "value": -18.4438,
+      "status": "negative"
+    },
+    {
+      "year": 1933,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.3569,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 4,
+      "month_name": "April",
+      "value": 33.8462,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 5,
+      "month_name": "May",
+      "value": 23.1162,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 6,
+      "month_name": "June",
+      "value": 13.1743,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 7,
+      "month_name": "July",
+      "value": -8.7993,
+      "status": "negative"
+    },
+    {
+      "year": 1933,
+      "month": 8,
+      "month_name": "August",
+      "value": 11.4573,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 9,
+      "month_name": "September",
+      "value": -12.3535,
+      "status": "negative"
+    },
+    {
+      "year": 1933,
+      "month": 10,
+      "month_name": "October",
+      "value": -7.8189,
+      "status": "negative"
+    },
+    {
+      "year": 1933,
+      "month": 11,
+      "month_name": "November",
+      "value": 10.2679,
+      "status": "positive"
+    },
+    {
+      "year": 1933,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.9109,
+      "status": "positive"
+    },
+    {
+      "year": 1934,
+      "month": 1,
+      "month_name": "January",
+      "value": 12.0361,
+      "status": "positive"
+    },
+    {
+      "year": 1934,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.6705,
+      "status": "negative"
+    },
+    {
+      "year": 1934,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.3011,
+      "status": "negative"
+    },
+    {
+      "year": 1934,
+      "month": 4,
+      "month_name": "April",
+      "value": -1.5066,
+      "status": "negative"
+    },
+    {
+      "year": 1934,
+      "month": 5,
+      "month_name": "May",
+      "value": -8.1262,
+      "status": "negative"
+    },
+    {
+      "year": 1934,
+      "month": 6,
+      "month_name": "June",
+      "value": 2.0812,
+      "status": "positive"
+    },
+    {
+      "year": 1934,
+      "month": 7,
+      "month_name": "July",
+      "value": -11.5189,
+      "status": "negative"
+    },
+    {
+      "year": 1934,
+      "month": 8,
+      "month_name": "August",
+      "value": 5.4147,
+      "status": "positive"
+    },
+    {
+      "year": 1934,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.765,
+      "status": "negative"
+    },
+    {
+      "year": 1934,
+      "month": 10,
+      "month_name": "October",
+      "value": -2.9736,
+      "status": "negative"
+    },
+    {
+      "year": 1934,
+      "month": 11,
+      "month_name": "November",
+      "value": 8.286,
+      "status": "positive"
+    },
+    {
+      "year": 1934,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.4193,
+      "status": "negative"
+    },
+    {
+      "year": 1935,
+      "month": 1,
+      "month_name": "January",
+      "value": -4.2105,
+      "status": "negative"
+    },
+    {
+      "year": 1935,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.9561,
+      "status": "negative"
+    },
+    {
+      "year": 1935,
+      "month": 3,
+      "month_name": "March",
+      "value": -3.3181,
+      "status": "negative"
+    },
+    {
+      "year": 1935,
+      "month": 4,
+      "month_name": "April",
+      "value": 9.8225,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.2328,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 6,
+      "month_name": "June",
+      "value": 6.8894,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 7,
+      "month_name": "July",
+      "value": 8.2031,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.444,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.1139,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 10,
+      "month_name": "October",
+      "value": 7.5065,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.8523,
+      "status": "positive"
+    },
+    {
+      "year": 1935,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.7867,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.5525,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 2,
+      "month_name": "February",
+      "value": 2.0266,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.1918,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 4,
+      "month_name": "April",
+      "value": -7.7078,
+      "status": "negative"
+    },
+    {
+      "year": 1936,
+      "month": 5,
+      "month_name": "May",
+      "value": 4.5752,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 6,
+      "month_name": "June",
+      "value": 3.0556,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.8059,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.8833,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.1251,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 10,
+      "month_name": "October",
+      "value": 7.6202,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.2902,
+      "status": "positive"
+    },
+    {
+      "year": 1936,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.5787,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 1,
+      "month_name": "January",
+      "value": 3.4342,
+      "status": "positive"
+    },
+    {
+      "year": 1937,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.632,
+      "status": "positive"
+    },
+    {
+      "year": 1937,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.7752,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 4,
+      "month_name": "April",
+      "value": -8.3147,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 5,
+      "month_name": "May",
+      "value": -1.0347,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 6,
+      "month_name": "June",
+      "value": -5.2891,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 7,
+      "month_name": "July",
+      "value": 8.8961,
+      "status": "positive"
+    },
+    {
+      "year": 1937,
+      "month": 8,
+      "month_name": "August",
+      "value": -4.353,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 9,
+      "month_name": "September",
+      "value": -14.2145,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 10,
+      "month_name": "October",
+      "value": -10.2471,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 11,
+      "month_name": "November",
+      "value": -10.0405,
+      "status": "negative"
+    },
+    {
+      "year": 1937,
+      "month": 12,
+      "month_name": "December",
+      "value": -5.0405,
+      "status": "negative"
+    },
+    {
+      "year": 1938,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.327,
+      "status": "positive"
+    },
+    {
+      "year": 1938,
+      "month": 2,
+      "month_name": "February",
+      "value": 6.0805,
+      "status": "positive"
+    },
+    {
+      "year": 1938,
+      "month": 3,
+      "month_name": "March",
+      "value": -25.0441,
+      "status": "negative"
+    },
+    {
+      "year": 1938,
+      "month": 4,
+      "month_name": "April",
+      "value": 15.0588,
+      "status": "positive"
+    },
+    {
+      "year": 1938,
+      "month": 5,
+      "month_name": "May",
+      "value": -5.2147,
+      "status": "negative"
+    },
+    {
+      "year": 1938,
+      "month": 6,
+      "month_name": "June",
+      "value": 24.7033,
+      "status": "positive"
+    },
+    {
+      "year": 1938,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.6609,
+      "status": "positive"
+    },
+    {
+      "year": 1938,
+      "month": 8,
+      "month_name": "August",
+      "value": -2.1898,
+      "status": "negative"
+    },
+    {
+      "year": 1938,
+      "month": 9,
+      "month_name": "September",
+      "value": 1.4925,
+      "status": "positive"
+    },
+    {
+      "year": 1938,
+      "month": 10,
+      "month_name": "October",
+      "value": 7.598,
+      "status": "positive"
+    },
+    {
+      "year": 1938,
+      "month": 11,
+      "month_name": "November",
+      "value": -3.3409,
+      "status": "negative"
+    },
+    {
+      "year": 1938,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.2207,
+      "status": "positive"
+    },
+    {
+      "year": 1939,
+      "month": 1,
+      "month_name": "January",
+      "value": -6.3927,
+      "status": "negative"
+    },
+    {
+      "year": 1939,
+      "month": 2,
+      "month_name": "February",
+      "value": 3.252,
+      "status": "positive"
+    },
+    {
+      "year": 1939,
+      "month": 3,
+      "month_name": "March",
+      "value": -13.5433,
+      "status": "negative"
+    },
+    {
+      "year": 1939,
+      "month": 4,
+      "month_name": "April",
+      "value": -0.4554,
+      "status": "negative"
+    },
+    {
+      "year": 1939,
+      "month": 5,
+      "month_name": "May",
+      "value": 6.1299,
+      "status": "positive"
+    },
+    {
+      "year": 1939,
+      "month": 6,
+      "month_name": "June",
+      "value": -6.3793,
+      "status": "negative"
+    },
+    {
+      "year": 1939,
+      "month": 7,
+      "month_name": "July",
+      "value": 10.8656,
+      "status": "positive"
+    },
+    {
+      "year": 1939,
+      "month": 8,
+      "month_name": "August",
+      "value": -7.1429,
+      "status": "negative"
+    },
+    {
+      "year": 1939,
+      "month": 9,
+      "month_name": "September",
+      "value": 14.4007,
+      "status": "positive"
+    },
+    {
+      "year": 1939,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.3127,
+      "status": "positive"
+    },
+    {
+      "year": 1939,
+      "month": 11,
+      "month_name": "November",
+      "value": -4.9104,
+      "status": "negative"
+    },
+    {
+      "year": 1939,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.1311,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 1,
+      "month_name": "January",
+      "value": -3.2905,
+      "status": "negative"
+    },
+    {
+      "year": 1940,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.6639,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.4122,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.0821,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 5,
+      "month_name": "May",
+      "value": -23.9541,
+      "status": "negative"
+    },
+    {
+      "year": 1940,
+      "month": 6,
+      "month_name": "June",
+      "value": 7.6591,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.1062,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.0408,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 9,
+      "month_name": "September",
+      "value": 1.5238,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 10,
+      "month_name": "October",
+      "value": 3.94,
+      "status": "positive"
+    },
+    {
+      "year": 1940,
+      "month": 11,
+      "month_name": "November",
+      "value": -4.6029,
+      "status": "negative"
+    },
+    {
+      "year": 1940,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.0946,
+      "status": "positive"
+    },
+    {
+      "year": 1941,
+      "month": 1,
+      "month_name": "January",
+      "value": -4.8204,
+      "status": "negative"
+    },
+    {
+      "year": 1941,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.4896,
+      "status": "negative"
+    },
+    {
+      "year": 1941,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.4032,
+      "status": "positive"
+    },
+    {
+      "year": 1941,
+      "month": 4,
+      "month_name": "April",
+      "value": -6.5261,
+      "status": "negative"
+    },
+    {
+      "year": 1941,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.7519,
+      "status": "positive"
+    },
+    {
+      "year": 1941,
+      "month": 6,
+      "month_name": "June",
+      "value": 5.0107,
+      "status": "positive"
+    },
+    {
+      "year": 1941,
+      "month": 7,
+      "month_name": "July",
+      "value": 5.4822,
+      "status": "positive"
+    },
+    {
+      "year": 1941,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.0587,
+      "status": "negative"
+    },
+    {
+      "year": 1941,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.7782,
+      "status": "negative"
+    },
+    {
+      "year": 1941,
+      "month": 10,
+      "month_name": "October",
+      "value": -6.8627,
+      "status": "negative"
+    },
+    {
+      "year": 1941,
+      "month": 11,
+      "month_name": "November",
+      "value": -4.0,
+      "status": "negative"
+    },
+    {
+      "year": 1941,
+      "month": 12,
+      "month_name": "December",
+      "value": -4.7149,
+      "status": "negative"
+    },
+    {
+      "year": 1942,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.8412,
+      "status": "positive"
+    },
+    {
+      "year": 1942,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.9379,
+      "status": "negative"
+    },
+    {
+      "year": 1942,
+      "month": 3,
+      "month_name": "March",
+      "value": -6.752,
+      "status": "negative"
+    },
+    {
+      "year": 1942,
+      "month": 4,
+      "month_name": "April",
+      "value": -4.3695,
+      "status": "negative"
+    },
+    {
+      "year": 1942,
+      "month": 5,
+      "month_name": "May",
+      "value": 6.3969,
+      "status": "positive"
+    },
+    {
+      "year": 1942,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.8405,
+      "status": "positive"
+    },
+    {
+      "year": 1942,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.1325,
+      "status": "positive"
+    },
+    {
+      "year": 1942,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.7009,
+      "status": "positive"
+    },
+    {
+      "year": 1942,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.6682,
+      "status": "positive"
+    },
+    {
+      "year": 1942,
+      "month": 10,
+      "month_name": "October",
+      "value": 5.7627,
+      "status": "positive"
+    },
+    {
+      "year": 1942,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.7479,
+      "status": "negative"
+    },
+    {
+      "year": 1942,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.1669,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.8577,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 2,
+      "month_name": "February",
+      "value": 5.0766,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 3,
+      "month_name": "March",
+      "value": 5.5606,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.0864,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.9689,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 6,
+      "month_name": "June",
+      "value": 2.4896,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 7,
+      "month_name": "July",
+      "value": -4.0486,
+      "status": "negative"
+    },
+    {
+      "year": 1943,
+      "month": 8,
+      "month_name": "August",
+      "value": -0.4219,
+      "status": "negative"
+    },
+    {
+      "year": 1943,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.3729,
+      "status": "positive"
+    },
+    {
+      "year": 1943,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.4073,
+      "status": "negative"
+    },
+    {
+      "year": 1943,
+      "month": 11,
+      "month_name": "November",
+      "value": -7.4727,
+      "status": "negative"
+    },
+    {
+      "year": 1943,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.8984,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.5424,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.2532,
+      "status": "negative"
+    },
+    {
+      "year": 1944,
+      "month": 3,
+      "month_name": "March",
+      "value": 1.6921,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 4,
+      "month_name": "April",
+      "value": -1.2479,
+      "status": "negative"
+    },
+    {
+      "year": 1944,
+      "month": 5,
+      "month_name": "May",
+      "value": 4.0438,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 6,
+      "month_name": "June",
+      "value": 5.1012,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 7,
+      "month_name": "July",
+      "value": -2.0801,
+      "status": "negative"
+    },
+    {
+      "year": 1944,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.8655,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.624,
+      "status": "negative"
+    },
+    {
+      "year": 1944,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.314,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.3912,
+      "status": "positive"
+    },
+    {
+      "year": 1944,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.5074,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.4307,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 2,
+      "month_name": "February",
+      "value": 6.1618,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 3,
+      "month_name": "March",
+      "value": -4.8252,
+      "status": "negative"
+    },
+    {
+      "year": 1945,
+      "month": 4,
+      "month_name": "April",
+      "value": 9.0375,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.1456,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.9327,
+      "status": "negative"
+    },
+    {
+      "year": 1945,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.4122,
+      "status": "negative"
+    },
+    {
+      "year": 1945,
+      "month": 8,
+      "month_name": "August",
+      "value": 5.7981,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.4816,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 10,
+      "month_name": "October",
+      "value": 3.7383,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.2432,
+      "status": "positive"
+    },
+    {
+      "year": 1945,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.9889,
+      "status": "positive"
+    },
+    {
+      "year": 1946,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.97,
+      "status": "positive"
+    },
+    {
+      "year": 1946,
+      "month": 2,
+      "month_name": "February",
+      "value": -6.9467,
+      "status": "negative"
+    },
+    {
+      "year": 1946,
+      "month": 3,
+      "month_name": "March",
+      "value": 4.3981,
+      "status": "positive"
+    },
+    {
+      "year": 1946,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.9911,
+      "status": "positive"
+    },
+    {
+      "year": 1946,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.2388,
+      "status": "positive"
+    },
+    {
+      "year": 1946,
+      "month": 6,
+      "month_name": "June",
+      "value": -3.9103,
+      "status": "negative"
+    },
+    {
+      "year": 1946,
+      "month": 7,
+      "month_name": "July",
+      "value": -2.5502,
+      "status": "negative"
+    },
+    {
+      "year": 1946,
+      "month": 8,
+      "month_name": "August",
+      "value": -7.294,
+      "status": "negative"
+    },
+    {
+      "year": 1946,
+      "month": 9,
+      "month_name": "September",
+      "value": -10.1501,
+      "status": "negative"
+    },
+    {
+      "year": 1946,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.8021,
+      "status": "negative"
+    },
+    {
+      "year": 1946,
+      "month": 11,
+      "month_name": "November",
+      "value": -1.0782,
+      "status": "negative"
+    },
+    {
+      "year": 1946,
+      "month": 12,
+      "month_name": "December",
+      "value": 4.2234,
+      "status": "positive"
+    },
+    {
+      "year": 1947,
+      "month": 1,
+      "month_name": "January",
+      "value": 2.3529,
+      "status": "positive"
+    },
+    {
+      "year": 1947,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.4687,
+      "status": "negative"
+    },
+    {
+      "year": 1947,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.685,
+      "status": "negative"
+    },
+    {
+      "year": 1947,
+      "month": 4,
+      "month_name": "April",
+      "value": -3.8893,
+      "status": "negative"
+    },
+    {
+      "year": 1947,
+      "month": 5,
+      "month_name": "May",
+      "value": -0.8916,
+      "status": "negative"
+    },
+    {
+      "year": 1947,
+      "month": 6,
+      "month_name": "June",
+      "value": 5.2595,
+      "status": "positive"
+    },
+    {
+      "year": 1947,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.616,
+      "status": "positive"
+    },
+    {
+      "year": 1947,
+      "month": 8,
+      "month_name": "August",
+      "value": -2.7919,
+      "status": "negative"
+    },
+    {
+      "year": 1947,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.3708,
+      "status": "negative"
+    },
+    {
+      "year": 1947,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.1178,
+      "status": "positive"
+    },
+    {
+      "year": 1947,
+      "month": 11,
+      "month_name": "November",
+      "value": -2.9164,
+      "status": "negative"
+    },
+    {
+      "year": 1947,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.1362,
+      "status": "positive"
+    },
+    {
+      "year": 1948,
+      "month": 1,
+      "month_name": "January",
+      "value": -4.0523,
+      "status": "negative"
+    },
+    {
+      "year": 1948,
+      "month": 2,
+      "month_name": "February",
+      "value": -5.109,
+      "status": "negative"
+    },
+    {
+      "year": 1948,
+      "month": 3,
+      "month_name": "March",
+      "value": 8.2556,
+      "status": "positive"
+    },
+    {
+      "year": 1948,
+      "month": 4,
+      "month_name": "April",
+      "value": 2.6525,
+      "status": "positive"
+    },
+    {
+      "year": 1948,
+      "month": 5,
+      "month_name": "May",
+      "value": 7.8165,
+      "status": "positive"
+    },
+    {
+      "year": 1948,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.2996,
+      "status": "positive"
+    },
+    {
+      "year": 1948,
+      "month": 7,
+      "month_name": "July",
+      "value": -5.3166,
+      "status": "negative"
+    },
+    {
+      "year": 1948,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.7571,
+      "status": "positive"
+    },
+    {
+      "year": 1948,
+      "month": 9,
+      "month_name": "September",
+      "value": -3.0056,
+      "status": "negative"
+    },
+    {
+      "year": 1948,
+      "month": 10,
+      "month_name": "October",
+      "value": 6.5203,
+      "status": "positive"
+    },
+    {
+      "year": 1948,
+      "month": 11,
+      "month_name": "November",
+      "value": -10.6061,
+      "status": "negative"
+    },
+    {
+      "year": 1948,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.0508,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 1,
+      "month_name": "January",
+      "value": 0.1316,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.9422,
+      "status": "negative"
+    },
+    {
+      "year": 1949,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.0096,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 4,
+      "month_name": "April",
+      "value": -2.324,
+      "status": "negative"
+    },
+    {
+      "year": 1949,
+      "month": 5,
+      "month_name": "May",
+      "value": -3.535,
+      "status": "negative"
+    },
+    {
+      "year": 1949,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.2114,
+      "status": "negative"
+    },
+    {
+      "year": 1949,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.2147,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.1968,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.3653,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.9525,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.1247,
+      "status": "positive"
+    },
+    {
+      "year": 1949,
+      "month": 12,
+      "month_name": "December",
+      "value": 4.5455,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.5485,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.9971,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.4065,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.8751,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 5,
+      "month_name": "May",
+      "value": 4.5657,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 6,
+      "month_name": "June",
+      "value": -5.804,
+      "status": "negative"
+    },
+    {
+      "year": 1950,
+      "month": 7,
+      "month_name": "July",
+      "value": 0.8479,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.2511,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 9,
+      "month_name": "September",
+      "value": 5.5918,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.4113,
+      "status": "positive"
+    },
+    {
+      "year": 1950,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.1024,
+      "status": "negative"
+    },
+    {
+      "year": 1950,
+      "month": 12,
+      "month_name": "December",
+      "value": 4.7155,
+      "status": "positive"
+    },
+    {
+      "year": 1951,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.0206,
+      "status": "positive"
+    },
+    {
+      "year": 1951,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.6463,
+      "status": "positive"
+    },
+    {
+      "year": 1951,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.4679,
+      "status": "negative"
+    },
+    {
+      "year": 1951,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.4227,
+      "status": "positive"
+    },
+    {
+      "year": 1951,
+      "month": 5,
+      "month_name": "May",
+      "value": -4.0571,
+      "status": "negative"
+    },
+    {
+      "year": 1951,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.6022,
+      "status": "negative"
+    },
+    {
+      "year": 1951,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.8702,
+      "status": "positive"
+    },
+    {
+      "year": 1951,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.9286,
+      "status": "positive"
+    },
+    {
+      "year": 1951,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.0859,
+      "status": "negative"
+    },
+    {
+      "year": 1951,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.3758,
+      "status": "negative"
+    },
+    {
+      "year": 1951,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.2616,
+      "status": "negative"
+    },
+    {
+      "year": 1951,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.8899,
+      "status": "positive"
+    },
+    {
+      "year": 1952,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.5566,
+      "status": "positive"
+    },
+    {
+      "year": 1952,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.6454,
+      "status": "negative"
+    },
+    {
+      "year": 1952,
+      "month": 3,
+      "month_name": "March",
+      "value": 4.7721,
+      "status": "positive"
+    },
+    {
+      "year": 1952,
+      "month": 4,
+      "month_name": "April",
+      "value": -4.3086,
+      "status": "negative"
+    },
+    {
+      "year": 1952,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.3156,
+      "status": "positive"
+    },
+    {
+      "year": 1952,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.6102,
+      "status": "positive"
+    },
+    {
+      "year": 1952,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.7628,
+      "status": "positive"
+    },
+    {
+      "year": 1952,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.4567,
+      "status": "negative"
+    },
+    {
+      "year": 1952,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.9576,
+      "status": "negative"
+    },
+    {
+      "year": 1952,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.0815,
+      "status": "negative"
+    },
+    {
+      "year": 1952,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.6493,
+      "status": "positive"
+    },
+    {
+      "year": 1952,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.5464,
+      "status": "positive"
+    },
+    {
+      "year": 1953,
+      "month": 1,
+      "month_name": "January",
+      "value": -0.7151,
+      "status": "negative"
+    },
+    {
+      "year": 1953,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.8196,
+      "status": "negative"
+    },
+    {
+      "year": 1953,
+      "month": 3,
+      "month_name": "March",
+      "value": -2.3552,
+      "status": "negative"
+    },
+    {
+      "year": 1953,
+      "month": 4,
+      "month_name": "April",
+      "value": -2.6493,
+      "status": "negative"
+    },
+    {
+      "year": 1953,
+      "month": 5,
+      "month_name": "May",
+      "value": -0.3249,
+      "status": "negative"
+    },
+    {
+      "year": 1953,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.63,
+      "status": "negative"
+    },
+    {
+      "year": 1953,
+      "month": 7,
+      "month_name": "July",
+      "value": 2.5269,
+      "status": "positive"
+    },
+    {
+      "year": 1953,
+      "month": 8,
+      "month_name": "August",
+      "value": -5.7778,
+      "status": "negative"
+    },
+    {
+      "year": 1953,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.1286,
+      "status": "positive"
+    },
+    {
+      "year": 1953,
+      "month": 10,
+      "month_name": "October",
+      "value": 5.0964,
+      "status": "positive"
+    },
+    {
+      "year": 1953,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.8965,
+      "status": "positive"
+    },
+    {
+      "year": 1953,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.2019,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 1,
+      "month_name": "January",
+      "value": 5.1189,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.2684,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.021,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.8998,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.2909,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.0685,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 7,
+      "month_name": "July",
+      "value": 5.7172,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 8,
+      "month_name": "August",
+      "value": -3.4003,
+      "status": "negative"
+    },
+    {
+      "year": 1954,
+      "month": 9,
+      "month_name": "September",
+      "value": 8.3138,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.9499,
+      "status": "negative"
+    },
+    {
+      "year": 1954,
+      "month": 11,
+      "month_name": "November",
+      "value": 8.0808,
+      "status": "positive"
+    },
+    {
+      "year": 1954,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.0818,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.8066,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.3549,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.4897,
+      "status": "negative"
+    },
+    {
+      "year": 1955,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.7725,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 5,
+      "month_name": "May",
+      "value": -0.1317,
+      "status": "negative"
+    },
+    {
+      "year": 1955,
+      "month": 6,
+      "month_name": "June",
+      "value": 8.23,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.0687,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 8,
+      "month_name": "August",
+      "value": -0.7813,
+      "status": "negative"
+    },
+    {
+      "year": 1955,
+      "month": 9,
+      "month_name": "September",
+      "value": 1.1348,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 10,
+      "month_name": "October",
+      "value": -3.0456,
+      "status": "negative"
+    },
+    {
+      "year": 1955,
+      "month": 11,
+      "month_name": "November",
+      "value": 7.487,
+      "status": "positive"
+    },
+    {
+      "year": 1955,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.0659,
+      "status": "negative"
+    },
+    {
+      "year": 1956,
+      "month": 1,
+      "month_name": "January",
+      "value": -3.65,
+      "status": "negative"
+    },
+    {
+      "year": 1956,
+      "month": 2,
+      "month_name": "February",
+      "value": 3.4687,
+      "status": "positive"
+    },
+    {
+      "year": 1956,
+      "month": 3,
+      "month_name": "March",
+      "value": 6.9255,
+      "status": "positive"
+    },
+    {
+      "year": 1956,
+      "month": 4,
+      "month_name": "April",
+      "value": -0.2063,
+      "status": "negative"
+    },
+    {
+      "year": 1956,
+      "month": 5,
+      "month_name": "May",
+      "value": -6.573,
+      "status": "negative"
+    },
+    {
+      "year": 1956,
+      "month": 6,
+      "month_name": "June",
+      "value": 3.9159,
+      "status": "positive"
+    },
+    {
+      "year": 1956,
+      "month": 7,
+      "month_name": "July",
+      "value": 5.1522,
+      "status": "positive"
+    },
+    {
+      "year": 1956,
+      "month": 8,
+      "month_name": "August",
+      "value": -3.8064,
+      "status": "negative"
+    },
+    {
+      "year": 1956,
+      "month": 9,
+      "month_name": "September",
+      "value": -4.5464,
+      "status": "negative"
+    },
+    {
+      "year": 1956,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.5072,
+      "status": "positive"
+    },
+    {
+      "year": 1956,
+      "month": 11,
+      "month_name": "November",
+      "value": -1.097,
+      "status": "negative"
+    },
+    {
+      "year": 1956,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.5271,
+      "status": "positive"
+    },
+    {
+      "year": 1957,
+      "month": 1,
+      "month_name": "January",
+      "value": -4.1783,
+      "status": "negative"
+    },
+    {
+      "year": 1957,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.2648,
+      "status": "negative"
+    },
+    {
+      "year": 1957,
+      "month": 3,
+      "month_name": "March",
+      "value": 1.9649,
+      "status": "positive"
+    },
+    {
+      "year": 1957,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.6953,
+      "status": "positive"
+    },
+    {
+      "year": 1957,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.6948,
+      "status": "positive"
+    },
+    {
+      "year": 1957,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.1265,
+      "status": "negative"
+    },
+    {
+      "year": 1957,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.14,
+      "status": "positive"
+    },
+    {
+      "year": 1957,
+      "month": 8,
+      "month_name": "August",
+      "value": -5.6147,
+      "status": "negative"
+    },
+    {
+      "year": 1957,
+      "month": 9,
+      "month_name": "September",
+      "value": -6.192,
+      "status": "negative"
+    },
+    {
+      "year": 1957,
+      "month": 10,
+      "month_name": "October",
+      "value": -3.206,
+      "status": "negative"
+    },
+    {
+      "year": 1957,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.6074,
+      "status": "positive"
+    },
+    {
+      "year": 1957,
+      "month": 12,
+      "month_name": "December",
+      "value": -4.1467,
+      "status": "negative"
+    },
+    {
+      "year": 1958,
+      "month": 1,
+      "month_name": "January",
+      "value": 4.2761,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.0624,
+      "status": "negative"
+    },
+    {
+      "year": 1958,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.0852,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.1829,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.4963,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 6,
+      "month_name": "June",
+      "value": 2.6083,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 7,
+      "month_name": "July",
+      "value": 4.3103,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.1867,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 9,
+      "month_name": "September",
+      "value": 4.8377,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.537,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 11,
+      "month_name": "November",
+      "value": 2.2404,
+      "status": "positive"
+    },
+    {
+      "year": 1958,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.202,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 1,
+      "month_name": "January",
+      "value": 0.4347,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.0721,
+      "status": "negative"
+    },
+    {
+      "year": 1959,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.0541,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.8781,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.8927,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.3579,
+      "status": "negative"
+    },
+    {
+      "year": 1959,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.489,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.5039,
+      "status": "negative"
+    },
+    {
+      "year": 1959,
+      "month": 9,
+      "month_name": "September",
+      "value": -4.5638,
+      "status": "negative"
+    },
+    {
+      "year": 1959,
+      "month": 10,
+      "month_name": "October",
+      "value": 1.1252,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.3213,
+      "status": "positive"
+    },
+    {
+      "year": 1959,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.7625,
+      "status": "positive"
+    },
+    {
+      "year": 1960,
+      "month": 1,
+      "month_name": "January",
+      "value": -7.1464,
+      "status": "negative"
+    },
+    {
+      "year": 1960,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.9171,
+      "status": "positive"
+    },
+    {
+      "year": 1960,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.3899,
+      "status": "negative"
+    },
+    {
+      "year": 1960,
+      "month": 4,
+      "month_name": "April",
+      "value": -1.7528,
+      "status": "negative"
+    },
+    {
+      "year": 1960,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.6853,
+      "status": "positive"
+    },
+    {
+      "year": 1960,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.9523,
+      "status": "positive"
+    },
+    {
+      "year": 1960,
+      "month": 7,
+      "month_name": "July",
+      "value": -2.4772,
+      "status": "negative"
+    },
+    {
+      "year": 1960,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.6121,
+      "status": "positive"
+    },
+    {
+      "year": 1960,
+      "month": 9,
+      "month_name": "September",
+      "value": -6.0393,
+      "status": "negative"
+    },
+    {
+      "year": 1960,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.2429,
+      "status": "negative"
+    },
+    {
+      "year": 1960,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.027,
+      "status": "positive"
+    },
+    {
+      "year": 1960,
+      "month": 12,
+      "month_name": "December",
+      "value": 4.6273,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.3156,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 2,
+      "month_name": "February",
+      "value": 2.687,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.5536,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.3843,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.9139,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.8846,
+      "status": "negative"
+    },
+    {
+      "year": 1961,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.2797,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.9622,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.9686,
+      "status": "negative"
+    },
+    {
+      "year": 1961,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.8323,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.9347,
+      "status": "positive"
+    },
+    {
+      "year": 1961,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.3225,
+      "status": "positive"
+    },
+    {
+      "year": 1962,
+      "month": 1,
+      "month_name": "January",
+      "value": -3.7876,
+      "status": "negative"
+    },
+    {
+      "year": 1962,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.627,
+      "status": "positive"
+    },
+    {
+      "year": 1962,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.586,
+      "status": "negative"
+    },
+    {
+      "year": 1962,
+      "month": 4,
+      "month_name": "April",
+      "value": -6.197,
+      "status": "negative"
+    },
+    {
+      "year": 1962,
+      "month": 5,
+      "month_name": "May",
+      "value": -8.599,
+      "status": "negative"
+    },
+    {
+      "year": 1962,
+      "month": 6,
+      "month_name": "June",
+      "value": -8.1838,
+      "status": "negative"
+    },
+    {
+      "year": 1962,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.3562,
+      "status": "positive"
+    },
+    {
+      "year": 1962,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.5284,
+      "status": "positive"
+    },
+    {
+      "year": 1962,
+      "month": 9,
+      "month_name": "September",
+      "value": -4.8207,
+      "status": "negative"
+    },
+    {
+      "year": 1962,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.4443,
+      "status": "positive"
+    },
+    {
+      "year": 1962,
+      "month": 11,
+      "month_name": "November",
+      "value": 10.1557,
+      "status": "positive"
+    },
+    {
+      "year": 1962,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.3492,
+      "status": "positive"
+    },
+    {
+      "year": 1963,
+      "month": 1,
+      "month_name": "January",
+      "value": 4.9128,
+      "status": "positive"
+    },
+    {
+      "year": 1963,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.8852,
+      "status": "negative"
+    },
+    {
+      "year": 1963,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.5464,
+      "status": "positive"
+    },
+    {
+      "year": 1963,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.852,
+      "status": "positive"
+    },
+    {
+      "year": 1963,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.4327,
+      "status": "positive"
+    },
+    {
+      "year": 1963,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.0198,
+      "status": "negative"
+    },
+    {
+      "year": 1963,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.346,
+      "status": "negative"
+    },
+    {
+      "year": 1963,
+      "month": 8,
+      "month_name": "August",
+      "value": 4.8749,
+      "status": "positive"
+    },
+    {
+      "year": 1963,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.1035,
+      "status": "negative"
+    },
+    {
+      "year": 1963,
+      "month": 10,
+      "month_name": "October",
+      "value": 3.2218,
+      "status": "positive"
+    },
+    {
+      "year": 1963,
+      "month": 11,
+      "month_name": "November",
+      "value": -1.0539,
+      "status": "negative"
+    },
+    {
+      "year": 1963,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.4443,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 1,
+      "month_name": "January",
+      "value": 2.6926,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.9865,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 3,
+      "month_name": "March",
+      "value": 1.5167,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.6077,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.1452,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.6424,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.824,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.623,
+      "status": "negative"
+    },
+    {
+      "year": 1964,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.8718,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.8078,
+      "status": "positive"
+    },
+    {
+      "year": 1964,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.5185,
+      "status": "negative"
+    },
+    {
+      "year": 1964,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.3909,
+      "status": "positive"
+    },
+    {
+      "year": 1965,
+      "month": 1,
+      "month_name": "January",
+      "value": 3.3156,
+      "status": "positive"
+    },
+    {
+      "year": 1965,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.1485,
+      "status": "negative"
+    },
+    {
+      "year": 1965,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.4526,
+      "status": "negative"
+    },
+    {
+      "year": 1965,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.4239,
+      "status": "positive"
+    },
+    {
+      "year": 1965,
+      "month": 5,
+      "month_name": "May",
+      "value": -0.7743,
+      "status": "negative"
+    },
+    {
+      "year": 1965,
+      "month": 6,
+      "month_name": "June",
+      "value": -4.8631,
+      "status": "negative"
+    },
+    {
+      "year": 1965,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.3433,
+      "status": "positive"
+    },
+    {
+      "year": 1965,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.2522,
+      "status": "positive"
+    },
+    {
+      "year": 1965,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.2006,
+      "status": "positive"
+    },
+    {
+      "year": 1965,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.7345,
+      "status": "positive"
+    },
+    {
+      "year": 1965,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.8764,
+      "status": "negative"
+    },
+    {
+      "year": 1965,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.8951,
+      "status": "positive"
+    },
+    {
+      "year": 1966,
+      "month": 1,
+      "month_name": "January",
+      "value": 0.4869,
+      "status": "positive"
+    },
+    {
+      "year": 1966,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.7872,
+      "status": "negative"
+    },
+    {
+      "year": 1966,
+      "month": 3,
+      "month_name": "March",
+      "value": -2.1815,
+      "status": "negative"
+    },
+    {
+      "year": 1966,
+      "month": 4,
+      "month_name": "April",
+      "value": 2.0509,
+      "status": "positive"
+    },
+    {
+      "year": 1966,
+      "month": 5,
+      "month_name": "May",
+      "value": -5.414,
+      "status": "negative"
+    },
+    {
+      "year": 1966,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.6138,
+      "status": "negative"
+    },
+    {
+      "year": 1966,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.3453,
+      "status": "negative"
+    },
+    {
+      "year": 1966,
+      "month": 8,
+      "month_name": "August",
+      "value": -7.7751,
+      "status": "negative"
+    },
+    {
+      "year": 1966,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.7004,
+      "status": "negative"
+    },
+    {
+      "year": 1966,
+      "month": 10,
+      "month_name": "October",
+      "value": 4.7544,
+      "status": "positive"
+    },
+    {
+      "year": 1966,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.3117,
+      "status": "positive"
+    },
+    {
+      "year": 1966,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.1492,
+      "status": "negative"
+    },
+    {
+      "year": 1967,
+      "month": 1,
+      "month_name": "January",
+      "value": 7.8178,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.1963,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.941,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.224,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 5,
+      "month_name": "May",
+      "value": -5.2441,
+      "status": "negative"
+    },
+    {
+      "year": 1967,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.7512,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 7,
+      "month_name": "July",
+      "value": 4.5344,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.1715,
+      "status": "negative"
+    },
+    {
+      "year": 1967,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.2785,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 10,
+      "month_name": "October",
+      "value": -3.526,
+      "status": "negative"
+    },
+    {
+      "year": 1967,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.7503,
+      "status": "positive"
+    },
+    {
+      "year": 1967,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.6277,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 1,
+      "month_name": "January",
+      "value": -4.3848,
+      "status": "negative"
+    },
+    {
+      "year": 1968,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.1223,
+      "status": "negative"
+    },
+    {
+      "year": 1968,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.94,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 4,
+      "month_name": "April",
+      "value": 8.0488,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.2518,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.912,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.8478,
+      "status": "negative"
+    },
+    {
+      "year": 1968,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.1459,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.8539,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.7208,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.7964,
+      "status": "positive"
+    },
+    {
+      "year": 1968,
+      "month": 12,
+      "month_name": "December",
+      "value": -4.1617,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 1,
+      "month_name": "January",
+      "value": -0.8184,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 2,
+      "month_name": "February",
+      "value": -4.7374,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.4444,
+      "status": "positive"
+    },
+    {
+      "year": 1969,
+      "month": 4,
+      "month_name": "April",
+      "value": 2.1476,
+      "status": "positive"
+    },
+    {
+      "year": 1969,
+      "month": 5,
+      "month_name": "May",
+      "value": -0.2218,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 6,
+      "month_name": "June",
+      "value": -5.5577,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 7,
+      "month_name": "July",
+      "value": -6.0178,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 8,
+      "month_name": "August",
+      "value": 4.0074,
+      "status": "positive"
+    },
+    {
+      "year": 1969,
+      "month": 9,
+      "month_name": "September",
+      "value": -2.5024,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 10,
+      "month_name": "October",
+      "value": 4.2955,
+      "status": "positive"
+    },
+    {
+      "year": 1969,
+      "month": 11,
+      "month_name": "November",
+      "value": -3.4082,
+      "status": "negative"
+    },
+    {
+      "year": 1969,
+      "month": 12,
+      "month_name": "December",
+      "value": -1.8655,
+      "status": "negative"
+    },
+    {
+      "year": 1970,
+      "month": 1,
+      "month_name": "January",
+      "value": -7.6472,
+      "status": "negative"
+    },
+    {
+      "year": 1970,
+      "month": 2,
+      "month_name": "February",
+      "value": 5.2694,
+      "status": "positive"
+    },
+    {
+      "year": 1970,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.1452,
+      "status": "positive"
+    },
+    {
+      "year": 1970,
+      "month": 4,
+      "month_name": "April",
+      "value": -9.0483,
+      "status": "negative"
+    },
+    {
+      "year": 1970,
+      "month": 5,
+      "month_name": "May",
+      "value": -6.0967,
+      "status": "negative"
+    },
+    {
+      "year": 1970,
+      "month": 6,
+      "month_name": "June",
+      "value": -5.0033,
+      "status": "negative"
+    },
+    {
+      "year": 1970,
+      "month": 7,
+      "month_name": "July",
+      "value": 7.3295,
+      "status": "positive"
+    },
+    {
+      "year": 1970,
+      "month": 8,
+      "month_name": "August",
+      "value": 4.4459,
+      "status": "positive"
+    },
+    {
+      "year": 1970,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.4102,
+      "status": "positive"
+    },
+    {
+      "year": 1970,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.2456,
+      "status": "negative"
+    },
+    {
+      "year": 1970,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.7447,
+      "status": "positive"
+    },
+    {
+      "year": 1970,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.6766,
+      "status": "positive"
+    },
+    {
+      "year": 1971,
+      "month": 1,
+      "month_name": "January",
+      "value": 4.0477,
+      "status": "positive"
+    },
+    {
+      "year": 1971,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.9074,
+      "status": "positive"
+    },
+    {
+      "year": 1971,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.6796,
+      "status": "positive"
+    },
+    {
+      "year": 1971,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.6288,
+      "status": "positive"
+    },
+    {
+      "year": 1971,
+      "month": 5,
+      "month_name": "May",
+      "value": -4.1558,
+      "status": "negative"
+    },
+    {
+      "year": 1971,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.9335,
+      "status": "negative"
+    },
+    {
+      "year": 1971,
+      "month": 7,
+      "month_name": "July",
+      "value": -3.1611,
+      "status": "negative"
+    },
+    {
+      "year": 1971,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.6095,
+      "status": "positive"
+    },
+    {
+      "year": 1971,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.6968,
+      "status": "negative"
+    },
+    {
+      "year": 1971,
+      "month": 10,
+      "month_name": "October",
+      "value": -4.1794,
+      "status": "negative"
+    },
+    {
+      "year": 1971,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.2547,
+      "status": "negative"
+    },
+    {
+      "year": 1971,
+      "month": 12,
+      "month_name": "December",
+      "value": 8.6179,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.8121,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 2,
+      "month_name": "February",
+      "value": 2.5303,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.5912,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.4384,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.7275,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.1821,
+      "status": "negative"
+    },
+    {
+      "year": 1972,
+      "month": 7,
+      "month_name": "July",
+      "value": 0.2333,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.4454,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.4861,
+      "status": "negative"
+    },
+    {
+      "year": 1972,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.9317,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.5617,
+      "status": "positive"
+    },
+    {
+      "year": 1972,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.1828,
+      "status": "positive"
+    },
+    {
+      "year": 1973,
+      "month": 1,
+      "month_name": "January",
+      "value": -1.7111,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.749,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.1433,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 4,
+      "month_name": "April",
+      "value": -4.08,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 5,
+      "month_name": "May",
+      "value": -1.8884,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.6575,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.7982,
+      "status": "positive"
+    },
+    {
+      "year": 1973,
+      "month": 8,
+      "month_name": "August",
+      "value": -3.6685,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 9,
+      "month_name": "September",
+      "value": 4.0096,
+      "status": "positive"
+    },
+    {
+      "year": 1973,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.1291,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 11,
+      "month_name": "November",
+      "value": -11.3861,
+      "status": "negative"
+    },
+    {
+      "year": 1973,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.6569,
+      "status": "positive"
+    },
+    {
+      "year": 1974,
+      "month": 1,
+      "month_name": "January",
+      "value": -1.0046,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.3624,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 3,
+      "month_name": "March",
+      "value": -2.328,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 4,
+      "month_name": "April",
+      "value": -3.9051,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 5,
+      "month_name": "May",
+      "value": -3.3551,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.4665,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 7,
+      "month_name": "July",
+      "value": -7.7791,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 8,
+      "month_name": "August",
+      "value": -9.0279,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 9,
+      "month_name": "September",
+      "value": -11.9335,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 10,
+      "month_name": "October",
+      "value": 16.3047,
+      "status": "positive"
+    },
+    {
+      "year": 1974,
+      "month": 11,
+      "month_name": "November",
+      "value": -5.318,
+      "status": "negative"
+    },
+    {
+      "year": 1974,
+      "month": 12,
+      "month_name": "December",
+      "value": -2.0152,
+      "status": "negative"
+    },
+    {
+      "year": 1975,
+      "month": 1,
+      "month_name": "January",
+      "value": 12.2812,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 2,
+      "month_name": "February",
+      "value": 5.9886,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.1694,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.7265,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 5,
+      "month_name": "May",
+      "value": 4.4101,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.4323,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 7,
+      "month_name": "July",
+      "value": -6.7654,
+      "status": "negative"
+    },
+    {
+      "year": 1975,
+      "month": 8,
+      "month_name": "August",
+      "value": -2.107,
+      "status": "negative"
+    },
+    {
+      "year": 1975,
+      "month": 9,
+      "month_name": "September",
+      "value": -3.4645,
+      "status": "negative"
+    },
+    {
+      "year": 1975,
+      "month": 10,
+      "month_name": "October",
+      "value": 6.1643,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 11,
+      "month_name": "November",
+      "value": 2.4708,
+      "status": "positive"
+    },
+    {
+      "year": 1975,
+      "month": 12,
+      "month_name": "December",
+      "value": -1.1508,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 1,
+      "month_name": "January",
+      "value": 11.8306,
+      "status": "positive"
+    },
+    {
+      "year": 1976,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.1402,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.0689,
+      "status": "positive"
+    },
+    {
+      "year": 1976,
+      "month": 4,
+      "month_name": "April",
+      "value": -1.0995,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 5,
+      "month_name": "May",
+      "value": -1.4364,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.0926,
+      "status": "positive"
+    },
+    {
+      "year": 1976,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.8055,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 8,
+      "month_name": "August",
+      "value": -0.5124,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.2641,
+      "status": "positive"
+    },
+    {
+      "year": 1976,
+      "month": 10,
+      "month_name": "October",
+      "value": -2.2235,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.7775,
+      "status": "negative"
+    },
+    {
+      "year": 1976,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.2498,
+      "status": "positive"
+    },
+    {
+      "year": 1977,
+      "month": 1,
+      "month_name": "January",
+      "value": -5.053,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.166,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.4025,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.0203,
+      "status": "positive"
+    },
+    {
+      "year": 1977,
+      "month": 5,
+      "month_name": "May",
+      "value": -2.3568,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.536,
+      "status": "positive"
+    },
+    {
+      "year": 1977,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.6222,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 8,
+      "month_name": "August",
+      "value": -2.1042,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.248,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 10,
+      "month_name": "October",
+      "value": -4.3406,
+      "status": "negative"
+    },
+    {
+      "year": 1977,
+      "month": 11,
+      "month_name": "November",
+      "value": 2.6966,
+      "status": "positive"
+    },
+    {
+      "year": 1977,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.2847,
+      "status": "positive"
+    },
+    {
+      "year": 1978,
+      "month": 1,
+      "month_name": "January",
+      "value": -6.1514,
+      "status": "negative"
+    },
+    {
+      "year": 1978,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.4762,
+      "status": "negative"
+    },
+    {
+      "year": 1978,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.4931,
+      "status": "positive"
+    },
+    {
+      "year": 1978,
+      "month": 4,
+      "month_name": "April",
+      "value": 8.5416,
+      "status": "positive"
+    },
+    {
+      "year": 1978,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.4234,
+      "status": "positive"
+    },
+    {
+      "year": 1978,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.7585,
+      "status": "negative"
+    },
+    {
+      "year": 1978,
+      "month": 7,
+      "month_name": "July",
+      "value": 5.391,
+      "status": "positive"
+    },
+    {
+      "year": 1978,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.5924,
+      "status": "positive"
+    },
+    {
+      "year": 1978,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.7261,
+      "status": "negative"
+    },
+    {
+      "year": 1978,
+      "month": 10,
+      "month_name": "October",
+      "value": -9.1574,
+      "status": "negative"
+    },
+    {
+      "year": 1978,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.664,
+      "status": "positive"
+    },
+    {
+      "year": 1978,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.4889,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 1,
+      "month_name": "January",
+      "value": 3.9746,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.6526,
+      "status": "negative"
+    },
+    {
+      "year": 1979,
+      "month": 3,
+      "month_name": "March",
+      "value": 5.5152,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.1673,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 5,
+      "month_name": "May",
+      "value": -2.6336,
+      "status": "negative"
+    },
+    {
+      "year": 1979,
+      "month": 6,
+      "month_name": "June",
+      "value": 3.8656,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 7,
+      "month_name": "July",
+      "value": 0.8745,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 8,
+      "month_name": "August",
+      "value": 5.3078,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.0,
+      "status": "flat"
+    },
+    {
+      "year": 1979,
+      "month": 10,
+      "month_name": "October",
+      "value": -6.8606,
+      "status": "negative"
+    },
+    {
+      "year": 1979,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.2624,
+      "status": "positive"
+    },
+    {
+      "year": 1979,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.6767,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 1,
+      "month_name": "January",
+      "value": 5.7625,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.438,
+      "status": "negative"
+    },
+    {
+      "year": 1980,
+      "month": 3,
+      "month_name": "March",
+      "value": -10.1795,
+      "status": "negative"
+    },
+    {
+      "year": 1980,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.114,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 5,
+      "month_name": "May",
+      "value": 4.6571,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 6,
+      "month_name": "June",
+      "value": 2.6969,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.5039,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.5835,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.5168,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 10,
+      "month_name": "October",
+      "value": 1.6021,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 11,
+      "month_name": "November",
+      "value": 10.2377,
+      "status": "positive"
+    },
+    {
+      "year": 1980,
+      "month": 12,
+      "month_name": "December",
+      "value": -3.3874,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 1,
+      "month_name": "January",
+      "value": -4.5742,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.3277,
+      "status": "positive"
+    },
+    {
+      "year": 1981,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.6033,
+      "status": "positive"
+    },
+    {
+      "year": 1981,
+      "month": 4,
+      "month_name": "April",
+      "value": -2.3456,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 5,
+      "month_name": "May",
+      "value": -0.1657,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.0408,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.221,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 8,
+      "month_name": "August",
+      "value": -6.2099,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 9,
+      "month_name": "September",
+      "value": -5.3832,
+      "status": "negative"
+    },
+    {
+      "year": 1981,
+      "month": 10,
+      "month_name": "October",
+      "value": 4.9148,
+      "status": "positive"
+    },
+    {
+      "year": 1981,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.659,
+      "status": "positive"
+    },
+    {
+      "year": 1981,
+      "month": 12,
+      "month_name": "December",
+      "value": -3.0075,
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "month": 1,
+      "month_name": "January",
+      "value": -1.7544,
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "month": 2,
+      "month_name": "February",
+      "value": -6.0548,
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.0167,
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.0014,
+      "status": "positive"
+    },
+    {
+      "year": 1982,
+      "month": 5,
+      "month_name": "May",
+      "value": -3.9162,
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.029,
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "month": 7,
+      "month_name": "July",
+      "value": -2.2991,
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "month": 8,
+      "month_name": "August",
+      "value": 11.5977,
+      "status": "positive"
+    },
+    {
+      "year": 1982,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.7614,
+      "status": "positive"
+    },
+    {
+      "year": 1982,
+      "month": 10,
+      "month_name": "October",
+      "value": 11.0447,
+      "status": "positive"
+    },
+    {
+      "year": 1982,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.5971,
+      "status": "positive"
+    },
+    {
+      "year": 1982,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.5231,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 1,
+      "month_name": "January",
+      "value": 3.3134,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.8995,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.3095,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 4,
+      "month_name": "April",
+      "value": 7.4987,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 5,
+      "month_name": "May",
+      "value": -1.2406,
+      "status": "negative"
+    },
+    {
+      "year": 1983,
+      "month": 6,
+      "month_name": "June",
+      "value": 3.233,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 7,
+      "month_name": "July",
+      "value": -3.0303,
+      "status": "negative"
+    },
+    {
+      "year": 1983,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.1319,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 9,
+      "month_name": "September",
+      "value": 1.0158,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.5174,
+      "status": "negative"
+    },
+    {
+      "year": 1983,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.7426,
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.8834,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 1,
+      "month_name": "January",
+      "value": -0.9216,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.8859,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 3,
+      "month_name": "March",
+      "value": 1.3498,
+      "status": "positive"
+    },
+    {
+      "year": 1984,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.5466,
+      "status": "positive"
+    },
+    {
+      "year": 1984,
+      "month": 5,
+      "month_name": "May",
+      "value": -5.9356,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.7469,
+      "status": "positive"
+    },
+    {
+      "year": 1984,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.6451,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 8,
+      "month_name": "August",
+      "value": 10.6332,
+      "status": "positive"
+    },
+    {
+      "year": 1984,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.348,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.006,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 11,
+      "month_name": "November",
+      "value": -1.5112,
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.2374,
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "month": 1,
+      "month_name": "January",
+      "value": 7.4085,
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.8629,
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.287,
+      "status": "negative"
+    },
+    {
+      "year": 1985,
+      "month": 4,
+      "month_name": "April",
+      "value": -0.4594,
+      "status": "negative"
+    },
+    {
+      "year": 1985,
+      "month": 5,
+      "month_name": "May",
+      "value": 5.4051,
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.2134,
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.4848,
+      "status": "negative"
+    },
+    {
+      "year": 1985,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.1995,
+      "status": "negative"
+    },
+    {
+      "year": 1985,
+      "month": 9,
+      "month_name": "September",
+      "value": -3.4724,
+      "status": "negative"
+    },
+    {
+      "year": 1985,
+      "month": 10,
+      "month_name": "October",
+      "value": 4.2509,
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "month": 11,
+      "month_name": "November",
+      "value": 6.5062,
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "month": 12,
+      "month_name": "December",
+      "value": 4.5061,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 1,
+      "month_name": "January",
+      "value": 0.2367,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 2,
+      "month_name": "February",
+      "value": 7.1489,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 3,
+      "month_name": "March",
+      "value": 5.2794,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 4,
+      "month_name": "April",
+      "value": -1.4148,
+      "status": "negative"
+    },
+    {
+      "year": 1986,
+      "month": 5,
+      "month_name": "May",
+      "value": 5.0229,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.411,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 7,
+      "month_name": "July",
+      "value": -5.8683,
+      "status": "negative"
+    },
+    {
+      "year": 1986,
+      "month": 8,
+      "month_name": "August",
+      "value": 7.1193,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 9,
+      "month_name": "September",
+      "value": -8.5439,
+      "status": "negative"
+    },
+    {
+      "year": 1986,
+      "month": 10,
+      "month_name": "October",
+      "value": 5.4729,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 11,
+      "month_name": "November",
+      "value": 2.1477,
+      "status": "positive"
+    },
+    {
+      "year": 1986,
+      "month": 12,
+      "month_name": "December",
+      "value": -2.8288,
+      "status": "negative"
+    },
+    {
+      "year": 1987,
+      "month": 1,
+      "month_name": "January",
+      "value": 13.1767,
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "month": 2,
+      "month_name": "February",
+      "value": 3.6924,
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.639,
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "month": 4,
+      "month_name": "April",
+      "value": -1.145,
+      "status": "negative"
+    },
+    {
+      "year": 1987,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.6034,
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.7914,
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "month": 7,
+      "month_name": "July",
+      "value": 4.8224,
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.4959,
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "month": 9,
+      "month_name": "September",
+      "value": -2.4166,
+      "status": "negative"
+    },
+    {
+      "year": 1987,
+      "month": 10,
+      "month_name": "October",
+      "value": -21.763,
+      "status": "negative"
+    },
+    {
+      "year": 1987,
+      "month": 11,
+      "month_name": "November",
+      "value": -8.5349,
+      "status": "negative"
+    },
+    {
+      "year": 1987,
+      "month": 12,
+      "month_name": "December",
+      "value": 7.2861,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 1,
+      "month_name": "January",
+      "value": 4.0432,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 2,
+      "month_name": "February",
+      "value": 4.1817,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 3,
+      "month_name": "March",
+      "value": -3.3343,
+      "status": "negative"
+    },
+    {
+      "year": 1988,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.9425,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.3176,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.3256,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.5411,
+      "status": "negative"
+    },
+    {
+      "year": 1988,
+      "month": 8,
+      "month_name": "August",
+      "value": -3.86,
+      "status": "negative"
+    },
+    {
+      "year": 1988,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.9729,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.5964,
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "month": 11,
+      "month_name": "November",
+      "value": -1.8891,
+      "status": "negative"
+    },
+    {
+      "year": 1988,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.4688,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 1,
+      "month_name": "January",
+      "value": 7.1115,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.8944,
+      "status": "negative"
+    },
+    {
+      "year": 1989,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.0806,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 4,
+      "month_name": "April",
+      "value": 5.009,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.5137,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.7925,
+      "status": "negative"
+    },
+    {
+      "year": 1989,
+      "month": 7,
+      "month_name": "July",
+      "value": 8.837,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.5517,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.6544,
+      "status": "negative"
+    },
+    {
+      "year": 1989,
+      "month": 10,
+      "month_name": "October",
+      "value": -2.5175,
+      "status": "negative"
+    },
+    {
+      "year": 1989,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.6541,
+      "status": "positive"
+    },
+    {
+      "year": 1989,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.1417,
+      "status": "positive"
+    },
+    {
+      "year": 1990,
+      "month": 1,
+      "month_name": "January",
+      "value": -6.8817,
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.8539,
+      "status": "positive"
+    },
+    {
+      "year": 1990,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.4255,
+      "status": "positive"
+    },
+    {
+      "year": 1990,
+      "month": 4,
+      "month_name": "April",
+      "value": -2.6887,
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "month": 5,
+      "month_name": "May",
+      "value": 9.1989,
+      "status": "positive"
+    },
+    {
+      "year": 1990,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.8886,
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.5223,
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "month": 8,
+      "month_name": "August",
+      "value": -9.4314,
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "month": 9,
+      "month_name": "September",
+      "value": -5.1184,
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.6698,
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "month": 11,
+      "month_name": "November",
+      "value": 5.9934,
+      "status": "positive"
+    },
+    {
+      "year": 1990,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.4828,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 1,
+      "month_name": "January",
+      "value": 4.1518,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 2,
+      "month_name": "February",
+      "value": 6.7281,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.2203,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.032,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.8605,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 6,
+      "month_name": "June",
+      "value": -4.7893,
+      "status": "negative"
+    },
+    {
+      "year": 1991,
+      "month": 7,
+      "month_name": "July",
+      "value": 4.4859,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.9649,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.9144,
+      "status": "negative"
+    },
+    {
+      "year": 1991,
+      "month": 10,
+      "month_name": "October",
+      "value": 1.1834,
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "month": 11,
+      "month_name": "November",
+      "value": -4.3904,
+      "status": "negative"
+    },
+    {
+      "year": 1991,
+      "month": 12,
+      "month_name": "December",
+      "value": 11.1588,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 1,
+      "month_name": "January",
+      "value": -1.9924,
+      "status": "negative"
+    },
+    {
+      "year": 1992,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.959,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 3,
+      "month_name": "March",
+      "value": -2.1832,
+      "status": "negative"
+    },
+    {
+      "year": 1992,
+      "month": 4,
+      "month_name": "April",
+      "value": 2.7893,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.0964,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.7359,
+      "status": "negative"
+    },
+    {
+      "year": 1992,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.9374,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 8,
+      "month_name": "August",
+      "value": -2.3998,
+      "status": "negative"
+    },
+    {
+      "year": 1992,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.9106,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.2106,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.0262,
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.0108,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 1,
+      "month_name": "January",
+      "value": 0.7046,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.0484,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 3,
+      "month_name": "March",
+      "value": 1.8697,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 4,
+      "month_name": "April",
+      "value": -2.5417,
+      "status": "negative"
+    },
+    {
+      "year": 1993,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.2717,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.0755,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.5327,
+      "status": "negative"
+    },
+    {
+      "year": 1993,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.4432,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.9988,
+      "status": "negative"
+    },
+    {
+      "year": 1993,
+      "month": 10,
+      "month_name": "October",
+      "value": 1.9393,
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "month": 11,
+      "month_name": "November",
+      "value": -1.2911,
+      "status": "negative"
+    },
+    {
+      "year": 1993,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.0091,
+      "status": "positive"
+    },
+    {
+      "year": 1994,
+      "month": 1,
+      "month_name": "January",
+      "value": 3.2501,
+      "status": "positive"
+    },
+    {
+      "year": 1994,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.0045,
+      "status": "negative"
+    },
+    {
+      "year": 1994,
+      "month": 3,
+      "month_name": "March",
+      "value": -4.5747,
+      "status": "negative"
+    },
+    {
+      "year": 1994,
+      "month": 4,
+      "month_name": "April",
+      "value": 1.1531,
+      "status": "positive"
+    },
+    {
+      "year": 1994,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.2397,
+      "status": "positive"
+    },
+    {
+      "year": 1994,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.6791,
+      "status": "negative"
+    },
+    {
+      "year": 1994,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.149,
+      "status": "positive"
+    },
+    {
+      "year": 1994,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.7599,
+      "status": "positive"
+    },
+    {
+      "year": 1994,
+      "month": 9,
+      "month_name": "September",
+      "value": -2.6878,
+      "status": "negative"
+    },
+    {
+      "year": 1994,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.0834,
+      "status": "positive"
+    },
+    {
+      "year": 1994,
+      "month": 11,
+      "month_name": "November",
+      "value": -3.9505,
+      "status": "negative"
+    },
+    {
+      "year": 1994,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.2299,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 1,
+      "month_name": "January",
+      "value": 2.4278,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 2,
+      "month_name": "February",
+      "value": 3.6074,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 3,
+      "month_name": "March",
+      "value": 2.7329,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 4,
+      "month_name": "April",
+      "value": 2.796,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.6312,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 6,
+      "month_name": "June",
+      "value": 2.1279,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.1776,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 8,
+      "month_name": "August",
+      "value": -0.032,
+      "status": "negative"
+    },
+    {
+      "year": 1995,
+      "month": 9,
+      "month_name": "September",
+      "value": 4.0097,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.4979,
+      "status": "negative"
+    },
+    {
+      "year": 1995,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.1049,
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.7444,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 1,
+      "month_name": "January",
+      "value": 3.2617,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.6934,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.7917,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 4,
+      "month_name": "April",
+      "value": 1.3431,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.2853,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.2257,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 7,
+      "month_name": "July",
+      "value": -4.5748,
+      "status": "negative"
+    },
+    {
+      "year": 1996,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.8814,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 9,
+      "month_name": "September",
+      "value": 5.4203,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.6101,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 11,
+      "month_name": "November",
+      "value": 7.3376,
+      "status": "positive"
+    },
+    {
+      "year": 1996,
+      "month": 12,
+      "month_name": "December",
+      "value": -2.1505,
+      "status": "negative"
+    },
+    {
+      "year": 1997,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.1317,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.5928,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 3,
+      "month_name": "March",
+      "value": -4.2614,
+      "status": "negative"
+    },
+    {
+      "year": 1997,
+      "month": 4,
+      "month_name": "April",
+      "value": 5.8406,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 5,
+      "month_name": "May",
+      "value": 5.8577,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.3453,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 7,
+      "month_name": "July",
+      "value": 7.8146,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 8,
+      "month_name": "August",
+      "value": -5.7466,
+      "status": "negative"
+    },
+    {
+      "year": 1997,
+      "month": 9,
+      "month_name": "September",
+      "value": 5.3154,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 10,
+      "month_name": "October",
+      "value": -3.4478,
+      "status": "negative"
+    },
+    {
+      "year": 1997,
+      "month": 11,
+      "month_name": "November",
+      "value": 4.4587,
+      "status": "positive"
+    },
+    {
+      "year": 1997,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.5732,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.015,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 2,
+      "month_name": "February",
+      "value": 7.0449,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 3,
+      "month_name": "March",
+      "value": 4.9946,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.9076,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 5,
+      "month_name": "May",
+      "value": -1.8826,
+      "status": "negative"
+    },
+    {
+      "year": 1998,
+      "month": 6,
+      "month_name": "June",
+      "value": 3.9438,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.1615,
+      "status": "negative"
+    },
+    {
+      "year": 1998,
+      "month": 8,
+      "month_name": "August",
+      "value": -14.5797,
+      "status": "negative"
+    },
+    {
+      "year": 1998,
+      "month": 9,
+      "month_name": "September",
+      "value": 6.2396,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 10,
+      "month_name": "October",
+      "value": 8.0294,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 11,
+      "month_name": "November",
+      "value": 5.9126,
+      "status": "positive"
+    },
+    {
+      "year": 1998,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.6375,
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "month": 1,
+      "month_name": "January",
+      "value": 4.1009,
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.2283,
+      "status": "negative"
+    },
+    {
+      "year": 1999,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.8794,
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.7944,
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "month": 5,
+      "month_name": "May",
+      "value": -2.497,
+      "status": "negative"
+    },
+    {
+      "year": 1999,
+      "month": 6,
+      "month_name": "June",
+      "value": 5.4438,
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "month": 7,
+      "month_name": "July",
+      "value": -3.2046,
+      "status": "negative"
+    },
+    {
+      "year": 1999,
+      "month": 8,
+      "month_name": "August",
+      "value": -0.6254,
+      "status": "negative"
+    },
+    {
+      "year": 1999,
+      "month": 9,
+      "month_name": "September",
+      "value": -2.8552,
+      "status": "negative"
+    },
+    {
+      "year": 1999,
+      "month": 10,
+      "month_name": "October",
+      "value": 6.254,
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.9062,
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.7844,
+      "status": "positive"
+    },
+    {
+      "year": 2000,
+      "month": 1,
+      "month_name": "January",
+      "value": -5.0904,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.0108,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 3,
+      "month_name": "March",
+      "value": 9.672,
+      "status": "positive"
+    },
+    {
+      "year": 2000,
+      "month": 4,
+      "month_name": "April",
+      "value": -3.0796,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 5,
+      "month_name": "May",
+      "value": -2.1915,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 6,
+      "month_name": "June",
+      "value": 2.3934,
+      "status": "positive"
+    },
+    {
+      "year": 2000,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.6341,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 8,
+      "month_name": "August",
+      "value": 6.0699,
+      "status": "positive"
+    },
+    {
+      "year": 2000,
+      "month": 9,
+      "month_name": "September",
+      "value": -5.3483,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.4949,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 11,
+      "month_name": "November",
+      "value": -8.0069,
+      "status": "negative"
+    },
+    {
+      "year": 2000,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.4053,
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "month": 1,
+      "month_name": "January",
+      "value": 3.4637,
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "month": 2,
+      "month_name": "February",
+      "value": -9.2291,
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "month": 3,
+      "month_name": "March",
+      "value": -6.4205,
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "month": 4,
+      "month_name": "April",
+      "value": 7.6814,
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.509,
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.5035,
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.074,
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "month": 8,
+      "month_name": "August",
+      "value": -6.4108,
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "month": 9,
+      "month_name": "September",
+      "value": -8.1723,
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "month": 10,
+      "month_name": "October",
+      "value": 1.8099,
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "month": 11,
+      "month_name": "November",
+      "value": 7.5176,
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.7574,
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "month": 1,
+      "month_name": "January",
+      "value": -1.5574,
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.0766,
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.6739,
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "month": 4,
+      "month_name": "April",
+      "value": -6.1418,
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "month": 5,
+      "month_name": "May",
+      "value": -0.9081,
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "month": 6,
+      "month_name": "June",
+      "value": -7.2455,
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "month": 7,
+      "month_name": "July",
+      "value": -7.9004,
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.4881,
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "month": 9,
+      "month_name": "September",
+      "value": -11.0024,
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "month": 10,
+      "month_name": "October",
+      "value": 8.6449,
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "month": 11,
+      "month_name": "November",
+      "value": 5.707,
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "month": 12,
+      "month_name": "December",
+      "value": -6.0333,
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "month": 1,
+      "month_name": "January",
+      "value": -2.7415,
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.7004,
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.8358,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 4,
+      "month_name": "April",
+      "value": 8.1044,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 5,
+      "month_name": "May",
+      "value": 5.0899,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.1322,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.6224,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.7873,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.1944,
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "month": 10,
+      "month_name": "October",
+      "value": 5.4961,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.7129,
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "month": 12,
+      "month_name": "December",
+      "value": 5.0766,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.7276,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.2209,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.6359,
+      "status": "negative"
+    },
+    {
+      "year": 2004,
+      "month": 4,
+      "month_name": "April",
+      "value": -1.6791,
+      "status": "negative"
+    },
+    {
+      "year": 2004,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.2083,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.7989,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 7,
+      "month_name": "July",
+      "value": -3.4291,
+      "status": "negative"
+    },
+    {
+      "year": 2004,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.2287,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.9364,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 10,
+      "month_name": "October",
+      "value": 1.4014,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.8595,
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.2458,
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "month": 1,
+      "month_name": "January",
+      "value": -2.529,
+      "status": "negative"
+    },
+    {
+      "year": 2005,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.8903,
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.9118,
+      "status": "negative"
+    },
+    {
+      "year": 2005,
+      "month": 4,
+      "month_name": "April",
+      "value": -2.0109,
+      "status": "negative"
+    },
+    {
+      "year": 2005,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.9952,
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "month": 6,
+      "month_name": "June",
+      "value": -0.0143,
+      "status": "negative"
+    },
+    {
+      "year": 2005,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.5968,
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.1222,
+      "status": "negative"
+    },
+    {
+      "year": 2005,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.6949,
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.7741,
+      "status": "negative"
+    },
+    {
+      "year": 2005,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.5186,
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.0952,
+      "status": "negative"
+    },
+    {
+      "year": 2006,
+      "month": 1,
+      "month_name": "January",
+      "value": 2.5467,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 2,
+      "month_name": "February",
+      "value": 0.0453,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 3,
+      "month_name": "March",
+      "value": 1.1096,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 4,
+      "month_name": "April",
+      "value": 1.2156,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 5,
+      "month_name": "May",
+      "value": -3.0917,
+      "status": "negative"
+    },
+    {
+      "year": 2006,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.0087,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 7,
+      "month_name": "July",
+      "value": 0.5086,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.1274,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.4566,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 10,
+      "month_name": "October",
+      "value": 3.1508,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.6467,
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.2616,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.4059,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.1846,
+      "status": "negative"
+    },
+    {
+      "year": 2007,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.998,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.3291,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 5,
+      "month_name": "May",
+      "value": 3.2549,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.7816,
+      "status": "negative"
+    },
+    {
+      "year": 2007,
+      "month": 7,
+      "month_name": "July",
+      "value": -3.1982,
+      "status": "negative"
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.2864,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.5794,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "month_name": "October",
+      "value": 1.4822,
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "month_name": "November",
+      "value": -4.4043,
+      "status": "negative"
+    },
+    {
+      "year": 2007,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.8629,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 1,
+      "month_name": "January",
+      "value": -6.1163,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.4761,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.596,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 4,
+      "month_name": "April",
+      "value": 4.7547,
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.0674,
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "month": 6,
+      "month_name": "June",
+      "value": -8.5962,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.9859,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.219,
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "month_name": "September",
+      "value": -9.0791,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "month_name": "October",
+      "value": -16.9425,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "month_name": "November",
+      "value": -7.4849,
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.7822,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 1,
+      "month_name": "January",
+      "value": -8.5657,
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "month": 2,
+      "month_name": "February",
+      "value": -10.9931,
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "month": 3,
+      "month_name": "March",
+      "value": 8.5404,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 4,
+      "month_name": "April",
+      "value": 9.3925,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 5,
+      "month_name": "May",
+      "value": 5.3081,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.0196,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "month_name": "July",
+      "value": 7.4142,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.356,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.5723,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.9762,
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "month_name": "November",
+      "value": 5.7364,
+      "status": "positive"
+    },
+    {
+      "year": 2009,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.7771,
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "month": 1,
+      "month_name": "January",
+      "value": -3.6974,
+      "status": "negative"
+    },
+    {
+      "year": 2010,
+      "month": 2,
+      "month_name": "February",
+      "value": 2.8514,
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "month": 3,
+      "month_name": "March",
+      "value": 5.8796,
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "month": 4,
+      "month_name": "April",
+      "value": 1.4759,
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "month": 5,
+      "month_name": "May",
+      "value": -8.1976,
+      "status": "negative"
+    },
+    {
+      "year": 2010,
+      "month": 6,
+      "month_name": "June",
+      "value": -5.3882,
+      "status": "negative"
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "month_name": "July",
+      "value": 6.8778,
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "month_name": "August",
+      "value": -4.7449,
+      "status": "negative"
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "month_name": "September",
+      "value": 8.7551,
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "month_name": "October",
+      "value": 3.6856,
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.229,
+      "status": "negative"
+    },
+    {
+      "year": 2010,
+      "month": 12,
+      "month_name": "December",
+      "value": 6.53,
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "month": 1,
+      "month_name": "January",
+      "value": 2.2646,
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "month": 2,
+      "month_name": "February",
+      "value": 3.1957,
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.1047,
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "month": 4,
+      "month_name": "April",
+      "value": 2.8495,
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "month": 5,
+      "month_name": "May",
+      "value": -1.3501,
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.8257,
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "month": 7,
+      "month_name": "July",
+      "value": -2.1474,
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "month": 8,
+      "month_name": "August",
+      "value": -5.6791,
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "month": 9,
+      "month_name": "September",
+      "value": -7.1762,
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "month": 10,
+      "month_name": "October",
+      "value": 10.7723,
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.5059,
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.8533,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 1,
+      "month_name": "January",
+      "value": 4.3583,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 2,
+      "month_name": "February",
+      "value": 4.0589,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.1332,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 4,
+      "month_name": "April",
+      "value": -0.7497,
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "month": 5,
+      "month_name": "May",
+      "value": -6.2651,
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "month": 6,
+      "month_name": "June",
+      "value": 3.9555,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.2598,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.9763,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.4236,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.9789,
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.2847,
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.7068,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 1,
+      "month_name": "January",
+      "value": 5.0428,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 2,
+      "month_name": "February",
+      "value": 1.1061,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.5988,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 4,
+      "month_name": "April",
+      "value": 1.8086,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.0763,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.4999,
+      "status": "negative"
+    },
+    {
+      "year": 2013,
+      "month": 7,
+      "month_name": "July",
+      "value": 4.9462,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 8,
+      "month_name": "August",
+      "value": -3.1298,
+      "status": "negative"
+    },
+    {
+      "year": 2013,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.975,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 10,
+      "month_name": "October",
+      "value": 4.4596,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 11,
+      "month_name": "November",
+      "value": 2.8049,
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.3563,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 1,
+      "month_name": "January",
+      "value": -3.5583,
+      "status": "negative"
+    },
+    {
+      "year": 2014,
+      "month": 2,
+      "month_name": "February",
+      "value": 4.3117,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 3,
+      "month_name": "March",
+      "value": 0.6932,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.6201,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.103,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.9058,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 7,
+      "month_name": "July",
+      "value": -1.508,
+      "status": "negative"
+    },
+    {
+      "year": 2014,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.7655,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.5514,
+      "status": "negative"
+    },
+    {
+      "year": 2014,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.3201,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 11,
+      "month_name": "November",
+      "value": 2.4534,
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.4189,
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "month": 1,
+      "month_name": "January",
+      "value": -3.1041,
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "month": 2,
+      "month_name": "February",
+      "value": 5.4893,
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "month": 3,
+      "month_name": "March",
+      "value": -1.7396,
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.8521,
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.0491,
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "month": 6,
+      "month_name": "June",
+      "value": -2.1012,
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.9742,
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "month": 8,
+      "month_name": "August",
+      "value": -6.2581,
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "month": 9,
+      "month_name": "September",
+      "value": -2.6443,
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "month": 10,
+      "month_name": "October",
+      "value": 8.2983,
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.0505,
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "month": 12,
+      "month_name": "December",
+      "value": -1.753,
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "month": 1,
+      "month_name": "January",
+      "value": -5.0735,
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.4128,
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "month": 3,
+      "month_name": "March",
+      "value": 6.5991,
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.2699,
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.5325,
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.0911,
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.561,
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "month": 8,
+      "month_name": "August",
+      "value": -0.1219,
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "month": 9,
+      "month_name": "September",
+      "value": -0.1234,
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "month": 10,
+      "month_name": "October",
+      "value": -1.9426,
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.4175,
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "month": 12,
+      "month_name": "December",
+      "value": 1.8201,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.7884,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 2,
+      "month_name": "February",
+      "value": 3.7198,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.0389,
+      "status": "negative"
+    },
+    {
+      "year": 2017,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.9091,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 5,
+      "month_name": "May",
+      "value": 1.1576,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.4814,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.9349,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 8,
+      "month_name": "August",
+      "value": 0.0546,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 9,
+      "month_name": "September",
+      "value": 1.9303,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.2188,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 11,
+      "month_name": "November",
+      "value": 2.8083,
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "month": 12,
+      "month_name": "December",
+      "value": 0.9832,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "month_name": "January",
+      "value": 5.6179,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.8947,
+      "status": "negative"
+    },
+    {
+      "year": 2018,
+      "month": 3,
+      "month_name": "March",
+      "value": -2.6884,
+      "status": "negative"
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "month_name": "April",
+      "value": 0.2719,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "month_name": "May",
+      "value": 2.1608,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "month_name": "June",
+      "value": 0.4842,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.6022,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "month_name": "August",
+      "value": 3.0263,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "month_name": "September",
+      "value": 0.4294,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "month_name": "October",
+      "value": -6.9403,
+      "status": "negative"
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "month_name": "November",
+      "value": 1.7859,
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "month_name": "December",
+      "value": -9.1777,
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "month": 1,
+      "month_name": "January",
+      "value": 7.8684,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "month_name": "February",
+      "value": 2.9729,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "month_name": "March",
+      "value": 1.7924,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "month_name": "April",
+      "value": 3.9313,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 5,
+      "month_name": "May",
+      "value": -6.5778,
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "month": 6,
+      "month_name": "June",
+      "value": 6.893,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.3128,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.8092,
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "month_name": "September",
+      "value": 1.7181,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.0432,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 11,
+      "month_name": "November",
+      "value": 3.4047,
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "month": 12,
+      "month_name": "December",
+      "value": 2.859,
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "month": 1,
+      "month_name": "January",
+      "value": -0.1628,
+      "status": "negative"
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "month_name": "February",
+      "value": -8.411,
+      "status": "negative"
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "month_name": "March",
+      "value": -12.5119,
+      "status": "negative"
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "month_name": "April",
+      "value": 12.6844,
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "month_name": "May",
+      "value": 4.5282,
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "month_name": "June",
+      "value": 1.8388,
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "month_name": "July",
+      "value": 5.5101,
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "month_name": "August",
+      "value": 7.0065,
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "month_name": "September",
+      "value": -3.9228,
+      "status": "negative"
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "month_name": "October",
+      "value": -2.7666,
+      "status": "negative"
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "month_name": "November",
+      "value": 10.7546,
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "month_name": "December",
+      "value": 3.7121,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 1,
+      "month_name": "January",
+      "value": -1.1137,
+      "status": "negative"
+    },
+    {
+      "year": 2021,
+      "month": 2,
+      "month_name": "February",
+      "value": 2.6091,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 3,
+      "month_name": "March",
+      "value": 4.2439,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 4,
+      "month_name": "April",
+      "value": 5.2425,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.5486,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 6,
+      "month_name": "June",
+      "value": 2.2214,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 7,
+      "month_name": "July",
+      "value": 2.2748,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.899,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 9,
+      "month_name": "September",
+      "value": -4.7569,
+      "status": "negative"
+    },
+    {
+      "year": 2021,
+      "month": 10,
+      "month_name": "October",
+      "value": 6.9144,
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.8334,
+      "status": "negative"
+    },
+    {
+      "year": 2021,
+      "month": 12,
+      "month_name": "December",
+      "value": 4.3613,
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "month": 1,
+      "month_name": "January",
+      "value": -5.2585,
+      "status": "negative"
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "month_name": "February",
+      "value": -3.136,
+      "status": "negative"
+    },
+    {
+      "year": 2022,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.5773,
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "month": 4,
+      "month_name": "April",
+      "value": -8.7957,
+      "status": "negative"
+    },
+    {
+      "year": 2022,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.0053,
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "month_name": "June",
+      "value": -8.392,
+      "status": "negative"
+    },
+    {
+      "year": 2022,
+      "month": 7,
+      "month_name": "July",
+      "value": 9.1116,
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "month": 8,
+      "month_name": "August",
+      "value": -4.244,
+      "status": "negative"
+    },
+    {
+      "year": 2022,
+      "month": 9,
+      "month_name": "September",
+      "value": -9.3396,
+      "status": "negative"
+    },
+    {
+      "year": 2022,
+      "month": 10,
+      "month_name": "October",
+      "value": 7.9863,
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "month": 11,
+      "month_name": "November",
+      "value": 5.3753,
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "month": 12,
+      "month_name": "December",
+      "value": -5.8971,
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "month_name": "January",
+      "value": 6.1753,
+      "status": "positive"
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "month_name": "February",
+      "value": -2.6112,
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.5052,
+      "status": "positive"
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "month_name": "April",
+      "value": 1.4642,
+      "status": "positive"
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "month_name": "May",
+      "value": 0.2482,
+      "status": "positive"
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "month_name": "June",
+      "value": 6.4727,
+      "status": "positive"
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "month_name": "July",
+      "value": 3.1139,
+      "status": "positive"
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "month_name": "August",
+      "value": -1.7716,
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "month_name": "September",
+      "value": -4.8719,
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "month_name": "October",
+      "value": -2.198,
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "month_name": "November",
+      "value": 8.9179,
+      "status": "positive"
+    },
+    {
+      "year": 2023,
+      "month": 12,
+      "month_name": "December",
+      "value": 4.4229,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.5896,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "month_name": "February",
+      "value": 5.1721,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "month_name": "March",
+      "value": 3.1019,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "month_name": "April",
+      "value": -4.1615,
+      "status": "negative"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "month_name": "May",
+      "value": 4.8021,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "month_name": "June",
+      "value": 3.467,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "month_name": "July",
+      "value": 1.1321,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.2835,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "month_name": "September",
+      "value": 2.0197,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "month_name": "October",
+      "value": -0.9897,
+      "status": "negative"
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "month_name": "November",
+      "value": 5.7301,
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "month_name": "December",
+      "value": -2.499,
+      "status": "negative"
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "month_name": "January",
+      "value": 2.7016,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "month_name": "February",
+      "value": -1.4242,
+      "status": "negative"
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "month_name": "March",
+      "value": -5.7545,
+      "status": "negative"
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "month_name": "April",
+      "value": -0.7625,
+      "status": "negative"
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "month_name": "May",
+      "value": 6.1524,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "month_name": "June",
+      "value": 4.9607,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "month_name": "July",
+      "value": 2.1667,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "month_name": "August",
+      "value": 1.9066,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "month_name": "September",
+      "value": 3.5324,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "month_name": "October",
+      "value": 2.2687,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "month_name": "November",
+      "value": 0.13,
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "month_name": "December",
+      "value": -0.0524,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "month_name": "January",
+      "value": 1.3663,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "month_name": "February",
+      "value": -0.8668,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "month_name": "March",
+      "value": -5.0933,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "month_name": "April",
+      "value": 10.4233,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "month_name": "May",
+      "value": 5.147,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "month_name": "June",
+      "value": -1.0646,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 7,
+      "month_name": "July",
+      "value": -0.1285,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "month_name": "August",
+      "value": 2.6225,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 9,
+      "month_name": "September",
+      "value": -1.3064,
+      "status": "negative"
+    }
+  ]
+}

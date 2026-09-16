@@ -1,0 +1,441 @@
+.tni-monthly-page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 42px 0 90px;
+  color: #172033;
+}
+
+.tni-monthly-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 34px;
+  font-size: 13px;
+  color: #667085;
+}
+
+.tni-monthly-breadcrumb a {
+  color: #475467;
+  text-decoration: none;
+}
+
+.tni-monthly-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.tni-monthly-hero {
+  max-width: 900px;
+  margin-bottom: 38px;
+}
+
+.tni-monthly-eyebrow,
+.tni-monthly-section-kicker,
+.tni-card-label,
+.tni-pattern-card > span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  color: #667085;
+}
+
+.tni-monthly-hero h1 {
+  margin: 10px 0 14px;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.tni-monthly-lead {
+  max-width: 760px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.65;
+  color: #475467;
+}
+
+.tni-monthly-research-nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.tni-monthly-research-nav a,
+.tni-monthly-research-nav span {
+  padding: 9px 14px;
+  border: 1px solid #e4e7ec;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tni-monthly-research-nav a {
+  color: #475467;
+  text-decoration: none;
+}
+
+.tni-monthly-research-nav .active {
+  border-color: #172033;
+  background: #172033;
+  color: #ffffff;
+}
+
+.tni-current-month-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 30px;
+  margin-bottom: 54px;
+  border: 1px solid #e4e7ec;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.tni-current-month-card h2 {
+  margin: 7px 0 3px;
+  font-size: 22px;
+}
+
+.tni-current-month-card p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.tni-current-month-card > strong {
+  font-size: clamp(30px, 5vw, 46px);
+  letter-spacing: -0.04em;
+}
+
+.tni-monthly-pattern-section,
+.tni-monthly-chart-card,
+.tni-monthly-statistics,
+.tni-monthly-history,
+.tni-monthly-methodology,
+.tni-monthly-related {
+  margin-top: 64px;
+}
+
+.tni-monthly-section-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.tni-monthly-section-header h2,
+.tni-monthly-methodology h2,
+.tni-monthly-related h2 {
+  margin: 7px 0 7px;
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: -0.025em;
+}
+
+.tni-monthly-section-header p,
+.tni-monthly-methodology p {
+  max-width: 760px;
+  margin: 0;
+  line-height: 1.65;
+  color: #667085;
+}
+
+.tni-monthly-pattern-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tni-pattern-card {
+  padding: 22px;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.tni-pattern-card h3 {
+  margin: 14px 0 3px;
+  font-size: 24px;
+}
+
+.tni-pattern-card strong {
+  display: block;
+  font-size: 30px;
+  letter-spacing: -0.035em;
+}
+
+.tni-pattern-card p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.tni-value-positive {
+  color: #087a55;
+}
+
+.tni-value-negative {
+  color: #c4323d;
+}
+
+
+/* ==========================================================================
+   AVERAGE MONTHLY RETURN CHART
+   ========================================================================== */
+
+.tni-monthly-chart-card {
+  padding: 28px;
+  border: 1px solid #e4e7ec;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.tni-monthly-bar-chart {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(42px, 1fr));
+  gap: 9px;
+  height: 330px;
+  margin-top: 34px;
+  overflow-x: auto;
+}
+
+.tni-monthly-bar-column {
+  min-width: 42px;
+  display: grid;
+  grid-template-rows: 34px 1fr 28px;
+  align-items: end;
+  text-align: center;
+}
+
+.tni-monthly-bar-value {
+  align-self: start;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475467;
+}
+
+.tni-monthly-bar-track {
+  height: 235px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 1px solid #d0d5dd;
+}
+
+.tni-monthly-bar {
+  width: min(36px, 70%);
+  min-height: 4px;
+  border-radius: 5px 5px 0 0;
+}
+
+.tni-monthly-bar-positive {
+  background: #1677ff;
+}
+
+.tni-monthly-bar-negative {
+  background: #d94b4b;
+}
+
+.tni-monthly-bar-label {
+  padding-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #475467;
+}
+
+
+/* ==========================================================================
+   MONTH STATISTICS TABLE
+   ========================================================================== */
+
+.tni-monthly-table-scroll,
+.tni-monthly-heatmap-scroll {
+  overflow-x: auto;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.tni-monthly-table,
+.tni-monthly-heatmap {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.tni-monthly-table th,
+.tni-monthly-table td {
+  padding: 13px 15px;
+  border-bottom: 1px solid #eef1f5;
+  text-align: right;
+  font-size: 13px;
+}
+
+.tni-monthly-table th:first-child,
+.tni-monthly-table td:first-child {
+  text-align: left;
+}
+
+.tni-monthly-table thead th {
+  background: #f8fafc;
+  color: #475467;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   HEATMAP
+   ========================================================================== */
+
+.tni-monthly-heatmap {
+  min-width: 980px;
+}
+
+.tni-monthly-heatmap th,
+.tni-monthly-heatmap td {
+  padding: 8px 7px;
+  border: 2px solid #ffffff;
+  text-align: center;
+  font-size: 11px;
+}
+
+.tni-monthly-heatmap thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f8fafc;
+  color: #475467;
+}
+
+.tni-monthly-heatmap tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: #ffffff;
+  color: #475467;
+}
+
+.tni-heatmap-positive {
+  background: #e7f8f1;
+  color: #087a55;
+}
+
+.tni-heatmap-positive.tni-heatmap-medium {
+  background: #bcebdc;
+}
+
+.tni-heatmap-positive.tni-heatmap-strong {
+  background: #7ed6b7;
+}
+
+.tni-heatmap-negative {
+  background: #fdeced;
+  color: #a92732;
+}
+
+.tni-heatmap-negative.tni-heatmap-medium {
+  background: #f6c5c9;
+}
+
+.tni-heatmap-negative.tni-heatmap-strong {
+  background: #ec959d;
+}
+
+.tni-heatmap-flat,
+.tni-heatmap-empty {
+  background: #f8fafc;
+  color: #98a2b3;
+}
+
+
+/* ==========================================================================
+   METHODOLOGY / RELATED RESEARCH
+   ========================================================================== */
+
+.tni-monthly-methodology {
+  padding: 28px;
+  border: 1px solid #e4e7ec;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+.tni-monthly-methodology p + p {
+  margin-top: 12px;
+}
+
+.tni-monthly-source,
+.tni-monthly-observation-note {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #475467;
+}
+
+.tni-monthly-related {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-top: 36px;
+  border-top: 1px solid #e4e7ec;
+}
+
+.tni-monthly-related-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 18px;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  color: #172033;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 900px) {
+
+  .tni-monthly-page {
+    width: min(100% - 28px, 1180px);
+    padding-top: 28px;
+  }
+
+  .tni-monthly-pattern-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .tni-monthly-bar-chart {
+    min-width: 700px;
+  }
+
+  .tni-monthly-chart-card {
+    overflow-x: auto;
+  }
+
+  .tni-monthly-related {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .tni-monthly-hero h1 {
+    font-size: 38px;
+  }
+
+  .tni-monthly-pattern-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tni-current-month-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

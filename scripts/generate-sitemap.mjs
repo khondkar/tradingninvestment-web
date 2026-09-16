@@ -1,95 +1,172 @@
 // ============================================================================
 // TNI SEO — AUTOMATIC SITEMAP GENERATOR
 //
-// Reads the published annual-return registry and its asset configuration files.
+// Discovers published research assets from TNI research registries.
 // canonicalPath in each published asset config is the URL source of truth.
+//
+// Supported research families:
+// - annual-returns
+// - monthly-returns
 // ============================================================================
 
 import fs from "node:fs"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
-const scriptDir = path.dirname(fileURLToPath(import.meta.url))
-const rootDir = path.resolve(scriptDir, "..")
 
-const researchDir = path.join(
-  rootDir,
-  "src",
-  "research",
-  "annual-returns",
-)
-
-const registryPath = path.join(
-  researchDir,
-  "registry.ts",
-)
-
-const sitemapPath = path.join(
-  rootDir,
-  "public",
-  "sitemap.xml",
-)
-
-const siteOrigin = "https://tradingninvestment.com"
-
-// ============================================================================
-// TNI SITEMAP — DISCOVER PUBLISHED CONFIGS
-// ============================================================================
-
-const registrySource = fs.readFileSync(
-  registryPath,
-  "utf8",
-)
-
-const importPattern =
-  /import\s+\{\s*\w+\s*\}\s+from\s+["']\.\/([^"']+)["']/g
-
-const configFiles = []
-
-let importMatch
-
-while (
-  (importMatch = importPattern.exec(registrySource)) !== null
-) {
-  configFiles.push(importMatch[1] + ".ts")
-}
-
-if (configFiles.length === 0) {
-  throw new Error(
-    "No published asset configs found in annual returns registry.",
+const scriptDir =
+  path.dirname(
+    fileURLToPath(import.meta.url),
   )
-}
+
+const rootDir =
+  path.resolve(
+    scriptDir,
+    "..",
+  )
+
+const researchRoot =
+  path.join(
+    rootDir,
+    "src",
+    "research",
+  )
+
+const sitemapPath =
+  path.join(
+    rootDir,
+    "public",
+    "sitemap.xml",
+  )
+
+const siteOrigin =
+  "https://tradingninvestment.com"
+
 
 // ============================================================================
-// TNI SITEMAP — EXTRACT CANONICAL PATHS
+// TNI SITEMAP — PUBLISHED RESEARCH FAMILIES
 // ============================================================================
 
-const canonicalPaths = configFiles.map(
-  (fileName) => {
-    const configPath = path.join(
-      researchDir,
-      fileName,
+const researchFamilies = [
+  "annual-returns",
+  "monthly-returns",
+]
+
+
+// ============================================================================
+// TNI SITEMAP — DISCOVER CONFIG FILES FROM REGISTRY
+// ============================================================================
+
+function discoverCanonicalPaths(
+  family,
+) {
+
+  const researchDir =
+    path.join(
+      researchRoot,
+      family,
     )
 
-    const configSource = fs.readFileSync(
-      configPath,
+  const registryPath =
+    path.join(
+      researchDir,
+      "registry.ts",
+    )
+
+  if (!fs.existsSync(registryPath)) {
+    throw new Error(
+      `Missing research registry: ${registryPath}`,
+    )
+  }
+
+
+  const registrySource =
+    fs.readFileSync(
+      registryPath,
       "utf8",
     )
 
-    const canonicalMatch = configSource.match(
-      /canonicalPath:\s*["']([^"']+)["']/,
+
+  const importPattern =
+    /import\s*\{[\s\S]*?\}\s*from\s*["']\.\/([^"']+)["']/g
+
+
+  const configFiles = []
+
+  let importMatch
+
+
+  while (
+    (
+      importMatch =
+        importPattern.exec(
+          registrySource,
+        )
+    ) !== null
+  ) {
+    configFiles.push(
+      importMatch[1] + ".ts",
     )
+  }
 
-    if (canonicalMatch === null) {
-      throw new Error(
-        "Missing canonicalPath in published config: " +
+
+  if (configFiles.length === 0) {
+    throw new Error(
+      `No published asset configs found in ${family} registry.`,
+    )
+  }
+
+
+  return configFiles.map(
+    (fileName) => {
+
+      const configPath =
+        path.join(
+          researchDir,
           fileName,
-      )
-    }
+        )
 
-    return canonicalMatch[1]
-  },
-)
+
+      const configSource =
+        fs.readFileSync(
+          configPath,
+          "utf8",
+        )
+
+
+      const canonicalMatch =
+        configSource.match(
+          /canonicalPath:\s*["']([^"']+)["']/,
+        )
+
+
+      if (
+        canonicalMatch === null
+      ) {
+        throw new Error(
+          `Missing canonicalPath in published config: ${family}/${fileName}`,
+        )
+      }
+
+
+      return canonicalMatch[1]
+    },
+  )
+}
+
+
+// ============================================================================
+// TNI SITEMAP — COLLECT ALL PUBLISHED RESEARCH
+// ============================================================================
+
+const canonicalPaths =
+  researchFamilies.flatMap(
+    (family) =>
+      discoverCanonicalPaths(
+        family,
+      ),
+  )
+
 
 // ============================================================================
 // TNI SITEMAP — BUILD UNIQUE PUBLIC URL LIST
@@ -97,13 +174,18 @@ const canonicalPaths = configFiles.map(
 
 const urls = [
   siteOrigin + "/",
+
   ...canonicalPaths.map(
     (canonicalPath) =>
-      siteOrigin + canonicalPath,
+      siteOrigin +
+      canonicalPath,
   ),
 ]
 
-const uniqueUrls = [...new Set(urls)]
+
+const uniqueUrls =
+  [...new Set(urls)]
+
 
 // ============================================================================
 // TNI SITEMAP — WRITE XML
@@ -111,23 +193,30 @@ const uniqueUrls = [...new Set(urls)]
 
 const xmlLines = [
   '<?xml version="1.0" encoding="UTF-8"?>',
+
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+
   ...uniqueUrls.flatMap(
     (url) => [
       "  <url>",
-      "    <loc>" + url + "</loc>",
+      "    <loc>" +
+        url +
+        "</loc>",
       "  </url>",
     ],
   ),
+
   "</urlset>",
   "",
 ]
+
 
 fs.writeFileSync(
   sitemapPath,
   xmlLines.join("\n"),
   "utf8",
 )
+
 
 console.log(
   "TNI sitemap generated:",

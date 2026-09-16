@@ -2594,6 +2594,137 @@ export default function GenericAnnualReturnsPage({
           recentWindowStatistics={recentWindowArticleStatistics}
         />
 
+        {/* =================================================================
+            TNI S&P 500 RETURNS — MONTHLY RESEARCH BRIDGE
+
+            Purpose:
+            - Give search engines a crawlable internal path from the
+              established annual-return research page to monthly research.
+            - Give readers a natural next step without changing annual intent.
+            - S&P 500 only until monthly-return pages exist for other assets.
+        ================================================================= */}
+
+        {config.symbol === '^GSPC' && (
+          <section
+            aria-labelledby="sp500-monthly-returns-heading"
+            style={{
+              margin:
+                '8px 0 42px',
+
+              padding:
+                '26px 28px',
+
+              border:
+                '1px solid #e4ebf3',
+
+              borderRadius:
+                '14px',
+
+              background:
+                '#f8fbff',
+            }}
+          >
+            <div
+              style={{
+                marginBottom:
+                  '8px',
+
+                color:
+                  '#1677ff',
+
+                fontSize:
+                  '11px',
+
+                fontWeight:
+                  800,
+
+                letterSpacing:
+                  '0.08em',
+
+                textTransform:
+                  'uppercase',
+              }}
+            >
+              S&P 500 Monthly Returns
+            </div>
+
+            <h2
+              id="sp500-monthly-returns-heading"
+              style={{
+                margin:
+                  '0 0 10px',
+
+                color:
+                  '#10233f',
+
+                fontSize:
+                  '24px',
+
+                lineHeight:
+                  1.25,
+              }}
+            >
+              Explore S&P 500 Returns by Month
+            </h2>
+
+            <p
+              style={{
+                maxWidth:
+                  '820px',
+
+                margin:
+                  '0 0 18px',
+
+                color:
+                  '#66768a',
+
+                fontSize:
+                  '14px',
+
+                lineHeight:
+                  1.75,
+              }}
+            >
+              Analyze S&P 500 monthly returns from 1928
+              to the present, including positive and
+              negative month frequency, historical
+              average returns, seasonal patterns, and
+              the complete month-by-month return history.
+            </p>
+
+            <a
+              href="/sp-500-monthly-returns/"
+              style={{
+                display:
+                  'inline-flex',
+
+                alignItems:
+                  'center',
+
+                gap:
+                  '8px',
+
+                color:
+                  '#1677ff',
+
+                fontSize:
+                  '14px',
+
+                fontWeight:
+                  800,
+
+                textDecoration:
+                  'none',
+              }}
+            >
+              Explore S&P 500 Monthly Returns
+              <span aria-hidden="true">
+                →
+              </span>
+            </a>
+          </section>
+        )}
+
 <section
           style={{
             paddingTop:
