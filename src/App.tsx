@@ -138,6 +138,14 @@ function Header({
 
         <button
           type="button"
+          className={page === 'market' ? 'active' : ''}
+          onClick={() => window.location.assign('/stock-market-today/')}
+        >
+          Market Today
+        </button>
+
+        <button
+          type="button"
           className={page === 'articles' ? 'active' : ''}
           onClick={() => navigate('articles')}
         >

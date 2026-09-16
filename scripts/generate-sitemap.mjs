@@ -172,8 +172,22 @@ const canonicalPaths =
 // TNI SITEMAP — BUILD UNIQUE PUBLIC URL LIST
 // ============================================================================
 
+const marketTodayPaths = [
+  "/stock-market-today/",
+  "/stock-market-today/heatmap/",
+  "/stock-market-today/sector-health/",
+  "/stock-market-today/earnings-calendar/",
+]
+
+
 const urls = [
   siteOrigin + "/",
+
+  ...marketTodayPaths.map(
+    (canonicalPath) =>
+      siteOrigin +
+      canonicalPath,
+  ),
 
   ...canonicalPaths.map(
     (canonicalPath) =>

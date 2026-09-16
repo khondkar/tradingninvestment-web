@@ -856,3 +856,165 @@
   color: #071d3f;
 }
 
+
+/* ==========================================================================
+   STOCK MARKET TODAY — SEMANTIC MARKET GUIDE
+   ========================================================================== */
+
+.market-today-seo {
+  width: 100%;
+  max-width: 1040px;
+  margin: 88px auto 32px;
+  padding: 64px 56px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+  border-radius: 24px;
+}
+
+.market-today-seo-intro {
+  max-width: 850px;
+  margin-bottom: 52px;
+}
+
+.market-seo-eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #0878ff;
+}
+
+.market-today-seo h2 {
+  margin: 0 0 22px;
+  max-width: 900px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #101828;
+}
+
+.market-today-seo h3 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #101828;
+}
+
+.market-today-seo h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.market-today-seo h3 a:hover {
+  color: #0878ff;
+}
+
+.market-today-seo p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #526071;
+}
+
+.market-seo-block {
+  max-width: 850px;
+  padding: 34px 0;
+  border-top: 1px solid #edf0f4;
+}
+
+.market-seo-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0878ff;
+  text-decoration: none;
+}
+
+.market-seo-link:hover {
+  text-decoration: underline;
+}
+
+.market-seo-conclusion {
+  padding-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .market-today-seo {
+    width: 100%;
+    max-width: 100%;
+    margin: 52px 0 24px;
+    padding: 38px 20px;
+    border-radius: 18px;
+    overflow: visible;
+  }
+
+  .market-today-seo-intro {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .market-today-seo h2 {
+    font-size: 29px;
+    line-height: 1.12;
+  }
+
+  .market-today-seo h3 {
+    font-size: 20px;
+  }
+
+  .market-today-seo p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .market-seo-block {
+    width: 100%;
+    max-width: 100%;
+    padding: 27px 0;
+  }
+}
+
+
+
+/* ==========================================================================
+   STOCK MARKET TODAY — OVERVIEW + SEMANTIC MARKET GUIDE
+   ========================================================================== */
+
+.market-overview-explainer {
+  width: 100%;
+  max-width: 900px;
+  margin: 46px auto 0;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.market-overview-explainer h2 {
+  margin: 0 0 14px;
+  color: #101828;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.market-overview-explainer p {
+  margin: 0 0 14px;
+  color: #5b6878;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.market-overview-explainer a {
+  margin: 0 4px;
+  color: #0878ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.market-overview-explainer a:hover {
+  text-decoration: underline;
+}
+

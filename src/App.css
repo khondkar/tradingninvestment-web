@@ -2368,7 +2368,7 @@ button.primary-action {
 
     grid-template-columns:
       repeat(
-        3,
+        4,
         1fr
       );
 
@@ -4820,3 +4820,19 @@ button.primary-action {
     font-size: 11px;
   }
 }
+
+/* TNI MOBILE PRIMARY NAV — FOUR DESTINATIONS */
+
+@media (max-width: 720px) {
+  .mobile-bottom-nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .mobile-bottom-nav button {
+    min-width: 0;
+    padding: 0 4px;
+    font-size: 9.5px;
+    white-space: nowrap;
+  }
+}
+
