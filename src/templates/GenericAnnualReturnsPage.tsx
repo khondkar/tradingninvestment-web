@@ -30,6 +30,7 @@ import {
   buildAnnualReturnsSeoDescription,
   buildAvailablePeriodReturnsLabel,
 } from '../research/annual-returns/labels'
+import ResearchShareButtons from '../components/research/ResearchShareButtons'
 import GenericAnnualReturnsChart from './GenericAnnualReturnsChart'
 import GenericAnnualReturnsArticle from './GenericAnnualReturnsArticle'
 import LatestMarketIntelligence from '../components/news/LatestMarketIntelligence'
@@ -1017,6 +1018,12 @@ export default function GenericAnnualReturnsPage({
             • Quant Researcher • TradingNInvestment
           </p>
         </section>
+
+        <ResearchShareButtons
+          title={`${config.name} Historical Annual Returns`}
+          symbol={config.symbol}
+          researchType="annual"
+        />
 
         {/* =================================================================
             TNI S&P 500 RETURNS — EVERGREEN CRAWLABLE HISTORICAL STATISTICS

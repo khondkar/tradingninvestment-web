@@ -6,6 +6,7 @@ import type {
   MonthlyReturnStatistic,
 } from "../research/monthly-returns/types"
 
+import ResearchShareButtons from '../components/research/ResearchShareButtons'
 import GenericMonthlyReturnsChart from "./GenericMonthlyReturnsChart"
 import GenericMonthlyReturnsHeatmap from "./GenericMonthlyReturnsHeatmap"
 
@@ -227,6 +228,12 @@ export default function GenericMonthlyReturnsPage({
         </div>
 
       </header>
+
+      <ResearchShareButtons
+        title={`${config.name} Historical Monthly Returns`}
+        symbol={config.symbol}
+        researchType="monthly"
+      />
 
 
       {/* ====================================================================

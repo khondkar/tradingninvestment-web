@@ -1,0 +1,89 @@
+.research-share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 28px auto;
+  padding: 18px 22px;
+
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+}
+
+.research-share-label {
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.research-share-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.research-share-actions button {
+  appearance: none;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+
+  padding: 8px 12px;
+
+  color: #344054;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    border-color 120ms ease,
+    background 120ms ease,
+    transform 120ms ease;
+}
+
+.research-share-actions button:hover {
+  background: #f9fafb;
+  border-color: #98a2b3;
+  transform: translateY(-1px);
+}
+
+.research-share-actions button:focus-visible {
+  outline: 2px solid #1677ff;
+  outline-offset: 2px;
+}
+
+.research-share-native {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .research-share {
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin: 22px auto;
+    padding: 16px;
+  }
+
+  .research-share-actions {
+    width: 100%;
+  }
+
+  .research-share-actions button {
+    flex: 1 1 auto;
+  }
+
+  .research-share-native {
+    display: inline-flex;
+    justify-content: center;
+  }
+}
