@@ -35,6 +35,37 @@ const publishedResearchRegistry = [
    TNI PUBLIC WEBSITE — HEADER
    ========================================================================== */
 
+async function shareCurrentPage() {
+  const shareData = {
+    title: document.title,
+    url: window.location.href,
+  }
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData)
+      window.gtag?.("event", "page_share", {
+        platform: "native",
+        page_path: window.location.pathname,
+      })
+      return
+    }
+
+    await navigator.clipboard.writeText(window.location.href)
+
+    window.gtag?.("event", "page_share", {
+      platform: "copy_link",
+      page_path: window.location.pathname,
+    })
+  } catch (error) {
+    if (error instanceof DOMException && error.name === "AbortError") {
+      return
+    }
+
+    console.error("TNI SHARE ERROR:", error)
+  }
+}
+
 function Header({
   page,
   setPage,
@@ -115,6 +146,16 @@ function Header({
         </nav>
 
         <div className="header-actions">
+
+          <button
+            type="button"
+            className="header-share-button"
+            onClick={shareCurrentPage}
+            aria-label="Share this page"
+            title="Share this page"
+          >
+            ↗ Share
+          </button>
 
           <a className="launch-tni" href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer">
             Launch TNI

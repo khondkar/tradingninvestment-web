@@ -4884,3 +4884,45 @@ button.primary-action {
     padding-bottom: 0;
   }
 }
+
+/* ==========================================================================
+   TNI GLOBAL SHARE BUTTON
+   ========================================================================== */
+
+.header-share-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 0 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: var(--navy);
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease;
+}
+
+.header-share-button:hover {
+  background: var(--soft);
+  border-color: #98a2b3;
+  transform: translateY(-1px);
+}
+
+.header-share-button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
