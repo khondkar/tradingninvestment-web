@@ -264,7 +264,7 @@ const datasetSchema = {
       "S&P 500 daily closing-price history",
 
     description:
-      dataset.source,
+      "Daily S&P 500 closing-price history used by TradingNInvestment to calculate historical drawdowns, stock market corrections, bear markets, peak-to-trough declines, and recovery periods. The underlying S&P 500 (^GSPC) market data is sourced from Yahoo Finance and maintained in the TNI daily research archive.",
   },
 }
 
