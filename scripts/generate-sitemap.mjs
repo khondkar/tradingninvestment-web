@@ -180,6 +180,11 @@ const marketTodayPaths = [
 ]
 
 
+const standaloneResearchPaths = [
+  "/stock-market-correction-myth-and-reality/",
+]
+
+
 const urls = [
   siteOrigin + "/",
 
@@ -190,6 +195,12 @@ const urls = [
   ),
 
   ...canonicalPaths.map(
+    (canonicalPath) =>
+      siteOrigin +
+      canonicalPath,
+  ),
+
+  ...standaloneResearchPaths.map(
     (canonicalPath) =>
       siteOrigin +
       canonicalPath,

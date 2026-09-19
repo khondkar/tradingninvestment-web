@@ -2,6 +2,7 @@ import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
 import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
+import SP500DrawdownsPage from './pages/SP500DrawdownsPage'
 import NVDAReturnsPage from './pages/NVDAReturnsPage'
 import MSFTReturnsPage from './pages/MSFTReturnsPage'
 import StockMarketTodayPage from './pages/StockMarketTodayPage'
@@ -911,6 +912,28 @@ function App() {
           setPage={setPage}
         />
         <SP500MonthlyReturnsPage />
+      </div>
+    )
+  }
+
+  // ============================================================================
+  // TNI S&P 500 DRAWDOWNS & CORRECTIONS — PUBLIC RESEARCH ROUTE
+  //
+  // Legacy article URL preserved as the canonical research URL:
+  // /stock-market-correction-myth-and-reality/
+  // ============================================================================
+
+  if (
+    normalizedPath ===
+    '/stock-market-correction-myth-and-reality'
+  ) {
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <SP500DrawdownsPage />
       </div>
     )
   }

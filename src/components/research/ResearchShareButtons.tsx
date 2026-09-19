@@ -9,7 +9,7 @@ declare global {
 type ResearchShareButtonsProps = {
   title: string
   symbol: string
-  researchType: 'annual' | 'monthly'
+  researchType: 'annual' | 'monthly' | 'drawdowns'
 }
 
 export default function ResearchShareButtons({
