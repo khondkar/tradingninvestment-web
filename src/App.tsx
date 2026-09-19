@@ -11,6 +11,7 @@ import StockMarketSectorHealthPage from './pages/StockMarketSectorHealthPage'
 import StockMarketEarningsCalendarPage from './pages/StockMarketEarningsCalendarPage'
 import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
 import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
+import { drawdownsResearchRegistry } from './research/drawdowns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import LatestMarketIntelligence from './components/news/LatestMarketIntelligence'
 import './App.css'
@@ -29,6 +30,10 @@ const publishedResearchRegistry = [
   ...monthlyReturnsRegistry.map((entry) => ({
     ...entry,
     researchType: 'monthly' as const,
+  })),
+  ...drawdownsResearchRegistry.map((entry) => ({
+    ...entry,
+    researchType: 'drawdowns' as const,
   })),
 ]
 
@@ -469,7 +474,9 @@ function ResearchPage({
                         <span>
                           {entry.researchType === 'monthly'
                             ? 'MONTHLY RETURNS'
-                            : 'ANNUAL RETURNS'}
+                            : entry.researchType === 'drawdowns'
+                              ? 'DRAWDOWNS & CORRECTIONS'
+                              : 'ANNUAL RETURNS'}
                         </span>
                       </>
                     )}
@@ -490,7 +497,9 @@ function ResearchPage({
                       <small>
                         {entry.researchType === 'monthly'
                           ? 'Historical Monthly Returns and Market Performance'
-                          : 'Historical Annual Returns and Market Performance'}
+                          : entry.researchType === 'drawdowns'
+                            ? 'Historical Corrections, Bear Markets and Recoveries'
+                            : 'Historical Annual Returns and Market Performance'}
                       </small>
 
                       <a
@@ -579,7 +588,9 @@ function ArticlesPage() {
                     <span>
                           {entry.researchType === 'monthly'
                             ? 'MONTHLY RETURNS'
-                            : 'ANNUAL RETURNS'}
+                            : entry.researchType === 'drawdowns'
+                              ? 'DRAWDOWNS & CORRECTIONS'
+                              : 'ANNUAL RETURNS'}
                         </span>
                   </>
                 )}
@@ -600,7 +611,9 @@ function ArticlesPage() {
                   <small>
                     {entry.researchType === 'monthly'
                           ? 'Historical Monthly Returns and Market Performance'
-                          : 'Historical Annual Returns and Market Performance'}
+                          : entry.researchType === 'drawdowns'
+                            ? 'Historical Corrections, Bear Markets and Recoveries'
+                            : 'Historical Annual Returns and Market Performance'}
                   </small>
 
                   <a

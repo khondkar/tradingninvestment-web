@@ -225,6 +225,10 @@ export default function GenericMonthlyReturnsPage({
           <span className="active">
             Monthly Returns
           </span>
+
+          <a href="/stock-market-correction-myth-and-reality/">
+            Drawdowns &amp; Corrections
+          </a>
         </div>
 
       </header>

@@ -1066,6 +1066,21 @@ export default function GenericAnnualReturnsPage({
             >
               Monthly Returns
             </a>
+
+            <a
+              href="/stock-market-correction-myth-and-reality/"
+              style={{
+                padding: '9px 14px',
+                border: '1px solid #e4e7ec',
+                borderRadius: '999px',
+                color: '#475467',
+                fontSize: '13px',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              Drawdowns &amp; Corrections
+            </a>
           </nav>
         )}
 
