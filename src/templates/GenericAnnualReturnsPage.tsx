@@ -1019,6 +1019,56 @@ export default function GenericAnnualReturnsPage({
           </p>
         </section>
 
+        {/* =================================================================
+            TNI S&P 500 RESEARCH CENTER — RETURN HORIZON NAVIGATION
+
+            Annual and monthly research are separate crawlable pages.
+            Keep this S&P 500-specific until equivalent monthly research
+            exists for additional assets.
+        ================================================================= */}
+
+        {config.symbol === '^GSPC' && (
+          <nav
+            aria-label="S&P 500 return research"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '10px',
+              margin: '0 0 28px',
+            }}
+          >
+            <span
+              aria-current="page"
+              style={{
+                padding: '9px 14px',
+                border: '1px solid #172033',
+                borderRadius: '999px',
+                background: '#172033',
+                color: '#ffffff',
+                fontSize: '13px',
+                fontWeight: 700,
+              }}
+            >
+              Annual Returns
+            </span>
+
+            <a
+              href="/sp-500-monthly-returns/"
+              style={{
+                padding: '9px 14px',
+                border: '1px solid #e4e7ec',
+                borderRadius: '999px',
+                color: '#475467',
+                fontSize: '13px',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              Monthly Returns
+            </a>
+          </nav>
+        )}
+
         <ResearchShareButtons
           title={`${config.name} Historical Annual Returns`}
           symbol={config.symbol}
