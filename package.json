@@ -9,7 +9,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
-    "generate:static": "node scripts/generate-static-research-pages.mjs"
+    "generate:static": "node scripts/generate-static-research-pages.mjs && node scripts/generate-static-annual-pages.mjs"
   },
   "dependencies": {
     "d3": "^7.9.0",
