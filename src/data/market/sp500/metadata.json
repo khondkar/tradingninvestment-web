@@ -1,0 +1,21 @@
+{
+  "symbol": "^GSPC",
+  "ticker": "SP500",
+  "name": "S&P 500",
+  "provider": "Yahoo Finance",
+  "frequency": "daily",
+  "return_basis": "Close",
+  "dividends_included": false,
+  "first_date": "1927-12-30",
+  "last_date": "2026-09-15",
+  "rows": 24793,
+  "retrieved_at_utc": "2026-09-15T21:12:46.027112+00:00",
+  "columns": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Adj Close",
+    "Volume"
+  ]
+}
