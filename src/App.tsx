@@ -694,6 +694,32 @@ function AboutPage() {
 
 
       {/* ==================================================================
+          TNI ABOUT — CONTACT
+          ================================================================== */}
+
+      <section className="tni-about-statement">
+        <span className="content-tag">
+          CONTACT
+        </span>
+
+        <h2>
+          Contact TradingNInvestment
+        </h2>
+
+        <p>
+          TradingNInvestment<br />
+          New York, NY, United States
+        </p>
+
+        <p>
+          <a href="mailto:contact@tradingninvestment.com">
+            contact@tradingninvestment.com
+          </a>
+        </p>
+      </section>
+
+
+      {/* ==================================================================
           TNI ABOUT — PRODUCT CONNECTION
           ================================================================== */}
 
