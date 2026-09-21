@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#ffffff"/>
+<rect x="0" y="0" width="1200" height="7" fill="#1677ff"/>
+
+<text x="64" y="48" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#1677ff">TRADINGNINVESTMENT RESEARCH</text>
+<text x="1136" y="48" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#526b85">54 COMPLETED YEARS · 1972–2025</text>
+
+<text x="64" y="105" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="800" fill="#102a43">Nasdaq Composite vs. S&amp;P 500</text>
+<text x="64" y="143" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="500" fill="#536b84">Historical Annual Returns · 1972–2025</text>
+<text x="64" y="177" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#7a8da1">Year-by-year price-return comparison · Dividends excluded</text>
+
+<line x1="64" y1="198" x2="86" y2="198" stroke="#1677ff" stroke-width="4"/>
+<text x="94" y="202" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#526b85">NASDAQ COMPOSITE</text>
+
+<line x1="270" y1="198" x2="292" y2="198" stroke="#536b84" stroke-width="4"/>
+<text x="300" y="202" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#526b85">S&amp;P 500</text>
+
+<line x1="64" y1="430.00" x2="1136" y2="430.00" stroke="#e8eef4" stroke-width="1"/><text x="54" y="434.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8999a9">-40%</text><line x1="64" y1="366.00" x2="1136" y2="366.00" stroke="#a8b8c8" stroke-width="1.4"/><text x="54" y="370.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8999a9">+0%</text><line x1="64" y1="302.00" x2="1136" y2="302.00" stroke="#e8eef4" stroke-width="1"/><text x="54" y="306.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8999a9">+40%</text><line x1="64" y1="238.00" x2="1136" y2="238.00" stroke="#e8eef4" stroke-width="1"/><text x="54" y="242.00" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8999a9">+80%</text>
+
+<polyline points="64.00,340.99 84.23,393.78 104.45,413.55 124.68,315.52 144.91,335.36 165.13,384.40 185.36,364.30 205.58,346.31 225.81,324.76 246.04,381.57 266.26,342.38 286.49,338.37 306.72,363.76 326.94,323.87 347.17,342.61 367.40,362.76 387.62,346.16 407.85,322.40 428.08,376.49 448.30,323.91 468.53,358.86 488.75,354.71 508.98,368.46 529.21,311.42 549.43,333.58 569.66,316.39 589.89,323.33 610.11,334.76 630.34,382.22 650.57,386.87 670.79,403.39 691.02,323.79 711.25,351.61 731.47,361.20 751.70,344.21 771.92,360.35 792.15,427.58 812.38,328.47 832.60,345.55 852.83,366.01 873.06,344.55 893.28,318.64 913.51,347.78 933.74,367.16 953.96,350.74 974.19,334.93 994.42,375.98 1014.64,319.80 1034.87,339.99 1055.09,322.97 1075.32,397.11 1095.55,327.23 1115.77,328.71 1136.00,339.78" fill="none" stroke="#536b84" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="64.00,338.51 84.23,415.70 104.45,422.18 124.68,318.39 144.91,324.24 165.13,354.28 185.36,346.31 205.58,321.03 225.81,311.80 246.04,371.14 266.26,336.12 286.49,334.20 306.72,384.09 326.94,315.62 347.17,354.23 367.40,374.39 387.62,341.36 407.85,335.21 428.08,394.50 448.30,275.03 468.53,341.27 488.75,342.40 508.98,371.12 529.21,302.13 549.43,329.67 569.66,331.38 589.89,302.59 610.11,229.06 630.34,428.86 650.57,399.68 670.79,416.44 691.02,285.99 711.25,352.26 731.47,363.80 751.70,350.77 771.92,350.30 792.15,430.86 812.38,295.78 832.60,338.94 852.83,368.88 873.06,340.55 893.28,304.69 913.51,344.57 933.74,356.83 953.96,354.00 974.19,320.81 994.42,372.21 1014.64,309.64 1034.87,296.18 1055.09,331.78 1075.32,418.96 1095.55,296.52 1115.77,320.17 1136.00,333.43" fill="none" stroke="#1677ff" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+
+<text x="64.00" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#687c91">1972</text><text x="225.81" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#687c91">1980</text><text x="428.08" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#687c91">1990</text><text x="630.34" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#687c91">2000</text><text x="832.60" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#687c91">2010</text><text x="1034.87" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#687c91">2020</text><text x="1136.00" y="462" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="600" fill="#687c91">2025</text>
+
+<line x1="64" y1="492" x2="1136" y2="492" stroke="#e4ebf2" stroke-width="1"/>
+
+<text x="64" y="538" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#102a43">13.46%</text>
+<text x="64" y="563" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#71859a">NASDAQ AVG. ANNUAL RETURN</text>
+
+<text x="425" y="538" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#102a43">9.52%</text>
+<text x="425" y="563" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#71859a">S&amp;P 500 AVG. ANNUAL RETURN</text>
+
+<text x="785" y="538" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#102a43">61.11%</text>
+<text x="785" y="563" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" letter-spacing="1" fill="#71859a">NASDAQ OUTPERFORMANCE YEARS · 33/54</text>
+
+<text x="64" y="608" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8999a9">Nasdaq Composite (^IXIC) vs. S&amp;P 500 (^GSPC) · Annual price returns · Dividends excluded</text>
+<text x="1136" y="608" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" fill="#1677ff">TradingNInvestment.com | TNI Research</text>
+</svg>

@@ -250,6 +250,12 @@ for (
       "@id":
         canonicalUrl,
     },
+    ...(page.assetAsOfDate
+      ? {
+          dateModified:
+            page.assetAsOfDate,
+        }
+      : {}),
     author: {
       "@type":
         "Person",
@@ -300,6 +306,12 @@ for (
       canonicalUrl,
     temporalCoverage:
       `${dataset.summary.start_year}/..`,
+    ...(page.assetAsOfDate
+      ? {
+          dateModified:
+            page.assetAsOfDate,
+        }
+      : {}),
     creator: {
       "@type":
         "Person",
@@ -376,6 +388,13 @@ for (
       /<meta\s+property="og:image"\s+content="[^"]*"\s*\/>/,
       `<meta property="og:image" content="${escapeHtml(socialImage)}" />`,
       `${config.slug} og:image`,
+    )
+
+    html = replaceRequired(
+      html,
+      /<meta\s+property="og:image:alt"\s+content="[^"]*"\s*\/>/s,
+      `<meta property="og:image:alt" content="${escapeHtml(`${config.name} historical annual returns — TradingNInvestment Research`)}" />`,
+      `${config.slug} og:image:alt`,
     )
 
     html = replaceRequired(

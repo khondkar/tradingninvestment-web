@@ -1,0 +1,21 @@
+{
+  "symbol": "^IXIC",
+  "ticker": "NASDAQ",
+  "name": "Nasdaq Composite",
+  "provider": "Yahoo Finance",
+  "frequency": "daily",
+  "return_basis": "Close",
+  "dividends_included": false,
+  "first_date": "1971-02-05",
+  "last_date": "2026-09-21",
+  "rows": 14023,
+  "retrieved_at_utc": "2026-09-21T17:33:47.308985+00:00",
+  "columns": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Adj Close",
+    "Volume"
+  ]
+}

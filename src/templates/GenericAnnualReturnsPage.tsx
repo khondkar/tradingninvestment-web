@@ -31,6 +31,7 @@ import {
   buildAvailablePeriodReturnsLabel,
 } from '../research/annual-returns/labels'
 import ResearchShareButtons from '../components/research/ResearchShareButtons'
+import AnnualReturnsBenchmarkComparison from '../components/research/AnnualReturnsBenchmarkComparison'
 import GenericAnnualReturnsChart from './GenericAnnualReturnsChart'
 import GenericAnnualReturnsArticle from './GenericAnnualReturnsArticle'
 import LatestMarketIntelligence from '../components/news/LatestMarketIntelligence'
@@ -57,6 +58,10 @@ import type { AnnualReturnsAssetConfig } from '../research/annual-returns/types'
 export type GenericAnnualReturnsPageProps = {
   config: AnnualReturnsAssetConfig
   dataset: AnnualReturnsPageData
+  benchmarkDataset?: AnnualReturnsPageData
+  benchmarkName?: string
+  assetAsOfDate?: string
+  benchmarkAsOfDate?: string
 }
 
 // ============================================================================
@@ -66,6 +71,10 @@ export type GenericAnnualReturnsPageProps = {
 export default function GenericAnnualReturnsPage({
   config,
   dataset,
+  benchmarkDataset,
+  benchmarkName = 'S&P 500',
+  assetAsOfDate,
+  benchmarkAsOfDate,
 }: GenericAnnualReturnsPageProps) {
 
   // ==========================================================================
@@ -1833,6 +1842,17 @@ export default function GenericAnnualReturnsPage({
           )}
         </section>
 
+        {benchmarkDataset && (
+          <AnnualReturnsBenchmarkComparison
+            assetName={config.name}
+            assetDataset={dataset}
+            benchmarkName={benchmarkName}
+            benchmarkDataset={benchmarkDataset}
+            assetAsOfDate={assetAsOfDate}
+            benchmarkAsOfDate={benchmarkAsOfDate}
+          />
+        )}
+
         {/* =================================================================
             TNI S&P 500 RETURNS — SHARE / EMBED / LICENSING
         ================================================================= */}
@@ -2899,6 +2919,41 @@ export default function GenericAnnualReturnsPage({
           preferredSymbols={config.newsSymbols}
           maxStories={1}
         />
+
+        {/* =================================================================
+            TNI INTELLIGENCE BRIDGE
+        ================================================================= */}
+
+        <section className="tni-drawdown-intelligence">
+
+          <span className="tni-drawdown-section-label">
+            TNI INTELLIGENCE
+          </span>
+
+          <h2>
+            Historical Returns Tell You What Happened Before.
+            See What Is Happening Now.
+          </h2>
+
+          <p>
+            Historical {config.name} returns provide context
+            for long-term market performance, strong years,
+            drawdowns, and changing market conditions. TNI
+            Intelligence tracks current market-moving news
+            and live market intelligence as conditions change.
+          </p>
+
+          <a
+            href="https://tni-frontend.onrender.com/live/news"
+            target="_blank"
+            rel="noreferrer"
+            data-analytics-event="research_to_intelligence_click"
+          >
+            VIEW TODAY&apos;S MARKET INTELLIGENCE
+            <span aria-hidden="true"> →</span>
+          </a>
+
+        </section>
       </div>
     </main>
   )

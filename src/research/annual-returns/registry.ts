@@ -8,6 +8,7 @@
 // ============================================================================
 
 import { msftAnnualReturnsConfig } from "./msft"
+import { nasdaqAnnualReturnsConfig } from "./nasdaq"
 import { nvdaAnnualReturnsConfig } from "./nvda"
 import { sp500AnnualReturnsConfig } from "./sp500"
 import type { AnnualReturnsAssetConfig } from "./types"
@@ -29,6 +30,12 @@ export const annualReturnsResearchRegistry:
       featured: true,
       previewImage:
         "/images/sp500-annual-returns-preview.svg",
+    },
+    {
+      config: nasdaqAnnualReturnsConfig,
+      featured: false,
+      previewImage:
+        "/images/social/nasdaq-vs-sp500-historical-returns-og.svg",
     },
     {
       config: nvdaAnnualReturnsConfig,

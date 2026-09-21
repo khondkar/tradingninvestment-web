@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
+import NasdaqReturnsPage from './pages/NasdaqReturnsPage'
 import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
 import SP500DrawdownsPage from './pages/SP500DrawdownsPage'
 import NVDAReturnsPage from './pages/NVDAReturnsPage'
@@ -959,6 +960,25 @@ function App() {
           setPage={setPage}
         />
         <MSFTReturnsPage />
+      </div>
+    )
+  }
+
+  // ========================================================================
+  // TNI NASDAQ COMPOSITE RETURNS — PUBLIC RESEARCH ROUTE
+  //
+  // Canonical URL:
+  // /nasdaq-historical-annual-returns/
+  // ========================================================================
+
+  if (normalizedPath === '/nasdaq-historical-annual-returns') {
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <NasdaqReturnsPage />
       </div>
     )
   }
