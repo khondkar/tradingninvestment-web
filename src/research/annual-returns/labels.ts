@@ -11,6 +11,13 @@ import type { AnnualReturnsAssetConfig } from "./types"
 export function buildAnnualReturnsHeadline(
   config: AnnualReturnsAssetConfig,
 ): string {
+  if (
+    config.slug ===
+    "stock-market-historical-returns"
+  ) {
+    return "Stock Market Historical Returns: Dow Jones Returns by Year"
+  }
+
   return `${config.name} Returns by Year: ${config.startYear} to Present`
 }
 

@@ -7,6 +7,7 @@
 // should derive from this registry.
 // ============================================================================
 
+import { dowAnnualReturnsConfig } from "./dow"
 import { msftAnnualReturnsConfig } from "./msft"
 import { nasdaqAnnualReturnsConfig } from "./nasdaq"
 import { nvdaAnnualReturnsConfig } from "./nvda"
@@ -30,6 +31,10 @@ export const annualReturnsResearchRegistry:
       featured: true,
       previewImage:
         "/images/sp500-annual-returns-preview.svg",
+    },
+    {
+      config: dowAnnualReturnsConfig,
+      featured: false,
     },
     {
       config: nasdaqAnnualReturnsConfig,

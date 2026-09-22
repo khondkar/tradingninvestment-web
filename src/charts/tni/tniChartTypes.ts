@@ -94,3 +94,47 @@ export type TNIAnnualReturnsChartConfig = {
 
   data: TNIAnnualReturnPoint[];
 };
+
+
+// ============================================================
+// TNI HISTORICAL PRICE CHART TYPES
+// Long-horizon price series with optional event annotations
+// ============================================================
+
+export type TNIHistoricalPricePoint = {
+  date: string;
+  close: number;
+  frequency?: "annual" | "monthly";
+  source?: string;
+};
+
+export type TNIHistoricalPriceAnnotation = {
+  date: string;
+  title: string;
+  price?: number;
+  declinePct?: number;
+  note?: string;
+};
+
+export type TNIHistoricalPriceChartConfig = {
+  id: string;
+
+  title: string;
+  subtitle?: string;
+
+  symbol?: string;
+  metricLabel: string;
+
+  branding: TNIChartBranding;
+
+  height?: number;
+  useLogScale?: boolean;
+
+  showWatermark?: boolean;
+  showSource?: boolean;
+
+  themeOverrides?: TNIChartThemeOverrides;
+
+  data: TNIHistoricalPricePoint[];
+  annotations?: TNIHistoricalPriceAnnotation[];
+};

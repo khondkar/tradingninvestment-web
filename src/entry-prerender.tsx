@@ -1,6 +1,7 @@
 import { renderToStaticMarkup } from 'react-dom/server'
 
 import sp500AnnualReturns from './data/charts/sp500AnnualReturns.json'
+import dowAnnualReturns from './data/charts/dowAnnualReturns.json'
 import msftAnnualReturns from './data/charts/msftAnnualReturns.json'
 import nasdaqAnnualReturns from './data/charts/nasdaqAnnualReturns.json'
 import nvdaAnnualReturns from './data/charts/nvdaAnnualReturns.json'
@@ -9,6 +10,7 @@ import nasdaqMetadata from './data/market/nasdaq/metadata.json'
 import sp500Metadata from './data/market/sp500/metadata.json'
 
 import { sp500AnnualReturnsConfig } from './research/annual-returns/sp500'
+import { dowAnnualReturnsConfig } from './research/annual-returns/dow'
 import { msftAnnualReturnsConfig } from './research/annual-returns/msft'
 import { nasdaqAnnualReturnsConfig } from './research/annual-returns/nasdaq'
 import { nvdaAnnualReturnsConfig } from './research/annual-returns/nvda'
@@ -34,6 +36,10 @@ export const annualPrerenderPages: AnnualPrerenderPage[] = [
   {
     config: sp500AnnualReturnsConfig,
     dataset: sp500AnnualReturns as AnnualReturnsPageData,
+  },
+  {
+    config: dowAnnualReturnsConfig,
+    dataset: dowAnnualReturns as AnnualReturnsPageData,
   },
   {
     config: msftAnnualReturnsConfig,

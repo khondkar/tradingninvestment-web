@@ -103,6 +103,13 @@ function buildSeoDescription(
   config,
   periods,
 ) {
+  if (
+    config.slug ===
+    "stock-market-historical-returns"
+  ) {
+    return `Explore stock market historical returns from ${config.startYear} to present, including Dow Jones returns by year, YTD performance, a 100+ year historical chart, average returns, market crashes, and downloadable data.`
+  }
+
   return `Explore ${config.name} returns by year from ${config.startYear} to present, including current-year and ${buildAvailablePeriodReturnsLabel(periods).toLowerCase()} returns, average historical returns, positive and negative years, and long-term market performance.`
 }
 
@@ -426,10 +433,170 @@ for (
     `${config.slug} canonical`,
   )
 
+  const completedRows =
+    dataset.data.filter(
+      (row) =>
+        row.year !==
+        dataset.current_year.year,
+    )
+
+  const completedValues =
+    completedRows.map(
+      (row) => row.value,
+    )
+
+  const averageReturn =
+    completedValues.reduce(
+      (sum, value) =>
+        sum + value,
+      0,
+    ) /
+    completedValues.length
+
+  const positiveYears =
+    completedRows.filter(
+      (row) =>
+        row.value > 0,
+    ).length
+
+  const positivePct =
+    (
+      positiveYears /
+      completedRows.length
+    ) * 100
+
+  const bestYear =
+    completedRows.reduce(
+      (best, row) =>
+        row.value > best.value
+          ? row
+          : best,
+    )
+
+  const worstYear =
+    completedRows.reduce(
+      (worst, row) =>
+        row.value < worst.value
+          ? row
+          : worst,
+    )
+
+  const dowFaqSchema =
+    config.slug ===
+    "stock-market-historical-returns"
+      ? {
+          "@context":
+            "https://schema.org",
+          "@type":
+            "FAQPage",
+          mainEntity: [
+            {
+              "@type":
+                "Question",
+              name:
+                "What are the historical returns of the stock market?",
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  `Using the Dow Jones Industrial Average as a long-term market benchmark, this dataset covers annual price returns from ${dataset.summary.start_year} through ${dataset.current_year.year} YTD. Across completed calendar years, the average annual price return was ${averageReturn.toFixed(2)}%.`,
+              },
+            },
+            {
+              "@type":
+                "Question",
+              name:
+                "What are the Dow Jones returns by year?",
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  `The Dow Jones returns-by-year research covers annual price returns from ${dataset.summary.start_year} through ${dataset.current_year.year} YTD.`,
+              },
+            },
+            {
+              "@type":
+                "Question",
+              name:
+                `What is the Dow Jones ${dataset.current_year.year} YTD return?`,
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  `The Dow Jones ${dataset.current_year.year} year-to-date price return in the latest dataset is ${dataset.current_year.return_pct.toFixed(2)}%.`,
+              },
+            },
+            {
+              "@type":
+                "Question",
+              name:
+                "What is the average historical Dow Jones return?",
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  `Across ${completedRows.length} completed calendar years in this dataset, the Dow Jones average annual price return is ${averageReturn.toFixed(2)}%.`,
+              },
+            },
+            {
+              "@type":
+                "Question",
+              name:
+                "What was the best year for the Dow Jones?",
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  `${bestYear.year} was the strongest completed year in this historical dataset, with a price return of ${bestYear.value.toFixed(2)}%.`,
+              },
+            },
+            {
+              "@type":
+                "Question",
+              name:
+                "What was the worst year for the Dow Jones?",
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  `${worstYear.year} was the weakest completed year in this historical dataset, with a price return of ${worstYear.value.toFixed(2)}%.`,
+              },
+            },
+            {
+              "@type":
+                "Question",
+              name:
+                "How often does the Dow Jones have a positive year?",
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  `${positiveYears} of ${completedRows.length} completed years in this dataset had positive price returns, or ${positivePct.toFixed(2)}% of completed years.`,
+              },
+            },
+            {
+              "@type":
+                "Question",
+              name:
+                "Do these Dow Jones historical returns include dividends?",
+              acceptedAnswer: {
+                "@type":
+                  "Answer",
+                text:
+                  "No. This research reports Dow Jones Industrial Average price returns. It does not represent total return with dividends reinvested.",
+              },
+            },
+          ],
+        }
+      : null
+
   const schemaHtml =
     [
       articleSchema,
       datasetSchema,
+      ...(dowFaqSchema
+        ? [dowFaqSchema]
+        : []),
     ]
       .map(
         (schema) =>

@@ -12,6 +12,7 @@ import {
   useEffect,
   useMemo,
   useState,
+  type ReactNode,
 } from 'react'
 
 import {
@@ -62,6 +63,8 @@ export type GenericAnnualReturnsPageProps = {
   benchmarkName?: string
   assetAsOfDate?: string
   benchmarkAsOfDate?: string
+  beforeReturnExplorer?: ReactNode
+  afterMethodology?: ReactNode
 }
 
 // ============================================================================
@@ -75,6 +78,8 @@ export default function GenericAnnualReturnsPage({
   benchmarkName = 'S&P 500',
   assetAsOfDate,
   benchmarkAsOfDate,
+  beforeReturnExplorer,
+  afterMethodology,
 }: GenericAnnualReturnsPageProps) {
 
   // ==========================================================================
@@ -987,16 +992,33 @@ export default function GenericAnnualReturnsPage({
               lineHeight: 1.7,
             }}
           >
-            Explore {config.name} returns by year from{' '}
-            {config.startYear} to present.
-            Analyze the current-year return,{' '}
-            {buildAvailablePeriodReturnsLabel(
-              periodReturns.map(
-                (period) => period.years,
-              ),
-            ).toLowerCase()} returns, average historical returns, positive and
-            negative market years, and long-term market performance using the
-            interactive research explorer.
+            {config.slug ===
+            'stock-market-historical-returns' ? (
+              <>
+                Explore more than 100 years of stock market historical returns
+                using the Dow Jones Industrial Average, from{' '}
+                {config.startYear} to present. Analyze Dow Jones returns by
+                year, current YTD performance, 1-year, 3-year, 5-year,
+                10-year and 20-year returns, average historical returns,
+                positive and negative years, major market declines, and
+                long-term market performance. Use the interactive historical
+                charts and download the underlying annual return data for
+                further research.
+              </>
+            ) : (
+              <>
+                Explore {config.name} returns by year from{' '}
+                {config.startYear} to present. Analyze the current-year
+                return,{' '}
+                {buildAvailablePeriodReturnsLabel(
+                  periodReturns.map(
+                    (period) => period.years,
+                  ),
+                ).toLowerCase()} returns, average historical returns,
+                positive and negative market years, and long-term market
+                performance using the interactive research explorer.
+              </>
+            )}
           </p>
 
           {/* =============================================================
@@ -1465,6 +1487,8 @@ export default function GenericAnnualReturnsPage({
             />
           </figure>
         )}
+
+        {beforeReturnExplorer}
 
         {/* =================================================================
             TNI RETURN EXPLORER — PRODUCT DIFFERENTIATOR
@@ -2908,6 +2932,8 @@ export default function GenericAnnualReturnsPage({
             {config.returnType}.
           </p>
         </section>
+
+        {afterMethodology}
 
         {/* =================================================================
             TNI ANNUAL RETURNS — LIVE MARKET INTELLIGENCE BRIDGE

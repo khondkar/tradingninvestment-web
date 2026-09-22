@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
+import DowReturnsPage from './pages/DowReturnsPage'
 import NasdaqReturnsPage from './pages/NasdaqReturnsPage'
 import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
 import SP500DrawdownsPage from './pages/SP500DrawdownsPage'
@@ -927,6 +928,25 @@ function App() {
           setPage={setPage}
         />
         <SP500ReturnsPage />
+      </div>
+    )
+  }
+
+  // ========================================================================
+  // TNI DOW JONES HISTORICAL RETURNS — PUBLIC RESEARCH ROUTE
+  //
+  // Legacy canonical URL preserved:
+  // /stock-market-historical-returns/
+  // ========================================================================
+
+  if (normalizedPath === '/stock-market-historical-returns') {
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <DowReturnsPage />
       </div>
     )
   }
