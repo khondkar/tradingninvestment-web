@@ -331,16 +331,16 @@ function ResearchPage({
         <div className="section-heading">
           <div>
             <span>FEATURED ARTICLE</span>
-            <h2>Nearly a century of S&amp;P 500 market history.</h2>
+            <h2>100+ years of Dow Jones market history.</h2>
           </div>
 
           {/* ============================================================
               TNI HOMEPAGE — FEATURED RESEARCH NAVIGATION
-              Opens the canonical S&P 500 research page.
+              Opens the canonical Dow Jones historical returns research page.
           ============================================================ */}
           <a
             className="section-research-link"
-            href="/sp-500-returns/"
+            href="/stock-market-historical-returns/"
           >
             View Full Research →
           </a>
@@ -353,83 +353,68 @@ function ResearchPage({
 
         <article className="featured-card featured-article-card">
 
-          {/* ==================================================================
-              TNI FEATURED ARTICLE — STATIC RESEARCH PREVIEW
-              Generated from verified S&P 500 annual-return data.
-              ================================================================== */}
-
           <a
             className="featured-article-image-link"
-            href="/sp-500-returns/"
-            aria-label="View S&P 500 Returns by Year research"
+            href="/stock-market-historical-returns/"
+            aria-label="View Stock Market Historical Returns research"
           >
             <img
               className="featured-article-image"
-              src="/images/sp500-annual-returns-preview.svg"
-              alt="S&P 500 historical annual price returns by year from 1928 through 2026 YTD"
+              src="/images/social/stock-market-historical-returns-og.png"
+              alt="Dow Jones historical returns and more than 100 years of stock market history"
               loading="lazy"
             />
           </a>
-
-          {/* ==================================================================
-              TNI FEATURED ARTICLE — EDITORIAL COPY
-              ================================================================== */}
 
           <div className="featured-copy featured-article-copy">
 
             <span className="content-tag">MARKET HISTORY</span>
 
-            <h3>S&amp;P 500 Returns by Year (1928–2026)</h3>
+            <h3>
+              Stock Market Historical Returns: 100+ Years of Dow Jones Returns
+            </h3>
 
             <h4>Historical Annual Returns and Market Performance</h4>
 
             <p>
-              Explore S&amp;P 500 returns by year from 1928 through 2026 YTD.
-              See positive and negative years, average historical returns,
-              major market declines, recoveries, and nearly a century of
-              annual market performance in one interactive research center.
+              Explore Dow Jones returns by year from 1921 through 2026 YTD.
+              Analyze historical annual returns, long-term performance,
+              positive and negative years, and more than a century of
+              stock market history in one interactive research center.
             </p>
-
-            {/* ==============================================================
-                TNI FEATURED ARTICLE — PRIMARY CTA
-                ============================================================== */}
 
             <a
               className="primary-action"
-              href="/sp-500-returns/"
+              href="/stock-market-historical-returns/"
             >
               View Full Research
               <span>→</span>
             </a>
           </div>
 
-          {/* ==================================================================
-              TNI FEATURED ARTICLE — VERIFIED RESEARCH METRICS
-              ================================================================== */}
-
           <div className="featured-metrics">
 
             <div>
               <small>AVERAGE ANNUAL RETURN</small>
-              <strong className="positive-text">+8.10%</strong>
-              <span>98 completed calendar years</span>
+              <strong className="positive-text">+8.08%</strong>
+              <span>105 completed calendar years</span>
             </div>
 
             <div>
-              <small>NON-NEGATIVE YEARS</small>
-              <strong className="positive-text">68.37%</strong>
-              <span>67 of 98 completed years</span>
+              <small>POSITIVE YEARS</small>
+              <strong className="positive-text">69.52%</strong>
+              <span>73 of 105 completed years</span>
             </div>
 
             <div>
               <small>BEST YEAR</small>
-              <strong className="positive-text">+45.02%</strong>
-              <span>1954</span>
+              <strong className="positive-text">+63.74%</strong>
+              <span>1933</span>
             </div>
 
             <div>
               <small>WORST YEAR</small>
-              <strong className="negative-text">-47.07%</strong>
+              <strong className="negative-text">-52.67%</strong>
               <span>1931</span>
             </div>
 
