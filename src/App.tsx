@@ -39,6 +39,45 @@ const publishedResearchRegistry = [
   })),
 ]
 
+
+/* ==========================================================================
+   TNI RESEARCH AUTHORITY — INDEPENDENT CITATIONS & REFERENCES
+   ========================================================================== */
+
+const researchCitations = [
+  {
+    name: 'Florida State University Law Review',
+    type: 'ACADEMIC CITATION',
+    logo: '/images/citations/fsu.svg',
+    href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/',
+  },
+  {
+    name: 'Sorbonne University',
+    type: 'ACADEMIC REFERENCE',
+    logo: '/images/citations/sorbonne.png',
+    href: 'https://ecm.univ-paris1.fr/nuxeo/nxfile/default/2a2e1785-2b20-4751-9203-7f8819df8e62/file%3Acontent/2023-04%20PEREZ%20Inf.pdf',
+  },
+  {
+    name: 'NFP — An Aon Company',
+    type: 'PROFESSIONAL REFERENCE',
+    logo: '/images/citations/nfp-aon.svg',
+    href: 'https://webfiles2.nfp.com/webfiles/public/2020_emails/COVID-19/JH_three_insurance_opportunities.pdf',
+  },
+  {
+    name: 'Debt.org',
+    type: 'FINANCIAL REFERENCE',
+    logo: '/images/citations/debt-org.png',
+    href: 'https://www.debt.org/advice/the-truth-about-dave-ramseys-baby-steps-do-they-work/',
+  },
+  {
+    name: 'Oak Harvest Financial Group',
+    type: 'FINANCIAL REFERENCE',
+    logo: null,
+    monogram: 'OH',
+    href: 'https://oakharvestfg.com/wp-content/uploads/2020/10/roadmap-to-retirement.pdf',
+  },
+]
+
 /* ==========================================================================
    TNI PUBLIC WEBSITE — HEADER
    ========================================================================== */
@@ -288,6 +327,58 @@ function ResearchPage({
               <span>Drawdowns</span>
               <span>Seasonality</span>
               <span>Quant Research</span>
+            </div>
+          </div>
+
+          {/* ================================================================
+              TNI RESEARCH AUTHORITY — INDEPENDENT REFERENCES
+              ================================================================ */}
+
+          <div className="side-card citation-side-card">
+            <div className="side-title">
+              <span>CITED &amp; REFERENCED BY</span>
+            </div>
+
+            <div className="citation-trust-intro">
+              Independent publications referencing
+              TradingNInvestment research.
+            </div>
+
+            <div className="citation-side-list">
+              {researchCitations.map((citation) => (
+                <a
+                  key={citation.name}
+                  className="citation-side-link"
+                  href={citation.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Verify ${citation.name} reference`}
+                >
+                  <div className="citation-mark" aria-hidden="true">
+                    {citation.logo ? (
+                      <img
+                        src={citation.logo}
+                        alt=""
+                        loading="lazy"
+                      />
+                    ) : (
+                      <strong>{citation.monogram}</strong>
+                    )}
+                  </div>
+
+                  <div className="citation-side-copy">
+                    <strong>{citation.name}</strong>
+                    <small>{citation.type}</small>
+                  </div>
+
+                  <span
+                    className="citation-verify"
+                    aria-hidden="true"
+                  >
+                    ↗
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
 

@@ -1988,6 +1988,11 @@ button.primary-action {
   }
 
   .hero-sidebar {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-sidebar > .side-card:not(.citation-side-card) {
     display: none;
   }
 
@@ -2139,6 +2144,11 @@ button.primary-action {
   }
 
   .hero-sidebar {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-sidebar > .side-card:not(.citation-side-card) {
     display: none;
   }
 
@@ -4926,3 +4936,377 @@ button.primary-action {
   outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
+
+/* ==========================================================================
+   TNI RESEARCH AUTHORITY — CITED & REFERENCED BY
+   ========================================================================== */
+
+.hero-sidebar {
+  height: 440px;
+}
+
+.citation-side-card {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+
+  padding: 17px;
+
+  border: 1px solid rgba(74, 154, 255, 0.34);
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(43, 137, 255, 0.22),
+      transparent 34%
+    ),
+    linear-gradient(
+      145deg,
+      #061a35 0%,
+      #0a2b55 58%,
+      #071f40 100%
+    );
+
+  box-shadow:
+    0 18px 42px rgba(5, 29, 59, 0.18);
+}
+
+.citation-side-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 17px;
+
+  width: 62px;
+  height: 3px;
+
+  border-radius: 0 0 4px 4px;
+
+  background: #2f91ff;
+
+  box-shadow:
+    0 0 18px rgba(47, 145, 255, 0.65);
+}
+
+.citation-side-card .side-title {
+  position: relative;
+  z-index: 1;
+
+  margin:
+    3px
+    0
+    4px;
+}
+
+
+
+
+.citation-side-card .side-title span {
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 950;
+  line-height: 1.15;
+
+  letter-spacing: 0.7px;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.30);
+}
+
+.citation-trust-intro {
+  position: relative;
+  z-index: 1;
+
+  max-width: 235px;
+
+  margin-bottom: 9px;
+
+  color: #b9c9dc;
+
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.citation-side-list {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 7px;
+}
+
+.citation-side-link {
+  min-width: 0;
+  min-height: 65px;
+
+  display: grid;
+
+  grid-template-columns:
+    42px
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 7px;
+
+  border: 1px solid rgba(180, 211, 246, 0.18);
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.075);
+
+  text-decoration: none;
+
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease;
+}
+
+.citation-side-link:last-child {
+  grid-column: 1 / -1;
+
+  min-height: 52px;
+}
+
+.citation-mark {
+  width: 42px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 4px;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(125, 190, 255, 0.48);
+
+  background:
+    linear-gradient(
+      145deg,
+      #1f69b3 0%,
+      #174d82 52%,
+      #12385f 100%
+    );
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.citation-mark img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.citation-mark > strong {
+  color: #0b315f;
+
+  font-size: 13px;
+  font-weight: 950;
+
+  letter-spacing: -0.5px;
+}
+
+.citation-side-copy {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.citation-side-copy > strong {
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+.citation-side-copy > small {
+  color: #7fbaff;
+
+  font-size: 5.5px;
+  font-weight: 850;
+
+  line-height: 1.15;
+
+  letter-spacing: 0.35px;
+}
+
+.citation-verify {
+  position: absolute;
+
+  top: 6px;
+  right: 7px;
+
+  color: #76b8ff;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  opacity: 0.8;
+}
+
+.citation-side-link {
+  position: relative;
+}
+
+.citation-side-link:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(108, 180, 255, 0.58);
+
+  background:
+    rgba(255, 255, 255, 0.13);
+}
+
+
+/* ==========================================================================
+   MOBILE — PROMINENT RESEARCH AUTHORITY BAND
+   Hero → authority → navigation
+   ========================================================================== */
+
+@media (max-width: 720px) {
+
+  .hero-sidebar {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    padding:
+      0
+      12px
+      12px;
+
+    background: #ffffff;
+  }
+
+  .hero-sidebar > .side-card:not(.citation-side-card) {
+    display: none;
+  }
+
+  .citation-side-card {
+    padding:
+      15px
+      14px
+      14px;
+
+    border-radius: 14px;
+
+    box-shadow:
+      0 13px 30px rgba(5, 29, 59, 0.17);
+  }
+
+  .citation-side-card::before {
+    left: 14px;
+
+    width: 72px;
+  }
+
+  .citation-side-card .side-title {
+    margin-top: 2px;
+  }
+
+  .citation-side-card .side-title span {
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 950;
+  }
+
+  .citation-trust-intro {
+    max-width: 310px;
+
+    margin-bottom: 10px;
+
+    color: #c3d2e4;
+
+    font-size: 8px;
+    line-height: 1.35;
+  }
+
+  .citation-side-list {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 6px;
+  }
+
+  .citation-side-link {
+    min-height: 56px;
+
+    grid-template-columns:
+      38px
+      minmax(0, 1fr);
+
+    gap: 7px;
+
+    padding: 6px;
+
+    border-radius: 9px;
+  }
+
+  .citation-side-link:last-child {
+    min-height: 47px;
+  }
+
+  .citation-mark {
+    width: 38px;
+    height: 34px;
+
+    padding: 3px;
+
+    border-radius: 7px;
+  }
+
+  .citation-mark > strong {
+    font-size: 11px;
+  }
+
+  .citation-side-copy > strong {
+    font-size: 8px;
+  }
+
+  .citation-side-copy > small {
+    font-size: 5px;
+  }
+
+  .citation-verify {
+    top: 4px;
+    right: 5px;
+
+    font-size: 8px;
+  }
+
+  .citation-side-link:hover {
+    transform: none;
+  }
+}
+
