@@ -17,7 +17,7 @@ const TNI_NEWS_API_URL =
   'https://quant-ai-agent.onrender.com/news/live'
 
 const TNI_LIVE_NEWS_URL =
-  'https://tni-frontend.onrender.com/live/news'
+  'https://app.tradingninvestment.com/live/news'
 
 const PUBLIC_DELAY_MS = 2 * 60 * 60 * 1000
 const MAX_PUBLIC_STORIES = 3

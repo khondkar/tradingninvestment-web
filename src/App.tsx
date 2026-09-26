@@ -204,7 +204,7 @@ function Header({
             ↗ Share
           </button>
 
-          <a className="launch-tni" href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer">
+          <a className="launch-tni" href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer">
             Launch TNI
             <span>→</span>
           </a>
@@ -289,7 +289,7 @@ function ResearchPage({
                 <span>→</span>
               </a>
 
-              <a href="https://tni-frontend.onrender.com/live/news" target="_blank" rel="noreferrer" className="secondary-action">
+              <a href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer" className="secondary-action">
                 Launch TNI
                 <span>→</span>
               </a>
@@ -818,7 +818,7 @@ function AboutPage() {
         </div>
 
         <a
-          href="https://tni-frontend.onrender.com/live/news"
+          href="https://app.tradingninvestment.com/live/news"
           target="_blank"
           rel="noreferrer"
           className="primary-action"
@@ -893,7 +893,7 @@ function Footer({
           </button>
 
           <a
-            href="https://tni-frontend.onrender.com/live/news"
+            href="https://app.tradingninvestment.com/live/news"
             target="_blank"
             rel="noreferrer"
           >

@@ -2970,7 +2970,7 @@ export default function GenericAnnualReturnsPage({
           </p>
 
           <a
-            href="https://tni-frontend.onrender.com/live/news"
+            href="https://app.tradingninvestment.com/live/news"
             target="_blank"
             rel="noreferrer"
             data-analytics-event="research_to_intelligence_click"
