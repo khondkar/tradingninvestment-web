@@ -28,13 +28,13 @@ export const annualReturnsResearchRegistry:
   AnnualReturnsResearchRegistryEntry[] = [
     {
       config: sp500AnnualReturnsConfig,
-      featured: true,
+      featured: false,
       previewImage:
         "/images/sp500-annual-returns-preview.svg",
     },
     {
       config: dowAnnualReturnsConfig,
-      featured: false,
+      featured: true,
     },
     {
       config: nasdaqAnnualReturnsConfig,
