@@ -12,7 +12,7 @@ export const drawdownsResearchRegistry = [
       symbol: "^GSPC",
       canonicalPath:
         "/stock-market-correction-myth-and-reality/",
-      categories: ["index", "market-history", "drawdowns"],
+      categories: ["index", "sp500", "market-history", "drawdowns"],
 
       seo: {
         socialTitle:

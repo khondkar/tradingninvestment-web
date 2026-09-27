@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
+import AverageStockMarketReturnPage from './pages/AverageStockMarketReturnPage'
 import DowReturnsPage from './pages/DowReturnsPage'
 import NasdaqReturnsPage from './pages/NasdaqReturnsPage'
 import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
@@ -16,6 +17,8 @@ import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import { drawdownsResearchRegistry } from './research/drawdowns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import LatestMarketIntelligence from './components/news/LatestMarketIntelligence'
+import { ResearchConnections, ResearchHubPage, ResearchTrail } from './components/research/ResearchDiscovery'
+import { getHub, researchHubs } from './research/discovery'
 import './App.css'
 
 /* ==========================================================================
@@ -159,6 +162,7 @@ function Header({
         </button>
 
         <nav className="desktop-nav">
+          <button type="button" onClick={() => window.location.assign('/research/')}>Explore Topics</button>
           <button
             type="button"
             className={page === 'research' ? 'active' : ''}
@@ -232,13 +236,7 @@ function Header({
           Market Today
         </button>
 
-        <button
-          type="button"
-          className={page === 'articles' ? 'active' : ''}
-          onClick={() => navigate('articles')}
-        >
-          Articles
-        </button>
+        <button type="button" onClick={() => window.location.assign('/research/')}>Explore Topics</button>
 
         <button
           type="button"
@@ -404,6 +402,23 @@ function ResearchPage({
           <strong>About</strong>
           <span>Research philosophy and TNI platform</span>
         </button>
+      </section>
+
+      <section className="content-section" aria-labelledby="research-paths-heading">
+        <div className="section-heading">
+          <div>
+            <span>EXPLORE RESEARCH</span>
+            <h2 id="research-paths-heading">Find your next question.</h2>
+          </div>
+          <a className="section-research-link" href="/research/">All research →</a>
+        </div>
+        <div className="research-hub-grid">
+          {researchHubs.filter((hub) => ['/research/stocks/', '/research/indexes/', '/research/market-history/', '/research/market-risk/'].includes(hub.path)).map((hub) => (
+            <a className="research-hub-card" href={hub.path} key={hub.path}>
+              <strong>{hub.title}</strong><span>{hub.description}</span><b aria-hidden="true">↗</b>
+            </a>
+          ))}
+        </div>
       </section>
 
       {/* ====================================================================
@@ -937,6 +952,15 @@ function App() {
   const normalizedPath =
     window.location.pathname.replace(/\/+$/, '') || '/'
 
+  const researchHub = getHub(normalizedPath)
+  if (researchHub) {
+    return <div className="site">
+      <Header page="research" setPage={setPage} />
+      <ResearchHubPage hub={researchHub} />
+      <Footer setPage={setPage} />
+    </div>
+  }
+
   // ============================================================================
   // TNI STOCK MARKET TODAY — LIVE MARKET DASHBOARD
   // Canonical URL: /stock-market-today/
@@ -1003,7 +1027,25 @@ function App() {
           page="research"
           setPage={setPage}
         />
+        <ResearchTrail path="/sp-500-returns/" />
         <SP500ReturnsPage />
+        <ResearchConnections path="/sp-500-returns/" />
+      </div>
+    )
+  }
+
+  // ========================================================================
+  // TNI AVERAGE STOCK MARKET RETURN — PRICE / TOTAL / REAL RETURN RESEARCH
+  // ========================================================================
+
+  if (normalizedPath === '/average-stock-market-return') {
+    return (
+      <div className="site">
+        <Header
+          page="research"
+          setPage={setPage}
+        />
+        <AverageStockMarketReturnPage />
       </div>
     )
   }
@@ -1022,7 +1064,9 @@ function App() {
           page="research"
           setPage={setPage}
         />
+        <ResearchTrail path="/stock-market-historical-returns/" />
         <DowReturnsPage />
+        <ResearchConnections path="/stock-market-historical-returns/" />
       </div>
     )
   }
@@ -1048,6 +1092,7 @@ function App() {
           setPage={setPage}
         />
         <SP500MonthlyReturnsPage />
+        <ResearchConnections path="/sp-500-monthly-returns/" />
       </div>
     )
   }
@@ -1070,6 +1115,7 @@ function App() {
           setPage={setPage}
         />
         <SP500DrawdownsPage />
+        <ResearchConnections path="/stock-market-correction-myth-and-reality/" />
       </div>
     )
   }
@@ -1081,7 +1127,9 @@ function App() {
           page="research"
           setPage={setPage}
         />
+        <ResearchTrail path="/msft-stock-returns/" />
         <MSFTReturnsPage />
+        <ResearchConnections path="/msft-stock-returns/" />
       </div>
     )
   }
@@ -1100,7 +1148,9 @@ function App() {
           page="research"
           setPage={setPage}
         />
+        <ResearchTrail path="/nasdaq-historical-annual-returns/" />
         <NasdaqReturnsPage />
+        <ResearchConnections path="/nasdaq-historical-annual-returns/" />
       </div>
     )
   }
@@ -1116,7 +1166,9 @@ function App() {
           page="research"
           setPage={setPage}
         />
+        <ResearchTrail path="/nvda-returns/" />
         <NVDAReturnsPage />
+        <ResearchConnections path="/nvda-returns/" />
       </div>
     )
   }

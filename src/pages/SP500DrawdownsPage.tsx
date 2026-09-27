@@ -434,13 +434,13 @@ export default function SP500DrawdownsPage() {
         className="tni-drawdown-breadcrumb"
         aria-label="Breadcrumb"
       >
-        <a href="/">
+        <a href="/research/">
           Research
         </a>
 
         <span>→</span>
 
-        <a href="/sp-500-returns/">
+        <a href="/research/indexes/sp-500/">
           S&amp;P 500
         </a>
 

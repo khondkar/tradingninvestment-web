@@ -16,10 +16,10 @@
     <loc>https://tradingninvestment.com/stock-market-today/earnings-calendar/</loc>
   </url>
   <url>
-    <loc>https://tradingninvestment.com/stock-market-historical-returns/</loc>
+    <loc>https://tradingninvestment.com/sp-500-returns/</loc>
   </url>
   <url>
-    <loc>https://tradingninvestment.com/msft-stock-returns/</loc>
+    <loc>https://tradingninvestment.com/stock-market-historical-returns/</loc>
   </url>
   <url>
     <loc>https://tradingninvestment.com/nasdaq-historical-annual-returns/</loc>
@@ -28,12 +28,42 @@
     <loc>https://tradingninvestment.com/nvda-returns/</loc>
   </url>
   <url>
-    <loc>https://tradingninvestment.com/sp-500-returns/</loc>
+    <loc>https://tradingninvestment.com/msft-stock-returns/</loc>
   </url>
   <url>
     <loc>https://tradingninvestment.com/sp-500-monthly-returns/</loc>
   </url>
   <url>
     <loc>https://tradingninvestment.com/stock-market-correction-myth-and-reality/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/stocks/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/indexes/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/market-history/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/market-risk/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/indexes/sp-500/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/indexes/nasdaq/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/indexes/dow/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/stocks/nvda/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/stocks/msft/</loc>
   </url>
 </urlset>

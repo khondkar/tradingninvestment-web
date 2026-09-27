@@ -177,13 +177,13 @@ export default function GenericMonthlyReturnsPage({
         className="tni-monthly-breadcrumb"
         aria-label="Breadcrumb"
       >
-        <a href="/">
+        <a href="/research/">
           Research
         </a>
 
         <span>→</span>
 
-        <a href="/sp-500-returns/">
+        <a href="/research/indexes/sp-500/">
           {config.shortName}
         </a>
 
