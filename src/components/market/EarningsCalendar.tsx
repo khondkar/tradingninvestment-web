@@ -70,16 +70,18 @@ function parseLocalDate(value: string) {
   return new Date(`${value}T12:00:00`)
 }
 
-function dateKey(date: Date) {
-  const year = date.getFullYear()
-  const month = String(
-    date.getMonth() + 1,
-  ).padStart(2, '0')
-  const day = String(
-    date.getDate(),
-  ).padStart(2, '0')
+function easternDateKey(date: Date) {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date)
 
-  return `${year}-${month}-${day}`
+  const value = (type: string) =>
+    parts.find((part) => part.type === type)?.value ?? ''
+
+  return `${value('year')}-${value('month')}-${value('day')}`
 }
 
 function startOfWeek(date: Date) {
@@ -195,6 +197,13 @@ function timingClass(
 }
 
 export default function EarningsCalendar() {
+  const [now, setNow] = useState(() => new Date())
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(new Date()), 60_000)
+    return () => window.clearInterval(timer)
+  }, [])
+
   const [range, setRange] =
     useState<RangeKey>('week')
 
@@ -220,18 +229,12 @@ export default function EarningsCalendar() {
     setNewsError,
   ] = useState<string | null>(null)
 
-  const generated =
-    new Date(snapshot.generated_at_et)
-
-  const generatedDate =
-    Number.isNaN(generated.getTime())
-      ? new Date()
-      : generated
-
-  const today =
-    new Date(generatedDate)
-
-  today.setHours(12, 0, 0, 0)
+  const generated = new Date(snapshot.generated_at_et)
+  const snapshotAgeMs = now.getTime() - generated.getTime()
+  const isStale = Number.isNaN(generated.getTime()) ||
+    snapshotAgeMs > 48 * 60 * 60 * 1000
+  const todayKey = easternDateKey(now)
+  const today = parseLocalDate(todayKey)
 
   const thisWeekStart =
     startOfWeek(today)
@@ -253,6 +256,10 @@ export default function EarningsCalendar() {
             parseLocalDate(
               event.report_date,
             )
+
+          if (event.report_date < todayKey) {
+            return false
+          }
 
           if (range === 'week') {
             return (
@@ -281,7 +288,7 @@ export default function EarningsCalendar() {
       thisWeekEnd.getTime(),
       nextWeekStart.getTime(),
       nextWeekEnd.getTime(),
-      today.getTime(),
+      todayKey,
     ])
 
   useEffect(() => {
@@ -443,7 +450,7 @@ export default function EarningsCalendar() {
         </div>
 
         <div className="earnings-updated">
-          <span>DATA UPDATED</span>
+          <span>SNAPSHOT AS OF</span>
 
           <strong>
             {formatGenerated(
@@ -453,18 +460,23 @@ export default function EarningsCalendar() {
         </div>
       </section>
 
+      {isStale && (
+        <section className="earnings-stale" role="status">
+          <strong>Calendar snapshot needs refreshing</strong>
+          <span>These dates and EPS estimates were cached {formatGenerated(snapshot.generated_at_et)} and may have changed. Verify a report with the company before relying on it.</span>
+        </section>
+      )}
 
 
       {grouped.length === 0 ? (
         <section className="earnings-empty">
           <strong>
-            No S&amp;P 500 earnings
-            scheduled in this period.
+            No upcoming S&amp;P 500 earnings
+            in this {isStale ? 'cached snapshot' : 'period'}.
           </strong>
 
           <span>
-            Select another date range
-            to view upcoming reports.
+            Select another date range to view available reports.
           </span>
         </section>
       ) : (
@@ -472,7 +484,7 @@ export default function EarningsCalendar() {
           {grouped.map(
             ([date, events]) => {
               const isToday =
-                date === dateKey(today)
+                date === todayKey
 
               return (
                 <section
