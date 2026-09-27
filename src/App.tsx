@@ -89,6 +89,10 @@ function Header({
   setPage: (page: PageName) => void
 }) {
   function navigate(nextPage: PageName) {
+    if (nextPage === 'about') {
+      window.location.assign('/about/')
+      return
+    }
     const currentPath =
       window.location.pathname.replace(/\/+$/, '') || '/'
 
@@ -332,7 +336,7 @@ function ArticlesPage() {
    TNI PUBLIC WEBSITE — ABOUT PAGE
    ========================================================================== */
 
-function AboutPage() {
+export function AboutPage() {
   return (
     <main className="inner-page">
 
@@ -499,7 +503,7 @@ function Footer({
         <nav>
           <a href="/research/">Research</a>
 
-          <button type="button" onClick={() => setPage('about')}>
+          <button type="button" onClick={() => { setPage('about'); window.location.assign('/about/') }}>
             About
           </button>
 
@@ -549,6 +553,13 @@ function App() {
     window.location.pathname.replace(/\/+$/, '') || '/'
 
   const researchHub = getHub(normalizedPath)
+  if (normalizedPath === '/about') {
+    return <div className="site">
+      <Header page="about" setPage={setPage} />
+      <AboutPage />
+      <Footer setPage={setPage} />
+    </div>
+  }
   if (researchHub) {
     return <div className="site">
       <Header page="research" setPage={setPage} />
