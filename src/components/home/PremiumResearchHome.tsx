@@ -70,6 +70,7 @@ export default function PremiumResearchHome() {
       <div className="tni-home-citations">{citations.map((citation) => <a key={citation.name} href={citation.href} target="_blank" rel="noreferrer" aria-label={`Open ${citation.name} reference`}>
         <span className={`tni-home-citation-logo ${'logoClass' in citation ? citation.logoClass : ''}`}><img src={citation.logo} alt="" loading="lazy" /></span><span className="tni-home-citation-copy"><strong>{citation.name}</strong><small>{citation.detail}</small></span><b aria-hidden="true">↗</b>
       </a>)}</div>
+      <a className="tni-home-all-citations" href="https://app.tradingninvestment.com/research/citations">Explore All Citations <span aria-hidden="true">→</span></a>
     </div></section>
 
     <section className="tni-home-features tni-home-wrap" id="featured-research" aria-labelledby="tni-home-feature-title">

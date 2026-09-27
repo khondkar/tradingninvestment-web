@@ -133,3 +133,19 @@
 @media (prefers-reduced-motion: reduce) {
   .tni-home-product, .tni-home-topic-grid a, .tni-home-more-grid a { transform: none !important; }
 }
+
+.tni-home-all-citations {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 10px 0 4px;
+  border-bottom: 1px solid #9bc8b9;
+  color: #0b6d59;
+  font-size: 13px;
+  font-weight: 800;
+}
+.tni-home-all-citations:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
