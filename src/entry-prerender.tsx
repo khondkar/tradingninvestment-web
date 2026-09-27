@@ -22,6 +22,7 @@ import type { MonthlyReturnsDataset } from './research/monthly-returns/types'
 
 import GenericAnnualReturnsPage from './templates/GenericAnnualReturnsPage'
 import GenericMonthlyReturnsPage from './templates/GenericMonthlyReturnsPage'
+import AverageStockMarketReturnPage from './pages/AverageStockMarketReturnPage'
 
 export type AnnualPrerenderPage = {
   config: AnnualReturnsAssetConfig
@@ -87,5 +88,16 @@ export function renderMonthlyPage(
       config={page.config}
       dataset={page.dataset}
     />,
+  )
+}
+
+
+// ============================================================================
+// TNI AVERAGE STOCK MARKET RETURN — SSR / STATIC PRERENDER
+// ============================================================================
+
+export function renderAverageStockMarketReturnPage() {
+  return renderToStaticMarkup(
+    <AverageStockMarketReturnPage />,
   )
 }

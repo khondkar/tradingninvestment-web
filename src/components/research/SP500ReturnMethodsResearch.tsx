@@ -5,13 +5,14 @@ import {
   useState,
 } from 'react'
 
-import datasetJson from '../../../public/data/sp500-historical-return-methods.json'
+import datasetJson from '../../data/sp500-historical-return-methods.json'
 
 import type {
   SP500ReturnMethodChartRow,
   SP500ReturnMode,
 } from '../charts/SP500ReturnMethodChart'
 import HistoricalPeriodSlider from './HistoricalPeriodSlider'
+import './SP500ReturnMethodsResearch.css'
 
 const SP500ReturnMethodChart =
   lazy(
@@ -955,18 +956,38 @@ export default function SP500ReturnMethodsResearch() {
           TNI HISTORICAL RETURN RESEARCH
         </span>
 
-        <h2>
+        <h1>
           Average Stock Market Return:
-          Price, Dividends and Inflation
-        </h2>
+          <span>S&amp;P 500 Returns by Year</span>
+        </h1>
+
+        <div className="tni-return-methods__byline">
+          <span>By Kamal Khondkar</span>
+          <span aria-hidden="true">·</span>
+          <span>TradingNInvestment Research</span>
+        </div>
 
         <p>
-          Compare annual U.S. equity
-          market returns using three
-          different definitions: market
-          price return, total return with
-          dividends reinvested, and real
-          total return after inflation.
+          Explore U.S. stock market returns
+          from {dataset.start_year} through{' '}
+          {dataset.end_year}
+          {dataset.current_year_is_ytd
+            ? ' YTD'
+            : ''}, comparing total return
+          with dividends reinvested,
+          inflation-adjusted real total
+          return, and price return.
+        </p>
+
+        <p>
+          Total return is the primary
+          measure in this research because
+          it includes reinvested dividends.
+          Real total return shows the
+          historical result after
+          inflation, while price return is
+          provided as a comparison
+          benchmark.
         </p>
       </header>
 
@@ -1224,6 +1245,108 @@ export default function SP500ReturnMethodsResearch() {
           </div>
         )}
       </div>
+
+      {/* =====================================================
+          UNDERSTANDING THE AVERAGE STOCK MARKET RETURN
+      ===================================================== */}
+
+      <section
+        className="tni-return-methods__research-introduction"
+        id="understanding-average-stock-market-return"
+      >
+        <h2>
+          Understanding the Average Stock Market Return
+        </h2>
+
+        <p>
+          The average stock market return depends on{' '}
+          <strong>
+            what we mean by “return.”
+          </strong>{' '}
+          A price index measures how stock prices changed,
+          but price appreciation alone does not represent
+          the full historical return earned by an investor.
+          Investors may also receive dividends, reinvest
+          those dividends, and experience changes in
+          purchasing power caused by inflation. For that
+          reason, looking only at price return can leave out
+          two important forces that shape long-term
+          investment results:{' '}
+          <strong>
+            dividend compounding and inflation
+          </strong>.
+        </p>
+
+        <p>
+          <strong>
+            When evaluating the historical average stock
+            market return, the measurement method matters.
+          </strong>{' '}
+          S&amp;P 500 price return reflects changes in index
+          prices, while S&amp;P 500 total return includes
+          reinvested dividends. Inflation-adjusted total
+          return, also called real total return, measures
+          the return remaining after accounting for changes
+          in purchasing power. Comparing these measures
+          across different time periods provides a more
+          complete picture of historical stock market
+          performance than relying on a single average
+          return.
+        </p>
+
+        <p>
+          <strong>
+            In this analysis, total return is the primary
+            measure of stock market performance. Real total
+            return—the return after inflation—is the second
+            major measure. Price return is included as a
+            comparison benchmark.
+          </strong>{' '}
+          Total return incorporates dividends and assumes
+          those distributions are reinvested, allowing the
+          effect of compounding to become part of the
+          historical return. Real total return goes one
+          step further by adjusting those investment
+          results for inflation, providing a measure of how
+          much purchasing power an investor actually gained
+          or lost.
+        </p>
+
+        <p>
+          These differences become increasingly important
+          over long investment horizons. Reinvested
+          dividends can compound for decades, potentially
+          creating a substantial gap between the movement
+          of a price index and the accumulated return of an
+          investor. Inflation works in the opposite
+          direction by reducing the purchasing power of
+          accumulated wealth. The interactive chart above
+          therefore lets you examine the historical market
+          from three perspectives—<strong>
+            Total Return (Dividends Reinvested), Real Total
+            Return (Inflation Adjusted), and Price Return
+          </strong>—and change the historical period to see
+          how the results differ.
+        </p>
+
+        <p>
+          The purpose of this research is therefore broader
+          than simply measuring how much the S&amp;P 500
+          price index rose or fell. It asks a more useful
+          long-term question:{' '}
+          <strong>
+            What has the U.S. stock market historically
+            returned to investors after accounting for
+            dividends, compounding, and inflation?
+          </strong>{' '}
+          The sections below examine that question across
+          different investment horizons and historical
+          market environments. Historical returns provide
+          useful context for understanding long-term market
+          behavior, but they are not forecasts of future
+          returns.
+        </p>
+      </section>
 
       {/* =====================================================
           FILTERED STATISTICS
@@ -1845,12 +1968,24 @@ export default function SP500ReturnMethodsResearch() {
 
                 <td>
                   <a
-                    href="https://www.econ.yale.edu/~shiller/data.htm"
+                    href="https://shillerdata.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Robert Shiller /
-                    Yale University
+                    Robert J. Shiller —
+                    Historical U.S. Stock
+                    Market Data
+                  </a>
+
+                  <br />
+
+                  <a
+                    href="https://economics.yale.edu/people/robert-shiller"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Yale University —
+                    Robert J. Shiller
                   </a>
                 </td>
 

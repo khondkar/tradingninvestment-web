@@ -18,6 +18,16 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'average-stock-market-return',
+    path: '/average-stock-market-return/',
+    title: 'Average Stock Market Return: Dividends, Inflation & 150+ Years of History',
+    description: 'Explore more than 150 years of U.S. stock market returns, comparing total return with dividends reinvested, inflation-adjusted real return, and price return.',
+    name: 'U.S. Stock Market',
+    symbol: 'SP500',
+    categories: ['index', 'sp500', 'market-history'],
+    kind: 'article',
+  },
+  {
     slug: 'stock-market-crash-of-1929',
     path: '/stock-market-crash-of-1929/',
     title: 'Stock Market Crash of 1929',

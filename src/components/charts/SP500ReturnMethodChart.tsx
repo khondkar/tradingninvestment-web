@@ -9,7 +9,7 @@ import type {
   TNIAnnualReturnsChartConfig,
 } from '../../charts/tni/tniChartTypes'
 
-import datasetJson from '../../../public/data/sp500-historical-return-methods.json'
+import datasetJson from '../../data/sp500-historical-return-methods.json'
 
 export type SP500ReturnMode =
   | 'price_return'

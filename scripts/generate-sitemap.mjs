@@ -21,7 +21,14 @@ try {
   await vite.close()
 }
 
-const paths = ['/', '/about/', ...marketTodayPaths, ...researchItems.map((item) => item.path), ...researchHubs.map((hub) => hub.path)]
+const paths = [
+  '/',
+  '/about/',
+  '/average-stock-market-return/',
+  ...marketTodayPaths,
+  ...researchItems.map((item) => item.path),
+  ...researchHubs.map((hub) => hub.path),
+]
 const uniquePaths = [...new Set(paths)]
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',

@@ -1,17 +1,69 @@
 import sp500Data from '../../data/charts/sp500AnnualReturns.json'
+import sp500HistoricalReturnMethods from '../../data/sp500-historical-return-methods.json'
 import nvdaData from '../../data/charts/nvdaAnnualReturns.json'
 import nasdaqData from '../../data/charts/nasdaqAnnualReturns.json'
 import dowData from '../../data/charts/dowAnnualReturns.json'
 import { researchHubs, researchItems } from '../../research/discovery'
 import './PremiumResearchHome.css'
 
-type AnnualPoint = { year: number; value: number; label?: string }
+type AnnualPoint = {
+  year: number
+  value: number
+  label?: string
+}
+
+type HistoricalReturnPoint = {
+  year: number
+  total_return: number | null
+  is_ytd?: boolean
+}
+
+const historicalTotalReturnPoints =
+  (
+    sp500HistoricalReturnMethods.data as
+      HistoricalReturnPoint[]
+  )
+    .filter(
+      (point) =>
+        Number.isFinite(
+          point.total_return,
+        ),
+    )
+    .map(
+      (point) => ({
+        year: point.year,
+        value:
+          point.total_return as number,
+        label:
+          point.is_ytd
+            ? 'YTD'
+            : undefined,
+      }),
+    )
 
 const featured = [
-  { path: '/sp-500-returns/', label: 'INDEX HISTORY · INTERACTIVE STUDY', headline: 'Nearly a century of S&P 500 returns, made explorable.', intro: 'Go year by year through market performance, then examine the averages, extremes, and long-term context behind the headline numbers.', chartLabel: 'S&P 500', points: sp500Data.data as AnnualPoint[] },
-  { path: '/nvda-returns/', label: 'STOCK INTELLIGENCE · NVIDIA', headline: 'NVIDIA returns, year by year.', intro: 'See the scale of NVIDIA’s historical moves and explore each year in the full research article.', chartLabel: 'NVIDIA', points: nvdaData.data as AnnualPoint[] },
-  { path: '/nasdaq-historical-annual-returns/', label: 'INDEX HISTORY · NASDAQ COMPOSITE', headline: 'Nasdaq history in perspective.', intro: 'Trace the Nasdaq Composite across decades and examine the years that shaped its long-term record.', chartLabel: 'NASDAQ COMPOSITE', points: nasdaqData.data as AnnualPoint[] },
-  { path: '/stock-market-historical-returns/', label: 'INDEX HISTORY · DOW JONES', headline: 'More than a century of Dow Jones returns.', intro: 'Explore annual Dow Jones performance and the market periods behind its long-term record.', chartLabel: 'DOW JONES', points: dowData.data as AnnualPoint[] },
+  {
+    path:
+      '/average-stock-market-return/',
+    label:
+      '150+ YEARS · TOTAL RETURN · INFLATION',
+    headline:
+      '150+ years of stock market returns, dividends and inflation.',
+    intro:
+      'Explore U.S. stock market history across more than 150 years, comparing total return with dividends reinvested, inflation-adjusted real return, and price return.',
+    chartLabel:
+      'U.S. STOCK MARKET',
+    metricLabel:
+      'TOTAL RETURNS',
+    chartDescription:
+      'Total return · Dividends reinvested · Source and methodology in article',
+    points:
+      historicalTotalReturnPoints,
+  },
+  { path: '/sp-500-returns/', label: 'INDEX HISTORY · INTERACTIVE STUDY', headline: 'Nearly a century of S&P 500 returns, made explorable.', intro: 'Go year by year through market performance, then examine the averages, extremes, and long-term context behind the headline numbers.', chartLabel: 'S&P 500', metricLabel: 'ANNUAL RETURNS', chartDescription: 'Annual price returns · Source and methodology in article', points: sp500Data.data as AnnualPoint[] },
+  { path: '/nvda-returns/', label: 'STOCK INTELLIGENCE · NVIDIA', headline: 'NVIDIA returns, year by year.', intro: 'See the scale of NVIDIA’s historical moves and explore each year in the full research article.', chartLabel: 'NVIDIA', metricLabel: 'ANNUAL RETURNS', chartDescription: 'Annual price returns · Source and methodology in article', points: nvdaData.data as AnnualPoint[] },
+  { path: '/nasdaq-historical-annual-returns/', label: 'INDEX HISTORY · NASDAQ COMPOSITE', headline: 'Nasdaq history in perspective.', intro: 'Trace the Nasdaq Composite across decades and examine the years that shaped its long-term record.', chartLabel: 'NASDAQ COMPOSITE', metricLabel: 'ANNUAL RETURNS', chartDescription: 'Annual price returns · Source and methodology in article', points: nasdaqData.data as AnnualPoint[] },
+  { path: '/stock-market-historical-returns/', label: 'INDEX HISTORY · DOW JONES', headline: 'More than a century of Dow Jones returns.', intro: 'Explore annual Dow Jones performance and the market periods behind its long-term record.', chartLabel: 'DOW JONES', metricLabel: 'ANNUAL RETURNS', chartDescription: 'Annual price returns · Source and methodology in article', points: dowData.data as AnnualPoint[] },
 ]
 
 const citations = [
@@ -21,7 +73,15 @@ const citations = [
   { name: 'NFP · An Aon Company', detail: 'Industry reference', logo: '/images/citations/nfp-aon.svg', href: 'https://webfiles2.nfp.com/webfiles/public/2020_emails/COVID-19/JH_three_insurance_opportunities.pdf' },
 ]
 
-function ReturnPreview({ label, points }: { label: string; points: AnnualPoint[] }) {
+function ReturnPreview({
+  label,
+  metricLabel,
+  points,
+}: {
+  label: string
+  metricLabel: string
+  points: AnnualPoint[]
+}) {
   const completed = points.filter((point) => Number.isFinite(point.value) && !/YTD/i.test(point.label ?? ''))
   const recent = completed.slice(-18)
   const first = recent[0]?.year
@@ -30,11 +90,11 @@ function ReturnPreview({ label, points }: { label: string; points: AnnualPoint[]
   const negativeMax = Math.max(1, ...recent.map((point) => -point.value))
 
   return <div className="tni-home-chart" aria-label={`${label} annual return preview, ${first} to ${last}`}>
-    <div className="tni-home-chart-top"><strong>{label} / ANNUAL RETURNS</strong><span>ACTUAL DATA</span></div>
+    <div className="tni-home-chart-top"><strong>{label} / {metricLabel}</strong><span>ACTUAL DATA</span></div>
     <div className="tni-home-chart-years">{first}—{last}</div>
     <p>Recent completed calendar years</p>
     <svg viewBox="0 0 350 130" role="img" aria-label={`Annual returns for ${label} from ${first} to ${last}`}>
-      <title>{`${label} annual price returns, ${first} to ${last}`}</title>
+      <title>{`${label} ${metricLabel.toLowerCase()}, ${first} to ${last}`}</title>
       <line x1="0" y1="79" x2="350" y2="79" stroke="#d6e4dd" strokeDasharray="3 4" />
       {recent.map((point, index) => {
         const positive = point.value >= 0
@@ -76,8 +136,27 @@ export default function PremiumResearchHome() {
     <section className="tni-home-features tni-home-wrap" id="featured-research" aria-labelledby="tni-home-feature-title">
       <div className="tni-home-section-head"><span className="tni-home-kicker">FEATURED RESEARCH</span><h2 id="tni-home-feature-title">Research worth spending time with.</h2><p>Interactive studies with transparent data sources and methodology.</p></div>
       <div className="tni-home-feature-stack">{featured.map((study) => <article className="tni-home-feature" key={study.path}>
-        <div className="tni-home-feature-copy"><span className="tni-home-kicker">{study.label}</span><h3><a href={study.path}>{study.headline}</a></h3><p>{study.intro}</p><a className="tni-home-feature-link" href={study.path}>Explore the full study ↗</a><small>Annual price returns · Source and methodology in article</small></div>
-        <a className="tni-home-feature-visual" href={study.path} aria-label={`Explore ${study.chartLabel} interactive annual returns`}><ReturnPreview label={study.chartLabel} points={study.points} /></a>
+        <div className="tni-home-feature-copy"><span className="tni-home-kicker">{study.label}</span><h3><a href={study.path}>{study.headline}</a></h3><p>{study.intro}</p><a className="tni-home-feature-link" href={study.path}>Explore the full study ↗</a><small>{study.chartDescription}</small></div>
+        <a
+          className="tni-home-feature-visual"
+          href={study.path}
+          aria-label={`Explore ${study.chartLabel} interactive returns`}
+        >
+          {study.path === '/average-stock-market-return/' ? (
+            <img
+              src="/images/social/average-stock-market-return-og.png"
+              alt="Historical U.S. stock market total returns with dividends reinvested across more than 150 years"
+              loading="eager"
+              className="tni-home-feature-og"
+            />
+          ) : (
+            <ReturnPreview
+              label={study.chartLabel}
+              metricLabel={study.metricLabel}
+              points={study.points}
+            />
+          )}
+        </a>
       </article>)}</div>
     </section>
 
