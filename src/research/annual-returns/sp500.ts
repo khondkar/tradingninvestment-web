@@ -3,6 +3,7 @@
 // ============================================================================
 
 import type { AnnualReturnsAssetConfig } from "./types"
+import { kamalResearchAuthor } from "../author"
 
 export const sp500AnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "^GSPC",
@@ -10,6 +11,7 @@ export const sp500AnnualReturnsConfig: AnnualReturnsAssetConfig = {
   name: "S&P 500",
   shortName: "S&P 500",
   startYear: 1928,
+  author: kamalResearchAuthor,
 
   canonicalPath: "/sp-500-returns/",
   embedPath: "/embed/sp-500-returns/",

@@ -159,7 +159,7 @@ export default function GenericAnnualReturnsPage({
       `https://tradingninvestment.com${config.canonicalPath}`
 
     const authorUrl =
-      'https://tradingninvestment.com/about/'
+      'https://tradingninvestment.com' + config.author.url
 
     const socialImageUrl =
       config.seo.socialImage
@@ -371,9 +371,9 @@ export default function GenericAnnualReturnsPage({
         '@type':
           'Person',
         name:
-          'Kamal Khondkar',
+          config.author.name,
         jobTitle:
-          'Quant Researcher',
+          config.author.role,
         url:
           authorUrl,
       },
@@ -456,9 +456,9 @@ export default function GenericAnnualReturnsPage({
         '@type':
           'Person',
         name:
-          'Kamal Khondkar',
+          config.author.name,
         jobTitle:
-          'Quant Researcher',
+          config.author.role,
         url:
           authorUrl,
       },
@@ -1036,7 +1036,7 @@ export default function GenericAnnualReturnsPage({
           >
             Research &amp; Analysis by{' '}
             <a
-              href="/about/"
+              href={config.author.url}
               rel="author"
               style={{
                 color: '#10233f',
@@ -1044,9 +1044,9 @@ export default function GenericAnnualReturnsPage({
                 textDecoration: 'none',
               }}
             >
-              Kamal Khondkar
+              {config.author.name}
             </a>{' '}
-            • Quant Researcher • TradingNInvestment
+            • {config.author.role} • TradingNInvestment
           </p>
         </section>
 

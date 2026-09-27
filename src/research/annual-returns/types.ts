@@ -2,6 +2,8 @@
 // TNI ANNUAL RETURNS — GENERIC ASSET CONFIG TYPE
 // ============================================================================
 
+import type { ResearchAuthor } from '../author'
+
 export type AnnualReturnsAssetConfig = {
   symbol: string
   slug: string
@@ -24,6 +26,7 @@ export type AnnualReturnsAssetConfig = {
 
   returnType: string
   sourceLabel: string
+  author: ResearchAuthor
   categories: string[]
   newsSymbols: string[]
 

@@ -3,6 +3,7 @@
 // ============================================================================
 
 import type { AnnualReturnsAssetConfig } from "./types"
+import { kamalResearchAuthor } from "../author"
 
 export const dowAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "^DJI",
@@ -10,6 +11,7 @@ export const dowAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   name: "Dow Jones Industrial Average",
   shortName: "Dow Jones",
   startYear: 1921,
+  author: kamalResearchAuthor,
 
   intelligenceEyebrow:
     "DOW JONES INTELLIGENCE",

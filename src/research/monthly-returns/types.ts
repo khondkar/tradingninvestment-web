@@ -9,6 +9,8 @@
 // from dataset.data rather than duplicated in the source file.
 // ============================================================================
 
+import type { ResearchAuthor } from '../author'
+
 export type MonthlyReturnStatus =
   | "positive"
   | "negative"
@@ -148,6 +150,9 @@ export interface MonthlyReturnsAssetConfig {
 
   returnType: string
   sourceLabel: string
+
+  // Required for every published monthly research article.
+  author: ResearchAuthor
 
   categories: string[]
   newsSymbols: string[]

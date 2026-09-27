@@ -484,6 +484,14 @@ export default function SP500DrawdownsPage() {
           }.
         </p>
 
+        <p className="tni-drawdown-byline">
+          Research &amp; Analysis by{' '}
+          <a href="/about/" rel="author">
+            Kamal Khondkar
+          </a>{' '}
+          • Quant Researcher • TradingNInvestment
+        </p>
+
 
         {/* ==================================================================
             FEATURED RESEARCH IMAGE

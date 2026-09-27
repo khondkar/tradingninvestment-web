@@ -1,4 +1,5 @@
 import type { AnnualReturnsAssetConfig } from "./types"
+import { kamalResearchAuthor } from "../author"
 
 // ============================================================================
 // TNI NVDA ANNUAL RETURNS — ASSET CONFIGURATION
@@ -10,6 +11,7 @@ export const nvdaAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   name: "NVIDIA",
   shortName: "NVIDIA",
   startYear: 2000,
+  author: kamalResearchAuthor,
   canonicalPath: "/nvda-returns/",
   embedPath: "/embed/nvda-returns/",
   csvPath: "/data/nvda-annual-returns.csv",

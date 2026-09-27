@@ -217,6 +217,17 @@ export default function GenericMonthlyReturnsPage({
           performance.
         </p>
 
+        <div className="tni-monthly-author-bio">
+          <p>
+            Research &amp; Analysis by{' '}
+            <a href={config.author.url} rel="author">
+              {config.author.name}
+            </a>{' '}
+            • {config.author.role} • TradingNInvestment
+          </p>
+          <p>{config.author.bio}</p>
+        </div>
+
         <div className="tni-monthly-research-nav">
           <a href="/sp-500-returns/">
             Annual Returns

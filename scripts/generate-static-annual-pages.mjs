@@ -190,6 +190,12 @@ for (
     dataset,
   } = page
 
+  for (const field of ['name', 'role', 'bio', 'url']) {
+    if (typeof config.author?.[field] !== 'string' || !config.author[field].trim()) {
+      throw new Error(`${config.slug}: research author ${field} is required for publication.`)
+    }
+  }
+
   const bodyHtml =
     renderAnnualPage(
       page,
@@ -238,7 +244,7 @@ for (
       : ""
 
   const authorUrl =
-    siteOrigin + "/about/"
+    siteOrigin + config.author.url
 
   const articleSchema = {
     "@context":
@@ -267,9 +273,9 @@ for (
       "@type":
         "Person",
       name:
-        "Kamal Khondkar",
+        config.author.name,
       jobTitle:
-        "Quant Researcher",
+        config.author.role,
       url:
         authorUrl,
     },
@@ -323,9 +329,9 @@ for (
       "@type":
         "Person",
       name:
-        "Kamal Khondkar",
+        config.author.name,
       jobTitle:
-        "Quant Researcher",
+        config.author.role,
       url:
         authorUrl,
     },
@@ -660,6 +666,12 @@ for (
     config,
   } = page
 
+  for (const field of ['name', 'role', 'bio', 'url']) {
+    if (typeof config.author?.[field] !== 'string' || !config.author[field].trim()) {
+      throw new Error(`${config.slug}: research author ${field} is required for publication.`)
+    }
+  }
+
   const bodyHtml =
     renderMonthlyPage(
       page,
@@ -726,6 +738,35 @@ for (
     /<link\s+rel="canonical"\s+href="[^"]*"\s*\/>/,
     `<link rel="canonical" href="${escapeHtml(canonicalUrl)}" />`,
     `${config.slug} canonical`,
+  )
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: config.seo.title,
+    description: config.seo.description,
+    url: canonicalUrl,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    author: {
+      '@type': 'Person',
+      name: config.author.name,
+      jobTitle: config.author.role,
+      description: config.author.bio,
+      url: siteOrigin + config.author.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'TradingNInvestment',
+      url: siteOrigin + '/',
+    },
+    isAccessibleForFree: true,
+  }
+
+  html = replaceRequired(
+    html,
+    /<\/head>/,
+    `  <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>\n</head>`,
+    `${config.slug} article author schema insertion point`,
   )
 
   html = replaceRequired(

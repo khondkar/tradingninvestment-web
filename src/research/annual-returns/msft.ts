@@ -1,4 +1,5 @@
 import type { AnnualReturnsAssetConfig } from "./types"
+import { kamalResearchAuthor } from "../author"
 
 // ============================================================================
 // TNI MICROSOFT ANNUAL RETURNS — ASSET CONFIGURATION
@@ -19,6 +20,7 @@ export const msftAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   name: "Microsoft Corporation",
   shortName: "Microsoft",
   startYear: 1987,
+  author: kamalResearchAuthor,
 
   // ==========================================================================
   // TNI MICROSOFT — COMPANY INTELLIGENCE IDENTITY

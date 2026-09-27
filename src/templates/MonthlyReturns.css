@@ -54,6 +54,27 @@
   color: #475467;
 }
 
+.tni-monthly-author-bio {
+  margin-top: 12px;
+  color: #6b7b90;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.tni-monthly-author-bio p {
+  margin: 0;
+}
+
+.tni-monthly-author-bio a {
+  color: #10233f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tni-monthly-author-bio a:hover {
+  text-decoration: underline;
+}
+
 .tni-monthly-research-nav {
   display: flex;
   gap: 10px;

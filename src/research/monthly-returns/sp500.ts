@@ -5,6 +5,7 @@
 import type {
   MonthlyReturnsAssetConfig,
 } from "./types"
+import { kamalResearchAuthor } from '../author'
 
 
 export const sp500MonthlyReturnsConfig:
@@ -28,6 +29,8 @@ export const sp500MonthlyReturnsConfig:
 
   sourceLabel:
     "Yahoo Finance — S&P 500 Index (^GSPC)",
+
+  author: kamalResearchAuthor,
 
   categories: [
     "index",

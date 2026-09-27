@@ -198,10 +198,13 @@ const articleSchema = {
 
   author: {
     "@type":
-      "Organization",
+      "Person",
 
     name:
-      "TradingNInvestment",
+      "Kamal Khondkar",
+
+    url:
+      `${siteOrigin}/about/`,
   },
 
   publisher: {
@@ -345,6 +348,12 @@ const staticContent = `
       corrections, bear markets, drawdowns and
       recoveries using daily historical closing-price
       data.
+    </p>
+
+    <p>
+      Research &amp; Analysis by
+      <a href="/about/" rel="author">Kamal Khondkar</a>
+      • Quant Researcher • TradingNInvestment
     </p>
   </header>
 

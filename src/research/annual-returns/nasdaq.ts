@@ -1,4 +1,5 @@
 import type { AnnualReturnsAssetConfig } from "./types"
+import { kamalResearchAuthor } from "../author"
 
 export const nasdaqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "^IXIC",
@@ -6,6 +7,7 @@ export const nasdaqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   name: "Nasdaq Composite",
   shortName: "Nasdaq",
   startYear: 1972,
+  author: kamalResearchAuthor,
 
   // TNI NASDAQ — INDEX INTELLIGENCE IDENTITY
   intelligenceEyebrow:

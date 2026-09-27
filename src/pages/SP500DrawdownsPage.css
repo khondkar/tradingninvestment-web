@@ -71,6 +71,23 @@
   line-height: 1.65;
 }
 
+.tni-drawdown-byline {
+  margin: 12px 0 0;
+  color: #6b7b90;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.tni-drawdown-byline a {
+  color: #10233f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.tni-drawdown-byline a:hover {
+  text-decoration: underline;
+}
+
 .tni-drawdown-research-nav {
   display: flex;
   flex-wrap: wrap;
