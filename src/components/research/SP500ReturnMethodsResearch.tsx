@@ -2340,6 +2340,62 @@ export default function SP500ReturnMethodsResearch() {
       </section>
 
       {/* =====================================================
+          RELATED HISTORICAL RESEARCH
+      ===================================================== */}
+
+      <aside
+        className="tni-return-methods__related-research"
+        aria-labelledby="related-historical-research"
+      >
+        <span className="tni-return-methods__section-eyebrow">
+          RELATED HISTORICAL RESEARCH
+        </span>
+
+        <h2 id="related-historical-research">
+          Continue Exploring U.S. Market History
+        </h2>
+
+        <p>
+          Compare this long-run total-return research with
+          TradingNInvestment&apos;s established historical
+          market studies and original visual research.
+        </p>
+
+        <div className="tni-return-methods__related-links">
+          <a href="/sp-500-returns/">
+            <strong>
+              S&amp;P 500 Historical Returns by Year
+            </strong>
+            <span>
+              Explore annual S&amp;P 500 price returns and
+              long-term performance.
+            </span>
+          </a>
+
+          <a href="/stock-market-historical-returns/">
+            <strong>
+              Dow Jones Historical Returns
+            </strong>
+            <span>
+              Explore more than a century of Dow Jones
+              annual market history.
+            </span>
+          </a>
+
+          <a href="/wp-content/uploads/2016/03/Dow-Jones-History-1920-to-1940.jpg">
+            <strong>
+              Original Dow Jones History 1920–1940 Chart
+            </strong>
+            <span>
+              View the preserved TradingNInvestment
+              historical chart covering the 1920s boom,
+              1929 crash and subsequent market decline.
+            </span>
+          </a>
+        </div>
+      </aside>
+
+      {/* =====================================================
           ANNUAL TABLE
       ===================================================== */}
 
@@ -3269,7 +3325,95 @@ export default function SP500ReturnMethodsResearch() {
           opacity: 0.78;
         }
 
+        .tni-return-methods__related-research {
+          margin: 64px 0;
+          padding: 32px;
+          border: 1px solid rgba(148, 163, 184, 0.18);
+          border-radius: 18px;
+          background:
+            linear-gradient(
+              135deg,
+              rgba(15, 23, 42, 0.035),
+              rgba(255, 255, 255, 0)
+            );
+        }
+
+        .tni-return-methods__related-research h2 {
+          margin: 8px 0 10px;
+          font-size: clamp(1.45rem, 2.4vw, 2rem);
+          line-height: 1.2;
+        }
+
+        .tni-return-methods__related-research > p {
+          max-width: 760px;
+          margin: 0 0 24px;
+          line-height: 1.65;
+          opacity: 0.78;
+        }
+
+        .tni-return-methods__related-links {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+        }
+
+        .tni-return-methods__related-links a {
+          display: flex;
+          min-width: 0;
+          min-height: 132px;
+          padding: 20px;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 14px;
+          color: inherit;
+          text-decoration: none;
+          border: 1px solid rgba(148, 163, 184, 0.2);
+          border-radius: 14px;
+          background: rgba(255, 255, 255, 0.62);
+          transition:
+            transform 160ms ease,
+            border-color 160ms ease,
+            box-shadow 160ms ease;
+        }
+
+        .tni-return-methods__related-links a:hover {
+          transform: translateY(-2px);
+          border-color: rgba(213, 0, 199, 0.42);
+          box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+        }
+
+        .tni-return-methods__related-links a:focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 3px;
+        }
+
+        .tni-return-methods__related-links strong {
+          display: block;
+          font-size: 1rem;
+          line-height: 1.35;
+        }
+
+        .tni-return-methods__related-links span {
+          display: block;
+          font-size: 0.88rem;
+          line-height: 1.55;
+          opacity: 0.72;
+        }
+
         @media (max-width: 900px) {
+
+          .tni-return-methods__related-research {
+            margin: 52px 0;
+            padding: 24px;
+          }
+
+          .tni-return-methods__related-links {
+            grid-template-columns: 1fr;
+          }
+
+          .tni-return-methods__related-links a {
+            min-height: 0;
+          }
 
           .tni-return-methods__summary-section {
             margin-top: 52px;
