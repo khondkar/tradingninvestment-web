@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.webp'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
 import AverageStockMarketReturnPage from './pages/AverageStockMarketReturnPage'
 import DowReturnsPage from './pages/DowReturnsPage'
@@ -16,9 +15,9 @@ import { annualReturnsResearchRegistry } from './research/annual-returns/registr
 import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import { drawdownsResearchRegistry } from './research/drawdowns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
-import LatestMarketIntelligence from './components/news/LatestMarketIntelligence'
 import { ResearchConnections, ResearchHubPage, ResearchTrail } from './components/research/ResearchDiscovery'
-import { getHub, researchHubs } from './research/discovery'
+import { getHub } from './research/discovery'
+import PremiumResearchHome from './components/home/PremiumResearchHome'
 import './App.css'
 
 /* ==========================================================================
@@ -46,40 +45,6 @@ const publishedResearchRegistry = [
 /* ==========================================================================
    TNI RESEARCH AUTHORITY — INDEPENDENT CITATIONS & REFERENCES
    ========================================================================== */
-
-const researchCitations = [
-  {
-    name: 'Florida State University Law Review',
-    type: 'ACADEMIC CITATION',
-    logo: '/images/citations/fsu.svg',
-    href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/',
-  },
-  {
-    name: 'Sorbonne University',
-    type: 'ACADEMIC REFERENCE',
-    logo: '/images/citations/sorbonne.png',
-    href: 'https://ecm.univ-paris1.fr/nuxeo/nxfile/default/2a2e1785-2b20-4751-9203-7f8819df8e62/file%3Acontent/2023-04%20PEREZ%20Inf.pdf',
-  },
-  {
-    name: 'NFP — An Aon Company',
-    type: 'PROFESSIONAL REFERENCE',
-    logo: '/images/citations/nfp-aon.svg',
-    href: 'https://webfiles2.nfp.com/webfiles/public/2020_emails/COVID-19/JH_three_insurance_opportunities.pdf',
-  },
-  {
-    name: 'Debt.org',
-    type: 'FINANCIAL REFERENCE',
-    logo: '/images/citations/debt-org.png',
-    href: 'https://www.debt.org/advice/the-truth-about-dave-ramseys-baby-steps-do-they-work/',
-  },
-  {
-    name: 'Oak Harvest Financial Group',
-    type: 'FINANCIAL REFERENCE',
-    logo: null,
-    monogram: 'OH',
-    href: 'https://oakharvestfg.com/wp-content/uploads/2020/10/roadmap-to-retirement.pdf',
-  },
-]
 
 /* ==========================================================================
    TNI PUBLIC WEBSITE — HEADER
@@ -162,11 +127,10 @@ function Header({
         </button>
 
         <nav className="desktop-nav">
-          <button type="button" onClick={() => window.location.assign('/research/')}>Explore Topics</button>
           <button
             type="button"
             className={page === 'research' ? 'active' : ''}
-            onClick={() => navigate('research')}
+            onClick={() => window.location.assign('/research/')}
           >
             Research
           </button>
@@ -177,14 +141,6 @@ function Header({
             onClick={() => window.location.assign('/stock-market-today/')}
           >
             Stock Market Today
-          </button>
-
-          <button
-            type="button"
-            className={page === 'articles' ? 'active' : ''}
-            onClick={() => navigate('articles')}
-          >
-            Articles
           </button>
 
           <button
@@ -222,21 +178,23 @@ function Header({
       <nav className="mobile-bottom-nav">
         <button
           type="button"
-          className={page === 'research' ? 'active' : ''}
+          className={window.location.pathname === '/' && page === 'research' ? 'active' : ''}
           onClick={() => navigate('research')}
         >
-          Research
+          Home
         </button>
+
+        <button type="button" className={window.location.pathname.startsWith('/research/') ? 'active' : ''} onClick={() => window.location.assign('/research/')}>Research</button>
+
+        <a className="mobile-tni-product" href="https://app.tradingninvestment.com/live/news" aria-label="Open TNI Intelligence">✦ TNI</a>
 
         <button
           type="button"
           className={page === 'market' ? 'active' : ''}
           onClick={() => window.location.assign('/stock-market-today/')}
         >
-          Market Today
+          Market
         </button>
-
-        <button type="button" onClick={() => window.location.assign('/research/')}>Explore Topics</button>
 
         <button
           type="button"
@@ -254,364 +212,8 @@ function Header({
    TNI PUBLIC WEBSITE — RESEARCH HOME PAGE
    ========================================================================== */
 
-function ResearchPage({
-  setPage,
-}: {
-  setPage: (page: PageName) => void
-}) {
-  return (
-    <main>
-      {/* ====================================================================
-          HERO SECTION
-          ==================================================================== */}
-
-      <section className="hero-layout">
-        <div className="hero-card">
-          <div className="hero-content">
-            <span className="eyebrow">EVIDENCE-BASED RESEARCH</span>
-
-            <h1>
-              Smarter Insights
-              <br />
-              for a <span>Brighter Tomorrow</span>
-            </h1>
-
-            <p>
-              Independent market research, visual intelligence, and
-              data-driven analysis for better investment decisions.
-            </p>
-
-            <div className="hero-actions">
-              <a href="#featured-research" className="primary-action">
-                Explore Research
-                <span>→</span>
-              </a>
-
-              <a href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer" className="secondary-action">
-                Launch TNI
-                <span>→</span>
-              </a>
-            </div>
-
-          </div>
-
-          {/* ==================================================================
-              HERO BUILDING IMAGE
-              Actual image asset. Used on both desktop and mobile.
-              ================================================================== */}
-
-          <div className="hero-image-wrap">
-            <img
-              src={heroImg}
-              alt=""
-              className="hero-building-image"
-            />
-          </div>
-        </div>
-
-        {/* ==================================================================
-            DESKTOP SIDE COLUMN
-            ================================================================== */}
-
-        <aside className="hero-sidebar">
-
-          <div className="side-card">
-            <div className="side-title">
-              <span>POPULAR TOPICS</span>
-            </div>
-
-            <div className="topic-tags">
-              <span>Historical Returns</span>
-              <span>Drawdowns</span>
-              <span>Seasonality</span>
-              <span>Quant Research</span>
-            </div>
-          </div>
-
-          {/* ================================================================
-              TNI RESEARCH AUTHORITY — INDEPENDENT REFERENCES
-              ================================================================ */}
-
-          <div className="side-card citation-side-card">
-            <div className="side-title">
-              <span>CITED &amp; REFERENCED BY</span>
-            </div>
-
-            <div className="citation-trust-intro">
-              Independent publications referencing
-              TradingNInvestment research.
-            </div>
-
-            <div className="citation-side-list">
-              {researchCitations.map((citation) => (
-                <a
-                  key={citation.name}
-                  className="citation-side-link"
-                  href={citation.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Verify ${citation.name} reference`}
-                >
-                  <div className="citation-mark" aria-hidden="true">
-                    {citation.logo ? (
-                      <img
-                        src={citation.logo}
-                        alt=""
-                        loading="lazy"
-                      />
-                    ) : (
-                      <strong>{citation.monogram}</strong>
-                    )}
-                  </div>
-
-                  <div className="citation-side-copy">
-                    <strong>{citation.name}</strong>
-                    <small>{citation.type}</small>
-                  </div>
-
-                  <span
-                    className="citation-verify"
-                    aria-hidden="true"
-                  >
-                    ↗
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-        </aside>
-      </section>
-
-      {/* ====================================================================
-          SIMPLE RESEARCH / ARTICLES / ABOUT ROW
-          ==================================================================== */}
-
-      <section className="quick-navigation">
-        <button type="button" onClick={() => setPage('research')}>
-          <strong>Research</strong>
-          <span>Original market studies and visual analysis</span>
-        </button>
-
-        <button type="button" onClick={() => setPage('articles')}>
-          <strong>Articles</strong>
-          <span>Clear explanations of markets and investing</span>
-        </button>
-
-        <button type="button" onClick={() => setPage('about')}>
-          <strong>About</strong>
-          <span>Research philosophy and TNI platform</span>
-        </button>
-      </section>
-
-      <section className="content-section" aria-labelledby="research-paths-heading">
-        <div className="section-heading">
-          <div>
-            <span>EXPLORE RESEARCH</span>
-            <h2 id="research-paths-heading">Find your next question.</h2>
-          </div>
-          <a className="section-research-link" href="/research/">All research →</a>
-        </div>
-        <div className="research-hub-grid">
-          {researchHubs.filter((hub) => ['/research/stocks/', '/research/indexes/', '/research/market-history/', '/research/market-risk/'].includes(hub.path)).map((hub) => (
-            <a className="research-hub-card" href={hub.path} key={hub.path}>
-              <strong>{hub.title}</strong><span>{hub.description}</span><b aria-hidden="true">↗</b>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* ====================================================================
-          TNI HOMEPAGE — LATEST MARKET INTELLIGENCE
-          Delayed public preview of verified TNI intelligence.
-          Primary conversion path into the real-time TNI Live News channel.
-          ==================================================================== */}
-
-      <LatestMarketIntelligence />
-
-      {/* ====================================================================
-          FEATURED RESEARCH
-          ==================================================================== */}
-
-      <section className="content-section" id="featured-research">
-        <div className="section-heading">
-          <div>
-            <span>FEATURED ARTICLE</span>
-            <h2>100+ years of Dow Jones market history.</h2>
-          </div>
-
-          {/* ============================================================
-              TNI HOMEPAGE — FEATURED RESEARCH NAVIGATION
-              Opens the canonical Dow Jones historical returns research page.
-          ============================================================ */}
-          <a
-            className="section-research-link"
-            href="/stock-market-historical-returns/"
-          >
-            View Full Research →
-          </a>
-        </div>
-
-        {/* ====================================================================
-            TNI HOMEPAGE — FLAGSHIP FEATURED ARTICLE
-            Uses verified static research artwork instead of dashboard UI.
-            ==================================================================== */}
-
-        <article className="featured-card featured-article-card">
-
-          <a
-            className="featured-article-image-link"
-            href="/stock-market-historical-returns/"
-            aria-label="View Stock Market Historical Returns research"
-          >
-            <img
-              className="featured-article-image"
-              src="/images/social/stock-market-historical-returns-og.png"
-              alt="Dow Jones historical returns and more than 100 years of stock market history"
-              loading="lazy"
-            />
-          </a>
-
-          <div className="featured-copy featured-article-copy">
-
-            <span className="content-tag">MARKET HISTORY</span>
-
-            <h3>
-              Stock Market Historical Returns: 100+ Years of Dow Jones Returns
-            </h3>
-
-            <h4>Historical Annual Returns and Market Performance</h4>
-
-            <p>
-              Explore Dow Jones returns by year from 1921 through 2026 YTD.
-              Analyze historical annual returns, long-term performance,
-              positive and negative years, and more than a century of
-              stock market history in one interactive research center.
-            </p>
-
-            <a
-              className="primary-action"
-              href="/stock-market-historical-returns/"
-            >
-              View Full Research
-              <span>→</span>
-            </a>
-          </div>
-
-          <div className="featured-metrics">
-
-            <div>
-              <small>AVERAGE ANNUAL RETURN</small>
-              <strong className="positive-text">+8.08%</strong>
-              <span>105 completed calendar years</span>
-            </div>
-
-            <div>
-              <small>POSITIVE YEARS</small>
-              <strong className="positive-text">69.52%</strong>
-              <span>73 of 105 completed years</span>
-            </div>
-
-            <div>
-              <small>BEST YEAR</small>
-              <strong className="positive-text">+63.74%</strong>
-              <span>1933</span>
-            </div>
-
-            <div>
-              <small>WORST YEAR</small>
-              <strong className="negative-text">-52.67%</strong>
-              <span>1931</span>
-            </div>
-
-          </div>
-
-        </article>
-
-        {/* ====================================================================
-            TNI HOMEPAGE — AUTOMATIC PUBLISHED RESEARCH
-            Non-featured published assets are rendered from the central
-            annual-return research registry.
-            ==================================================================== */}
-
-        <div className="article-library tni-research-secondary">
-          {publishedResearchRegistry
-            .filter((entry) => !entry.featured)
-            .map((entry) => {
-              const { config, previewImage } = entry
-
-              return (
-                <article
-                  className="library-card tni-real-article-card"
-                  key={config.slug}
-                >
-                  <a
-                    className={
-                      previewImage
-                        ? "tni-real-article-image-link"
-                        : "tni-real-article-image-link tni-research-placeholder"
-                    }
-                    href={config.canonicalPath}
-                    aria-label={"View " + config.name + " returns research"}
-                  >
-                    {previewImage ? (
-                      <img
-                        className="tni-real-article-image"
-                        src={previewImage}
-                        alt={config.name + " historical returns research"}
-                        loading="lazy"
-                      />
-                    ) : (
-                      <>
-                        <strong>{config.symbol}</strong>
-                        <span>
-                          {entry.researchType === 'monthly'
-                            ? 'MONTHLY RETURNS'
-                            : entry.researchType === 'drawdowns'
-                              ? 'DRAWDOWNS & CORRECTIONS'
-                              : 'ANNUAL RETURNS'}
-                        </span>
-                      </>
-                    )}
-                  </a>
-
-                  <div className="library-content">
-                    <span className="content-tag">
-                      {config.categories.includes("index")
-                        ? "MARKET HISTORY"
-                        : "STOCK HISTORY"}
-                    </span>
-
-                    <h2>{config.seo.socialTitle}</h2>
-
-                    <p>{config.seo.socialDescription}</p>
-
-                    <div>
-                      <small>
-                        {entry.researchType === 'monthly'
-                          ? 'Historical Monthly Returns and Market Performance'
-                          : entry.researchType === 'drawdowns'
-                            ? 'Historical Corrections, Bear Markets and Recoveries'
-                            : 'Historical Annual Returns and Market Performance'}
-                      </small>
-
-                      <a
-                        className="tni-article-read-link"
-                        href={config.canonicalPath}
-                      >
-                        View Full Research →
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              )
-            })}
-        </div>
-
-      </section>
-
-    </main>
-  )
+function ResearchPage() {
+  return <PremiumResearchHome />
 }
 
 /* ==========================================================================
@@ -895,13 +497,7 @@ function Footer({
         </div>
 
         <nav>
-          <button type="button" onClick={() => setPage('research')}>
-            Research
-          </button>
-
-          <button type="button" onClick={() => setPage('articles')}>
-            Articles
-          </button>
+          <a href="/research/">Research</a>
 
           <button type="button" onClick={() => setPage('about')}>
             About
@@ -1182,11 +778,11 @@ function App() {
   }
 
   return (
-    <div className="site">
+    <div className={page === 'research' ? 'site tni-home-site' : 'site'}>
       <Header page={page} setPage={setPage} />
 
       {page === 'research' && (
-        <ResearchPage setPage={setPage} />
+        <ResearchPage />
       )}
 
       {page === 'articles' && <ArticlesPage />}

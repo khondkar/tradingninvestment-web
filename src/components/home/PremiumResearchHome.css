@@ -1,0 +1,128 @@
+.tni-home {
+  --home-ink: #12233a;
+  --home-green: #087965;
+  --home-muted: #5c6c7c;
+  background: #fdfdfb;
+  color: var(--home-ink);
+  font-family: "DM Sans", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding-bottom: 1px;
+}
+.tni-home *, .tni-home *::before, .tni-home *::after { box-sizing: border-box; }
+.tni-home a { text-decoration: none; }
+.tni-home-wrap { width: min(1180px, calc(100% - 44px)); margin-inline: auto; }
+.tni-home-kicker { color: var(--home-green); font-size: 10px; font-weight: 800; letter-spacing: .16em; }
+.tni-home-hero { padding-top: 80px; padding-bottom: 54px; }
+.tni-home-hero h1 { max-width: 910px; margin: 21px 0; font-size: clamp(42px, 6.2vw, 76px); line-height: 1.09; letter-spacing: -.075em; font-weight: 750; }
+.tni-home-hero h1 span { color: var(--home-green); }
+.tni-home-lead { max-width: 540px; color: var(--home-muted); font-size: 17px; line-height: 1.7; margin: 0 0 28px; }
+.tni-home-product { display: flex; align-items: center; justify-content: space-between; gap: 22px; width: min(540px, 100%); padding: 19px 21px; border-radius: 15px; background: #0d6658; color: white; box-shadow: 0 16px 28px #0d665826; }
+.tni-home-product:hover { background: #07594c; transform: translateY(-2px); }
+.tni-home-product small, .tni-home-product strong, .tni-home-product em { display: block; }
+.tni-home-product small { color: #afe8d8; font-size: 10px; font-weight: 800; letter-spacing: .13em; }
+.tni-home-product strong { margin-top: 6px; font-size: 15px; line-height: 1.35; }
+.tni-home-product em { margin-top: 4px; color: #d3ece4; font-size: 12px; font-style: normal; }
+.tni-home-product b { font-size: 23px; font-weight: 400; }
+.tni-home-hero-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 20px; }
+.tni-home-primary { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 50px; padding: 0 20px; border-radius: 11px; background: #102f37; color: white; font-size: 13px; font-weight: 800; }
+.tni-home-primary:hover { background: #087965; }
+.tni-home-hero-actions > a:not(.tni-home-primary) { color: #235d53; font-size: 13px; font-weight: 800; }
+.tni-home-trust { background: linear-gradient(135deg, #eaf4ef, #f5f9f4 55%, #edf5f0); border-block: 1px solid #d8e8e0; padding: 43px 0 49px; }
+.tni-home-trust h2 { margin: 12px 0 10px; font-size: clamp(26px, 3vw, 34px); letter-spacing: -.055em; }
+.tni-home-trust p { max-width: 660px; color: var(--home-muted); font-size: 13px; line-height: 1.7; margin: 0; }
+.tni-home-citations { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 25px; }
+.tni-home-citations a { display: flex; align-items: center; gap: 11px; min-width: 0; min-height: 86px; padding: 13px; border: 1px solid #dae8df; border-radius: 14px; background: white; color: var(--home-ink); box-shadow: 0 8px 23px #123b2b0a; }
+.tni-home-citations a:hover { border-color: #9bc8b9; box-shadow: 0 14px 30px #123b2b16; }
+.tni-home-citation-logo { width: 43px; height: 43px; flex: none; display: grid; place-items: center; border-radius: 10px; background: #f6f8f6; }
+.tni-home-citation-logo img { width: 35px; height: 35px; object-fit: contain; }
+.tni-home-citation-copy { flex: 1; min-width: 0; }
+.tni-home-citation-copy strong, .tni-home-citation-copy small { display: block; }
+.tni-home-citation-copy strong { font-size: 12px; line-height: 1.25; }
+.tni-home-citation-copy small { margin-top: 5px; font-size: 10px; color: #657978; }
+.tni-home-citations b { color: var(--home-green); font-size: 17px; font-weight: 500; }
+.tni-home-features { padding-block: 82px 92px; }
+.tni-home-section-head { max-width: 640px; margin-bottom: 27px; }
+.tni-home-section-head h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.16; letter-spacing: -.058em; margin: 12px 0 10px; }
+.tni-home-section-head p { color: var(--home-muted); font-size: 14px; line-height: 1.65; }
+.tni-home-feature-stack { display: grid; gap: 24px; }
+.tni-home-feature { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 355px; overflow: hidden; border: 1px solid #dce7e3; border-radius: 20px; background: white; box-shadow: 0 22px 55px #1b45410e; }
+.tni-home-feature-copy { display: flex; flex-direction: column; align-items: flex-start; padding: 43px 46px; }
+.tni-home-feature-copy h3 { max-width: 490px; margin: 15px 0 13px; font-size: clamp(28px, 3vw, 39px); line-height: 1.17; letter-spacing: -.055em; }
+.tni-home-feature-copy h3 a { color: var(--home-ink); }
+.tni-home-feature-copy h3 a:hover { color: var(--home-green); }
+.tni-home-feature-copy p { max-width: 520px; margin: 0 0 18px; color: var(--home-muted); font-size: 14px; line-height: 1.7; }
+.tni-home-feature-link { color: var(--home-green); font-size: 13px; font-weight: 800; }
+.tni-home-feature-copy > small { margin-top: auto; padding-top: 24px; color: #819090; font-size: 11px; }
+.tni-home-feature-visual { display: flex; align-items: center; justify-content: center; padding: 32px; background: linear-gradient(145deg, #eaf4ee, #f8faf5); }
+.tni-home-feature:nth-child(2n) .tni-home-feature-visual { background: linear-gradient(145deg, #eef2f7, #f9faf7); }
+.tni-home-chart { width: 100%; max-width: 430px; padding: 22px; border: 1px solid #dae6df; border-radius: 15px; background: white; box-shadow: 0 18px 35px #1a56491a; color: var(--home-ink); }
+.tni-home-chart-top, .tni-home-chart-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.tni-home-chart-top { font-size: 10px; font-weight: 800; letter-spacing: .07em; }
+.tni-home-chart-top span { color: var(--home-green); white-space: nowrap; }
+.tni-home-chart-years { margin-top: 17px; font-size: 28px; font-weight: 800; letter-spacing: -.06em; }
+.tni-home-chart p { margin: 3px 0 10px; color: #7c8a91; font-size: 10px; }
+.tni-home-chart svg { display: block; width: 100%; height: auto; }
+.tni-home-chart svg text { fill: #82918d; font-size: 10px; }
+.tni-home-chart-bottom { padding-top: 12px; border-top: 1px solid #e4ece7; color: #697c80; font-size: 10px; }
+.tni-home-chart-bottom strong { color: #236c5d; white-space: nowrap; }
+.tni-home-topics { padding: 84px 0; border-block: 1px solid #e4ece7; background: #f5f8f5; }
+.tni-home-topic-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+.tni-home-topic-grid a { display: flex; flex-direction: column; gap: 9px; min-height: 170px; padding: 22px; border: 1px solid #e2eae5; border-radius: 15px; background: white; color: var(--home-ink); }
+.tni-home-topic-grid a:hover, .tni-home-more-grid a:hover { transform: translateY(-3px); box-shadow: 0 15px 30px #123b2b10; }
+.tni-home-topic-grid strong { font-size: 18px; letter-spacing: -.04em; }
+.tni-home-topic-grid span { color: var(--home-muted); font-size: 12px; line-height: 1.5; }
+.tni-home-topic-grid b { margin-top: auto; color: var(--home-green); align-self: flex-end; }
+.tni-home-all-link { display: inline-block; margin-top: 22px; color: var(--home-green); font-size: 13px; font-weight: 800; }
+.tni-home-more { padding-block: 85px; }
+.tni-home-more-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.tni-home-more-grid a { display: flex; flex-direction: column; min-height: 225px; padding: 24px; border: 1px solid #e1e9e5; border-radius: 15px; background: white; color: var(--home-ink); }
+.tni-home-more-grid small { color: var(--home-green); font-size: 10px; font-weight: 800; letter-spacing: .12em; }
+.tni-home-more-grid strong { margin: 15px 0 9px; font-size: 19px; line-height: 1.3; }
+.tni-home-more-grid span { color: var(--home-muted); font-size: 12px; line-height: 1.6; }
+.tni-home-more-grid b { margin-top: auto; padding-top: 20px; color: var(--home-green); font-size: 11px; }
+.tni-home-bridge { padding-bottom: 80px; }
+.tni-home-bridge > div { padding: 44px 50px; border-radius: 19px; background: #113237; color: white; }
+.tni-home-bridge .tni-home-kicker { color: #85d7c1; }
+.tni-home-bridge h2 { margin: 14px 0 11px; font-size: clamp(28px, 4vw, 39px); letter-spacing: -.055em; }
+.tni-home-bridge p { max-width: 640px; color: #bbd2cf; font-size: 13px; line-height: 1.7; }
+.tni-home-bridge a { display: inline-block; margin-top: 8px; padding-bottom: 5px; border-bottom: 1px solid #8cbbb1; color: white; font-size: 13px; font-weight: 800; }
+@media (max-width: 900px) {
+  .tni-home-citations, .tni-home-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tni-home-feature-copy { padding: 32px; }
+  .tni-home-feature-visual { padding: 24px; }
+}
+@media (max-width: 700px) {
+  .tni-home-wrap { width: min(100% - 40px, 540px); }
+  .tni-home-hero { padding-top: 51px; padding-bottom: 42px; }
+  .tni-home-hero h1 { font-size: clamp(41px, 9vw, 56px); line-height: 1.1; }
+  .tni-home-lead { font-size: 15px; line-height: 1.65; }
+  .tni-home-product { padding: 17px; }
+  .tni-home-hero-actions { gap: 16px; }
+  .tni-home-trust { padding: 35px 0 41px; }
+  .tni-home-citations { grid-template-columns: 1fr; gap: 9px; }
+  .tni-home-citations a { min-height: 73px; }
+  .tni-home-features { padding-block: 64px 70px; }
+  .tni-home-feature-stack { gap: 17px; }
+  .tni-home-feature { display: block; }
+  .tni-home-feature-copy { padding: 27px 25px; }
+  .tni-home-feature-copy h3 { font-size: 30px; }
+  .tni-home-feature-visual { padding: 23px; min-height: 260px; }
+  .tni-home-chart { padding: 19px; }
+  .tni-home-topics { padding: 68px 0; }
+  .tni-home-topic-grid { gap: 9px; }
+  .tni-home-topic-grid a { min-height: 166px; padding: 17px; }
+  .tni-home-topic-grid strong { font-size: 16px; }
+  .tni-home-topic-grid span { font-size: 11px; }
+  .tni-home-more { padding-block: 70px; }
+  .tni-home-more-grid { grid-template-columns: 1fr; }
+  .tni-home-more-grid a { min-height: 185px; }
+  .tni-home-bridge { padding-bottom: 75px; }
+  .tni-home-bridge > div { padding: 32px 26px; }
+}
+@media (max-width: 360px) {
+  .tni-home-wrap { width: calc(100% - 34px); }
+  .tni-home-chart-top { font-size: 9px; }
+  .tni-home-chart-bottom { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tni-home-product, .tni-home-topic-grid a, .tni-home-more-grid a { transform: none !important; }
+}

@@ -2,6 +2,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createServer } from 'vite'
+import React from 'react'
+import { renderToStaticMarkup } from 'react-dom/server'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dist = path.join(root, 'dist')
@@ -9,8 +11,10 @@ const origin = 'https://tradingninvestment.com'
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
 const vite = await createServer({ root, server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 let graph
+let PremiumResearchHome
 try {
   graph = await vite.ssrLoadModule('/src/research/discovery.ts')
+  ;({ default: PremiumResearchHome } = await vite.ssrLoadModule('/src/components/home/PremiumResearchHome.tsx'))
 } finally {
   await vite.close()
 }
@@ -61,5 +65,11 @@ for (const item of researchItems) {
   html = html.replace('<div id="root">', `<div id="root">${markup}`)
   fs.writeFileSync(target, html)
 }
+
+// Keep homepage research links and references visible in the initial HTML.
+const homepage = renderToStaticMarkup(React.createElement(PremiumResearchHome))
+const homeHtml = template.replace('<div id="root"></div>', `<div id="root">${homepage}</div>`)
+if (!homeHtml.includes('id="featured-research"')) throw new Error('Unable to prerender homepage research')
+fs.writeFileSync(path.join(dist, 'index.html'), homeHtml)
 
 console.log(`TNI research hubs generated: ${researchHubs.length}; article connections: ${researchItems.length}`)

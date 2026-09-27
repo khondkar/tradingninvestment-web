@@ -5310,3 +5310,52 @@ button.primary-action {
   }
 }
 
+
+/* Premium research homepage keeps the original TNI brand and a clear product entry. */
+.tni-home-site { background: #fdfdfb; }
+.mobile-bottom-nav a.mobile-tni-product { display: flex; align-items: center; justify-content: center; color: #087965; font-size: 10px; font-weight: 800; text-decoration: none; }
+@media (max-width: 720px) {
+  .mobile-bottom-nav { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .mobile-bottom-nav a.mobile-tni-product { min-width: 0; min-height: 48px; }
+  .tni-home-site .mobile-bottom-nav {
+    position: fixed;
+    z-index: 120;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(62px + env(safe-area-inset-bottom));
+    min-height: 62px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 6px 7px calc(6px + env(safe-area-inset-bottom));
+    border-top: 1px solid #e0e9e4;
+    border-bottom: 0;
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 -6px 22px #123b2b0c;
+  }
+  .tni-home-site .mobile-bottom-nav button { min-height: 44px; color: #55706a; font-size: 10px; }
+  .tni-home-site .mobile-bottom-nav a.mobile-tni-product {
+    min-height: 47px;
+    margin-top: -16px;
+    border-radius: 12px;
+    background: #087965;
+    box-shadow: 0 8px 18px #08796536;
+    color: white;
+    font-size: 12px;
+  }
+  .tni-home-site .mobile-bottom-nav button.active { color: #087965; }
+  .tni-home-site .tni-home { padding-bottom: 73px; }
+}
+.tni-home-site .site-header { background: rgba(253, 253, 251, .97); border-color: #e5ebe7; }
+.tni-home-site .desktop-nav { gap: 26px; }
+.tni-home-site .desktop-nav button { color: #455d64; font-size: 13px; }
+.tni-home-site .launch-tni { background: #087965; box-shadow: 0 8px 20px #08796524; }
+.tni-home-site .launch-tni:hover { background: #075e51; }
+@media (max-width: 720px) {
+  .tni-home-site .site-header { height: 66px; }
+  .tni-home-site .header-actions { display: none; }
+  .tni-home-site .brand-copy strong { font-size: 13px; }
+  .tni-home-site .brand-copy small { font-size: 6px; }
+}
