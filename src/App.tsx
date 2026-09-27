@@ -1,3 +1,4 @@
+import StockMarketCrash1929Page from './pages/StockMarketCrash1929Page'
 import { useState } from 'react'
 import SP500ReturnsPage from './pages/SP500ReturnsPage'
 import AverageStockMarketReturnPage from './pages/AverageStockMarketReturnPage'
@@ -551,6 +552,16 @@ function App() {
 
   const normalizedPath =
     window.location.pathname.replace(/\/+$/, '') || '/'
+
+  if (normalizedPath === '/stock-market-crash-of-1929') {
+    return (
+      <div className="site">
+        <Header page="research" setPage={setPage} />
+        <StockMarketCrash1929Page />
+        <Footer setPage={setPage} />
+      </div>
+    )
+  }
 
   const researchHub = getHub(normalizedPath)
   if (normalizedPath === '/about') {

@@ -16,4 +16,15 @@ import type { ResearchItem } from './discovery'
 //   kind: 'article',
 // }
 
-export const additionalPublications: ResearchItem[] = []
+export const additionalPublications: ResearchItem[] = [
+  {
+    slug: 'stock-market-crash-of-1929',
+    path: '/stock-market-crash-of-1929/',
+    title: 'Stock Market Crash of 1929',
+    description: 'The Roaring Twenties, the Dow Jones peak, the 1929 crash timeline, and the prolonged decline that followed.',
+    name: 'Dow Jones Industrial Average',
+    symbol: 'DJIA',
+    categories: ['index', 'dow', 'market-history', 'market-crash'],
+    kind: 'article',
+  },
+]

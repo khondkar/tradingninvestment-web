@@ -63,6 +63,14 @@ const stockItems = [...new Map(researchItems.filter((item) => has(item, 'stock')
 
 export const researchHubs: ResearchHub[] = [
   {
+    path: '/research/market-crashes/',
+    title: 'Market Crashes',
+    description: 'Historical research on market crashes and their consequences.',
+    parent: '/research/market-history/',
+    match: (item) => has(item, 'market-crash'),
+  },
+
+  {
     path: '/research/',
     title: 'Explore TNI Research',
     description: 'Explore published market studies by company, index, market history, or risk. Each study has one permanent article address.',
@@ -143,6 +151,7 @@ export function getItemHubs(item: ResearchItem) {
   if (has(item, 'nasdaq')) paths.push('/research/indexes/nasdaq/')
   if (has(item, 'dow') || has(item, 'djia')) paths.push('/research/indexes/dow/')
   if (has(item, 'drawdowns')) paths.push('/research/market-risk/')
+  if (has(item, 'market-crash')) paths.push('/research/market-crashes/')
   return [...new Set(paths)].map((path) => getHub(path)!).filter(Boolean)
 }
 

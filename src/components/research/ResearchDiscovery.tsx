@@ -35,6 +35,18 @@ export function ResearchHubPage({ hub }: { hub: ResearchHub }) {
           <h1>{hub.title}</h1>
           <p>{hub.description}</p>
         </header>
+        {hub.path === '/research/indexes/dow/' && (
+          <section className="research-hub-section" aria-labelledby="dow-history-chart-heading">
+            <span className="research-kicker">HISTORICAL VISUAL RESEARCH</span>
+            <h2 id="dow-history-chart-heading">Dow Jones Industrial Average, 1920–1940</h2>
+            <p>The original TNI chart traces the Dow through the 1920s expansion, the 1929 peak, and the decline into 1932. It shows historical index levels, not total returns or present market conditions.</p>
+            <figure className="dow-history-figure">
+              <img src="/wp-content/uploads/2016/03/Dow-Jones-History-1920-to-1940.jpg" alt="Historical Dow Jones Industrial Average chart from 1920 to 1940 showing the 1929 peak and 1932 low" width="736" height="606" loading="lazy" />
+              <figcaption>Original TradingNInvestment historical chart. <a href="/stock-market-historical-returns/">Explore Dow Jones annual returns →</a></figcaption>
+            </figure>
+            <p><a href="/stock-market-crash-of-1929/">Read the chart's historical analysis →</a></p>
+          </section>
+        )}
         {(hub.path === '/research/' || children.length > 0) && (
           <section className="research-hub-section" aria-labelledby="browse-heading">
             <h2 id="browse-heading">Explore by topic</h2>
