@@ -11,7 +11,10 @@
 .tni-home a { text-decoration: none; }
 .tni-home-wrap { width: min(1180px, calc(100% - 44px)); margin-inline: auto; }
 .tni-home-kicker { color: var(--home-green); font-size: 10px; font-weight: 800; letter-spacing: .16em; }
-.tni-home-hero { padding-top: 80px; padding-bottom: 54px; }
+.tni-home-hero { padding-top: 80px; padding-bottom: 0; }
+.tni-home-hero::after { content: ''; display: block; height: 2px; margin-top: 54px; background: linear-gradient(90deg, #087965 0 84px, #bad8cb 84px 148px, #e0eae4 148px 100%); }
+.tni-home-hero > .tni-home-kicker { display: inline-flex; align-items: center; gap: 10px; }
+.tni-home-hero > .tni-home-kicker::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #0d9b87; }
 .tni-home-hero h1 { max-width: 910px; margin: 21px 0; font-size: clamp(42px, 6.2vw, 76px); line-height: 1.09; letter-spacing: -.075em; font-weight: 750; }
 .tni-home-hero h1 span { color: var(--home-green); }
 .tni-home-lead { max-width: 540px; color: var(--home-muted); font-size: 17px; line-height: 1.7; margin: 0 0 28px; }
@@ -29,11 +32,13 @@
 .tni-home-trust { background: linear-gradient(135deg, #eaf4ef, #f5f9f4 55%, #edf5f0); border-block: 1px solid #d8e8e0; padding: 43px 0 49px; }
 .tni-home-trust h2 { margin: 12px 0 10px; font-size: clamp(26px, 3vw, 34px); letter-spacing: -.055em; }
 .tni-home-trust p { max-width: 660px; color: var(--home-muted); font-size: 13px; line-height: 1.7; margin: 0; }
-.tni-home-citations { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 25px; }
-.tni-home-citations a { display: flex; align-items: center; gap: 11px; min-width: 0; min-height: 86px; padding: 13px; border: 1px solid #dae8df; border-radius: 14px; background: white; color: var(--home-ink); box-shadow: 0 8px 23px #123b2b0a; }
+.tni-home-citations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 25px; }
+.tni-home-citations a { display: flex; align-items: center; gap: 17px; min-width: 0; min-height: 96px; padding: 14px 18px; border: 1px solid #dae8df; border-radius: 14px; background: white; color: var(--home-ink); box-shadow: 0 8px 23px #123b2b0a; }
 .tni-home-citations a:hover { border-color: #9bc8b9; box-shadow: 0 14px 30px #123b2b16; }
-.tni-home-citation-logo { width: 43px; height: 43px; flex: none; display: grid; place-items: center; border-radius: 10px; background: #f6f8f6; }
-.tni-home-citation-logo img { width: 35px; height: 35px; object-fit: contain; }
+.tni-home-citation-logo { width: 112px; height: 62px; flex: none; display: grid; place-items: center; overflow: hidden; padding: 9px; border: 1px solid #e5ece8; border-radius: 10px; background: #fff; }
+.tni-home-citation-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.tni-home-citation-logo.fsu { background: #173a66; border-color: #173a66; }
+.tni-home-citation-logo.fsu img { width: 75%; }
 .tni-home-citation-copy { flex: 1; min-width: 0; }
 .tni-home-citation-copy strong, .tni-home-citation-copy small { display: block; }
 .tni-home-citation-copy strong { font-size: 12px; line-height: 1.25; }
@@ -86,20 +91,22 @@
 .tni-home-bridge p { max-width: 640px; color: #bbd2cf; font-size: 13px; line-height: 1.7; }
 .tni-home-bridge a { display: inline-block; margin-top: 8px; padding-bottom: 5px; border-bottom: 1px solid #8cbbb1; color: white; font-size: 13px; font-weight: 800; }
 @media (max-width: 900px) {
-  .tni-home-citations, .tni-home-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tni-home-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tni-home-feature-copy { padding: 32px; }
   .tni-home-feature-visual { padding: 24px; }
 }
 @media (max-width: 700px) {
   .tni-home-wrap { width: min(100% - 40px, 540px); }
-  .tni-home-hero { padding-top: 51px; padding-bottom: 42px; }
+  .tni-home-hero { padding-top: 51px; }
+  .tni-home-hero::after { margin-top: 42px; background: linear-gradient(90deg, #087965 0 56px, #bad8cb 56px 108px, #e0eae4 108px 100%); }
   .tni-home-hero h1 { font-size: clamp(41px, 9vw, 56px); line-height: 1.1; }
   .tni-home-lead { font-size: 15px; line-height: 1.65; }
   .tni-home-product { padding: 17px; }
   .tni-home-hero-actions { gap: 16px; }
   .tni-home-trust { padding: 35px 0 41px; }
   .tni-home-citations { grid-template-columns: 1fr; gap: 9px; }
-  .tni-home-citations a { min-height: 73px; }
+  .tni-home-citations a { min-height: 82px; padding: 12px; gap: 12px; }
+  .tni-home-citation-logo { width: 88px; height: 54px; padding: 7px; }
   .tni-home-features { padding-block: 64px 70px; }
   .tni-home-feature-stack { gap: 17px; }
   .tni-home-feature { display: block; }

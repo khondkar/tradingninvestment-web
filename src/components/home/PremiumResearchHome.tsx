@@ -15,7 +15,7 @@ const featured = [
 ]
 
 const citations = [
-  { name: 'Florida State University', detail: 'Law Review', logo: '/images/citations/fsu.svg', href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/' },
+  { name: 'Florida State University', detail: 'Law Review', logo: '/images/citations/fsu.svg', logoClass: 'fsu', href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/' },
   { name: 'Sorbonne University', detail: 'Academic reference', logo: '/images/citations/sorbonne.png', href: 'https://ecm.univ-paris1.fr/nuxeo/nxfile/default/2a2e1785-2b20-4751-9203-7f8819df8e62/file%3Acontent/2023-04%20PEREZ%20Inf.pdf' },
   { name: 'Debt.org', detail: 'Publication reference', logo: '/images/citations/debt-org.png', href: 'https://www.debt.org/advice/the-truth-about-dave-ramseys-baby-steps-do-they-work/' },
   { name: 'NFP · An Aon Company', detail: 'Industry reference', logo: '/images/citations/nfp-aon.svg', href: 'https://webfiles2.nfp.com/webfiles/public/2020_emails/COVID-19/JH_three_insurance_opportunities.pdf' },
@@ -68,7 +68,7 @@ export default function PremiumResearchHome() {
       <h2 id="tni-home-trust-title">Cited &amp; referenced by</h2>
       <p>Explore the original references to see where TNI research has been cited or discussed. References are not endorsements.</p>
       <div className="tni-home-citations">{citations.map((citation) => <a key={citation.name} href={citation.href} target="_blank" rel="noreferrer" aria-label={`Open ${citation.name} reference`}>
-        <span className="tni-home-citation-logo"><img src={citation.logo} alt="" loading="lazy" /></span><span className="tni-home-citation-copy"><strong>{citation.name}</strong><small>{citation.detail}</small></span><b aria-hidden="true">↗</b>
+        <span className={`tni-home-citation-logo ${'logoClass' in citation ? citation.logoClass : ''}`}><img src={citation.logo} alt="" loading="lazy" /></span><span className="tni-home-citation-copy"><strong>{citation.name}</strong><small>{citation.detail}</small></span><b aria-hidden="true">↗</b>
       </a>)}</div>
     </div></section>
 
