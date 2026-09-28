@@ -12,6 +12,7 @@ import type {
   SP500ReturnMode,
 } from '../charts/SP500ReturnMethodChart'
 import HistoricalPeriodSlider from './HistoricalPeriodSlider'
+import ResearchShareButton from './ResearchShareButton'
 import './SP500ReturnMethodsResearch.css'
 
 const SP500ReturnMethodChart =
@@ -965,6 +966,14 @@ export default function SP500ReturnMethodsResearch() {
           <span>By Kamal Khondkar</span>
           <span aria-hidden="true">·</span>
           <span>TradingNInvestment Research</span>
+        </div>
+
+        <div className="tni-return-methods__share">
+          <ResearchShareButton
+            title="Average Stock Market Return: S&P 500 Returns by Year"
+            text={`Explore U.S. stock market returns from ${dataset.start_year} through ${dataset.end_year}${dataset.current_year_is_ytd ? ' YTD' : ''}, including dividends and inflation.`}
+            url="https://tradingninvestment.com/average-stock-market-return/"
+          />
         </div>
 
         <p>
