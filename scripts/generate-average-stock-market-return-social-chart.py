@@ -5,6 +5,12 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap, Normalize
 from matplotlib.ticker import FuncFormatter
 
+from tni_research_og import (
+    TNI_RESEARCH_CHART_RECT,
+    add_tni_research_header,
+    add_tni_research_identity,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 
 DATA = (
@@ -199,6 +205,17 @@ for value in returns:
 # ------------------------------------------------------------
 # 1200 × 630 OPEN GRAPH CANVAS
 # ------------------------------------------------------------
+# ------------------------------------------------------------
+# 1200 × 630 TNI RESEARCH CANVAS
+#
+# DESIGN SYSTEM
+# 70% — original research visualization
+# 20% — research title / context
+# 10% — TNI identity
+#
+# The visualization is the hero. Branding identifies the work
+# without competing with the research itself.
+# ------------------------------------------------------------
 
 fig = plt.figure(
     figsize=(12, 6.3),
@@ -207,9 +224,39 @@ fig = plt.figure(
 
 fig.patch.set_facecolor(background)
 
-# Main chart occupies lower portion.
+# ------------------------------------------------------------
+# SHARED TNI RESEARCH IDENTITY + ARTICLE-SPECIFIC HEADER
+# ------------------------------------------------------------
+
+add_tni_research_identity(
+    fig,
+    navy=navy,
+    muted=muted,
+    background=background,
+)
+
+add_tni_research_header(
+    fig,
+    title="Average Stock Market Return",
+    subtitle="150+ Years of U.S. Market Returns",
+    descriptor=(
+        "P R I C E   ·   D I V I D E N D S   ·   "
+        "I N F L A T I O N   ·   R E A L   R E T U R N S"
+    ),
+    range_label=range_label,
+    navy=navy,
+    muted=muted,
+    accent="#0868a8",
+)
+
+# ------------------------------------------------------------
+# HERO RESEARCH VISUALIZATION
+#
+# The graph deliberately occupies most of the canvas.
+# ------------------------------------------------------------
+
 ax = fig.add_axes(
-    [0.065, 0.145, 0.91, 0.47]
+    TNI_RESEARCH_CHART_RECT
 )
 
 ax.set_facecolor(background)
@@ -220,20 +267,21 @@ ax.bar(
     positions,
     returns,
     color=colors,
-    width=0.82,
+    width=0.86,
     linewidth=0,
 )
 
 ax.axhline(
     0,
-    color=text,
-    linewidth=0.9,
+    color=navy,
+    linewidth=1.0,
 )
 
 ax.yaxis.grid(
     True,
     color=grid,
-    linewidth=0.8,
+    linewidth=0.7,
+    alpha=0.85,
 )
 
 ax.set_axisbelow(True)
@@ -272,7 +320,7 @@ ax.set_xticklabels(
         str(years[index])
         for index in tick_positions
     ],
-    fontsize=8,
+    fontsize=7.5,
     color=muted,
 )
 
@@ -284,7 +332,7 @@ ax.tick_params(
 
 ax.tick_params(
     axis="y",
-    labelsize=8,
+    labelsize=7.5,
     colors=muted,
     length=0,
 )
@@ -299,288 +347,56 @@ ax.yaxis.set_major_formatter(
 for spine in ax.spines.values():
     spine.set_visible(False)
 
-# ------------------------------------------------------------
-# BEST-YEAR HIGHLIGHT / STATIC TOOLTIP
-# ------------------------------------------------------------
+# Give the visualization a little breathing room while
+# preserving the complete observed return range.
 
-ax.scatter(
-    [best_index],
-    [best_return],
-    s=48,
-    facecolors="white",
-    edgecolors=positive_dark,
-    linewidths=2,
-    zorder=5,
+return_min = min(returns)
+return_max = max(returns)
+
+lower_padding = max(
+    5.0,
+    abs(return_min) * 0.08,
 )
 
-tooltip_text = (
-    f"{best_year}\n"
-    f"Total Return: {best_return:+.1f}%\n"
-    "Dividends Reinvested"
+upper_padding = max(
+    5.0,
+    abs(return_max) * 0.08,
 )
 
-ax.annotate(
-    tooltip_text,
-    xy=(best_index, best_return),
-    xytext=(32, -8),
-    textcoords="offset points",
-    fontsize=8.5,
-    color="white",
-    fontweight="bold",
-    linespacing=1.35,
-    bbox={
-        "boxstyle": "round,pad=0.65",
-        "fc": navy,
-        "ec": navy,
-    },
-    arrowprops={
-        "arrowstyle": "-|>",
-        "color": navy,
-        "lw": 1.2,
-    },
-    zorder=6,
+ax.set_ylim(
+    return_min - lower_padding,
+    return_max + upper_padding,
 )
 
 # ------------------------------------------------------------
-# TITLE
+# SMALL CHART IDENTITY
 # ------------------------------------------------------------
 
-fig.text(
-    0.065,
-    0.935,
-    "Average Stock Market Return",
-    fontsize=25,
-    fontweight="bold",
-    color=navy,
-)
-
-fig.text(
-    0.065,
-    0.882,
-    (
-        "Historical Total Returns by Year"
-        " · Dividends Reinvested"
-        f" · {range_label}"
-    ),
-    fontsize=11.5,
-    color=muted,
-)
-
-# ------------------------------------------------------------
-# BRAND
-# ------------------------------------------------------------
-
-fig.text(
-    0.965,
-    0.935,
-    "TRADINGNINVESTMENT",
-    fontsize=9,
-    fontweight="bold",
-    color=navy,
-    horizontalalignment="right",
-)
-
-# ------------------------------------------------------------
-# COLOR LEGEND
-# ------------------------------------------------------------
-
-legend_ax = fig.add_axes(
-    [0.065, 0.705, 0.39, 0.055]
-)
-
-gradient = [
-    [
-        -1.0 + (2.0 * i / 255)
-        for i in range(256)
-    ]
-]
-
-legend_cmap = LinearSegmentedColormap.from_list(
-    "tni_return_scale",
-    [
-        negative_dark,
-        negative_light,
-        "#f4f6f9",
-        positive_light,
-        positive_dark,
-    ],
-)
-
-legend_ax.imshow(
-    gradient,
-    aspect="auto",
-    cmap=legend_cmap,
-    extent=[-40, 50, 0, 1],
-)
-
-legend_ax.set_yticks([])
-
-legend_ax.set_xticks(
-    [-40, -20, 0, 20, 40, 50]
-)
-
-legend_ax.set_xticklabels(
-    [
-        "≤ -40%",
-        "-20%",
-        "0%",
-        "20%",
-        "40%",
-        "≥ 50%",
-    ],
-    fontsize=7.5,
-    color=muted,
-)
-
-for spine in legend_ax.spines.values():
-    spine.set_visible(False)
-
-fig.text(
-    0.065,
-    0.775,
-    "BAR COLOR SHOWS ANNUAL TOTAL RETURN",
-    fontsize=7.5,
+ax.text(
+    0.0,
+    1.018,
+    "ANNUAL TOTAL RETURN · DIVIDENDS REINVESTED",
+    transform=ax.transAxes,
+    fontsize=6.5,
     fontweight="bold",
     color=muted,
+    verticalalignment="bottom",
 )
 
-# ------------------------------------------------------------
-# STATISTICS CARD
-# ------------------------------------------------------------
-
-card_x = 0.515
-card_y = 0.682
-card_w = 0.45
-card_h = 0.12
-
-card = plt.Rectangle(
-    (card_x, card_y),
-    card_w,
-    card_h,
-    transform=fig.transFigure,
-    facecolor="#f6f8fb",
-    edgecolor="#e6ebf2",
-    linewidth=1,
-)
-
-fig.patches.append(card)
-
-column_width = card_w / 4
-
-stats = [
-    (
-        "AVERAGE",
-        f"{average_return:.1f}%",
-        "per year",
-        text,
-    ),
-    (
-        "BEST YEAR",
-        f"{best_return:+.1f}%",
-        str(best_year),
-        positive_dark,
-    ),
-    (
-        "WORST YEAR",
-        f"{worst_return:+.1f}%",
-        str(worst_year),
-        negative_dark,
-    ),
-    (
-        "POSITIVE YEARS",
-        f"{positive_pct:.0f}%",
-        (
-            f"{positive_count}"
-            f" of {len(completed_rows)}"
-        ),
-        text,
-    ),
-]
-
-for index, (
-    label,
-    value,
-    detail,
-    value_color,
-) in enumerate(stats):
-    x = (
-        card_x
-        + column_width * index
-        + column_width / 2
-    )
-
-    fig.text(
-        x,
-        card_y + 0.088,
-        label,
-        fontsize=6.8,
-        fontweight="bold",
-        color=muted,
-        horizontalalignment="center",
-    )
-
-    fig.text(
-        x,
-        card_y + 0.047,
-        value,
-        fontsize=15,
-        fontweight="bold",
-        color=value_color,
-        horizontalalignment="center",
-    )
-
-    fig.text(
-        x,
-        card_y + 0.015,
-        detail,
-        fontsize=6.8,
-        color=muted,
-        horizontalalignment="center",
-    )
-
-    if index < 3:
-        divider_x = (
-            card_x
-            + column_width * (index + 1)
-        )
-
-        fig.lines.append(
-            plt.Line2D(
-                [divider_x, divider_x],
-                [
-                    card_y + 0.015,
-                    card_y + card_h - 0.015,
-                ],
-                transform=fig.transFigure,
-                color="#dce2ea",
-                linewidth=0.8,
-            )
-        )
-
-# ------------------------------------------------------------
-# FOOTER
-# ------------------------------------------------------------
-
-fig.text(
-    0.065,
-    0.055,
-    (
-        "Total return"
-        " • Dividends reinvested"
-        " • Historical U.S. equity / S&P 500 research"
-    ),
-    fontsize=7.5,
-    color=muted,
-)
-
-fig.text(
-    0.965,
-    0.055,
-    "tradingninvestment.com",
-    fontsize=7.5,
+ax.text(
+    1.0,
+    1.018,
+    "BLUE = POSITIVE   ·   RED = NEGATIVE",
+    transform=ax.transAxes,
+    fontsize=6.3,
     color=muted,
     horizontalalignment="right",
+    verticalalignment="bottom",
 )
+
+# ------------------------------------------------------------
+# OUTPUT
+# ------------------------------------------------------------
 
 OUTPUT.parent.mkdir(
     parents=True,
@@ -598,6 +414,7 @@ plt.close()
 
 print(f"Created: {OUTPUT}")
 print("Size: 1200 x 630")
+print("TNI Research canvas: PASS")
 print(f"Observations displayed: {len(rows)}")
 print(f"Completed years in statistics: {len(completed_rows)}")
 print(f"Range: {range_label}")
