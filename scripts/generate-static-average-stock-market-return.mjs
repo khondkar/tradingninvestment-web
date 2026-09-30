@@ -390,6 +390,9 @@ const structuredData =
           canonicalUrl,
 
         isPartOf: {
+          "@type":
+            "Article",
+
           "@id":
             `${canonicalUrl}#article`,
         },
