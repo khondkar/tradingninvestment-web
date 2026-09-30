@@ -160,3 +160,26 @@
     padding: 0 14px;
   }
 }
+
+/* Dividend historical answer block */
+
+.tni-dividend-table-takeaway {
+  margin: 26px 0;
+  padding-top: 24px;
+  border-top: 1px solid #e7edf3;
+}
+
+.tni-dividend-table-takeaway h4 {
+  margin: 0 0 12px;
+  color: #0b1f33;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.tni-dividend-table-takeaway p {
+  margin: 0 0 14px;
+}
+
+.tni-dividend-table-takeaway strong {
+  color: #0b1f33;
+}

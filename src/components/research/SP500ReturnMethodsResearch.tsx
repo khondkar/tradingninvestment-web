@@ -1,7 +1,9 @@
 import {
   lazy,
   Suspense,
+  useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react'
 
@@ -21,6 +23,17 @@ const SP500ReturnMethodChart =
       import(
         '../charts/SP500ReturnMethodChart'
       ),
+  )
+
+const loadDividendCompoundingExplorer =
+  () =>
+    import(
+      '../charts/DividendCompoundingExplorer'
+    )
+
+const DividendCompoundingExplorer =
+  lazy(
+    loadDividendCompoundingExplorer,
   )
 
 type ReturnMode =
@@ -461,6 +474,366 @@ function buildHistoricalSummary(
   return result
 }
 
+type DividendCompoundingSummary = {
+  startYear: number
+  endYear: number
+  observationCount: number
+  startingInvestment: number
+  priceEndingValue: number
+  totalEndingValue: number
+  dividendWealthDifference: number
+  priceCagr: number | null
+  totalCagr: number | null
+}
+
+type DividendPeriodComparison = {
+  label: string
+  startYear: number
+  endYear: number
+  observationCount: number
+  startingInvestment: number
+  priceEndingValue: number
+  totalEndingValue: number
+  dividendReinvestmentContribution: number
+  priceCagr: number | null
+  totalCagr: number | null
+  contributionPct: number
+}
+
+const DIVIDEND_COMPARISON_PERIODS = [
+  1,
+  2,
+  3,
+  5,
+  10,
+  30,
+  50,
+  100,
+  150,
+] as const
+
+function buildDividendPeriodComparison(
+  rows: SP500ReturnMethodChartRow[],
+  years: number | null,
+  startingInvestment = 10000,
+): DividendPeriodComparison | null {
+  const completed =
+    [...rows]
+      .filter(
+        (row) =>
+          !row.is_ytd &&
+          Number.isFinite(
+            row.price_return,
+          ) &&
+          Number.isFinite(
+            row.total_return,
+          ),
+      )
+      .sort(
+        (a, b) =>
+          a.year - b.year,
+      )
+
+  if (completed.length === 0) {
+    return null
+  }
+
+  if (
+    years !== null &&
+    completed.length < years
+  ) {
+    return null
+  }
+
+  const selected =
+    years === null
+      ? completed
+      : completed.slice(-years)
+
+  let priceEndingValue =
+    startingInvestment
+
+  let totalEndingValue =
+    startingInvestment
+
+  for (const row of selected) {
+    priceEndingValue *=
+      1 +
+      row.price_return / 100
+
+    totalEndingValue *=
+      1 +
+      row.total_return / 100
+  }
+
+  const observationCount =
+    selected.length
+
+  const priceCagr =
+    priceEndingValue > 0
+      ? (
+          Math.pow(
+            priceEndingValue /
+              startingInvestment,
+            1 / observationCount,
+          ) - 1
+        ) * 100
+      : null
+
+  const totalCagr =
+    totalEndingValue > 0
+      ? (
+          Math.pow(
+            totalEndingValue /
+              startingInvestment,
+            1 / observationCount,
+          ) - 1
+        ) * 100
+      : null
+
+  const dividendReinvestmentContribution =
+    totalEndingValue -
+    priceEndingValue
+
+  const contributionPct =
+    totalEndingValue !== 0
+      ? (
+          dividendReinvestmentContribution /
+          totalEndingValue
+        ) * 100
+      : 0
+
+  return {
+    label:
+      years === null
+        ? `Full History · ${observationCount} Years`
+        : `${years} ${
+            years === 1
+              ? 'Year'
+              : 'Years'
+          }`,
+    startYear:
+      selected[0].year,
+    endYear:
+      selected[
+        selected.length - 1
+      ].year,
+    observationCount,
+    startingInvestment,
+    priceEndingValue,
+    totalEndingValue,
+    dividendReinvestmentContribution,
+    priceCagr,
+    totalCagr,
+    contributionPct,
+  }
+}
+
+function buildDividendComparisonTable(
+  rows: SP500ReturnMethodChartRow[],
+): DividendPeriodComparison[] {
+  const periodRows =
+    DIVIDEND_COMPARISON_PERIODS
+      .map((years) =>
+        buildDividendPeriodComparison(
+          rows,
+          years,
+        ),
+      )
+      .filter(
+        (
+          row,
+        ): row is DividendPeriodComparison =>
+          row !== null,
+      )
+
+  const fullHistory =
+    buildDividendPeriodComparison(
+      rows,
+      null,
+    )
+
+  if (fullHistory) {
+    periodRows.push(
+      fullHistory,
+    )
+  }
+
+  return periodRows
+}
+
+function formatDividendTableMoney(
+  value: number,
+): string {
+  if (!Number.isFinite(value)) {
+    return '—'
+  }
+
+  const absolute =
+    Math.abs(value)
+
+  const sign =
+    value < 0
+      ? '-'
+      : ''
+
+  if (
+    absolute >=
+    1_000_000_000
+  ) {
+    return `${sign}$${(
+      absolute /
+      1_000_000_000
+    ).toFixed(2)}B`
+  }
+
+  if (
+    absolute >=
+    1_000_000
+  ) {
+    return `${sign}$${(
+      absolute /
+      1_000_000
+    ).toFixed(2)}M`
+  }
+
+  return new Intl.NumberFormat(
+    'en-US',
+    {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    },
+  ).format(value)
+}
+
+function formatDividendContributionMoney(
+  value: number,
+): string {
+  if (!Number.isFinite(value)) {
+    return '—'
+  }
+
+  const formatted =
+    formatDividendTableMoney(
+      Math.abs(value),
+    )
+
+  if (value > 0) {
+    return `+${formatted}`
+  }
+
+  if (value < 0) {
+    return `-${formatted}`
+  }
+
+  return formatted
+}
+
+function formatDividendTablePercent(
+  value: number | null,
+  digits = 2,
+): string {
+  if (
+    value === null ||
+    !Number.isFinite(value)
+  ) {
+    return '—'
+  }
+
+  return `${value.toFixed(
+    digits,
+  )}%`
+}
+
+function buildDividendCompoundingSummary(
+  rows: SP500ReturnMethodChartRow[],
+  startingInvestment = 10000,
+): DividendCompoundingSummary | null {
+  const completed =
+    [...rows]
+      .filter(
+        (row) =>
+          !row.is_ytd &&
+          Number.isFinite(row.price_return) &&
+          Number.isFinite(row.total_return),
+      )
+      .sort(
+        (a, b) =>
+          a.year - b.year,
+      )
+
+  if (completed.length === 0) {
+    return null
+  }
+
+  let priceEndingValue =
+    startingInvestment
+
+  let totalEndingValue =
+    startingInvestment
+
+  for (const row of completed) {
+    priceEndingValue *=
+      1 + row.price_return / 100
+
+    totalEndingValue *=
+      1 + row.total_return / 100
+  }
+
+  return {
+    startYear:
+      completed[0].year,
+
+    endYear:
+      completed[
+        completed.length - 1
+      ].year,
+
+    observationCount:
+      completed.length,
+
+    startingInvestment,
+
+    priceEndingValue,
+
+    totalEndingValue,
+
+    dividendWealthDifference:
+      totalEndingValue -
+      priceEndingValue,
+
+    priceCagr:
+      compoundAnnualizedReturn(
+        completed,
+        'price_return',
+      ),
+
+    totalCagr:
+      compoundAnnualizedReturn(
+        completed,
+        'total_return',
+      ),
+  }
+}
+
+function formatWealthValue(
+  value: number,
+): string {
+  if (!Number.isFinite(value)) {
+    return '—'
+  }
+
+  return new Intl.NumberFormat(
+    'en-US',
+    {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    },
+  ).format(value)
+}
+
 function formatSummaryReturn(
   value: number | null,
 ): string {
@@ -795,6 +1168,17 @@ export default function SP500ReturnMethodsResearch() {
     )
 
 
+  const [
+    shouldLoadDividendExplorer,
+    setShouldLoadDividendExplorer,
+  ] =
+    useState(false)
+
+  const dividendSectionRef =
+    useRef<HTMLElement | null>(
+      null,
+    )
+
   const historicalSummary =
     useMemo(
       () =>
@@ -803,6 +1187,66 @@ export default function SP500ReturnMethodsResearch() {
         ),
       [],
     )
+
+  useEffect(() => {
+    if (
+      shouldLoadDividendExplorer
+    ) {
+      return
+    }
+
+    const section =
+      dividendSectionRef.current
+
+    if (section === null) {
+      return
+    }
+
+    if (
+      typeof IntersectionObserver ===
+      'undefined'
+    ) {
+      setShouldLoadDividendExplorer(
+        true,
+      )
+
+      return
+    }
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+          if (
+            entries.some(
+              (entry) =>
+                entry.isIntersecting,
+            )
+          ) {
+            void loadDividendCompoundingExplorer()
+
+            setShouldLoadDividendExplorer(
+              true,
+            )
+
+            observer.disconnect()
+          }
+        },
+        {
+          rootMargin:
+            '500px 0px 500px 0px',
+
+          threshold: 0,
+        },
+      )
+
+    observer.observe(section)
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [
+    shouldLoadDividendExplorer,
+  ])
 
   const twentyYearSummary =
     historicalSummary.find(
@@ -815,6 +1259,32 @@ export default function SP500ReturnMethodsResearch() {
       (row) =>
         row.key === 'full-history',
     )
+
+  const dividendCompoundingSummary =
+    useMemo(
+      () =>
+        buildDividendCompoundingSummary(
+          dataset.data,
+        ),
+      [],
+    )
+
+  const dividendComparisonRows =
+    useMemo(
+      () =>
+        buildDividendComparisonTable(
+          dataset.data,
+        ),
+      [],
+    )
+
+  const dividendComparisonFullHistory =
+    dividendComparisonRows.length > 0
+      ? dividendComparisonRows[
+          dividendComparisonRows.length -
+            1
+        ]
+      : null
 
   const annualHistoryInsights =
     useMemo(() => {
@@ -999,6 +1469,64 @@ export default function SP500ReturnMethodsResearch() {
           benchmark.
         </p>
       </header>
+
+      <nav
+        className="tni-return-methods__article-nav"
+        aria-label="Article sections"
+      >
+        <a
+          href="#historical-return-summary"
+          className="tni-return-methods__nav-item"
+        >
+          RETURNS
+        </a>
+
+        <div className="tni-return-methods__nav-dropdown">
+          <a
+            href="#dividends-and-compounding"
+            className="tni-return-methods__nav-item tni-return-methods__nav-item--dividends"
+            aria-label="Dividends and Compounding"
+            onClick={() => {
+              void loadDividendCompoundingExplorer()
+
+              setShouldLoadDividendExplorer(
+                true,
+              )
+            }}
+          >
+            DIVIDENDS
+          </a>
+
+          <a
+            href="#dividends-and-compounding"
+            className="tni-return-methods__nav-subitem"
+            tabIndex={-1}
+            onClick={() => {
+              void loadDividendCompoundingExplorer()
+
+              setShouldLoadDividendExplorer(
+                true,
+              )
+            }}
+          >
+            COMPOUNDING
+          </a>
+        </div>
+
+        <a
+          href="#methodology-sources-verification"
+          className="tni-return-methods__nav-item"
+        >
+          METHODOLOGY
+        </a>
+
+        <a
+          href="#stock-market-returns-by-year"
+          className="tni-return-methods__nav-item"
+        >
+          RETURNS BY YEAR
+        </a>
+      </nav>
 
       {/* =====================================================
           RETURN METHOD
@@ -1822,6 +2350,768 @@ export default function SP500ReturnMethodsResearch() {
         </div>
 
       </section>
+
+      {/* =====================================================
+          SECTION 3 — DIVIDENDS & COMPOUNDING
+      ===================================================== */}
+
+      {dividendCompoundingSummary && (
+        <section
+          id="dividends-and-compounding"
+          ref={dividendSectionRef}
+          className="tni-return-methods__dividend-section tni-return-methods__major-section"
+        >
+          <header className="tni-return-methods__section-header">
+            <span className="tni-return-methods__section-number">
+              SECTION 3
+            </span>
+
+            <span className="tni-return-methods__section-eyebrow">
+              DIVIDENDS &amp; COMPOUNDING
+            </span>
+
+            <h2>
+              How Dividends Changed Long-Term
+              Stock Market Returns
+            </h2>
+
+            <p>
+              Stock-price appreciation tells only
+              part of the historical return story.
+              Investors may also receive dividends,
+              and when those dividends are
+              reinvested they purchase additional
+              shares that can participate in future
+              price gains and future dividends.
+            </p>
+          </header>
+
+          <div className="tni-dividend-intro">
+            <p>
+              TNI separates{' '}
+              <strong>price return</strong> from{' '}
+              <strong>total return</strong> so the
+              effect of reinvested dividends can be
+              seen directly. Price return measures
+              changes in market prices alone. Total
+              return includes dividends and assumes
+              those distributions are reinvested.
+            </p>
+
+            <p>
+              Across long holding periods, even a
+              modest difference in annualized return
+              can produce a very large difference in
+              ending wealth because each year's
+              return compounds on the value created
+              in previous years.
+            </p>
+          </div>
+
+          <div className="tni-dividend-comparison">
+            <div className="tni-dividend-comparison__heading">
+              <span>
+                HISTORICAL COMPOUNDING COMPARISON
+              </span>
+
+              <h3>
+                What $10,000 Would Have Become:
+                Price Return vs. Total Return
+              </h3>
+
+              <p>
+                Hypothetical growth across the{' '}
+                {
+                  dividendCompoundingSummary.observationCount
+                }{' '}
+                completed annual observations from{' '}
+                <strong>
+                  {
+                    dividendCompoundingSummary.startYear
+                  }
+                </strong>{' '}
+                through{' '}
+                <strong>
+                  {
+                    dividendCompoundingSummary.endYear
+                  }
+                </strong>
+                .
+              </p>
+            </div>
+
+            <div className="tni-dividend-cards">
+              <article className="tni-dividend-card">
+                <span>
+                  STARTING INVESTMENT
+                </span>
+
+                <strong>
+                  {formatWealthValue(
+                    dividendCompoundingSummary.startingInvestment,
+                  )}
+                </strong>
+
+                <small>
+                  Same hypothetical starting value
+                  for both return methods
+                </small>
+              </article>
+
+              <article className="tni-dividend-card">
+                <span>
+                  PRICE RETURN
+                </span>
+
+                <strong>
+                  {formatWealthValue(
+                    dividendCompoundingSummary.priceEndingValue,
+                  )}
+                </strong>
+
+                <small>
+                  {
+                    formatSummaryReturn(
+                      dividendCompoundingSummary.priceCagr,
+                    )
+                  }{' '}
+                  annualized · excludes dividends
+                </small>
+              </article>
+
+              <article className="tni-dividend-card tni-dividend-card--primary">
+                <span>
+                  TOTAL RETURN
+                </span>
+
+                <strong>
+                  {formatWealthValue(
+                    dividendCompoundingSummary.totalEndingValue,
+                  )}
+                </strong>
+
+                <small>
+                  {
+                    formatSummaryReturn(
+                      dividendCompoundingSummary.totalCagr,
+                    )
+                  }{' '}
+                  annualized · dividends reinvested
+                </small>
+              </article>
+            </div>
+
+            <div className="tni-dividend-difference">
+              <span>
+                COMPOUNDING DIFFERENCE
+              </span>
+
+              <strong>
+                {formatWealthValue(
+                  dividendCompoundingSummary.dividendWealthDifference,
+                )}
+              </strong>
+
+              <p>
+                Difference between the hypothetical
+                ending values produced by the
+                dividend-reinvested total-return
+                series and the price-only series.
+              </p>
+            </div>
+          </div>
+
+          <div className="tni-dividend-explorer-shell">
+            {shouldLoadDividendExplorer ? (
+              <Suspense
+                fallback={
+                  <div
+                    className="tni-dividend-explorer-loading"
+                    aria-live="polite"
+                  >
+                    Loading interactive
+                    dividend analysis…
+                  </div>
+                }
+              >
+                <DividendCompoundingExplorer
+                  data={dataset.data}
+                />
+              </Suspense>
+            ) : (
+              <div
+                className="tni-dividend-explorer-loading"
+                aria-hidden="true"
+              >
+                Interactive dividend
+                analysis loads as this
+                section approaches.
+              </div>
+            )}
+          </div>
+
+          {dividendComparisonRows.length >
+            0 && (
+            <div className="tni-dividend-period-comparison">
+              <div className="tni-dividend-period-comparison__heading">
+                <span>
+                  RETURNS BY INVESTMENT
+                  PERIOD
+                </span>
+
+                <h3>
+                  Stock Market Returns
+                  With and Without
+                  Dividends by Investment
+                  Period
+                </h3>
+
+                <p
+                  id="dividend-return-table-description"
+                >
+                  This historical comparison shows
+                  how a hypothetical{' '}
+                  <strong>
+                    {formatWealthValue(
+                      dividendComparisonRows[
+                        0
+                      ].startingInvestment,
+                    )}
+                  </strong>{' '}
+                  investment would have grown using
+                  price return alone versus total
+                  return with dividends reinvested.
+                  Each investment period is calculated
+                  independently from completed
+                  calendar-year observations, allowing
+                  direct comparison of the effect of
+                  dividend reinvestment across short-
+                  and long-term holding periods.
+                </p>
+              </div>
+
+              <div className="tni-dividend-period-table-shell">
+                <table
+                  className="tni-dividend-period-table"
+                  aria-describedby="dividend-return-table-description"
+                >
+                  <caption>
+                    Historical stock market price return,
+                    total return with dividends reinvested,
+                    and dividend plus reinvestment
+                    contribution by investment period,
+                    based on a hypothetical $10,000
+                    starting investment.
+                  </caption>
+
+                  <thead>
+                    <tr>
+                      <th scope="col">
+                        PERIOD
+                      </th>
+
+                      <th scope="col">
+                        PRICE RETURN
+                      </th>
+
+                      <th scope="col">
+                        TOTAL RETURN
+                      </th>
+
+                      <th scope="col">
+                        DIVIDEND +
+                        REINVESTMENT
+                      </th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    {
+                      dividendComparisonRows.map(
+                        (row) => (
+                          <tr
+                            key={`${row.label}-${row.startYear}-${row.endYear}`}
+                          >
+                            <th scope="row">
+                              <strong>
+                                {
+                                  row.label
+                                }
+                              </strong>
+
+                              <small>
+                                {
+                                  row.startYear
+                                }
+                                –
+                                {
+                                  row.endYear
+                                }
+                              </small>
+                            </th>
+
+                            <td>
+                              <strong>
+                                {
+                                  formatDividendTableMoney(
+                                    row.priceEndingValue,
+                                  )
+                                }
+                              </strong>
+
+                              <small>
+                                {
+                                  formatDividendTablePercent(
+                                    row.priceCagr,
+                                  )
+                                }{' '}
+                                {
+                                  row.observationCount ===
+                                  1
+                                    ? 'return'
+                                    : 'CAGR'
+                                }
+                              </small>
+                            </td>
+
+                            <td>
+                              <strong>
+                                {
+                                  formatDividendTableMoney(
+                                    row.totalEndingValue,
+                                  )
+                                }
+                              </strong>
+
+                              <small>
+                                {
+                                  formatDividendTablePercent(
+                                    row.totalCagr,
+                                  )
+                                }{' '}
+                                {
+                                  row.observationCount ===
+                                  1
+                                    ? 'return'
+                                    : 'CAGR'
+                                }
+                              </small>
+                            </td>
+
+                            <td className="tni-dividend-period-table__contribution">
+                              <strong>
+                                {
+                                  formatDividendContributionMoney(
+                                    row.dividendReinvestmentContribution,
+                                  )
+                                }
+                              </strong>
+
+                              <small>
+                                <span className="tni-dividend-period-table__contribution-pill">
+                                  {
+                                    formatDividendTablePercent(
+                                      row.contributionPct,
+                                      1,
+                                    )
+                                  }{' '}
+                                  contribution
+                                </span>
+                              </small>
+                            </td>
+                          </tr>
+                        ),
+                      )
+                    }
+                  </tbody>
+                </table>
+              </div>
+
+              {
+                dividendComparisonFullHistory && (
+                  <div className="tni-dividend-table-guide">
+                    <h3>
+                      How to Read This
+                      Table
+                    </h3>
+
+                    <p>
+                      Every row begins
+                      with the same
+                      hypothetical{' '}
+                      <strong>
+                        {
+                          formatWealthValue(
+                            dividendComparisonFullHistory
+                              .startingInvestment,
+                          )
+                        }
+                      </strong>{' '}
+                      investment and
+                      compounds the
+                      completed annual
+                      observations for
+                      that period. The{' '}
+                      <strong>
+                        Price Return
+                      </strong>{' '}
+                      column shows the
+                      ending value and
+                      annualized return
+                      from market-price
+                      changes alone. The{' '}
+                      <strong>
+                        Total Return
+                      </strong>{' '}
+                      column shows the
+                      ending value and
+                      annualized return
+                      when dividends are
+                      reinvested.
+                    </p>
+
+                    <p>
+                      The{' '}
+                      <strong>
+                        Dividend +
+                        Reinvestment
+                      </strong>{' '}
+                      column is the
+                      difference between
+                      those two ending
+                      wealth paths. Its
+                      contribution
+                      percentage measures
+                      the share of ending
+                      total-return wealth
+                      represented by that
+                      difference. It is{' '}
+                      <strong>
+                        not a historical
+                        dividend yield
+                      </strong>{' '}
+                      and should not be
+                      interpreted as a
+                      standalone dividend
+                      return.
+                    </p>
+
+                    <p>
+                      Across the full{' '}
+                      <strong>
+                        {
+                          dividendComparisonFullHistory
+                            .observationCount
+                        }
+                        -year
+                      </strong>{' '}
+                      completed history
+                      from{' '}
+                      <strong>
+                        {
+                          dividendComparisonFullHistory
+                            .startYear
+                        }
+                      </strong>{' '}
+                      through{' '}
+                      <strong>
+                        {
+                          dividendComparisonFullHistory
+                            .endYear
+                        }
+                      </strong>
+                      , the hypothetical{' '}
+                      <strong>
+                        {
+                          formatWealthValue(
+                            dividendComparisonFullHistory
+                              .startingInvestment,
+                          )
+                        }
+                      </strong>{' '}
+                      price-only
+                      investment grew to{' '}
+                      <strong>
+                        {
+                          formatDividendTableMoney(
+                            dividendComparisonFullHistory
+                              .priceEndingValue,
+                          )
+                        }
+                      </strong>
+                      , compared with{' '}
+                      <strong>
+                        {
+                          formatDividendTableMoney(
+                            dividendComparisonFullHistory
+                              .totalEndingValue,
+                          )
+                        }
+                      </strong>{' '}
+                      using the
+                      dividend-reinvested
+                      total-return series.
+                      The{' '}
+                      <strong>
+                        {
+                          formatDividendContributionMoney(
+                            dividendComparisonFullHistory
+                              .dividendReinvestmentContribution,
+                          )
+                        }
+                      </strong>{' '}
+                      difference
+                      represents{' '}
+                      <strong>
+                        {
+                          formatDividendTablePercent(
+                            dividendComparisonFullHistory
+                              .contributionPct,
+                            1,
+                          )
+                        }
+                      </strong>{' '}
+                      of ending
+                      total-return wealth
+                      in this historical
+                      comparison.
+                    </p>
+
+                    <div className="tni-dividend-table-takeaway">
+                      <h4>
+                        What the Historical Data Shows
+                      </h4>
+
+                      <p>
+                        Over the full{' '}
+                        <strong>
+                          {
+                            dividendComparisonFullHistory
+                              .observationCount
+                          }
+                          -year
+                        </strong>{' '}
+                        completed history from{' '}
+                        <strong>
+                          {
+                            dividendComparisonFullHistory
+                              .startYear
+                          }
+                        </strong>{' '}
+                        through{' '}
+                        <strong>
+                          {
+                            dividendComparisonFullHistory
+                              .endYear
+                          }
+                        </strong>
+                        , a hypothetical{' '}
+                        <strong>
+                          {
+                            formatWealthValue(
+                              dividendComparisonFullHistory
+                                .startingInvestment,
+                            )
+                          }
+                        </strong>{' '}
+                        following the price-return
+                        series grew to approximately{' '}
+                        <strong>
+                          {
+                            formatDividendTableMoney(
+                              dividendComparisonFullHistory
+                                .priceEndingValue,
+                            )
+                          }
+                        </strong>
+                        . Using the
+                        dividend-reinvested
+                        total-return series, the same
+                        hypothetical starting
+                        investment grew to
+                        approximately{' '}
+                        <strong>
+                          {
+                            formatDividendTableMoney(
+                              dividendComparisonFullHistory
+                                .totalEndingValue,
+                            )
+                          }
+                        </strong>
+                        .
+                      </p>
+
+                      <p>
+                        The difference between these
+                        two historical wealth paths
+                        was approximately{' '}
+                        <strong>
+                          {
+                            formatDividendContributionMoney(
+                              dividendComparisonFullHistory
+                                .dividendReinvestmentContribution,
+                            )
+                          }
+                        </strong>
+                        . That difference represents{' '}
+                        <strong>
+                          {
+                            formatDividendTablePercent(
+                              dividendComparisonFullHistory
+                                .contributionPct,
+                              1,
+                            )
+                          }
+                        </strong>{' '}
+                        of ending total-return wealth
+                        in this historical comparison.
+                      </p>
+
+                      <p>
+                        The dividend + reinvestment
+                        contribution is not a dividend
+                        yield or a standalone dividend
+                        return. It measures the
+                        difference between the
+                        dividend-reinvested
+                        total-return wealth path and
+                        the price-only wealth path,
+                        including the long-term
+                        compounding effect of
+                        reinvested dividends.
+                      </p>
+                    </div>
+
+                    <p className="tni-dividend-table-guide__note">
+                      Historical results
+                      are hypothetical and
+                      do not include
+                      taxes, fees,
+                      transaction costs
+                      or other
+                      investor-specific
+                      effects. Past
+                      performance is not
+                      a forecast of future
+                      returns.
+                    </p>
+                  </div>
+                )
+              }
+            </div>
+          )}
+
+          {fullHistorySummary && (
+            <div className="tni-dividend-explanation">
+              <h3>
+                Why Reinvested Dividends Matter
+              </h3>
+
+              <p>
+                Over the completed historical period
+                from{' '}
+                <strong>
+                  {fullHistorySummary.startYear}
+                </strong>{' '}
+                through{' '}
+                <strong>
+                  {fullHistorySummary.endYear}
+                </strong>
+                , the annualized price return was{' '}
+                <strong>
+                  {formatSummaryReturn(
+                    fullHistorySummary.price_return,
+                  )}
+                </strong>
+                , compared with an annualized total
+                return of{' '}
+                <strong>
+                  {formatSummaryReturn(
+                    fullHistorySummary.total_return,
+                  )}
+                </strong>{' '}
+                when dividends were reinvested.
+              </p>
+
+              <p>
+                The gap between those annualized
+                returns may appear relatively small
+                when viewed one year at a time. Over
+                many decades, however, compounding
+                repeatedly applies that difference
+                to an increasingly larger base.
+                That is why long-run price-index
+                performance and long-run investor
+                total return can tell very different
+                stories.
+              </p>
+
+              <p>
+                Dividend reinvestment does not
+                eliminate market risk. Total-return
+                investors still experienced major
+                bear markets, recessions and
+                financial crises. The comparison
+                isolates how the treatment of
+                dividends changes the measurement
+                of historical market performance.
+              </p>
+            </div>
+          )}
+
+          {twentyYearSummary && (
+            <div className="tni-dividend-recent">
+              <span>
+                RECENT PERSPECTIVE
+              </span>
+
+              <p>
+                During the latest{' '}
+                <strong>
+                  {
+                    twentyYearSummary.observationCount
+                  } completed years
+                </strong>
+                , from{' '}
+                <strong>
+                  {twentyYearSummary.startYear}
+                </strong>{' '}
+                through{' '}
+                <strong>
+                  {twentyYearSummary.endYear}
+                </strong>
+                , annualized total return was{' '}
+                <strong>
+                  {formatSummaryReturn(
+                    twentyYearSummary.total_return,
+                  )}
+                </strong>
+                , compared with annualized price
+                return of{' '}
+                <strong>
+                  {formatSummaryReturn(
+                    twentyYearSummary.price_return,
+                  )}
+                </strong>
+                .
+              </p>
+            </div>
+          )}
+
+          <p className="tni-dividend-note">
+            <strong>Methodology note:</strong>{' '}
+            This is a historical illustration based
+            on TNI's annual return series, not the
+            performance of an investable account.
+            It assumes annual compounding and, for
+            total return, reinvestment of dividends.
+            It does not include taxes, transaction
+            costs, management fees or investor cash
+            flows. Historical results do not predict
+            future returns.
+          </p>
+        </section>
+      )}
 
       {/* =====================================================
           METHODOLOGY
@@ -2684,6 +3974,442 @@ export default function SP500ReturnMethodsResearch() {
         .tni-return-methods {
           width: 100%;
           color: inherit;
+        }
+
+        /* ---------------------------------------------
+           ARTICLE SECTION NAVIGATION
+        --------------------------------------------- */
+
+        .tni-return-methods__article-nav {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          margin: 24px 0 30px;
+          padding: 5px;
+          overflow-x: auto;
+          border: 1px solid #e4ebf3;
+          border-radius: 12px;
+          background: #ffffff;
+          scrollbar-width: none;
+        }
+
+        .tni-return-methods__article-nav::-webkit-scrollbar {
+          display: none;
+        }
+
+        .tni-return-methods__nav-item {
+          position: relative;
+          flex: 0 0 auto;
+          padding: 9px 11px;
+          border-radius: 7px;
+          color: #64748b;
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.07em;
+          text-decoration: none;
+          white-space: nowrap;
+          transition:
+            background 160ms ease,
+            color 160ms ease;
+        }
+
+        .tni-return-methods__nav-item:hover,
+        .tni-return-methods__nav-item:focus-visible {
+          background: #f4f7fb;
+          color: #10233f;
+        }
+
+        /*
+          COLORFUL RESEARCH TABS
+        */
+
+        .tni-return-methods__article-nav {
+          gap: 8px;
+          padding: 8px;
+          overflow: visible;
+          border-color: #d8e1ec;
+        }
+
+        .tni-return-methods__nav-item {
+          border: 1px solid #bfd1e5;
+          background:
+            linear-gradient(
+              180deg,
+              #f5f9ff 0%,
+              #e6f0fb 100%
+            );
+          color: #123b69;
+          box-shadow:
+            0 3px 10px
+            rgba(16, 35, 63, 0.07);
+          transition:
+            transform 150ms ease,
+            box-shadow 150ms ease,
+            border-color 150ms ease;
+        }
+
+        .tni-return-methods__nav-item:hover,
+        .tni-return-methods__nav-item:focus-visible {
+          border-color: #789abb;
+          box-shadow:
+            0 7px 18px
+            rgba(16, 35, 63, 0.13);
+          transform: translateY(-1px);
+        }
+
+        /*
+          DIVIDENDS — permanent soft green
+        */
+
+        .tni-return-methods__nav-dropdown {
+          position: relative;
+          flex: 0 0 auto;
+        }
+
+        .tni-return-methods__nav-item--dividends {
+          display: block;
+          border-color: #8eb4a0;
+          background:
+            linear-gradient(
+              180deg,
+              #eaf7ef 0%,
+              #dcefe4 100%
+            );
+          color: #185c38;
+        }
+
+        .tni-return-methods__nav-item--dividends:hover,
+        .tni-return-methods__nav-item--dividends:focus-visible {
+          border-color: #5d9674;
+          color: #10492c;
+        }
+
+        /*
+          COMPOUNDING — vertical dropdown
+        */
+
+        .tni-return-methods__nav-subitem {
+          position: absolute;
+          z-index: 40;
+          top: calc(100% + 5px);
+          left: 0;
+          min-width: 100%;
+          padding: 9px 11px;
+          border: 1px solid #8eb4a0;
+          border-radius: 7px;
+          background: #ffffff;
+          color: #185c38;
+          box-shadow:
+            0 10px 24px
+            rgba(16, 35, 63, 0.14);
+          font-size: 9px;
+          font-weight: 800;
+          letter-spacing: 0.06em;
+          opacity: 0;
+          pointer-events: none;
+          text-align: center;
+          text-decoration: none;
+          transform: translateY(-5px);
+          transition:
+            opacity 150ms ease,
+            transform 150ms ease;
+          white-space: nowrap;
+        }
+
+        .tni-return-methods__nav-dropdown:hover
+        .tni-return-methods__nav-subitem,
+        .tni-return-methods__nav-dropdown:focus-within
+        .tni-return-methods__nav-subitem {
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateY(0);
+        }
+
+
+        /* ---------------------------------------------
+           DIVIDENDS & COMPOUNDING
+        --------------------------------------------- */
+
+        .tni-return-methods__dividend-section {
+          margin: 72px 0;
+          padding-top: 8px;
+          scroll-margin-top: 90px;
+        }
+
+        .tni-return-methods__section-number {
+          display: block;
+          margin-bottom: 7px;
+          color: #94a3b8;
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+        }
+
+        .tni-return-methods__dividend-section
+        .tni-return-methods__section-header {
+          max-width: 860px;
+          margin-bottom: 30px;
+        }
+
+        .tni-return-methods__dividend-section
+        .tni-return-methods__section-eyebrow {
+          display: block;
+          margin-bottom: 10px;
+          color: #52647b;
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.1em;
+        }
+
+        .tni-return-methods__dividend-section
+        .tni-return-methods__section-header h2 {
+          max-width: 760px;
+          margin: 0 0 16px;
+          color: #10233f;
+          font-size:
+            clamp(30px, 5vw, 46px);
+          line-height: 1.08;
+          letter-spacing: -0.035em;
+        }
+
+        .tni-return-methods__dividend-section p {
+          color: #52647b;
+          font-size: 15px;
+          line-height: 1.75;
+        }
+
+        .tni-dividend-intro {
+          max-width: 850px;
+          margin-bottom: 30px;
+        }
+
+        .tni-dividend-intro p {
+          margin: 0 0 14px;
+        }
+
+
+        /* ---------------------------------------------
+           COMPOUNDING COMPARISON
+        --------------------------------------------- */
+
+        .tni-dividend-comparison {
+          margin: 32px 0;
+          padding:
+            clamp(20px, 4vw, 34px);
+          border: 1px solid #dfe7f0;
+          border-radius: 16px;
+          background:
+            linear-gradient(
+              180deg,
+              #ffffff 0%,
+              #f8fafc 100%
+            );
+        }
+
+        .tni-dividend-comparison__heading {
+          max-width: 760px;
+          margin-bottom: 24px;
+        }
+
+        .tni-dividend-comparison__heading > span,
+        .tni-dividend-recent > span,
+        .tni-dividend-difference > span {
+          display: block;
+          margin-bottom: 8px;
+          color: #718096;
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.1em;
+        }
+
+        .tni-dividend-comparison__heading h3,
+        .tni-dividend-explanation h3 {
+          margin: 0 0 10px;
+          color: #10233f;
+          font-size:
+            clamp(22px, 3vw, 30px);
+          line-height: 1.15;
+          letter-spacing: -0.025em;
+        }
+
+        .tni-dividend-comparison__heading p {
+          margin: 0;
+        }
+
+        .tni-dividend-cards {
+          display: grid;
+          grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+          gap: 12px;
+        }
+
+        .tni-dividend-card {
+          min-width: 0;
+          padding: 20px;
+          border: 1px solid #e1e8f0;
+          border-radius: 12px;
+          background: #ffffff;
+        }
+
+        .tni-dividend-card > span {
+          display: block;
+          margin-bottom: 12px;
+          color: #718096;
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.09em;
+        }
+
+        .tni-dividend-card > strong {
+          display: block;
+          margin-bottom: 8px;
+          overflow-wrap: anywhere;
+          color: #10233f;
+          font-size:
+            clamp(24px, 3vw, 34px);
+          line-height: 1;
+          letter-spacing: -0.04em;
+        }
+
+        .tni-dividend-card > small {
+          color: #718096;
+          font-size: 11px;
+          line-height: 1.5;
+        }
+
+        .tni-dividend-card--primary {
+          border-color: #b9c9dc;
+          box-shadow:
+            0 10px 30px
+            rgba(16, 35, 63, 0.07);
+        }
+
+        .tni-dividend-card--primary > strong {
+          color: #0b315f;
+        }
+
+
+        /* ---------------------------------------------
+           COMPOUNDING DIFFERENCE
+        --------------------------------------------- */
+
+        .tni-dividend-difference {
+          margin-top: 14px;
+          padding: 20px;
+          border-radius: 12px;
+          background: #10233f;
+        }
+
+        .tni-dividend-difference > span {
+          color: #a9bad0;
+        }
+
+        .tni-dividend-difference > strong {
+          display: block;
+          margin-bottom: 8px;
+          overflow-wrap: anywhere;
+          color: #ffffff;
+          font-size:
+            clamp(28px, 5vw, 42px);
+          line-height: 1;
+          letter-spacing: -0.04em;
+        }
+
+        .tni-dividend-difference p {
+          max-width: 720px;
+          margin: 0;
+          color: #d9e3ef;
+          font-size: 12px;
+        }
+
+
+        /* ---------------------------------------------
+           DIVIDEND EXPLANATION
+        --------------------------------------------- */
+
+        .tni-dividend-explanation,
+        .tni-dividend-recent {
+          max-width: 850px;
+          margin-top: 30px;
+        }
+
+        .tni-dividend-explanation p,
+        .tni-dividend-recent p {
+          margin: 0 0 14px;
+        }
+
+        .tni-dividend-recent {
+          padding: 20px 22px;
+          border-left:
+            3px solid #10233f;
+          background: #f7f9fc;
+        }
+
+        .tni-dividend-recent p {
+          margin: 0;
+        }
+
+        .tni-dividend-note {
+          max-width: 850px;
+          margin: 28px 0 0;
+          padding-top: 18px;
+          border-top:
+            1px solid #e4ebf3;
+          font-size: 12px !important;
+          line-height: 1.65 !important;
+        }
+
+
+        /* ---------------------------------------------
+           JUMP LINK POSITIONING
+        --------------------------------------------- */
+
+        #historical-return-summary,
+        #methodology-sources-verification,
+        #stock-market-returns-by-year {
+          scroll-margin-top: 90px;
+        }
+
+
+        /* ---------------------------------------------
+           MOBILE
+        --------------------------------------------- */
+
+        @media (max-width: 720px) {
+          .tni-return-methods__article-nav {
+            margin: 20px -4px 26px;
+          }
+
+          /*
+            Mobile has no hover.
+            Keep only the colorful primary tabs.
+          */
+
+          .tni-return-methods__nav-subitem {
+            display: none;
+          }
+
+          .tni-return-methods__article-nav {
+            overflow-x: auto;
+            overflow-y: visible;
+          }
+
+          .tni-dividend-cards {
+            grid-template-columns: 1fr;
+          }
+
+          .tni-return-methods__dividend-section {
+            margin: 56px 0;
+          }
+
+          .tni-dividend-comparison {
+            padding: 18px;
+            border-radius: 13px;
+          }
+
+          .tni-dividend-card {
+            padding: 18px;
+          }
         }
 
         .tni-return-methods__header {
