@@ -389,14 +389,6 @@ const structuredData =
         url:
           canonicalUrl,
 
-        isPartOf: {
-          "@type":
-            "Article",
-
-          "@id":
-            `${canonicalUrl}#article`,
-        },
-
         temporalCoverage:
           `${datasetStartYear}/${datasetEndYear}`,
 
