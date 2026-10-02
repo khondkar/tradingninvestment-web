@@ -455,6 +455,14 @@ export default function GenericAnnualReturnsPage({
         ),
       url:
         canonicalUrl,
+      license: {
+        '@type':
+          'CreativeWork',
+        name:
+          'TradingNInvestment Research Data License',
+        url:
+          'https://tradingninvestment.com/research-license/',
+      },
       temporalCoverage:
         `${dataset.summary.start_year}/..`,
       creator: {

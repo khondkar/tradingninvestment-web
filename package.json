@@ -9,7 +9,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
-    "generate:static": "node scripts/generate-static-research-pages.mjs && node scripts/generate-static-annual-pages.mjs && node scripts/generate-static-1929-crash.mjs && node scripts/generate-static-average-stock-market-return.mjs && node scripts/generate-static-research-hubs.mjs && node scripts/generate-static-market-pages.mjs && node scripts/generate-static-about-page.mjs",
+    "generate:static": "node scripts/generate-static-research-pages.mjs && node scripts/generate-static-annual-pages.mjs && node scripts/generate-static-1929-crash.mjs && node scripts/generate-static-average-stock-market-return.mjs && node scripts/generate-static-research-hubs.mjs && node scripts/generate-static-market-pages.mjs && node scripts/generate-static-about-page.mjs && node scripts/generate-static-research-license-page.mjs",
     "validate:research-authors": "node scripts/validate-research-authors.mjs"
   },
   "dependencies": {

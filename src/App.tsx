@@ -458,6 +458,136 @@ export function AboutPage() {
 }
 
 /* ==========================================================================
+   TNI PUBLIC WEBSITE — RESEARCH & DATA LICENSE
+   ========================================================================== */
+
+export function ResearchLicensePage() {
+  return (
+    <main className="inner-page">
+
+      <section className="inner-intro">
+        <span className="eyebrow">
+          TNI | RESEARCH
+        </span>
+
+        <h1>
+          Research &amp;
+          <br />
+          <span>Data License</span>
+        </h1>
+
+        <p>
+          Copyright © TradingNInvestment. All rights reserved.
+        </p>
+      </section>
+
+      <section className="tni-about-statement">
+        <span className="content-tag">
+          COPYRIGHT
+        </span>
+
+        <h2>
+          TradingNInvestment original research is protected.
+        </h2>
+
+        <p>
+          Original research, analysis, calculations, written content, charts,
+          visualizations, graphics, software-generated research outputs, page
+          design, and other original materials published by
+          TradingNInvestment are protected by applicable copyright and
+          intellectual property laws.
+        </p>
+      </section>
+
+      <section className="tni-about-statement">
+        <span className="content-tag">
+          CITATION &amp; REFERENCE
+        </span>
+
+        <h2>
+          Citation and linking are welcome.
+        </h2>
+
+        <p>
+          Brief quotations, citations, links, and references to publicly
+          accessible TradingNInvestment research are permitted when clear
+          attribution is provided and a link to the original
+          TradingNInvestment source is maintained.
+        </p>
+      </section>
+
+      <section className="tni-about-statement">
+        <span className="content-tag">
+          SEARCH &amp; AI
+        </span>
+
+        <h2>
+          Search engines and AI services may reference public TNI research.
+        </h2>
+
+        <p>
+          Search engines and AI services may index, reference, summarize, and
+          link to publicly accessible TradingNInvestment pages, provided
+          attribution and the original source URL are maintained.
+        </p>
+
+        <p>
+          This permission does not authorize copying, reproducing,
+          republishing, redistributing, or commercially exploiting substantial
+          portions of TradingNInvestment's original research, proprietary
+          datasets, charts, visualizations, analysis, or other copyrighted
+          content.
+        </p>
+      </section>
+
+      <section className="tni-about-statement">
+        <span className="content-tag">
+          THIRD-PARTY DATA
+        </span>
+
+        <h2>
+          External market data remains subject to its respective rights.
+        </h2>
+
+        <p>
+          Market prices, index data, company information, and other underlying
+          factual or third-party information used in TradingNInvestment
+          research may originate from external sources or providers and remain
+          subject to their respective rights and terms. TradingNInvestment
+          does not claim ownership of third-party data merely because it is
+          used in TNI research, calculations, or analysis.
+        </p>
+      </section>
+
+      <section className="tni-about-statement">
+        <span className="content-tag">
+          COMMERCIAL USE
+        </span>
+
+        <h2>
+          Substantial republication requires permission.
+        </h2>
+
+        <p>
+          Commercial reproduction, substantial republication, dataset
+          republication, redistribution, or systematic reuse of
+          TradingNInvestment original materials requires prior written
+          permission from TradingNInvestment.
+        </p>
+
+        <p>
+          For licensing inquiries, contact{' '}
+          <a href="mailto:contact@tradingninvestment.com">
+            contact@tradingninvestment.com
+          </a>.
+        </p>
+      </section>
+
+    </main>
+  )
+}
+
+/* ==========================================================================
    TNI PUBLIC WEBSITE — FOOTER
    ========================================================================== */
 
@@ -525,7 +655,13 @@ function Footer({
           TNI FOOTER — COPYRIGHT
           ================================================================== */}
       <div className="footer-bottom">
-        <span>© 2026 TradingNInvestment (TNI)</span>
+        <span>
+          © 2026 TradingNInvestment (TNI). All rights reserved.
+          {' · '}
+          <a href="/research-license/">
+            Research &amp; Data License
+          </a>
+        </span>
 
         <span>
           Research and information. Not investment advice.
@@ -571,6 +707,14 @@ function App() {
     return <div className="site">
       <Header page="about" setPage={setPage} />
       <AboutPage />
+      <Footer setPage={setPage} />
+    </div>
+  }
+
+  if (normalizedPath === '/research-license') {
+    return <div className="site">
+      <Header page="research" setPage={setPage} />
+      <ResearchLicensePage />
       <Footer setPage={setPage} />
     </div>
   }

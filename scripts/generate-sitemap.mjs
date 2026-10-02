@@ -24,6 +24,7 @@ try {
 const paths = [
   '/',
   '/about/',
+  '/research-license/',
   '/average-stock-market-return/',
   ...marketTodayPaths,
   ...researchItems.map((item) => item.path),
