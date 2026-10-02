@@ -5441,3 +5441,209 @@ button.primary-action {
     font-weight: 800;
   }
 }
+
+/* ==========================================================================
+   TNI LEVERAGED ETF — DRAWDOWN & RECOVERY
+   ========================================================================== */
+
+.tni-leveraged-drawdown {
+  margin: 44px 0;
+  padding: 30px;
+  border: 1px solid #e1e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.tni-leveraged-drawdown__header {
+  max-width: 900px;
+  margin-bottom: 24px;
+}
+
+.tni-leveraged-drawdown__eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #1677ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.tni-leveraged-drawdown h2 {
+  margin: 0 0 10px;
+  color: #10233f;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -.025em;
+}
+
+.tni-leveraged-drawdown__lede {
+  max-width: 820px;
+  margin: 0;
+  color: #5f7084;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tni-leveraged-drawdown__cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.tni-leveraged-drawdown__card {
+  padding: 20px 22px;
+  border: 1px solid #e1e8f0;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.tni-leveraged-drawdown__card.is-asset {
+  border-color: #cfe1ff;
+  background: #f6f9ff;
+}
+
+.tni-leveraged-drawdown__card span,
+.tni-leveraged-drawdown__recovery-grid span {
+  display: block;
+  margin-bottom: 7px;
+  color: #718096;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.tni-leveraged-drawdown__card strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #10233f;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.tni-leveraged-drawdown__card.is-asset strong {
+  color: #2563eb;
+}
+
+.tni-leveraged-drawdown__card small {
+  color: #63758a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tni-leveraged-drawdown__severity {
+  max-width: 900px;
+  margin: 0 0 28px;
+  padding: 24px 26px;
+  border-left: 4px solid #2563eb;
+  border-radius: 0 12px 12px 0;
+  background: #f8fbff;
+}
+
+.tni-leveraged-drawdown__severity h3 {
+  margin: 0 0 13px;
+  color: #10233f;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.tni-leveraged-drawdown__severity p {
+  margin: 0 0 12px;
+  color: #43546a;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.tni-leveraged-drawdown__severity p:last-child {
+  margin-bottom: 0;
+}
+
+.tni-leveraged-drawdown__chart {
+  width: 100%;
+  min-width: 0;
+  margin: 10px 0 24px;
+}
+
+.tni-leveraged-drawdown__recovery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.tni-leveraged-drawdown__recovery-grid article {
+  padding: 15px 16px;
+  border: 1px solid #e4ebf3;
+  border-radius: 11px;
+  background: #ffffff;
+}
+
+.tni-leveraged-drawdown__recovery-grid strong {
+  color: #10233f;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.tni-leveraged-drawdown__interpretation {
+  max-width: 900px;
+  margin: 0 0 18px;
+  color: #43546a;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.tni-leveraged-drawdown__methodology {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid #e6edf4;
+  color: #7a899c;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+@media (max-width: 680px) {
+  .tni-leveraged-drawdown {
+    margin: 34px 0;
+    padding: 22px 16px;
+    border-radius: 15px;
+  }
+
+  .tni-leveraged-drawdown h2 {
+    font-size: 28px;
+  }
+
+  .tni-leveraged-drawdown__lede,
+  .tni-leveraged-drawdown__severity p,
+  .tni-leveraged-drawdown__interpretation {
+    font-size: 15px;
+  }
+
+  .tni-leveraged-drawdown__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tni-leveraged-drawdown__card strong {
+    font-size: 32px;
+  }
+
+  .tni-leveraged-drawdown__severity {
+    padding: 20px 18px;
+  }
+
+  .tni-leveraged-drawdown__severity h3 {
+    font-size: 21px;
+  }
+
+  .tni-leveraged-drawdown__recovery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tni-leveraged-drawdown__recovery-grid strong {
+    font-size: 15px;
+  }
+
+  .tni-leveraged-drawdown__methodology {
+    font-size: 12px;
+  }
+}

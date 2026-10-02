@@ -49,6 +49,9 @@
     <loc>https://tradingninvestment.com/gs-stock-returns/</loc>
   </url>
   <url>
+    <loc>https://tradingninvestment.com/tqqq-returns/</loc>
+  </url>
+  <url>
     <loc>https://tradingninvestment.com/sp-500-monthly-returns/</loc>
   </url>
   <url>
@@ -65,6 +68,12 @@
   </url>
   <url>
     <loc>https://tradingninvestment.com/research/stocks/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/etfs/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/etfs/leveraged/</loc>
   </url>
   <url>
     <loc>https://tradingninvestment.com/research/indexes/</loc>

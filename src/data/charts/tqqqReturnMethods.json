@@ -1,0 +1,176 @@
+{
+  "dataset": "ProShares UltraPro QQQ price return and total return",
+  "ticker": "TQQQ",
+  "asset_type": "leveraged_etf",
+  "issuer": "ProShares",
+  "leverage": "3x",
+  "direction": "long",
+  "benchmark": "Nasdaq-100",
+  "benchmark_ticker": "^NDX",
+  "inception_date": "2010-02-09",
+  "start_year": 2011,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 2011,
+      "price_return": -8.0469,
+      "total_return": -8.0469,
+      "is_ytd": false,
+      "data_through": "2011-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2012,
+      "price_return": 52.287,
+      "total_return": 52.2869,
+      "is_ytd": false,
+      "data_through": "2012-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2013,
+      "price_return": 139.7334,
+      "total_return": 139.7335,
+      "is_ytd": false,
+      "data_through": "2013-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2014,
+      "price_return": 57.038,
+      "total_return": 57.0908,
+      "is_ytd": false,
+      "data_through": "2014-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2015,
+      "price_return": 17.2191,
+      "total_return": 17.2308,
+      "is_ytd": false,
+      "data_through": "2015-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2016,
+      "price_return": 11.3805,
+      "total_return": 11.3805,
+      "is_ytd": false,
+      "data_through": "2016-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2017,
+      "price_return": 118.0618,
+      "total_return": 118.0618,
+      "is_ytd": false,
+      "data_through": "2017-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2018,
+      "price_return": -19.8962,
+      "total_return": -19.788,
+      "is_ytd": false,
+      "data_through": "2018-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2019,
+      "price_return": 133.6663,
+      "total_return": 133.8337,
+      "is_ytd": false,
+      "data_through": "2019-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2020,
+      "price_return": 110.052,
+      "total_return": 110.052,
+      "is_ytd": false,
+      "data_through": "2020-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2021,
+      "price_return": 82.9813,
+      "total_return": 82.9813,
+      "is_ytd": false,
+      "data_through": "2021-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2022,
+      "price_return": -79.198,
+      "total_return": -79.09,
+      "is_ytd": false,
+      "data_through": "2022-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2023,
+      "price_return": 193.0636,
+      "total_return": 198.0487,
+      "is_ytd": false,
+      "data_through": "2023-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2024,
+      "price_return": 56.0749,
+      "total_return": 58.2677,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2025,
+      "price_return": 33.2491,
+      "total_return": 34.3545,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2026,
+      "price_return": 53.3858,
+      "total_return": 54.2909,
+      "is_ytd": true,
+      "data_through": "2026-10-02",
+      "price_source": "Yahoo Finance TQQQ Close",
+      "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    }
+  ]
+}

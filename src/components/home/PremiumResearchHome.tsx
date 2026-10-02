@@ -107,8 +107,33 @@ const stockHomepageResearch =
           'Annual price returns · Source and methodology in article',
         points:
           dataset.data as AnnualPoint[],
+        socialImage:
+          config.seo.socialImage,
       }
     })
+
+const etfHomepageResearch =
+  annualReturnsResearchRegistry
+    .filter(
+      ({ config }) =>
+        config.categories.includes('etf') &&
+        Boolean(config.seo.socialImage),
+    )
+    .map(({ config }) => ({
+      path: config.canonicalPath,
+      label:
+        config.categories.includes('leveraged-etf')
+          ? `LEVERAGED ETF INTELLIGENCE · ${config.shortName.toUpperCase()}`
+          : `ETF INTELLIGENCE · ${config.shortName.toUpperCase()}`,
+      headline:
+        `${config.shortName} returns and benchmark intelligence.`,
+      intro:
+        config.seo.socialDescription,
+      chartLabel:
+        config.shortName.toUpperCase(),
+      socialImage:
+        config.seo.socialImage,
+    }))
 
 const citations = [
   { name: 'Florida State University', detail: 'Law Review', logo: '/images/citations/fsu.svg', logoClass: 'fsu', href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/' },
@@ -283,10 +308,89 @@ export default function PremiumResearchHome() {
                 href={study.path}
                 aria-label={`Explore ${study.chartLabel} interactive returns`}
               >
-                <ReturnPreview
-                  label={study.chartLabel}
-                  metricLabel={study.metricLabel}
-                  points={study.points}
+                {study.socialImage ? (
+                  <img
+                    src={study.socialImage}
+                    alt={`${study.chartLabel} TNI Research`}
+                    loading="lazy"
+                    className="tni-home-research-og"
+                  />
+                ) : (
+                  <ReturnPreview
+                    label={study.chartLabel}
+                    metricLabel={study.metricLabel}
+                    points={study.points}
+                  />
+                )}
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {etfHomepageResearch.length > 0 && (
+      <section
+        className="tni-home-features tni-home-wrap"
+        aria-labelledby="tni-home-etf-research-title"
+      >
+        <div className="tni-home-section-head">
+          <span className="tni-home-kicker">
+            ETF INTELLIGENCE
+          </span>
+
+          <h2 id="tni-home-etf-research-title">
+            Explore ETF performance.
+          </h2>
+
+          <p>
+            Historical returns, benchmark comparisons,
+            compounding, and long-term ETF research.
+          </p>
+        </div>
+
+        <div className="tni-home-feature-stack">
+          {etfHomepageResearch.map((study) => (
+            <article
+              className="tni-home-feature"
+              key={study.path}
+            >
+              <div className="tni-home-feature-copy">
+                <TNIResearchIdentity compact />
+
+                <span
+                  className="tni-home-kicker"
+                  style={{ marginTop: '18px' }}
+                >
+                  {study.label}
+                </span>
+
+                <h3>
+                  <a href={study.path}>
+                    {study.headline}
+                  </a>
+                </h3>
+
+                <p>{study.intro}</p>
+
+                <a
+                  className="tni-home-feature-link"
+                  href={study.path}
+                >
+                  Explore the full study ↗
+                </a>
+              </div>
+
+              <a
+                className="tni-home-feature-visual"
+                href={study.path}
+                aria-label={`Explore ${study.chartLabel} research`}
+              >
+                <img
+                  src={study.socialImage}
+                  alt={`${study.chartLabel} TNI Research`}
+                  loading="lazy"
+                  className="tni-home-research-og"
                 />
               </a>
             </article>

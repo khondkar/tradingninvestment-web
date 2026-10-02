@@ -14,7 +14,9 @@ import StockMarketSectorHealthPage from './pages/StockMarketSectorHealthPage'
 import StockMarketEarningsCalendarPage from './pages/StockMarketEarningsCalendarPage'
 import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
 import { getStockResearchData } from './research/annual-returns/stockDataRegistry'
+import { getLeveragedEtfResearchData } from './research/annual-returns/leveragedEtfDataRegistry'
 import StockAnnualReturnsPage from './templates/StockAnnualReturnsPage'
+import LeveragedEtfAnnualReturnsPage from './templates/LeveragedEtfAnnualReturnsPage'
 import StockGrowthEmbedPage from './pages/StockGrowthEmbedPage'
 import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import { drawdownsResearchRegistry } from './research/drawdowns/registry'
@@ -920,6 +922,72 @@ function App() {
           />
         )
       }
+    }
+  }
+
+  const dynamicLeveragedEtfEntry =
+    annualReturnsResearchRegistry.find(
+      (entry) =>
+        entry.config.categories.includes(
+          'leveraged-etf',
+        ) &&
+        entry.config.canonicalPath.replace(
+          /\/$/,
+          '',
+        ) === normalizedPath,
+    )
+
+  if (dynamicLeveragedEtfEntry) {
+    const leveragedEtfData =
+      getLeveragedEtfResearchData(
+        dynamicLeveragedEtfEntry.config.symbol,
+      )
+
+    if (leveragedEtfData) {
+      return (
+        <div className="site">
+          <Header
+            page="research"
+            setPage={setPage}
+          />
+
+          <ResearchTrail
+            path={
+              dynamicLeveragedEtfEntry.config
+                .canonicalPath
+            }
+          />
+
+          <LeveragedEtfAnnualReturnsPage
+            config={
+              dynamicLeveragedEtfEntry.config
+            }
+            dataset={
+              leveragedEtfData.annualReturns
+            }
+            benchmarkDataset={
+              leveragedEtfData
+                .benchmarkAnnualReturns
+            }
+            benchmarkName={
+              leveragedEtfData.benchmarkName
+            }
+            returnMethodsData={
+              leveragedEtfData.returnMethods
+            }
+            drawdownData={
+              leveragedEtfData.drawdownData
+            }
+          />
+
+          <ResearchConnections
+            path={
+              dynamicLeveragedEtfEntry.config
+                .canonicalPath
+            }
+          />
+        </div>
+      )
     }
   }
 

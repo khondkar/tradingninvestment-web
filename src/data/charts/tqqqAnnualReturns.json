@@ -1,0 +1,135 @@
+{
+  "symbol": "ProShares UltraPro QQQ",
+  "ticker": "TQQQ",
+  "asset_type": "leveraged_etf",
+  "issuer": "ProShares",
+  "leverage": "3x",
+  "direction": "long",
+  "benchmark": "Nasdaq-100",
+  "benchmark_ticker": "^NDX",
+  "inception_date": "2010-02-09",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / TQQQ",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 15,
+    "start_year": 2011,
+    "end_year": 2025,
+    "positive_years": 12,
+    "negative_years": 3,
+    "positive_year_pct": 80.0,
+    "negative_year_pct": 20.0,
+    "average_annual_return_pct": 59.84,
+    "median_annual_return_pct": 56.07,
+    "best_year": {
+      "year": 2023,
+      "return_pct": 193.06
+    },
+    "worst_year": {
+      "year": 2022,
+      "return_pct": -79.2
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 53.39
+  },
+  "data": [
+    {
+      "year": 2011,
+      "value": -8.0469,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 52.287,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 139.7334,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 57.038,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": 17.2191,
+      "label": "2015",
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "value": 11.3805,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 118.0618,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -19.8962,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 133.6663,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 110.052,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 82.9813,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -79.198,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 193.0636,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 56.0749,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 33.2491,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

@@ -84,6 +84,20 @@ export const researchHubs: ResearchHub[] = [
     match: (item) => has(item, 'stock'),
   },
   {
+    path: '/research/etfs/',
+    title: 'ETF Research',
+    description: 'ETF performance research, historical returns, benchmark comparisons, and fund-level market intelligence.',
+    parent: '/research/',
+    match: (item) => has(item, 'etf'),
+  },
+  {
+    path: '/research/etfs/leveraged/',
+    title: 'Leveraged ETF Research',
+    description: 'Historical performance, compounding, drawdowns, and benchmark comparisons for leveraged ETFs covered by TNI.',
+    parent: '/research/etfs/',
+    match: (item) => has(item, 'leveraged-etf'),
+  },
+  {
     path: '/research/indexes/',
     title: 'Index Research',
     description: 'S&P 500, Nasdaq Composite, and Dow Jones historical performance research.',
@@ -140,8 +154,18 @@ export const getHub = (path: string) =>
 export const getHubItems = (hub: ResearchHub) => researchItems.filter(hub.match)
 
 export function getItemHubs(item: ResearchItem) {
-  const primary = has(item, 'stock') ? '/research/stocks/' : '/research/indexes/'
+  const primary =
+    has(item, 'stock')
+      ? '/research/stocks/'
+      : has(item, 'etf')
+        ? '/research/etfs/'
+        : '/research/indexes/'
+
   const paths = [primary]
+
+  if (has(item, 'leveraged-etf')) {
+    paths.unshift('/research/etfs/leveraged/')
+  }
   if (item.kind !== 'article' || has(item, 'market-history')) paths.push('/research/market-history/')
   if (has(item, 'stock')) paths.unshift(`/research/stocks/${item.symbol.toLowerCase()}/`)
   if (has(item, 'index') && has(item, 'sp500')) paths.unshift('/research/indexes/sp-500/')

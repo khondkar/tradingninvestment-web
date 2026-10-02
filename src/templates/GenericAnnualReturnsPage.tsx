@@ -67,6 +67,8 @@ export type GenericAnnualReturnsPageProps = {
   assetAsOfDate?: string
   benchmarkAsOfDate?: string
   beforeReturnExplorer?: ReactNode
+  afterPeriodReturns?: ReactNode
+  afterRollingComparison?: ReactNode
   afterArticle?: ReactNode
   afterMethodology?: ReactNode
 }
@@ -83,6 +85,8 @@ export default function GenericAnnualReturnsPage({
   assetAsOfDate,
   benchmarkAsOfDate,
   beforeReturnExplorer,
+  afterPeriodReturns,
+  afterRollingComparison,
   afterArticle,
   afterMethodology,
 }: GenericAnnualReturnsPageProps) {
@@ -1344,6 +1348,8 @@ export default function GenericAnnualReturnsPage({
           </div>
         </section>
 
+        {afterPeriodReturns}
+
         {beforeReturnExplorer && (
           <>
             <section
@@ -1916,6 +1922,8 @@ export default function GenericAnnualReturnsPage({
           />
         )}
 
+        {afterRollingComparison}
+
         {/* =================================================================
             TNI S&P 500 RETURNS — SHARE / EMBED / LICENSING
         ================================================================= */}
@@ -2034,25 +2042,48 @@ export default function GenericAnnualReturnsPage({
               Download {config.name} Annual Returns CSV
             </a>
 
-            <button
-              type="button"
-              disabled
-              title="Static chart download will be added next."
-              style={{
-                minHeight: '42px',
-                padding: '0 16px',
-                border: '1px solid #cdd9e7',
-                borderRadius: '9px',
-                background: '#ffffff',
-                color: '#708196',
-                fontSize: '13px',
-                fontWeight: 800,
-                cursor: 'not-allowed',
-                opacity: 0.8,
-              }}
-            >
-              Download Static Chart — Coming Soon
-            </button>
+            {config.seo.socialImage ? (
+              <a
+                href={config.seo.socialImage}
+                download
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  minHeight: '42px',
+                  padding: '0 16px',
+                  border: '1px solid #cdd9e7',
+                  borderRadius: '9px',
+                  background: '#ffffff',
+                  color: '#43546a',
+                  fontSize: '13px',
+                  fontWeight: 800,
+                  textDecoration: 'none',
+                }}
+              >
+                Download TNI Social Chart
+              </a>
+            ) : (
+              <button
+                type="button"
+                disabled
+                title="Static chart download is not available."
+                style={{
+                  minHeight: '42px',
+                  padding: '0 16px',
+                  border: '1px solid #cdd9e7',
+                  borderRadius: '9px',
+                  background: '#ffffff',
+                  color: '#708196',
+                  fontSize: '13px',
+                  fontWeight: 800,
+                  cursor: 'not-allowed',
+                  opacity: 0.8,
+                }}
+              >
+                Download Static Chart — Coming Soon
+              </button>
+            )}
           </div>
 
           {/* ===============================================================
