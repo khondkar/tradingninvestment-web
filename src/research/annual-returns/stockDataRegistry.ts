@@ -2,6 +2,8 @@ import aaplAnnualReturns from "../../data/charts/aaplAnnualReturns.json"
 import aaplReturnMethods from "../../data/charts/aaplReturnMethods.json"
 import brkbAnnualReturns from "../../data/charts/brkbAnnualReturns.json"
 import brkbReturnMethods from "../../data/charts/brk-bReturnMethods.json"
+import gsAnnualReturns from "../../data/charts/gsAnnualReturns.json"
+import gsReturnMethods from "../../data/charts/gsReturnMethods.json"
 import msftAnnualReturns from "../../data/charts/msftAnnualReturns.json"
 import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
 
@@ -36,6 +38,14 @@ export const stockResearchDataRegistry:
 
       returnMethods:
         brkbReturnMethods.data as ReturnMethodRow[],
+    },
+
+    GS: {
+      annualReturns:
+        gsAnnualReturns as AnnualReturnsPageData,
+
+      returnMethods:
+        gsReturnMethods.data as ReturnMethodRow[],
     },
 
     MSFT: {

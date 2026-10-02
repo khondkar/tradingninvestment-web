@@ -321,7 +321,7 @@ def main() -> None:
             sys.executable,
             str(social_generator),
             "--data",
-            str(methods_output.relative_to(root)),
+            str(methods_output.resolve().relative_to(root)),
             "--output",
             str(social_output.relative_to(root)),
             "--name",

@@ -1,0 +1,194 @@
+{
+  "symbol": "The Goldman Sachs Group, Inc.",
+  "ticker": "GS",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / GS",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 26,
+    "start_year": 2000,
+    "end_year": 2025,
+    "positive_years": 18,
+    "negative_years": 8,
+    "positive_year_pct": 69.23,
+    "negative_year_pct": 30.77,
+    "average_annual_return_pct": 15.08,
+    "median_annual_return_pct": 12.94,
+    "best_year": {
+      "year": 2009,
+      "return_pct": 100.07
+    },
+    "worst_year": {
+      "year": 2008,
+      "return_pct": -60.76
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 2.5
+  },
+  "data": [
+    {
+      "year": 2000,
+      "value": 13.5368,
+      "label": "2000",
+      "status": "positive"
+    },
+    {
+      "year": 2001,
+      "value": -13.2671,
+      "label": "2001",
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "value": -26.5768,
+      "label": "2002",
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "value": 44.978,
+      "label": "2003",
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "value": 5.3783,
+      "label": "2004",
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "value": 22.7509,
+      "label": "2005",
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "value": 56.0958,
+      "label": "2006",
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "value": 7.8756,
+      "label": "2007",
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "value": -60.758,
+      "label": "2008",
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "value": 100.0711,
+      "label": "2009",
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "value": -0.4027,
+      "label": "2010",
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "value": -46.2238,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 41.0594,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 38.9621,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 9.3479,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": -7.0165,
+      "label": "2015",
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "value": 32.858,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 6.3938,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -34.4285,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 37.6414,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 14.6914,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 45.0647,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -10.2392,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 12.3449,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 48.4356,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 53.5049,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

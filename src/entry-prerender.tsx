@@ -9,6 +9,8 @@ import aaplAnnualReturns from './data/charts/aaplAnnualReturns.json'
 import aaplReturnMethods from './data/charts/aaplReturnMethods.json'
 import brkbAnnualReturns from './data/charts/brkbAnnualReturns.json'
 import brkbReturnMethods from './data/charts/brk-bReturnMethods.json'
+import gsAnnualReturns from './data/charts/gsAnnualReturns.json'
+import gsReturnMethods from './data/charts/gsReturnMethods.json'
 import sp500MonthlyReturns from './data/charts/sp500MonthlyReturns.json'
 import nasdaqMetadata from './data/market/nasdaq/metadata.json'
 import sp500Metadata from './data/market/sp500/metadata.json'
@@ -20,6 +22,7 @@ import { nasdaqAnnualReturnsConfig } from './research/annual-returns/nasdaq'
 import { nvdaAnnualReturnsConfig } from './research/annual-returns/nvda'
 import { aaplAnnualReturnsConfig } from './research/annual-returns/aapl'
 import { brkbAnnualReturnsConfig } from './research/annual-returns/brkb'
+import { gsAnnualReturnsConfig } from './research/annual-returns/gs'
 import { sp500MonthlyReturnsConfig } from './research/monthly-returns/sp500'
 
 import type { AnnualReturnsPageData } from './research/annual-returns/pageShared'
@@ -82,6 +85,14 @@ export const annualPrerenderPages: AnnualPrerenderPage[] = [
     benchmarkName: 'S&P 500',
     returnMethodsData:
       brkbReturnMethods.data as ReturnMethodRow[],
+  },
+  {
+    config: gsAnnualReturnsConfig,
+    dataset: gsAnnualReturns as AnnualReturnsPageData,
+    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
+    benchmarkName: 'S&P 500',
+    returnMethodsData:
+      gsReturnMethods.data as ReturnMethodRow[],
   },
 ]
 
