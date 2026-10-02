@@ -740,15 +740,25 @@ export function renderDividendCompoundingChart(
       )
       .style(
         'min-width',
-        '210px',
+        isMobile
+          ? '230px'
+          : '285px',
       )
       .style(
         'padding',
-        '12px 14px',
+        '0',
+      )
+      .style(
+        'overflow',
+        'hidden',
+      )
+      .style(
+        'border',
+        '1px solid rgba(255,255,255,0.14)',
       )
       .style(
         'border-radius',
-        '9px',
+        '12px',
       )
       .style(
         'background',
@@ -762,7 +772,7 @@ export function renderDividendCompoundingChart(
       )
       .style(
         'box-shadow',
-        '0 10px 30px rgba(7,27,47,0.22)',
+        '0 16px 42px rgba(7,27,47,0.28)',
       )
       .style(
         'font-size',
@@ -917,46 +927,56 @@ export function renderDividendCompoundingChart(
     tooltip
       .html(`
         <div style="
+          background:#1677ff;
+          color:#ffffff;
+          margin:-0px -0px 12px -0px;
+          padding:9px 14px;
+          font-size:11px;
           font-weight:800;
-          margin-bottom:8px;
+          letter-spacing:.07em;
+          text-transform:uppercase;
         ">
-          ${point.year}
+          $10,000 Growth • ${point.year}
         </div>
 
         <div style="
-          display:grid;
-          grid-template-columns:1fr auto;
-          gap:5px 14px;
+          padding:0 14px 13px 14px;
+          font-size:12px;
+          line-height:1.55;
         ">
-          <span>Price value</span>
-          <strong>
-            ${formatCurrency(
-              point.priceWealth,
-            )}
-          </strong>
+          <div style="
+            display:grid;
+            grid-template-columns:1fr auto;
+            gap:6px 18px;
+          ">
+            <span>Price value</span>
+            <strong>
+              ${formatCurrency(
+                point.priceWealth,
+              )}
+            </strong>
 
-          <span>Total value</span>
-          <strong>
-            ${formatCurrency(
-              point.totalWealth,
-            )}
-          </strong>
+            <span>Total value</span>
+            <strong>
+              ${formatCurrency(
+                point.totalWealth,
+              )}
+            </strong>
 
-          <span>
-            Dividend + reinvestment
-          </span>
-          <strong>
-            ${formatCurrency(
-              point.contribution,
-            )}
-          </strong>
+            <span>Dividend advantage</span>
+            <strong>
+              ${formatCurrency(
+                point.contribution,
+              )}
+            </strong>
 
-          <span>Contribution</span>
-          <strong>
-            ${point.contributionPct.toFixed(
-              1,
-            )}%
-          </strong>
+            <span>Contribution</span>
+            <strong>
+              ${point.contributionPct.toFixed(
+                1,
+              )}%
+            </strong>
+          </div>
         </div>
       `)
       .style(

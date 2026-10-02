@@ -5,6 +5,8 @@ import dowAnnualReturns from './data/charts/dowAnnualReturns.json'
 import msftAnnualReturns from './data/charts/msftAnnualReturns.json'
 import nasdaqAnnualReturns from './data/charts/nasdaqAnnualReturns.json'
 import nvdaAnnualReturns from './data/charts/nvdaAnnualReturns.json'
+import aaplAnnualReturns from './data/charts/aaplAnnualReturns.json'
+import aaplReturnMethods from './data/charts/aaplReturnMethods.json'
 import sp500MonthlyReturns from './data/charts/sp500MonthlyReturns.json'
 import nasdaqMetadata from './data/market/nasdaq/metadata.json'
 import sp500Metadata from './data/market/sp500/metadata.json'
@@ -14,6 +16,7 @@ import { dowAnnualReturnsConfig } from './research/annual-returns/dow'
 import { msftAnnualReturnsConfig } from './research/annual-returns/msft'
 import { nasdaqAnnualReturnsConfig } from './research/annual-returns/nasdaq'
 import { nvdaAnnualReturnsConfig } from './research/annual-returns/nvda'
+import { aaplAnnualReturnsConfig } from './research/annual-returns/aapl'
 import { sp500MonthlyReturnsConfig } from './research/monthly-returns/sp500'
 
 import type { AnnualReturnsPageData } from './research/annual-returns/pageShared'
@@ -21,6 +24,8 @@ import type { AnnualReturnsAssetConfig } from './research/annual-returns/types'
 import type { MonthlyReturnsDataset } from './research/monthly-returns/types'
 
 import GenericAnnualReturnsPage from './templates/GenericAnnualReturnsPage'
+import StockAnnualReturnsPage from './templates/StockAnnualReturnsPage'
+import type { ReturnMethodRow } from './components/charts/DividendCompoundingExplorer'
 import GenericMonthlyReturnsPage from './templates/GenericMonthlyReturnsPage'
 import AverageStockMarketReturnPage from './pages/AverageStockMarketReturnPage'
 
@@ -31,6 +36,7 @@ export type AnnualPrerenderPage = {
   benchmarkName?: string
   assetAsOfDate?: string
   benchmarkAsOfDate?: string
+  returnMethodsData?: ReturnMethodRow[]
 }
 
 export const annualPrerenderPages: AnnualPrerenderPage[] = [
@@ -58,9 +64,27 @@ export const annualPrerenderPages: AnnualPrerenderPage[] = [
     config: nvdaAnnualReturnsConfig,
     dataset: nvdaAnnualReturns as AnnualReturnsPageData,
   },
+  {
+    config: aaplAnnualReturnsConfig,
+    dataset: aaplAnnualReturns as AnnualReturnsPageData,
+    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
+    benchmarkName: 'S&P 500',
+    returnMethodsData:
+      aaplReturnMethods.data as ReturnMethodRow[],
+  },
 ]
 
 export function renderAnnualPage(page: AnnualPrerenderPage) {
+  if (page.returnMethodsData) {
+    return renderToStaticMarkup(
+      <StockAnnualReturnsPage
+        config={page.config}
+        dataset={page.dataset}
+        returnMethodsData={page.returnMethodsData}
+      />,
+    )
+  }
+
   return renderToStaticMarkup(
     <GenericAnnualReturnsPage
       config={page.config}

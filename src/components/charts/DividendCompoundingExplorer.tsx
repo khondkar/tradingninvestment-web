@@ -3,9 +3,12 @@ import {
   useState,
 } from 'react'
 
-import type {
-  SP500ReturnMethodChartRow,
-} from './SP500ReturnMethodChart'
+export type ReturnMethodRow = {
+  year: number
+  price_return: number
+  total_return: number
+  is_ytd: boolean
+}
 
 import {
   useEffect,
@@ -25,7 +28,8 @@ type PeriodKey =
   | '10'
 
 type Props = {
-  data: SP500ReturnMethodChartRow[]
+  data: ReturnMethodRow[]
+  assetName?: string
 }
 
 type WealthPoint = {
@@ -118,7 +122,7 @@ function calculateCagr(
 }
 
 function buildWealthSeries(
-  rows: SP500ReturnMethodChartRow[],
+  rows: ReturnMethodRow[],
   years: number | null,
 ) {
   const completed =
@@ -267,6 +271,7 @@ function buildWealthSeries(
 
 export default function DividendCompoundingExplorer({
   data,
+  assetName,
 }: Props) {
   const [
     selectedPeriod,
@@ -343,9 +348,13 @@ export default function DividendCompoundingExplorer({
         container,
         {
           title:
-            `Growth of ${formatCurrency(
-              analysis.startingInvestment,
-            )}: Price Return vs. Total Return`,
+            assetName
+              ? `Growth of ${formatCurrency(
+                  analysis.startingInvestment,
+                )} Invested in ${assetName}`
+              : `Growth of ${formatCurrency(
+                  analysis.startingInvestment,
+                )}: Price Return vs. Total Return`,
 
           subtitle:
             `${analysis.startYear}–${analysis.endYear}`
@@ -360,7 +369,7 @@ export default function DividendCompoundingExplorer({
       )
 
     return cleanup
-  }, [analysis])
+  }, [analysis, assetName])
 
   return (
     <div className="tni-dividend-explorer">

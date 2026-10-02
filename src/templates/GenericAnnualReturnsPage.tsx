@@ -64,6 +64,7 @@ export type GenericAnnualReturnsPageProps = {
   assetAsOfDate?: string
   benchmarkAsOfDate?: string
   beforeReturnExplorer?: ReactNode
+  afterArticle?: ReactNode
   afterMethodology?: ReactNode
 }
 
@@ -79,6 +80,7 @@ export default function GenericAnnualReturnsPage({
   assetAsOfDate,
   benchmarkAsOfDate,
   beforeReturnExplorer,
+  afterArticle,
   afterMethodology,
 }: GenericAnnualReturnsPageProps) {
 
@@ -1323,6 +1325,8 @@ export default function GenericAnnualReturnsPage({
           </div>
         </section>
 
+        {beforeReturnExplorer}
+
         {/* =================================================================
             TNI RETURN CENTER — RESEARCH VIEW NAVIGATION
         ================================================================= */}
@@ -1487,8 +1491,6 @@ export default function GenericAnnualReturnsPage({
             />
           </figure>
         )}
-
-        {beforeReturnExplorer}
 
         {/* =================================================================
             TNI RETURN EXPLORER — PRODUCT DIFFERENTIATOR
@@ -2709,6 +2711,76 @@ export default function GenericAnnualReturnsPage({
           statistics={articleStatistics}
           recentWindowStatistics={recentWindowArticleStatistics}
         />
+
+        <section
+          aria-labelledby="tni-search-ai-context"
+          style={{
+            margin: '0 0 42px',
+            padding: '24px 26px',
+            border: '1px solid #e4ebf3',
+            borderRadius: '14px',
+            background: '#f8fbff',
+          }}
+        >
+          <div
+            style={{
+              marginBottom: '7px',
+              color: '#1677ff',
+              fontSize: '11px',
+              fontWeight: 800,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+            }}
+          >
+            Research Context
+          </div>
+
+          <h2
+            id="tni-search-ai-context"
+            style={{
+              margin: '0 0 10px',
+              color: '#10233f',
+              fontSize: '22px',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            {config.name} Historical Returns Research
+          </h2>
+
+          <p
+            style={{
+              margin: '0 0 10px',
+              maxWidth: '850px',
+              color: '#52657b',
+              fontSize: '14px',
+              lineHeight: 1.75,
+            }}
+          >
+            This TNI research page examines {config.name} annual price
+            returns by calendar year. The published dataset covers
+            {` ${dataset.summary.start_year}–${dataset.summary.end_year}`}
+            and separates completed historical years from current-year
+            performance.
+          </p>
+
+          <p
+            style={{
+              margin: 0,
+              maxWidth: '850px',
+              color: '#52657b',
+              fontSize: '14px',
+              lineHeight: 1.75,
+            }}
+          >
+            Annual price return is calculated from the final available
+            closing price of each calendar year relative to the final
+            available closing price of the prior calendar year. The page
+            provides the year-by-year dataset, historical statistics,
+            interactive visualization, and research methodology.
+          </p>
+        </section>
+
+        {afterArticle}
 
         {/* =================================================================
             TNI S&P 500 RETURNS — MONTHLY RESEARCH BRIDGE

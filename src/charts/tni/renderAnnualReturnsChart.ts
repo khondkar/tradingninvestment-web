@@ -46,11 +46,6 @@ function resolveTheme(overrides?: TNIChartThemeOverrides) {
 // Standard percentage formatting for annual return values
 // ============================================================
 
-function formatReturn(value: number): string {
-  const sign = value > 0 ? "+" : "";
-
-  return `${sign}${value.toFixed(2)}%`;
-}
 
 
 // ============================================================
@@ -674,58 +669,6 @@ export function renderAnnualReturnsChart(
   }
 
 
-  // ==========================================================
-  // HTML TOOLTIP
-  // Shared premium tooltip style
-  // ==========================================================
-
-  const tooltip = d3
-    .select(container)
-    .append("div")
-    .style(
-      "position",
-      "absolute"
-    )
-    .style(
-      "pointer-events",
-      "none"
-    )
-    .style(
-      "opacity",
-      "0"
-    )
-    .style(
-      "z-index",
-      "20"
-    )
-    .style(
-      "padding",
-      "10px 12px"
-    )
-    .style(
-      "border-radius",
-      "8px"
-    )
-    .style(
-      "background",
-      theme.colors.tooltipBackground
-    )
-    .style(
-      "color",
-      theme.colors.tooltipText
-    )
-    .style(
-      "font-size",
-      `${theme.typography.tooltipSize}px`
-    )
-    .style(
-      "line-height",
-      "1.4"
-    )
-    .style(
-      "box-shadow",
-      "0 8px 24px rgba(0, 0, 0, 0.14)"
-    );
 
 
   // ==========================================================
@@ -782,100 +725,19 @@ export function renderAnnualReturnsChart(
 
 
   // ==========================================================
-  // BAR HOVER INTERACTIONS
+  // BAR HOVER
+  // Keep the annual-return chart lightweight.
   // ==========================================================
 
   bars
     .on(
       "mouseenter",
-      function (
-        _event,
-        point
-      ) {
+      function () {
         d3
           .select(this)
           .attr(
             "opacity",
             0.78
-          );
-
-        const returnLabel =
-          formatReturn(
-            point.value
-          );
-
-        const noteHtml =
-          point.note
-            ? `<div style="margin-top:4px;opacity:.8">${point.note}</div>`
-            : "";
-
-        tooltip
-          .html(
-            `
-              <div style="font-weight:700">
-                ${point.label ?? point.year}
-              </div>
-
-              <div style="margin-top:2px">
-                ${config.metricLabel}: ${returnLabel}
-              </div>
-
-              ${noteHtml}
-            `
-          )
-          .style(
-            "opacity",
-            "1"
-          );
-      }
-    )
-    .on(
-      "mousemove",
-      function (
-        event
-      ) {
-        const bounds =
-          container.getBoundingClientRect();
-
-        const tooltipNode =
-          tooltip.node();
-
-        const tooltipWidth =
-          tooltipNode?.offsetWidth ??
-          140;
-
-        const desiredLeft =
-          event.clientX -
-          bounds.left +
-          14;
-
-        const maxLeft =
-          width -
-          tooltipWidth -
-          8;
-
-        const left =
-          Math.min(
-            Math.max(
-              8,
-              desiredLeft
-            ),
-            maxLeft
-          );
-
-        const top =
-          event.clientY -
-          bounds.top -
-          52;
-
-        tooltip
-          .style(
-            "left",
-            `${left}px`
-          )
-          .style(
-            "top",
-            `${Math.max(8, top)}px`
           );
       }
     )
@@ -887,12 +749,6 @@ export function renderAnnualReturnsChart(
           .attr(
             "opacity",
             1
-          );
-
-        tooltip
-          .style(
-            "opacity",
-            "0"
           );
       }
     );
@@ -1026,7 +882,6 @@ export function renderAnnualReturnsChart(
   // ==========================================================
 
   return () => {
-    tooltip.remove();
     svg.remove();
   };
 }

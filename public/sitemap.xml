@@ -37,6 +37,9 @@
     <loc>https://tradingninvestment.com/msft-stock-returns/</loc>
   </url>
   <url>
+    <loc>https://tradingninvestment.com/aapl-stock-yearly-return/</loc>
+  </url>
+  <url>
     <loc>https://tradingninvestment.com/sp-500-monthly-returns/</loc>
   </url>
   <url>
@@ -77,5 +80,8 @@
   </url>
   <url>
     <loc>https://tradingninvestment.com/research/stocks/msft/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/stocks/aapl/</loc>
   </url>
 </urlset>

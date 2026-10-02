@@ -1,0 +1,308 @@
+{
+  "symbol": "Apple Inc.",
+  "ticker": "AAPL",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / AAPL",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 45,
+    "start_year": 1981,
+    "end_year": 2025,
+    "positive_years": 30,
+    "negative_years": 15,
+    "positive_year_pct": 66.67,
+    "negative_year_pct": 33.33,
+    "average_annual_return_pct": 32.92,
+    "median_annual_return_pct": 25.56,
+    "best_year": {
+      "year": 1998,
+      "return_pct": 211.9
+    },
+    "worst_year": {
+      "year": 2000,
+      "return_pct": -71.06
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 21.5
+  },
+  "data": [
+    {
+      "year": 1981,
+      "value": -35.1652,
+      "label": "1981",
+      "status": "negative"
+    },
+    {
+      "year": 1982,
+      "value": 35.0292,
+      "label": "1982",
+      "status": "positive"
+    },
+    {
+      "year": 1983,
+      "value": -18.4103,
+      "label": "1983",
+      "status": "negative"
+    },
+    {
+      "year": 1984,
+      "value": 19.4868,
+      "label": "1984",
+      "status": "positive"
+    },
+    {
+      "year": 1985,
+      "value": -24.4636,
+      "label": "1985",
+      "status": "negative"
+    },
+    {
+      "year": 1986,
+      "value": 84.0919,
+      "label": "1986",
+      "status": "positive"
+    },
+    {
+      "year": 1987,
+      "value": 107.4069,
+      "label": "1987",
+      "status": "positive"
+    },
+    {
+      "year": 1988,
+      "value": -4.1667,
+      "label": "1988",
+      "status": "negative"
+    },
+    {
+      "year": 1989,
+      "value": -12.4224,
+      "label": "1989",
+      "status": "negative"
+    },
+    {
+      "year": 1990,
+      "value": 21.986,
+      "label": "1990",
+      "status": "positive"
+    },
+    {
+      "year": 1991,
+      "value": 31.1044,
+      "label": "1991",
+      "status": "positive"
+    },
+    {
+      "year": 1992,
+      "value": 5.9867,
+      "label": "1992",
+      "status": "positive"
+    },
+    {
+      "year": 1993,
+      "value": -51.046,
+      "label": "1993",
+      "status": "negative"
+    },
+    {
+      "year": 1994,
+      "value": 33.3331,
+      "label": "1994",
+      "status": "positive"
+    },
+    {
+      "year": 1995,
+      "value": -18.2692,
+      "label": "1995",
+      "status": "negative"
+    },
+    {
+      "year": 1996,
+      "value": -34.5097,
+      "label": "1996",
+      "status": "negative"
+    },
+    {
+      "year": 1997,
+      "value": -37.1255,
+      "label": "1997",
+      "status": "negative"
+    },
+    {
+      "year": 1998,
+      "value": 211.9031,
+      "label": "1998",
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "value": 151.1454,
+      "label": "1999",
+      "status": "positive"
+    },
+    {
+      "year": 2000,
+      "value": -71.0638,
+      "label": "2000",
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "value": 47.2267,
+      "label": "2001",
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "value": -34.5661,
+      "label": "2002",
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "value": 49.1276,
+      "label": "2003",
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "value": 201.3572,
+      "label": "2004",
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "value": 123.2609,
+      "label": "2005",
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "value": 18.0136,
+      "label": "2006",
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "value": 133.4748,
+      "label": "2007",
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "value": -56.9114,
+      "label": "2008",
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "value": 146.901,
+      "label": "2009",
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "value": 53.0679,
+      "label": "2010",
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "value": 25.558,
+      "label": "2011",
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "value": 31.4,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 5.4212,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 37.7241,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": -4.6385,
+      "label": "2015",
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "value": 10.0323,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 46.1147,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -6.7896,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 86.1608,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 80.7458,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 33.8232,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -26.8289,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 48.1798,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 30.068,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 8.5616,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

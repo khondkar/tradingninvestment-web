@@ -13,6 +13,9 @@ import StockMarketHeatmapPage from './pages/StockMarketHeatmapPage'
 import StockMarketSectorHealthPage from './pages/StockMarketSectorHealthPage'
 import StockMarketEarningsCalendarPage from './pages/StockMarketEarningsCalendarPage'
 import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
+import { getStockResearchData } from './research/annual-returns/stockDataRegistry'
+import StockAnnualReturnsPage from './templates/StockAnnualReturnsPage'
+import StockGrowthEmbedPage from './pages/StockGrowthEmbedPage'
 import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import { drawdownsResearchRegistry } from './research/drawdowns/registry'
 import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
@@ -736,6 +739,96 @@ function App() {
         <ResearchConnections path="/stock-market-correction-myth-and-reality/" />
       </div>
     )
+  }
+
+  const stockGrowthEmbedMatch =
+    normalizedPath.match(
+      /^\/embed\/([^/]+)\/10000-growth$/,
+    )
+
+  if (stockGrowthEmbedMatch) {
+    const stockEntry =
+      annualReturnsResearchRegistry.find(
+        (entry) =>
+          entry.config.categories.includes('stock') &&
+          entry.config.slug ===
+            stockGrowthEmbedMatch[1],
+      )
+
+    if (stockEntry) {
+      const stockData =
+        getStockResearchData(
+          stockEntry.config.symbol,
+        )
+
+      if (
+        stockData?.returnMethods?.length
+      ) {
+        return (
+          <StockGrowthEmbedPage
+            assetName={
+              stockEntry.config.shortName
+            }
+            canonicalUrl={`https://tradingninvestment.com${stockEntry.config.canonicalPath}`}
+            data={
+              stockData.returnMethods
+            }
+          />
+        )
+      }
+    }
+  }
+
+  const dynamicStockEntry =
+    annualReturnsResearchRegistry.find(
+      (entry) =>
+        entry.config.categories.includes('stock') &&
+        entry.config.canonicalPath.replace(/\/$/, '') ===
+          normalizedPath,
+    )
+
+  if (dynamicStockEntry) {
+    const stockData =
+      getStockResearchData(
+        dynamicStockEntry.config.symbol,
+      )
+
+    if (stockData) {
+      return (
+        <div className="site">
+          <Header
+            page="research"
+            setPage={setPage}
+          />
+
+          <ResearchTrail
+            path={
+              dynamicStockEntry.config
+                .canonicalPath
+            }
+          />
+
+          <StockAnnualReturnsPage
+            config={
+              dynamicStockEntry.config
+            }
+            dataset={
+              stockData.annualReturns
+            }
+            returnMethodsData={
+              stockData.returnMethods
+            }
+          />
+
+          <ResearchConnections
+            path={
+              dynamicStockEntry.config
+                .canonicalPath
+            }
+          />
+        </div>
+      )
+    }
   }
 
   if (normalizedPath === '/msft-stock-returns') {

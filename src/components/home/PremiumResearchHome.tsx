@@ -109,7 +109,13 @@ function ReturnPreview({
 
 export default function PremiumResearchHome() {
   const featuredPaths = new Set(featured.map((study) => study.path))
-  const remaining = researchItems.filter((item) => !featuredPaths.has(item.path))
+  const remaining = researchItems
+    .filter((item) => !featuredPaths.has(item.path))
+    .sort((a, b) => {
+      if (a.symbol === 'AAPL') return -1
+      if (b.symbol === 'AAPL') return 1
+      return 0
+    })
   const topHubs = researchHubs.filter((hub) => ['/research/stocks/', '/research/indexes/', '/research/market-history/', '/research/market-risk/'].includes(hub.path))
 
   return <main className="tni-home" id="top">
@@ -158,6 +164,107 @@ export default function PremiumResearchHome() {
           )}
         </a>
       </article>)}</div>
+    </section>
+
+    <section
+      className="tni-home-wrap"
+      aria-labelledby="tni-home-aapl-title"
+      style={{
+        paddingTop: '18px',
+        paddingBottom: '54px',
+      }}
+    >
+      <div
+        style={{
+          border: '1px solid #dfe8f3',
+          borderRadius: '18px',
+          overflow: 'hidden',
+          background: '#ffffff',
+          boxShadow: '0 8px 30px rgba(16,35,63,0.06)',
+        }}
+      >
+        <a
+          href="/aapl-stock-yearly-return/"
+          style={{
+            display: 'block',
+            textDecoration: 'none',
+            color: 'inherit',
+          }}
+          aria-label="Explore Apple annual returns research"
+        >
+          <div
+            style={{
+              padding: '26px 28px 18px',
+            }}
+          >
+            <span className="tni-home-kicker">
+              STOCK RESEARCH · APPLE
+            </span>
+
+            <h2
+              id="tni-home-aapl-title"
+              style={{
+                margin: '7px 0 8px',
+                color: '#10233f',
+                fontSize: '28px',
+                letterSpacing: '-0.025em',
+              }}
+            >
+              Apple Annual Returns
+            </h2>
+
+            <p
+              style={{
+                margin: 0,
+                maxWidth: '760px',
+                color: '#66768a',
+                fontSize: '15px',
+                lineHeight: 1.65,
+              }}
+            >
+              Explore Apple Inc. annual stock returns by year,
+              historical performance, and long-term return patterns.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: '0 28px 26px',
+            }}
+          >
+            <div
+              style={{
+                border: '1px solid #e4ebf3',
+                borderRadius: '12px',
+                overflow: 'hidden',
+                background: '#f8fbff',
+              }}
+            >
+              <img
+                src="/images/social/aapl-stock-intelligence-og.png"
+                alt="Apple Inc. annual stock returns by year"
+                loading="lazy"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
+            </div>
+
+            <div
+              style={{
+                marginTop: '16px',
+                color: '#1677ff',
+                fontSize: '14px',
+                fontWeight: 800,
+              }}
+            >
+              Explore Apple Returns →
+            </div>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section className="tni-home-topics" id="explore"><div className="tni-home-wrap">

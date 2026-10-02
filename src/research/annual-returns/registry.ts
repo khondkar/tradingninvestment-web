@@ -7,6 +7,7 @@
 // should derive from this registry.
 // ============================================================================
 
+import { aaplAnnualReturnsConfig } from "./aapl"
 import { dowAnnualReturnsConfig } from "./dow"
 import { msftAnnualReturnsConfig } from "./msft"
 import { nasdaqAnnualReturnsConfig } from "./nasdaq"
@@ -48,6 +49,10 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: msftAnnualReturnsConfig,
+      featured: false,
+    },
+    {
+      config: aaplAnnualReturnsConfig,
       featured: false,
     },
   ]
