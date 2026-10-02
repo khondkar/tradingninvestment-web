@@ -33,6 +33,7 @@ import {
 } from '../research/annual-returns/labels'
 import ResearchShareButtons from '../components/research/ResearchShareButtons'
 import AnnualReturnsBenchmarkComparison from '../components/research/AnnualReturnsBenchmarkComparison'
+import RollingTenYearComparison from '../components/research/RollingTenYearComparison'
 import GenericAnnualReturnsChart from './GenericAnnualReturnsChart'
 import GenericAnnualReturnsArticle from './GenericAnnualReturnsArticle'
 import LatestMarketIntelligence from '../components/news/LatestMarketIntelligence'
@@ -48,6 +49,8 @@ import {
   type RangePreset,
 } from '../research/annual-returns/pageShared'
 import type { AnnualReturnsAssetConfig } from '../research/annual-returns/types'
+import TNIResearchIdentity from '../components/research/TNIResearchIdentity'
+import '../components/research/TNIResearchIdentity.css'
 
 // ============================================================================
 // TNI ANNUAL RETURNS — GENERIC PAGE PROPS
@@ -956,6 +959,14 @@ export default function GenericAnnualReturnsPage({
         >
           <div
             style={{
+              marginBottom: '22px',
+            }}
+          >
+            <TNIResearchIdentity />
+          </div>
+
+          <div
+            style={{
               marginBottom: '10px',
               color: '#1677ff',
               fontSize: '12px',
@@ -1325,7 +1336,39 @@ export default function GenericAnnualReturnsPage({
           </div>
         </section>
 
-        {beforeReturnExplorer}
+        {beforeReturnExplorer && (
+          <>
+            <section
+              className="tni-return-explorer"
+              aria-label={`Growth of $10,000 invested in ${config.name}`}
+              style={{ marginBottom: '18px' }}
+            >
+              <div className="tni-return-explorer-header">
+                <div>
+                  <div className="tni-return-explorer-title">
+                    Growth of $10,000
+                  </div>
+
+                  <div className="tni-return-explorer-subtitle">
+                    See how a hypothetical $10,000 investment in {config.shortName} grew over time.
+                  </div>
+                </div>
+
+                <div className="tni-return-explorer-status">
+                  <strong>
+                    {dataset.data[0]?.year ?? config.startYear}–{dataset.data[dataset.data.length - 1]?.year ?? 'Present'}
+                  </strong>
+
+                  <span>
+                    Long-term growth
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            {beforeReturnExplorer}
+          </>
+        )}
 
         {/* =================================================================
             TNI RETURN CENTER — RESEARCH VIEW NAVIGATION
@@ -1500,29 +1543,6 @@ export default function GenericAnnualReturnsPage({
           className="tni-return-explorer"
           aria-label={`Explore ${config.name} returns`}
         >
-          <div className="tni-return-explorer-header">
-            <div>
-              <div className="tni-return-explorer-title">
-                Explore {config.name} Returns
-              </div>
-
-              <div className="tni-return-explorer-subtitle">
-                Filter historical performance to analyze different market periods.
-              </div>
-            </div>
-
-            <div className="tni-return-explorer-status">
-              <strong>
-                Showing {rangeSummary}
-              </strong>
-
-              <span>
-                {filteredData.length}{' '}
-                {observationLabel}
-              </span>
-            </div>
-          </div>
-
           <div className="tni-return-explorer-controls">
             {/* =============================================================
                 TNI FILTER — PERFORMANCE
@@ -1876,6 +1896,15 @@ export default function GenericAnnualReturnsPage({
             benchmarkDataset={benchmarkDataset}
             assetAsOfDate={assetAsOfDate}
             benchmarkAsOfDate={benchmarkAsOfDate}
+          />
+        )}
+
+        {benchmarkDataset && (
+          <RollingTenYearComparison
+            assetName={config.name}
+            assetDataset={dataset}
+            benchmarkName={benchmarkName}
+            benchmarkDataset={benchmarkDataset}
           />
         )}
 

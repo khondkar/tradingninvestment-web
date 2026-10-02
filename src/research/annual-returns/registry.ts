@@ -8,6 +8,7 @@
 // ============================================================================
 
 import { aaplAnnualReturnsConfig } from "./aapl"
+import { brkbAnnualReturnsConfig } from "./brkb"
 import { dowAnnualReturnsConfig } from "./dow"
 import { msftAnnualReturnsConfig } from "./msft"
 import { nasdaqAnnualReturnsConfig } from "./nasdaq"
@@ -53,6 +54,10 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: aaplAnnualReturnsConfig,
+      featured: false,
+    },
+    {
+      config: brkbAnnualReturnsConfig,
       featured: false,
     },
   ]

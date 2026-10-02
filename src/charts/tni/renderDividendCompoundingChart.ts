@@ -20,9 +20,9 @@ export type TNIDividendCompoundingChartConfig = {
 }
 
 const dividendChartColors = {
-  price: '#6F91B8',
-  total: '#D65A4A',
-  contribution: '#F4C7C1',
+  price: '#2563EB',
+  total: '#123B73',
+  contribution: '#D9468F',
 } as const
 
 function formatCurrency(
@@ -567,8 +567,8 @@ export function renderDividendCompoundingChart(
     .attr(
       'stroke-width',
       isMobile
-        ? 3
-        : 3.2,
+        ? 3.6
+        : 4,
     )
     .attr(
       'stroke-linejoin',

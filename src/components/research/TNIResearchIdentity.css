@@ -1,0 +1,75 @@
+.tni-research-identity {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  color: #07152f;
+}
+
+.tni-research-identity__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+}
+
+.tni-research-identity__brand strong {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.tni-research-identity__brand span {
+  color: #98a2b3;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.tni-research-identity__brand b {
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.tni-research-identity__signature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  text-align: right;
+}
+
+.tni-research-identity__signature span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.tni-research-identity__signature small {
+  color: #667085;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.tni-research-identity--compact {
+  justify-content: flex-start;
+}
+
+.tni-research-identity--compact
+.tni-research-identity__brand strong {
+  font-size: 16px;
+}
+
+.tni-research-identity--compact
+.tni-research-identity__brand b {
+  font-size: 9px;
+}
+
+@media (max-width: 640px) {
+  .tni-research-identity__signature {
+    display: none;
+  }
+}

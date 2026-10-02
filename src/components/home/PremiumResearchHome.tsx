@@ -4,6 +4,10 @@ import nvdaData from '../../data/charts/nvdaAnnualReturns.json'
 import nasdaqData from '../../data/charts/nasdaqAnnualReturns.json'
 import dowData from '../../data/charts/dowAnnualReturns.json'
 import { researchHubs, researchItems } from '../../research/discovery'
+import { annualReturnsResearchRegistry } from '../../research/annual-returns/registry'
+import { stockResearchDataRegistry } from '../../research/annual-returns/stockDataRegistry'
+import TNIResearchIdentity from '../research/TNIResearchIdentity'
+import '../research/TNIResearchIdentity.css'
 import './PremiumResearchHome.css'
 
 type AnnualPoint = {
@@ -66,6 +70,46 @@ const featured = [
   { path: '/stock-market-historical-returns/', label: 'INDEX HISTORY · DOW JONES', headline: 'More than a century of Dow Jones returns.', intro: 'Explore annual Dow Jones performance and the market periods behind its long-term record.', chartLabel: 'DOW JONES', metricLabel: 'ANNUAL RETURNS', chartDescription: 'Annual price returns · Source and methodology in article', points: dowData.data as AnnualPoint[] },
 ]
 
+const stockHomepageResearch =
+  annualReturnsResearchRegistry
+    .filter(
+      ({ config }) =>
+        config.categories.includes('stock') &&
+        !featured.some(
+          (study) =>
+            study.path === config.canonicalPath,
+        ) &&
+        Boolean(
+          stockResearchDataRegistry[
+            config.symbol
+          ]?.annualReturns,
+        ),
+    )
+    .map(({ config }) => {
+      const dataset =
+        stockResearchDataRegistry[
+          config.symbol
+        ].annualReturns
+
+      return {
+        path: config.canonicalPath,
+        label:
+          `STOCK INTELLIGENCE · ${config.shortName.toUpperCase()}`,
+        headline:
+          `${config.shortName} returns, year by year.`,
+        intro:
+          `Explore ${config.name} annual stock returns, historical performance, and long-term return patterns.`,
+        chartLabel:
+          config.shortName.toUpperCase(),
+        metricLabel:
+          'ANNUAL RETURNS',
+        chartDescription:
+          'Annual price returns · Source and methodology in article',
+        points:
+          dataset.data as AnnualPoint[],
+      }
+    })
+
 const citations = [
   { name: 'Florida State University', detail: 'Law Review', logo: '/images/citations/fsu.svg', logoClass: 'fsu', href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/' },
   { name: 'Sorbonne University', detail: 'Academic reference', logo: '/images/citations/sorbonne.png', href: 'https://ecm.univ-paris1.fr/nuxeo/nxfile/default/2a2e1785-2b20-4751-9203-7f8819df8e62/file%3Acontent/2023-04%20PEREZ%20Inf.pdf' },
@@ -90,6 +134,9 @@ function ReturnPreview({
   const negativeMax = Math.max(1, ...recent.map((point) => -point.value))
 
   return <div className="tni-home-chart" aria-label={`${label} annual return preview, ${first} to ${last}`}>
+    <div style={{ marginBottom: '8px' }}>
+      <TNIResearchIdentity />
+    </div>
     <div className="tni-home-chart-top"><strong>{label} / {metricLabel}</strong><span>ACTUAL DATA</span></div>
     <div className="tni-home-chart-years">{first}—{last}</div>
     <p>Recent completed calendar years</p>
@@ -142,7 +189,14 @@ export default function PremiumResearchHome() {
     <section className="tni-home-features tni-home-wrap" id="featured-research" aria-labelledby="tni-home-feature-title">
       <div className="tni-home-section-head"><span className="tni-home-kicker">FEATURED RESEARCH</span><h2 id="tni-home-feature-title">Research worth spending time with.</h2><p>Interactive studies with transparent data sources and methodology.</p></div>
       <div className="tni-home-feature-stack">{featured.map((study) => <article className="tni-home-feature" key={study.path}>
-        <div className="tni-home-feature-copy"><span className="tni-home-kicker">{study.label}</span><h3><a href={study.path}>{study.headline}</a></h3><p>{study.intro}</p><a className="tni-home-feature-link" href={study.path}>Explore the full study ↗</a><small>{study.chartDescription}</small></div>
+        <div className="tni-home-feature-copy">
+          <TNIResearchIdentity compact />
+          <span className="tni-home-kicker">{study.label}</span>
+          <h3><a href={study.path}>{study.headline}</a></h3>
+          <p>{study.intro}</p>
+          <a className="tni-home-feature-link" href={study.path}>Explore the full study ↗</a>
+          <small>{study.chartDescription}</small>
+        </div>
         <a
           className="tni-home-feature-visual"
           href={study.path}
@@ -166,106 +220,80 @@ export default function PremiumResearchHome() {
       </article>)}</div>
     </section>
 
-    <section
-      className="tni-home-wrap"
-      aria-labelledby="tni-home-aapl-title"
-      style={{
-        paddingTop: '18px',
-        paddingBottom: '54px',
-      }}
-    >
-      <div
-        style={{
-          border: '1px solid #dfe8f3',
-          borderRadius: '18px',
-          overflow: 'hidden',
-          background: '#ffffff',
-          boxShadow: '0 8px 30px rgba(16,35,63,0.06)',
-        }}
+    {stockHomepageResearch.length > 0 && (
+      <section
+        className="tni-home-features tni-home-wrap"
+        aria-labelledby="tni-home-stock-research-title"
       >
-        <a
-          href="/aapl-stock-yearly-return/"
-          style={{
-            display: 'block',
-            textDecoration: 'none',
-            color: 'inherit',
-          }}
-          aria-label="Explore Apple annual returns research"
-        >
-          <div
-            style={{
-              padding: '26px 28px 18px',
-            }}
-          >
-            <span className="tni-home-kicker">
-              STOCK RESEARCH · APPLE
-            </span>
+        <div className="tni-home-section-head">
+          <span className="tni-home-kicker">
+            STOCK INTELLIGENCE
+          </span>
 
-            <h2
-              id="tni-home-aapl-title"
-              style={{
-                margin: '7px 0 8px',
-                color: '#10233f',
-                fontSize: '28px',
-                letterSpacing: '-0.025em',
-              }}
-            >
-              Apple Annual Returns
-            </h2>
+          <h2 id="tni-home-stock-research-title">
+            Explore individual stocks.
+          </h2>
 
-            <p
-              style={{
-                margin: 0,
-                maxWidth: '760px',
-                color: '#66768a',
-                fontSize: '15px',
-                lineHeight: 1.65,
-              }}
-            >
-              Explore Apple Inc. annual stock returns by year,
-              historical performance, and long-term return patterns.
-            </p>
-          </div>
+          <p>
+            Historical returns, actual data, and long-term
+            performance research for leading companies.
+          </p>
+        </div>
 
-          <div
-            style={{
-              padding: '0 28px 26px',
-            }}
-          >
-            <div
-              style={{
-                border: '1px solid #e4ebf3',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                background: '#f8fbff',
-              }}
+        <div className="tni-home-feature-stack">
+          {stockHomepageResearch.map((study) => (
+            <article
+              className="tni-home-feature"
+              key={study.path}
             >
-              <img
-                src="/images/social/aapl-stock-intelligence-og.png"
-                alt="Apple Inc. annual stock returns by year"
-                loading="lazy"
-                style={{
-                  display: 'block',
-                  width: '100%',
-                  height: 'auto',
-                }}
-              />
-            </div>
+              <div className="tni-home-feature-copy">
+                <TNIResearchIdentity compact />
 
-            <div
-              style={{
-                marginTop: '16px',
-                color: '#1677ff',
-                fontSize: '14px',
-                fontWeight: 800,
-              }}
-            >
-              Explore Apple Returns →
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
+                <span
+                  className="tni-home-kicker"
+                  style={{ marginTop: '18px' }}
+                >
+                  {study.label}
+                </span>
+
+                <h3>
+                  <a href={study.path}>
+                    {study.headline}
+                  </a>
+                </h3>
+
+                <p>
+                  {study.intro}
+                </p>
+
+                <a
+                  className="tni-home-feature-link"
+                  href={study.path}
+                >
+                  Explore the full study ↗
+                </a>
+
+                <small>
+                  {study.chartDescription}
+                </small>
+              </div>
+
+              <a
+                className="tni-home-feature-visual"
+                href={study.path}
+                aria-label={`Explore ${study.chartLabel} interactive returns`}
+              >
+                <ReturnPreview
+                  label={study.chartLabel}
+                  metricLabel={study.metricLabel}
+                  points={study.points}
+                />
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
 
     <section className="tni-home-topics" id="explore"><div className="tni-home-wrap">
       <div className="tni-home-section-head"><span className="tni-home-kicker">FIND YOUR PATH</span><h2>Start anywhere. Keep exploring.</h2></div>
