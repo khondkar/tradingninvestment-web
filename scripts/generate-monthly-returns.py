@@ -242,6 +242,330 @@ def main():
         ].copy()
 
     # ---------------------------------------------------------------------
+    # CURRENT-MONTH RISK INTELLIGENCE
+    # ---------------------------------------------------------------------
+    #
+    # Max drawdown:
+    #   Previous month-end close establishes the starting peak.
+    #   We then measure the largest peak-to-trough decline using
+    #   daily closing prices during the calendar month.
+    #
+    # Adverse excursion:
+    #   Lowest daily Low during the month relative to the previous
+    #   month-end Close.
+    #
+    # The same methodology is applied to every historical month so
+    # current and historical observations are directly comparable.
+    # The current incomplete month is excluded from historical stats.
+    # ---------------------------------------------------------------------
+
+    risk_rows = []
+
+    risk_frame = raw[
+        ["High", "Low", "Close"]
+    ].dropna().copy()
+
+    grouped_months = list(
+        risk_frame.groupby(
+            [
+                risk_frame.index.year,
+                risk_frame.index.month,
+            ]
+        )
+    )
+
+    for (year, month), group in grouped_months:
+        year = int(year)
+        month = int(month)
+
+        if year < args.start_year:
+            continue
+
+        month_start = group.index.min()
+
+        prior_rows = risk_frame.loc[
+            risk_frame.index < month_start
+        ]
+
+        if prior_rows.empty:
+            continue
+
+        previous_month_end_close = float(
+            prior_rows.iloc[-1]["Close"]
+        )
+
+        closes = group["Close"].astype(float)
+        lows = group["Low"].astype(float)
+
+        if closes.empty or lows.empty:
+            continue
+
+        # Include previous month-end close as the
+        # initial peak entering the calendar month.
+        running_peak_value = (
+            previous_month_end_close
+        )
+
+        max_drawdown_pct = 0.0
+
+        for close_value in closes:
+            close_value = float(close_value)
+
+            running_peak_value = max(
+                running_peak_value,
+                close_value,
+            )
+
+            drawdown_pct = (
+                close_value /
+                running_peak_value -
+                1.0
+            ) * 100.0
+
+            max_drawdown_pct = min(
+                max_drawdown_pct,
+                drawdown_pct,
+            )
+
+        lowest_low = float(lows.min())
+
+        adverse_excursion_pct = (
+            lowest_low /
+            previous_month_end_close -
+            1.0
+        ) * 100.0
+
+        risk_rows.append(
+            {
+                "year": year,
+                "month": month,
+                "month_name":
+                    MONTH_NAMES[month],
+
+                "previous_month_end_close":
+                    safe_round(
+                        previous_month_end_close,
+                        4,
+                    ),
+
+                "max_drawdown_pct":
+                    safe_round(
+                        max_drawdown_pct,
+                        4,
+                    ),
+
+                "adverse_excursion_pct":
+                    safe_round(
+                        adverse_excursion_pct,
+                        4,
+                    ),
+            }
+        )
+
+    risk_data = pd.DataFrame(risk_rows)
+
+    current_month_risk = None
+
+    if (
+        current_month is not None
+        and not risk_data.empty
+    ):
+        current_risk_rows = risk_data.loc[
+            (
+                risk_data["year"] ==
+                latest_year
+            )
+            & (
+                risk_data["month"] ==
+                latest_month_number
+            )
+        ]
+
+        historical_risk_rows = risk_data.loc[
+            (
+                risk_data["month"] ==
+                latest_month_number
+            )
+            & ~(
+                (
+                    risk_data["year"] ==
+                    latest_year
+                )
+                & (
+                    risk_data["month"] ==
+                    latest_month_number
+                )
+            )
+        ].copy()
+
+        if (
+            not current_risk_rows.empty
+            and not historical_risk_rows.empty
+        ):
+            current_risk = (
+                current_risk_rows.iloc[-1]
+            )
+
+            current_drawdown = float(
+                current_risk[
+                    "max_drawdown_pct"
+                ]
+            )
+
+            current_adverse_excursion = float(
+                current_risk[
+                    "adverse_excursion_pct"
+                ]
+            )
+
+            historical_drawdowns = (
+                historical_risk_rows[
+                    "max_drawdown_pct"
+                ].astype(float)
+            )
+
+            historical_adverse = (
+                historical_risk_rows[
+                    "adverse_excursion_pct"
+                ].astype(float)
+            )
+
+            worst_drawdown_index = (
+                historical_drawdowns.idxmin()
+            )
+
+            worst_drawdown_row = (
+                historical_risk_rows.loc[
+                    worst_drawdown_index
+                ]
+            )
+
+            worst_adverse_index = (
+                historical_adverse.idxmin()
+            )
+
+            worst_adverse_row = (
+                historical_risk_rows.loc[
+                    worst_adverse_index
+                ]
+            )
+
+            # Risk percentile:
+            # percentage of historical same-month
+            # observations with an equal or more
+            # severe drawdown.
+            drawdown_percentile = (
+                (
+                    historical_drawdowns
+                    <= current_drawdown
+                ).sum()
+                / len(historical_drawdowns)
+                * 100.0
+            )
+
+            current_month_risk = {
+                "month":
+                    latest_month_number,
+
+                "month_name":
+                    MONTH_NAMES[
+                        latest_month_number
+                    ],
+
+                "through_date":
+                    latest_market_date.strftime(
+                        "%Y-%m-%d"
+                    ),
+
+                "previous_month_end_close":
+                    safe_round(
+                        current_risk[
+                            "previous_month_end_close"
+                        ],
+                        4,
+                    ),
+
+                "current_max_drawdown_pct":
+                    safe_round(
+                        current_drawdown,
+                        4,
+                    ),
+
+                "current_adverse_excursion_pct":
+                    safe_round(
+                        current_adverse_excursion,
+                        4,
+                    ),
+
+                "historical_observations":
+                    int(
+                        len(
+                            historical_drawdowns
+                        )
+                    ),
+
+                "average_max_drawdown_pct":
+                    safe_round(
+                        historical_drawdowns.mean(),
+                        4,
+                    ),
+
+                "median_max_drawdown_pct":
+                    safe_round(
+                        historical_drawdowns.median(),
+                        4,
+                    ),
+
+                "worst_max_drawdown_pct":
+                    safe_round(
+                        worst_drawdown_row[
+                            "max_drawdown_pct"
+                        ],
+                        4,
+                    ),
+
+                "worst_max_drawdown_year":
+                    int(
+                        worst_drawdown_row[
+                            "year"
+                        ]
+                    ),
+
+                "average_adverse_excursion_pct":
+                    safe_round(
+                        historical_adverse.mean(),
+                        4,
+                    ),
+
+                "median_adverse_excursion_pct":
+                    safe_round(
+                        historical_adverse.median(),
+                        4,
+                    ),
+
+                "worst_adverse_excursion_pct":
+                    safe_round(
+                        worst_adverse_row[
+                            "adverse_excursion_pct"
+                        ],
+                        4,
+                    ),
+
+                "worst_adverse_excursion_year":
+                    int(
+                        worst_adverse_row[
+                            "year"
+                        ]
+                    ),
+
+                "drawdown_percentile":
+                    safe_round(
+                        drawdown_percentile,
+                        2,
+                    ),
+            }
+
+    # ---------------------------------------------------------------------
     # 4. CALCULATE JANUARY–DECEMBER COMPLETED-MONTH STATISTICS
     # ---------------------------------------------------------------------
 
@@ -362,6 +686,9 @@ def main():
         },
 
         "current_month": current_month,
+
+        "current_month_risk":
+            current_month_risk,
 
         "leaders": {
             "highest_positive_frequency": {

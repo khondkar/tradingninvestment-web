@@ -21,6 +21,24 @@
     "return_pct": 0.9303,
     "through_date": "2026-10-02"
   },
+  "current_month_risk": {
+    "month": 10,
+    "month_name": "October",
+    "through_date": "2026-10-02",
+    "previous_month_end_close": 7651.54,
+    "current_max_drawdown_pct": 0.0,
+    "current_adverse_excursion_pct": -0.4543,
+    "historical_observations": 98,
+    "average_max_drawdown_pct": -5.4164,
+    "median_max_drawdown_pct": -3.6132,
+    "worst_max_drawdown_pct": -33.6904,
+    "worst_max_drawdown_year": 1929,
+    "average_adverse_excursion_pct": -4.2909,
+    "median_adverse_excursion_pct": -2.468,
+    "worst_adverse_excursion_pct": -32.7409,
+    "worst_adverse_excursion_year": 1987,
+    "drawdown_percentile": 100.0
+  },
   "leaders": {
     "highest_positive_frequency": {
       "month_name": "December",

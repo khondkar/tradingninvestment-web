@@ -149,6 +149,117 @@ export default function GenericMonthlyReturnsPage({
     )
 
 
+  const currentMonthReturnContext =
+    useMemo(() => {
+      if (!currentMonth) {
+        return null
+      }
+
+      const historicalRows =
+        dataset.data.filter(
+          (row) =>
+            row.month === currentMonth.month &&
+            !(
+              row.year === currentMonth.year &&
+              row.month === currentMonth.month
+            ),
+        )
+
+      if (!historicalRows.length) {
+        return null
+      }
+
+      const sorted =
+        [...historicalRows].sort(
+          (a, b) => a.value - b.value,
+        )
+
+      const best =
+        historicalRows.reduce(
+          (leader, row) =>
+            row.value > leader.value
+              ? row
+              : leader,
+        )
+
+      const worst =
+        historicalRows.reduce(
+          (leader, row) =>
+            row.value < leader.value
+              ? row
+              : leader,
+        )
+
+      const lessThanOrEqual =
+        sorted.filter(
+          (row) =>
+            row.value <=
+            currentMonth.return_pct,
+        ).length
+
+      const percentile =
+        (
+          lessThanOrEqual /
+          sorted.length
+        ) * 100
+
+      const percentileValue = (
+        p: number,
+      ) => {
+        const position =
+          (sorted.length - 1) * p
+
+        const lower =
+          Math.floor(position)
+
+        const upper =
+          Math.ceil(position)
+
+        if (lower === upper) {
+          return sorted[lower].value
+        }
+
+        const weight =
+          position - lower
+
+        return (
+          sorted[lower].value *
+            (1 - weight) +
+          sorted[upper].value *
+            weight
+        )
+      }
+
+      return {
+        observations:
+          historicalRows.length,
+
+        bestReturn:
+          best.value,
+
+        bestYear:
+          best.year,
+
+        worstReturn:
+          worst.value,
+
+        worstYear:
+          worst.year,
+
+        percentile,
+
+        historicalRangeLow:
+          percentileValue(0.10),
+
+        historicalRangeHigh:
+          percentileValue(0.90),
+      }
+    }, [
+      currentMonth,
+      dataset.data,
+    ])
+
+
   const completedObservationCount =
     useMemo(
       () =>
@@ -354,6 +465,283 @@ export default function GenericMonthlyReturnsPage({
           )}
         </section>
       )}
+
+
+      {/* ====================================================================
+          CURRENT MONTH INTELLIGENCE
+      ==================================================================== */}
+
+      {currentMonth &&
+        currentMonthReturnContext && (
+          <section
+            className="tni-monthly-context-grid"
+            aria-label={`${currentMonth.month_name} return and risk context`}
+          >
+            <article className="tni-monthly-context-card">
+              <div className="tni-monthly-context-header">
+                <div>
+                  <span className="tni-card-label">
+                    RETURN CONTEXT
+                  </span>
+
+                  <h2>
+                    {currentMonth.month_name} vs History
+                  </h2>
+
+                  <p>
+                    Current month through{' '}
+                    {currentMonth.through_date}
+                  </p>
+                </div>
+
+                <strong
+                  className={
+                    currentMonth.return_pct >= 0
+                      ? "tni-value-positive"
+                      : "tni-value-negative"
+                  }
+                >
+                  {formatReturn(
+                    currentMonth.return_pct,
+                  )}
+                </strong>
+              </div>
+
+              <div className="tni-monthly-context-stats">
+                <div>
+                  <span>
+                    Historical Median
+                  </span>
+                  <strong>
+                    {formatReturn(
+                      currentMonthHistoricalStats
+                        ?.median_return_pct ?? 0,
+                    )}
+                  </strong>
+                </div>
+
+                <div>
+                  <span>
+                    Historical Percentile
+                  </span>
+                  <strong>
+                    {
+                      currentMonthReturnContext
+                        .percentile
+                        .toFixed(1)
+                    }th
+                  </strong>
+                </div>
+
+                <div>
+                  <span>
+                    Best {currentMonth.month_name}
+                  </span>
+                  <strong className="tni-value-positive">
+                    {formatReturn(
+                      currentMonthReturnContext
+                        .bestReturn,
+                    )}
+                  </strong>
+                  <small>
+                    {
+                      currentMonthReturnContext
+                        .bestYear
+                    }
+                  </small>
+                </div>
+
+                <div>
+                  <span>
+                    Worst {currentMonth.month_name}
+                  </span>
+                  <strong className="tni-value-negative">
+                    {formatReturn(
+                      currentMonthReturnContext
+                        .worstReturn,
+                    )}
+                  </strong>
+                  <small>
+                    {
+                      currentMonthReturnContext
+                        .worstYear
+                    }
+                  </small>
+                </div>
+
+                <div className="tni-monthly-context-wide">
+                  <span>
+                    Typical Historical Range
+                  </span>
+                  <strong>
+                    {formatReturn(
+                      currentMonthReturnContext
+                        .historicalRangeLow,
+                    )}
+                    {' '}to{' '}
+                    {formatReturn(
+                      currentMonthReturnContext
+                        .historicalRangeHigh,
+                    )}
+                  </strong>
+                  <small>
+                    10th–90th percentile · {
+                      currentMonthReturnContext
+                        .observations
+                    } completed {
+                      currentMonth.month_name
+                    } observations
+                  </small>
+                </div>
+              </div>
+
+              <div className="tni-monthly-context-action">
+                <a
+                  href="/images/social/sp500-monthly-return-context.png"
+                  download
+                >
+                  Download Return Context Chart
+                </a>
+              </div>
+            </article>
+
+            {dataset.current_month_risk && (
+              <article className="tni-monthly-context-card">
+                <div className="tni-monthly-context-header">
+                  <div>
+                    <span className="tni-card-label">
+                      RISK CONTEXT
+                    </span>
+
+                    <h2>
+                      {currentMonth.month_name} Downside Risk
+                    </h2>
+
+                    <p>
+                      Current month through{' '}
+                      {
+                        dataset
+                          .current_month_risk
+                          .through_date
+                      }
+                    </p>
+                  </div>
+
+                  <strong>
+                    {formatReturn(
+                      dataset
+                        .current_month_risk
+                        .current_adverse_excursion_pct,
+                    )}
+                  </strong>
+                </div>
+
+                <div className="tni-monthly-context-stats">
+                  <div>
+                    <span>
+                      Max Closing Drawdown
+                    </span>
+                    <strong>
+                      {formatReturn(
+                        dataset
+                          .current_month_risk
+                          .current_max_drawdown_pct,
+                      )}
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>
+                      Intraday Adverse Excursion
+                    </span>
+                    <strong className="tni-value-negative">
+                      {formatReturn(
+                        dataset
+                          .current_month_risk
+                          .current_adverse_excursion_pct,
+                      )}
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>
+                      Historical Median Drawdown
+                    </span>
+                    <strong>
+                      {formatReturn(
+                        dataset
+                          .current_month_risk
+                          .median_max_drawdown_pct,
+                      )}
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>
+                      Historical Average Drawdown
+                    </span>
+                    <strong>
+                      {formatReturn(
+                        dataset
+                          .current_month_risk
+                          .average_max_drawdown_pct,
+                      )}
+                    </strong>
+                  </div>
+
+                  <div className="tni-monthly-context-wide">
+                    <span>
+                      Worst Historical {
+                        currentMonth.month_name
+                      } Drawdown
+                    </span>
+
+                    <strong className="tni-value-negative">
+                      {formatReturn(
+                        dataset
+                          .current_month_risk
+                          .worst_max_drawdown_pct,
+                      )}
+                    </strong>
+
+                    <small>
+                      {
+                        dataset
+                          .current_month_risk
+                          .worst_max_drawdown_year
+                      }
+                      {' · '}
+                      {
+                        dataset
+                          .current_month_risk
+                          .historical_observations
+                      } completed {
+                        currentMonth.month_name
+                      } observations
+                    </small>
+                  </div>
+                </div>
+
+                <p className="tni-monthly-risk-note">
+                  So far, this month's closing-price
+                  drawdown is shallower than every
+                  completed historical {
+                    currentMonth.month_name
+                  } observation in the dataset.
+                </p>
+
+                <div className="tni-monthly-context-action">
+                  <a
+                    href="/images/social/sp500-monthly-risk-context.png"
+                    download
+                  >
+                    Download Risk Context Chart
+                  </a>
+                </div>
+              </article>
+            )}
+          </section>
+        )}
 
 
       {/* ====================================================================

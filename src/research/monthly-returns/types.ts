@@ -40,6 +40,9 @@ export interface MonthlyReturnStatistic {
 
   average_return_pct: number
   median_return_pct: number
+
+  best_return_pct?: number
+  worst_return_pct?: number
 }
 
 
@@ -50,6 +53,34 @@ export interface CurrentMonthReturn {
   label: string
   return_pct: number
   through_date: string
+}
+
+
+export interface CurrentMonthRisk {
+  month: number
+  month_name: string
+  through_date: string
+
+  previous_month_end_close: number
+
+  current_max_drawdown_pct: number
+  current_adverse_excursion_pct: number
+
+  historical_observations: number
+
+  average_max_drawdown_pct: number
+  median_max_drawdown_pct: number
+
+  worst_max_drawdown_pct: number
+  worst_max_drawdown_year: number
+
+  average_adverse_excursion_pct: number
+  median_adverse_excursion_pct: number
+
+  worst_adverse_excursion_pct: number
+  worst_adverse_excursion_year: number
+
+  drawdown_percentile: number
 }
 
 
@@ -121,6 +152,9 @@ export interface MonthlyReturnsDataset {
 
   current_month:
     CurrentMonthReturn | null
+
+  current_month_risk?:
+    CurrentMonthRisk | null
 
   leaders:
     MonthlyReturnsLeaders

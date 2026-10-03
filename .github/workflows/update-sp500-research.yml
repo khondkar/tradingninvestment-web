@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install pandas numpy yfinance
+          python -m pip install pandas numpy yfinance matplotlib
 
       - name: Update S&P 500 annual returns
         run: |
@@ -53,6 +53,15 @@ jobs:
             --asset-id 'sp500' \
             --output 'src/data/charts/sp500MonthlyReturns.json'
 
+      - name: Generate S&P 500 monthly context social charts
+        run: |
+          python scripts/generate-monthly-context-social-charts.py \
+            --data 'src/data/charts/sp500MonthlyReturns.json' \
+            --name 'S&P 500' \
+            --symbol 'S&P 500' \
+            --return-output 'public/images/social/sp500-monthly-return-context.png' \
+            --risk-output 'public/images/social/sp500-monthly-risk-context.png'
+
       - name: Update S&P 500 drawdowns
         run: |
           python scripts/generate-sp500-drawdowns.py
@@ -71,6 +80,8 @@ jobs:
               Path("src/data/charts/sp500AnnualReturns.json"),
               Path("src/data/charts/sp500MonthlyReturns.json"),
               Path("src/data/market/sp500/metadata.json"),
+              Path("public/images/social/sp500-monthly-return-context.png"),
+              Path("public/images/social/sp500-monthly-risk-context.png"),
               Path("public/data/research/sp500-drawdowns.json"),
               Path("public/data/sp500-historical-return-methods.json"),
               Path("src/data/sp500-historical-return-methods.json"),
@@ -122,6 +133,8 @@ jobs:
             src/data/charts/sp500AnnualReturns.json \
             src/data/charts/sp500MonthlyReturns.json \
             src/data/market/sp500/metadata.json \
+            public/images/social/sp500-monthly-return-context.png \
+            public/images/social/sp500-monthly-risk-context.png \
             public/data/research/sp500-drawdowns.json \
             public/data/sp500-historical-return-methods.csv \
             public/data/sp500-historical-return-methods.json \
