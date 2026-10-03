@@ -1003,6 +1003,27 @@ export default function GenericAnnualReturnsPage({
             )}
           </h1>
 
+          {dataset.current_year.through_date && (
+            <div
+              style={{
+                margin: '10px 0 0',
+                color: '#123B73',
+                fontSize: '13px',
+                fontWeight: 700,
+                letterSpacing: '0.01em',
+              }}
+            >
+              Market data through{' '}
+              {new Date(
+                `${dataset.current_year.through_date}T00:00:00`
+              ).toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              })}
+            </div>
+          )}
+
           <p
             style={{
               maxWidth: '820px',
@@ -1180,7 +1201,25 @@ export default function GenericAnnualReturnsPage({
           >
             Historical {config.name} annual price-return
             statistics from {dataset.summary.start_year} to present, with the
-            current year reported separately as year-to-date.
+            current year reported separately as year-to-date.{" "}
+            {dataset.current_year.through_date && (
+              <strong
+                style={{
+                  color: '#123B73',
+                  fontWeight: 700,
+                }}
+              >
+                (Market data through{" "}
+                {new Date(
+                  `${dataset.current_year.through_date}T00:00:00`
+                ).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+                )
+              </strong>
+            )}
           </p>
 
           <div
@@ -1257,7 +1296,23 @@ export default function GenericAnnualReturnsPage({
                 dataset.current_year
                   .return_pct,
               )}
-              detail={`${dataset.current_year.label} • YTD`}
+              valueColor={
+                dataset.current_year.return_pct >= 0
+                  ? '#15803D'
+                  : '#DC2626'
+              }
+              detailColor="#123B73"
+              detail={
+                dataset.current_year.through_date
+                  ? `${dataset.current_year.label} · Through ${new Date(
+                      `${dataset.current_year.through_date}T00:00:00`
+                    ).toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      year: "numeric",
+                    })}`
+                  : `${dataset.current_year.label} · YTD`
+              }
             />
           </div>
         </section>

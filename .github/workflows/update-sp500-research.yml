@@ -33,6 +33,16 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install pandas numpy yfinance
 
+      - name: Update S&P 500 annual returns
+        run: |
+          python scripts/generate-stock-annual-returns.py \
+            --ticker '^GSPC' \
+            --name 'S&P 500' \
+            --start '1927-12-01' \
+            --asset-slug 'sp500' \
+            --output 'src/data/charts/sp500AnnualReturns.json' \
+            --annual-only
+
       - name: Update S&P 500 monthly returns
         run: |
           python scripts/generate-monthly-returns.py \
@@ -58,10 +68,12 @@ jobs:
           from pathlib import Path
 
           required = [
+              Path("src/data/charts/sp500AnnualReturns.json"),
               Path("src/data/charts/sp500MonthlyReturns.json"),
               Path("src/data/market/sp500/metadata.json"),
               Path("public/data/research/sp500-drawdowns.json"),
               Path("public/data/sp500-historical-return-methods.json"),
+              Path("src/data/sp500-historical-return-methods.json"),
               Path("public/data/sp500-historical-return-methods.csv"),
           ]
 
@@ -73,10 +85,12 @@ jobs:
                   raise SystemExit(f"Empty generated file: {path}")
 
           for path in [
+              Path("src/data/charts/sp500AnnualReturns.json"),
               Path("src/data/charts/sp500MonthlyReturns.json"),
               Path("src/data/market/sp500/metadata.json"),
               Path("public/data/research/sp500-drawdowns.json"),
               Path("public/data/sp500-historical-return-methods.json"),
+              Path("src/data/sp500-historical-return-methods.json"),
           ]:
               with path.open() as f:
                   json.load(f)
@@ -105,11 +119,13 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
 
           git add \
+            src/data/charts/sp500AnnualReturns.json \
             src/data/charts/sp500MonthlyReturns.json \
             src/data/market/sp500/metadata.json \
             public/data/research/sp500-drawdowns.json \
             public/data/sp500-historical-return-methods.csv \
-            public/data/sp500-historical-return-methods.json
+            public/data/sp500-historical-return-methods.json \
+            src/data/sp500-historical-return-methods.json
 
           if git diff --cached --quiet; then
             echo "No S&P 500 research changes."

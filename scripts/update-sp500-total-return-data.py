@@ -91,6 +91,13 @@ OUTPUT_JSON_PATH = (
     / "sp500-historical-return-methods.json"
 )
 
+SRC_OUTPUT_JSON_PATH = (
+    ROOT
+    / "src"
+    / "data"
+    / "sp500-historical-return-methods.json"
+)
+
 FRED_CPI_URL = (
     "https://fred.stlouisfed.org/graph/"
     "fredgraph.csv?id=CPIAUCNS"
@@ -1039,17 +1046,26 @@ def save_outputs(final):
         "data": records,
     }
 
-    with open(
+    for json_path in (
         OUTPUT_JSON_PATH,
-        "w",
-        encoding="utf-8",
-    ) as f:
-        json.dump(
-            payload,
-            f,
-            indent=2,
-            allow_nan=False,
+        SRC_OUTPUT_JSON_PATH,
+    ):
+        json_path.parent.mkdir(
+            parents=True,
+            exist_ok=True,
         )
+
+        with open(
+            json_path,
+            "w",
+            encoding="utf-8",
+        ) as f:
+            json.dump(
+                payload,
+                f,
+                indent=2,
+                allow_nan=False,
+            )
 
 
 # ============================================================

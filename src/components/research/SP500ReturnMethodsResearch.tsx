@@ -1432,6 +1432,29 @@ export default function SP500ReturnMethodsResearch() {
           <span>S&amp;P 500 Returns by Year</span>
         </h1>
 
+        {latestRow?.data_through && (
+          <div
+            style={{
+              marginTop: '10px',
+              color: '#123B73',
+              fontSize: '14px',
+              fontWeight: 700,
+            }}
+          >
+            Market data through{' '}
+            {new Date(
+              `${latestRow.data_through}T00:00:00`,
+            ).toLocaleDateString(
+              'en-US',
+              {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              },
+            )}
+          </div>
+        )}
+
         <div className="tni-return-methods__byline">
           <span>By Kamal Khondkar</span>
           <span aria-hidden="true">·</span>
@@ -3772,7 +3795,16 @@ export default function SP500ReturnMethodsResearch() {
                         }
                         {
                           row.is_ytd
-                            ? ' YTD'
+                            ? ` YTD · Through ${new Date(
+                                `${row.data_through}T00:00:00`,
+                              ).toLocaleDateString(
+                                'en-US',
+                                {
+                                  month: 'short',
+                                  day: 'numeric',
+                                  year: 'numeric',
+                                },
+                              )}`
                             : ''
                         }
                       </th>

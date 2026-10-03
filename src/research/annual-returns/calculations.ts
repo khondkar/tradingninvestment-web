@@ -12,6 +12,7 @@ export type AnnualReturnsCalculationDataset = {
     year: number
     label: string
     return_pct: number
+    through_date?: string
   }
   data: AnnualReturnRow[]
 }

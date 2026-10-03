@@ -37,6 +37,11 @@ def main() -> None:
         required=True,
         help="Stable asset slug used for generated social assets, e.g. aapl, msft, brkb.",
     )
+    parser.add_argument(
+        "--annual-only",
+        action="store_true",
+        help="Generate only the annual-return dataset and skip return-method and social assets.",
+    )
 
     args = parser.parse_args()
 
@@ -172,6 +177,14 @@ def main() -> None:
         },
     }
 
+    data_through = (
+        pd.Timestamp(
+            history.index.max()
+        )
+        .date()
+        .isoformat()
+    )
+
     current_snapshot = None
 
     if not current.empty:
@@ -183,6 +196,7 @@ def main() -> None:
             "return_pct": round(
                 float(row["return_pct"]), 2
             ),
+            "through_date": data_through,
         }
 
     payload = {
@@ -211,6 +225,13 @@ def main() -> None:
         encoding="utf-8",
     )
 
+    if args.annual_only:
+        print(f"Generated annual returns: {output}")
+        print(f"Ticker: {ticker}")
+        print(f"Completed years: {total}")
+        print(f"Current YTD: {current_snapshot}")
+        return
+
     # --------------------------------------------------------
     # Price return vs. total return dataset
     # Used by TNI's shared $10,000 D3 wealth-growth chart.
@@ -233,14 +254,6 @@ def main() -> None:
     common_years = sorted(
         set(price_by_year)
         & set(total_by_year)
-    )
-
-    data_through = (
-        pd.Timestamp(
-            history.index.max()
-        )
-        .date()
-        .isoformat()
     )
 
     return_method_rows = []

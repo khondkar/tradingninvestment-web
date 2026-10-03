@@ -677,6 +677,18 @@ export default function GenericAnnualReturnsArticle(
             {config.name} return for {dataset.current_year.year} at{" "}
             {dataset.current_year.return_pct >= 0 ? "+" : ""}
             {dataset.current_year.return_pct.toFixed(2)}% YTD
+            {dataset.current_year.through_date && (
+              <>
+                {" "}through{" "}
+                {new Date(
+                  `${dataset.current_year.through_date}T00:00:00`
+                ).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </>
+            )}
           </strong>.
         </p>
 

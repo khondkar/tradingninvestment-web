@@ -56,6 +56,7 @@ export type AnnualReturnsPageData = {
     year: number
     label: string
     return_pct: number
+    through_date?: string
   }
 
   data: AnnualReturnRecord[]
@@ -171,10 +172,14 @@ export function StatCard({
   label,
   value,
   detail,
+  valueColor,
+  detailColor,
 }: {
   label: string
   value: string
   detail?: string
+  valueColor?: string
+  detailColor?: string
 }) {
   return (
     <div
@@ -201,7 +206,7 @@ export function StatCard({
 
       <div
         style={{
-          color: "#10233f",
+          color: valueColor ?? "#10233f",
           fontSize: "23px",
           fontWeight: 800,
           fontVariantNumeric: "tabular-nums",
@@ -214,7 +219,7 @@ export function StatCard({
         <div
           style={{
             marginTop: "5px",
-            color: "#8592a3",
+            color: detailColor ?? "#8592a3",
             fontSize: "11px",
           }}
         >
