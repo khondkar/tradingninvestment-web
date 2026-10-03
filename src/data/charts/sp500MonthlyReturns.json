@@ -10,16 +10,16 @@
     "start_year": 1928,
     "start_month": 1,
     "end_year": 2026,
-    "end_month": 9,
-    "observations": 1185
+    "end_month": 10,
+    "observations": 1186
   },
   "current_month": {
     "year": 2026,
-    "month": 9,
-    "month_name": "September",
-    "label": "September 2026 MTD",
-    "return_pct": -1.3064,
-    "through_date": "2026-09-15"
+    "month": 10,
+    "month_name": "October",
+    "label": "October 2026 MTD",
+    "return_pct": 0.9303,
+    "through_date": "2026-10-02"
   },
   "leaders": {
     "highest_positive_frequency": {
@@ -30,8 +30,8 @@
     },
     "highest_negative_frequency": {
       "month_name": "September",
-      "negative_pct": 54.08,
-      "negative_count": 53,
+      "negative_pct": 54.55,
+      "negative_count": 54,
       "positive_count": 44
     },
     "highest_average_return": {
@@ -40,7 +40,7 @@
     },
     "lowest_average_return": {
       "month_name": "September",
-      "average_return_pct": -1.1172
+      "average_return_pct": -1.1105
     }
   },
   "month_statistics": [
@@ -159,14 +159,14 @@
     {
       "month": 9,
       "month_name": "September",
-      "observations": 98,
+      "observations": 99,
       "positive_count": 44,
-      "negative_count": 53,
+      "negative_count": 54,
       "flat_count": 1,
-      "positive_pct": 44.9,
-      "negative_pct": 54.08,
-      "average_return_pct": -1.1172,
-      "median_return_pct": -0.417,
+      "positive_pct": 44.44,
+      "negative_pct": 54.55,
+      "average_return_pct": -1.1105,
+      "median_return_pct": -0.4502,
       "best_return_pct": 14.4007,
       "worst_return_pct": -29.9423
     },
@@ -8506,8 +8506,15 @@
       "year": 2026,
       "month": 9,
       "month_name": "September",
-      "value": -1.3064,
+      "value": -0.4502,
       "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 10,
+      "month_name": "October",
+      "value": 0.9303,
+      "status": "positive"
     }
   ]
 }

@@ -1,0 +1,121 @@
+name: Update S&P 500 Research
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # 22:00 UTC = 6:00 PM EDT / 5:00 PM EST.
+    # Runs Monday-Friday after the regular U.S. market close.
+    - cron: "0 22 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-sp500-research
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pandas numpy yfinance
+
+      - name: Update S&P 500 monthly returns
+        run: |
+          python scripts/generate-monthly-returns.py \
+            --symbol '^GSPC' \
+            --ticker 'SP500' \
+            --name 'S&P 500' \
+            --start-year 1928 \
+            --asset-id 'sp500' \
+            --output 'src/data/charts/sp500MonthlyReturns.json'
+
+      - name: Update S&P 500 drawdowns
+        run: |
+          python scripts/generate-sp500-drawdowns.py
+
+      - name: Update S&P 500 return methods
+        run: |
+          python scripts/update-sp500-total-return-data.py
+
+      - name: Validate generated research data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          required = [
+              Path("src/data/charts/sp500MonthlyReturns.json"),
+              Path("src/data/market/sp500/metadata.json"),
+              Path("public/data/research/sp500-drawdowns.json"),
+              Path("public/data/sp500-historical-return-methods.json"),
+              Path("public/data/sp500-historical-return-methods.csv"),
+          ]
+
+          for path in required:
+              if not path.exists():
+                  raise SystemExit(f"Missing generated file: {path}")
+
+              if path.stat().st_size == 0:
+                  raise SystemExit(f"Empty generated file: {path}")
+
+          for path in [
+              Path("src/data/charts/sp500MonthlyReturns.json"),
+              Path("src/data/market/sp500/metadata.json"),
+              Path("public/data/research/sp500-drawdowns.json"),
+              Path("public/data/sp500-historical-return-methods.json"),
+          ]:
+              with path.open() as f:
+                  json.load(f)
+
+          with Path("src/data/charts/sp500MonthlyReturns.json").open() as f:
+              monthly = json.load(f)
+
+          current = monthly.get("current_month")
+
+          if not current:
+              raise SystemExit("Missing current_month in monthly dataset")
+
+          print(
+              "Current month:",
+              current.get("label"),
+              "through",
+              current.get("through_date"),
+          )
+
+          print("S&P 500 research validation passed.")
+          PY
+
+      - name: Commit changed S&P 500 research data
+        run: |
+          git config user.name "TNI Research Bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          git add \
+            src/data/charts/sp500MonthlyReturns.json \
+            src/data/market/sp500/metadata.json \
+            public/data/research/sp500-drawdowns.json \
+            public/data/sp500-historical-return-methods.csv \
+            public/data/sp500-historical-return-methods.json
+
+          if git diff --cached --quiet; then
+            echo "No S&P 500 research changes."
+            exit 0
+          fi
+
+          git status --short
+          git commit -m "Update S&P 500 research data"
+          git push
