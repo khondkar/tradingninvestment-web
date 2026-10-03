@@ -58,10 +58,24 @@ export default function LeveragedEtfAnnualReturnsPage({
       afterPeriodReturns={
         <>
           <LeveragedEtfResearchContext
+            symbol={config.symbol}
             benchmarkName={benchmarkName}
+            leverageLabel={
+              config.symbol === "NVDL"
+                ? "2× long"
+                : config.symbol === "TQQQ"
+                  ? "3× long"
+                  : "leveraged"
+            }
+            hasLongRollingHistory={
+              config.symbol === "TQQQ"
+            }
           />
 
-          <LazyLeveragedEtfPeriodComparison />
+          <LazyLeveragedEtfPeriodComparison
+            symbol={config.symbol}
+            benchmark={benchmarkName}
+          />
         </>
       }
       afterRollingComparison={
@@ -74,7 +88,7 @@ export default function LeveragedEtfAnnualReturnsPage({
       afterArticle={
         <>
           <section
-            aria-labelledby="tqqq-risk-due-diligence"
+            aria-labelledby={`${config.symbol.toLowerCase()}-risk-due-diligence`}
             style={{
               margin: "48px 0 34px",
             }}
@@ -101,7 +115,7 @@ export default function LeveragedEtfAnnualReturnsPage({
               </div>
 
               <h2
-                id="tqqq-risk-due-diligence"
+                id={`${config.symbol.toLowerCase()}-risk-due-diligence`}
                 style={{
                   margin: "0 0 14px",
                   color: "#10233f",
@@ -120,15 +134,15 @@ export default function LeveragedEtfAnnualReturnsPage({
                   lineHeight: 1.75,
                 }}
               >
-                TQQQ should be evaluated as a leveraged trading
-                instrument with a daily investment objective. A
-                longer holding period can produce results that
-                differ substantially from three times the return
-                of the underlying index. ProShares notes that
-                higher volatility can make these differences more
-                pronounced, while the fund&apos;s use of
-                derivatives and leverage can increase volatility
-                and the potential for loss.
+                {config.shortName} should be evaluated as a
+                leveraged instrument with a daily investment
+                objective. Returns over holding periods longer
+                than one day can differ substantially from the
+                fund&apos;s stated daily leverage multiple applied
+                to {benchmarkName}. Daily compounding, volatility,
+                derivatives, financing costs and fund expenses can
+                materially affect longer-period results and the
+                potential for loss.
               </p>
 
               <h3
@@ -152,19 +166,19 @@ export default function LeveragedEtfAnnualReturnsPage({
               >
                 <li>
                   <strong>Daily objective:</strong>{" "}
-                  Is the investor evaluating TQQQ based on the
-                  daily exposure it is designed to provide?
+                  Is the investor evaluating {config.shortName} based
+                  on the daily exposure it is designed to provide?
                 </li>
                 <li>
                   <strong>Compounding:</strong>{" "}
-                  How did the sequence of daily Nasdaq-100 returns
-                  affect the cumulative TQQQ result?
+                  How did the sequence of daily {benchmarkName} returns
+                  affect the cumulative {config.shortName} result?
                 </li>
                 <li>
                   <strong>Volatility:</strong>{" "}
                   How did periods of high volatility affect the
-                  difference between TQQQ and its underlying
-                  benchmark?
+                  difference between {config.shortName} and its
+                  underlying benchmark?
                 </li>
                 <li>
                   <strong>Drawdown:</strong>{" "}
@@ -173,13 +187,13 @@ export default function LeveragedEtfAnnualReturnsPage({
                 </li>
                 <li>
                   <strong>Holding period:</strong>{" "}
-                  How did TQQQ perform over individual days, weeks,
-                  months, and longer periods?
+                  How did {config.shortName} perform over individual
+                  days, weeks, months, and longer periods?
                 </li>
                 <li>
                   <strong>Benchmark comparison:</strong>{" "}
-                  How did the leveraged ETF compare with QQQ over
-                  the same synchronized periods?
+                  How did the leveraged ETF compare with{" "}
+                  {benchmarkName} over the same synchronized periods?
                 </li>
                 <li>
                   <strong>Costs and implementation:</strong>{" "}
@@ -221,23 +235,19 @@ export default function LeveragedEtfAnnualReturnsPage({
                   lineHeight: 1.65,
                 }}
               >
-                Official fund facts:{" "}
-                <a
-                  href="https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ProShares — TQQQ
-                </a>
-                . TNI uses Yahoo Finance historical price and
+                TNI uses Yahoo Finance historical price and
                 adjusted-close data for the independent return
                 calculations and visualizations on this page.
+                Official issuer information, fund objectives,
+                portfolio composition and fund documents are
+                presented separately in the fund-facts section
+                below.
               </p>
             </div>
           </section>
 
           <LeveragedEtfFundFacts
-            symbol={config.symbol}
+            config={config}
           />
 
           <LeveragedEtfAnnualReturnsFAQ

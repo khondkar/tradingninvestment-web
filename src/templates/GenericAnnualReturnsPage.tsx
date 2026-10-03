@@ -1968,14 +1968,15 @@ export default function GenericAnnualReturnsPage({
           />
         )}
 
-        {benchmarkDataset && (
-          <RollingTenYearComparison
-            assetName={config.name}
-            assetDataset={dataset}
-            benchmarkName={benchmarkName}
-            benchmarkDataset={benchmarkDataset}
-          />
-        )}
+        {benchmarkDataset &&
+          config.leveragedEtf?.showRolling10Year !== false && (
+            <RollingTenYearComparison
+              assetName={config.name}
+              assetDataset={dataset}
+              benchmarkName={benchmarkName}
+              benchmarkDataset={benchmarkDataset}
+            />
+          )}
 
         {afterRollingComparison}
 

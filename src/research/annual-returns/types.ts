@@ -30,6 +30,28 @@ export type AnnualReturnsAssetConfig = {
   categories: string[]
   newsSymbols: string[]
 
+  // Optional metadata for leveraged ETF research pages.
+  // Keeps issuer, leverage, benchmark and fund structure out of
+  // ticker-specific presentation components.
+  leveragedEtf?: {
+    issuer: string
+    leverageLabel: string
+    dailyObjective: string
+    benchmarkName: string
+    benchmarkTicker: string
+    inceptionDate: string
+    officialUrl: string
+
+    // Young funds should not render unsupported long-horizon analytics.
+    showRolling10Year: boolean
+
+    // Optional fund-structure explanation. Exact holdings can change,
+    // so dated portfolio data should be clearly identified as such.
+    structureSummary?: string
+    compositionAsOf?: string
+    compositionNotes?: string[]
+  }
+
   chart: {
     id: string
     title: string

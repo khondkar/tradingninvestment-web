@@ -1,0 +1,63 @@
+{
+  "symbol": "GraniteShares 2x Long NVDA Daily ETF",
+  "ticker": "NVDL",
+  "asset_type": "leveraged_etf",
+  "issuer": "GraniteShares",
+  "leverage": "2",
+  "direction": "long",
+  "benchmark": "NVIDIA",
+  "benchmark_ticker": "NVDA",
+  "inception_date": "2022-12-13",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / NVDL",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 3,
+    "start_year": 2023,
+    "end_year": 2025,
+    "positive_years": 3,
+    "negative_years": 0,
+    "positive_year_pct": 100.0,
+    "negative_year_pct": 0.0,
+    "average_annual_return_pct": 251.67,
+    "median_annual_return_pct": 344.58,
+    "best_year": {
+      "year": 2023,
+      "return_pct": 377.87
+    },
+    "worst_year": {
+      "year": 2025,
+      "return_pct": 32.57
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 31.24
+  },
+  "data": [
+    {
+      "year": 2023,
+      "value": 377.8665,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 344.5759,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 32.5651,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

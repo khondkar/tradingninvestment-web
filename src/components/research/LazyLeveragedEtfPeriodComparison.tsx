@@ -9,6 +9,11 @@ import type {
   PeriodDataset,
 } from './LeveragedEtfPeriodComparison'
 
+type Props = {
+  symbol: string
+  benchmark: string
+}
+
 type LoadedComparison = {
   Component: React.ComponentType<{
     dataset: PeriodDataset
@@ -16,7 +21,25 @@ type LoadedComparison = {
   dataset: PeriodDataset
 }
 
-export default function LazyLeveragedEtfPeriodComparison() {
+const datasetLoaders: Record<
+  string,
+  () => Promise<{ default: unknown }>
+> = {
+  TQQQ: () =>
+    import(
+      '../../data/charts/tqqqVsQqqPeriodReturns.json'
+    ),
+
+  NVDL: () =>
+    import(
+      '../../data/charts/nvdlVsNvdaPeriodReturns.json'
+    ),
+}
+
+export default function LazyLeveragedEtfPeriodComparison({
+  symbol,
+  benchmark,
+}: Props) {
   const containerRef =
     useRef<HTMLDivElement | null>(null)
 
@@ -27,11 +50,16 @@ export default function LazyLeveragedEtfPeriodComparison() {
     const container =
       containerRef.current
 
-    if (!container) {
+    const datasetLoader =
+      datasetLoaders[symbol]
+
+    if (!container || !datasetLoader) {
       return
     }
 
     let cancelled = false
+
+    setLoaded(null)
 
     const load = async () => {
       const [
@@ -39,9 +67,7 @@ export default function LazyLeveragedEtfPeriodComparison() {
         dataModule,
       ] = await Promise.all([
         import('./LeveragedEtfPeriodComparison'),
-        import(
-          '../../data/charts/tqqqVsQqqPeriodReturns.json'
-        ),
+        datasetLoader(),
       ])
 
       if (cancelled) {
@@ -87,17 +113,24 @@ export default function LazyLeveragedEtfPeriodComparison() {
       cancelled = true
       observer.disconnect()
     }
-  }, [])
+  }, [symbol])
 
   const Comparison =
     loaded?.Component
+
+  if (!datasetLoaders[symbol]) {
+    return null
+  }
 
   return (
     <div ref={containerRef}>
       {Comparison && loaded ? (
         <Suspense
           fallback={
-            <LoadingComparison />
+            <LoadingComparison
+              symbol={symbol}
+              benchmark={benchmark}
+            />
           }
         >
           <Comparison
@@ -116,7 +149,10 @@ export default function LazyLeveragedEtfPeriodComparison() {
   )
 }
 
-function LoadingComparison() {
+function LoadingComparison({
+  symbol,
+  benchmark,
+}: Props) {
   return (
     <section
       style={{
@@ -127,7 +163,7 @@ function LoadingComparison() {
         borderRadius: '14px',
         background: '#ffffff',
       }}
-      aria-label="Loading TQQQ and QQQ period comparison"
+      aria-label={`Loading ${symbol} and ${benchmark} period comparison`}
     >
       <div
         style={{
@@ -148,7 +184,7 @@ function LoadingComparison() {
           fontSize: '24px',
         }}
       >
-        TQQQ vs. QQQ Returns
+        {symbol} vs. {benchmark} Returns
       </h2>
 
       <p

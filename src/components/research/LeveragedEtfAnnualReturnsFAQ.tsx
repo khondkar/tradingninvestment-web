@@ -54,7 +54,65 @@ export default function LeveragedEtfAnnualReturnsFAQ({
       10,
     )
 
+  const fund = config.leveragedEtf
+
   const faqItems = [
+    {
+      question:
+        `What is the ${config.shortName} ETF?`,
+
+      answer:
+        fund
+          ? `${config.shortName} is ${config.name}, a leveraged ETF from ${fund.issuer}. ${fund.dailyObjective} Its objective applies to a single trading day, so returns over longer periods can differ materially from the stated daily leverage multiple.`
+          : `${config.shortName} is ${config.name}.`,
+    },
+
+    {
+      question:
+        `Is ${config.shortName} a safe investment?`,
+
+      answer:
+        `${config.shortName} is a leveraged ETF and can experience substantially larger gains and losses than ${benchmarkName}. Whether it is appropriate depends on an investor's objectives, holding period and ability to tolerate large drawdowns. The fund's daily reset, leverage, compounding and volatility can make longer-period results materially different from the underlying asset.`,
+    },
+
+    {
+      question:
+        `What is the difference between ${benchmarkName} and ${config.shortName}?`,
+
+      answer:
+        fund
+          ? `${benchmarkName} is the underlying exposure used for comparison on this page, while ${config.shortName} is a leveraged ETF seeking ${fund.leverageLabel} daily exposure linked to ${benchmarkName}. ${config.shortName} resets its leverage daily, so owning ${config.shortName} is not economically identical to simply owning ${benchmarkName} at a fixed multiple for a long period.`
+          : `TNI compares ${config.shortName} with ${benchmarkName} using synchronized historical periods.`,
+    },
+
+    {
+      question:
+        `What does ${config.shortName} invest in?`,
+
+      answer:
+        fund?.structureSummary
+          ? `${fund.structureSummary} The exact instruments, counterparties, collateral and portfolio weights can change over time, so current composition should be checked against the latest official ${fund.issuer} fund information.`
+          : `${config.shortName}'s portfolio composition can change over time. Current holdings should be checked against the issuer's latest official fund information.`,
+    },
+
+    {
+      question:
+        `What are ${config.shortName}'s holdings?`,
+
+      answer:
+        fund?.compositionNotes?.length
+          ? `${fund.compositionNotes.join(" ")}`
+          : `${config.shortName}'s holdings and derivative exposures can change over time. TNI therefore distinguishes the fund's structural investment approach from dated portfolio holdings published by the issuer.`,
+    },
+
+    {
+      question:
+        `Does ${config.shortName} ETF pay dividends?`,
+
+      answer:
+        `Distribution payments can vary over time. For performance analysis, TNI separates price return from total return: the total-return analysis uses adjusted-close history to incorporate distributions and their reinvestment effect, while the annual price-return series uses historical closing prices.`,
+    },
+
     {
       question:
         `What is ${config.shortName}'s historical average annual return?`,
@@ -73,7 +131,8 @@ export default function LeveragedEtfAnnualReturnsFAQ({
         }
       : null,
 
-    tenYear
+    tenYear &&
+    config.leveragedEtf?.showRolling10Year !== false
       ? {
           question:
             `What is ${config.shortName}'s 10-year return?`,
@@ -93,26 +152,30 @@ export default function LeveragedEtfAnnualReturnsFAQ({
 
     {
       question:
-        `Does ${config.shortName}'s total return include distributions?`,
-
-      answer:
-        `Yes. The total-return analysis on this page uses adjusted-close history to incorporate distributions and their reinvestment effect, while the annual price-return series uses historical closing prices. TNI presents both so the two return concepts are not mixed.`,
-    },
-
-    {
-      question:
         `How does ${config.shortName} compare with ${benchmarkName}?`,
 
       answer:
-        `TNI compares ${config.shortName} with ${benchmarkName} using synchronized historical periods. The page includes year-by-year annual price returns, rolling 10-year annualized returns, and daily adjusted-close drawdowns so the leveraged ETF and its investable comparison can be evaluated on consistent time periods.`,
+        config.leveragedEtf?.showRolling10Year !== false
+          ? `TNI compares ${config.shortName} with ${benchmarkName} using synchronized historical periods, including year-by-year annual returns, rolling 10-year annualized returns, period returns and daily adjusted-close drawdowns.`
+          : `TNI compares ${config.shortName} with ${benchmarkName} using synchronized historical periods, including year-by-year annual returns, daily, weekly and monthly period returns, growth analysis and daily adjusted-close drawdowns. A rolling 10-year comparison is not shown because ${config.shortName} does not yet have ten years of trading history.`,
     },
 
     {
       question:
-        `Why is ${config.shortName}'s long-term return not simply three times ${benchmarkName}'s return?`,
+        `Why doesn't ${config.shortName} return exactly ${fund?.leverageLabel ?? "its stated leverage multiple"} of ${benchmarkName} over longer periods?`,
 
       answer:
-        `${config.shortName} targets leveraged performance on a daily basis rather than promising a fixed multiple over longer holding periods. Daily resetting and compounding mean that the path of returns and market volatility can cause longer-period performance to differ substantially from a simple three-times calculation.`,
+        `${config.shortName} targets leveraged performance on a daily basis rather than promising a fixed multiple over longer holding periods. Daily resetting and compounding mean that the sequence of returns, volatility, fees and financing effects can cause longer-period performance to differ substantially from simply multiplying ${benchmarkName}'s longer-period return.`,
+    },
+
+    {
+      question:
+        `What happens to ${config.shortName} when ${benchmarkName} falls?`,
+
+      answer:
+        fund
+          ? `${config.shortName} seeks ${fund.leverageLabel} daily exposure linked to ${benchmarkName}. A decline in ${benchmarkName} can therefore produce a magnified daily decline in ${config.shortName}, before considering fees, expenses, tracking differences and market effects.`
+          : `${config.shortName} can experience amplified losses when its underlying benchmark declines.`,
     },
 
     {
@@ -120,7 +183,7 @@ export default function LeveragedEtfAnnualReturnsFAQ({
         `What is volatility drag in a daily leveraged ETF?`,
 
       answer:
-        `Volatility drag describes the compounding effect that can occur when returns fluctuate from day to day. Because percentage losses and gains compound from different portfolio values, repeated market swings can reduce longer-period compounded performance even when the underlying market eventually returns near an earlier level.`,
+        `Volatility drag describes a compounding effect that can occur when returns fluctuate from day to day. Because percentage losses and gains compound from different portfolio values, repeated market swings can reduce longer-period compounded performance even when the underlying later returns near an earlier level.`,
     },
 
     {
@@ -128,15 +191,7 @@ export default function LeveragedEtfAnnualReturnsFAQ({
         `How severe have ${config.shortName}'s historical drawdowns been?`,
 
       answer:
-        `The drawdown section on this page measures ${config.shortName} and ${benchmarkName} from synchronized daily adjusted-close data. It reports each series' maximum decline from a running peak, the peak and trough dates, recovery timing, and the percentage gain required to recover from the deepest observed loss in this dataset.`,
-    },
-
-    {
-      question:
-        `What is the difference between ${config.shortName} and SQQQ?`,
-
-      answer:
-        `${config.shortName} and SQQQ are leveraged ETFs with opposite directional objectives. ${config.shortName} seeks leveraged daily exposure in the same direction as the Nasdaq-100, while SQQQ seeks leveraged daily exposure in the opposite direction. Their long-term results therefore depend on daily market direction, compounding and volatility.`,
+        `The drawdown analysis measures ${config.shortName} and ${benchmarkName} from synchronized daily adjusted-close data. It reports each series' maximum decline from a running peak, peak and trough dates, recovery timing, and the gain required to recover from the deepest observed loss in the available dataset.`,
     },
   ].filter(
     (

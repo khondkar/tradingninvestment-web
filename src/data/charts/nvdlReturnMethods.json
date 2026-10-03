@@ -1,0 +1,56 @@
+{
+  "dataset": "GraniteShares 2x Long NVDA Daily ETF price return and total return",
+  "ticker": "NVDL",
+  "asset_type": "leveraged_etf",
+  "issuer": "GraniteShares",
+  "leverage": "2",
+  "direction": "long",
+  "benchmark": "NVIDIA",
+  "benchmark_ticker": "NVDA",
+  "inception_date": "2022-12-13",
+  "start_year": 2023,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 2023,
+      "price_return": 377.8665,
+      "total_return": 432.1682,
+      "is_ytd": false,
+      "data_through": "2023-12-31",
+      "price_source": "Yahoo Finance NVDL Close",
+      "total_return_source": "Yahoo Finance NVDL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2024,
+      "price_return": 344.5759,
+      "total_return": 344.5759,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance NVDL Close",
+      "total_return_source": "Yahoo Finance NVDL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2025,
+      "price_return": 32.5651,
+      "total_return": 32.5651,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance NVDL Close",
+      "total_return_source": "Yahoo Finance NVDL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2026,
+      "price_return": 31.2351,
+      "total_return": 31.2351,
+      "is_ytd": true,
+      "data_through": "2026-10-02",
+      "price_source": "Yahoo Finance NVDL Close",
+      "total_return_source": "Yahoo Finance NVDL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    }
+  ]
+}

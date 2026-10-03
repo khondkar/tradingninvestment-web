@@ -18,7 +18,7 @@ export type TNIDrawdownComparisonChartConfig = {
 }
 
 const colors = {
-  asset: '#2563EB',
+  asset: '#DC2626',
   benchmark: '#7B8794',
 } as const
 

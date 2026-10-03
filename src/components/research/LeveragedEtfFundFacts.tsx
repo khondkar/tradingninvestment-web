@@ -1,17 +1,23 @@
+import type {
+  AnnualReturnsAssetConfig,
+} from "../../research/annual-returns/types"
+
 type Props = {
-  symbol: string
+  config: AnnualReturnsAssetConfig
 }
 
 export default function LeveragedEtfFundFacts({
-  symbol,
+  config,
 }: Props) {
-  if (symbol !== "TQQQ") {
+  const fund = config.leveragedEtf
+
+  if (!fund) {
     return null
   }
 
   return (
     <section
-      aria-labelledby="tqqq-fund-facts"
+      aria-labelledby={`${config.symbol.toLowerCase()}-fund-facts`}
       style={{
         margin: "42px 0",
         padding: "26px",
@@ -33,13 +39,13 @@ export default function LeveragedEtfFundFacts({
       </div>
 
       <h2
-        id="tqqq-fund-facts"
+        id={`${config.symbol.toLowerCase()}-fund-facts`}
         style={{
           margin: "0 0 10px",
           color: "#10233f",
         }}
       >
-        ProShares UltraPro QQQ (TQQQ)
+        {config.name} ({config.symbol})
       </h2>
 
       <p
@@ -50,12 +56,12 @@ export default function LeveragedEtfFundFacts({
           lineHeight: 1.7,
         }}
       >
-        TQQQ seeks daily investment results,
-        before fees and expenses, corresponding
-        to three times (3×) the daily performance
-        of the Nasdaq-100 Index. The daily target
-        does not imply a fixed 3× return over
-        periods longer than one day.
+        {fund.dailyObjective} Because the investment
+        objective is daily, the fund&apos;s return over
+        periods longer than one trading day should not be
+        assumed to equal its stated leverage multiple
+        applied to the longer-period return of{" "}
+        {fund.benchmarkName}.
       </p>
 
       <div
@@ -64,14 +70,14 @@ export default function LeveragedEtfFundFacts({
           gridTemplateColumns:
             "repeat(auto-fit, minmax(180px, 1fr))",
           gap: "12px",
-          marginBottom: "20px",
+          marginBottom: "22px",
         }}
       >
         {[
-          ["Daily Target", "3× Nasdaq-100"],
-          ["Inception", "February 9, 2010"],
-          ["Distributions", "Quarterly"],
-          ["Gross Expense Ratio", "0.97%"],
+          ["Issuer", fund.issuer],
+          ["Daily Exposure", fund.leverageLabel],
+          ["Underlying", fund.benchmarkTicker],
+          ["Inception", fund.inceptionDate],
         ].map(([label, value]) => (
           <div
             key={label}
@@ -107,20 +113,46 @@ export default function LeveragedEtfFundFacts({
         ))}
       </div>
 
-      <p
-        style={{
-          margin: "0 0 10px",
-          color: "#43546a",
-          fontSize: "13px",
-          lineHeight: 1.7,
-        }}
-      >
-        ProShares notes that returns over periods
-        longer than one day may be higher or lower
-        than the fund&apos;s daily target. Compounding,
-        the magnitude of index movements and
-        volatility can cause significant differences.
-      </p>
+      {fund.structureSummary ? (
+        <>
+          <h3
+            style={{
+              margin: "0 0 9px",
+              color: "#10233f",
+              fontSize: "18px",
+            }}
+          >
+            {config.symbol} Holdings &amp; Portfolio Structure
+          </h3>
+
+          <p
+            style={{
+              margin: "0 0 12px",
+              color: "#43546a",
+              fontSize: "13px",
+              lineHeight: 1.75,
+            }}
+          >
+            {fund.structureSummary}
+          </p>
+        </>
+      ) : null}
+
+      {fund.compositionNotes?.length ? (
+        <ul
+          style={{
+            margin: "0 0 18px",
+            paddingLeft: "21px",
+            color: "#43546a",
+            fontSize: "13px",
+            lineHeight: 1.75,
+          }}
+        >
+          {fund.compositionNotes.map((note) => (
+            <li key={note}>{note}</li>
+          ))}
+        </ul>
+      ) : null}
 
       <p
         style={{
@@ -130,18 +162,17 @@ export default function LeveragedEtfFundFacts({
           lineHeight: 1.65,
         }}
       >
-        Official fund facts source:{" "}
+        Official fund information:{" "}
         <a
-          href="https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq"
+          href={fund.officialUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
-          ProShares — TQQQ
+          {fund.issuer} — {config.symbol}
         </a>
-        . TNI uses Yahoo Finance historical
-        price and adjusted-close data for the
-        independent return calculations and
-        visualizations on this page.
+        . TNI uses Yahoo Finance historical price and
+        adjusted-close data for independent return,
+        growth and drawdown calculations.
       </p>
     </section>
   )

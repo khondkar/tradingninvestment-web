@@ -38,6 +38,21 @@ export const tqqqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
     "QQQ",
   ],
 
+  leveragedEtf: {
+    issuer: "ProShares",
+    leverageLabel: "3× long",
+    dailyObjective:
+      "Seeks daily investment results, before fees and expenses, corresponding to three times (3×) the daily performance of the Nasdaq-100 Index.",
+    benchmarkName: "QQQ",
+    benchmarkTicker: "QQQ",
+    inceptionDate: "2010-02-09",
+    officialUrl:
+      "https://www.proshares.com/our-etfs/leveraged-and-inverse/tqqq",
+    showRolling10Year: true,
+    structureSummary:
+      "TQQQ uses derivatives and other financial instruments to pursue leveraged daily exposure to the Nasdaq-100.",
+  },
+
   chart: {
     id:
       "tqqq-historical-annual-returns",

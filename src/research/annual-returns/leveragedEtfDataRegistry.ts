@@ -3,6 +3,11 @@ import tqqqReturnMethods from "../../data/charts/tqqqReturnMethods.json"
 import qqqAnnualReturns from "../../data/charts/qqqAnnualReturns.json"
 import tqqqVsQqqDrawdowns from "../../data/charts/tqqqVsQqqDrawdowns.json"
 
+import nvdlAnnualReturns from "../../data/charts/nvdlAnnualReturns.json"
+import nvdlReturnMethods from "../../data/charts/nvdlReturnMethods.json"
+import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
+import nvdlVsNvdaDrawdowns from "../../data/charts/nvdlVsNvdaDrawdowns.json"
+
 import type {
   AnnualReturnsPageData,
 } from "./pageShared"
@@ -42,6 +47,22 @@ export const leveragedEtfResearchDataRegistry:
 
       drawdownData:
         tqqqVsQqqDrawdowns as LeveragedEtfDrawdownDataset,
+    },
+    NVDL: {
+      annualReturns:
+        nvdlAnnualReturns as AnnualReturnsPageData,
+
+      returnMethods:
+        nvdlReturnMethods.data as ReturnMethodRow[],
+
+      benchmarkAnnualReturns:
+        nvdaAnnualReturns as AnnualReturnsPageData,
+
+      benchmarkName:
+        "NVDA",
+
+      drawdownData:
+        nvdlVsNvdaDrawdowns as LeveragedEtfDrawdownDataset,
     },
   }
 

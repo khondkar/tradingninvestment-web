@@ -1,20 +1,23 @@
 type Props = {
+  symbol: string
   benchmarkName: string
+  leverageLabel?: string
+  hasLongRollingHistory?: boolean
 }
 
 export default function LeveragedEtfResearchContext({
+  symbol,
   benchmarkName,
+  leverageLabel = "leveraged",
+  hasLongRollingHistory = false,
 }: Props) {
   return (
     <section
-      aria-labelledby="tqqq-research-context"
+      aria-labelledby={`${symbol.toLowerCase()}-research-context`}
       style={{
         marginBottom: "34px",
       }}
     >
-      {/* ================================================================
-          TNI TQQQ RESEARCH CONTEXT — TOP OF PAGE
-      ================================================================= */}
       <div
         style={{
           padding: "24px 26px",
@@ -33,11 +36,11 @@ export default function LeveragedEtfResearchContext({
             textTransform: "uppercase",
           }}
         >
-          TQQQ Research Context
+          {symbol} Research Context
         </div>
 
         <h2
-          id="tqqq-research-context"
+          id={`${symbol.toLowerCase()}-research-context`}
           style={{
             margin: "0 0 12px",
             color: "#10233f",
@@ -45,7 +48,7 @@ export default function LeveragedEtfResearchContext({
             letterSpacing: "-0.02em",
           }}
         >
-          What This TQQQ Analysis Examines
+          What This {symbol} Analysis Examines
         </h2>
 
         <p
@@ -56,14 +59,15 @@ export default function LeveragedEtfResearchContext({
             lineHeight: 1.75,
           }}
         >
-          TQQQ is a leveraged ETF designed to seek three times
-          the daily performance of the Nasdaq-100 Index, before
-          fees and expenses. Because its objective is daily, its
-          return over a week, month, year, or longer period is not
-          simply three times the corresponding Nasdaq-100 return.
-          Daily compounding, market volatility, financing costs,
-          expenses, and the path of returns can materially affect
-          the outcome.
+          {symbol} is a {leverageLabel} ETF with a daily
+          investment objective. Because the objective resets
+          daily, returns over a week, month, year, or longer
+          period should not be assumed to equal the stated
+          leverage multiple applied to the corresponding
+          long-term return of {benchmarkName}. Daily
+          compounding, market volatility, financing costs,
+          fund expenses, and the path of returns can materially
+          affect the outcome.
         </p>
 
         <p
@@ -74,13 +78,16 @@ export default function LeveragedEtfResearchContext({
             lineHeight: 1.75,
           }}
         >
-          This TNI research therefore examines TQQQ across
-          multiple time horizons rather than relying on a single
-          long-term return figure. The analysis includes annual
-          returns, rolling 10-year performance, drawdowns, and
-          synchronized daily, weekly, and monthly comparisons
-          with {benchmarkName}. The objective is to show how TQQQ
-          has behaved across different market periods and holding
+          This TNI research therefore examines {symbol} across
+          the historical periods supported by the available
+          data. The analysis includes annual returns,
+          drawdowns, and synchronized comparisons with{" "}
+          {benchmarkName}
+          {hasLongRollingHistory
+            ? ", together with longer-horizon rolling performance"
+            : ""}
+          . The objective is to show how {symbol} has behaved
+          across different market periods and holding
           horizons—not to imply that historical performance
           predicts future results.
         </p>
@@ -93,17 +100,12 @@ export default function LeveragedEtfResearchContext({
             lineHeight: 1.75,
           }}
         >
-          For broader market context, compare these results with
-          TNI&apos;s{" "}
-          <a href="/sp-500-returns/">
-            S&amp;P 500 historical returns
-          </a>
-          . For a company-level perspective using the same
-          evidence-first research approach, explore{" "}
-          <a href="/aapl-stock-yearly-return/">
-            Apple stock returns
-          </a>
-          .
+          Leveraged ETF results should be interpreted in the
+          context of the fund&apos;s stated daily objective,
+          underlying exposure, implementation structure, costs,
+          and available operating history. TNI calculates its
+          historical return comparisons independently from
+          market-price data.
         </p>
       </div>
     </section>
