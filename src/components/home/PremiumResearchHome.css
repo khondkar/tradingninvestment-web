@@ -160,3 +160,568 @@
   object-fit: contain;
   box-shadow: 0 12px 32px rgba(16, 35, 63, 0.08);
 }
+
+/* =========================================================
+   WORK WITH TNI
+   ========================================================= */
+
+.tni-home-work-with-us {
+  position: relative;
+  margin-top: 28px;
+  margin-bottom: 76px;
+  padding: 68px 54px 0;
+  overflow: hidden;
+  border: 1px solid #e0e9e5;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(17, 50, 55, .045);
+}
+
+.tni-home-work-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(390px, .92fr);
+  gap: clamp(40px, 6vw, 88px);
+  align-items: center;
+}
+
+.tni-home-work-copy {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 54px;
+}
+
+.tni-home-work-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 27px;
+  color: var(--home-green);
+}
+
+.tni-home-work-eyebrow > span {
+  width: 52px;
+  height: 1px;
+  background: currentColor;
+}
+
+.tni-home-work-eyebrow strong {
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: .19em;
+}
+
+.tni-home-work-copy h2 {
+  max-width: 680px;
+  margin: 0;
+  color: var(--home-ink);
+  font-size: clamp(46px, 5.3vw, 76px);
+  font-weight: 700;
+  line-height: .99;
+  letter-spacing: -.065em;
+}
+
+.tni-home-work-intro {
+  max-width: 690px;
+  margin: 27px 0 28px;
+  color: var(--home-muted);
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.tni-home-work-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  max-width: 790px;
+}
+
+.tni-home-work-capabilities span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 15px;
+  border: 1px solid #dce7e2;
+  border-radius: 999px;
+  background: #fff;
+  color: #172c3a;
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.tni-home-work-contact {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 31px;
+}
+
+.tni-home-work-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 55px;
+  padding: 0 25px;
+  border-radius: 11px;
+  background: #08775f;
+  box-shadow: 0 12px 28px rgba(8, 119, 95, .16);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.tni-home-work-cta:hover {
+  transform: translateY(-2px);
+  background: #066b56;
+  box-shadow: 0 15px 34px rgba(8, 119, 95, .22);
+}
+
+.tni-home-work-cta span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tni-home-work-email-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding-left: 24px;
+  border-left: 1px solid #dce5e1;
+}
+
+.tni-home-work-email {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #8ab8aa;
+  color: #152d3b;
+  font-size: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.tni-home-work-mail-icon {
+  color: var(--home-green);
+  font-size: 17px;
+}
+
+.tni-home-work-email-wrap small {
+  color: #78898f;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+/* Intelligence visual */
+
+.tni-home-work-visual {
+  position: relative;
+  min-height: 500px;
+}
+
+.tni-home-work-visual::before {
+  position: absolute;
+  inset: 3% -12% 5% 4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(226, 244, 237, .75) 0%,
+      rgba(240, 249, 246, .45) 44%,
+      rgba(255, 255, 255, 0) 72%
+    );
+  content: "";
+}
+
+.tni-home-work-orbit {
+  position: absolute;
+  border: 1px solid rgba(18, 125, 101, .22);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.tni-home-work-orbit::before,
+.tni-home-work-orbit::after {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #08775f;
+  content: "";
+}
+
+.tni-home-work-orbit-one {
+  top: 22px;
+  right: -80px;
+  width: 470px;
+  height: 470px;
+}
+
+.tni-home-work-orbit-one::before {
+  top: 39px;
+  left: 84px;
+}
+
+.tni-home-work-orbit-one::after {
+  right: 22px;
+  top: 155px;
+}
+
+.tni-home-work-orbit-two {
+  top: 185px;
+  left: 8px;
+  width: 330px;
+  height: 235px;
+}
+
+.tni-home-work-orbit-two::before {
+  left: -4px;
+  top: 82px;
+}
+
+.tni-home-work-orbit-two::after {
+  right: 33px;
+  bottom: 12px;
+}
+
+.tni-home-work-card {
+  position: absolute;
+  z-index: 2;
+  padding: 22px;
+  border: 1px solid rgba(222, 233, 228, .85);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 22px 55px rgba(18, 50, 55, .11);
+  backdrop-filter: blur(8px);
+}
+
+.tni-home-work-card-signals {
+  top: 25px;
+  left: 12%;
+  width: 72%;
+  min-height: 230px;
+  transform: rotate(1.5deg);
+}
+
+.tni-home-work-card-market {
+  top: 205px;
+  right: -3%;
+  width: 52%;
+  min-height: 205px;
+  transform: rotate(1deg);
+}
+
+.tni-home-work-card-research {
+  left: 9%;
+  bottom: 3px;
+  width: 57%;
+  min-height: 190px;
+  transform: rotate(-.8deg);
+}
+
+.tni-home-work-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.tni-home-work-card-head > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tni-home-work-card-head strong {
+  color: #142b38;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.tni-home-work-card-head small {
+  color: #71838a;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.tni-home-work-card-head > span {
+  align-self: flex-start;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #eaf5f1;
+  color: #08775f;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .04em;
+}
+
+.tni-home-mini-line {
+  height: 103px;
+  margin-top: 9px;
+}
+
+.tni-home-mini-line svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tni-home-mini-line path {
+  stroke: #07866a;
+  stroke-width: 2;
+}
+
+.tni-home-work-card-periods {
+  display: flex;
+  gap: 22px;
+  color: #9aa9ad;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.tni-home-mini-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  height: 92px;
+  margin-top: 21px;
+}
+
+.tni-home-mini-bars i {
+  flex: 1;
+  min-width: 8px;
+  border-radius: 2px 2px 0 0;
+  background:
+    linear-gradient(
+      to top,
+      #07866a,
+      #cce9df
+    );
+}
+
+.tni-home-mini-bars i:nth-child(1) { height: 27%; }
+.tni-home-mini-bars i:nth-child(2) { height: 39%; }
+.tni-home-mini-bars i:nth-child(3) { height: 34%; }
+.tni-home-mini-bars i:nth-child(4) { height: 55%; }
+.tni-home-mini-bars i:nth-child(5) { height: 47%; }
+.tni-home-mini-bars i:nth-child(6) { height: 69%; }
+.tni-home-mini-bars i:nth-child(7) { height: 62%; }
+.tni-home-mini-bars i:nth-child(8) { height: 88%; }
+
+.tni-home-research-visual {
+  margin-top: 22px;
+}
+
+.tni-home-research-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 210px;
+}
+
+.tni-home-research-grid i {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #cce7de;
+}
+
+.tni-home-research-grid i:nth-child(3n) {
+  background: #70bca8;
+}
+
+.tni-home-research-grid i:nth-child(5n) {
+  background: #08775f;
+}
+
+.tni-home-research-visual b {
+  display: block;
+  margin-top: 15px;
+  color: #8b9b9f;
+  font-size: 7px;
+  letter-spacing: .13em;
+}
+
+/* Bottom proof strip */
+
+.tni-home-work-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e1e9e5;
+}
+
+.tni-home-work-proof > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 88px;
+  padding: 18px 25px;
+}
+
+.tni-home-work-proof > div + div {
+  border-left: 1px solid #e1e9e5;
+}
+
+.tni-home-work-proof-icon {
+  flex: 0 0 auto;
+  color: #08775f;
+  font-size: 27px;
+}
+
+.tni-home-work-proof p {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+}
+
+.tni-home-work-proof strong {
+  color: #172c3a;
+  font-size: 11px;
+}
+
+.tni-home-work-proof small {
+  color: #7b8b91;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+/* Work With TNI responsive */
+
+@media (max-width: 1000px) {
+  .tni-home-work-with-us {
+    padding: 52px 36px 0;
+  }
+
+  .tni-home-work-main {
+    grid-template-columns: 1fr;
+  }
+
+  .tni-home-work-copy {
+    padding-bottom: 10px;
+  }
+
+  .tni-home-work-visual {
+    width: min(650px, 100%);
+    min-height: 500px;
+    margin: 0 auto;
+  }
+
+  .tni-home-work-proof {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .tni-home-work-with-us {
+    margin-bottom: 55px;
+    padding: 38px 22px 0;
+    border-radius: 17px;
+  }
+
+  .tni-home-work-eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .tni-home-work-eyebrow > span {
+    width: 35px;
+  }
+
+  .tni-home-work-copy h2 {
+    font-size: clamp(40px, 13vw, 58px);
+  }
+
+  .tni-home-work-intro {
+    margin-top: 21px;
+    font-size: 14px;
+  }
+
+  .tni-home-work-capabilities {
+    gap: 7px;
+  }
+
+  .tni-home-work-capabilities span {
+    min-height: 34px;
+    padding: 7px 11px;
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .tni-home-work-contact {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .tni-home-work-cta {
+    width: 100%;
+  }
+
+  .tni-home-work-email-wrap {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .tni-home-work-email {
+    font-size: 11px;
+  }
+
+  .tni-home-work-visual {
+    min-height: 430px;
+    margin-top: 15px;
+  }
+
+  .tni-home-work-card {
+    padding: 16px;
+  }
+
+  .tni-home-work-card-signals {
+    left: 0;
+    width: 80%;
+    min-height: 205px;
+  }
+
+  .tni-home-work-card-market {
+    top: 180px;
+    right: -8px;
+    width: 61%;
+    min-height: 175px;
+  }
+
+  .tni-home-work-card-research {
+    left: 3%;
+    width: 63%;
+    min-height: 160px;
+  }
+
+  .tni-home-work-proof {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+  .tni-home-work-proof > div {
+    min-height: 72px;
+    padding: 15px 5px;
+  }
+
+  .tni-home-work-proof > div + div {
+    border-top: 1px solid #e1e9e5;
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tni-home-work-cta {
+    transition: none;
+  }
+
+  .tni-home-work-cta:hover {
+    transform: none;
+  }
+}

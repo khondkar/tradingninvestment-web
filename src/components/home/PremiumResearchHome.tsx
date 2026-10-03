@@ -5,6 +5,7 @@ import nasdaqData from '../../data/charts/nasdaqAnnualReturns.json'
 import dowData from '../../data/charts/dowAnnualReturns.json'
 import { researchHubs, researchItems } from '../../research/discovery'
 import { annualReturnsResearchRegistry } from '../../research/annual-returns/registry'
+import { monthlyReturnsRegistry } from '../../research/monthly-returns/registry'
 import { stockResearchDataRegistry } from '../../research/annual-returns/stockDataRegistry'
 import TNIResearchIdentity from '../research/TNIResearchIdentity'
 import '../research/TNIResearchIdentity.css'
@@ -133,6 +134,22 @@ const etfHomepageResearch =
         config.shortName.toUpperCase(),
       socialImage:
         config.seo.socialImage,
+    }))
+
+const monthlyHomepageResearch =
+  monthlyReturnsRegistry
+    .filter(
+      (study) =>
+        study.featured &&
+        Boolean(study.previewImage)
+    )
+    .map((study) => ({
+      path: study.config.canonicalPath,
+      label: `${study.config.shortName} MONTHLY INTELLIGENCE`,
+      headline: study.config.seo.title,
+      intro: study.config.seo.description,
+      chartLabel: study.config.chart.title,
+      previewImage: study.previewImage,
     }))
 
 const citations = [
@@ -399,6 +416,76 @@ export default function PremiumResearchHome() {
       </section>
     )}
 
+    {monthlyHomepageResearch.length > 0 && (
+      <section
+        className="tni-home-features tni-home-wrap"
+        aria-labelledby="tni-home-monthly-research-title"
+      >
+        <div className="tni-home-section-head">
+          <span className="tni-home-kicker">
+            MONTHLY RESEARCH
+          </span>
+
+          <h2 id="tni-home-monthly-research-title">
+            Explore market performance by month.
+          </h2>
+
+          <p>
+            Current monthly performance, historical seasonality,
+            return context, and downside risk.
+          </p>
+        </div>
+
+        <div className="tni-home-feature-stack">
+          {monthlyHomepageResearch.map((study) => (
+            <article
+              className="tni-home-feature"
+              key={study.path}
+            >
+              <div className="tni-home-feature-copy">
+                <TNIResearchIdentity compact />
+
+                <span
+                  className="tni-home-kicker"
+                  style={{ marginTop: '18px' }}
+                >
+                  {study.label}
+                </span>
+
+                <h3>
+                  <a href={study.path}>
+                    {study.headline}
+                  </a>
+                </h3>
+
+                <p>{study.intro}</p>
+
+                <a
+                  className="tni-home-feature-link"
+                  href={study.path}
+                >
+                  Explore the full study ↗
+                </a>
+              </div>
+
+              <a
+                className="tni-home-feature-visual"
+                href={study.path}
+                aria-label={`Explore ${study.chartLabel}`}
+              >
+                <img
+                  src={study.previewImage}
+                  alt={`${study.chartLabel} TNI Research`}
+                  loading="lazy"
+                  className="tni-home-research-og"
+                />
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
     <section className="tni-home-topics" id="explore"><div className="tni-home-wrap">
       <div className="tni-home-section-head"><span className="tni-home-kicker">FIND YOUR PATH</span><h2>Start anywhere. Keep exploring.</h2></div>
       <div className="tni-home-topic-grid">{topHubs.map((hub) => <a key={hub.path} href={hub.path}><strong>{hub.title}</strong><span>{hub.description}</span><b aria-hidden="true">↗</b></a>)}</div>
@@ -406,6 +493,211 @@ export default function PremiumResearchHome() {
     </div></section>
 
     {remaining.length > 0 && <section className="tni-home-more tni-home-wrap" aria-labelledby="tni-home-more-title"><div className="tni-home-section-head"><span className="tni-home-kicker">MORE RESEARCH</span><h2 id="tni-home-more-title">Continue with the evidence.</h2></div><div className="tni-home-more-grid">{remaining.map((item) => <a key={item.path} href={item.path}><small>{item.categories.includes('stock') ? 'STOCK INTELLIGENCE' : item.kind === 'drawdowns' ? 'MARKET RISK' : 'INDEX HISTORY'}</small><strong>{item.title}</strong><span>{item.description}</span><b>EXPLORE STUDY ↗</b></a>)}</div></section>}
+
+    <section
+      className="tni-home-work-with-us tni-home-wrap"
+      aria-labelledby="tni-home-work-with-us-title"
+    >
+      <div className="tni-home-work-main">
+        <div className="tni-home-work-copy">
+          <div className="tni-home-work-eyebrow">
+            <span aria-hidden="true" />
+            <strong>WORK WITH TNI</strong>
+          </div>
+
+          <h2 id="tni-home-work-with-us-title">
+            Build intelligence
+            <br />
+            from your data.
+          </h2>
+
+          <p className="tni-home-work-intro">
+            TNI works with organizations, financial technology teams,
+            publishers, and research groups on specialized financial
+            research and market intelligence.
+          </p>
+
+          <div
+            className="tni-home-work-capabilities"
+            aria-label="TNI research capabilities"
+          >
+            <span>Quantitative &amp; ML Signal Research</span>
+            <span>News-Based Predictive Modeling &amp; Event Ratings</span>
+            <span>Deep Financial Data Research</span>
+            <span>Custom Data Visualization</span>
+            <span>Sponsored Research</span>
+          </div>
+
+          <div className="tni-home-work-contact">
+            <a
+              className="tni-home-work-cta"
+              href="mailto:contact@tradingninvestment.com?subject=TNI%20Research%20Project"
+            >
+              Discuss your project
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <div className="tni-home-work-email-wrap">
+              <a
+                className="tni-home-work-email"
+                href="mailto:contact@tradingninvestment.com"
+              >
+                <span
+                  className="tni-home-work-mail-icon"
+                  aria-hidden="true"
+                >
+                  ✉
+                </span>
+
+                <span>
+                  contact@tradingninvestment.com
+                </span>
+              </a>
+
+              <small>
+                Share your research or data needs. We’ll get back to you.
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="tni-home-work-visual"
+          aria-label="Examples of TNI intelligence capabilities"
+        >
+          <div
+            className="tni-home-work-orbit tni-home-work-orbit-one"
+            aria-hidden="true"
+          />
+          <div
+            className="tni-home-work-orbit tni-home-work-orbit-two"
+            aria-hidden="true"
+          />
+
+          <div className="tni-home-work-card tni-home-work-card-signals">
+            <div className="tni-home-work-card-head">
+              <div>
+                <strong>Quantitative Signals</strong>
+                <small>
+                  Price, volume, news and
+                  <br />
+                  fundamental signals
+                </small>
+              </div>
+
+              <span>MODELS</span>
+            </div>
+
+            <div className="tni-home-mini-line" aria-hidden="true">
+              <svg
+                viewBox="0 0 300 110"
+                role="presentation"
+              >
+                <path
+                  d="M4 88 L25 80 L43 91 L63 66 L82 71 L101 53 L120 61 L141 42 L160 58 L180 35 L200 46 L220 28 L241 39 L262 18 L286 7"
+                  fill="none"
+                  vectorEffect="non-scaling-stroke"
+                />
+              </svg>
+            </div>
+
+            <div className="tni-home-work-card-periods">
+              <span>1D</span>
+              <span>1M</span>
+              <span>6M</span>
+              <span>1Y</span>
+              <span>5Y</span>
+            </div>
+          </div>
+
+          <div className="tni-home-work-card tni-home-work-card-market">
+            <div className="tni-home-work-card-head">
+              <div>
+                <strong>Market Intelligence</strong>
+                <small>
+                  Event impact, sentiment
+                  <br />
+                  and risk analysis
+                </small>
+              </div>
+
+              <span>INSIGHTS</span>
+            </div>
+
+            <div className="tni-home-mini-bars" aria-hidden="true">
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+            </div>
+          </div>
+
+          <div className="tni-home-work-card tni-home-work-card-research">
+            <div className="tni-home-work-card-head">
+              <div>
+                <strong>Custom Research</strong>
+                <small>
+                  Tailored analysis
+                  <br />
+                  and visualization
+                </small>
+              </div>
+
+              <span>RESEARCH</span>
+            </div>
+
+            <div className="tni-home-research-visual" aria-hidden="true">
+              <div className="tni-home-research-grid">
+                {Array.from({ length: 28 }).map((_, index) => (
+                  <i key={index} />
+                ))}
+              </div>
+
+              <b>DATA · RESEARCH · INTELLIGENCE</b>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="tni-home-work-proof">
+        <div>
+          <span className="tni-home-work-proof-icon">◎</span>
+
+          <p>
+            <strong>Original Research</strong>
+            <small>
+              Deep analysis across indexes, sectors and assets.
+            </small>
+          </p>
+        </div>
+
+        <div>
+          <span className="tni-home-work-proof-icon">▥</span>
+
+          <p>
+            <strong>Quantitative Intelligence</strong>
+            <small>
+              Data-driven models and market insights.
+            </small>
+          </p>
+        </div>
+
+        <div>
+          <span className="tni-home-work-proof-icon">◇</span>
+
+          <p>
+            <strong>Visual Data &amp; Research Assets</strong>
+            <small>
+              Clear, publication-ready charts and analysis.
+            </small>
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section className="tni-home-bridge tni-home-wrap"><div><span className="tni-home-kicker">FROM HISTORY TO TODAY</span><h2>See the market in context.</h2><p>Historical research frames the questions. Continue into current market developments in TNI Intelligence.</p><a href="https://app.tradingninvestment.com/live/news">Explore TNI Intelligence ↗</a></div></section>
   </main>

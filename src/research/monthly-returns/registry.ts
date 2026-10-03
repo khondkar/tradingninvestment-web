@@ -16,10 +16,11 @@ export const monthlyReturnsRegistry = [
       },
     },
 
-    featured: false,
+    featured: true,
 
-    // Optional research-card image.
-    // We can add a dedicated monthly chart preview later.
-    previewImage: undefined,
+    // Branded research-card image generated from the
+    // latest monthly return context.
+    previewImage:
+      "/images/social/sp500-monthly-return-context.png",
   },
 ]
