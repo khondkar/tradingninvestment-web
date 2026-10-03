@@ -1,0 +1,129 @@
+{
+  "symbol": "SMH",
+  "ticker": "SMH",
+  "asset_type": "etf",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / SMH",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 15,
+    "start_year": 2011,
+    "end_year": 2025,
+    "positive_years": 11,
+    "negative_years": 4,
+    "positive_year_pct": 73.33,
+    "negative_year_pct": 26.67,
+    "average_annual_return_pct": 26.71,
+    "median_annual_return_pct": 34.46,
+    "best_year": {
+      "year": 2023,
+      "return_pct": 72.34
+    },
+    "worst_year": {
+      "year": 2022,
+      "return_pct": -34.28
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 75.1
+  },
+  "data": [
+    {
+      "year": 2011,
+      "value": -6.4556,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 6.2438,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 31.2403,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 28.7297,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": -2.4533,
+      "label": "2015",
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "value": 34.4595,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 36.5299,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -10.7658,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 62.0188,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 54.4587,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 41.3744,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -34.279,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 72.3366,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 38.4857,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 48.7096,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

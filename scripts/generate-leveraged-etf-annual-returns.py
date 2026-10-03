@@ -634,13 +634,25 @@ def main() -> None:
         / f"{comparison_ticker.lower()}AnnualReturns.json"
     )
 
-    comparison_output.write_text(
-        json.dumps(
-            comparison_payload,
-            indent=2,
-        ),
-        encoding="utf-8",
-    )
+    # Preserve an existing canonical comparison dataset.
+    #
+    # The leveraged-ETF generator only needs the freshly
+    # downloaded comparison series for like-for-like analysis
+    # and drawdowns. It must not truncate or replace a benchmark
+    # dataset that may contain a longer independent history.
+    if comparison_output.exists():
+        print(
+            "Preserved existing comparison dataset: "
+            f"{comparison_output}"
+        )
+    else:
+        comparison_output.write_text(
+            json.dumps(
+                comparison_payload,
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
 
     # --------------------------------------------------------
     # DAILY DRAWDOWN COMPARISON

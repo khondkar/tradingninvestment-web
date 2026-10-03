@@ -1,0 +1,135 @@
+{
+  "symbol": "Direxion Daily Semiconductor Bull 3X Shares",
+  "ticker": "SOXL",
+  "asset_type": "leveraged_etf",
+  "issuer": "Direxion",
+  "leverage": "3",
+  "direction": "long",
+  "benchmark": "NYSE Semiconductor Index",
+  "benchmark_ticker": "ICESEMIT",
+  "inception_date": "2010-03-11",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / SOXL",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 15,
+    "start_year": 2011,
+    "end_year": 2025,
+    "positive_years": 10,
+    "negative_years": 5,
+    "positive_year_pct": 66.67,
+    "negative_year_pct": 33.33,
+    "average_annual_return_pct": 66.68,
+    "median_annual_return_pct": 69.74,
+    "best_year": {
+      "year": 2019,
+      "return_pct": 229.84
+    },
+    "worst_year": {
+      "year": 2022,
+      "return_pct": -85.78
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 289.51
+  },
+  "data": [
+    {
+      "year": 2011,
+      "value": -48.0696,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 3.5824,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 156.6751,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 95.3347,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": -20.5756,
+      "label": "2015",
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "value": 113.2985,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 141.5061,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -39.5794,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 229.8367,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 69.7402,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 118.6911,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -85.7815,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 224.7156,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": -13.0255,
+      "label": "2024",
+      "status": "negative"
+    },
+    {
+      "year": 2025,
+      "value": 53.8997,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

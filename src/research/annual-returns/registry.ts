@@ -12,6 +12,7 @@ import { brkbAnnualReturnsConfig } from "./brkb"
 import { gsAnnualReturnsConfig } from "./gs"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
+import { soxlAnnualReturnsConfig } from "./soxl"
 import { tslaAnnualReturnsConfig } from "./tsla"
 import { dowAnnualReturnsConfig } from "./dow"
 import { msftAnnualReturnsConfig } from "./msft"
@@ -78,6 +79,10 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: nvdlAnnualReturnsConfig,
+      featured: false,
+    },
+    {
+      config: soxlAnnualReturnsConfig,
       featured: false,
     },
   ]

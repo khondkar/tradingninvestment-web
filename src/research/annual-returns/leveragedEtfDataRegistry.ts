@@ -8,6 +8,11 @@ import nvdlReturnMethods from "../../data/charts/nvdlReturnMethods.json"
 import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
 import nvdlVsNvdaDrawdowns from "../../data/charts/nvdlVsNvdaDrawdowns.json"
 
+import soxlAnnualReturns from "../../data/charts/soxlAnnualReturns.json"
+import soxlReturnMethods from "../../data/charts/soxlReturnMethods.json"
+import smhAnnualReturns from "../../data/charts/smhAnnualReturns.json"
+import soxlVsSmhDrawdowns from "../../data/charts/soxlVsSmhDrawdowns.json"
+
 import type {
   AnnualReturnsPageData,
 } from "./pageShared"
@@ -63,6 +68,23 @@ export const leveragedEtfResearchDataRegistry:
 
       drawdownData:
         nvdlVsNvdaDrawdowns as LeveragedEtfDrawdownDataset,
+    },
+
+    SOXL: {
+      annualReturns:
+        soxlAnnualReturns as AnnualReturnsPageData,
+
+      returnMethods:
+        soxlReturnMethods.data as ReturnMethodRow[],
+
+      benchmarkAnnualReturns:
+        smhAnnualReturns as AnnualReturnsPageData,
+
+      benchmarkName:
+        "SMH",
+
+      drawdownData:
+        soxlVsSmhDrawdowns as LeveragedEtfDrawdownDataset,
     },
   }
 

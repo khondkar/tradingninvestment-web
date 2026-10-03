@@ -1,0 +1,176 @@
+{
+  "dataset": "Direxion Daily Semiconductor Bull 3X Shares price return and total return",
+  "ticker": "SOXL",
+  "asset_type": "leveraged_etf",
+  "issuer": "Direxion",
+  "leverage": "3",
+  "direction": "long",
+  "benchmark": "NYSE Semiconductor Index",
+  "benchmark_ticker": "ICESEMIT",
+  "inception_date": "2010-03-11",
+  "start_year": 2011,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 2011,
+      "price_return": -48.0696,
+      "total_return": -48.0696,
+      "is_ytd": false,
+      "data_through": "2011-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2012,
+      "price_return": 3.5824,
+      "total_return": 3.5824,
+      "is_ytd": false,
+      "data_through": "2012-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2013,
+      "price_return": 156.6751,
+      "total_return": 156.6751,
+      "is_ytd": false,
+      "data_through": "2013-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2014,
+      "price_return": 95.3347,
+      "total_return": 95.3417,
+      "is_ytd": false,
+      "data_through": "2014-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2015,
+      "price_return": -20.5756,
+      "total_return": -20.5756,
+      "is_ytd": false,
+      "data_through": "2015-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2016,
+      "price_return": 113.2985,
+      "total_return": 123.4798,
+      "is_ytd": false,
+      "data_through": "2016-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2017,
+      "price_return": 141.5061,
+      "total_return": 141.7053,
+      "is_ytd": false,
+      "data_through": "2017-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2018,
+      "price_return": -39.5794,
+      "total_return": -39.0699,
+      "is_ytd": false,
+      "data_through": "2018-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2019,
+      "price_return": 229.8367,
+      "total_return": 231.8266,
+      "is_ytd": false,
+      "data_through": "2019-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2020,
+      "price_return": 69.7402,
+      "total_return": 70.0379,
+      "is_ytd": false,
+      "data_through": "2020-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2021,
+      "price_return": 118.6911,
+      "total_return": 118.839,
+      "is_ytd": false,
+      "data_through": "2021-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2022,
+      "price_return": -85.7815,
+      "total_return": -85.6631,
+      "is_ytd": false,
+      "data_through": "2022-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2023,
+      "price_return": 224.7156,
+      "total_return": 226.9805,
+      "is_ytd": false,
+      "data_through": "2023-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2024,
+      "price_return": -13.0255,
+      "total_return": -12.3075,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2025,
+      "price_return": 53.8997,
+      "total_return": 54.9105,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2026,
+      "price_return": 289.5075,
+      "total_return": 289.7629,
+      "is_ytd": true,
+      "data_through": "2026-10-02",
+      "price_source": "Yahoo Finance SOXL Close",
+      "total_return_source": "Yahoo Finance SOXL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    }
+  ]
+}

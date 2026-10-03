@@ -20,6 +20,10 @@ import qqqAnnualReturns from './data/charts/qqqAnnualReturns.json'
 import nvdlAnnualReturns from './data/charts/nvdlAnnualReturns.json'
 import nvdlReturnMethods from './data/charts/nvdlReturnMethods.json'
 import nvdlVsNvdaDrawdowns from './data/charts/nvdlVsNvdaDrawdowns.json'
+import soxlAnnualReturns from './data/charts/soxlAnnualReturns.json'
+import soxlReturnMethods from './data/charts/soxlReturnMethods.json'
+import soxlVsSmhDrawdowns from './data/charts/soxlVsSmhDrawdowns.json'
+import smhAnnualReturns from './data/charts/smhAnnualReturns.json'
 import sp500MonthlyReturns from './data/charts/sp500MonthlyReturns.json'
 import nasdaqMetadata from './data/market/nasdaq/metadata.json'
 import sp500Metadata from './data/market/sp500/metadata.json'
@@ -35,6 +39,7 @@ import { gsAnnualReturnsConfig } from './research/annual-returns/gs'
 import { tslaAnnualReturnsConfig } from './research/annual-returns/tsla'
 import { tqqqAnnualReturnsConfig } from './research/annual-returns/tqqq'
 import { nvdlAnnualReturnsConfig } from './research/annual-returns/nvdl'
+import { soxlAnnualReturnsConfig } from './research/annual-returns/soxl'
 import { sp500MonthlyReturnsConfig } from './research/monthly-returns/sp500'
 
 import type { AnnualReturnsPageData } from './research/annual-returns/pageShared'
@@ -136,6 +141,16 @@ export const annualPrerenderPages: AnnualPrerenderPage[] = [
       nvdlReturnMethods.data as ReturnMethodRow[],
     drawdownData:
       nvdlVsNvdaDrawdowns as LeveragedEtfDrawdownDataset,
+  },
+  {
+    config: soxlAnnualReturnsConfig,
+    dataset: soxlAnnualReturns as AnnualReturnsPageData,
+    benchmarkDataset: smhAnnualReturns as AnnualReturnsPageData,
+    benchmarkName: 'SMH',
+    returnMethodsData:
+      soxlReturnMethods.data as ReturnMethodRow[],
+    drawdownData:
+      soxlVsSmhDrawdowns as LeveragedEtfDrawdownDataset,
   },
 ]
 
