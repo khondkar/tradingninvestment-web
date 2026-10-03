@@ -110,6 +110,10 @@ function buildSeoDescription(
     return `Explore stock market historical returns from ${config.startYear} to present, including Dow Jones returns by year, YTD performance, a 100+ year historical chart, average returns, market crashes, and downloadable data.`
   }
 
+  if (config.seo?.description) {
+    return config.seo.description
+  }
+
   return `Explore ${config.name} returns by year from ${config.startYear} to present, including current-year and ${buildAvailablePeriodReturnsLabel(periods).toLowerCase()} returns, average historical returns, positive and negative years, and long-term market performance.`
 }
 

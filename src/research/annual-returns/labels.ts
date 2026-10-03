@@ -11,6 +11,10 @@ import type { AnnualReturnsAssetConfig } from "./types"
 export function buildAnnualReturnsHeadline(
   config: AnnualReturnsAssetConfig,
 ): string {
+  if (config.seo.h1) {
+    return config.seo.h1
+  }
+
   if (
     config.slug ===
     "stock-market-historical-returns"
@@ -60,6 +64,10 @@ export function buildAnnualReturnsSeoDescription(
   config: AnnualReturnsAssetConfig,
   periods: number[],
 ): string {
+  if (config.seo.description) {
+    return config.seo.description
+  }
+
   return `Explore ${config.name} returns by year from ${config.startYear} to present, including current-year and ${buildAvailablePeriodReturnsLabel(periods).toLowerCase()} returns, average historical returns, positive and negative years, and long-term market performance.`
 }
 

@@ -64,6 +64,8 @@ export type AnnualReturnsAssetConfig = {
 
   seo: {
     title: string
+    h1?: string
+    description?: string
     socialTitle: string
     socialDescription: string
     socialImage?: string

@@ -84,6 +84,12 @@ export const nvdlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
     title:
       "NVDL ETF: Holdings, Performance & NVDL vs NVDA",
 
+    h1:
+      "NVDL ETF: Performance, Holdings & NVDL vs NVDA",
+
+    description:
+      "Analyze the NVDL ETF, including holdings, historical performance, drawdowns, growth of $10,000 and NVDL vs NVDA. Learn how GraniteShares NVDL targets 2× daily NVIDIA exposure.",
+
     socialTitle:
       "NVDL ETF: Performance, Holdings & NVDL vs NVDA",
 
