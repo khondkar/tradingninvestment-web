@@ -1,0 +1,169 @@
+{
+  "dataset": "Tesla price return and total return",
+  "ticker": "TSLA",
+  "start_year": 2011,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 2011,
+      "price_return": 7.2475,
+      "total_return": 7.2475,
+      "is_ytd": false,
+      "data_through": "2011-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2012,
+      "price_return": 18.5924,
+      "total_return": 18.5924,
+      "is_ytd": false,
+      "data_through": "2012-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2013,
+      "price_return": 344.1394,
+      "total_return": 344.1394,
+      "is_ytd": false,
+      "data_through": "2013-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2014,
+      "price_return": 47.8495,
+      "total_return": 47.8495,
+      "is_ytd": false,
+      "data_through": "2014-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2015,
+      "price_return": 7.9133,
+      "total_return": 7.9133,
+      "is_ytd": false,
+      "data_through": "2015-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2016,
+      "price_return": -10.9662,
+      "total_return": -10.9662,
+      "is_ytd": false,
+      "data_through": "2016-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2017,
+      "price_return": 45.7017,
+      "total_return": 45.7017,
+      "is_ytd": false,
+      "data_through": "2017-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2018,
+      "price_return": 6.8894,
+      "total_return": 6.8894,
+      "is_ytd": false,
+      "data_through": "2018-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2019,
+      "price_return": 25.7001,
+      "total_return": 25.7001,
+      "is_ytd": false,
+      "data_through": "2019-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2020,
+      "price_return": 743.437,
+      "total_return": 743.437,
+      "is_ytd": false,
+      "data_through": "2020-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2021,
+      "price_return": 49.7556,
+      "total_return": 49.7556,
+      "is_ytd": false,
+      "data_through": "2021-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2022,
+      "price_return": -65.0315,
+      "total_return": -65.0315,
+      "is_ytd": false,
+      "data_through": "2022-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2023,
+      "price_return": 101.7211,
+      "total_return": 101.7211,
+      "is_ytd": false,
+      "data_through": "2023-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2024,
+      "price_return": 62.5241,
+      "total_return": 62.5241,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2025,
+      "price_return": 11.3609,
+      "total_return": 11.3609,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2026,
+      "price_return": -17.5954,
+      "total_return": -17.5954,
+      "is_ytd": true,
+      "data_through": "2026-10-02",
+      "price_source": "Yahoo Finance TSLA Close",
+      "total_return_source": "Yahoo Finance TSLA Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    }
+  ]
+}

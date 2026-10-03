@@ -11,6 +11,7 @@ import { aaplAnnualReturnsConfig } from "./aapl"
 import { brkbAnnualReturnsConfig } from "./brkb"
 import { gsAnnualReturnsConfig } from "./gs"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
+import { tslaAnnualReturnsConfig } from "./tsla"
 import { dowAnnualReturnsConfig } from "./dow"
 import { msftAnnualReturnsConfig } from "./msft"
 import { nasdaqAnnualReturnsConfig } from "./nasdaq"
@@ -64,6 +65,10 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: gsAnnualReturnsConfig,
+      featured: false,
+    },
+    {
+      config: tslaAnnualReturnsConfig,
       featured: false,
     },
     {

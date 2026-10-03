@@ -11,6 +11,8 @@ import brkbAnnualReturns from './data/charts/brkbAnnualReturns.json'
 import brkbReturnMethods from './data/charts/brk-bReturnMethods.json'
 import gsAnnualReturns from './data/charts/gsAnnualReturns.json'
 import gsReturnMethods from './data/charts/gsReturnMethods.json'
+import tslaAnnualReturns from './data/charts/tslaAnnualReturns.json'
+import tslaReturnMethods from './data/charts/tslaReturnMethods.json'
 import tqqqAnnualReturns from './data/charts/tqqqAnnualReturns.json'
 import tqqqReturnMethods from './data/charts/tqqqReturnMethods.json'
 import tqqqVsQqqDrawdowns from './data/charts/tqqqVsQqqDrawdowns.json'
@@ -27,6 +29,7 @@ import { nvdaAnnualReturnsConfig } from './research/annual-returns/nvda'
 import { aaplAnnualReturnsConfig } from './research/annual-returns/aapl'
 import { brkbAnnualReturnsConfig } from './research/annual-returns/brkb'
 import { gsAnnualReturnsConfig } from './research/annual-returns/gs'
+import { tslaAnnualReturnsConfig } from './research/annual-returns/tsla'
 import { tqqqAnnualReturnsConfig } from './research/annual-returns/tqqq'
 import { sp500MonthlyReturnsConfig } from './research/monthly-returns/sp500'
 
@@ -101,6 +104,14 @@ export const annualPrerenderPages: AnnualPrerenderPage[] = [
     benchmarkName: 'S&P 500',
     returnMethodsData:
       gsReturnMethods.data as ReturnMethodRow[],
+  },
+  {
+    config: tslaAnnualReturnsConfig,
+    dataset: tslaAnnualReturns as AnnualReturnsPageData,
+    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
+    benchmarkName: 'S&P 500',
+    returnMethodsData:
+      tslaReturnMethods.data as ReturnMethodRow[],
   },
   {
     config: tqqqAnnualReturnsConfig,

@@ -49,6 +49,9 @@
     <loc>https://tradingninvestment.com/gs-stock-returns/</loc>
   </url>
   <url>
+    <loc>https://tradingninvestment.com/tsla-stock-returns/</loc>
+  </url>
+  <url>
     <loc>https://tradingninvestment.com/tqqq-returns/</loc>
   </url>
   <url>
@@ -107,5 +110,8 @@
   </url>
   <url>
     <loc>https://tradingninvestment.com/research/stocks/gs/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/stocks/tsla/</loc>
   </url>
 </urlset>

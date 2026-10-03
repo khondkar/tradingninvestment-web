@@ -1,0 +1,129 @@
+{
+  "symbol": "Tesla",
+  "ticker": "TSLA",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / TSLA",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 15,
+    "start_year": 2011,
+    "end_year": 2025,
+    "positive_years": 13,
+    "negative_years": 2,
+    "positive_year_pct": 86.67,
+    "negative_year_pct": 13.33,
+    "average_annual_return_pct": 93.12,
+    "median_annual_return_pct": 25.7,
+    "best_year": {
+      "year": 2020,
+      "return_pct": 743.44
+    },
+    "worst_year": {
+      "year": 2022,
+      "return_pct": -65.03
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": -17.6,
+    "through_date": "2026-10-02"
+  },
+  "data": [
+    {
+      "year": 2011,
+      "value": 7.2475,
+      "label": "2011",
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "value": 18.5924,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 344.1394,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 47.8495,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": 7.9133,
+      "label": "2015",
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "value": -10.9662,
+      "label": "2016",
+      "status": "negative"
+    },
+    {
+      "year": 2017,
+      "value": 45.7017,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": 6.8894,
+      "label": "2018",
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "value": 25.7001,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 743.437,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 49.7556,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -65.0315,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 101.7211,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 62.5241,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 11.3609,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}
