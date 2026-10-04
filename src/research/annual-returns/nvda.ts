@@ -17,7 +17,7 @@ export const nvdaAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   csvPath: "/data/nvda-annual-returns.csv",
   returnType: "NVIDIA Price Return",
   sourceLabel: "Yahoo Finance — NVIDIA Corporation (NVDA)",
-  categories: ["stock", "sp500", "nasdaq"],
+  categories: ["stock", "sp500", "nasdaq", "djia"],
   newsSymbols: ["NVDA"],
   chart: {
     id: "nvda-historical-annual-returns",

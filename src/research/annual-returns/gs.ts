@@ -30,6 +30,7 @@ export const gsAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   categories: [
     "stock",
     "sp500",
+    "djia",
   ],
 
   newsSymbols: [
