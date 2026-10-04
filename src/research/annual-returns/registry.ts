@@ -11,6 +11,7 @@ import { aaplAnnualReturnsConfig } from "./aapl"
 import { brkbAnnualReturnsConfig } from "./brkb"
 import { gsAnnualReturnsConfig } from "./gs"
 import { googlAnnualReturnsConfig } from "./googl"
+import { amznAnnualReturnsConfig } from "./amzn"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
 import { soxlAnnualReturnsConfig } from "./soxl"
@@ -98,6 +99,11 @@ export const annualReturnsResearchRegistry:
     {
       config: googlAnnualReturnsConfig,
       legacyPublished: true,
+      featured: false,
+    },
+    {
+      config: amznAnnualReturnsConfig,
+      publishAt: "2026-10-06T17:00:00-04:00",
       featured: false,
     },
     {

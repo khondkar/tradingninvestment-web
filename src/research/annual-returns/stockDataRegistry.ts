@@ -6,6 +6,8 @@ import gsAnnualReturns from "../../data/charts/gsAnnualReturns.json"
 import gsReturnMethods from "../../data/charts/gsReturnMethods.json"
 import googlAnnualReturns from "../../data/charts/googlAnnualReturns.json"
 import googlReturnMethods from "../../data/charts/googlReturnMethods.json"
+import amznAnnualReturns from "../../data/charts/amznAnnualReturns.json"
+import amznReturnMethods from "../../data/charts/amznReturnMethods.json"
 import tslaAnnualReturns from "../../data/charts/tslaAnnualReturns.json"
 import tslaReturnMethods from "../../data/charts/tslaReturnMethods.json"
 import msftAnnualReturns from "../../data/charts/msftAnnualReturns.json"
@@ -58,6 +60,14 @@ export const stockResearchDataRegistry:
 
       returnMethods:
         googlReturnMethods.data as ReturnMethodRow[],
+    },
+
+    AMZN: {
+      annualReturns:
+        amznAnnualReturns as AnnualReturnsPageData,
+
+      returnMethods:
+        amznReturnMethods.data as ReturnMethodRow[],
     },
 
     TSLA: {

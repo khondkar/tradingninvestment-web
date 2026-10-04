@@ -1,0 +1,103 @@
+name: Publish Scheduled Research
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    # 21:00 UTC = 5:00 PM EDT.
+    - cron: "0 21 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-scheduled-research
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find scheduled research due for publication
+        id: due
+        shell: bash
+        run: |
+          python3 - <<'PY' > /tmp/due-publications.txt
+          import re
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          text = Path(
+              "src/research/annual-returns/registry.ts"
+          ).read_text()
+
+          pattern = re.compile(
+              r'config:\s*(\w+AnnualReturnsConfig),'
+              r'\s*publishAt:\s*"([^"]+)"',
+              re.MULTILINE,
+          )
+
+          now = datetime.now(timezone.utc)
+
+          for config_name, publish_at in pattern.findall(text):
+              scheduled = datetime.fromisoformat(publish_at)
+
+              if scheduled.astimezone(timezone.utc) > now:
+                  continue
+
+              slug = re.sub(
+                  r'AnnualReturnsConfig$',
+                  '',
+                  config_name,
+              )
+
+              marker = (
+                  f"Publish scheduled research: "
+                  f"{slug} @ {publish_at}"
+              )
+
+              print(marker)
+          PY
+
+          : > /tmp/new-publications.txt
+
+          while IFS= read -r marker; do
+            [ -z "$marker" ] && continue
+
+            if ! git log --fixed-strings \
+              --grep="$marker" \
+              --format='%s' \
+              | grep -Fxq "$marker"
+            then
+              echo "$marker" >> /tmp/new-publications.txt
+            fi
+          done < /tmp/due-publications.txt
+
+          if [ -s /tmp/new-publications.txt ]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+
+            echo "Scheduled research ready:"
+            cat /tmp/new-publications.txt
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "No newly scheduled research is due."
+          fi
+
+      - name: Trigger Render deployment
+        if: steps.due.outputs.publish == 'true'
+        run: |
+          git config user.name "TNI Research Bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          while IFS= read -r marker; do
+            [ -z "$marker" ] && continue
+            git commit --allow-empty -m "$marker"
+          done < /tmp/new-publications.txt
+
+          git push

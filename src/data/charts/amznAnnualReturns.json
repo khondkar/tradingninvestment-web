@@ -1,0 +1,207 @@
+{
+  "symbol": "Amazon.com, Inc.",
+  "ticker": "AMZN",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / AMZN",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 28,
+    "start_year": 1998,
+    "end_year": 2025,
+    "positive_years": 20,
+    "negative_years": 8,
+    "positive_year_pct": 71.43,
+    "negative_year_pct": 28.57,
+    "average_annual_return_pct": 67.35,
+    "median_annual_return_pct": 31.12,
+    "best_year": {
+      "year": 1998,
+      "return_pct": 966.39
+    },
+    "worst_year": {
+      "year": 2000,
+      "return_pct": -79.56
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 8.97,
+    "through_date": "2026-10-02"
+  },
+  "data": [
+    {
+      "year": 1998,
+      "value": 966.3885,
+      "label": "1998",
+      "status": "positive"
+    },
+    {
+      "year": 1999,
+      "value": 42.179,
+      "label": "1999",
+      "status": "positive"
+    },
+    {
+      "year": 2000,
+      "value": -79.5567,
+      "label": "2000",
+      "status": "negative"
+    },
+    {
+      "year": 2001,
+      "value": -30.4739,
+      "label": "2001",
+      "status": "negative"
+    },
+    {
+      "year": 2002,
+      "value": 74.5841,
+      "label": "2002",
+      "status": "positive"
+    },
+    {
+      "year": 2003,
+      "value": 178.5601,
+      "label": "2003",
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "value": -15.8305,
+      "label": "2004",
+      "status": "negative"
+    },
+    {
+      "year": 2005,
+      "value": 6.4574,
+      "label": "2005",
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "value": -16.3097,
+      "label": "2006",
+      "status": "negative"
+    },
+    {
+      "year": 2007,
+      "value": 134.7694,
+      "label": "2007",
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "value": -44.6459,
+      "label": "2008",
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "value": 162.3245,
+      "label": "2009",
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "value": 33.8091,
+      "label": "2010",
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "value": -3.8333,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 44.9278,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 58.9628,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": -22.1771,
+      "label": "2014",
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "value": 117.7831,
+      "label": "2015",
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "value": 10.9456,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 55.9564,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": 28.4317,
+      "label": "2018",
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "value": 23.0277,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 76.2561,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 2.3768,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -49.6152,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 80.881,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 44.3925,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 5.2099,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}
