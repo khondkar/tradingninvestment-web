@@ -13,7 +13,6 @@ import AnnualReturnsFAQ from "../components/research/AnnualReturnsFAQ"
 import DividendCompoundingExplorer, {
   type ReturnMethodRow,
 } from "../components/charts/DividendCompoundingExplorer"
-import CompanyContext from '../components/research/CompanyContext'
 
 
 // ============================================================================
@@ -52,11 +51,6 @@ export default function StockAnnualReturnsPage({
           config={config}
           dataset={dataset}
         />
-      }
-      beforeGrowthExplorer={
-        config.companyContext ? (
-          <CompanyContext context={config.companyContext} />
-        ) : undefined
       }
       beforeReturnExplorer={
         returnMethodsData?.length ? (
