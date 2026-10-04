@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:sitemap && tsc -b && vite build && npm run generate:static && npm run validate:research-authors",
+    "build": "npm run generate:sitemap && npm run generate:ai-discovery && tsc -b && vite build && npm run generate:static && npm run validate:research-authors",
     "lint": "oxlint",
     "preview": "vite preview",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "generate:static": "node scripts/generate-static-research-pages.mjs && node scripts/generate-static-annual-pages.mjs && node scripts/generate-static-1929-crash.mjs && node scripts/generate-static-average-stock-market-return.mjs && node scripts/generate-static-research-hubs.mjs && node scripts/generate-static-market-pages.mjs && node scripts/generate-static-about-page.mjs && node scripts/generate-static-research-license-page.mjs",
-    "validate:research-authors": "node scripts/validate-research-authors.mjs"
+    "validate:research-authors": "node scripts/validate-research-authors.mjs",
+    "generate:ai-discovery": "node scripts/generate-ai-discovery.mjs"
   },
   "dependencies": {
     "d3": "^7.9.0",

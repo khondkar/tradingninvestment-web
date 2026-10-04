@@ -1,0 +1,141 @@
+# TradingNInvestment Research Corpus
+
+TradingNInvestment publishes independent financial research and market intelligence.
+
+Each research item below has one canonical public URL.
+
+## Alphabet (GOOGL) Stock Returns
+
+URL: https://tradingninvestment.com/googl-stock-returns/
+Type: annual
+Subject: Alphabet Inc.
+Symbol: GOOGL
+Description: Explore Alphabet GOOGL historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
+
+## Apple (AAPL) Stock Returns
+
+URL: https://tradingninvestment.com/aapl-stock-yearly-return/
+Type: annual
+Subject: Apple Inc.
+Symbol: AAPL
+Description: Explore Apple (AAPL) stock returns by year, historical performance, 5-year and 10-year returns, positive and negative years, major gains and declines, current-year performance, and comparison with the S&P 500.
+
+## Average Stock Market Return: Dividends, Inflation & 150+ Years of History
+
+URL: https://tradingninvestment.com/average-stock-market-return/
+Type: article
+Subject: U.S. Stock Market
+Symbol: SP500
+Description: Explore more than 150 years of U.S. stock market returns, comparing total return with dividends reinvested, inflation-adjusted real return, and price return.
+
+## Berkshire Hathaway (BRK.B) Stock Returns
+
+URL: https://tradingninvestment.com/look-berkshire-hathaway-stock-brk-b-berkshire-hathaway-performance-vs-sp-500/
+Type: annual
+Subject: Berkshire Hathaway Inc.
+Symbol: BRK.B
+Description: Explore Berkshire Hathaway BRK.B historical returns, long-term performance, growth of $10,000, rolling 10-year performance, and comparison with the S&P 500.
+
+## Goldman Sachs (GS) Stock Returns
+
+URL: https://tradingninvestment.com/gs-stock-returns/
+Type: annual
+Subject: The Goldman Sachs Group, Inc.
+Symbol: GS
+Description: Explore Goldman Sachs GS historical returns, long-term performance, growth of $10,000, rolling 10-year performance, and comparison with the S&P 500.
+
+## Microsoft (MSFT) Stock Returns
+
+URL: https://tradingninvestment.com/msft-stock-returns/
+Type: annual
+Subject: Microsoft Corporation
+Symbol: MSFT
+Description: Explore Microsoft (MSFT) stock returns by year, historical performance, 5-year and 10-year returns, positive and negative years, major gains and declines, and current-year performance.
+
+## Nasdaq Historical Returns by Year (1972–2026)
+
+URL: https://tradingninvestment.com/nasdaq-historical-annual-returns/
+Type: annual
+Subject: Nasdaq Composite
+Symbol: ^IXIC
+Description: Nasdaq Composite historical annual returns by year, including average return, positive and negative years, long-term performance, and 2026 YTD return.
+
+## NVDL ETF: Performance, Holdings & NVDL vs NVDA
+
+URL: https://tradingninvestment.com/nvdl-etf/
+Type: annual
+Subject: GraniteShares 2x Long NVDA Daily ETF
+Symbol: NVDL
+Description: Research NVDL ETF performance, holdings, historical returns, growth of $10,000, drawdowns, and NVDL vs NVDA using independent TNI analysis.
+
+## NVIDIA (NVDA) Returns by Year
+
+URL: https://tradingninvestment.com/nvda-returns/
+Type: annual
+Subject: NVIDIA
+Symbol: NVDA
+Description: Explore NVIDIA annual returns, historical performance, positive and negative years, major gains and declines, and current-year performance.
+
+## S&P 500 Monthly Returns: Historical Returns by Month
+
+URL: https://tradingninvestment.com/sp-500-monthly-returns/
+Type: monthly
+Subject: S&P 500
+Symbol: ^GSPC
+Description: Explore S&P 500 monthly returns from 1928 to the present, including average returns by month, positive and negative frequency, seasonal patterns, historical monthly performance, and current month-to-date performance.
+
+## S&P 500 Returns by Year (1928–2026)
+
+URL: https://tradingninvestment.com/sp-500-returns/
+Type: annual
+Subject: S&P 500
+Symbol: ^GSPC
+Description: Nearly a century of S&P 500 market history, including annual returns, average return, positive and negative years, and 2026 YTD performance.
+
+## SOXL ETF: Performance, Holdings & Historical Returns
+
+URL: https://tradingninvestment.com/soxl-etf/
+Type: annual
+Subject: Direxion Daily Semiconductor Bull 3X Shares
+Symbol: SOXL
+Description: Research SOXL ETF performance, holdings, historical returns, growth of $10,000, drawdowns, and SOXL vs SMH using independent TNI analysis.
+
+## Stock Market Corrections: 100 Years of S&P 500 Drawdown History
+
+URL: https://tradingninvestment.com/stock-market-correction-myth-and-reality/
+Type: drawdowns
+Subject: S&P 500
+Symbol: ^GSPC
+Description: Explore nearly 100 years of S&P 500 stock market corrections, bear markets, drawdowns and recoveries using daily historical closing-price data.
+
+## Stock Market Crash of 1929
+
+URL: https://tradingninvestment.com/stock-market-crash-of-1929/
+Type: article
+Subject: Dow Jones Industrial Average
+Symbol: DJIA
+Description: The Roaring Twenties, the Dow Jones peak, the 1929 crash timeline, and the prolonged decline that followed.
+
+## Stock Market Historical Returns: Dow Jones Returns by Year (1921–2026)
+
+URL: https://tradingninvestment.com/stock-market-historical-returns/
+Type: annual
+Subject: Dow Jones Industrial Average
+Symbol: ^DJI
+Description: Dow Jones historical returns by year from 1921 to present, including 1-year, 3-year, 5-year, 10-year and 20-year performance, average returns, positive and negative years, and 2026 YTD performance.
+
+## Tesla (TSLA) Stock Returns
+
+URL: https://tradingninvestment.com/tsla-stock-returns/
+Type: annual
+Subject: Tesla, Inc.
+Symbol: TSLA
+Description: Explore Tesla TSLA historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
+
+## TQQQ Returns
+
+URL: https://tradingninvestment.com/tqqq-returns/
+Type: annual
+Subject: ProShares UltraPro QQQ
+Symbol: TQQQ
+Description: Explore TQQQ historical returns, price return, total return, growth of $10,000, annual performance, and comparison with QQQ.
