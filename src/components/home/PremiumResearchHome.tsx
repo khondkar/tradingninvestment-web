@@ -4,7 +4,7 @@ import nvdaData from '../../data/charts/nvdaAnnualReturns.json'
 import nasdaqData from '../../data/charts/nasdaqAnnualReturns.json'
 import dowData from '../../data/charts/dowAnnualReturns.json'
 import { researchHubs, researchItems } from '../../research/discovery'
-import { annualReturnsResearchRegistry } from '../../research/annual-returns/registry'
+import { publishedAnnualReturnsResearchRegistry } from '../../research/annual-returns/registry'
 import { monthlyReturnsRegistry } from '../../research/monthly-returns/registry'
 import { stockResearchDataRegistry } from '../../research/annual-returns/stockDataRegistry'
 import TNIResearchIdentity from '../research/TNIResearchIdentity'
@@ -72,7 +72,7 @@ const featured = [
 ]
 
 const stockHomepageResearch =
-  annualReturnsResearchRegistry
+  publishedAnnualReturnsResearchRegistry
     .filter(
       ({ config }) =>
         config.categories.includes('stock') &&
@@ -114,7 +114,7 @@ const stockHomepageResearch =
     })
 
 const etfHomepageResearch =
-  annualReturnsResearchRegistry
+  publishedAnnualReturnsResearchRegistry
     .filter(
       ({ config }) =>
         config.categories.includes('etf') &&

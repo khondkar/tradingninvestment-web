@@ -12,7 +12,7 @@ import StockMarketTodayPage from './pages/StockMarketTodayPage'
 import StockMarketHeatmapPage from './pages/StockMarketHeatmapPage'
 import StockMarketSectorHealthPage from './pages/StockMarketSectorHealthPage'
 import StockMarketEarningsCalendarPage from './pages/StockMarketEarningsCalendarPage'
-import { annualReturnsResearchRegistry } from './research/annual-returns/registry'
+import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
 import { getStockResearchData } from './research/annual-returns/stockDataRegistry'
 import { getLeveragedEtfResearchData } from './research/annual-returns/leveragedEtfDataRegistry'
 import StockAnnualReturnsPage from './templates/StockAnnualReturnsPage'
@@ -33,7 +33,7 @@ import './App.css'
 type PageName = 'research' | 'market' | 'articles' | 'about'
 
 const publishedResearchRegistry = [
-  ...annualReturnsResearchRegistry.map((entry) => ({
+  ...publishedAnnualReturnsResearchRegistry.map((entry) => ({
     ...entry,
     researchType: 'annual' as const,
   })),
@@ -1041,7 +1041,7 @@ function App() {
 
   if (stockGrowthEmbedMatch) {
     const stockEntry =
-      annualReturnsResearchRegistry.find(
+      publishedAnnualReturnsResearchRegistry.find(
         (entry) =>
           entry.config.categories.includes('stock') &&
           entry.config.slug ===
@@ -1073,7 +1073,7 @@ function App() {
   }
 
   const dynamicLeveragedEtfEntry =
-    annualReturnsResearchRegistry.find(
+    publishedAnnualReturnsResearchRegistry.find(
       (entry) =>
         entry.config.categories.includes(
           'leveraged-etf',
@@ -1139,7 +1139,7 @@ function App() {
   }
 
   const dynamicStockEntry =
-    annualReturnsResearchRegistry.find(
+    publishedAnnualReturnsResearchRegistry.find(
       (entry) =>
         entry.config.categories.includes('stock') &&
         entry.config.canonicalPath.replace(/\/$/, '') ===

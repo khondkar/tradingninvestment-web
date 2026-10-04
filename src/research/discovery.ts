@@ -1,4 +1,4 @@
-import { annualReturnsResearchRegistry } from './annual-returns/registry'
+import { publishedAnnualReturnsResearchRegistry } from './annual-returns/registry'
 import { monthlyReturnsRegistry } from './monthly-returns/registry'
 import { drawdownsResearchRegistry } from './drawdowns/registry'
 import { additionalPublications } from './additional-publications'
@@ -15,7 +15,7 @@ export type ResearchItem = {
 }
 
 export const researchItems: ResearchItem[] = [
-  ...annualReturnsResearchRegistry.map(({ config }) => ({
+  ...publishedAnnualReturnsResearchRegistry.map(({ config }) => ({
     slug: config.slug,
     path: config.canonicalPath,
     title: config.seo.socialTitle,

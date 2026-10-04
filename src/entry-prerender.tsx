@@ -43,6 +43,7 @@ import { tslaAnnualReturnsConfig } from './research/annual-returns/tsla'
 import { tqqqAnnualReturnsConfig } from './research/annual-returns/tqqq'
 import { nvdlAnnualReturnsConfig } from './research/annual-returns/nvdl'
 import { soxlAnnualReturnsConfig } from './research/annual-returns/soxl'
+import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
 import { sp500MonthlyReturnsConfig } from './research/monthly-returns/sp500'
 
 import type { AnnualReturnsPageData } from './research/annual-returns/pageShared'
@@ -68,7 +69,7 @@ export type AnnualPrerenderPage = {
   drawdownData?: LeveragedEtfDrawdownDataset
 }
 
-export const annualPrerenderPages: AnnualPrerenderPage[] = [
+const allAnnualPrerenderPages: AnnualPrerenderPage[] = [
   {
     config: sp500AnnualReturnsConfig,
     dataset: sp500AnnualReturns as AnnualReturnsPageData,
@@ -203,6 +204,18 @@ export function renderAnnualPage(page: AnnualPrerenderPage) {
     />,
   )
 }
+
+// Only generate static HTML for research whose publication time has arrived.
+const publishedAnnualSlugs = new Set(
+  publishedAnnualReturnsResearchRegistry.map(
+    (entry) => entry.config.slug,
+  ),
+)
+
+export const annualPrerenderPages: AnnualPrerenderPage[] =
+  allAnnualPrerenderPages.filter(
+    (page) => publishedAnnualSlugs.has(page.config.slug),
+  )
 
 export const monthlyPrerenderPages = [
   {
