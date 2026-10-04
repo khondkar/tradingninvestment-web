@@ -66,6 +66,7 @@ export type GenericAnnualReturnsPageProps = {
   benchmarkName?: string
   assetAsOfDate?: string
   benchmarkAsOfDate?: string
+  beforeGrowthExplorer?: ReactNode
   beforeReturnExplorer?: ReactNode
   afterPeriodReturns?: ReactNode
   afterRollingComparison?: ReactNode
@@ -84,6 +85,7 @@ export default function GenericAnnualReturnsPage({
   benchmarkName = 'S&P 500',
   assetAsOfDate,
   benchmarkAsOfDate,
+  beforeGrowthExplorer,
   beforeReturnExplorer,
   afterPeriodReturns,
   afterRollingComparison,
@@ -1404,6 +1406,8 @@ export default function GenericAnnualReturnsPage({
         </section>
 
         {afterPeriodReturns}
+
+        {beforeGrowthExplorer}
 
         {beforeReturnExplorer && (
           <>

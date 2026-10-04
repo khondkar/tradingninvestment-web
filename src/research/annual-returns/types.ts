@@ -5,6 +5,12 @@
 import type { ResearchAuthor } from '../author'
 
 export type AnnualReturnsAssetConfig = {
+  companyContext?: {
+    eyebrow?: string
+    title: string
+    paragraphs: string[]
+    closing?: string
+  }
   symbol: string
   slug: string
   name: string
