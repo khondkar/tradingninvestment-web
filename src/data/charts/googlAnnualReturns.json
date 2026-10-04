@@ -1,0 +1,165 @@
+{
+  "symbol": "Alphabet Inc.",
+  "ticker": "GOOGL",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / GOOGL",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 21,
+    "start_year": 2005,
+    "end_year": 2025,
+    "positive_years": 16,
+    "negative_years": 5,
+    "positive_year_pct": 76.19,
+    "negative_year_pct": 23.81,
+    "average_annual_return_pct": 29.26,
+    "median_annual_return_pct": 30.85,
+    "best_year": {
+      "year": 2005,
+      "return_pct": 115.19
+    },
+    "worst_year": {
+      "year": 2008,
+      "return_pct": -55.51
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 9.74,
+    "through_date": "2026-10-02"
+  },
+  "data": [
+    {
+      "year": 2005,
+      "value": 115.1875,
+      "label": "2005",
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "value": 10.9965,
+      "label": "2006",
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "value": 50.165,
+      "label": "2007",
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "value": -55.5085,
+      "label": "2008",
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "value": 101.5212,
+      "label": "2009",
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "value": -4.1953,
+      "label": "2010",
+      "status": "negative"
+    },
+    {
+      "year": 2011,
+      "value": 8.7429,
+      "label": "2011",
+      "status": "positive"
+    },
+    {
+      "year": 2012,
+      "value": 9.5185,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 58.4311,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": -5.394,
+      "label": "2014",
+      "status": "negative"
+    },
+    {
+      "year": 2015,
+      "value": 46.6118,
+      "label": "2015",
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "value": 1.856,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 32.9295,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -0.8012,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 28.1762,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 30.8536,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 65.2958,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -39.0896,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 58.3248,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 35.5144,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 65.346,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

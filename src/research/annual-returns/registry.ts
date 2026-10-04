@@ -10,6 +10,7 @@
 import { aaplAnnualReturnsConfig } from "./aapl"
 import { brkbAnnualReturnsConfig } from "./brkb"
 import { gsAnnualReturnsConfig } from "./gs"
+import { googlAnnualReturnsConfig } from "./googl"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
 import { soxlAnnualReturnsConfig } from "./soxl"
@@ -67,6 +68,10 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: gsAnnualReturnsConfig,
+      featured: false,
+    },
+    {
+      config: googlAnnualReturnsConfig,
       featured: false,
     },
     {

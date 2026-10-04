@@ -10,6 +10,8 @@ import aaplReturnMethods from './data/charts/aaplReturnMethods.json'
 import brkbAnnualReturns from './data/charts/brkbAnnualReturns.json'
 import brkbReturnMethods from './data/charts/brk-bReturnMethods.json'
 import gsAnnualReturns from './data/charts/gsAnnualReturns.json'
+import googlAnnualReturns from './data/charts/googlAnnualReturns.json'
+import googlReturnMethods from './data/charts/googlReturnMethods.json'
 import gsReturnMethods from './data/charts/gsReturnMethods.json'
 import tslaAnnualReturns from './data/charts/tslaAnnualReturns.json'
 import tslaReturnMethods from './data/charts/tslaReturnMethods.json'
@@ -36,6 +38,7 @@ import { nvdaAnnualReturnsConfig } from './research/annual-returns/nvda'
 import { aaplAnnualReturnsConfig } from './research/annual-returns/aapl'
 import { brkbAnnualReturnsConfig } from './research/annual-returns/brkb'
 import { gsAnnualReturnsConfig } from './research/annual-returns/gs'
+import { googlAnnualReturnsConfig } from './research/annual-returns/googl'
 import { tslaAnnualReturnsConfig } from './research/annual-returns/tsla'
 import { tqqqAnnualReturnsConfig } from './research/annual-returns/tqqq'
 import { nvdlAnnualReturnsConfig } from './research/annual-returns/nvdl'
@@ -113,6 +116,14 @@ export const annualPrerenderPages: AnnualPrerenderPage[] = [
     benchmarkName: 'S&P 500',
     returnMethodsData:
       gsReturnMethods.data as ReturnMethodRow[],
+  },
+  {
+    config: googlAnnualReturnsConfig,
+    dataset: googlAnnualReturns as AnnualReturnsPageData,
+    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
+    benchmarkName: 'S&P 500',
+    returnMethodsData:
+      googlReturnMethods.data as ReturnMethodRow[],
   },
   {
     config: tslaAnnualReturnsConfig,

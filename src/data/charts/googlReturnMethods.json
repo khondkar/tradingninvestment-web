@@ -1,0 +1,229 @@
+{
+  "dataset": "Alphabet Inc. price return and total return",
+  "ticker": "GOOGL",
+  "start_year": 2005,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 2005,
+      "price_return": 115.1875,
+      "total_return": 115.1875,
+      "is_ytd": false,
+      "data_through": "2005-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2006,
+      "price_return": 10.9965,
+      "total_return": 10.9965,
+      "is_ytd": false,
+      "data_through": "2006-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2007,
+      "price_return": 50.165,
+      "total_return": 50.165,
+      "is_ytd": false,
+      "data_through": "2007-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2008,
+      "price_return": -55.5085,
+      "total_return": -55.5085,
+      "is_ytd": false,
+      "data_through": "2008-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2009,
+      "price_return": 101.5212,
+      "total_return": 101.5212,
+      "is_ytd": false,
+      "data_through": "2009-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2010,
+      "price_return": -4.1953,
+      "total_return": -4.1953,
+      "is_ytd": false,
+      "data_through": "2010-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2011,
+      "price_return": 8.7429,
+      "total_return": 8.7429,
+      "is_ytd": false,
+      "data_through": "2011-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2012,
+      "price_return": 9.5185,
+      "total_return": 9.5185,
+      "is_ytd": false,
+      "data_through": "2012-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2013,
+      "price_return": 58.4311,
+      "total_return": 58.4311,
+      "is_ytd": false,
+      "data_through": "2013-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2014,
+      "price_return": -5.394,
+      "total_return": -5.394,
+      "is_ytd": false,
+      "data_through": "2014-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2015,
+      "price_return": 46.6118,
+      "total_return": 46.6117,
+      "is_ytd": false,
+      "data_through": "2015-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2016,
+      "price_return": 1.856,
+      "total_return": 1.856,
+      "is_ytd": false,
+      "data_through": "2016-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2017,
+      "price_return": 32.9295,
+      "total_return": 32.9295,
+      "is_ytd": false,
+      "data_through": "2017-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2018,
+      "price_return": -0.8012,
+      "total_return": -0.8012,
+      "is_ytd": false,
+      "data_through": "2018-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2019,
+      "price_return": 28.1762,
+      "total_return": 28.1762,
+      "is_ytd": false,
+      "data_through": "2019-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2020,
+      "price_return": 30.8536,
+      "total_return": 30.8536,
+      "is_ytd": false,
+      "data_through": "2020-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2021,
+      "price_return": 65.2958,
+      "total_return": 65.2958,
+      "is_ytd": false,
+      "data_through": "2021-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2022,
+      "price_return": -39.0896,
+      "total_return": -39.0895,
+      "is_ytd": false,
+      "data_through": "2022-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2023,
+      "price_return": 58.3248,
+      "total_return": 58.3248,
+      "is_ytd": false,
+      "data_through": "2023-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2024,
+      "price_return": 35.5144,
+      "total_return": 36.0056,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2025,
+      "price_return": 65.346,
+      "total_return": 65.9936,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2026,
+      "price_return": 9.7444,
+      "total_return": 9.9579,
+      "is_ytd": true,
+      "data_through": "2026-10-02",
+      "price_source": "Yahoo Finance GOOGL Close",
+      "total_return_source": "Yahoo Finance GOOGL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    }
+  ]
+}
