@@ -2,7 +2,13 @@ import { useEffect } from 'react'
 import { getHub, getHubItems, getItemHubs, getRelatedItems, researchHubs, researchItems, type ResearchHub } from '../../research/discovery'
 import './ResearchDiscovery.css'
 
-const baseHubs = researchHubs.filter((hub) => ['/research/stocks/', '/research/indexes/', '/research/market-history/', '/research/market-risk/'].includes(hub.path))
+const baseHubs = researchHubs.filter((hub) => [
+  '/research/stocks/',
+  '/research/etfs/',
+  '/research/indexes/',
+  '/research/market-history/',
+  '/research/market-risk/',
+].includes(hub.path))
 
 export function ResearchHubPage({ hub }: { hub: ResearchHub }) {
   const items = getHubItems(hub)
@@ -71,7 +77,17 @@ export function ResearchHubPage({ hub }: { hub: ResearchHub }) {
           <div className="research-section-heading"><span className="research-kicker">PUBLISHED RESEARCH</span><h2 id="studies-heading">{hub.path === '/research/' ? 'All studies' : `Explore ${hub.title}`}</h2></div>
           <div className="research-study-grid">
             {items.map((item) => <a className="research-study-card" href={item.path} key={item.path}>
-              <span className="research-kicker">{item.kind === 'drawdowns' ? 'MARKET RISK' : item.categories.includes('stock') ? 'STOCK RESEARCH' : 'INDEX RESEARCH'}</span>
+              <span className="research-kicker">{
+                item.kind === 'drawdowns'
+                  ? 'MARKET RISK'
+                  : item.categories.includes('leveraged-etf')
+                    ? 'LEVERAGED ETF RESEARCH'
+                    : item.categories.includes('etf')
+                      ? 'ETF RESEARCH'
+                      : item.categories.includes('stock')
+                        ? 'STOCK RESEARCH'
+                        : 'INDEX RESEARCH'
+              }</span>
               <h3>{item.title}</h3><p>{item.description}</p><b>Explore study ↗</b>
             </a>)}
           </div>

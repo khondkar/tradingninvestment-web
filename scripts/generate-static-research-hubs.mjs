@@ -22,7 +22,13 @@ try {
 const { researchHubs, researchItems, getHubItems, getItemHubs, getRelatedItems } = graph
 const escape = (value) => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
 const link = (url, label) => `<a href="${escape(url)}">${escape(label)}</a>`
-const base = researchHubs.filter((hub) => ['/research/stocks/', '/research/indexes/', '/research/market-history/', '/research/market-risk/'].includes(hub.path))
+const base = researchHubs.filter((hub) => [
+  '/research/stocks/',
+  '/research/etfs/',
+  '/research/indexes/',
+  '/research/market-history/',
+  '/research/market-risk/',
+].includes(hub.path))
 
 for (const hub of researchHubs) {
   const items = getHubItems(hub)
