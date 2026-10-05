@@ -437,11 +437,6 @@ const structuredData =
         measurementTechnique:
           "Price return measures changes in the market index level. Total return includes dividends and assumes reinvestment. Real total return adjusts dividend-reinvested total return for changes in consumer prices.",
 
-        isPartOf: {
-          "@id":
-            `${canonicalUrl}#article`,
-        },
-
         variableMeasured: [
           "Annual price return",
           "Annual total return with dividends reinvested",
