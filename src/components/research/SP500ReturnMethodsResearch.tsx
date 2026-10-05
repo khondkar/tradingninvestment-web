@@ -1493,6 +1493,82 @@ export default function SP500ReturnMethodsResearch() {
         </p>
       </header>
 
+      {/* ============================================================
+          TNI 154-YEAR COMPOUNDING — REAL HISTORICAL DATA
+          1872–2025 completed calendar years
+          Total return with dividends reinvested
+      ============================================================ */}
+      <figure
+        style={{
+          margin: '28px 0 30px',
+          padding: 0,
+        }}
+      >
+        <img
+          src="/images/social/sp500-150-year-compounding.png"
+          alt="Growth of $10,000 to approximately $8.12 billion across 154 completed years of U.S. stock market total-return history from 1872 through 2025, with dividends reinvested."
+          width={1200}
+          height={630}
+          loading="eager"
+          decoding="async"
+          style={{
+            display: 'block',
+            width: '100%',
+            height: 'auto',
+            borderRadius: '16px',
+          }}
+        />
+
+        <figcaption
+          style={{
+            marginTop: '14px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '14px',
+            flexWrap: 'wrap',
+          }}
+        >
+          <div
+            style={{
+              color: '#526173',
+              fontSize: '13px',
+              lineHeight: 1.55,
+            }}
+          >
+            <strong style={{ color: '#172033' }}>
+              154 years · 1872–2025
+            </strong>
+            {' · '}
+            $10,000 compounded to $8.12 billion using annual total
+            returns with dividends reinvested. Chart uses a logarithmic
+            wealth scale.
+          </div>
+
+          <a
+            href="/images/social/sp500-150-year-compounding.png"
+            download="TNI-154-Year-US-Stock-Market-Compounding.png"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minHeight: '42px',
+              padding: '0 16px',
+              border: '1px solid #cdd9e7',
+              borderRadius: '9px',
+              background: '#ffffff',
+              color: '#43546a',
+              fontSize: '13px',
+              fontWeight: 800,
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Download TNI Chart
+          </a>
+        </figcaption>
+      </figure>
+
       <nav
         className="tni-return-methods__article-nav"
         aria-label="Article sections"
