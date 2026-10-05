@@ -774,11 +774,58 @@ for (
     isAccessibleForFree: true,
   }
 
+  const monthlyStartYear =
+    page.dataset.range?.start_year ??
+    config.startYear
+
+  const monthlyEndYear =
+    page.dataset.range?.end_year
+
+  const datasetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: `${config.name} Monthly Returns Dataset`,
+    description: config.seo.description,
+    url: canonicalUrl,
+    license: {
+      '@type': 'CreativeWork',
+      name: 'TradingNInvestment Research Data License',
+      url: 'https://tradingninvestment.com/research-license/',
+    },
+    temporalCoverage:
+      monthlyEndYear
+        ? `${monthlyStartYear}/${monthlyEndYear}`
+        : `${monthlyStartYear}/..`,
+    creator: {
+      '@type': 'Person',
+      name: config.author.name,
+      jobTitle: config.author.role,
+      url: siteOrigin + config.author.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'TradingNInvestment',
+      url: siteOrigin + '/',
+    },
+    measurementTechnique:
+      typeof page.dataset.methodology === 'string'
+        ? page.dataset.methodology
+        : `${page.dataset.return_type ?? config.returnType} calculated from monthly market price observations.`,
+    variableMeasured: [
+      page.dataset.metric ?? 'Monthly return',
+      'Calendar month',
+    ],
+  }
+
   html = replaceRequired(
     html,
     /<\/head>/,
-    `  <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>\n</head>`,
-    `${config.slug} article author schema insertion point`,
+    [
+      `  <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`,
+      `  <script type="application/ld+json">${JSON.stringify(datasetSchema)}</script>`,
+      '</head>',
+    ].join('\n'),
+    `${config.slug} structured data insertion point`,
   )
 
   html = replaceRequired(
