@@ -331,19 +331,39 @@ const structuredData =
           "@type":
             "Person",
 
+          "@id":
+            `${siteOrigin}/about/#kamal-khondkar`,
+
           name:
             "Kamal Khondkar",
+
+          jobTitle:
+            "Quant Researcher",
+
+          url:
+            `${siteOrigin}/about/`,
         },
 
         publisher: {
           "@type":
             "Organization",
 
+          "@id":
+            `${siteOrigin}/#organization`,
+
           name:
             "TradingNInvestment",
 
           url:
-            siteOrigin,
+            `${siteOrigin}/`,
+        },
+
+        isAccessibleForFree:
+          true,
+
+        mainEntity: {
+          "@id":
+            `${canonicalUrl}#dataset`,
         },
 
         about: [
@@ -396,11 +416,38 @@ const structuredData =
           "@type":
             "Organization",
 
+          "@id":
+            `${siteOrigin}/#organization`,
+
           name:
             "TradingNInvestment",
 
           url:
-            siteOrigin,
+            `${siteOrigin}/`,
+        },
+
+        publisher: {
+          "@id":
+            `${siteOrigin}/#organization`,
+        },
+
+        license: {
+          "@type":
+            "CreativeWork",
+
+          name:
+            "TradingNInvestment Research Data License",
+
+          url:
+            `${siteOrigin}/research-license/`,
+        },
+
+        measurementTechnique:
+          "Price return measures changes in the market index level. Total return includes dividends and assumes reinvestment. Real total return adjusts dividend-reinvested total return for changes in consumer prices.",
+
+        isPartOf: {
+          "@id":
+            `${canonicalUrl}#article`,
         },
 
         variableMeasured: [
@@ -484,7 +531,7 @@ const structuredDataScript =
 html = replaceRequired(
   html,
   /<\/head>/,
-  `  ${structuredDataScript}\\n</head>`,
+  `  ${structuredDataScript}\n</head>`,
   "structured data",
 )
 

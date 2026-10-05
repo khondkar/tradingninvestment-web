@@ -1776,6 +1776,20 @@ export default function SP500ReturnMethodsResearch() {
           D3 CHART
       ===================================================== */}
 
+      <div className="tni-return-methods__chart-context">
+        <p>
+          <strong>Three return measures:</strong>{' '}
+          <strong>Price Return</strong> measures changes in
+          the market index level and excludes reinvested
+          dividends. <strong>Total Return</strong> includes
+          dividends and assumes they are reinvested.{' '}
+          <strong>Real Total Return</strong> starts with
+          dividend-reinvested total return and adjusts it
+          for inflation. These are distinct measures and
+          should not be interpreted interchangeably.
+        </p>
+      </div>
+
       <div className="tni-return-methods__chart">
         {filteredData.length >
         0 ? (
