@@ -431,16 +431,8 @@ const structuredData =
             `${siteOrigin}/#organization`,
         },
 
-        license: {
-          "@type":
-            "CreativeWork",
-
-          name:
-            "TradingNInvestment Research Data License",
-
-          url:
-            `${siteOrigin}/research-license/`,
-        },
+        license:
+          `${siteOrigin}/research-license/`,
 
         measurementTechnique:
           "Price return measures changes in the market index level. Total return includes dividends and assumes reinvestment. Real total return adjusts dividend-reinvested total return for changes in consumer prices.",
