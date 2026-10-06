@@ -93,7 +93,7 @@ export const soxlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
       "SOXL ETF: Performance, Holdings & Historical Returns",
 
     description:
-      "Analyze the SOXL ETF, including holdings, historical performance, annual returns, drawdowns and growth of $10,000. Learn how Direxion SOXL targets 3× the daily performance of the NYSE Semiconductor Index.",
+      "Analyze SOXL ETF performance, holdings, historical returns, drawdowns and growth of $10,000, including how 3× daily semiconductor exposure affects risk.",
 
     socialTitle:
       "SOXL ETF: Performance, Holdings & Historical Returns",
@@ -102,6 +102,6 @@ export const soxlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
       "Research SOXL ETF performance, holdings, historical returns, growth of $10,000, drawdowns, and SOXL vs SMH using independent TNI analysis.",
 
     socialImage:
-      "/images/social/soxl-leveraged-etf-intelligence-og.png",
+      "/images/social/soxl-vs-smh-drawdown.png",
   },
 }

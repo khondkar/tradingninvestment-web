@@ -180,8 +180,25 @@ export function getItemHubs(item: ResearchItem) {
 }
 
 export function getRelatedItems(item: ResearchItem, limit = 3) {
-  return researchItems
-    .filter((candidate) => candidate.path !== item.path)
+  const curatedPaths: Record<string, string[]> = {
+    "/soxl-etf/": [
+      "/sp-500-monthly-returns/",
+      "/aapl-stock-yearly-return/",
+    ],
+  }
+
+  const curated = (curatedPaths[item.path] ?? [])
+    .map((path) =>
+      researchItems.find((candidate) => candidate.path === path)
+    )
+    .filter((candidate): candidate is ResearchItem => Boolean(candidate))
+
+  const automatic = researchItems
+    .filter(
+      (candidate) =>
+        candidate.path !== item.path &&
+        !curated.some((selected) => selected.path === candidate.path)
+    )
     .map((candidate) => ({
       candidate,
       score:
@@ -191,6 +208,7 @@ export function getRelatedItems(item: ResearchItem, limit = 3) {
     }))
     .filter(({ score }) => score > 0)
     .sort((a, b) => b.score - a.score || a.candidate.title.localeCompare(b.candidate.title))
-    .slice(0, limit)
     .map(({ candidate }) => candidate)
+
+  return [...curated, ...automatic].slice(0, limit)
 }

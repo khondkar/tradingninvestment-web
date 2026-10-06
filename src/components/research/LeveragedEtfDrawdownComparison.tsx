@@ -347,6 +347,63 @@ export default function LeveragedEtfDrawdownComparison({
         ref={chartRef}
       />
 
+      {dataset.asset === 'SOXL' &&
+        dataset.benchmark === 'SMH' && (
+          <figure
+            style={{
+              margin: '32px 0',
+              padding: '20px',
+              border: '1px solid #d7e0ea',
+              borderRadius: '16px',
+              background: '#ffffff',
+            }}
+          >
+            <img
+              src="/images/social/soxl-vs-smh-drawdown.png"
+              alt="SOXL vs SMH historical drawdowns showing SOXL maximum drawdown of 90.46% compared with 45.30% for SMH"
+              width="1200"
+              height="630"
+              loading="lazy"
+              style={{
+                display: 'block',
+                width: '100%',
+                height: 'auto',
+                borderRadius: '10px',
+              }}
+            />
+
+            <figcaption
+              style={{
+                marginTop: '14px',
+                color: '#5b6c80',
+                fontSize: '0.9rem',
+                lineHeight: 1.5,
+              }}
+            >
+              TNI comparison of synchronized SOXL and SMH
+              running-peak drawdowns using daily adjusted-close
+              observations from 2010 through 2026.
+            </figcaption>
+
+            <a
+              href="/images/social/soxl-vs-smh-drawdown.png"
+              download="TNI-SOXL-vs-SMH-Historical-Drawdowns.png"
+              style={{
+                display: 'inline-block',
+                marginTop: '14px',
+                padding: '10px 16px',
+                border: '1px solid #1a6fd6',
+                borderRadius: '8px',
+                color: '#1a6fd6',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              Download TNI Chart
+            </a>
+          </figure>
+        )}
+
       <div className="tni-leveraged-drawdown__recovery-grid">
         <article>
           <span>
