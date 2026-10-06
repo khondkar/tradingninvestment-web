@@ -185,6 +185,10 @@ export function getRelatedItems(item: ResearchItem, limit = 3) {
       "/sp-500-monthly-returns/",
       "/aapl-stock-yearly-return/",
     ],
+    "/nvdl-etf/": [
+      "/stock-market-historical-returns/",
+      "/nvda-returns/",
+    ],
   }
 
   const curated = (curatedPaths[item.path] ?? [])
