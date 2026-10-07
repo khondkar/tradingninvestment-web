@@ -48,7 +48,10 @@ export async function prepareApp(pathname: string) {
     path === '/research-license' ||
     path.startsWith('/research/')
   ) {
-    await import('./components/research/ResearchDiscovery.css')
+    await Promise.all([
+      import('./App.css'),
+      import('./components/research/ResearchDiscovery.css'),
+    ])
   }
   if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
   if (path === '/stock-market-today/earnings-calendar') { StockMarketEarningsCalendarPage = (await import('./pages/StockMarketEarningsCalendarPage')).default; return }
