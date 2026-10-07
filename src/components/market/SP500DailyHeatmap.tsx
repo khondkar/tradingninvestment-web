@@ -140,7 +140,7 @@ export default function SP500DailyHeatmap() {
           ) &&
           Number.isFinite(stock.price),
       ),
-    [],
+    [snapshot.constituents],
   )
 
   useEffect(() => {
