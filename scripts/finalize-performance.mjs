@@ -170,6 +170,32 @@ html = html.replace(
   '<div id="root" data-tni-hydrate="home">',
 )
 
+// Inline only the stylesheets already selected for the homepage. Preserve
+// their cascade order and full contents, avoiding a flash of unstyled content.
+// This runs after all page generators; article/hub/About CSS stays external.
+let inlineCount = 0
+html = html.replace(/<link\b[^>]*>/gi, tag => {
+  if (!/\brel=["']stylesheet["']/i.test(tag)) return tag
+  const href = tag.match(/\bhref=["']([^"']+)["']/i)?.[1]
+  if (!href || !/^\/assets\/[^/]+\.css$/.test(href)) {
+    throw new Error(`Unexpected homepage stylesheet: ${href}`)
+  }
+  const css = fs.readFileSync(path.join(dist, href.slice(1)), 'utf8')
+  if (/@import\s/i.test(css)) throw new Error('Resolve homepage CSS imports before inlining')
+  for (const match of css.matchAll(/url\(\s*["']?([^"')\s]+)/gi)) {
+    if (!/^(?:[a-z][a-z\d+.-]*:|\/|#)/i.test(match[1])) {
+      throw new Error(`Homepage CSS needs a root-relative asset URL: ${match[1]}`)
+    }
+  }
+  inlineCount++
+  return `<style data-tni-home-css="${href}">${css.replace(/<\/style/gi, '<\\/style')}</style>`
+})
+if (!inlineCount) throw new Error('No homepage stylesheets found to inline')
+html = html.replace(
+  '<div id="root" data-tni-hydrate="home">',
+  '<div id="root" data-tni-hydrate="home" data-tni-home-styles="inline">',
+)
+
 fs.writeFileSync(file, html)
 
-console.log('TNI homepage hydration and article styles enabled')
+console.log(`TNI homepage hydration enabled; ${inlineCount} stylesheets embedded in HTML`)

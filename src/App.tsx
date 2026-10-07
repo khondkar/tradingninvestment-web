@@ -39,10 +39,18 @@ export async function prepareApp(pathname: string) {
 
   // Route CSS that is not required by annual-return article first paint.
   if (path === '/') {
-    await Promise.all([
-      import('./components/home/PremiumResearchHome.css'),
-      import('./components/research/ResearchDiscovery.css'),
-    ])
+    // Production HTML already contains the complete homepage cascade. Avoid
+    // fetching that CSS again; development still loads it through Vite.
+    const inlineHome = typeof document !== 'undefined' &&
+      document.getElementById('root')?.dataset.tniHomeStyles === 'inline'
+    if (!inlineHome) await import('./components/home/PremiumResearchHome.css')
+    const requestedPage = typeof window === 'undefined' ? null
+      : new URLSearchParams(window.location.search).get('page')
+    if (requestedPage === 'articles') {
+      await import('./components/research/ResearchDiscovery.css')
+    } else if (requestedPage === 'about') {
+      await import('./pages/AboutPage.css')
+    }
   } else if (path === '/about') {
     await import('./pages/AboutPage.css')
   } else if (

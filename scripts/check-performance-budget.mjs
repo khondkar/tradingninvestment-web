@@ -23,8 +23,16 @@ for (const key of seen) {
     throw new Error(`Article dependency in initial homepage graph: ${key}`)
   }
 }
+const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+for (const match of html.matchAll(/<style data-tni-home-css="\/([^"]+)">/g)) styles.add(match[1])
 const css = [...styles].reduce((sum, file) => sum + gzipSync(fs.readFileSync(path.join(root, file))).length, 0)
-console.log(`TNI initial assets (gzip): JS ${(javascript / 1024).toFixed(1)} KiB; CSS ${(css / 1024).toFixed(1)} KiB`)
+const htmlBytes = gzipSync(html).length
+console.log(`TNI homepage (gzip): JS ${(javascript / 1024).toFixed(1)} KiB; embedded CSS ${(css / 1024).toFixed(1)} KiB; HTML including CSS ${(htmlBytes / 1024).toFixed(1)} KiB`)
+if (!html.includes('data-tni-home-styles="inline"') ||
+    /<link\b[^>]*\brel=["']stylesheet["']/i.test(html)) {
+  throw new Error('Homepage must contain inline styles with no blocking stylesheet links')
+}
+if (htmlBytes > 32 * 1024) throw new Error('Homepage HTML exceeds 32 KiB gzip; review content and CSS growth')
 if (javascript > 120 * 1024 || css > 22 * 1024) {
   throw new Error('Homepage budget exceeded (120 KiB JS / 22 KiB CSS gzip). Inspect imports before raising limits.')
 }
