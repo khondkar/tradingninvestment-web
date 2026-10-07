@@ -21,6 +21,8 @@ import tqqqAnnualReturns from './data/charts/tqqqAnnualReturns.json'
 import tqqqReturnMethods from './data/charts/tqqqReturnMethods.json'
 import tqqqVsQqqDrawdowns from './data/charts/tqqqVsQqqDrawdowns.json'
 import qqqAnnualReturns from './data/charts/qqqAnnualReturns.json'
+import qqqReturnMethods from './data/charts/qqqReturnMethods.json'
+import spyAnnualReturns from './data/charts/spyAnnualReturns.json'
 import nvdlAnnualReturns from './data/charts/nvdlAnnualReturns.json'
 import nvdlReturnMethods from './data/charts/nvdlReturnMethods.json'
 import nvdlVsNvdaDrawdowns from './data/charts/nvdlVsNvdaDrawdowns.json'
@@ -44,6 +46,7 @@ import { googlAnnualReturnsConfig } from './research/annual-returns/googl'
 import { amznAnnualReturnsConfig } from './research/annual-returns/amzn'
 import { tslaAnnualReturnsConfig } from './research/annual-returns/tsla'
 import { tqqqAnnualReturnsConfig } from './research/annual-returns/tqqq'
+import { qqqAnnualReturnsConfig } from './research/annual-returns/qqq'
 import { nvdlAnnualReturnsConfig } from './research/annual-returns/nvdl'
 import { soxlAnnualReturnsConfig } from './research/annual-returns/soxl'
 import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
@@ -56,6 +59,7 @@ import type { MonthlyReturnsDataset } from './research/monthly-returns/types'
 import GenericAnnualReturnsPage from './templates/GenericAnnualReturnsPage'
 import StockAnnualReturnsPage from './templates/StockAnnualReturnsPage'
 import LeveragedEtfAnnualReturnsPage from './templates/LeveragedEtfAnnualReturnsPage'
+import EtfAnnualReturnsPage from './templates/EtfAnnualReturnsPage'
 import type { ReturnMethodRow } from './components/charts/DividendCompoundingExplorer'
 import type { LeveragedEtfDrawdownDataset } from './components/research/LeveragedEtfDrawdownComparison'
 import GenericMonthlyReturnsPage from './templates/GenericMonthlyReturnsPage'
@@ -156,6 +160,15 @@ const allAnnualPrerenderPages: AnnualPrerenderPage[] = [
       tqqqVsQqqDrawdowns as LeveragedEtfDrawdownDataset,
   },
   {
+    config: qqqAnnualReturnsConfig,
+    dataset: qqqAnnualReturns as AnnualReturnsPageData,
+    benchmarkDataset:
+      spyAnnualReturns as AnnualReturnsPageData,
+    benchmarkName: 'SPY',
+    returnMethodsData:
+      qqqReturnMethods.data as ReturnMethodRow[],
+  },
+  {
     config: nvdlAnnualReturnsConfig,
     dataset: nvdlAnnualReturns as AnnualReturnsPageData,
     benchmarkDataset: nvdaAnnualReturns as AnnualReturnsPageData,
@@ -190,6 +203,20 @@ export function renderAnnualPage(page: AnnualPrerenderPage) {
         benchmarkName={page.benchmarkName ?? 'QQQ'}
         returnMethodsData={page.returnMethodsData}
         drawdownData={page.drawdownData}
+      />,
+    )
+  }
+
+  if (
+    page.returnMethodsData &&
+    page.config.categories.includes('etf') &&
+    !page.config.categories.includes('leveraged-etf')
+  ) {
+    return renderToStaticMarkup(
+      <EtfAnnualReturnsPage
+        config={page.config}
+        dataset={page.dataset}
+        returnMethodsData={page.returnMethodsData}
       />,
     )
   }

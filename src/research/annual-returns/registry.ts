@@ -13,6 +13,7 @@ import { gsAnnualReturnsConfig } from "./gs"
 import { googlAnnualReturnsConfig } from "./googl"
 import { amznAnnualReturnsConfig } from "./amzn"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
+import { qqqAnnualReturnsConfig } from "./qqq"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
 import { soxlAnnualReturnsConfig } from "./soxl"
 import { tslaAnnualReturnsConfig } from "./tsla"
@@ -113,6 +114,11 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: tqqqAnnualReturnsConfig,
+      legacyPublished: true,
+      featured: false,
+    },
+    {
+      config: qqqAnnualReturnsConfig,
       legacyPublished: true,
       featured: false,
     },

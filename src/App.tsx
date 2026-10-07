@@ -15,8 +15,10 @@ import StockMarketEarningsCalendarPage from './pages/StockMarketEarningsCalendar
 import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
 import { getStockResearchData } from './research/annual-returns/stockDataRegistry'
 import { getLeveragedEtfResearchData } from './research/annual-returns/leveragedEtfDataRegistry'
+import { getEtfResearchData } from './research/annual-returns/etfDataRegistry'
 import StockAnnualReturnsPage from './templates/StockAnnualReturnsPage'
 import LeveragedEtfAnnualReturnsPage from './templates/LeveragedEtfAnnualReturnsPage'
+import EtfAnnualReturnsPage from './templates/EtfAnnualReturnsPage'
 import StockGrowthEmbedPage from './pages/StockGrowthEmbedPage'
 import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import { drawdownsResearchRegistry } from './research/drawdowns/registry'
@@ -1130,6 +1132,63 @@ function App() {
           <ResearchConnections
             path={
               dynamicLeveragedEtfEntry.config
+                .canonicalPath
+            }
+          />
+        </div>
+      )
+    }
+  }
+
+  // ============================================================================
+  // TNI STANDARD ETF RETURNS — REGISTRY-DRIVEN PUBLIC RESEARCH ROUTE
+  // ============================================================================
+
+  const dynamicEtfEntry =
+    publishedAnnualReturnsResearchRegistry.find(
+      (entry) =>
+        entry.config.categories.includes('etf') &&
+        !entry.config.categories.includes('leveraged-etf') &&
+        entry.config.canonicalPath.replace(/\/$/, '') ===
+          normalizedPath,
+    )
+
+  if (dynamicEtfEntry) {
+    const etfData =
+      getEtfResearchData(
+        dynamicEtfEntry.config.symbol,
+      )
+
+    if (etfData) {
+      return (
+        <div className="site">
+          <Header
+            page="research"
+            setPage={setPage}
+          />
+
+          <ResearchTrail
+            path={
+              dynamicEtfEntry.config
+                .canonicalPath
+            }
+          />
+
+          <EtfAnnualReturnsPage
+            config={
+              dynamicEtfEntry.config
+            }
+            dataset={
+              etfData.annualReturns
+            }
+            returnMethodsData={
+              etfData.returnMethods
+            }
+          />
+
+          <ResearchConnections
+            path={
+              dynamicEtfEntry.config
                 .canonicalPath
             }
           />

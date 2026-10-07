@@ -49,10 +49,19 @@
     <loc>https://tradingninvestment.com/gs-stock-returns/</loc>
   </url>
   <url>
+    <loc>https://tradingninvestment.com/googl-stock-returns/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/amzn-stock-returns/</loc>
+  </url>
+  <url>
     <loc>https://tradingninvestment.com/tsla-stock-returns/</loc>
   </url>
   <url>
     <loc>https://tradingninvestment.com/tqqq-returns/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/qqq-returns/</loc>
   </url>
   <url>
     <loc>https://tradingninvestment.com/nvdl-etf/</loc>
@@ -116,6 +125,12 @@
   </url>
   <url>
     <loc>https://tradingninvestment.com/research/stocks/gs/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/stocks/googl/</loc>
+  </url>
+  <url>
+    <loc>https://tradingninvestment.com/research/stocks/amzn/</loc>
   </url>
   <url>
     <loc>https://tradingninvestment.com/research/stocks/tsla/</loc>

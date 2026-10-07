@@ -3041,6 +3041,102 @@ export default function GenericAnnualReturnsPage({
           </section>
         )}
 
+        {config.symbol === 'QQQ' && (
+          <section
+            aria-labelledby="qqq-related-research-heading"
+            style={{
+              margin: '8px 0 42px',
+              padding: '26px 28px',
+              border: '1px solid #e4ebf3',
+              borderRadius: '14px',
+              background: '#f8fbff',
+            }}
+          >
+            <div
+              style={{
+                marginBottom: '8px',
+                color: '#1677ff',
+                fontSize: '11px',
+                fontWeight: 800,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Related QQQ & Market Research
+            </div>
+
+            <h2
+              id="qqq-related-research-heading"
+              style={{
+                margin: '0 0 10px',
+                color: '#10233f',
+                fontSize: '24px',
+                lineHeight: 1.25,
+              }}
+            >
+              Continue Exploring QQQ and Market Returns
+            </h2>
+
+            <p
+              style={{
+                maxWidth: '820px',
+                margin: '0 0 18px',
+                color: '#66768a',
+                fontSize: '14px',
+                lineHeight: 1.75,
+              }}
+            >
+              Compare QQQ research with the broader Nasdaq market,
+              long-term average stock market returns, and TQQQ
+              historical performance.
+            </p>
+
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '12px 22px',
+              }}
+            >
+              <a
+                href="/nasdaq-historical-annual-returns/"
+                style={{
+                  color: '#1677ff',
+                  fontSize: '14px',
+                  fontWeight: 800,
+                  textDecoration: 'none',
+                }}
+              >
+                Nasdaq Historical Returns →
+              </a>
+
+              <a
+                href="/average-stock-market-return/"
+                style={{
+                  color: '#1677ff',
+                  fontSize: '14px',
+                  fontWeight: 800,
+                  textDecoration: 'none',
+                }}
+              >
+                Average Stock Market Return →
+              </a>
+
+              <a
+                href="/tqqq-returns/"
+                style={{
+                  color: '#1677ff',
+                  fontSize: '14px',
+                  fontWeight: 800,
+                  textDecoration: 'none',
+                }}
+              >
+                TQQQ Historical Returns →
+              </a>
+            </div>
+          </section>
+        )}
+
 <section
           style={{
             paddingTop:
