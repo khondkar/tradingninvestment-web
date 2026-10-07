@@ -9,8 +9,8 @@ async function start() {
   await prepareApp(window.location.pathname)
   const app = <StrictMode><App /></StrictMode>
   const page = new URLSearchParams(window.location.search).get('page')
-  if (container.dataset.tniHydrate === 'home' && window.location.pathname === '/'
-      && page !== 'articles' && page !== 'about') {
+  if (container.dataset.tniHydrate === 'article' || (container.dataset.tniHydrate === 'home' && window.location.pathname === '/'
+      && page !== 'articles' && page !== 'about')) {
     hydrateRoot(container, app)
   } else {
     // Legacy article generators produce different markup; do not hydrate it.

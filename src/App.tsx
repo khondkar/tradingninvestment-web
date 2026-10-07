@@ -167,9 +167,11 @@ async function shareCurrentPage() {
 }
 
 function Header({
+  pathname = currentPathname(),
   page,
   setPage,
 }: {
+  pathname?: string
   page: PageName
   setPage: (page: PageName) => void
 }) {
@@ -179,7 +181,7 @@ function Header({
       return
     }
     const currentPath =
-      currentPathname().replace(/\/+$/, '') || '/'
+      pathname.replace(/\/+$/, '') || '/'
 
     if (currentPath !== '/') {
       const target =
@@ -267,13 +269,13 @@ function Header({
       <nav className="mobile-bottom-nav">
         <button
           type="button"
-          className={currentPathname() === '/' && page === 'research' ? 'active' : ''}
+          className={pathname === '/' && page === 'research' ? 'active' : ''}
           onClick={() => navigate('research')}
         >
           Home
         </button>
 
-        <button type="button" className={currentPathname().startsWith('/research/') ? 'active' : ''} onClick={() => window.location.assign('/research/')}>Research</button>
+        <button type="button" className={pathname.startsWith('/research/') ? 'active' : ''} onClick={() => window.location.assign('/research/')}>Research</button>
 
         <a className="mobile-tni-product" href="https://app.tradingninvestment.com/live/news" aria-label="Open TNI Intelligence">✦ TNI</a>
 
@@ -903,7 +905,7 @@ function Footer({
    TNI PUBLIC WEBSITE — APP
    ========================================================================== */
 
-function App() {
+function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   const requestedPage =
     new URLSearchParams(
       (typeof window === 'undefined' ? '' : window.location.search)
@@ -918,12 +920,12 @@ function App() {
     )
 
   const normalizedPath =
-    currentPathname().replace(/\/+$/, '') || '/'
+    pathname.replace(/\/+$/, '') || '/'
 
   if (normalizedPath === '/stock-market-crash-of-1929') {
     return (
       <div className="site">
-        <Header page="research" setPage={setPage} />
+        <Header pathname={pathname} page="research" setPage={setPage} />
         <StockMarketCrash1929Page />
         <Footer setPage={setPage} />
       </div>
@@ -933,7 +935,7 @@ function App() {
   const researchHub = getHub(normalizedPath)
   if (normalizedPath === '/about') {
     return <div className="site">
-      <Header page="about" setPage={setPage} />
+      <Header pathname={pathname} page="about" setPage={setPage} />
       <AboutPage />
       <Footer setPage={setPage} />
     </div>
@@ -941,14 +943,14 @@ function App() {
 
   if (normalizedPath === '/research-license') {
     return <div className="site">
-      <Header page="research" setPage={setPage} />
+      <Header pathname={pathname} page="research" setPage={setPage} />
       <ResearchLicensePage />
       <Footer setPage={setPage} />
     </div>
   }
   if (researchHub) {
     return <div className="site">
-      <Header page="research" setPage={setPage} />
+      <Header pathname={pathname} page="research" setPage={setPage} />
       <ResearchHubPage hub={researchHub} />
       <Footer setPage={setPage} />
     </div>
@@ -962,7 +964,7 @@ function App() {
   if (normalizedPath === '/stock-market-today/earnings-calendar') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="market"
           setPage={setPage}
         />
@@ -977,7 +979,7 @@ function App() {
   if (normalizedPath === '/stock-market-today/sector-health') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="market"
           setPage={setPage}
         />
@@ -992,7 +994,7 @@ function App() {
   if (normalizedPath === '/stock-market-today/heatmap') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="market"
           setPage={setPage}
         />
@@ -1004,7 +1006,7 @@ function App() {
   if (normalizedPath === '/stock-market-today') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="market"
           setPage={setPage}
         />
@@ -1016,7 +1018,7 @@ function App() {
   if (normalizedPath === '/sp-500-returns') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1034,7 +1036,7 @@ function App() {
   if (normalizedPath === '/average-stock-market-return') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1053,7 +1055,7 @@ function App() {
   if (normalizedPath === '/stock-market-historical-returns') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1080,7 +1082,7 @@ function App() {
   if (normalizedPath === '/sp-500-monthly-returns') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1103,7 +1105,7 @@ function App() {
   ) {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1172,7 +1174,7 @@ function App() {
     if (leveragedEtfData) {
       return (
         <div className="site">
-          <Header
+          <Header pathname={pathname}
             page="research"
             setPage={setPage}
           />
@@ -1239,7 +1241,7 @@ function App() {
     if (etfData) {
       return (
         <div className="site">
-          <Header
+          <Header pathname={pathname}
             page="research"
             setPage={setPage}
           />
@@ -1292,7 +1294,7 @@ function App() {
     if (stockData) {
       return (
         <div className="site">
-          <Header
+          <Header pathname={pathname}
             page="research"
             setPage={setPage}
           />
@@ -1330,7 +1332,7 @@ function App() {
   if (normalizedPath === '/msft-stock-returns') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1351,7 +1353,7 @@ function App() {
   if (normalizedPath === '/nasdaq-historical-annual-returns') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1369,7 +1371,7 @@ function App() {
   if (normalizedPath === '/nvda-returns') {
     return (
       <div className="site">
-        <Header
+        <Header pathname={pathname}
           page="research"
           setPage={setPage}
         />
@@ -1390,7 +1392,7 @@ function App() {
 
   return (
     <div className={page === 'research' ? 'site tni-home-site' : 'site'}>
-      <Header page={page} setPage={setPage} />
+      <Header pathname={pathname} page={page} setPage={setPage} />
 
       {page === 'research' && (
         <ResearchPage />

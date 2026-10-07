@@ -199,3 +199,5 @@ html = html.replace(
 fs.writeFileSync(file, html)
 
 console.log(`TNI homepage hydration enabled; ${inlineCount} stylesheets embedded in HTML`)
+
+await import('./finalize-article-performance.mjs')
