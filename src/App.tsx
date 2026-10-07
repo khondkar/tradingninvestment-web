@@ -894,6 +894,89 @@ function Footer({
    TNI PUBLIC WEBSITE — APP
    ========================================================================== */
 
+
+export function renderAnnualHydrationPage(pathname: string) {
+  const normalizedPath = pathname.replace(/\/+$/, '') || '/'
+
+  // S&P 500 static prerender is the same page component used by the client.
+  if (normalizedPath === '/sp-500-returns' && SP500ReturnsPage) {
+    return <SP500ReturnsPage />
+  }
+
+  const entry =
+    publishedAnnualReturnsResearchRegistry.find(
+      ({ config }) =>
+        config.canonicalPath.replace(/\/$/, '') === normalizedPath,
+    )
+
+  if (!entry) return null
+
+  if (
+    entry.config.categories.includes('leveraged-etf') &&
+    LeveragedEtfAnnualReturnsPage
+  ) {
+    const data =
+      getLeveragedEtfResearchData(entry.config.symbol)
+
+    if (!data) return null
+
+    return (
+      <LeveragedEtfAnnualReturnsPage
+        config={entry.config}
+        dataset={data.annualReturns}
+        benchmarkDataset={data.benchmarkAnnualReturns}
+        benchmarkName={data.benchmarkName}
+        returnMethodsData={data.returnMethods}
+        drawdownData={data.drawdownData}
+      />
+    )
+  }
+
+  if (
+    entry.config.categories.includes('etf') &&
+    !entry.config.categories.includes('leveraged-etf') &&
+    EtfAnnualReturnsPage
+  ) {
+    const data =
+      getEtfResearchData(entry.config.symbol)
+
+    if (!data) return null
+
+    return (
+      <EtfAnnualReturnsPage
+        benchmarkDataset={
+          entry.config.symbol === 'QQQ'
+            ? getEtfResearchData('SPY')?.annualReturns
+            : undefined
+        }
+        config={entry.config}
+        dataset={data.annualReturns}
+        returnMethodsData={data.returnMethods}
+      />
+    )
+  }
+
+  if (
+    entry.config.categories.includes('stock') &&
+    StockAnnualReturnsPage
+  ) {
+    const data =
+      getStockResearchData(entry.config.symbol)
+
+    if (!data) return null
+
+    return (
+      <StockAnnualReturnsPage
+        config={entry.config}
+        dataset={data.annualReturns}
+        returnMethodsData={data.returnMethods}
+      />
+    )
+  }
+
+  return null
+}
+
 function App() {
   const requestedPage =
     new URLSearchParams(

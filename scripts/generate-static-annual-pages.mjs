@@ -632,7 +632,7 @@ for (
   html = replaceRequired(
     html,
     /<div id="root"><\/div>/,
-    `<div id="root">${bodyHtml}</div>`,
+    `<div id="root" data-tni-prerender="annual">${bodyHtml}</div>`,
     `${config.slug} root content`,
   )
 
@@ -831,7 +831,7 @@ for (
   html = replaceRequired(
     html,
     /<div id="root"><\/div>/,
-    `<div id="root">${bodyHtml}</div>`,
+    `<div id="root" data-tni-prerender="annual">${bodyHtml}</div>`,
     `${config.slug} root content`,
   )
 

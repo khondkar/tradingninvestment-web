@@ -1,12 +1,26 @@
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
-import App, { prepareApp } from './App.tsx'
+import App, { prepareApp, renderAnnualHydrationPage } from './App.tsx'
 
 async function start() {
   const container = document.getElementById('root')!
   // Preserve the existing article HTML until its code, CSS, and data are ready.
   await prepareApp(window.location.pathname)
+
+  if (container.dataset.tniPrerender === 'annual') {
+    const annualPage =
+      renderAnnualHydrationPage(window.location.pathname)
+
+    if (annualPage) {
+      hydrateRoot(
+        container,
+        <StrictMode>{annualPage}</StrictMode>,
+      )
+      return
+    }
+  }
+
   const app = <StrictMode><App /></StrictMode>
   const page = new URLSearchParams(window.location.search).get('page')
   if (container.dataset.tniHydrate === 'home' && window.location.pathname === '/'
