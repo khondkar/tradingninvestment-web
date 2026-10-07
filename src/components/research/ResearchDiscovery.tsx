@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { getHub, getHubItems, getItemHubs, getRelatedItems, researchHubs, researchItems, type ResearchHub } from '../../research/discovery'
-import './ResearchDiscovery.css'
 
 const baseHubs = researchHubs.filter((hub) => [
   '/research/stocks/',

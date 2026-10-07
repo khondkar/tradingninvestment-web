@@ -51,9 +51,45 @@ for (const [route, entry] of routes) {
   fs.writeFileSync(file, html)
 }
 const file = path.join(dist, 'index.html')
-const html = fs.readFileSync(file, 'utf8')
+let html = fs.readFileSync(file, 'utf8')
+
 if (!html.includes('class="site tni-home-site"') || !html.includes('id="featured-research"')) {
   throw new Error('Homepage must contain the complete prerendered App before hydration is enabled')
 }
-fs.writeFileSync(file, html.replace('<div id="root">', '<div id="root" data-tni-hydrate="home">'))
+
+// The homepage is prerendered, so its presentation CSS must be present
+// before JavaScript/hydration begins. Keep it homepage-only so research
+// articles do not pay for the full homepage stylesheet.
+{
+  const assetsDir = path.join(dist, 'assets')
+
+  const homepageCss = fs.readdirSync(assetsDir)
+    .filter(name =>
+      name.startsWith('PremiumResearchHome-') &&
+      name.endsWith('.css')
+    )
+
+  if (homepageCss.length !== 1) {
+    throw new Error(
+      `Expected exactly one PremiumResearchHome CSS asset, found ${homepageCss.length}`
+    )
+  }
+
+  const href = `/assets/${homepageCss[0]}`
+
+  if (!html.includes(`href="${href}"`)) {
+    html = html.replace(
+      '</head>',
+      `<link rel="stylesheet" crossorigin href="${href}">\n</head>`,
+    )
+  }
+}
+
+html = html.replace(
+  '<div id="root">',
+  '<div id="root" data-tni-hydrate="home">',
+)
+
+fs.writeFileSync(file, html)
+
 console.log('TNI homepage hydration and article styles enabled')

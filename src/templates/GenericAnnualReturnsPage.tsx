@@ -50,6 +50,7 @@ import {
 import type { AnnualReturnsAssetConfig } from '../research/annual-returns/types'
 import TNIResearchIdentity from '../components/research/TNIResearchIdentity'
 import '../components/research/TNIResearchIdentity.css'
+import './AnnualReturnsResearch.css'
 
 // ============================================================================
 // TNI ANNUAL RETURNS — GENERIC PAGE PROPS

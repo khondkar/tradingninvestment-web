@@ -8,7 +8,7 @@ import { drawdownsResearchRegistry } from './research/drawdowns/registry'
 import { ResearchConnections, ResearchHubPage, ResearchTrail } from './components/research/ResearchDiscovery'
 import { getHub } from './research/discovery'
 import PremiumResearchHome from './components/home/PremiumResearchHome'
-import './App.css'
+import './SiteShell.css'
 
 import { loadResearchData } from './performance/researchData'
 function currentPathname() { return typeof window === 'undefined' ? '/' : window.location.pathname }
@@ -36,6 +36,20 @@ let SP500ReturnsEmbedPage: typeof import('./pages/SP500ReturnsEmbedPage')['defau
 // route before mounting, keeping its static HTML visible throughout loading.
 export async function prepareApp(pathname: string) {
   const path = pathname.replace(/\/+$/, '') || '/'
+
+  // Route CSS that is not required by annual-return article first paint.
+  if (path === '/') {
+    await Promise.all([
+      import('./components/home/PremiumResearchHome.css'),
+      import('./components/research/ResearchDiscovery.css'),
+    ])
+  } else if (
+    path === '/about' ||
+    path === '/research-license' ||
+    path.startsWith('/research/')
+  ) {
+    await import('./components/research/ResearchDiscovery.css')
+  }
   if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
   if (path === '/stock-market-today/earnings-calendar') { StockMarketEarningsCalendarPage = (await import('./pages/StockMarketEarningsCalendarPage')).default; return }
   if (path === '/stock-market-today/sector-health') { StockMarketSectorHealthPage = (await import('./pages/StockMarketSectorHealthPage')).default; return }

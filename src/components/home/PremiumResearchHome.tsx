@@ -4,7 +4,6 @@ import { monthlyReturnsRegistry } from '../../research/monthly-returns/registry'
 
 import TNIResearchIdentity from '../research/TNIResearchIdentity'
 import '../research/TNIResearchIdentity.css'
-import './PremiumResearchHome.css'
 
 import previews from '../../performance/generated/home-previews.json'
 const { sp500: sp500Data, nvda: nvdaData, nasdaq: nasdaqData, dow: dowData } = previews.featured
