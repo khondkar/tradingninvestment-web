@@ -259,6 +259,12 @@ const datasetSchema = {
       "TradingNInvestment",
   },
 
+  license: {
+    "@type": "CreativeWork",
+    name: "TradingNInvestment Research Data License",
+    url: "https://tradingninvestment.com/research-license/",
+  },
+
   isBasedOn:
     "https://finance.yahoo.com/quote/%5EGSPC/history/",
 }
