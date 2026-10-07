@@ -1,39 +1,8 @@
-import marketSnapshot from '../../data/market-today/snapshot.json'
+import {
+  useMarketTodaySnapshot,
+} from '../../hooks/useMarketTodaySnapshot'
 
 import './SectorHealthBoard.css'
-
-type SectorRecord = {
-  sector: string
-  stocks: number
-  advancing: number
-  declining: number
-  unchanged: number
-  positive_pct: number
-  negative_pct: number
-  average_change_pct: number
-  median_change_pct: number
-}
-
-type Horizon = {
-  label: string
-  description: string
-  refresh: string
-  updated_at_et: string
-  sectors: SectorRecord[]
-}
-
-type Snapshot = {
-  generated_at_et: string
-  sector_horizons: {
-    methodology: string
-    daily: Horizon
-    weekly: Horizon
-    monthly: Horizon
-    ytd: Horizon
-  }
-}
-
-const snapshot = marketSnapshot as Snapshot
 
 function formatReturn(value: number) {
   const sign = value > 0 ? '+' : ''
@@ -108,6 +77,7 @@ const sections = [
 ] as const
 
 export default function SectorHealthBoard() {
+  const snapshot = useMarketTodaySnapshot()
   const horizons = snapshot.sector_horizons
 
   return (

@@ -6,24 +6,12 @@ import {
 } from 'react'
 import * as d3 from 'd3'
 
-import marketSnapshot from '../../data/market-today/snapshot.json'
+import {
+  useMarketTodaySnapshot,
+  type MarketRecord as StockRecord,
+} from '../../hooks/useMarketTodaySnapshot'
 
 import './SP500DailyHeatmap.css'
-
-type StockRecord = {
-  ticker: string
-  yahoo_symbol: string
-  company: string
-  sector: string
-  industry: string
-  price: number
-  previous_close: number
-  change: number
-  change_pct: number
-  price_source: string
-  price_timestamp: string
-  previous_close_date: string
-}
 
 type TooltipState = {
   visible: boolean
@@ -37,12 +25,6 @@ type HeatmapNode = {
   sectorSize?: number
   children?: HeatmapNode[]
   stock?: StockRecord
-}
-
-const snapshot = marketSnapshot as {
-  constituents: StockRecord[]
-  generated_at?: string
-  market_status?: string
 }
 
 const MIN_WIDTH = 320
@@ -134,6 +116,7 @@ function returnColor(value: number) {
 }
 
 export default function SP500DailyHeatmap() {
+  const snapshot = useMarketTodaySnapshot()
   const containerRef =
     useRef<HTMLDivElement | null>(null)
 
