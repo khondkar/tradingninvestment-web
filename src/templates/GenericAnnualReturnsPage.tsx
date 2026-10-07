@@ -36,7 +36,6 @@ import AnnualReturnsBenchmarkComparison from '../components/research/AnnualRetur
 import RollingTenYearComparison from '../components/research/RollingTenYearComparison'
 import GenericAnnualReturnsChart from './GenericAnnualReturnsChart'
 import GenericAnnualReturnsArticle from './GenericAnnualReturnsArticle'
-import LatestMarketIntelligence from '../components/news/LatestMarketIntelligence'
 import {
   calculateMedian,
   FilterButton,
@@ -3237,10 +3236,7 @@ export default function GenericAnnualReturnsPage({
             Falls back to the newest eligible market story.
         ================================================================= */}
 
-        <LatestMarketIntelligence
-          preferredSymbols={config.newsSymbols}
-          maxStories={1}
-        />
+
 
         {/* =================================================================
             TNI INTELLIGENCE BRIDGE
