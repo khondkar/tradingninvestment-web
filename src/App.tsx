@@ -1,32 +1,86 @@
-import StockMarketCrash1929Page from './pages/StockMarketCrash1929Page'
 import { useState } from 'react'
-import SP500ReturnsPage from './pages/SP500ReturnsPage'
-import AverageStockMarketReturnPage from './pages/AverageStockMarketReturnPage'
-import DowReturnsPage from './pages/DowReturnsPage'
-import NasdaqReturnsPage from './pages/NasdaqReturnsPage'
-import SP500MonthlyReturnsPage from './pages/SP500MonthlyReturnsPage'
-import SP500DrawdownsPage from './pages/SP500DrawdownsPage'
-import NVDAReturnsPage from './pages/NVDAReturnsPage'
-import MSFTReturnsPage from './pages/MSFTReturnsPage'
-import StockMarketTodayPage from './pages/StockMarketTodayPage'
-import StockMarketHeatmapPage from './pages/StockMarketHeatmapPage'
-import StockMarketSectorHealthPage from './pages/StockMarketSectorHealthPage'
-import StockMarketEarningsCalendarPage from './pages/StockMarketEarningsCalendarPage'
 import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
-import { getStockResearchData } from './research/annual-returns/stockDataRegistry'
-import { getLeveragedEtfResearchData } from './research/annual-returns/leveragedEtfDataRegistry'
-import { getEtfResearchData } from './research/annual-returns/etfDataRegistry'
-import StockAnnualReturnsPage from './templates/StockAnnualReturnsPage'
-import LeveragedEtfAnnualReturnsPage from './templates/LeveragedEtfAnnualReturnsPage'
-import EtfAnnualReturnsPage from './templates/EtfAnnualReturnsPage'
-import StockGrowthEmbedPage from './pages/StockGrowthEmbedPage'
+import { getStockResearchData } from './performance/researchData'
+import { getLeveragedEtfResearchData } from './performance/researchData'
+import { getEtfResearchData } from './performance/researchData'
 import { monthlyReturnsRegistry } from './research/monthly-returns/registry'
 import { drawdownsResearchRegistry } from './research/drawdowns/registry'
-import SP500ReturnsEmbedPage from './pages/SP500ReturnsEmbedPage'
 import { ResearchConnections, ResearchHubPage, ResearchTrail } from './components/research/ResearchDiscovery'
 import { getHub } from './research/discovery'
 import PremiumResearchHome from './components/home/PremiumResearchHome'
 import './App.css'
+
+import { loadResearchData } from './performance/researchData'
+function currentPathname() { return typeof window === 'undefined' ? '/' : window.location.pathname }
+
+let StockMarketCrash1929Page: typeof import('./pages/StockMarketCrash1929Page')['default']
+let SP500ReturnsPage: typeof import('./pages/SP500ReturnsPage')['default']
+let AverageStockMarketReturnPage: typeof import('./pages/AverageStockMarketReturnPage')['default']
+let DowReturnsPage: typeof import('./pages/DowReturnsPage')['default']
+let NasdaqReturnsPage: typeof import('./pages/NasdaqReturnsPage')['default']
+let SP500MonthlyReturnsPage: typeof import('./pages/SP500MonthlyReturnsPage')['default']
+let SP500DrawdownsPage: typeof import('./pages/SP500DrawdownsPage')['default']
+let NVDAReturnsPage: typeof import('./pages/NVDAReturnsPage')['default']
+let MSFTReturnsPage: typeof import('./pages/MSFTReturnsPage')['default']
+let StockMarketTodayPage: typeof import('./pages/StockMarketTodayPage')['default']
+let StockMarketHeatmapPage: typeof import('./pages/StockMarketHeatmapPage')['default']
+let StockMarketSectorHealthPage: typeof import('./pages/StockMarketSectorHealthPage')['default']
+let StockMarketEarningsCalendarPage: typeof import('./pages/StockMarketEarningsCalendarPage')['default']
+let StockAnnualReturnsPage: typeof import('./templates/StockAnnualReturnsPage')['default']
+let LeveragedEtfAnnualReturnsPage: typeof import('./templates/LeveragedEtfAnnualReturnsPage')['default']
+let EtfAnnualReturnsPage: typeof import('./templates/EtfAnnualReturnsPage')['default']
+let StockGrowthEmbedPage: typeof import('./pages/StockGrowthEmbedPage')['default']
+let SP500ReturnsEmbedPage: typeof import('./pages/SP500ReturnsEmbedPage')['default']
+
+// Existing navigation uses full document loads. Resolve only the requested
+// route before mounting, keeping its static HTML visible throughout loading.
+export async function prepareApp(pathname: string) {
+  const path = pathname.replace(/\/+$/, '') || '/'
+  if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
+  if (path === '/stock-market-today/earnings-calendar') { StockMarketEarningsCalendarPage = (await import('./pages/StockMarketEarningsCalendarPage')).default; return }
+  if (path === '/stock-market-today/sector-health') { StockMarketSectorHealthPage = (await import('./pages/StockMarketSectorHealthPage')).default; return }
+  if (path === '/stock-market-today/heatmap') { StockMarketHeatmapPage = (await import('./pages/StockMarketHeatmapPage')).default; return }
+  if (path === '/stock-market-today') { StockMarketTodayPage = (await import('./pages/StockMarketTodayPage')).default; return }
+  if (path === '/sp-500-returns') { SP500ReturnsPage = (await import('./pages/SP500ReturnsPage')).default; return }
+  if (path === '/average-stock-market-return') { AverageStockMarketReturnPage = (await import('./pages/AverageStockMarketReturnPage')).default; return }
+  if (path === '/stock-market-historical-returns') { DowReturnsPage = (await import('./pages/DowReturnsPage')).default; return }
+  if (path === '/sp-500-monthly-returns') { SP500MonthlyReturnsPage = (await import('./pages/SP500MonthlyReturnsPage')).default; return }
+  if (path === '/stock-market-correction-myth-and-reality') { SP500DrawdownsPage = (await import('./pages/SP500DrawdownsPage')).default; return }
+  const embed = path.match(/^\/embed\/([^/]+)\/10000-growth$/)
+  const entry = publishedAnnualReturnsResearchRegistry.find(({ config }) =>
+    embed ? config.categories.includes('stock') && config.slug === embed[1]
+      : config.canonicalPath.replace(/\/$/, '') === path)
+  if (entry?.config.categories.includes('stock')) {
+    await Promise.all([
+      loadResearchData('stock', entry.config.symbol),
+      embed
+        ? import('./pages/StockGrowthEmbedPage').then(module => { StockGrowthEmbedPage = module.default })
+        : import('./templates/StockAnnualReturnsPage').then(module => { StockAnnualReturnsPage = module.default }),
+    ])
+    if (getStockResearchData(entry.config.symbol)) return
+  }
+  if (entry?.config.categories.includes('leveraged-etf')) {
+    await Promise.all([
+      loadResearchData('leveraged', entry.config.symbol),
+      import('./templates/LeveragedEtfAnnualReturnsPage').then(module => { LeveragedEtfAnnualReturnsPage = module.default }),
+    ])
+    return
+  }
+  if (entry?.config.categories.includes('etf')) {
+    await Promise.all([
+      loadResearchData('etf', entry.config.symbol),
+      ...(entry.config.symbol === 'QQQ' ? [loadResearchData('etf', 'SPY')] : []),
+      import('./templates/EtfAnnualReturnsPage').then(module => { EtfAnnualReturnsPage = module.default }),
+    ])
+    return
+  }
+  if (path === '/msft-stock-returns') { MSFTReturnsPage = (await import('./pages/MSFTReturnsPage')).default; return }
+  if (path === '/nasdaq-historical-annual-returns') { NasdaqReturnsPage = (await import('./pages/NasdaqReturnsPage')).default; return }
+  if (path === '/nvda-returns') { NVDAReturnsPage = (await import('./pages/NVDAReturnsPage')).default; return }
+  if (path === '/embed/sp-500-returns') { SP500ReturnsEmbedPage = (await import('./pages/SP500ReturnsEmbedPage')).default; return }
+}
+
+
 
 /* ==========================================================================
    TNI PUBLIC WEBSITE — PAGE TYPES
@@ -102,7 +156,7 @@ function Header({
       return
     }
     const currentPath =
-      window.location.pathname.replace(/\/+$/, '') || '/'
+      currentPathname().replace(/\/+$/, '') || '/'
 
     if (currentPath !== '/') {
       const target =
@@ -190,13 +244,13 @@ function Header({
       <nav className="mobile-bottom-nav">
         <button
           type="button"
-          className={window.location.pathname === '/' && page === 'research' ? 'active' : ''}
+          className={currentPathname() === '/' && page === 'research' ? 'active' : ''}
           onClick={() => navigate('research')}
         >
           Home
         </button>
 
-        <button type="button" className={window.location.pathname.startsWith('/research/') ? 'active' : ''} onClick={() => window.location.assign('/research/')}>Research</button>
+        <button type="button" className={currentPathname().startsWith('/research/') ? 'active' : ''} onClick={() => window.location.assign('/research/')}>Research</button>
 
         <a className="mobile-tni-product" href="https://app.tradingninvestment.com/live/news" aria-label="Open TNI Intelligence">✦ TNI</a>
 
@@ -829,7 +883,7 @@ function Footer({
 function App() {
   const requestedPage =
     new URLSearchParams(
-      window.location.search
+      (typeof window === 'undefined' ? '' : window.location.search)
     ).get('page')
 
   const [page, setPage] =
@@ -841,7 +895,7 @@ function App() {
     )
 
   const normalizedPath =
-    window.location.pathname.replace(/\/+$/, '') || '/'
+    currentPathname().replace(/\/+$/, '') || '/'
 
   if (normalizedPath === '/stock-market-crash-of-1929') {
     return (
@@ -1175,6 +1229,7 @@ function App() {
           />
 
           <EtfAnnualReturnsPage
+            benchmarkDataset={dynamicEtfEntry.config.symbol === 'QQQ' ? getEtfResearchData('SPY')?.annualReturns : undefined}
             config={
               dynamicEtfEntry.config
             }

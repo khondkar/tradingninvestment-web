@@ -214,6 +214,7 @@ export function renderAnnualPage(page: AnnualPrerenderPage) {
   ) {
     return renderToStaticMarkup(
       <EtfAnnualReturnsPage
+        benchmarkDataset={page.benchmarkDataset}
         config={page.config}
         dataset={page.dataset}
         returnMethodsData={page.returnMethodsData}

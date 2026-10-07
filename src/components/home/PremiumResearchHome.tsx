@@ -1,50 +1,20 @@
-import sp500Data from '../../data/charts/sp500AnnualReturns.json'
-import sp500HistoricalReturnMethods from '../../data/sp500-historical-return-methods.json'
-import nvdaData from '../../data/charts/nvdaAnnualReturns.json'
-import nasdaqData from '../../data/charts/nasdaqAnnualReturns.json'
-import dowData from '../../data/charts/dowAnnualReturns.json'
 import { researchHubs, researchItems } from '../../research/discovery'
 import { publishedAnnualReturnsResearchRegistry } from '../../research/annual-returns/registry'
 import { monthlyReturnsRegistry } from '../../research/monthly-returns/registry'
-import { stockResearchDataRegistry } from '../../research/annual-returns/stockDataRegistry'
+
 import TNIResearchIdentity from '../research/TNIResearchIdentity'
 import '../research/TNIResearchIdentity.css'
 import './PremiumResearchHome.css'
+
+import previews from '../../performance/generated/home-previews.json'
+const { sp500: sp500Data, nvda: nvdaData, nasdaq: nasdaqData, dow: dowData } = previews.featured
+const stockResearchDataRegistry: Record<string, { annualReturns: { data: AnnualPoint[] } }> = previews.stocks
 
 type AnnualPoint = {
   year: number
   value: number
   label?: string
 }
-
-type HistoricalReturnPoint = {
-  year: number
-  total_return: number | null
-  is_ytd?: boolean
-}
-
-const historicalTotalReturnPoints =
-  (
-    sp500HistoricalReturnMethods.data as
-      HistoricalReturnPoint[]
-  )
-    .filter(
-      (point) =>
-        Number.isFinite(
-          point.total_return,
-        ),
-    )
-    .map(
-      (point) => ({
-        year: point.year,
-        value:
-          point.total_return as number,
-        label:
-          point.is_ytd
-            ? 'YTD'
-            : undefined,
-      }),
-    )
 
 const featured = [
   {
@@ -63,7 +33,7 @@ const featured = [
     chartDescription:
       'Total return · Dividends reinvested · Source and methodology in article',
     points:
-      historicalTotalReturnPoints,
+      [] as AnnualPoint[],
   },
   { path: '/sp-500-returns/', label: 'INDEX HISTORY · INTERACTIVE STUDY', headline: 'Nearly a century of S&P 500 returns, made explorable.', intro: 'Go year by year through market performance, then examine the averages, extremes, and long-term context behind the headline numbers.', chartLabel: 'S&P 500', metricLabel: 'ANNUAL RETURNS', chartDescription: 'Annual price returns · Source and methodology in article', points: sp500Data.data as AnnualPoint[] },
   { path: '/nvda-returns/', label: 'STOCK INTELLIGENCE · NVIDIA', headline: 'NVIDIA returns, year by year.', intro: 'See the scale of NVIDIA’s historical moves and explore each year in the full research article.', chartLabel: 'NVIDIA', metricLabel: 'ANNUAL RETURNS', chartDescription: 'Annual price returns · Source and methodology in article', points: nvdaData.data as AnnualPoint[] },
@@ -248,7 +218,7 @@ export default function PremiumResearchHome() {
             <img
               src="/images/social/average-stock-market-return-og.png"
               alt="Historical U.S. stock market total returns with dividends reinvested across more than 150 years"
-              loading="eager"
+              loading="lazy"
               className="tni-home-feature-og"
             />
           ) : (

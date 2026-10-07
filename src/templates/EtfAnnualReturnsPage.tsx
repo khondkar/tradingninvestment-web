@@ -13,7 +13,6 @@ import DividendCompoundingExplorer, {
 } from "../components/charts/DividendCompoundingExplorer"
 
 import AnnualReturnsFAQ from "../components/research/AnnualReturnsFAQ"
-import { getEtfResearchData } from "../research/annual-returns/etfDataRegistry"
 
 // ============================================================================
 // TNI STANDARD ETF ANNUAL RETURNS — SHARED ETF ADAPTER
@@ -29,33 +28,30 @@ type EtfAnnualReturnsPageProps = {
   config: AnnualReturnsAssetConfig
   dataset: AnnualReturnsPageData
   returnMethodsData?: ReturnMethodRow[]
+  benchmarkDataset?: AnnualReturnsPageData
 }
 
 export default function EtfAnnualReturnsPage({
   config,
   dataset,
   returnMethodsData,
+  benchmarkDataset,
 }: EtfAnnualReturnsPageProps) {
-  const benchmark =
-    config.symbol === "QQQ"
-      ? getEtfResearchData("SPY")
-      : undefined
-
   return (
     <GenericAnnualReturnsPage
       config={config}
       dataset={dataset}
       benchmarkDataset={
-        benchmark?.annualReturns
+        benchmarkDataset
       }
       benchmarkName={
-        benchmark ? "SPY" : undefined
+        benchmarkDataset ? "SPY" : undefined
       }
       assetAsOfDate={
         dataset.current_year.through_date
       }
       benchmarkAsOfDate={
-        benchmark?.annualReturns.current_year.through_date
+        benchmarkDataset?.current_year.through_date
       }
       afterArticle={
         <AnnualReturnsFAQ
