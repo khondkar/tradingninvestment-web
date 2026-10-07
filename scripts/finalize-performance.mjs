@@ -50,6 +50,86 @@ for (const [route, entry] of routes) {
   html = html.replace('</head>', `${links}\n</head>`)
   fs.writeFileSync(file, html)
 }
+// Research hubs are prerendered and own their page-specific stylesheet.
+// Attach ResearchDiscovery CSS directly so first paint does not wait for JS.
+{
+  const assetsDir = path.join(dist, 'assets')
+  const researchCss = fs.readdirSync(assetsDir)
+    .filter(name =>
+      name.startsWith('ResearchDiscovery-') &&
+      name.endsWith('.css')
+    )
+
+  if (researchCss.length !== 1) {
+    throw new Error(
+      `Expected exactly one ResearchDiscovery CSS asset, found ${researchCss.length}`
+    )
+  }
+
+  const href = `/assets/${researchCss[0]}`
+  const researchDir = path.join(dist, 'research')
+
+  function attachResearchCss(dir) {
+    for (const entry of fs.readdirSync(dir, {
+      withFileTypes: true,
+    })) {
+      const target = path.join(dir, entry.name)
+
+      if (entry.isDirectory()) {
+        attachResearchCss(target)
+        continue
+      }
+
+      if (entry.name !== 'index.html') continue
+
+      let html = fs.readFileSync(target, 'utf8')
+
+      if (!html.includes(`href="${href}"`)) {
+        html = html.replace(
+          '</head>',
+          `<link rel="stylesheet" crossorigin href="${href}">\n</head>`,
+        )
+        fs.writeFileSync(target, html)
+      }
+    }
+  }
+
+  if (fs.existsSync(researchDir)) {
+    attachResearchCss(researchDir)
+  }
+}
+
+// About is prerendered and owns its page-specific stylesheet.
+// Attach only the About CSS so other routes do not pay for it.
+{
+  const assetsDir = path.join(dist, 'assets')
+  const aboutCss = fs.readdirSync(assetsDir)
+    .filter(name => name.startsWith('AboutPage-') && name.endsWith('.css'))
+
+  if (aboutCss.length !== 1) {
+    throw new Error(
+      `Expected exactly one AboutPage CSS asset, found ${aboutCss.length}`
+    )
+  }
+
+  const aboutFile = path.join(dist, 'about', 'index.html')
+  if (!fs.existsSync(aboutFile)) {
+    throw new Error('Missing generated About page')
+  }
+
+  let aboutHtml = fs.readFileSync(aboutFile, 'utf8')
+  const href = `/assets/${aboutCss[0]}`
+
+  if (!aboutHtml.includes(`href="${href}"`)) {
+    aboutHtml = aboutHtml.replace(
+      '</head>',
+      `<link rel="stylesheet" crossorigin href="${href}">\n</head>`,
+    )
+  }
+
+  fs.writeFileSync(aboutFile, aboutHtml)
+}
+
 const file = path.join(dist, 'index.html')
 let html = fs.readFileSync(file, 'utf8')
 

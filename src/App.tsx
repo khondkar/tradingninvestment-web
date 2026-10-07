@@ -43,15 +43,13 @@ export async function prepareApp(pathname: string) {
       import('./components/home/PremiumResearchHome.css'),
       import('./components/research/ResearchDiscovery.css'),
     ])
+  } else if (path === '/about') {
+    await import('./pages/AboutPage.css')
   } else if (
-    path === '/about' ||
     path === '/research-license' ||
     path.startsWith('/research/')
   ) {
-    await Promise.all([
-      import('./App.css'),
-      import('./components/research/ResearchDiscovery.css'),
-    ])
+    await import('./components/research/ResearchDiscovery.css')
   }
   if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
   if (path === '/stock-market-today/earnings-calendar') { StockMarketEarningsCalendarPage = (await import('./pages/StockMarketEarningsCalendarPage')).default; return }

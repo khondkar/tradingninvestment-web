@@ -1,0 +1,714 @@
+/* TNI About Page
+   Page-specific stylesheet extracted from the pre-CSS-split design.
+   Changes here must remain isolated from other TNI pages.
+*/
+
+
+
+.eyebrow {
+  display: inline-block;
+
+  color: #557394;
+
+  font-size: 10px;
+
+  font-weight: 850;
+
+  letter-spacing: 1.25px;
+}
+
+.hero-content h1,
+.inner-intro h1,
+.about-intro h1 {
+  margin:
+    11px
+    0
+    17px;
+
+  color: var(--navy);
+
+  font-size:
+    clamp(
+      44px,
+      4.2vw,
+      68px
+    );
+
+  line-height: 0.99;
+
+  letter-spacing: -3px;
+}
+
+.hero-content h1 span,
+.inner-intro h1 span,
+.about-intro h1 span {
+  color: var(--blue);
+}
+
+.content-tag {
+  display: inline-flex;
+
+  padding:
+    5px
+    8px;
+
+  border-radius: 5px;
+
+  background: var(--blue-soft);
+
+  color: var(--blue);
+
+  font-size: 8px;
+
+  font-weight: 850;
+
+  letter-spacing: 0.45px;
+}
+
+.inner-page {
+  width:
+    min(
+      1380px,
+      calc(100% - 40px)
+    );
+
+  min-height: 720px;
+
+  margin: 0 auto;
+
+  padding:
+    76px
+    0
+    55px;
+}
+
+.inner-intro {
+  max-width: 830px;
+
+  margin-bottom: 45px;
+}
+
+.inner-intro p,
+.about-intro p {
+  max-width: 760px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+@media (max-width: 720px) {
+
+  .eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .inner-page {
+    width: 100%;
+
+    min-height: 0;
+
+    padding:
+      38px
+      19px
+      32px;
+  }
+
+  .inner-intro {
+    margin-bottom: 27px;
+  }
+
+  .inner-intro h1,
+  .about-intro h1 {
+    margin-top: 8px;
+
+    font-size: 39px;
+
+    line-height: 1.01;
+
+    letter-spacing: -2px;
+  }
+
+  .inner-intro p,
+  .about-intro p {
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+}
+
+.tni-about-statement {
+  max-width: 900px;
+  margin: 0 auto 72px;
+  padding: 44px 0;
+  border-top: 1px solid #e5edf5;
+  border-bottom: 1px solid #e5edf5;
+}
+
+.tni-about-statement h2 {
+  max-width: 760px;
+  margin: 12px 0 22px;
+  color: var(--navy);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+}
+
+.tni-about-statement p {
+  max-width: 760px;
+  margin: 0 0 16px;
+  color: #536b84;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .tni-about-statement {
+    margin-bottom: 48px;
+    padding: 32px 0;
+  }
+
+  .tni-about-statement h2 {
+    font-size: 30px;
+    line-height: 1.17;
+  }
+
+  .tni-about-statement p {
+    font-size: 16px;
+  }
+}
+
+.tni-contact-premium {
+  position: relative;
+  max-width: 1240px;
+  margin: 42px auto 50px;
+  padding: 0 !important;
+  overflow: hidden;
+  border: 1px solid #dce8e4;
+  border-radius: 20px;
+  background:
+    radial-gradient(
+      circle at 68% 40%,
+      rgba(222, 244, 236, .56),
+      transparent 25%
+    ),
+    #ffffff;
+  box-shadow: 0 18px 55px rgba(17, 50, 55, .05);
+}
+
+.tni-contact-main {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(230px, .55fr)
+    minmax(300px, .72fr);
+  gap: 28px;
+  align-items: center;
+  padding: 48px 42px 40px;
+}
+
+.tni-contact-copy {
+  min-width: 0;
+}
+
+.tni-contact-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+  color: #08775f;
+}
+
+.tni-contact-eyebrow > span {
+  width: 44px;
+  height: 1px;
+  background: currentColor;
+}
+
+.tni-contact-eyebrow strong {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .18em;
+}
+
+.tni-contact-copy h2 {
+  margin: 0;
+  color: #142c38;
+  font-size: clamp(43px, 4.7vw, 64px);
+  font-weight: 700;
+  line-height: .99;
+  letter-spacing: -.062em;
+}
+
+.tni-contact-copy > p {
+  max-width: 620px;
+  margin: 20px 0 23px;
+  color: #687c84;
+  font-size: 14px;
+  line-height: 1.62;
+}
+
+.tni-contact-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tni-contact-capabilities > span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 35px;
+  padding: 7px 12px;
+  border: 1px solid #dbe7e2;
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  color: #17323c;
+  font-size: 9.5px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.tni-contact-intelligence {
+  position: relative;
+  min-height: 315px;
+}
+
+.tni-contact-orbit {
+  position: absolute;
+  top: 9px;
+  left: -20px;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(8,119,95,.20);
+  border-radius: 50%;
+}
+
+.tni-contact-orbit::before,
+.tni-contact-orbit::after {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #08775f;
+  content: "";
+}
+
+.tni-contact-orbit::before {
+  top: 44px;
+  right: 25px;
+}
+
+.tni-contact-orbit::after {
+  bottom: 34px;
+  left: 8px;
+}
+
+.tni-contact-mini {
+  position: absolute;
+  z-index: 2;
+  padding: 13px;
+  border: 1px solid #e1ebe7;
+  border-radius: 13px;
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 14px 35px rgba(20,49,57,.09);
+}
+
+.tni-contact-mini header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tni-contact-mini header strong {
+  color: #17313b;
+  font-size: 8px;
+}
+
+.tni-contact-mini header span {
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: #eaf5f1;
+  color: #08775f;
+  font-size: 5px;
+  font-weight: 850;
+}
+
+.tni-contact-mini-signals {
+  top: 10px;
+  left: 3px;
+  width: 190px;
+  height: 112px;
+  transform: rotate(1deg);
+}
+
+.tni-contact-spark {
+  height: 58px;
+  margin-top: 9px;
+}
+
+.tni-contact-spark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tni-contact-spark path {
+  stroke: #07866a;
+  stroke-width: 1.6;
+}
+
+.tni-contact-mini-market {
+  top: 104px;
+  right: -5px;
+  width: 174px;
+  height: 110px;
+}
+
+.tni-contact-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.tni-contact-bars i {
+  flex: 1;
+  border-radius: 1px 1px 0 0;
+  background: linear-gradient(to top, #07866a, #d7eee7);
+}
+
+.tni-contact-bars i:nth-child(1) { height: 28%; }
+.tni-contact-bars i:nth-child(2) { height: 39%; }
+.tni-contact-bars i:nth-child(3) { height: 35%; }
+.tni-contact-bars i:nth-child(4) { height: 55%; }
+.tni-contact-bars i:nth-child(5) { height: 49%; }
+.tni-contact-bars i:nth-child(6) { height: 67%; }
+.tni-contact-bars i:nth-child(7) { height: 88%; }
+
+.tni-contact-mini-research {
+  bottom: 9px;
+  left: 34px;
+  width: 184px;
+  height: 108px;
+  transform: rotate(-.7deg);
+}
+
+.tni-contact-data-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  width: 130px;
+  margin-top: 15px;
+}
+
+.tni-contact-data-grid i {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #d5ebe4;
+}
+
+.tni-contact-data-grid i:nth-child(3n) {
+  background: #79bea9;
+}
+
+.tni-contact-data-grid i:nth-child(7n) {
+  background: #08775f;
+}
+
+.tni-contact-action {
+  padding: 27px 25px 24px;
+  border: 1px solid #d9e8e3;
+  border-radius: 16px;
+  background: rgba(255,255,255,.94);
+  box-shadow: 0 15px 38px rgba(17,50,55,.055);
+}
+
+.tni-contact-action-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.tni-contact-action-top > span {
+  color: #08775f;
+  font-size: 8px;
+  font-weight: 850;
+  letter-spacing: .16em;
+}
+
+.tni-contact-action-top i {
+  display: flex;
+  gap: 4px;
+}
+
+.tni-contact-action-top i b {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c4d9d2;
+}
+
+.tni-contact-action-top i b:first-child {
+  background: #08775f;
+}
+
+.tni-contact-action h3 {
+  margin: 0;
+  color: #142d38;
+  font-size: 20px;
+  line-height: 1.18;
+  letter-spacing: -.035em;
+}
+
+.tni-contact-action > p {
+  margin: 15px 0 20px;
+  color: #71848a;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.tni-contact-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 49px;
+  padding: 0 17px;
+  border-radius: 9px;
+  background: #08775f;
+  box-shadow: 0 10px 23px rgba(8,119,95,.15);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.tni-contact-action-button:hover {
+  transform: translateY(-1px);
+  background: #066b56;
+  box-shadow: 0 13px 28px rgba(8,119,95,.21);
+}
+
+.tni-contact-action-button b {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tni-contact-action-details {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e1e9e6;
+}
+
+.tni-contact-action-details a,
+.tni-contact-action-details small {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tni-contact-action-details a {
+  width: fit-content;
+  color: #17323c;
+  font-size: 9px;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: #9fc8bb;
+  text-underline-offset: 3px;
+}
+
+.tni-contact-action-details a span,
+.tni-contact-action-details small span {
+  color: #08775f;
+}
+
+.tni-contact-action-details small {
+  color: #7f9095;
+  font-size: 8px;
+}
+
+.tni-contact-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e0e9e5;
+}
+
+.tni-contact-proof > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 72px;
+  padding: 14px 28px;
+}
+
+.tni-contact-proof > div + div {
+  border-left: 1px solid #e0e9e5;
+}
+
+.tni-contact-proof-icon {
+  flex: 0 0 auto;
+  color: #08775f;
+  font-size: 23px;
+}
+
+.tni-contact-proof p {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0;
+}
+
+.tni-contact-proof strong {
+  color: #17313b;
+  font-size: 10px;
+}
+
+.tni-contact-proof small {
+  color: #7b8d92;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1050px) {
+  .tni-contact-main {
+    grid-template-columns: 1fr 300px;
+  }
+
+  .tni-contact-intelligence {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .tni-contact-premium {
+    margin: 28px 15px 38px;
+    border-radius: 17px;
+  }
+
+  .tni-contact-main {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 34px 23px 28px;
+  }
+
+  .tni-contact-copy h2 {
+    font-size: 44px;
+  }
+
+  .tni-contact-copy > p {
+    font-size: 13px;
+  }
+
+  .tni-contact-capabilities > span {
+    font-size: 9px;
+  }
+
+  .tni-contact-action {
+    padding: 23px 21px;
+  }
+
+  .tni-contact-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .tni-contact-proof > div {
+    min-height: 57px;
+    padding: 12px 23px;
+  }
+
+  .tni-contact-proof > div + div {
+    border-top: 1px solid #e0e9e5;
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tni-contact-action-button {
+    transition: none;
+  }
+
+  .tni-contact-action-button:hover {
+    transform: none;
+  }
+}
+.tni-contact-capabilities > span {
+  font-size: 11px;
+  font-weight: 750;
+}
+.tni-contact-mini header strong {
+  font-size: 10px;
+  font-weight: 800;
+}
+.tni-contact-mini header span {
+  padding: 5px 7px;
+  font-size: 7px;
+  font-weight: 850;
+  letter-spacing: .035em;
+}
+.tni-contact-action-top > span {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+.tni-contact-action h3 {
+  font-size: 21px;
+}
+.tni-contact-action > p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+.tni-contact-action-button {
+  font-size: 13px;
+}
+.tni-contact-action-details a {
+  font-size: 11px;
+}
+.tni-contact-action-details small {
+  font-size: 10px;
+}
+.tni-contact-proof strong {
+  font-size: 12px;
+}
+.tni-contact-proof small {
+  font-size: 10px;
+  line-height: 1.45;
+}
+.tni-contact-proof-icon {
+  font-size: 25px;
+}
+
+@media (max-width: 720px) {
+  .tni-contact-capabilities > span {
+    font-size: 10px;
+  }
+
+  .tni-contact-action-top > span {
+    font-size: 9px;
+  }
+
+  .tni-contact-action > p {
+    font-size: 11px;
+  }
+
+  .tni-contact-proof strong {
+    font-size: 11px;
+  }
+
+  .tni-contact-proof small {
+    font-size: 9px;
+  }
+}
