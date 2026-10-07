@@ -2,75 +2,10 @@ import { useEffect } from 'react'
 
 import '../components/market/StockMarketToday.css'
 
-import marketSnapshot from '../data/market-today/snapshot.json'
-
-type MarketRecord = {
-  ticker: string
-  yahoo_symbol: string
-  company: string
-  sector: string
-  industry: string
-  price: number
-  previous_close: number
-  change: number
-  change_pct: number
-  price_source: string
-  price_timestamp: string | null
-  previous_close_date: string | null
-}
-
-type Benchmark = {
-  symbol: string
-  name: string
-  available: boolean
-  price?: number
-  previous_close?: number
-  change?: number
-  change_pct?: number
-  price_source?: string
-  price_timestamp?: string | null
-  error?: string
-}
-
-type SectorHealth = {
-  sector: string
-  stocks: number
-  advancing: number
-  declining: number
-  unchanged: number
-  positive_pct: number
-  negative_pct: number
-  average_change_pct: number
-  median_change_pct: number
-  health: string
-}
-
-type MarketSnapshot = {
-  generated_at_utc: string
-  generated_at_et: string
-  market_status: string
-  coverage: {
-    expected: number
-    successful: number
-    failed: number
-    pct: number
-  }
-  benchmarks: Benchmark[]
-  breadth: {
-    advancing: number
-    declining: number
-    unchanged: number
-    total: number
-    positive_pct: number
-    negative_pct: number
-  }
-  sectors: SectorHealth[]
-  gainers: MarketRecord[]
-  decliners: MarketRecord[]
-  constituents: MarketRecord[]
-}
-
-const snapshot = marketSnapshot as MarketSnapshot
+import {
+  useMarketTodaySnapshot,
+  type MarketRecord,
+} from '../hooks/useMarketTodaySnapshot'
 
 function formatSignedPercent(value: number) {
   const prefix = value > 0 ? '+' : ''
@@ -162,6 +97,7 @@ function MoversCard({
 
 
 export default function StockMarketTodayPage() {
+  const snapshot = useMarketTodaySnapshot()
   useEffect(() => {
     const title =
       'Stock Market Today: S&P 500, Stock Movers & Market Trends | TradingNInvestment'
