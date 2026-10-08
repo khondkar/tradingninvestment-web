@@ -1,0 +1,19 @@
+name: TNI Stock Market Scheduler Test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 * * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  scheduler-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify scheduled execution
+        run: |
+          echo "Event: $GITHUB_EVENT_NAME"
+          echo "UTC: $(date -u '+%Y-%m-%d %H:%M:%S')"
+          echo "TNI public scheduler test passed"
