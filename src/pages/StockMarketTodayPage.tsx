@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import MarketBreadthDonut from '../components/market/MarketBreadthDonut'
 
 import '../components/market/StockMarketToday.css'
 
@@ -310,6 +311,8 @@ export default function StockMarketTodayPage() {
           </div>
         </section>
 
+        <MarketBreadthDonut snapshot={snapshot} />
+
         <section
           className="market-index-strip"
           aria-label="Major market benchmarks"
@@ -404,51 +407,6 @@ export default function StockMarketTodayPage() {
           />
         </div>
 
-
-        <section
-          className="market-breadth"
-          id="market-breadth"
-        >
-          <div>
-            <span>MARKET BREADTH</span>
-            <strong className="positive">
-              {snapshot.breadth.advancing}
-            </strong>
-            <small>Advancing</small>
-          </div>
-
-          <div>
-            <span>&nbsp;</span>
-            <strong className="negative">
-              {snapshot.breadth.declining}
-            </strong>
-            <small>Declining</small>
-          </div>
-
-          <div>
-            <span>&nbsp;</span>
-            <strong>
-              {snapshot.breadth.unchanged}
-            </strong>
-            <small>Unchanged</small>
-          </div>
-
-          <div className="breadth-highlight">
-            <span>S&amp;P 500 PARTICIPATION</span>
-
-            <strong
-              className={
-                snapshot.breadth.positive_pct >= 50
-                  ? 'positive'
-                  : 'negative'
-              }
-            >
-              {snapshot.breadth.positive_pct.toFixed(1)}%
-            </strong>
-
-            <small>Stocks higher today</small>
-          </div>
-        </section>
 
         <section
           className="market-overview-explainer"
