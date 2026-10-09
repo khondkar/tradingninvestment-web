@@ -103,6 +103,7 @@ async function fetchSnapshot() {
   if (!requestPromise) {
     requestPromise = fetch(
       `${API_BASE_URL}/market/today`,
+      { cache: 'no-store' },
     )
       .then((response) => {
         if (!response.ok) {
@@ -117,9 +118,15 @@ async function fetchSnapshot() {
         cachedSnapshot = data
         return data
       })
-      .catch(() => {
-        requestPromise = null
+      .catch((error) => {
+        console.error(
+          'Market Today live snapshot fetch failed:',
+          error,
+        )
         return cachedSnapshot
+      })
+      .finally(() => {
+        requestPromise = null
       })
   }
 
@@ -133,14 +140,42 @@ export function useMarketTodaySnapshot() {
   useEffect(() => {
     let active = true
 
-    fetchSnapshot().then((data) => {
-      if (active) {
-        setSnapshot(data)
+    const refresh = () => {
+      if (document.visibilityState === 'hidden') return
+
+      fetchSnapshot().then((data) => {
+        if (active) {
+          setSnapshot((current) =>
+            current.generated_at_utc === data.generated_at_utc
+              ? current
+              : data,
+          )
+        }
+      })
+    }
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        refresh()
       }
-    })
+    }
+
+    refresh()
+
+    const interval = window.setInterval(refresh, 60_000)
+
+    document.addEventListener(
+      'visibilitychange',
+      onVisibilityChange,
+    )
 
     return () => {
       active = false
+      window.clearInterval(interval)
+      document.removeEventListener(
+        'visibilitychange',
+        onVisibilityChange,
+      )
     }
   }, [])
 
