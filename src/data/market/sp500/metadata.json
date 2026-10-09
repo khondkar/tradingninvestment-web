@@ -7,9 +7,9 @@
   "return_basis": "Close",
   "dividends_included": false,
   "first_date": "1927-12-30",
-  "last_date": "2026-10-07",
-  "rows": 24809,
-  "retrieved_at_utc": "2026-10-08T01:28:20.368526+00:00",
+  "last_date": "2026-10-08",
+  "rows": 24810,
+  "retrieved_at_utc": "2026-10-09T01:37:24.565743+00:00",
   "columns": [
     "Open",
     "High",
