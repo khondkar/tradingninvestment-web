@@ -63,3 +63,41 @@
 @media(max-width:600px){.orbit-nav{min-height:67px}.orbit-page .market-today-hero h1{font-size:35px}.orbit-page .market-today-hero p{font-size:13px;line-height:1.45}.orbit-page .market-update-status{font-size:9px}.orbit-dial{height:248px}.orbit-dial>svg{height:248px;width:248px}.orbit-breadth header h2{font-size:21px}.orbit-breadth header p{font-size:9px}.orbit-unchanged{font-size:8px!important;padding-top:7px}.orbit-unchanged strong{font-size:11px}.orbit-callout>span{padding:7px 5px;font-size:8px}.orbit-callout strong{font-size:18px;margin-top:10px}.orbit-callout small{font-size:15px}.orbit-callout{left:3px;top:11%}.orbit-callout.orbit-down{right:3px}.orbit-dial-center strong{font-size:35px}.orbit-dial-center span{font-size:8px}.orbit-insight{padding:9px;min-height:0;gap:8px;margin-top:9px}.orbit-insight>span{font-size:27px}.orbit-insight strong{font-size:10px}.orbit-insight p{font-size:9px;margin-top:2px}.orbit-tap-hint{font-size:10px;padding:8px}.orbit-sector-card{padding:10px 8px;gap:6px}.orbit-sector-card small{font-size:9px}.orbit-sector-card strong{font-size:12px}.orbit-sector-card em{font-size:9px}.orbit-dialog .orbit-stocks th,.orbit-dialog .orbit-stocks td{height:33px}}
 @media(max-width:360px){.orbit-dial{height:222px}.orbit-dial>svg{height:222px;width:222px}.orbit-callout>span{font-size:7px;padding:7px 4px}.orbit-callout small{font-size:13px}.orbit-callout strong{font-size:16px}.orbit-breadth header h2{font-size:19px}.orbit-sector-card>span:first-child,.orbit-sector-card svg{width:20px}.orbit-sector-card strong{font-size:11px}}
 @media(max-width:600px){.orbit-breadth .orbit-insight{display:none}}
+
+
+/* TNI main website home navigation */
+.orbit-nav .orbit-home-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border: 1px solid #dbe3ee;
+  border-radius: 9px;
+  background: #fff;
+  color: #243b60;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.orbit-nav .orbit-home-link:hover {
+  background: #f3f7fc;
+  border-color: #b8c9df;
+}
+
+.orbit-nav .orbit-home-link:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .orbit-nav .orbit-home-link {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

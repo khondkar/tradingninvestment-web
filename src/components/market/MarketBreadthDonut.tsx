@@ -29,7 +29,8 @@ export function MarketOrbitNavigation() {
     <header className="orbit-nav">
       <a className="orbit-brand" href="/" aria-label="TNI home"><b>TNI</b><span>MARKET INTELLIGENCE</span></a>
       <nav className="orbit-nav-links" aria-label="Market tools">{links.map(([label, href, icon], i) => <a key={href} href={href} aria-current={i === 0 ? 'page' : undefined}><OrbitIcon name={icon}/>{label}</a>)}</nav>
-      <button className="orbit-search-shortcut" onClick={() => document.getElementById('orbit-search')?.click()}><OrbitIcon name="search"/><span>Search stocks or sectors…</span></button>
+      <a className="orbit-home-link" href="https://tradingninvestment.com/" aria-label="TradingNInvestment homepage">⌂ <span>Home</span></a>
+       <button className="orbit-search-shortcut" onClick={() => document.getElementById('orbit-search')?.click()}><OrbitIcon name="search"/><span>Search stocks or sectors…</span></button>
       <button className="orbit-menu-button" aria-label="Toggle navigation" aria-expanded={menu} aria-controls="orbit-menu" onClick={() => setMenu(!menu)}><OrbitIcon name="menu"/></button>
       {menu && <nav id="orbit-menu" className="orbit-menu" aria-label="Site navigation"><a href="/">Home</a><a href="/research/">Research</a><a href="/about/">About TNI</a>{links.slice(1).map(([label, href]) => <a href={href} key={href}>{label}</a>)}</nav>}
     </header>
