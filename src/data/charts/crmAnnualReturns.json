@@ -1,0 +1,165 @@
+{
+  "symbol": "Salesforce, Inc.",
+  "ticker": "CRM",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / CRM",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 21,
+    "start_year": 2005,
+    "end_year": 2025,
+    "positive_years": 16,
+    "negative_years": 5,
+    "positive_year_pct": 76.19,
+    "negative_year_pct": 23.81,
+    "average_annual_return_pct": 30.77,
+    "median_annual_return_pct": 31.33,
+    "best_year": {
+      "year": 2009,
+      "return_pct": 130.46
+    },
+    "worst_year": {
+      "year": 2008,
+      "return_pct": -48.94
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": -14.01,
+    "through_date": "2026-10-08"
+  },
+  "data": [
+    {
+      "year": 2005,
+      "value": 89.1972,
+      "label": "2005",
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "value": 13.7286,
+      "label": "2006",
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "value": 71.989,
+      "label": "2007",
+      "status": "positive"
+    },
+    {
+      "year": 2008,
+      "value": -48.9392,
+      "label": "2008",
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "value": 130.4592,
+      "label": "2009",
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "value": 78.9345,
+      "label": "2010",
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "value": -23.1364,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 65.6811,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 31.3266,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 7.4651,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": 32.1868,
+      "label": "2015",
+      "status": "positive"
+    },
+    {
+      "year": 2016,
+      "value": -12.6786,
+      "label": "2016",
+      "status": "negative"
+    },
+    {
+      "year": 2017,
+      "value": 49.3281,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": 33.9822,
+      "label": "2018",
+      "status": "positive"
+    },
+    {
+      "year": 2019,
+      "value": 18.7413,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 36.8237,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 14.2003,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -47.8259,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 98.4614,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 27.054,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": -20.7639,
+      "label": "2025",
+      "status": "negative"
+    }
+  ]
+}

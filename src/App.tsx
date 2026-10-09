@@ -1316,6 +1316,9 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
             returnMethodsData={
               stockData.returnMethods
             }
+            drawdownData={
+              stockData.drawdownData
+            }
           />
 
           <ResearchConnections

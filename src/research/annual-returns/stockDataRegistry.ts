@@ -6,6 +6,10 @@ import gsAnnualReturns from "../../data/charts/gsAnnualReturns.json"
 import gsReturnMethods from "../../data/charts/gsReturnMethods.json"
 import googlAnnualReturns from "../../data/charts/googlAnnualReturns.json"
 import googlReturnMethods from "../../data/charts/googlReturnMethods.json"
+import crmAnnualReturns from "../../data/charts/crmAnnualReturns.json"
+import crmReturnMethods from "../../data/charts/crmReturnMethods.json"
+import crmVsSp500Drawdowns from "../../data/charts/crmVsSp500Drawdowns.json"
+import type { LeveragedEtfDrawdownDataset } from "../../components/research/LeveragedEtfDrawdownComparison"
 import amznAnnualReturns from "../../data/charts/amznAnnualReturns.json"
 import amznReturnMethods from "../../data/charts/amznReturnMethods.json"
 import tslaAnnualReturns from "../../data/charts/tslaAnnualReturns.json"
@@ -25,6 +29,7 @@ import type {
 export type StockResearchData = {
   annualReturns: AnnualReturnsPageData
   returnMethods?: ReturnMethodRow[]
+  drawdownData?: LeveragedEtfDrawdownDataset
 }
 
 
@@ -68,6 +73,15 @@ export const stockResearchDataRegistry:
 
       returnMethods:
         amznReturnMethods.data as ReturnMethodRow[],
+    },
+
+    CRM: {
+      annualReturns:
+        crmAnnualReturns as AnnualReturnsPageData,
+
+      returnMethods:
+        crmReturnMethods.data as ReturnMethodRow[],
+      drawdownData: crmVsSp500Drawdowns as LeveragedEtfDrawdownDataset,
     },
 
     TSLA: {

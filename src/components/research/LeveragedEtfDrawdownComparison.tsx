@@ -404,100 +404,81 @@ export default function LeveragedEtfDrawdownComparison({
           </figure>
         )}
 
-      <div className="tni-leveraged-drawdown__recovery-grid">
-        <article>
-          <span>
-            {dataset.asset} PEAK
-          </span>
+      <div className="tni-leveraged-drawdown__timeline">
+        <div className="tni-leveraged-drawdown__timeline-heading">
+          <span>{dataset.asset} DRAWDOWN HISTORY</span>
+          <h3>From peak to recovery</h3>
+          <p>
+            The timeline of {dataset.asset}&apos;s deepest
+            historical decline.
+          </p>
+        </div>
 
-          <strong>
-            {formatDate(
-              analysis.asset.peak_date,
+        <div className="tni-leveraged-drawdown__recovery-grid">
+          <article>
+            <span>Previous peak</span>
+            <strong>{formatDate(analysis.asset.peak_date)}</strong>
+          </article>
+
+          <article>
+            <span>{dataset.asset} drawdown low</span>
+            <strong>{formatDate(analysis.asset.trough_date)}</strong>
+          </article>
+
+          <article>
+            <span>Previous peak regained</span>
+            <strong>
+              {analysis.asset.recovery_date
+                ? formatDate(analysis.asset.recovery_date)
+                : 'Not yet recovered'}
+            </strong>
+          </article>
+        </div>
+
+        <div className="tni-leveraged-drawdown__duration">
+          <span>TOTAL TIME BELOW PREVIOUS PEAK</span>
+          <div>
+            <strong>
+              {analysis.asset.total_calendar_days_underwater !== null
+                ? analysis.asset.total_calendar_days_underwater.toLocaleString()
+                : 'Ongoing'}
+            </strong>
+            {analysis.asset.total_calendar_days_underwater !== null && (
+              <span>calendar days</span>
             )}
-          </strong>
-        </article>
+          </div>
+        </div>
 
-        <article>
-          <span>
-            TROUGH
-          </span>
-
-          <strong>
-            {formatDate(
-              analysis.asset.trough_date,
-            )}
-          </strong>
-        </article>
-
-        <article>
-          <span>
-            RECOVERED
-          </span>
-
-          <strong>
-            {formatDate(
-              analysis.asset.recovery_date,
-            )}
-          </strong>
-        </article>
-
-        <article>
-          <span>
-            TIME UNDERWATER
-          </span>
-
-          <strong>
-            {analysis.asset
-              .total_calendar_days_underwater !== null
-              ? `${analysis.asset.total_calendar_days_underwater.toLocaleString()} days`
-              : 'Still underwater'}
-          </strong>
-        </article>
+        <div className="tni-leveraged-drawdown__perspective">
+          <h3>Drawdown perspective</h3>
+          <p>
+            {dataset.asset} declined from its{' '}
+            {formatDate(analysis.asset.peak_date)} peak
+            to its lowest point on{' '}
+            {formatDate(analysis.asset.trough_date)}.
+            {analysis.asset.recovery_date
+              ? (
+                  <>
+                    {' '}It regained that previous high on{' '}
+                    {formatDate(analysis.asset.recovery_date)},
+                    completing a decline-and-recovery cycle
+                    of{' '}
+                    <strong>
+                      {analysis.asset.total_calendar_days_underwater?.toLocaleString()}
+                      {' '}calendar days
+                    </strong>.
+                  </>
+                )
+              : (
+                  <>
+                    {' '}The stock had not regained its
+                    previous peak by the end of the
+                    comparison period.
+                  </>
+                )}
+          </p>
+        </div>
       </div>
-
-      <p className="tni-leveraged-drawdown__interpretation">
-        During the deepest {dataset.asset} drawdown in this
-        dataset, the decline ran from{' '}
-        <strong>
-          {formatDate(
-            analysis.asset.peak_date,
-          )}
-        </strong>
-        {' '}to{' '}
-        <strong>
-          {formatDate(
-            analysis.asset.trough_date,
-          )}
-        </strong>
-        . The previous peak was{' '}
-        {analysis.asset.recovery_date
-          ? (
-              <>
-                recovered on{' '}
-                <strong>
-                  {formatDate(
-                    analysis.asset.recovery_date,
-                  )}
-                </strong>
-                , after{' '}
-                <strong>
-                  {analysis.asset
-                    .total_calendar_days_underwater
-                    ?.toLocaleString()}
-                  {' '}calendar days underwater
-                </strong>
-                .
-              </>
-            )
-          : (
-              <>
-                <strong>
-                  not recovered by the end of the dataset
-                </strong>
-                .
-              </>
-            )}
-      </p>
 
       <p className="tni-leveraged-drawdown__methodology">
         Source: {dataset.source}. Drawdowns are calculated

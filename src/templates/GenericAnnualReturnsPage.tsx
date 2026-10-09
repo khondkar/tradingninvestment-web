@@ -69,6 +69,7 @@ export type GenericAnnualReturnsPageProps = {
   beforeGrowthExplorer?: ReactNode
   beforeReturnExplorer?: ReactNode
   afterPeriodReturns?: ReactNode
+  afterBenchmarkComparison?: ReactNode
   afterRollingComparison?: ReactNode
   afterArticle?: ReactNode
   afterMethodology?: ReactNode
@@ -88,6 +89,7 @@ export default function GenericAnnualReturnsPage({
   beforeGrowthExplorer,
   beforeReturnExplorer,
   afterPeriodReturns,
+  afterBenchmarkComparison,
   afterRollingComparison,
   afterArticle,
   afterMethodology,
@@ -1971,6 +1973,8 @@ export default function GenericAnnualReturnsPage({
             benchmarkAsOfDate={benchmarkAsOfDate}
           />
         )}
+
+        {afterBenchmarkComparison}
 
         {benchmarkDataset &&
           config.leveragedEtf?.showRolling10Year !== false && (

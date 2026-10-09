@@ -2,54 +2,18 @@ import { renderToStaticMarkup } from 'react-dom/server'
 
 import sp500AnnualReturns from './data/charts/sp500AnnualReturns.json'
 import dowAnnualReturns from './data/charts/dowAnnualReturns.json'
-import msftAnnualReturns from './data/charts/msftAnnualReturns.json'
 import nasdaqAnnualReturns from './data/charts/nasdaqAnnualReturns.json'
-import nvdaAnnualReturns from './data/charts/nvdaAnnualReturns.json'
-import aaplAnnualReturns from './data/charts/aaplAnnualReturns.json'
-import aaplReturnMethods from './data/charts/aaplReturnMethods.json'
-import brkbAnnualReturns from './data/charts/brkbAnnualReturns.json'
-import brkbReturnMethods from './data/charts/brk-bReturnMethods.json'
-import gsAnnualReturns from './data/charts/gsAnnualReturns.json'
-import googlAnnualReturns from './data/charts/googlAnnualReturns.json'
-import googlReturnMethods from './data/charts/googlReturnMethods.json'
-import amznAnnualReturns from './data/charts/amznAnnualReturns.json'
-import amznReturnMethods from './data/charts/amznReturnMethods.json'
-import gsReturnMethods from './data/charts/gsReturnMethods.json'
-import tslaAnnualReturns from './data/charts/tslaAnnualReturns.json'
-import tslaReturnMethods from './data/charts/tslaReturnMethods.json'
-import tqqqAnnualReturns from './data/charts/tqqqAnnualReturns.json'
-import tqqqReturnMethods from './data/charts/tqqqReturnMethods.json'
-import tqqqVsQqqDrawdowns from './data/charts/tqqqVsQqqDrawdowns.json'
-import qqqAnnualReturns from './data/charts/qqqAnnualReturns.json'
-import qqqReturnMethods from './data/charts/qqqReturnMethods.json'
-import spyAnnualReturns from './data/charts/spyAnnualReturns.json'
-import nvdlAnnualReturns from './data/charts/nvdlAnnualReturns.json'
-import nvdlReturnMethods from './data/charts/nvdlReturnMethods.json'
-import nvdlVsNvdaDrawdowns from './data/charts/nvdlVsNvdaDrawdowns.json'
-import soxlAnnualReturns from './data/charts/soxlAnnualReturns.json'
-import soxlReturnMethods from './data/charts/soxlReturnMethods.json'
-import soxlVsSmhDrawdowns from './data/charts/soxlVsSmhDrawdowns.json'
-import smhAnnualReturns from './data/charts/smhAnnualReturns.json'
 import sp500MonthlyReturns from './data/charts/sp500MonthlyReturns.json'
 import nasdaqMetadata from './data/market/nasdaq/metadata.json'
 import sp500Metadata from './data/market/sp500/metadata.json'
 
 import { sp500AnnualReturnsConfig } from './research/annual-returns/sp500'
 import { dowAnnualReturnsConfig } from './research/annual-returns/dow'
-import { msftAnnualReturnsConfig } from './research/annual-returns/msft'
 import { nasdaqAnnualReturnsConfig } from './research/annual-returns/nasdaq'
-import { nvdaAnnualReturnsConfig } from './research/annual-returns/nvda'
-import { aaplAnnualReturnsConfig } from './research/annual-returns/aapl'
-import { brkbAnnualReturnsConfig } from './research/annual-returns/brkb'
-import { gsAnnualReturnsConfig } from './research/annual-returns/gs'
-import { googlAnnualReturnsConfig } from './research/annual-returns/googl'
-import { amznAnnualReturnsConfig } from './research/annual-returns/amzn'
-import { tslaAnnualReturnsConfig } from './research/annual-returns/tsla'
-import { tqqqAnnualReturnsConfig } from './research/annual-returns/tqqq'
-import { qqqAnnualReturnsConfig } from './research/annual-returns/qqq'
-import { nvdlAnnualReturnsConfig } from './research/annual-returns/nvdl'
-import { soxlAnnualReturnsConfig } from './research/annual-returns/soxl'
 import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
+import { getStockResearchData } from './research/annual-returns/stockDataRegistry'
+import { getEtfResearchData } from './research/annual-returns/etfDataRegistry'
+import { getLeveragedEtfResearchData } from './research/annual-returns/leveragedEtfDataRegistry'
 import { sp500MonthlyReturnsConfig } from './research/monthly-returns/sp500'
 
 import type { AnnualReturnsPageData } from './research/annual-returns/pageShared'
@@ -76,119 +40,85 @@ export type AnnualPrerenderPage = {
   drawdownData?: LeveragedEtfDrawdownDataset
 }
 
-const allAnnualPrerenderPages: AnnualPrerenderPage[] = [
-  {
-    config: sp500AnnualReturnsConfig,
-    dataset: sp500AnnualReturns as AnnualReturnsPageData,
-  },
-  {
+const indexResearchData: Record<
+  string,
+  AnnualPrerenderPage
+> = {
+  "^DJI": {
     config: dowAnnualReturnsConfig,
     dataset: dowAnnualReturns as AnnualReturnsPageData,
   },
-  {
-    config: msftAnnualReturnsConfig,
-    dataset: msftAnnualReturns as AnnualReturnsPageData,
+  "^GSPC": {
+    config: sp500AnnualReturnsConfig,
+    dataset: sp500AnnualReturns as AnnualReturnsPageData,
   },
-  {
+  "^IXIC": {
     config: nasdaqAnnualReturnsConfig,
     dataset: nasdaqAnnualReturns as AnnualReturnsPageData,
     benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'S&P 500',
+    benchmarkName: "S&P 500",
     assetAsOfDate: nasdaqMetadata.last_date,
     benchmarkAsOfDate: sp500Metadata.last_date,
   },
-  {
-    config: nvdaAnnualReturnsConfig,
-    dataset: nvdaAnnualReturns as AnnualReturnsPageData,
-  },
-  {
-    config: aaplAnnualReturnsConfig,
-    dataset: aaplAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'S&P 500',
-    returnMethodsData:
-      aaplReturnMethods.data as ReturnMethodRow[],
-  },
-  {
-    config: brkbAnnualReturnsConfig,
-    dataset: brkbAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'S&P 500',
-    returnMethodsData:
-      brkbReturnMethods.data as ReturnMethodRow[],
-  },
-  {
-    config: gsAnnualReturnsConfig,
-    dataset: gsAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'S&P 500',
-    returnMethodsData:
-      gsReturnMethods.data as ReturnMethodRow[],
-  },
-  {
-    config: googlAnnualReturnsConfig,
-    dataset: googlAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'S&P 500',
-    returnMethodsData:
-      googlReturnMethods.data as ReturnMethodRow[],
-  },
-  {
-    config: amznAnnualReturnsConfig,
-    dataset: amznAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'S&P 500',
-    returnMethodsData:
-      amznReturnMethods.data as ReturnMethodRow[],
-  },
-  {
-    config: tslaAnnualReturnsConfig,
-    dataset: tslaAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'S&P 500',
-    returnMethodsData:
-      tslaReturnMethods.data as ReturnMethodRow[],
-  },
-  {
-    config: tqqqAnnualReturnsConfig,
-    dataset: tqqqAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: qqqAnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'QQQ',
-    returnMethodsData:
-      tqqqReturnMethods.data as ReturnMethodRow[],
-    drawdownData:
-      tqqqVsQqqDrawdowns as LeveragedEtfDrawdownDataset,
-  },
-  {
-    config: qqqAnnualReturnsConfig,
-    dataset: qqqAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset:
-      spyAnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'SPY',
-    returnMethodsData:
-      qqqReturnMethods.data as ReturnMethodRow[],
-  },
-  {
-    config: nvdlAnnualReturnsConfig,
-    dataset: nvdlAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: nvdaAnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'NVDA',
-    returnMethodsData:
-      nvdlReturnMethods.data as ReturnMethodRow[],
-    drawdownData:
-      nvdlVsNvdaDrawdowns as LeveragedEtfDrawdownDataset,
-  },
-  {
-    config: soxlAnnualReturnsConfig,
-    dataset: soxlAnnualReturns as AnnualReturnsPageData,
-    benchmarkDataset: smhAnnualReturns as AnnualReturnsPageData,
-    benchmarkName: 'SMH',
-    returnMethodsData:
-      soxlReturnMethods.data as ReturnMethodRow[],
-    drawdownData:
-      soxlVsSmhDrawdowns as LeveragedEtfDrawdownDataset,
-  },
-]
+}
+
+function resolveAnnualPrerenderPage(
+  config: AnnualReturnsAssetConfig,
+): AnnualPrerenderPage {
+  const symbol = config.symbol
+
+  if (config.categories.includes("leveraged-etf")) {
+    const data = getLeveragedEtfResearchData(symbol)
+    if (!data) {
+      throw new Error(`Missing leveraged ETF data: ${symbol}`)
+    }
+    return {
+      config,
+      dataset: data.annualReturns,
+      benchmarkDataset: data.benchmarkAnnualReturns,
+      benchmarkName: data.benchmarkName,
+      returnMethodsData: data.returnMethods,
+      drawdownData: data.drawdownData,
+    }
+  }
+
+  if (config.categories.includes("etf")) {
+    const data = getEtfResearchData(symbol)
+    if (!data) {
+      throw new Error(`Missing ETF data: ${symbol}`)
+    }
+    const benchmark = getEtfResearchData("SPY")
+    return {
+      config,
+      dataset: data.annualReturns,
+      benchmarkDataset:
+        symbol === "QQQ" ? benchmark?.annualReturns : undefined,
+      benchmarkName: symbol === "QQQ" ? "SPY" : undefined,
+      returnMethodsData: data.returnMethods,
+    }
+  }
+
+  if (config.categories.includes("stock")) {
+    const data = getStockResearchData(symbol)
+    if (!data) {
+      throw new Error(`Missing stock data: ${symbol}`)
+    }
+    return {
+      config,
+      dataset: data.annualReturns,
+      benchmarkDataset: sp500AnnualReturns as AnnualReturnsPageData,
+      benchmarkName: "S&P 500",
+      returnMethodsData: data.returnMethods,
+      drawdownData: data.drawdownData,
+    }
+  }
+
+  const indexData = indexResearchData[symbol]
+  if (!indexData) {
+    throw new Error(`Missing index data: ${symbol}`)
+  }
+  return { ...indexData, config }
+}
 
 export function renderAnnualPage(page: AnnualPrerenderPage) {
   if (
@@ -228,6 +158,7 @@ export function renderAnnualPage(page: AnnualPrerenderPage) {
         config={page.config}
         dataset={page.dataset}
         returnMethodsData={page.returnMethodsData}
+        drawdownData={page.drawdownData}
       />,
     )
   }
@@ -245,15 +176,9 @@ export function renderAnnualPage(page: AnnualPrerenderPage) {
 }
 
 // Only generate static HTML for research whose publication time has arrived.
-const publishedAnnualSlugs = new Set(
-  publishedAnnualReturnsResearchRegistry.map(
-    (entry) => entry.config.slug,
-  ),
-)
-
 export const annualPrerenderPages: AnnualPrerenderPage[] =
-  allAnnualPrerenderPages.filter(
-    (page) => publishedAnnualSlugs.has(page.config.slug),
+  publishedAnnualReturnsResearchRegistry.map(
+    (entry) => resolveAnnualPrerenderPage(entry.config),
   )
 
 export const monthlyPrerenderPages = [

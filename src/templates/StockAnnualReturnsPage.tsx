@@ -13,6 +13,9 @@ import AnnualReturnsFAQ from "../components/research/AnnualReturnsFAQ"
 import DividendCompoundingExplorer, {
   type ReturnMethodRow,
 } from "../components/charts/DividendCompoundingExplorer"
+import LeveragedEtfDrawdownComparison, {
+  type LeveragedEtfDrawdownDataset,
+} from "../components/research/LeveragedEtfDrawdownComparison"
 import CompanyContext from '../components/research/CompanyContext'
 
 
@@ -29,6 +32,7 @@ type StockAnnualReturnsPageProps = {
   config: AnnualReturnsAssetConfig
   dataset: AnnualReturnsPageData
   returnMethodsData?: ReturnMethodRow[]
+  drawdownData?: LeveragedEtfDrawdownDataset
 }
 
 
@@ -40,6 +44,7 @@ export default function StockAnnualReturnsPage({
   config,
   dataset,
   returnMethodsData,
+  drawdownData,
 }: StockAnnualReturnsPageProps) {
   return (
     <GenericAnnualReturnsPage
@@ -47,6 +52,11 @@ export default function StockAnnualReturnsPage({
       dataset={dataset}
       benchmarkDataset={benchmarkDataset}
       benchmarkName="S&P 500"
+      afterBenchmarkComparison={
+        drawdownData ? (
+          <LeveragedEtfDrawdownComparison dataset={drawdownData} />
+        ) : undefined
+      }
       afterArticle={
         <AnnualReturnsFAQ
           config={config}

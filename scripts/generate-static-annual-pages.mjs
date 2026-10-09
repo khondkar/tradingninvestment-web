@@ -608,10 +608,52 @@ for (
         }
       : null
 
+  const drawdownDatasetSchema =
+    config.slug === 'crm-stock-returns' && page.drawdownData
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'Dataset',
+          '@id': `${canonicalUrl}#crm-sp500-drawdown-dataset`,
+          name: 'Salesforce (CRM) vs. S&P 500 Historical Drawdown Dataset',
+          description:
+            'Historical daily drawdown comparison of Salesforce (CRM) and the S&P 500, calculated independently from each series running peak using synchronized adjusted-close observations.',
+          url: canonicalUrl,
+          license: {
+            '@type': 'CreativeWork',
+            name: 'TradingNInvestment Research Data License',
+            url: 'https://tradingninvestment.com/research-license/',
+          },
+          temporalCoverage:
+            `${page.drawdownData.range.first_date}/${page.drawdownData.range.last_date}`,
+          creator: {
+            '@type': 'Person',
+            name: config.author.name,
+            url: authorUrl,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'TradingNInvestment',
+            url: siteOrigin + '/',
+          },
+          measurementTechnique:
+            'Running-peak percentage drawdown calculated separately for CRM and the S&P 500 from synchronized daily adjusted-close observations.',
+          variableMeasured: [
+            'CRM daily adjusted close',
+            'CRM drawdown percentage',
+            'S&P 500 daily adjusted close',
+            'S&P 500 drawdown percentage',
+          ],
+          isAccessibleForFree: true,
+        }
+      : null
+
   const schemaHtml =
     [
       articleSchema,
       datasetSchema,
+      ...(drawdownDatasetSchema
+        ? [drawdownDatasetSchema]
+        : []),
       ...(dowFaqSchema
         ? [dowFaqSchema]
         : []),

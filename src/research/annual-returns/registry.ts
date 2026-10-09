@@ -12,6 +12,7 @@ import { brkbAnnualReturnsConfig } from "./brkb"
 import { gsAnnualReturnsConfig } from "./gs"
 import { googlAnnualReturnsConfig } from "./googl"
 import { amznAnnualReturnsConfig } from "./amzn"
+import { crmAnnualReturnsConfig } from "./crm"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
 import { qqqAnnualReturnsConfig } from "./qqq"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
@@ -105,6 +106,11 @@ export const annualReturnsResearchRegistry:
     {
       config: amznAnnualReturnsConfig,
       publishAt: "2026-10-06T17:00:00-04:00",
+      featured: false,
+    },
+    {
+      config: crmAnnualReturnsConfig,
+      publishAt: "2026-10-08T17:00:00-04:00",
       featured: false,
     },
     {
