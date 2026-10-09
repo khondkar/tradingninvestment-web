@@ -1005,11 +1005,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
 
   if (normalizedPath === '/stock-market-today') {
     return (
-      <div className="site">
-        <Header pathname={pathname}
-          page="market"
-          setPage={setPage}
-        />
+      <div className="site orbit-site">
         <StockMarketTodayPage />
       </div>
     )

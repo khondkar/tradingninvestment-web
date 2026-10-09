@@ -1,24 +1,11 @@
 import { useEffect } from 'react'
-import MarketBreadthDonut from '../components/market/MarketBreadthDonut'
+import MarketBreadthDonut, { MarketOrbitNavigation } from '../components/market/MarketBreadthDonut'
 
 import '../components/market/StockMarketToday.css'
 
 import {
   useMarketTodaySnapshot,
-  type MarketRecord,
 } from '../hooks/useMarketTodaySnapshot'
-
-function formatSignedPercent(value: number) {
-  const prefix = value > 0 ? '+' : ''
-  return `${prefix}${value.toFixed(2)}%`
-}
-
-function formatPrice(value: number) {
-  return new Intl.NumberFormat('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(value)
-}
 
 function formatUpdatedTime(value: string) {
   const date = new Date(value)
@@ -29,73 +16,14 @@ function formatUpdatedTime(value: string) {
 
   return new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/New_York',
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
     hour: 'numeric',
     minute: '2-digit',
     timeZoneName: 'short',
   }).format(date)
 }
-
-function MoversCard({
-  title,
-  movers,
-  direction,
-}: {
-  title: string
-  movers: MarketRecord[]
-  direction: 'up' | 'down'
-}) {
-  return (
-    <section className={`movers-card movers-card-${direction}`}>
-      <div className="movers-card-header">
-        <div>
-          <span className="movers-kicker">
-            {direction === 'up' ? '▲ LEADERS' : '▼ LAGGARDS'}
-          </span>
-
-          <h2>{title}</h2>
-        </div>
-
-        <span className="movers-period">TODAY</span>
-      </div>
-
-      <div className="movers-column-labels">
-        <span>STOCK</span>
-        <span>PRICE</span>
-        <span>MOVE</span>
-      </div>
-
-      <div className="movers-list">
-        {movers.map((stock, index) => (
-          <article className="mover-row" key={stock.ticker}>
-            <span className="mover-rank">
-              {String(index + 1).padStart(2, '0')}
-            </span>
-
-            <div className="mover-logo" aria-hidden="true">
-              {stock.ticker.slice(0, 1)}
-            </div>
-
-            <div className="mover-identity">
-              <strong>{stock.ticker}</strong>
-              <span>{stock.company}</span>
-              <small>{stock.sector}</small>
-            </div>
-
-            <div className="mover-price">
-              ${formatPrice(stock.price)}
-            </div>
-
-            <div className={`mover-change ${direction}`}>
-              {formatSignedPercent(stock.change_pct)}
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  )
-}
-
-
 
 export default function StockMarketTodayPage() {
   const snapshot = useMarketTodaySnapshot()
@@ -240,37 +168,15 @@ export default function StockMarketTodayPage() {
     snapshot.generated_at_utc,
   )
 
-  const marketIsOpen =
-    snapshot.market_status.toLowerCase() === 'open'
+  const snapshotAge = Date.now() - new Date(snapshot.generated_at_utc).getTime()
+  const stale = !Number.isFinite(snapshotAge) || snapshotAge > 30 * 60 * 1000
+  const marketIsOpen = !stale && snapshot.market_status.toLowerCase() === 'open'
 
   return (
     <>
-      <nav
-        className="market-today-subnav"
-        aria-label="Stock Market Today"
-      >
-        <a
-          href="/stock-market-today/"
-          className="active"
-          aria-current="page"
-        >
-          Overview
-        </a>
+      <MarketOrbitNavigation />
 
-        <a href="/stock-market-today/heatmap/">
-          Heatmap
-        </a>
-
-        <a href="/stock-market-today/sector-health/">
-          Sector Health
-        </a>
-
-        <a href="/stock-market-today/earnings-calendar/">
-          Earnings Calendar
-        </a>
-      </nav>
-
-      <main className="market-today-page">
+      <main className="market-today-page orbit-page">
         <section
           className="market-today-hero"
           id="overview"
@@ -296,9 +202,7 @@ export default function StockMarketTodayPage() {
               }
             />
 
-            {marketIsOpen
-              ? 'MARKET OPEN'
-              : 'MARKET CLOSED'}
+            {stale ? 'SAVED SNAPSHOT' : marketIsOpen ? 'MARKET OPEN' : snapshot.market_status.replaceAll('_', ' ').toUpperCase()}
 
             <span>·</span>
 
@@ -312,101 +216,6 @@ export default function StockMarketTodayPage() {
         </section>
 
         <MarketBreadthDonut snapshot={snapshot} />
-
-        <section
-          className="market-index-strip"
-          aria-label="Major market benchmarks"
-        >
-          {snapshot.benchmarks.map((benchmark) => {
-            const change =
-              benchmark.change_pct ?? 0
-
-            return (
-              <div
-                className="market-index-card"
-                key={benchmark.symbol}
-              >
-                <span>
-                  {benchmark.name}
-                </span>
-
-                <strong>
-                  {benchmark.symbol}
-                </strong>
-
-                {benchmark.available &&
-                benchmark.price !== undefined ? (
-                  <>
-                    <b
-                      className={
-                        change > 0
-                          ? 'positive'
-                          : change < 0
-                            ? 'negative'
-                            : 'neutral'
-                      }
-                    >
-                      {benchmark.symbol === 'VIX'
-                        ? formatPrice(
-                            benchmark.price,
-                          )
-                        : formatSignedPercent(
-                            change,
-                          )}
-                    </b>
-
-                    <small className="market-index-detail">
-                      {benchmark.symbol === 'VIX'
-                        ? formatSignedPercent(
-                            change,
-                          )
-                        : `$${formatPrice(
-                            benchmark.price,
-                          )}`}
-                    </small>
-                  </>
-                ) : (
-                  <b className="neutral">
-                    N/A
-                  </b>
-                )}
-              </div>
-            )
-          })}
-        </section>
-
-        <section
-          className="top-movers-intro"
-          id="top-movers"
-        >
-          <span>
-            S&amp;P 500 · DAILY PERFORMANCE
-          </span>
-
-          <h2>
-            S&amp;P 500 Top Movers Today
-          </h2>
-
-          <p>
-            The 10 strongest and 10 weakest S&amp;P 500 stocks
-            by daily percentage change.
-          </p>
-        </section>
-
-        <div className="top-movers-grid">
-          <MoversCard
-            title="Top 10 Gainers"
-            movers={snapshot.gainers}
-            direction="up"
-          />
-
-          <MoversCard
-            title="Top 10 Decliners"
-            movers={snapshot.decliners}
-            direction="down"
-          />
-        </div>
-
 
         <section
           className="market-overview-explainer"
