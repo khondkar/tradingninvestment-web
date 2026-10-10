@@ -62,6 +62,7 @@ function buildStockDatasetSchema(config, canonicalUrl) {
     "description":
       `Historical annual returns and available total-return research for ${config.name} (${config.symbol}), published by TradingNInvestment.`,
     "url": canonicalUrl,
+    "license": "https://tradingninvestment.com/research-license/",
     "creator": {
       "@type": "Organization",
       "name": "TradingNInvestment",
