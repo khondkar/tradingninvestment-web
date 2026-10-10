@@ -1,4 +1,5 @@
 import sp500AnnualReturns from "../data/charts/sp500AnnualReturns.json"
+import nkeDrawdowns from "../data/charts/nkeVsSp500Drawdowns.json"
 
 import type {
   AnnualReturnsAssetConfig,
@@ -46,6 +47,12 @@ export default function StockAnnualReturnsPage({
   returnMethodsData,
   drawdownData,
 }: StockAnnualReturnsPageProps) {
+  const effectiveDrawdownData =
+    drawdownData ??
+    (config.symbol === "NKE"
+      ? (nkeDrawdowns as LeveragedEtfDrawdownDataset)
+      : undefined)
+
   return (
     <GenericAnnualReturnsPage
       config={config}
@@ -53,8 +60,13 @@ export default function StockAnnualReturnsPage({
       benchmarkDataset={benchmarkDataset}
       benchmarkName="S&P 500"
       afterBenchmarkComparison={
-        drawdownData ? (
-          <LeveragedEtfDrawdownComparison dataset={drawdownData} />
+        config.symbol !== "NKE" && effectiveDrawdownData ? (
+          <LeveragedEtfDrawdownComparison dataset={effectiveDrawdownData} />
+        ) : undefined
+      }
+      beforeAnnualChart={
+        config.symbol === "NKE" && effectiveDrawdownData ? (
+          <LeveragedEtfDrawdownComparison dataset={effectiveDrawdownData} />
         ) : undefined
       }
       afterArticle={

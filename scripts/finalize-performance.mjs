@@ -60,13 +60,20 @@ for (const [route, entry] of routes) {
       name.endsWith('.css')
     )
 
-  if (researchCss.length !== 1) {
-    throw new Error(
-      `Expected exactly one ResearchDiscovery CSS asset, found ${researchCss.length}`
-    )
+  const manifestCss = [
+    ...new Set(
+      Object.values(manifest).flatMap(chunk => chunk.css ?? [])
+    ),
+  ]
+
+  const cssFiles = researchCss.length
+    ? researchCss.map(name => `assets/${name}`)
+    : manifestCss
+
+  if (!cssFiles.length) {
+    throw new Error('No CSS assets found for research pages')
   }
 
-  const href = `/assets/${researchCss[0]}`
   const researchDir = path.join(dist, 'research')
 
   function attachResearchCss(dir) {
@@ -84,10 +91,14 @@ for (const [route, entry] of routes) {
 
       let html = fs.readFileSync(target, 'utf8')
 
-      if (!html.includes(`href="${href}"`)) {
+      const missingLinks = cssFiles
+        .filter(file => !html.includes(`href="/${file}"`))
+        .map(file => `<link rel="stylesheet" crossorigin href="/${file}">`)
+
+      if (missingLinks.length) {
         html = html.replace(
           '</head>',
-          `<link rel="stylesheet" crossorigin href="${href}">\n</head>`,
+          `${missingLinks.join('\\n')}\n</head>`,
         )
         fs.writeFileSync(target, html)
       }

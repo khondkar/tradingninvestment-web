@@ -69,6 +69,7 @@ export type GenericAnnualReturnsPageProps = {
   beforeGrowthExplorer?: ReactNode
   beforeReturnExplorer?: ReactNode
   afterPeriodReturns?: ReactNode
+  beforeAnnualChart?: ReactNode
   afterBenchmarkComparison?: ReactNode
   afterRollingComparison?: ReactNode
   afterArticle?: ReactNode
@@ -89,6 +90,7 @@ export default function GenericAnnualReturnsPage({
   beforeGrowthExplorer,
   beforeReturnExplorer,
   afterPeriodReturns,
+  beforeAnnualChart,
   afterBenchmarkComparison,
   afterRollingComparison,
   afterArticle,
@@ -2279,6 +2281,8 @@ export default function GenericAnnualReturnsPage({
         {/* =================================================================
             TNI ANNUAL RETURNS — COMPLETE / FILTERED HISTORICAL TABLE
         ================================================================= */}
+
+        {beforeAnnualChart}
 
         <section
           style={{

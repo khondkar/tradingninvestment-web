@@ -48,6 +48,66 @@ const prerenderBundle =
 const siteOrigin =
   "https://tradingninvestment.com"
 
+// TNI_STOCK_SEO_ENHANCEMENT_V1
+function buildStockDatasetSchema(config, canonicalUrl) {
+  if (!config.categories?.includes("stock")) {
+    return null
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "@id": `${canonicalUrl}#dataset`,
+    "name": `${config.name} (${config.symbol}) Historical Stock Returns`,
+    "description":
+      `Historical annual returns and available total-return research for ${config.name} (${config.symbol}), published by TradingNInvestment.`,
+    "url": canonicalUrl,
+    "creator": {
+      "@type": "Organization",
+      "name": "TradingNInvestment",
+      "url": "https://tradingninvestment.com/"
+    },
+    "variableMeasured": [
+      "Annual stock return",
+      "Historical investment performance"
+    ],
+    "isAccessibleForFree": true
+  }
+}
+
+function enhanceStockResearchHtml(html, config, canonicalUrl) {
+  if (!config.categories?.includes("stock")) {
+    return html
+  }
+
+  const dataset = buildStockDatasetSchema(config, canonicalUrl)
+
+  const schemaJson = JSON.stringify(dataset)
+    .replace(/</g, "\\u003c")
+
+  const schemaTag =
+    `<script type="application/ld+json">${schemaJson}</script>`
+
+  if (!html.includes(`${canonicalUrl}#dataset`)) {
+    html = html.replace("</head>", `${schemaTag}\n</head>`)
+  }
+
+  const metaTags = [
+    ['property="og:type"', '<meta property="og:type" content="article" />'],
+    ['property="og:site_name"', '<meta property="og:site_name" content="TradingNInvestment" />'],
+    ['name="twitter:card"', '<meta name="twitter:card" content="summary_large_image" />']
+  ]
+
+  for (const [key, tag] of metaTags) {
+    if (!html.includes(key)) {
+      html = html.replace("</head>", `${tag}\n</head>`)
+    }
+  }
+
+  return html
+}
+
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -689,6 +749,13 @@ for (
     {
       recursive: true,
     },
+  )
+
+  // TNI_STOCK_SEO_ACTIVATED_V1
+  html = enhanceStockResearchHtml(
+    html,
+    config,
+    canonicalUrl,
   )
 
   fs.writeFileSync(

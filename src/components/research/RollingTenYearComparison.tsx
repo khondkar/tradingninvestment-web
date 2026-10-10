@@ -1,3 +1,4 @@
+import StockTotalReturnComparison from './StockTotalReturnComparison'
 import { useMemo, useState } from 'react'
 
 import type {
@@ -185,6 +186,10 @@ export default function RollingTenYearComparison({
       <h2 className="tni-rolling-title">
         {assetTicker} vs. {benchmarkTicker}
       </h2>
+
+      {assetTicker === 'NKE' && (
+        <StockTotalReturnComparison />
+      )}
 
       <p className="tni-rolling-subtitle">
         Rolling 10-Year Annualized Returns
