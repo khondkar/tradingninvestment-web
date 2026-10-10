@@ -18,13 +18,13 @@
     "month": 10,
     "month_name": "October",
     "label": "October 2026 MTD",
-    "return_pct": 1.4875,
-    "through_date": "2026-10-08"
+    "return_pct": 2.0911,
+    "through_date": "2026-10-09"
   },
   "current_month_risk": {
     "month": 10,
     "month_name": "October",
-    "through_date": "2026-10-08",
+    "through_date": "2026-10-09",
     "previous_month_end_close": 7651.54,
     "current_max_drawdown_pct": -0.6851,
     "current_adverse_excursion_pct": -0.4543,
@@ -8531,7 +8531,7 @@
       "year": 2026,
       "month": 10,
       "month_name": "October",
-      "value": 1.4875,
+      "value": 2.0911,
       "status": "positive"
     }
   ]
