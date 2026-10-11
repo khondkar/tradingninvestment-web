@@ -12,6 +12,14 @@ Subject: Alphabet Inc.
 Symbol: GOOGL
 Description: Explore Alphabet GOOGL historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
 
+## Amazon (AMZN) Stock Returns
+
+URL: https://tradingninvestment.com/amzn-stock-returns/
+Type: annual
+Subject: Amazon.com, Inc.
+Symbol: AMZN
+Description: Explore Amazon AMZN historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
+
 ## Apple (AAPL) Stock Returns
 
 URL: https://tradingninvestment.com/aapl-stock-yearly-return/
@@ -60,6 +68,14 @@ Subject: Nasdaq Composite
 Symbol: ^IXIC
 Description: Nasdaq Composite historical annual returns by year, including average return, positive and negative years, long-term performance, and 2026 YTD return.
 
+## Nike (NKE) Stock Returns
+
+URL: https://tradingninvestment.com/nke-stock-returns/
+Type: annual
+Subject: NIKE, Inc.
+Symbol: NKE
+Description: Explore Nike NKE historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
+
 ## NVDL ETF: Performance, Holdings & NVDL vs NVDA
 
 URL: https://tradingninvestment.com/nvdl-etf/
@@ -76,6 +92,14 @@ Subject: NVIDIA
 Symbol: NVDA
 Description: Explore NVIDIA annual returns, historical performance, positive and negative years, major gains and declines, and current-year performance.
 
+## QQQ Historical Returns by Year
+
+URL: https://tradingninvestment.com/qqq-returns/
+Type: annual
+Subject: Invesco QQQ Trust
+Symbol: QQQ
+Description: Explore QQQ historical annual returns, performance by year, positive and negative years, major gains and declines, and current-year performance.
+
 ## S&P 500 Monthly Returns: Historical Returns by Month
 
 URL: https://tradingninvestment.com/sp-500-monthly-returns/
@@ -91,6 +115,14 @@ Type: annual
 Subject: S&P 500
 Symbol: ^GSPC
 Description: Nearly a century of S&P 500 market history, including annual returns, average return, positive and negative years, and 2026 YTD performance.
+
+## Salesforce (CRM) Stock Returns
+
+URL: https://tradingninvestment.com/crm-stock-returns/
+Type: annual
+Subject: Salesforce, Inc.
+Symbol: CRM
+Description: Explore Salesforce CRM historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
 
 ## SOXL ETF: Performance, Holdings & Historical Returns
 

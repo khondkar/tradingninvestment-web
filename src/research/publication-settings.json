@@ -1,0 +1,65 @@
+{
+  "/average-stock-market-return/": {
+    "homepagePlacement": "featured"
+  },
+  "/sp-500-returns/": {
+    "homepagePlacement": "featured"
+  },
+  "/nvda-returns/": {
+    "homepagePlacement": "featured"
+  },
+  "/nasdaq-historical-annual-returns/": {
+    "homepagePlacement": "featured"
+  },
+  "/stock-market-historical-returns/": {
+    "homepagePlacement": "featured"
+  },
+  "/nvdl-etf/": {
+    "homepagePlacement": "regular"
+  },
+  "/aapl-stock-yearly-return/": {
+    "homepagePlacement": "regular"
+  },
+  "/msft-stock-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/soxl-etf/": {
+    "homepagePlacement": "regular"
+  },
+  "/tsla-stock-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/crm-stock-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/gs-stock-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/qqq-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/tqqq-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/googl-stock-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/amzn-stock-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/nke-stock-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/look-berkshire-hathaway-stock-brk-b-berkshire-hathaway-performance-vs-sp-500/": {
+    "homepagePlacement": "regular"
+  },
+  "/stock-market-correction-myth-and-reality/": {
+    "homepagePlacement": "regular"
+  },
+  "/sp-500-monthly-returns/": {
+    "homepagePlacement": "regular"
+  },
+  "/stock-market-crash-of-1929/": {
+    "homepagePlacement": "regular"
+  }
+}

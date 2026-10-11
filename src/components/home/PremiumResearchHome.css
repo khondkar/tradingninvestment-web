@@ -725,3 +725,7 @@
     transform: none;
   }
 }
+
+/* Every selected homepage card uses its article-specific research identity. */
+.tni-home-publication-og{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:contain;border-radius:10px;background:#f3f5ee;margin-bottom:16px}
+.tni-home-features[hidden]{display:none}

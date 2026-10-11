@@ -19,30 +19,17 @@ try {
   await vite.close()
 }
 
-const { researchHubs, researchItems, getHubItems, getItemHubs, getRelatedItems } = graph
+const { researchHubs, researchItems, getItemHubs, getRelatedItems } = graph
 const escape = (value) => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
 const link = (url, label) => `<a href="${escape(url)}">${escape(label)}</a>`
-const base = researchHubs.filter((hub) => [
-  '/research/stocks/',
-  '/research/etfs/',
-  '/research/indexes/',
-  '/research/market-history/',
-  '/research/market-risk/',
-].includes(hub.path))
+const researchStyles = fs.readFileSync(path.join(root, 'src/components/research/ResearchExperience.css'), 'utf8')
 
 for (const hub of researchHubs) {
-  const items = getHubItems(hub)
-  const children = hub.path === '/research/' ? base : researchHubs.filter((child) => child.parent === hub.path)
-  const breadcrumbs = [link('/', 'Home'), ...(hub.parent ? [link('/research/', 'Research')] : []), ...(hub.parent && hub.parent !== '/research/' ? [link(hub.parent, researchHubs.find((parent) => parent.path === hub.parent).title)] : []), escape(hub.title)].join(' › ')
-  const markup = `<main class="static-research-hub" style="max-width:1120px;margin:35px auto 90px;padding:0 20px;font-family:Arial,sans-serif;color:#12233a">
-    <nav aria-label="Breadcrumb" style="font-size:13px;color:#526c68">${breadcrumbs}</nav>
-    <header style="padding:55px 0 35px"><p style="font-size:11px;font-weight:bold;letter-spacing:.15em;color:#087965">TRADINGNINVESTMENT RESEARCH</p><h1 style="font-size:clamp(38px,7vw,64px);letter-spacing:-.05em;margin:12px 0">${escape(hub.title)}</h1><p style="font-size:17px;line-height:1.65;max-width:760px">${escape(hub.description)}</p></header>
-    ${hub.path === '/research/indexes/dow/' ? `<section><h2>Dow Jones Industrial Average, 1920–1940</h2><p>The original TNI chart traces the Dow through the 1920s expansion, the 1929 peak, and the decline into 1932. It shows historical index levels, not total returns or present market conditions.</p><figure style="margin:22px 0;max-width:850px"><img src="/wp-content/uploads/2016/03/Dow-Jones-History-1920-to-1940.jpg" alt="Historical Dow Jones Industrial Average chart from 1920 to 1940 showing the 1929 peak and 1932 low" width="736" height="606" style="max-width:100%;height:auto"/><figcaption>Original TradingNInvestment historical chart. ${link('/stock-market-historical-returns/', 'Explore Dow Jones annual returns →')}</figcaption></figure><p>${link('/stock-market-crash-of-1929/', 'Read the chart’s historical analysis →')}</p></section>` : ''}
-    ${children.length ? `<section><h2>Explore by topic</h2><ul style="line-height:2.2">${children.map((child) => `<li>${link(child.path, child.title)} — ${escape(child.description)}</li>`).join('')}</ul></section>` : ''}
-    <section><h2>Published research</h2><ul style="line-height:2.2">${items.map((item) => `<li>${link(item.path, item.title)} — ${escape(item.description)}</li>`).join('')}</ul></section>
-  </main>`
+  // Render the same React route used by the browser, including the site shell.
+  const markup = renderToString(React.createElement(App, { pathname: hub.path }))
   const title = `${hub.title} | TradingNInvestment`
   let html = template
+    .replace('</head>', `<style id="tni-research-initial-styles">${researchStyles}</style></head>`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(title)}</title>`)
     .replace(/(<meta\s+name="description"\s+content=")[^"]*("\s*\/>)/, `$1${escape(hub.description)}$2`)
     .replace(/(<meta\s+property="og:title"\s+content=")[^"]*("\s*\/>)/, `$1${escape(title)}$2`)

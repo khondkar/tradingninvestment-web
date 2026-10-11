@@ -1,3 +1,4 @@
+import { findResearchStyles } from './research-css-assets.mjs'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -54,26 +55,7 @@ for (const [route, entry] of routes) {
 // Attach ResearchDiscovery CSS directly so first paint does not wait for JS.
 {
   const assetsDir = path.join(dist, 'assets')
-  const researchCss = fs.readdirSync(assetsDir)
-    .filter(name =>
-      name.startsWith('ResearchDiscovery-') &&
-      name.endsWith('.css')
-    )
-
-  const manifestCss = [
-    ...new Set(
-      Object.values(manifest).flatMap(chunk => chunk.css ?? [])
-    ),
-  ]
-
-  const cssFiles = researchCss.length
-    ? researchCss.map(name => `assets/${name}`)
-    : manifestCss
-
-  if (!cssFiles.length) {
-    throw new Error('No CSS assets found for research pages')
-  }
-
+  const researchHrefs = findResearchStyles(assetsDir)
   const researchDir = path.join(dist, 'research')
 
   function attachResearchCss(dir) {
@@ -91,17 +73,12 @@ for (const [route, entry] of routes) {
 
       let html = fs.readFileSync(target, 'utf8')
 
-      const missingLinks = cssFiles
-        .filter(file => !html.includes(`href="/${file}"`))
-        .map(file => `<link rel="stylesheet" crossorigin href="/${file}">`)
-
-      if (missingLinks.length) {
-        html = html.replace(
-          '</head>',
-          `${missingLinks.join('\\n')}\n</head>`,
-        )
-        fs.writeFileSync(target, html)
+      for (const href of researchHrefs) {
+        if (!html.includes(`href="${href}"`)) {
+          html = html.replace('</head>', `<link rel="stylesheet" crossorigin href="${href}">\n</head>`)
+        }
       }
+      fs.writeFileSync(target, html)
     }
   }
 
@@ -212,3 +189,5 @@ fs.writeFileSync(file, html)
 console.log(`TNI homepage hydration enabled; ${inlineCount} stylesheets embedded in HTML`)
 
 await import('./finalize-article-performance.mjs')
+
+await import('./finalize-publication-images.mjs')

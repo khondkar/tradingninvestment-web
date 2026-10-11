@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { createServer } from 'vite'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const output = path.join(root, 'src/performance/generated')
+await import('./generate-publication-assets.mjs')
 const vite = await createServer({ root, server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 try {
   const stock = await vite.ssrLoadModule('/src/research/annual-returns/stockDataRegistry.ts')
