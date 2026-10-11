@@ -18,6 +18,18 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'magic-doji-or-myth-and-how-to-use-doji-for-stock-trading',
+    path: '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading/',
+    title: 'Magic Doji or Myth and How to Use Doji for Stock Trading',
+    description: 'Original TNI research on Doji formation, market indecision, bullish and bearish patterns, and trading setups.',
+    name: 'Doji Candlestick',
+    symbol: 'DOJI',
+    image: '/images/research/tni-doji-research-cover.png',
+    categories: ['technical-analysis', 'trading', 'candlestick-patterns'],
+    kind: 'article',
+    publishedAt: '2016-02-16',
+  },
+  {
     slug: 'average-stock-market-return',
     path: '/average-stock-market-return/',
     title: 'Average Stock Market Return: Dividends, Inflation & 150+ Years of History',

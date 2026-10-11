@@ -52,6 +52,14 @@ Subject: The Goldman Sachs Group, Inc.
 Symbol: GS
 Description: Explore Goldman Sachs GS historical returns, long-term performance, growth of $10,000, rolling 10-year performance, and comparison with the S&P 500.
 
+## Magic Doji or Myth and How to Use Doji for Stock Trading
+
+URL: https://tradingninvestment.com/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading/
+Type: article
+Subject: Doji Candlestick
+Symbol: DOJI
+Description: Original TNI research on Doji formation, market indecision, bullish and bearish patterns, and trading setups.
+
 ## Microsoft (MSFT) Stock Returns
 
 URL: https://tradingninvestment.com/msft-stock-returns/

@@ -13,6 +13,7 @@ import './SiteShell.css'
 import { loadResearchData } from './performance/researchData'
 function currentPathname() { return typeof window === 'undefined' ? '/' : window.location.pathname }
 
+let MagicDojiPage: typeof import('./pages/MagicDojiPage')['default']
 let StockMarketCrash1929Page: typeof import('./pages/StockMarketCrash1929Page')['default']
 let SP500ReturnsPage: typeof import('./pages/SP500ReturnsPage')['default']
 let AverageStockMarketReturnPage: typeof import('./pages/AverageStockMarketReturnPage')['default']
@@ -59,6 +60,7 @@ export async function prepareApp(pathname: string) {
   ) {
     await import('./components/research/ResearchDiscovery.css')
   }
+  if (path === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') { MagicDojiPage = (await import('./pages/MagicDojiPage')).default; return }
   if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
   if (path === '/stock-market-today/earnings-calendar') { StockMarketEarningsCalendarPage = (await import('./pages/StockMarketEarningsCalendarPage')).default; return }
   if (path === '/stock-market-today/sector-health') { StockMarketSectorHealthPage = (await import('./pages/StockMarketSectorHealthPage')).default; return }
@@ -922,6 +924,9 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   const normalizedPath =
     pathname.replace(/\/+$/, '') || '/'
 
+  if (normalizedPath === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') {
+    return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><MagicDojiPage /><Footer setPage={setPage} /></div>
+  }
   if (normalizedPath === '/stock-market-crash-of-1929') {
     return (
       <div className="site">

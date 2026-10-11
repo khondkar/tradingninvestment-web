@@ -14,6 +14,7 @@ try {
 // Static article HTML needs its route styles even before JavaScript executes.
 const routes = new Map([
   ['/stock-market-crash-of-1929/', 'src/pages/StockMarketCrash1929Page.tsx'],
+  ['/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading/', 'src/pages/MagicDojiPage.tsx'],
   ['/stock-market-today/', 'src/pages/StockMarketTodayPage.tsx'],
   ['/stock-market-today/heatmap/', 'src/pages/StockMarketHeatmapPage.tsx'],
   ['/stock-market-today/sector-health/', 'src/pages/StockMarketSectorHealthPage.tsx'],

@@ -3,9 +3,9 @@ import { getHub, getHubItems, getResearchBreadcrumbs, getResearchCompanies, getR
 import './ResearchExperience.css'
 
 const PAGE_SIZE = 12
-const collectionPaths = ['/research/indexes/', '/research/stocks/', '/research/etfs/', '/research/history-and-risk/']
-const collectionNames = ['Indexes', 'Stocks', 'ETFs', 'History & Risk']
-const collectionDescriptions = ['The broad market, in perspective.', 'One company. A deeper understanding.', 'Look beneath the fund.', 'Past cycles. Enduring lessons.']
+const collectionPaths = ['/research/indexes/', '/research/stocks/', '/research/etfs/', '/research/history-and-risk/', '/research/trading/']
+const collectionNames = ['Indexes', 'Stocks', 'ETFs', 'History & Risk', 'Technical Analysis']
+const collectionDescriptions = ['The broad market, in perspective.', 'One company. A deeper understanding.', 'Look beneath the fund.', 'Past cycles. Enduring lessons.', 'Patterns, price action, and trading evidence.']
 
 function StudyCard({ item, eager = false }: { item: ResearchItem; eager?: boolean }) {
   const [broken, setBroken] = useState(false)
@@ -95,12 +95,27 @@ export default function ResearchExperience({ hub }: { hub: ResearchHub }) {
         {isLanding && <div className="tni-r-suggestions">Start with <a href="/research/indexes/sp-500/">S&P 500</a>{getHub('/research/stocks/nvda/') && <a href="/research/stocks/nvda/">NVIDIA</a>}<a href="/research/market-risk/">Drawdowns</a></div>}
       </header>
       {isDirectory ? <CompanyDirectory items={items} context={hub.path} query={query} category={hub.view === 'funds' ? 'etf' : 'stock'} /> : query.trim() ? <section aria-label="Search results"><SectionTitle title="Search results" /><StudyList items={filtered} /></section> : <>
+        {(hub.path === '/research/trading/' || hub.path === '/research/trading/candlestick-patterns/') && items.length > 0 && <section>
+          <SectionTitle title="Published research." label="Technical analysis" />
+          <div className="tni-r-studies">
+            {sortResearch(items).map((item) => (
+              <StudyCard key={item.path} item={item} />
+            ))}
+          </div>
+        </section>}
         {(isLanding || isIndex) && featured.length > 0 && <section><SectionTitle title={isLanding ? 'A deeper perspective.' : 'Essential perspectives'} label={isLanding ? 'Selected research' : 'Index-level research'} /><div className="tni-r-featured">{featured.map((item, index) => <StudyCard key={item.path} item={item} eager={index === 0} />)}</div></section>}
         {isLanding && <section><SectionTitle title="Follow your curiosity." label="Explore all research" href="/research/archive/" /><div className="tni-r-collections">{collectionPaths.map((path, index) => <a href={path} key={path}><span>0{index + 1}</span><h3>{collectionNames[index]}</h3><p>{collectionDescriptions[index]}</p><small>Explore collection ↗</small></a>)}</div><div className="tni-r-closing"><h2>Complex markets.<br />Clearer questions.</h2><p>Every path leads to the evidence.<br />Explore by index, company, or the question on your mind.</p></div></section>}
         {hub.view === 'indexes' && <section><SectionTitle title={hub.path === '/research/etfs/' ? 'Two ways to explore funds.' : 'A wider lens.'} /><div className="tni-r-hubs">{children.filter((child) => getHubItems(child).length > 0 && (hub.path !== '/research/etfs/' || ['/research/etfs/regular/', '/research/etfs/leveraged/'].includes(child.path))).map((child) => <HubCard key={child.path} hub={child} label={hub.path === '/research/etfs/' ? `${getResearchCompanies(getHubItems(child), 'etf').length} funds with research` : 'Index intelligence'} />)}</div></section>}
         {isIndex && <><section><SectionTitle title="Explore the complete collection" /><div className="tni-r-hubs">{topics.length > 0 && <a className="tni-r-hub-card" href="#index-topics"><span className="tni-r-kicker">Research topics</span><h3>Index-level studies</h3><p>Returns, risk, seasonality, and market history.</p><span className="tni-r-card-footer">Choose a topic ↗</span></a>}{[['sectors/', 'Browse by sector'], ['companies/', 'Find a company'], ['studies/', 'All index studies']].map(([suffix, name]) => { const child = getHub(hub.path + suffix); return child && <HubCard key={child.path} hub={{ ...child, title: name }} label="Explore the collection" /> })}</div></section><section id="index-topics"><SectionTitle title="Start with a question." /><div className="tni-r-hubs">{topics.map((topic) => <HubCard key={topic.path} hub={topic} label={`${getHubItems(topic).length} published ${getHubItems(topic).length === 1 ? 'study' : 'studies'}`} />)}</div></section></>}
         {hub.view === 'sectors' && <section><SectionTitle title="Browse all 11 sectors" /><div className="tni-r-sectors">{researchSectors.map((sector) => { const child = children.find((child) => child.sector === sector.id); const count = child ? getResearchCompanies(getHubItems(child)).length : 0; return child && count ? <a href={child.path} key={sector.id}><h3>{sector.name}</h3><p>{count} {count === 1 ? 'company' : 'companies'} with research <span>↗</span></p></a> : <div key={sector.id}><h3>{sector.name}</h3><p>No published company studies yet</p></div> })}</div></section>}
         {(hub.view === 'company' || hub.view === 'topics') && <section><SectionTitle title={hub.view === 'company' ? 'Explore by question.' : 'Choose a research topic.'} /><div className="tni-r-hubs">{topics.map((topic) => <HubCard key={topic.path} hub={topic} label={`${getHubItems(topic).length} published ${getHubItems(topic).length === 1 ? 'study' : 'studies'}`} />)}{children.filter((child) => !child.path.includes('/topics/') && getHubItems(child).length).map((child) => <HubCard key={child.path} hub={child} />)}</div>{!topics.length && !children.length && <p className="tni-r-empty">No published studies are available in this collection yet.</p>}</section>}
+        {hub.path === '/research/trading/' && <section>
+          <SectionTitle title="Explore technical analysis." label="Research collections" />
+          <div className="tni-r-hubs">
+            {children.map((child) => <HubCard key={child.path} hub={child} label="Candlestick research" />)}
+          </div>
+        </section>}
+
         {hub.view === 'studies' && <StudyList items={items} />}
         {hub.path === '/research/indexes/dow/' && <section className="tni-r-dow"><SectionTitle title="The original historical perspective" label="1920–1940" /><a href="/stock-market-crash-of-1929/"><img src="/wp-content/uploads/2016/03/Dow-Jones-History-1920-to-1940.jpg" alt="Original TNI Dow Jones history chart, 1920 to 1940" width="736" height="606" loading="lazy" /></a><p>The original TNI chart traces the Dow through the 1920s expansion, the 1929 peak, and the decline into 1932. Historical index levels, not total returns or present market conditions. <a href="/stock-market-historical-returns/">Explore Dow Jones annual returns →</a> <a href="/stock-market-crash-of-1929/">Explore the historical analysis ↗</a></p></section>}
       </>}

@@ -106,6 +106,20 @@ const stockItems = [...new Map(researchItems.filter((item) => has(item, 'stock')
 
 export const researchHubs: ResearchHub[] = [
   {
+    path: '/research/trading/',
+    title: 'Trading & Technical Analysis',
+    description: 'Research on candlestick patterns, technical indicators, price action, and evidence-based trading strategies.',
+    parent: '/research/',
+    match: (item) => item.categories.includes('technical-analysis') || item.categories.includes('trading') || item.categories.includes('candlestick-patterns'),
+  },
+  {
+    path: '/research/trading/candlestick-patterns/',
+    title: 'Candlestick Patterns',
+    description: 'Candlestick formations, Doji patterns, reversal signals, and trading applications.',
+    parent: '/research/trading/',
+    match: (item) => item.categories.includes('candlestick-patterns'),
+  },
+  {
     path: '/research/market-crashes/',
     title: 'Market Crashes',
     description: 'Historical research on market crashes and their consequences.',
@@ -205,6 +219,7 @@ export function getItemHubs(item: ResearchItem) {
         : '/research/indexes/'
 
   const paths = [primary]
+  if (has(item, 'technical-analysis')) return ['/research/trading/', ...(has(item, 'candlestick-patterns') ? ['/research/trading/candlestick-patterns/'] : [])].map((path) => getHub(path)!).filter(Boolean)
 
   if (has(item, 'leveraged-etf')) {
     paths.unshift('/research/etfs/leveraged/')
