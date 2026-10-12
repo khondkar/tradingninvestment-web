@@ -1,0 +1,230 @@
+{
+  "performance": [
+    {
+      "Scenario": "Bullish reversal",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 1,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 60.0,
+      "Control_Success_Pct": 56.4588,
+      "Advantage_pp": 3.5412,
+      "Doji_Avg_Return_Pct": 0.28681,
+      "Control_Avg_Return_Pct": 0.13278
+    },
+    {
+      "Scenario": "Bearish reversal",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 1,
+      "Doji_N": 100,
+      "Control_N": 1007,
+      "Doji_Success_Pct": 47.0,
+      "Control_Success_Pct": 47.86495,
+      "Advantage_pp": -0.86495,
+      "Doji_Avg_Return_Pct": -0.04276,
+      "Control_Avg_Return_Pct": -0.01236
+    },
+    {
+      "Scenario": "Bullish continuation",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 1,
+      "Doji_N": 100,
+      "Control_N": 1007,
+      "Doji_Success_Pct": 53.0,
+      "Control_Success_Pct": 52.03575,
+      "Advantage_pp": 0.96425,
+      "Doji_Avg_Return_Pct": -0.04276,
+      "Control_Avg_Return_Pct": -0.01236
+    },
+    {
+      "Scenario": "Bearish continuation",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 1,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 40.0,
+      "Control_Success_Pct": 43.5412,
+      "Advantage_pp": -3.5412,
+      "Doji_Avg_Return_Pct": 0.28681,
+      "Control_Avg_Return_Pct": 0.13278
+    },
+    {
+      "Scenario": "Bullish reversal",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 3,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 56.25,
+      "Control_Success_Pct": 57.7951,
+      "Advantage_pp": -1.5451,
+      "Doji_Avg_Return_Pct": 0.34834,
+      "Control_Avg_Return_Pct": 0.34059
+    },
+    {
+      "Scenario": "Bearish reversal",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 3,
+      "Doji_N": 100,
+      "Control_N": 1007,
+      "Doji_Success_Pct": 46.0,
+      "Control_Success_Pct": 44.8858,
+      "Advantage_pp": 1.1142,
+      "Doji_Avg_Return_Pct": -0.14251,
+      "Control_Avg_Return_Pct": -0.02603
+    },
+    {
+      "Scenario": "Bullish continuation",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 3,
+      "Doji_N": 100,
+      "Control_N": 1007,
+      "Doji_Success_Pct": 53.0,
+      "Control_Success_Pct": 55.0149,
+      "Advantage_pp": -2.0149,
+      "Doji_Avg_Return_Pct": -0.14251,
+      "Control_Avg_Return_Pct": -0.02603
+    },
+    {
+      "Scenario": "Bearish continuation",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 3,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 42.5,
+      "Control_Success_Pct": 41.98218,
+      "Advantage_pp": 0.51782,
+      "Doji_Avg_Return_Pct": 0.34834,
+      "Control_Avg_Return_Pct": 0.34059
+    },
+    {
+      "Scenario": "Bullish reversal",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 5,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 60.0,
+      "Control_Success_Pct": 59.35412,
+      "Advantage_pp": 0.64588,
+      "Doji_Avg_Return_Pct": 0.75274,
+      "Control_Avg_Return_Pct": 0.53617
+    },
+    {
+      "Scenario": "Bearish reversal",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 5,
+      "Doji_N": 100,
+      "Control_N": 1007,
+      "Doji_Success_Pct": 40.0,
+      "Control_Success_Pct": 43.19762,
+      "Advantage_pp": -3.19762,
+      "Doji_Avg_Return_Pct": -0.06692,
+      "Control_Avg_Return_Pct": 0.04276
+    },
+    {
+      "Scenario": "Bullish continuation",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 5,
+      "Doji_N": 100,
+      "Control_N": 1007,
+      "Doji_Success_Pct": 60.0,
+      "Control_Success_Pct": 56.80238,
+      "Advantage_pp": 3.19762,
+      "Doji_Avg_Return_Pct": -0.06692,
+      "Control_Avg_Return_Pct": 0.04276
+    },
+    {
+      "Scenario": "Bearish continuation",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 5,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 40.0,
+      "Control_Success_Pct": 40.53452,
+      "Advantage_pp": -0.53452,
+      "Doji_Avg_Return_Pct": 0.75274,
+      "Control_Avg_Return_Pct": 0.53617
+    },
+    {
+      "Scenario": "Bullish reversal",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 10,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 55.0,
+      "Control_Success_Pct": 57.34967,
+      "Advantage_pp": -2.34967,
+      "Doji_Avg_Return_Pct": 0.85424,
+      "Control_Avg_Return_Pct": 0.63608
+    },
+    {
+      "Scenario": "Bearish reversal",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 10,
+      "Doji_N": 100,
+      "Control_N": 1006,
+      "Doji_Success_Pct": 40.0,
+      "Control_Success_Pct": 38.9662,
+      "Advantage_pp": 1.0338,
+      "Doji_Avg_Return_Pct": 0.04519,
+      "Control_Avg_Return_Pct": 0.25213
+    },
+    {
+      "Scenario": "Bullish continuation",
+      "Prior_Trend": "Uptrend",
+      "Horizon": 10,
+      "Doji_N": 100,
+      "Control_N": 1006,
+      "Doji_Success_Pct": 60.0,
+      "Control_Success_Pct": 60.93439,
+      "Advantage_pp": -0.93439,
+      "Doji_Avg_Return_Pct": 0.04519,
+      "Control_Avg_Return_Pct": 0.25213
+    },
+    {
+      "Scenario": "Bearish continuation",
+      "Prior_Trend": "Downtrend",
+      "Horizon": 10,
+      "Doji_N": 80,
+      "Control_N": 898,
+      "Doji_Success_Pct": 45.0,
+      "Control_Success_Pct": 42.65033,
+      "Advantage_pp": 2.34967,
+      "Doji_Avg_Return_Pct": 0.85424,
+      "Control_Avg_Return_Pct": 0.63608
+    }
+  ],
+  "bootstrap": [
+    {
+      "Scenario": "Bullish reversal",
+      "Observed_pp": -2.3496659242761675,
+      "CI_Low": -13.298343637026427,
+      "CI_High": 8.797235244222456,
+      "Bootstrap_Replicates": 2000,
+      "Block_Length": 20
+    },
+    {
+      "Scenario": "Bearish reversal",
+      "Observed_pp": 1.0337972166998055,
+      "CI_Low": -8.642018605701814,
+      "CI_High": 10.41442425635796,
+      "Bootstrap_Replicates": 2000,
+      "Block_Length": 20
+    },
+    {
+      "Scenario": "Bullish continuation",
+      "Observed_pp": -0.9343936381709717,
+      "CI_Low": -10.27280596313737,
+      "CI_High": 8.387951085965522,
+      "Bootstrap_Replicates": 2000,
+      "Block_Length": 20
+    },
+    {
+      "Scenario": "Bearish continuation",
+      "Observed_pp": 2.349665924276173,
+      "CI_Low": -8.6730181044614,
+      "CI_High": 14.063344297793895,
+      "Bootstrap_Replicates": 2000,
+      "Block_Length": 20
+    }
+  ]
+}

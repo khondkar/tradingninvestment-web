@@ -1,0 +1,352 @@
+{
+  "decades": [
+    {
+      "Period": "2000\u20132009",
+      "Horizon": 1,
+      "Doji_N": 231,
+      "Doji_Avg_Return": -0.0661202835124755,
+      "SPY_Avg_Return": 6.513316462620822e-05,
+      "Doji_Win_Rate": 51.08225108225109,
+      "SPY_Win_Rate": 52.644135188866805
+    },
+    {
+      "Period": "2000\u20132009",
+      "Horizon": 3,
+      "Doji_N": 231,
+      "Doji_Avg_Return": 0.0445032020584851,
+      "SPY_Avg_Return": -0.0013104776121744,
+      "Doji_Win_Rate": 54.11255411255412,
+      "SPY_Win_Rate": 53.04174950298211
+    },
+    {
+      "Period": "2000\u20132009",
+      "Horizon": 5,
+      "Doji_N": 231,
+      "Doji_Avg_Return": -0.1205293883264302,
+      "SPY_Avg_Return": -0.0040906372701291,
+      "Doji_Win_Rate": 50.21645021645021,
+      "SPY_Win_Rate": 52.32604373757456
+    },
+    {
+      "Period": "2000\u20132009",
+      "Horizon": 10,
+      "Doji_N": 231,
+      "Doji_Avg_Return": 0.0813582370261847,
+      "SPY_Avg_Return": -0.0194184401131197,
+      "Doji_Win_Rate": 58.00865800865801,
+      "SPY_Win_Rate": 54.035785288270375
+    },
+    {
+      "Period": "2010\u20132019",
+      "Horizon": 1,
+      "Doji_N": 279,
+      "Doji_Avg_Return": 0.0692789043731025,
+      "SPY_Avg_Return": 0.0461886158516363,
+      "Doji_Win_Rate": 55.91397849462365,
+      "SPY_Win_Rate": 54.968203497615264
+    },
+    {
+      "Period": "2010\u20132019",
+      "Horizon": 3,
+      "Doji_N": 279,
+      "Doji_Avg_Return": 0.2122727787869347,
+      "SPY_Avg_Return": 0.1372245160385658,
+      "Doji_Win_Rate": 62.72401433691756,
+      "SPY_Win_Rate": 59.85691573926868
+    },
+    {
+      "Period": "2010\u20132019",
+      "Horizon": 5,
+      "Doji_N": 279,
+      "Doji_Avg_Return": 0.35275702804845,
+      "SPY_Avg_Return": 0.2273090273199904,
+      "Doji_Win_Rate": 62.72401433691756,
+      "SPY_Win_Rate": 60.651828298887125
+    },
+    {
+      "Period": "2010\u20132019",
+      "Horizon": 10,
+      "Doji_N": 279,
+      "Doji_Avg_Return": 0.7246305807497739,
+      "SPY_Avg_Return": 0.4515939873885463,
+      "Doji_Win_Rate": 69.17562724014337,
+      "SPY_Win_Rate": 63.51351351351351
+    },
+    {
+      "Period": "2020\u20132026",
+      "Horizon": 1,
+      "Doji_N": 166,
+      "Doji_Avg_Return": 0.0934928857658543,
+      "SPY_Avg_Return": 0.0584280952653193,
+      "Doji_Win_Rate": 56.024096385542165,
+      "SPY_Win_Rate": 54.486422668240856
+    },
+    {
+      "Period": "2020\u20132026",
+      "Horizon": 3,
+      "Doji_N": 166,
+      "Doji_Avg_Return": 0.0439307796437761,
+      "SPY_Avg_Return": 0.1735384922679213,
+      "Doji_Win_Rate": 54.81927710843374,
+      "SPY_Win_Rate": 58.39243498817967
+    },
+    {
+      "Period": "2020\u20132026",
+      "Horizon": 5,
+      "Doji_N": 166,
+      "Doji_Avg_Return": 0.3299930090699806,
+      "SPY_Avg_Return": 0.2887840589314016,
+      "Doji_Win_Rate": 59.63855421686747,
+      "SPY_Win_Rate": 59.8224852071006
+    },
+    {
+      "Period": "2020\u20132026",
+      "Horizon": 10,
+      "Doji_N": 165,
+      "Doji_Avg_Return": 0.4274617812402648,
+      "SPY_Avg_Return": 0.575020801187895,
+      "Doji_Win_Rate": 65.45454545454545,
+      "SPY_Win_Rate": 63.26409495548961
+    }
+  ],
+  "trend": [
+    {
+      "Regime": "Downtrend",
+      "Horizon": 5,
+      "Doji_N": 80,
+      "Baseline_N": 978,
+      "Doji_Avg": 0.7527409311365711,
+      "Baseline_Avg": 0.5538865750393893,
+      "Doji_Win": 60.0,
+      "Baseline_Win": 59.40695296523517
+    },
+    {
+      "Regime": "Downtrend",
+      "Horizon": 10,
+      "Doji_N": 80,
+      "Baseline_N": 978,
+      "Doji_Avg": 0.8542420361612763,
+      "Baseline_Avg": 0.6539236837295321,
+      "Doji_Win": 55.00000000000001,
+      "Baseline_Win": 57.15746421267893
+    },
+    {
+      "Regime": "Neutral",
+      "Horizon": 5,
+      "Doji_N": 495,
+      "Baseline_N": 4631,
+      "Doji_Avg": 0.1406881757396079,
+      "Baseline_Avg": 0.0991907020070725,
+      "Doji_Win": 56.76767676767677,
+      "Baseline_Win": 56.89915784927662
+    },
+    {
+      "Regime": "Neutral",
+      "Horizon": 10,
+      "Doji_N": 494,
+      "Baseline_N": 4627,
+      "Doji_Avg": 0.4357189826067898,
+      "Baseline_Avg": 0.2482382295248551,
+      "Doji_Win": 66.80161943319838,
+      "Baseline_Win": 60.233412578344506
+    },
+    {
+      "Regime": "Uptrend",
+      "Horizon": 5,
+      "Doji_N": 100,
+      "Baseline_N": 1107,
+      "Doji_Avg": -0.0669165985430265,
+      "Baseline_Avg": 0.0328536335468676,
+      "Doji_Win": 60.0,
+      "Baseline_Win": 57.091237579042456
+    },
+    {
+      "Regime": "Uptrend",
+      "Horizon": 10,
+      "Doji_N": 100,
+      "Baseline_N": 1106,
+      "Doji_Avg": 0.0451948124336591,
+      "Baseline_Avg": 0.2334208068777571,
+      "Doji_Win": 60.0,
+      "Baseline_Win": 60.8499095840868
+    }
+  ],
+  "confirmation": [
+    {
+      "Signal": "Bullish Doji Confirmation",
+      "Horizon": 1,
+      "N": 239,
+      "Baseline_N": 2131,
+      "Signal_Avg_Return": 0.0026952429476964,
+      "Baseline_Avg_Return": -0.02745700025173,
+      "Signal_Directional_Win_Rate": 57.32217573221757,
+      "Baseline_Directional_Win_Rate": 52.698263725950255
+    },
+    {
+      "Signal": "Bullish Doji Confirmation",
+      "Horizon": 3,
+      "N": 239,
+      "Baseline_N": 2131,
+      "Signal_Avg_Return": -0.0258912152968813,
+      "Baseline_Avg_Return": 0.0079290431181013,
+      "Signal_Directional_Win_Rate": 56.48535564853556,
+      "Baseline_Directional_Win_Rate": 56.54622243078367
+    },
+    {
+      "Signal": "Bullish Doji Confirmation",
+      "Horizon": 5,
+      "N": 239,
+      "Baseline_N": 2130,
+      "Signal_Avg_Return": 0.0554782005448329,
+      "Baseline_Avg_Return": 0.0416655303054117,
+      "Signal_Directional_Win_Rate": 55.23012552301255,
+      "Baseline_Directional_Win_Rate": 56.52582159624413
+    },
+    {
+      "Signal": "Bullish Doji Confirmation",
+      "Horizon": 10,
+      "N": 238,
+      "Baseline_N": 2128,
+      "Signal_Avg_Return": 0.3420352102726215,
+      "Baseline_Avg_Return": 0.1799513707699703,
+      "Signal_Directional_Win_Rate": 62.18487394957983,
+      "Baseline_Directional_Win_Rate": 60.6203007518797
+    },
+    {
+      "Signal": "Bearish Doji Confirmation",
+      "Horizon": 1,
+      "N": 185,
+      "Baseline_N": 1594,
+      "Signal_Avg_Return": 0.1498601711893342,
+      "Baseline_Avg_Return": 0.1198922199622949,
+      "Signal_Directional_Win_Rate": 40.0,
+      "Baseline_Directional_Win_Rate": 43.66373902132999
+    },
+    {
+      "Signal": "Bearish Doji Confirmation",
+      "Horizon": 3,
+      "N": 185,
+      "Baseline_N": 1593,
+      "Signal_Avg_Return": 0.3305694740835326,
+      "Baseline_Avg_Return": 0.2419409291560537,
+      "Signal_Directional_Win_Rate": 40.0,
+      "Baseline_Directional_Win_Rate": 42.31010671688637
+    },
+    {
+      "Signal": "Bearish Doji Confirmation",
+      "Horizon": 5,
+      "N": 185,
+      "Baseline_N": 1593,
+      "Signal_Avg_Return": 0.5201409100699833,
+      "Baseline_Avg_Return": 0.3856279647110474,
+      "Signal_Directional_Win_Rate": 32.432432432432435,
+      "Baseline_Directional_Win_Rate": 40.11299435028249
+    },
+    {
+      "Signal": "Bearish Doji Confirmation",
+      "Horizon": 10,
+      "N": 185,
+      "Baseline_N": 1592,
+      "Signal_Avg_Return": 0.5667877911224115,
+      "Baseline_Avg_Return": 0.5879880473854481,
+      "Signal_Directional_Win_Rate": 39.45945945945946,
+      "Baseline_Directional_Win_Rate": 38.94472361809046
+    }
+  ],
+  "stability": [
+    {
+      "Period": "2000-2009",
+      "Doji_N": 158,
+      "Control_N": 1459,
+      "Doji_Positive_Rate": 63.29113924050633,
+      "Control_Positive_Rate": 53.73543522960932,
+      "Advantage_pp": 9.555704010897015,
+      "Doji_Avg_Return": 0.2118759811807572,
+      "Control_Avg_Return": -0.0854419674901768
+    },
+    {
+      "Period": "2010-2019",
+      "Doji_N": 215,
+      "Control_N": 1675,
+      "Doji_Positive_Rate": 69.30232558139535,
+      "Control_Positive_Rate": 62.02985074626866,
+      "Advantage_pp": 7.272474835126694,
+      "Doji_Avg_Return": 0.6371878674089504,
+      "Control_Avg_Return": 0.3371560445880686
+    },
+    {
+      "Period": "2020-2026",
+      "Doji_N": 121,
+      "Control_N": 999,
+      "Doji_Positive_Rate": 66.94214876033058,
+      "Control_Positive_Rate": 63.46346346346346,
+      "Advantage_pp": 3.47868529686712,
+      "Doji_Avg_Return": 0.3700279412253734,
+      "Control_Avg_Return": 0.4937703368237278
+    }
+  ],
+  "statistics": [
+    {
+      "Test": "Neutral Doji: 10d positive rate",
+      "Signal_N": 494,
+      "Difference_pp": 7.353276824923519,
+      "CI_Low": 3.0396729274387724,
+      "CI_High": 11.865195670904644,
+      "Bootstrap_P": 0.0014992503748125,
+      "Bootstrap_Replicates": 2000
+    },
+    {
+      "Test": "Bull confirmed: 1d positive rate",
+      "Signal_N": 239,
+      "Difference_pp": 5.208010827354997,
+      "CI_Low": -1.948394187834473,
+      "CI_High": 11.703388742384451,
+      "Bootstrap_P": 0.1394302848575712,
+      "Bootstrap_Replicates": 2000
+    },
+    {
+      "Test": "Bear confirmed: 5d downside rate",
+      "Signal_N": 185,
+      "Difference_pp": -8.689726658476658,
+      "CI_Low": -15.99326773789321,
+      "CI_High": -1.2967380400695705,
+      "Bootstrap_P": 0.0219890054972513,
+      "Bootstrap_Replicates": 2000
+    },
+    {
+      "Test": "Bear confirmed: 5d average return",
+      "Signal_N": 185,
+      "Difference_pp": 0.1521868763897619,
+      "CI_Low": -0.2818700150209527,
+      "CI_High": 0.565087825843493,
+      "Bootstrap_P": 0.4742628685657171,
+      "Bootstrap_Replicates": 2000
+    }
+  ],
+  "bootstrap": [
+    {
+      "Block_Length": 10,
+      "Observed_Advantage_pp": 7.353276824923515,
+      "CI_Low": 2.9944611821123197,
+      "CI_High": 11.56765433834952,
+      "Approx_P": 0.0013328890369876,
+      "Bootstrap_Replicates": 3000
+    },
+    {
+      "Block_Length": 20,
+      "Observed_Advantage_pp": 7.353276824923515,
+      "CI_Low": 3.034204184683555,
+      "CI_High": 11.678201423211796,
+      "Approx_P": 0.0019993335554815,
+      "Bootstrap_Replicates": 3000
+    },
+    {
+      "Block_Length": 40,
+      "Observed_Advantage_pp": 7.353276824923515,
+      "CI_Low": 3.062616258821324,
+      "CI_High": 11.490932495158,
+      "Approx_P": 0.0003332222592469,
+      "Bootstrap_Replicates": 3000
+    }
+  ]
+}

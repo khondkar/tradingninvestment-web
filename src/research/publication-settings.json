@@ -61,5 +61,8 @@
   },
   "/stock-market-crash-of-1929/": {
     "homepagePlacement": "regular"
+  },
+  "/research/doji-candlestick-spy-26-year-study/": {
+    "homepagePlacement": "featured"
   }
 }

@@ -44,6 +44,14 @@ Subject: Berkshire Hathaway Inc.
 Symbol: BRK.B
 Description: Explore Berkshire Hathaway BRK.B historical returns, long-term performance, growth of $10,000, rolling 10-year performance, and comparison with the S&P 500.
 
+## Does the Doji Candlestick Really Work? A 26-Year SPY Study
+
+URL: https://tradingninvestment.com/research/doji-candlestick-spy-26-year-study/
+Type: article
+Subject: SPY Doji Candlestick Research
+Symbol: SPY
+Description: Original empirical research on Doji candlestick performance across 6,726 SPY trading sessions, including market regimes, confirmation signals, and bootstrap validation.
+
 ## Goldman Sachs (GS) Stock Returns
 
 URL: https://tradingninvestment.com/gs-stock-returns/

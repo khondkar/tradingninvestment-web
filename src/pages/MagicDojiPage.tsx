@@ -1,3 +1,5 @@
+import '../components/research/doji/SPYDojiCharts.css'
+import { DojiUnconditionalChart } from '../components/research/doji/SPYDojiCharts'
 import { useEffect } from 'react'
 import './MagicDojiPage.css'
 
@@ -16,7 +18,87 @@ export default function MagicDojiPage() {
   return <main className="tni-doji">
     <nav className="tni-doji-breadcrumb" aria-label="Breadcrumb"><a href="/research/">Research</a><span>›</span><a href="/research/trading/">Technical Analysis</a><span>›</span><a href="/research/trading/candlestick-patterns/">Candlestick Patterns</a></nav>
     <article><header><span className="tni-doji-eyebrow">TNI / TECHNICAL ANALYSIS</span><h1>Magic Doji or Myth and How to Use Doji for Stock Trading</h1><p className="tni-doji-byline">By <a href="/about/" rel="author">Kamal Khondkar</a> · Originally published February 16, 2016 · Restored from the TNI archive</p><p className="tni-doji-dek">Understanding Doji formation, market indecision, confirmation, and bullish and bearish trading setups.</p></header>
+    <aside className="tni-doji-research-link">
+      <span>NEW / ORIGINAL QUANTITATIVE RESEARCH</span>
+      <h2>Does the Doji Candlestick Really Work?</h2>
+      <p>
+        We tested 676 Doji patterns across 26 years of SPY trading
+        history. Explore the evidence, market conditions, and seven
+        original research figures.
+      </p>
+      <a href="/research/doji-candlestick-spy-26-year-study/">
+        Explore the 26-year empirical study →
+      </a>
+    </aside>
     <div className="tni-doji-body" dangerouslySetInnerHTML={{ __html: articleHtml }} />
+    <section className="tni-doji-study-excerpt">
+      <span className="tni-doji-study-eyebrow">
+        TNI ORIGINAL RESEARCH · 2000–2026
+      </span>
+
+      <h2>Does a Doji Really Work? Evidence From 26 Years of SPY Data</h2>
+
+      <p>
+        First, does the Doji alone provide an advantage?
+        Across the full sample, Doji sessions showed only small
+        differences from the broader market at short horizons.
+        The largest observed directional difference appeared
+        over ten trading sessions.
+      </p>
+
+      <DojiUnconditionalChart />
+
+      <p>
+        Over ten trading sessions, 64.4% of Doji observations
+        were followed by positive SPY price returns, compared
+        with 59.9% across all sessions. This 4.54-percentage-point
+        difference is descriptive and does not establish
+        a profitable trading strategy.
+      </p>
+
+      <p>
+        The all-session comparison includes Doji sessions.
+        These results describe historical outcomes rather
+        than an independently validated trading signal.
+      </p>
+
+      <div className="tni-doji-study-continue">
+        <span>CONTINUE READING · FULL EMPIRICAL STUDY</span>
+        <h3>Does the Doji Candlestick Really Work?</h3>
+        <p>
+          Explore 6,726 SPY sessions, market-regime effects,
+          confirmation signals, reversal versus continuation,
+          and bootstrap confidence intervals.
+        </p>
+        <a href="/research/doji-candlestick-spy-26-year-study/">
+          Continue reading the 26-year study →
+        </a>
+      </div>
+    </section>
+    <section className="tni-doji-data-license">
+      <h2>Data sources &amp; licensing</h2>
+      <p>
+        <strong>Empirical study data:</strong> The SPY research
+        excerpt above uses historical market data sourced from
+        Yahoo Finance, covering January 3, 2000 through
+        September 30, 2026.
+      </p>
+      <p>
+        <strong>Original research:</strong> TradingNInvestment
+        produced the statistical analysis and research charts.
+        The historical candlestick illustrations in this educational
+        guide are separate from the SPY dataset.
+      </p>
+      <p>
+        <strong>Licensing:</strong> See the{' '}
+        <a href="/research-license/">
+          TNI Research &amp; Data License
+        </a>
+        {' '}for information about research and visualization reuse.
+        Third-party market data remains subject to its provider's
+        applicable terms.
+      </p>
+    </section>
     <footer className="tni-doji-footer"><a href="/research/trading/candlestick-patterns/">← More candlestick research</a></footer></article>
   </main>
 }

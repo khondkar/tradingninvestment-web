@@ -1,0 +1,17 @@
+Scenario,Prior_Trend,Horizon,Doji_N,Control_N,Doji_Success_Pct,Control_Success_Pct,Advantage_pp,Doji_Avg_Return_Pct,Control_Avg_Return_Pct
+Bullish reversal,Downtrend,1,80,898,60.00000,56.45880,3.54120,0.28681,0.13278
+Bearish reversal,Uptrend,1,100,1007,47.00000,47.86495,-0.86495,-0.04276,-0.01236
+Bullish continuation,Uptrend,1,100,1007,53.00000,52.03575,0.96425,-0.04276,-0.01236
+Bearish continuation,Downtrend,1,80,898,40.00000,43.54120,-3.54120,0.28681,0.13278
+Bullish reversal,Downtrend,3,80,898,56.25000,57.79510,-1.54510,0.34834,0.34059
+Bearish reversal,Uptrend,3,100,1007,46.00000,44.88580,1.11420,-0.14251,-0.02603
+Bullish continuation,Uptrend,3,100,1007,53.00000,55.01490,-2.01490,-0.14251,-0.02603
+Bearish continuation,Downtrend,3,80,898,42.50000,41.98218,0.51782,0.34834,0.34059
+Bullish reversal,Downtrend,5,80,898,60.00000,59.35412,0.64588,0.75274,0.53617
+Bearish reversal,Uptrend,5,100,1007,40.00000,43.19762,-3.19762,-0.06692,0.04276
+Bullish continuation,Uptrend,5,100,1007,60.00000,56.80238,3.19762,-0.06692,0.04276
+Bearish continuation,Downtrend,5,80,898,40.00000,40.53452,-0.53452,0.75274,0.53617
+Bullish reversal,Downtrend,10,80,898,55.00000,57.34967,-2.34967,0.85424,0.63608
+Bearish reversal,Uptrend,10,100,1006,40.00000,38.96620,1.03380,0.04519,0.25213
+Bullish continuation,Uptrend,10,100,1006,60.00000,60.93439,-0.93439,0.04519,0.25213
+Bearish continuation,Downtrend,10,80,898,45.00000,42.65033,2.34967,0.85424,0.63608

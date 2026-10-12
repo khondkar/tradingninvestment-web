@@ -18,6 +18,17 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'doji-candlestick-spy-26-year-study',
+    path: '/research/doji-candlestick-spy-26-year-study/',
+    title: 'Does the Doji Candlestick Really Work? A 26-Year SPY Study',
+    description: 'Original empirical research on Doji candlestick performance across 6,726 SPY trading sessions, including market regimes, confirmation signals, and bootstrap validation.',
+    name: 'SPY Doji Candlestick Research',
+    symbol: 'SPY',
+    categories: ['technical-analysis', 'trading', 'candlestick-patterns', 'etf', 'sp500'],
+    kind: 'article',
+    publishedAt: '2026-10-11',
+  },
+  {
     slug: 'magic-doji-or-myth-and-how-to-use-doji-for-stock-trading',
     path: '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading/',
     title: 'Magic Doji or Myth and How to Use Doji for Stock Trading',
