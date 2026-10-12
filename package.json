@@ -13,7 +13,8 @@
     "validate:research-authors": "node scripts/validate-research-authors.mjs",
     "generate:ai-discovery": "node scripts/generate-ai-discovery.mjs",
     "predev": "node scripts/generate-performance-data.mjs",
-    "check:performance": "node scripts/check-performance-data.mjs && node scripts/check-performance-budget.mjs"
+    "check:performance": "node scripts/check-performance-data.mjs && node scripts/check-performance-budget.mjs",
+    "postbuild": "node scripts/restore-approved-doji-og.mjs"
   },
   "dependencies": {
     "d3": "^7.9.0",

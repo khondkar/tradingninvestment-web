@@ -417,3 +417,23 @@
     padding-bottom: 0;
   }
 }
+
+/* Mobile navigation: native details remains usable before hydration. */
+.tni-mobile-menu { display: none; }
+@media (max-width: 900px) {
+  .site-header { position: relative; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; min-height: 68px; box-sizing: border-box; }
+  .site-header .desktop-nav, .site-header .header-actions { display: none; }
+  .site-header .brand { min-width: 0; gap: 9px; padding: 0; }
+  .site-header .brand-mark { flex-shrink: 0; font-size: 20px; }
+  .site-header .brand-copy strong { font-size: 14px; line-height: 1.3; }
+  .site-header .brand-copy small { font-size: 7px; letter-spacing: .09em; }
+  .tni-mobile-menu { display: block; flex-shrink: 0; }
+  .tni-mobile-menu summary { display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; border: 1px solid #dce5e8; border-radius: 12px; padding: 12px 14px; color: #172d35; background: #fff; font-size: 14px; font-weight: 650; }
+  .tni-mobile-menu summary::-webkit-details-marker { display: none; }
+  .tni-mobile-menu[open] summary { background: #edf7f4; border-color: #90bcb0; }
+  .tni-mobile-menu-panel { position: absolute; top: calc(100% + 6px); left: 14px; right: 14px; padding: 10px; display: grid; gap: 4px; border: 1px solid #dce5e8; border-radius: 18px; background: #fff; box-shadow: 0 18px 50px #17382c26; max-height: 75vh; overflow-y: auto; }
+  .tni-mobile-menu-panel a, .tni-mobile-menu-panel button { display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; min-height: 48px; width: 100%; padding: 12px 14px; border: 0; border-radius: 10px; background: transparent; color: #17352f; font: inherit; font-size: 15px; text-align: left; text-decoration: none; cursor: pointer; }
+  .tni-mobile-menu-panel a:hover, .tni-mobile-menu-panel button:hover { background: #f0f6f4; }
+  .tni-mobile-menu-panel .tni-mobile-launch { background: #173f35; color: white; }
+  .tni-mobile-menu :focus-visible { outline: 3px solid #168b80; outline-offset: 3px; }
+}

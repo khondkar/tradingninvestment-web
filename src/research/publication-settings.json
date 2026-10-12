@@ -6,7 +6,7 @@
     "homepagePlacement": "featured"
   },
   "/nvda-returns/": {
-    "homepagePlacement": "featured"
+    "homepagePlacement": "none"
   },
   "/nasdaq-historical-annual-returns/": {
     "homepagePlacement": "featured"
@@ -48,7 +48,7 @@
     "homepagePlacement": "regular"
   },
   "/nke-stock-returns/": {
-    "homepagePlacement": "regular"
+    "homepagePlacement": "featured"
   },
   "/look-berkshire-hathaway-stock-brk-b-berkshire-hathaway-performance-vs-sp-500/": {
     "homepagePlacement": "regular"

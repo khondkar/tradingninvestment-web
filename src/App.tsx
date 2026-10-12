@@ -264,41 +264,25 @@ function Header({
             <span>→</span>
           </a>
         </div>
+        <details className="tni-mobile-menu" onKeyDown={(event) => {
+          if (event.key === 'Escape') {
+            event.currentTarget.open = false
+            event.currentTarget.querySelector('summary')?.focus()
+          }
+        }}>
+          <summary>Menu <span aria-hidden="true">⌄</span></summary>
+          <nav className="tni-mobile-menu-panel" aria-label="Mobile navigation">
+            <a href="/">Home</a>
+            <a href="/stock-market-today/">Stock Market Today <span aria-hidden="true">↗</span></a>
+            <a href="/research/">Research</a>
+            <a href="/about/">About</a>
+            <button type="button" onClick={shareCurrentPage}>Share this page</button>
+            <a className="tni-mobile-launch" href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer">Launch TNI <span aria-hidden="true">↗</span></a>
+          </nav>
+        </details>
       </header>
 
-      {/* ====================================================================
-          MOBILE BOTTOM NAVIGATION
-          ==================================================================== */}
 
-      <nav className="mobile-bottom-nav">
-        <button
-          type="button"
-          className={pathname === '/' && page === 'research' ? 'active' : ''}
-          onClick={() => navigate('research')}
-        >
-          Home
-        </button>
-
-        <button type="button" className={pathname.startsWith('/research/') ? 'active' : ''} onClick={() => window.location.assign('/research/')}>Research</button>
-
-        <a className="mobile-tni-product" href="https://app.tradingninvestment.com/live/news" aria-label="Open TNI Intelligence">✦ TNI</a>
-
-        <button
-          type="button"
-          className={page === 'market' ? 'active' : ''}
-          onClick={() => window.location.assign('/stock-market-today/')}
-        >
-          Market
-        </button>
-
-        <button
-          type="button"
-          className={page === 'about' ? 'active' : ''}
-          onClick={() => navigate('about')}
-        >
-          About
-        </button>
-      </nav>
     </>
   )
 }

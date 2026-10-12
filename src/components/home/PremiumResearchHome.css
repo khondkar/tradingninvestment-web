@@ -729,3 +729,13 @@
 /* Every selected homepage card uses its article-specific research identity. */
 .tni-home-publication-og{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:contain;border-radius:10px;background:#f3f5ee;margin-bottom:16px}
 .tni-home-features[hidden]{display:none}
+
+/* Preserve the complete OG artwork at every screen width. */
+.tni-home-feature > *, .tni-home-feature-visual { min-width: 0; }
+.tni-home-feature-visual { overflow: hidden; }
+.tni-home-feature-visual .tni-home-feature-og { display: block; width: 100%; max-width: 100%; height: auto; object-fit: contain; margin: auto; }
+@media (max-width: 720px) {
+  .tni-home-feature { display: flex; flex-direction: column; }
+  .tni-home-feature .tni-home-feature-visual { min-height: 0; height: auto; padding: 14px; box-sizing: border-box; width: 100%; }
+  .tni-home-feature-copy { min-width: 0; overflow-wrap: anywhere; }
+}

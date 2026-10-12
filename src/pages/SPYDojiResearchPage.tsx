@@ -98,6 +98,10 @@ export default function SPYDojiResearchPage() {
           </div>
         </section>
 
+        <section id="doji-period-chart" aria-label="Doji results across market periods">
+          <DojiDecadeChart />
+        </section>
+
         <div className="spy-doji-article-body">
           <section>
             <h2>The question behind the Doji</h2>
@@ -226,7 +230,7 @@ export default function SPYDojiResearchPage() {
               points higher than the corresponding non-Doji control.
             </p>
 
-            <DojiDecadeChart />
+            <p><a href="#doji-period-chart">View the comparison across market periods ↑</a></p>
 
             <p>
               The directional advantage appeared in all three
