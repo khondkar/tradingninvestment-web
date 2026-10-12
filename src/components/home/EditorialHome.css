@@ -1,0 +1,118 @@
+/* TNI editorial homepage: static layout, system fonts, no animation dependency. */
+.tni-editorial { background: #fff; color: #071d3f; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.tni-editorial .editorial-wrap { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+.tni-editorial a { text-decoration: none; }
+.tni-editorial a:focus-visible { outline: 3px solid #0878ff; outline-offset: 5px; border-radius: 4px; }
+.tni-editorial .editorial-hero { padding-block: 70px 36px; }
+.tni-editorial .editorial-eyebrow { max-width: 650px; margin: 0 0 20px; color: #0063d8; font-size: 11px; line-height: 1.8; letter-spacing: .17em; font-weight: 650; }
+.tni-editorial h1 { margin: 0; max-width: 1000px; font: 500 clamp(42px, 5.5vw, 74px)/1.04 Georgia, serif; letter-spacing: -.045em; color: #071d3f; }
+.tni-editorial .editorial-deck { margin: 20px 0 26px; color: #60738a; font-size: clamp(17px, 2vw, 23px); line-height: 1.5; }
+.tni-editorial .editorial-button { display: inline-flex; align-items: center; gap: 25px; min-height: 48px; padding: 0 24px; border-radius: 28px; background: #071d3f; color: #fff; font-size: 15px; }
+.tni-editorial .editorial-market { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 24px 28px; background: #edf6ff; border-radius: 16px; color: #071d3f; }
+.tni-editorial .editorial-market strong { display: block; font-size: 21px; font-weight: 600; }
+.tni-editorial .editorial-market small { display: block; margin-top: 5px; font-size: 14px; color: #526a85; }
+.tni-editorial .editorial-market > span:last-child { font-size: 26px; color: #0063d8; }
+.tni-editorial .editorial-trust { padding: 32px 0; margin: 24px 0; border-block: 1px solid #dce6f0; }
+.tni-editorial h2 { font: 500 32px/1.16 Georgia, serif; letter-spacing: -.025em; color: #071d3f; margin: 0 0 20px; }
+.tni-editorial .editorial-citations { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.tni-editorial .editorial-citations a { display: flex; gap: 12px; align-items: center; color: #071d3f; min-height: 56px; }
+.tni-editorial .editorial-citations img { object-fit: contain; flex-shrink: 0; }
+.tni-editorial .editorial-citations strong { display: block; font-size: 14px; line-height: 1.45; font-weight: 600; }
+.tni-editorial .editorial-citations small { display: block; color: #5b7088; font-size: 12px; margin-top: 4px; }
+.tni-editorial .editorial-trust > p { font-size: 12px; color: #5b7088; margin: 23px 0 2px; }
+.tni-editorial .editorial-link { display: inline-flex; align-items: center; min-height: 44px; color: #0063d8; font-size: 15px; gap: 20px; }
+.tni-editorial .editorial-studies { display: grid; gap: 20px; }
+.tni-editorial .editorial-study { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 28px; padding: 32px; border-radius: 22px; background: #f0f7fd; border: 1px solid #e6eff7; }
+.tni-editorial .editorial-study > * { min-width: 0; }
+.tni-editorial .editorial-tag { display: inline-block; padding: 6px 11px; border-radius: 20px; background: #deedff; color: #005fcf; font-size: 10px; letter-spacing: .18em; font-weight: 650; margin-bottom: 17px; }
+.tni-editorial .editorial-study h2 { font-size: clamp(28px, 3vw, 39px); margin-bottom: 12px; }
+.tni-editorial .editorial-study h2 a { color: inherit; }
+.tni-editorial .editorial-study p { color: #526a85; font-size: 16px; line-height: 1.5; margin: 0 0 10px; }
+.tni-editorial .editorial-study-image { display: block; border-radius: 12px; overflow: hidden; aspect-ratio: 1200 / 630; background: #f6f9fd; }
+.tni-editorial .editorial-study-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.tni-editorial .editorial-browse { display: flex; justify-content: space-between; margin-top: 24px; padding-block: 12px; border-block: 1px solid #dce6f0; }
+.tni-editorial .editorial-more { padding-block: 36px; }
+.tni-editorial .editorial-more > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+.tni-editorial .editorial-more a { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 20px 0; border-bottom: 1px solid #e4ebf3; color: #071d3f; }
+.tni-editorial .editorial-more small { display: block; font-size: 10px; color: #5b7088; letter-spacing: .1em; margin-bottom: 8px; }
+.tni-editorial .editorial-more strong { display: block; font-size: 16px; line-height: 1.45; font-weight: 550; }
+@media(max-width: 900px) {
+ .tni-editorial .editorial-citations { grid-template-columns: 1fr 1fr; }
+ .tni-editorial .editorial-study { grid-template-columns: 1fr; gap: 18px; }
+}
+@media(max-width: 600px) {
+ .tni-editorial .editorial-wrap { width: calc(100% - 36px); }
+ .tni-editorial .editorial-hero { padding-block: 34px 28px; }
+ .tni-editorial h1 { font-size: clamp(38px, 10.8vw, 54px); }
+ .tni-editorial .editorial-eyebrow { font-size: 10px; letter-spacing: .12em; }
+ .tni-editorial .editorial-market { padding: 20px; }
+ .tni-editorial .editorial-market strong { font-size: 19px; }
+ .tni-editorial .editorial-trust { padding-block: 26px; }
+ .tni-editorial h2 { font-size: 28px; }
+ .tni-editorial .editorial-citations { gap: 14px; }
+ .tni-editorial .editorial-citations a { flex-direction: column; align-items: flex-start; gap: 8px; }
+ .tni-editorial .editorial-citations strong { font-size: 13px; }
+ .tni-editorial .editorial-study { padding: 22px 18px 18px; border-radius: 18px; }
+ .tni-editorial .editorial-study h2 { font-size: 31px; }
+ .tni-editorial .editorial-more > div { grid-template-columns: 1fr; }
+}
+
+/* Citation prominence and product access */
+.tni-editorial .editorial-hero-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+}
+.tni-editorial .editorial-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  color: #0063d8;
+  font-size: 16px;
+  font-weight: 600;
+}
+.tni-editorial .editorial-citations {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 28px;
+}
+.tni-editorial .editorial-citations a {
+  padding: 18px;
+  gap: 18px;
+  border: 1px solid #e0e9f2;
+  border-radius: 14px;
+  background: #fff;
+}
+.tni-editorial .editorial-citations img {
+  width: 72px;
+  height: 56px;
+  object-fit: contain;
+}
+.tni-editorial .editorial-citations strong {
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 650;
+}
+.tni-editorial .editorial-citations small {
+  font-size: 13px;
+  line-height: 1.5;
+}
+@media (max-width: 600px) {
+  .tni-editorial .editorial-citations {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .tni-editorial .editorial-citations a {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+  }
+  .tni-editorial .editorial-citations img {
+    width: 64px;
+    height: 48px;
+  }
+  .tni-editorial .editorial-citations strong {
+    font-size: 17px;
+  }
+}

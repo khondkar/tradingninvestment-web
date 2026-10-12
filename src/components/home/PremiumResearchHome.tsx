@@ -1,12 +1,5 @@
-import { researchHubs, researchItems } from '../../research/discovery'
-import TNIResearchIdentity from '../research/TNIResearchIdentity'
-import '../research/TNIResearchIdentity.css'
-
-const featured = researchItems.filter((item) => item.homepagePlacement === 'featured').map((item) => ({
-  path: item.path, label: `${item.name.toUpperCase()} / ORIGINAL RESEARCH`,
-  headline: item.title, intro: item.description, chartLabel: item.name,
-  chartDescription: 'Source and methodology in the full study.', image: item.image,
-}))
+import { researchItems } from '../../research/discovery'
+import './EditorialHome.css'
 
 const citations = [
   { name: 'Florida State University', detail: 'Law Review', logo: '/images/citations/fsu.svg', logoClass: 'fsu', href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/' },
@@ -15,60 +8,65 @@ const citations = [
   { name: 'NFP · An Aon Company', detail: 'Industry reference', logo: '/images/citations/nfp-aon.svg', href: 'https://webfiles2.nfp.com/webfiles/public/2020_emails/COVID-19/JH_three_insurance_opportunities.pdf' },
 ]
 
+
+const priorities = ['/research/doji-candlestick-spy-26-year-study/', '/average-stock-market-return/']
+const featured = researchItems.filter(item => item.homepagePlacement === 'featured').sort((a, b) => {
+  const rank = (path: string) => priorities.includes(path) ? priorities.indexOf(path) : 2
+  return rank(a.path) - rank(b.path)
+})
+const lead = featured.filter(item => priorities.includes(item.path))
+const more = researchItems.filter(item => item.homepagePlacement === 'regular' ||
+  (item.homepagePlacement === 'featured' && !priorities.includes(item.path)))
+
 export default function PremiumResearchHome() {
-  const remaining = researchItems.filter((item) => item.homepagePlacement === 'regular')
-  const topHubs = researchHubs.filter((hub) => ['/research/stocks/', '/research/indexes/', '/research/market-history/', '/research/market-risk/'].includes(hub.path))
-
-  return <main className="tni-home" id="top">
-    <section className="tni-home-hero tni-home-wrap">
-      <span className="tni-home-kicker">STOCK MARKET RESEARCH &amp; INVESTMENT INTELLIGENCE</span>
-      <h1>Understand the market.<br /><span>Go further with every answer.</span></h1>
-      <p className="tni-home-lead">Original research, interactive data, and clear paths from one question to the next. Start with the evidence that matters to you.</p>
-      <a className="tni-home-product" href="https://app.tradingninvestment.com/live/news" aria-label="Open TNI Intelligence market workspace">
-        <span><small>TNI INTELLIGENCE · THE PRODUCT</small><strong>Explore today’s market in one workspace.</strong><em>Live news, stock intelligence, and market tools</em></span><b aria-hidden="true">↗</b>
+  return <main className="tni-home tni-editorial" id="top">
+    <section className="editorial-hero editorial-wrap">
+      <p className="editorial-eyebrow">STOCK MARKET RESEARCH &amp; INVESTMENT INTELLIGENCE</p>
+      <h1>Understand the market.<br />Go further.</h1>
+      <p className="editorial-deck">Data. Evidence. Research. Decision.</p>
+      <div className="editorial-hero-links">
+        <a className="editorial-button" href="/research/">Explore research <span aria-hidden="true">↗</span></a>
+        <a className="editorial-product-link" href="https://app.tradingninvestment.com/live/news">Explore TNI Intelligence <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <div className="editorial-wrap">
+      <a className="editorial-market" href="/stock-market-today/">
+        <span><strong>Stock Market Today</strong><small>Your daily market perspective</small></span>
+        <span aria-hidden="true">→</span>
       </a>
-      <div className="tni-home-hero-actions"><a className="tni-home-primary" href={featured.length ? '#featured-research' : '/research/'}>Explore the research <span>↗</span></a><a href="/research/">Browse by topic →</a></div>
-    </section>
-
-    <section className="tni-home-trust" aria-labelledby="tni-home-trust-title"><div className="tni-home-wrap">
-      <span className="tni-home-kicker">RESEARCH WITH A RECORD</span>
-      <h2 id="tni-home-trust-title">Cited &amp; referenced by</h2>
-      <p>Explore the original references to see where TNI research has been cited or discussed. References are not endorsements.</p>
-      <div className="tni-home-citations">{citations.map((citation) => <a key={citation.name} href={citation.href} target="_blank" rel="noreferrer" aria-label={`Open ${citation.name} reference`}>
-        <span className={`tni-home-citation-logo ${'logoClass' in citation ? citation.logoClass : ''}`}><img src={citation.logo} alt="" loading="lazy" /></span><span className="tni-home-citation-copy"><strong>{citation.name}</strong><small>{citation.detail}</small></span><b aria-hidden="true">↗</b>
-      </a>)}</div>
-      <a className="tni-home-all-citations" href="https://app.tradingninvestment.com/research/citations">Explore All Citations <span aria-hidden="true">→</span></a>
-    </div></section>
-
-    <section hidden={featured.length === 0} className="tni-home-features tni-home-wrap" id="featured-research" aria-labelledby="tni-home-feature-title">
-      <div className="tni-home-section-head"><span className="tni-home-kicker">FEATURED RESEARCH</span><h2 id="tni-home-feature-title">Research worth spending time with.</h2><p>Interactive studies with transparent data sources and methodology.</p></div>
-      <div className="tni-home-feature-stack">{featured.map((study) => <article className="tni-home-feature" key={study.path}>
-        <div className="tni-home-feature-copy">
-          <TNIResearchIdentity compact />
-          <span className="tni-home-kicker">{study.label}</span>
-          <h3><a href={study.path}>{study.headline}</a></h3>
-          <p>{study.intro}</p>
-          <a className="tni-home-feature-link" href={study.path}>Explore the full study ↗</a>
-          <small>{study.chartDescription}</small>
-        </div>
-        <a
-          className="tni-home-feature-visual"
-          href={study.path}
-          aria-label={`Explore ${study.chartLabel} interactive returns`}
-        >
-          <img src={study.image} alt={`${study.chartLabel} TNI Research`} loading="lazy" className="tni-home-feature-og" />
-        </a>
-      </article>)}</div>
-    </section>
-
-    <section className="tni-home-topics" id="explore"><div className="tni-home-wrap">
-      <div className="tni-home-section-head"><span className="tni-home-kicker">FIND YOUR PATH</span><h2>Start anywhere. Keep exploring.</h2></div>
-      <div className="tni-home-topic-grid">{topHubs.map((hub) => <a key={hub.path} href={hub.path}><strong>{hub.title}</strong><span>{hub.description}</span><b aria-hidden="true">↗</b></a>)}</div>
-      <a className="tni-home-all-link" href="/research/">Explore the full research index ↗</a>
-    </div></section>
-
-    {remaining.length > 0 && <section className="tni-home-more tni-home-wrap" aria-labelledby="tni-home-more-title"><div className="tni-home-section-head"><span className="tni-home-kicker">MORE RESEARCH</span><h2 id="tni-home-more-title">Continue with the evidence.</h2></div><div className="tni-home-more-grid">{remaining.map((item) => <a key={item.path} href={item.path}>{item.image && <img className="tni-home-publication-og" src={item.image} alt={`${item.name} TNI Research`} loading="lazy" />}<small>{item.categories.includes('stock') ? 'STOCK INTELLIGENCE' : item.kind === 'drawdowns' ? 'MARKET RISK' : 'INDEX HISTORY'}</small><strong>{item.title}</strong><span>{item.description}</span><b>EXPLORE STUDY ↗</b></a>)}</div></section>}
-
+      <section className="editorial-trust" aria-labelledby="editorial-citations">
+        <h2 id="editorial-citations">Cited &amp; referenced by</h2>
+        <div className="editorial-citations">{citations.map(citation => <a key={citation.name} href={citation.href} target="_blank" rel="noreferrer">
+          <img src={citation.logo} alt="" width="44" height="36" loading="lazy" decoding="async" />
+          <span><strong>{citation.name}</strong><small>{citation.detail}</small></span>
+        </a>)}</div>
+        <p>References are not endorsements.</p>
+        <a className="editorial-link" href="https://app.tradingninvestment.com/research/citations">Explore all citations ↗</a>
+      </section>
+      <section id="featured-research" className="editorial-studies" aria-label="Featured research">
+        {lead.map(item => {
+          const doji = item.path === priorities[0]
+          return <article className="editorial-study" key={item.path}>
+            <div className="editorial-study-copy">
+              <span className="editorial-tag">{doji ? 'TRADING' : 'INVESTMENT'}</span>
+              <h2><a href={item.path}>{doji ? 'Does the Doji candlestick work?' : 'Market history. A longer perspective.'}</a></h2>
+              <p>{doji ? 'A 26-year SPY study.' : '150+ years of U.S. market data.'}</p>
+              <a className="editorial-link" href={item.path}>{doji ? 'Explore the study' : 'Explore market history'} ↗</a>
+            </div>
+            {item.image && <a className="editorial-study-image" href={item.path} aria-label={`Read ${item.title}`}>
+              <img src={item.image} alt={`${item.name} — TNI research chart`} width="1200" height="630" loading="lazy" decoding="async" />
+            </a>}
+          </article>
+        })}
+      </section>
+      <a className="editorial-browse editorial-link" href="/research/">Browse all research <span aria-hidden="true">↗</span></a>
+      {more.length > 0 && <section className="editorial-more" aria-labelledby="editorial-more-title">
+        <h2 id="editorial-more-title">More perspectives.</h2>
+        <div>{more.map(item => <a key={item.path} href={item.path}>
+          <span><small>{item.categories.includes('stock') ? 'STOCK RESEARCH' : 'MARKET RESEARCH'}</small><strong>{item.title}</strong></span><span aria-hidden="true">↗</span>
+        </a>)}</div>
+      </section>}
+    </div>
     <section
       className="tni-home-work-with-us tni-home-wrap"
       aria-labelledby="tni-home-work-with-us-title"
