@@ -42,6 +42,41 @@ export default function StockMarketHeatmapPage() {
       </section>
 
       <SP500DailyHeatmap />
+
+      <section className="market-guide" aria-labelledby="heatmap-guide-title">
+        <h2 id="heatmap-guide-title">How to Read the S&amp;P 500 Heatmap</h2>
+        <p>
+          Explore daily stock performance across the S&amp;P 500.
+          The heatmap helps identify market leaders, laggards, and
+          concentrations of strength or weakness.
+        </p>
+
+        <h3>Understand the Colors</h3>
+        <p>
+          Green indicates positive price performance, while red indicates
+          negative performance. Stronger color intensity generally
+          represents larger price changes.
+        </p>
+
+        <h3>Explore Individual Stocks</h3>
+        <p>
+          Hover over any stock tile to view its ticker symbol,
+          latest available stock price, price change, sector, and industry.
+        </p>
+
+        <h3>Identify Market Trends</h3>
+        <p>
+          Compare stocks within sectors to identify broad market participation
+          or concentrated leadership. Look for clusters of advancing and
+          declining companies.
+        </p>
+
+        <p className="market-guide-note">
+          Market data may be delayed. Price movements do not constitute
+          investment recommendations.
+        </p>
+      </section>
+
     </main>
   )
 }

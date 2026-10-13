@@ -1018,3 +1018,50 @@
   text-decoration: underline;
 }
 
+
+/* TNI market intelligence educational guides */
+.market-guide {
+  width: min(100% - 40px, 920px);
+  margin: 64px auto 80px;
+  color: inherit;
+}
+
+.market-guide h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.market-guide > p {
+  max-width: 760px;
+  line-height: 1.75;
+  margin: 0 0 24px;
+}
+
+.market-guide h3 {
+  font-size: 1rem;
+  font-weight: 650;
+  margin: 30px 0 9px;
+}
+
+.market-guide h3 + p {
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.18);
+  color: inherit;
+  opacity: 0.78;
+}
+
+.market-guide .market-guide-note {
+  font-size: 0.82rem;
+  opacity: 0.65;
+  margin-top: 28px;
+}
+
+@media (max-width: 640px) {
+  .market-guide {
+    width: calc(100% - 32px);
+    margin: 40px auto 56px;
+  }
+}

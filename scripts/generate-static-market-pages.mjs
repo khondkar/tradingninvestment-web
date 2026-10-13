@@ -81,6 +81,45 @@ for (const page of pages) {
     `<a href="${href}">${escapeHtml(label)}</a>`
   ).join(' ')
 
+
+  const marketGuides = {
+    '/stock-market-today/heatmap/': {
+      title: 'How to Read the S&P 500 Heatmap',
+      intro: 'Explore daily stock performance across the S&P 500. The heatmap helps identify market leaders, laggards, and concentrations of strength or weakness.',
+      topics: [
+        ['Understand the Colors', 'Green indicates positive price performance, while red indicates negative performance. Stronger color intensity generally represents larger price changes.'],
+        ['Explore Individual Stocks', 'Hover over any stock tile to view its ticker symbol, latest available stock price, price change, sector, and industry.'],
+        ['Identify Market Trends', 'Compare stocks within sectors to identify broad market participation or concentrated leadership. Look for clusters of advancing and declining companies.'],
+      ],
+      note: 'Market data may be delayed. Price movements do not constitute investment recommendations.',
+    },
+    '/stock-market-today/sector-health/': {
+      title: 'How to Interpret Sector Health',
+      intro: 'Compare S&P 500 sector leadership across four time horizons to understand daily performance and longer-term market rotation.',
+      topics: [
+        ["What's Happening Today — Daily Performance", "Identify which sectors are leading and lagging during today's trading session."],
+        ['Short-Term Sector Leadership — Weekly Performance', 'Compare sector returns for the week to identify short-term leaders and laggards.'],
+        ['Medium-Term Sector Leadership — Monthly Performance', 'Examine monthly returns to identify sustained sector strength, weakness, and potential rotation.'],
+        ['Long-Term Sector Leadership — Year-to-Date Performance', 'Compare returns since the beginning of the calendar year to identify longer-term sector leaders and laggards.'],
+        ['Compare the Four Horizons', 'Leadership across multiple periods may indicate more persistent momentum than strength limited to a single trading session.'],
+      ],
+      note: 'Sector rankings depend on the selected performance period. Past performance does not guarantee future results.',
+    },
+  }
+
+  const marketGuide = marketGuides[page.path]
+
+  const marketGuideHtml = marketGuide
+    ? `<section aria-label="${escapeHtml(marketGuide.title)}">
+        <h2>${escapeHtml(marketGuide.title)}</h2>
+        <p>${escapeHtml(marketGuide.intro)}</p>
+        ${marketGuide.topics.map(([heading, description]) =>
+          `<section><h3>${escapeHtml(heading)}</h3><p>${escapeHtml(description)}</p></section>`
+        ).join('')}
+        <p>${escapeHtml(marketGuide.note)}</p>
+      </section>`
+    : ''
+
   const staticBody = `
     <div class="site">
       <main class="stock-market-today-page">
@@ -89,6 +128,7 @@ for (const page of pages) {
           <h1>${escapeHtml(headings[page.path])}</h1>
           <p>${escapeHtml(page.description)}</p>
         </section>
+        ${marketGuideHtml}
       </main>
     </div>
   `
