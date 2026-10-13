@@ -1,0 +1,127 @@
+.bank-earnings-figure {
+  margin: 44px 0;
+  padding: clamp(20px, 4vw, 38px);
+  border: 1px solid #e2e8ed;
+  border-radius: 18px;
+  background: #fff;
+  color: #172536;
+}
+
+.bank-earnings-figure-heading > span {
+  font-size: 11px;
+  letter-spacing: .14em;
+  font-weight: 700;
+  color: #738094;
+}
+
+.bank-earnings-figure-heading h3 {
+  margin: 12px 0 8px;
+  font-size: clamp(21px, 2.5vw, 28px);
+  letter-spacing: -.03em;
+}
+
+.bank-earnings-figure-heading p,
+.bank-earnings-chart-note,
+.bank-earnings-figure figcaption {
+  color: #657487;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.bank-earnings-chart {
+  margin: 30px 0 40px;
+}
+
+.bank-earnings-chart h4 {
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+.bank-earnings-legend {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #536477;
+}
+
+.bank-earnings-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.bank-earnings-key {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+}
+
+.bank-earnings-key.actual,
+.bank-earnings-bar.actual {
+  background: #168b80;
+}
+
+.bank-earnings-key.consensus,
+.bank-earnings-bar.consensus {
+  background: #a8bacb;
+}
+
+.bank-earnings-scroll {
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.bank-earnings-columns {
+  display: flex;
+  gap: 8px;
+  height: 230px;
+  border-bottom: 1px solid #dce4eb;
+}
+
+.bank-earnings-column {
+  flex: 1;
+  min-width: 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bank-earnings-bars {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bank-earnings-bar {
+  width: 40%;
+  max-width: 17px;
+  min-height: 1px;
+  border-radius: 3px 3px 0 0;
+}
+
+.bank-earnings-column > span {
+  height: 28px;
+  padding-top: 9px;
+  font-size: 9px;
+  white-space: nowrap;
+  color: #6b7788;
+}
+
+.bank-earnings-chart-note {
+  margin-top: 12px;
+}
+
+.bank-earnings-figure figcaption {
+  border-top: 1px solid #e8edf1;
+  padding-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .bank-earnings-figure {
+    padding: 18px;
+  }
+}

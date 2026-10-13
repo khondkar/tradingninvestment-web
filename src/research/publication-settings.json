@@ -63,6 +63,10 @@
     "homepagePlacement": "regular"
   },
   "/research/doji-candlestick-spy-26-year-study/": {
-    "homepagePlacement": "featured"
+    "homepagePlacement": "featured",
+    "image": "/images/social/research/doji-candlestick-spy-26-year-study-tni-og.png"
+  },
+  "/research/jpm-vs-gs-earnings-analysis/": {
+    "image": "/images/social/research/jpm-vs-gs-earnings-analysis-tni-og.png"
   }
 }

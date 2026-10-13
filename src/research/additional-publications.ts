@@ -18,6 +18,18 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'jpm-vs-gs-earnings-analysis',
+    path: '/research/jpm-vs-gs-earnings-analysis/',
+    title: 'JPMorgan vs. Goldman Sachs Earnings: Historical EPS, Revenue and Market Reactions',
+    description: 'Original research comparing 46 JPMorgan and Goldman Sachs earnings announcements from 2021 to 2026, including EPS expectations, revenue, and early stock-price reactions.',
+    name: 'JPMorgan vs. Goldman Sachs Earnings Research',
+    symbol: 'GS',
+    categories: ['stock', 'earnings'],
+    kind: 'article',
+    publishedAt: '2026-10-12',
+  },
+
+  {
     slug: 'doji-candlestick-spy-26-year-study',
     path: '/research/doji-candlestick-spy-26-year-study/',
     title: 'Does the Doji Candlestick Really Work? A 26-Year SPY Study',

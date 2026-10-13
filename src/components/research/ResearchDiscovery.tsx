@@ -31,7 +31,7 @@ export function ResearchTrail({ path }: { path: string }) {
   return <nav className="research-article-trail" aria-label="Breadcrumb">
     <a href="/research/">Research</a><span>›</span>
     <a href={item.categories.includes('stock') ? '/research/stocks/' : '/research/indexes/'}>{item.categories.includes('stock') ? 'Stocks' : 'Indexes'}</a><span>›</span>
-    {primary && <><a href={primary.path}>{primary.title}</a><span>›</span></>}
+    {primary && <><a href={primary.path}>{item.symbol === "GS" && primary.path === "/research/stocks/gs/" ? "GS" : primary.title}</a><span>›</span></>}
     <strong>{item.title}</strong>
   </nav>
 }
