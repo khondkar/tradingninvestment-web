@@ -1,4 +1,6 @@
 import {
+  lazy,
+  Suspense,
   useEffect,
   useMemo,
   useState,
@@ -7,6 +9,12 @@ import {
 import earningsData from '../../data/market-today/earnings-calendar.json'
 
 import './EarningsCalendar.css'
+
+const JpmEarnings2026Q3 = lazy(() => import('./JpmEarnings2026Q3'))
+
+function hasJpmResults(event: { ticker: string; report_date: string }) {
+  return event.ticker === 'JPM' && event.report_date === '2026-10-13'
+}
 
 type EarningsEvent = {
   ticker: string
@@ -64,7 +72,7 @@ type EarningsSnapshot = {
 const snapshot =
   earningsData as EarningsSnapshot
 
-type RangeKey = 'week' | 'next' | 'all'
+type RangeKey = 'week' | 'next' | 'all' | 'reported'
 
 function parseLocalDate(value: string) {
   return new Date(`${value}T12:00:00`)
@@ -252,6 +260,8 @@ export default function EarningsCalendar() {
     useMemo(() => {
       return snapshot.earnings.filter(
         (event) => {
+          if (range === 'reported') return hasJpmResults(event)
+
           const eventDate =
             parseLocalDate(
               event.report_date,
@@ -292,7 +302,7 @@ export default function EarningsCalendar() {
     ])
 
   useEffect(() => {
-    if (!selectedEvent) {
+    if (!selectedEvent || hasJpmResults(selectedEvent)) {
       setNewsStories([])
       setNewsLoading(false)
       setNewsError(null)
@@ -449,6 +459,8 @@ export default function EarningsCalendar() {
           </button>
         </div>
 
+        <button type="button" className={range === 'reported' ? 'active' : ''} onClick={() => setRange('reported')}>Reported · JPM</button>
+
         <div className="earnings-updated">
           <span>SNAPSHOT AS OF</span>
 
@@ -550,12 +562,10 @@ export default function EarningsCalendar() {
                           </div>
 
                           <div className="earnings-metric">
-                            <span>
-                              EPS EST.
-                            </span>
+                            <span>{hasJpmResults(event) ? 'REPORTED EPS' : 'EPS EST.'}</span>
 
                             <strong>
-                              {formatEPS(event)}
+                              {hasJpmResults(event) ? '$5.57' : formatEPS(event)}
                             </strong>
                           </div>
 
@@ -673,6 +683,7 @@ export default function EarningsCalendar() {
               </div>
             </div>
 
+            {hasJpmResults(selectedEvent) ? <Suspense fallback={<p>Loading JPM results…</p>}><JpmEarnings2026Q3 /></Suspense> : <>
             <section className="earnings-drawer-event">
               <span className="earnings-drawer-section-label">
                 UPCOMING EARNINGS
@@ -848,6 +859,7 @@ export default function EarningsCalendar() {
               )}
             </section>
 
+            </>}
             <footer className="earnings-drawer-footer">
               <span>
                 TRADINGNINVESTMENT
