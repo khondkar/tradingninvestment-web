@@ -61,11 +61,7 @@ export default function LeveragedEtfAnnualReturnsPage({
             symbol={config.symbol}
             benchmarkName={benchmarkName}
             leverageLabel={
-              config.symbol === "NVDL"
-                ? "2× long"
-                : config.symbol === "TQQQ"
-                  ? "3× long"
-                  : "leveraged"
+              config.leveragedEtf?.leverageLabel ?? "leveraged"
             }
             hasLongRollingHistory={
               config.symbol === "TQQQ"

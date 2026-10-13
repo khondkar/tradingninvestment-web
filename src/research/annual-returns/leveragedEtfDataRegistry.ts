@@ -8,6 +8,11 @@ import nvdlReturnMethods from "../../data/charts/nvdlReturnMethods.json"
 import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
 import nvdlVsNvdaDrawdowns from "../../data/charts/nvdlVsNvdaDrawdowns.json"
 
+import tsllAnnualReturns from "../../data/charts/tsllAnnualReturns.json"
+import tsllReturnMethods from "../../data/charts/tsllReturnMethods.json"
+import tslaAnnualReturns from "../../data/charts/tslaAnnualReturns.json"
+import tsllVsTslaDrawdowns from "../../data/charts/tsllVsTslaDrawdowns.json"
+
 import soxlAnnualReturns from "../../data/charts/soxlAnnualReturns.json"
 import soxlReturnMethods from "../../data/charts/soxlReturnMethods.json"
 import smhAnnualReturns from "../../data/charts/smhAnnualReturns.json"
@@ -68,6 +73,23 @@ export const leveragedEtfResearchDataRegistry:
 
       drawdownData:
         nvdlVsNvdaDrawdowns as LeveragedEtfDrawdownDataset,
+    },
+
+    TSLL: {
+      annualReturns:
+        tsllAnnualReturns as AnnualReturnsPageData,
+
+      returnMethods:
+        tsllReturnMethods.data as ReturnMethodRow[],
+
+      benchmarkAnnualReturns:
+        tslaAnnualReturns as AnnualReturnsPageData,
+
+      benchmarkName:
+        "TSLA",
+
+      drawdownData:
+        tsllVsTslaDrawdowns as LeveragedEtfDrawdownDataset,
     },
 
     SOXL: {

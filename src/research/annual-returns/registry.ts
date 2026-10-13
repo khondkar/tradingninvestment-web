@@ -19,6 +19,7 @@ import { crmAnnualReturnsConfig } from "./crm"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
 import { qqqAnnualReturnsConfig } from "./qqq"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
+import { tsllAnnualReturnsConfig } from "./tsll"
 import { soxlAnnualReturnsConfig } from "./soxl"
 import { tslaAnnualReturnsConfig } from "./tsla"
 import { dowAnnualReturnsConfig } from "./dow"
@@ -148,6 +149,11 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: nvdlAnnualReturnsConfig,
+      legacyPublished: true,
+      featured: false,
+    },
+    {
+      config: tsllAnnualReturnsConfig,
       legacyPublished: true,
       featured: false,
     },

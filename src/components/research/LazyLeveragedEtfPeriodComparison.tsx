@@ -30,6 +30,11 @@ const datasetLoaders: Record<
       '../../data/charts/tqqqVsQqqPeriodReturns.json'
     ),
 
+  TSLL: () =>
+    import(
+      '../../data/charts/tsllVsTslaPeriodReturns.json'
+    ),
+
   NVDL: () =>
     import(
       '../../data/charts/nvdlVsNvdaPeriodReturns.json'

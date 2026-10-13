@@ -1,0 +1,56 @@
+{
+  "dataset": "Direxion Daily TSLA Bull 2X Shares price return and total return",
+  "ticker": "TSLL",
+  "asset_type": "leveraged_etf",
+  "issuer": "Direxion",
+  "leverage": "2",
+  "direction": "long",
+  "benchmark": "TSLA",
+  "benchmark_ticker": "TSLA",
+  "inception_date": "2022-08-09",
+  "start_year": 2023,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 2023,
+      "price_return": 129.76,
+      "total_return": 139.8384,
+      "is_ytd": false,
+      "data_through": "2023-12-31",
+      "price_source": "Yahoo Finance TSLL Close",
+      "total_return_source": "Yahoo Finance TSLL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2024,
+      "price_return": 91.7131,
+      "total_return": 99.6373,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance TSLL Close",
+      "total_return_source": "Yahoo Finance TSLL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2025,
+      "price_return": -30.5848,
+      "total_return": -26.8071,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance TSLL Close",
+      "total_return_source": "Yahoo Finance TSLL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2026,
+      "price_return": -48.0638,
+      "total_return": -46.8825,
+      "is_ytd": true,
+      "data_through": "2026-10-13",
+      "price_source": "Yahoo Finance TSLL Close",
+      "total_return_source": "Yahoo Finance TSLL Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    }
+  ]
+}
