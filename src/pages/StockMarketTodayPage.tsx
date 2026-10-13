@@ -255,6 +255,66 @@ export default function StockMarketTodayPage() {
         </section>
 
         <section
+          className="market-guide market-today-how-to"
+          aria-labelledby="market-today-how-to-title"
+        >
+          <span className="market-today-eyebrow">
+            TNI MARKET INTELLIGENCE · USER GUIDE
+          </span>
+
+          <h2 id="market-today-how-to-title">
+            How to Use Stock Market Today
+          </h2>
+
+          <p>
+            Start with major market benchmarks, then examine stock
+            movers and market breadth to understand whether the
+            trading session is broadly strong, weak, or mixed.
+          </p>
+
+          <h3>01 — Follow Major Market Benchmarks</h3>
+          <p>
+            Compare SPY, QQQ, DIA and IWM to assess large-cap,
+            technology-heavy, blue-chip and small-cap performance.
+            Use VIX to understand expected market volatility.
+          </p>
+
+          <h3>02 — Identify Today's Leaders and Laggards</h3>
+          <p>
+            Review the S&amp;P 500 top gainers and losers to identify
+            stocks experiencing the largest daily price changes.
+          </p>
+
+          <h3>03 — Evaluate Market Breadth</h3>
+          <p>
+            Compare advancing and declining stocks to see whether
+            market participation is widespread or concentrated.
+          </p>
+
+          <h3>04 — Explore Sector Leadership</h3>
+          <p>
+            Use the <a href="/stock-market-today/heatmap/">S&amp;P 500 Heatmap</a>
+            {' '}to explore individual stocks and{' '}
+            <a href="/stock-market-today/sector-health/">Sector Health</a>
+            {' '}to compare daily, weekly, monthly and year-to-date
+            sector performance.
+          </p>
+
+          <h3>05 — Follow Upcoming Earnings</h3>
+          <p>
+            Explore the{' '}
+            <a href="/stock-market-today/earnings-calendar/">Earnings Calendar</a>
+            {' '}to identify upcoming company reports and potential
+            market-moving events.
+          </p>
+
+          <p className="market-guide-note">
+            Check the displayed update time and stock coverage.
+            Market data may be delayed.
+          </p>
+        </section>
+
+        <section
           className="market-today-seo"
           aria-labelledby="market-today-guide-title"
         >

@@ -83,6 +83,19 @@ for (const page of pages) {
 
 
   const marketGuides = {
+    '/stock-market-today/': {
+      title: 'How to Use Stock Market Today',
+      intro: 'Start with major market benchmarks, then examine stock movers and market breadth to understand whether the trading session is broadly strong, weak, or mixed.',
+      topics: [
+        ['Follow Major Market Benchmarks', 'Compare SPY, QQQ, DIA and IWM to assess large-cap, technology-heavy, blue-chip and small-cap performance. Use VIX to understand expected market volatility.'],
+        ['Identify Today’s Leaders and Laggards', 'Review the S&P 500 top gainers and losers to identify stocks experiencing the largest daily price changes.'],
+        ['Evaluate Market Breadth', 'Compare advancing and declining stocks to see whether market participation is widespread or concentrated.'],
+        ['Explore Sector Leadership', 'Use the S&P 500 Heatmap to explore individual stocks and Sector Health to compare daily, weekly, monthly and year-to-date sector performance.'],
+        ['Follow Upcoming Earnings', 'Explore the Earnings Calendar to identify upcoming company reports and potential market-moving events.'],
+      ],
+      note: 'Check the displayed update time and stock coverage. Market data may be delayed.',
+    },
+
     '/stock-market-today/heatmap/': {
       title: 'How to Read the S&P 500 Heatmap',
       intro: 'Explore daily stock performance across the S&P 500. The heatmap helps identify market leaders, laggards, and concentrations of strength or weakness.',
