@@ -30,6 +30,7 @@ Research index: https://tradingninvestment.com/research/
 - [Stock Market Historical Returns: Dow Jones Returns by Year (1921–2026)](https://tradingninvestment.com/stock-market-historical-returns/): Dow Jones historical returns by year from 1921 to present, including 1-year, 3-year, 5-year, 10-year and 20-year performance, average returns, positive and negative years, and 2026 YTD performance.
 - [Tesla (TSLA) Stock Returns](https://tradingninvestment.com/tsla-stock-returns/): Explore Tesla TSLA historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
 - [TQQQ Returns](https://tradingninvestment.com/tqqq-returns/): Explore TQQQ historical returns, price return, total return, growth of $10,000, annual performance, and comparison with QQQ.
+- [TSLL ETF: Performance, Holdings & TSLL vs TSLA](https://tradingninvestment.com/tsll-etf/): Independent research on TSLL performance, historical returns, growth of $10,000, drawdowns and TSLL vs TSLA.
 
 ## Research Areas
 
