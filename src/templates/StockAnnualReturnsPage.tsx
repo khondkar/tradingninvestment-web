@@ -1,5 +1,7 @@
+import StockTotalReturnComparison from '../components/research/StockTotalReturnComparison'
 import sp500AnnualReturns from "../data/charts/sp500AnnualReturns.json"
 import nkeDrawdowns from "../data/charts/nkeVsSp500Drawdowns.json"
+import jpmDrawdowns from "../data/charts/jpmVsSp500Drawdowns.json"
 
 import type {
   AnnualReturnsAssetConfig,
@@ -51,7 +53,9 @@ export default function StockAnnualReturnsPage({
     drawdownData ??
     (config.symbol === "NKE"
       ? (nkeDrawdowns as LeveragedEtfDrawdownDataset)
-      : undefined)
+      : config.symbol === "JPM"
+        ? (jpmDrawdowns as LeveragedEtfDrawdownDataset)
+        : undefined)
 
   return (
     <GenericAnnualReturnsPage
@@ -83,6 +87,10 @@ export default function StockAnnualReturnsPage({
       beforeReturnExplorer={
         returnMethodsData?.length ? (
           <>
+            <StockTotalReturnComparison
+              assetTicker={config.symbol}
+              assetData={returnMethodsData}
+            />
             <DividendCompoundingExplorer
               data={returnMethodsData}
               assetName={config.shortName}

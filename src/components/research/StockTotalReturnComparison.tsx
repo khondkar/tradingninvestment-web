@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import nikeData from '../../data/charts/nkeReturnMethods.json'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import './StockTotalReturnComparison.css'
 import sp500Data from '../../data/sp500-historical-return-methods.json'
 
 type AnnualRow = {
@@ -10,7 +10,7 @@ type AnnualRow = {
 
 type Point = {
   year: number
-  nike: number
+  asset: number
   benchmark: number
 }
 
@@ -21,44 +21,72 @@ const periods = [
   { label: 'Max', value: 0 },
 ]
 
-export default function StockTotalReturnComparison() {
+export default function StockTotalReturnComparison({
+  assetTicker,
+  assetData,
+}: {
+  assetTicker: string
+  assetData: AnnualRow[]
+}) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [containerWidth, setContainerWidth] = useState(900)
+  useEffect(() => {
+    const element = containerRef.current
+    if (!element) return
+    const measure = () => setContainerWidth(Math.max(280, Math.round(element.getBoundingClientRect().width)))
+    measure()
+    if (typeof ResizeObserver === 'undefined') return
+    const observer = new ResizeObserver(measure)
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [])
   const [period, setPeriod] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
 
   const points = useMemo(() => {
-    const nike = (nikeData.data as AnnualRow[])
+    const asset = assetData
     const benchmark = new Map(
       (sp500Data.data as AnnualRow[])
-        .filter(row => typeof row.total_return === 'number')
+        .filter(row => !row.is_ytd && typeof row.total_return === 'number' && Number.isFinite(row.total_return))
         .map(row => [row.year, row.total_return as number]),
     )
 
-    const common = nike
+    const common = asset
       .filter(row =>
         !row.is_ytd &&
         typeof row.total_return === 'number' &&
+        Number.isFinite(row.total_return) &&
         benchmark.has(row.year),
       )
       .sort((a, b) => a.year - b.year)
 
+    // Require consecutive completed years; never compound across a missing year.
     const result: Point[] = []
-    let nikeGrowth = 10000
+    let assetGrowth = 10000
     let benchmarkGrowth = 10000
 
     for (const row of common) {
+      if (result.length && row.year !== result[result.length - 1].year + 1) {
+        result.length = 0
+        assetGrowth = 10000
+        benchmarkGrowth = 10000
+      }
       const benchmarkReturn = benchmark.get(row.year)!
-      nikeGrowth *= 1 + row.total_return! / 100
+      assetGrowth *= 1 + row.total_return! / 100
       benchmarkGrowth *= 1 + benchmarkReturn / 100
 
       result.push({
         year: row.year,
-        nike: nikeGrowth,
+        asset: assetGrowth,
         benchmark: benchmarkGrowth,
       })
     }
 
+    if (result.length) {
+      result.unshift({ year: result[0].year - 1, asset: 10000, benchmark: 10000 })
+    }
     return result
-  }, [])
+  }, [assetData])
 
   const visible = useMemo(() => {
     if (!points.length) return []
@@ -68,30 +96,33 @@ export default function StockTotalReturnComparison() {
     const window = points.slice(-(period + 1))
     if (window.length < 2) return points
 
-    const nikeBase = window[0].nike
+    const assetBase = window[0].asset
     const benchmarkBase = window[0].benchmark
 
     return window.map(row => ({
       year: row.year,
-      nike: row.nike / nikeBase * 10000,
+      asset: row.asset / assetBase * 10000,
       benchmark: row.benchmark / benchmarkBase * 10000,
     }))
   }, [points, period])
 
   if (visible.length < 2) return null
 
-  const width = 900
-  const height = 340
-  const left = 78
-  const right = 25
-  const top = 24
-  const bottom = 46
+  // Use actual chart pixels as SVG units. A fixed 900px viewBox scaled to
+  // a 340px phone was shrinking 12px labels to ~4.5px.
+  const width = Math.min(900, Math.max(280, containerWidth - (containerWidth < 640 ? 24 : 40)))
+  const mobile = width < 600
+  const height = mobile ? 300 : 340
+  const left = mobile ? 66 : 78
+  const right = mobile ? 12 : 25
+  const top = mobile ? 28 : 24
+  const bottom = mobile ? 42 : 46
 
   const chartWidth = width - left - right
   const chartHeight = height - top - bottom
 
   const max = Math.max(
-    ...visible.flatMap(row => [row.nike, row.benchmark]),
+    ...visible.flatMap(row => [row.asset, row.benchmark]),
     10000,
   )
 
@@ -101,23 +132,24 @@ export default function StockTotalReturnComparison() {
   const y = (value: number) =>
     top + chartHeight - value / max * chartHeight
 
-  const line = (key: 'nike' | 'benchmark') =>
+  const line = (key: 'asset' | 'benchmark') =>
     visible.map((row, index) =>
       `${index === 0 ? 'M' : 'L'}${x(index).toFixed(2)},${y(row[key]).toFixed(2)}`,
     ).join(' ')
 
-  const activeIndex = selected ?? visible.length - 1
+  const activeIndex = selected !== null && selected < visible.length
+    ? selected : visible.length - 1
   const active = visible[activeIndex]
 
-  // NKE_TOTAL_RETURN_INTERPRETATION
+  // Stock-agnostic total-return interpretation
   const firstPoint = visible[0]
   const lastPoint = visible[visible.length - 1]
 
-  const nikeReturn =
-    (lastPoint.nike / firstPoint.nike - 1) * 100
+  const assetReturn =
+    (lastPoint.asset / firstPoint.asset - 1) * 100
   const benchmarkReturn =
     (lastPoint.benchmark / firstPoint.benchmark - 1) * 100
-  const relativeReturn = nikeReturn - benchmarkReturn
+  const relativeReturn = assetReturn - benchmarkReturn
 
   const formatPercent = (value: number) =>
     `${value >= 0 ? '+' : ''}${value.toFixed(1)}%`
@@ -132,6 +164,13 @@ export default function StockTotalReturnComparison() {
         ? 'underperformed'
         : 'performed approximately in line with'
 
+  const axisMoney = (value: number) => {
+    if (value === 0) return '$0'
+    if (Math.abs(value) >= 1_000_000) return `$${(value / 1_000_000).toFixed(1)}m`
+    if (Math.abs(value) >= 1_000) return `$${Math.round(value / 1_000)}k`
+    return `$${Math.round(value)}`
+  }
+
   const money = (value: number) =>
     value.toLocaleString('en-US', {
       style: 'currency',
@@ -140,7 +179,7 @@ export default function StockTotalReturnComparison() {
     })
 
   return (
-    <div style={{
+    <div ref={containerRef} className="tni-total-return" style={{
       margin: '22px 0 32px',
       padding: '20px',
       border: '1px solid #e4ebf3',
@@ -156,7 +195,7 @@ export default function StockTotalReturnComparison() {
       }}>
         <div>
           <h3 style={{ margin: 0, color: '#10233f' }}>
-            Nike vs. S&P 500 — Total Return
+            {assetTicker} vs. S&P 500 — Total Return
           </h3>
           <p style={{ margin: '5px 0', color: '#64748b', fontSize: 13 }}>
             Growth of $10,000 · Dividends reinvested
@@ -195,7 +234,7 @@ export default function StockTotalReturnComparison() {
         fontSize: 13,
       }}>
         <span style={{ color: '#1677ff' }}>
-          ● Nike: <strong>{money(active.nike)}</strong>
+          ● {assetTicker}: <strong>{money(active.asset)}</strong>
         </span>
         <span style={{ color: '#64748b' }}>
           ● S&P 500: <strong>{money(active.benchmark)}</strong>
@@ -206,10 +245,11 @@ export default function StockTotalReturnComparison() {
       </div>
 
       <svg
+        className="tni-total-return__chart"
         viewBox={`0 0 ${width} ${height}`}
         role="img"
-        aria-label="Nike versus S&P 500 cumulative total return"
-        style={{ width: '100%', display: 'block', marginTop: 12 }}
+        aria-label={`${assetTicker} versus S&P 500 cumulative total return`}
+        style={{ width: '100%', maxWidth: width, height: 'auto', display: 'block', marginTop: 12 }}
         onMouseLeave={() => setSelected(null)}
       >
         {[0, 0.25, 0.5, 0.75, 1].map(fraction => {
@@ -227,10 +267,11 @@ export default function StockTotalReturnComparison() {
                 x={left - 10}
                 y={y(value) + 4}
                 textAnchor="end"
-                fontSize="12"
-                fill="#64748b"
+                fontSize={mobile ? 13 : 12}
+                fontWeight={mobile ? 600 : 400}
+                fill="#475569"
               >
-                {money(value)}
+                {mobile ? axisMoney(value) : money(value)}
               </text>
             </g>
           )
@@ -238,53 +279,67 @@ export default function StockTotalReturnComparison() {
 
         <path d={line('benchmark')} fill="none"
           stroke="#94a3b8" strokeWidth="3" />
-        <path d={line('nike')} fill="none"
+        <path d={line('asset')} fill="none"
           stroke="#1677ff" strokeWidth="3" />
 
         {visible.map((row, index) => (
           <rect
             key={row.year}
-            x={x(index) - chartWidth / visible.length / 2}
+            x={Math.max(left, x(index) - chartWidth / Math.max(visible.length - 1, 1) / 2)}
             y={top}
-            width={chartWidth / visible.length}
+            width={Math.min(chartWidth / Math.max(visible.length - 1, 1), width - right - Math.max(left, x(index) - chartWidth / Math.max(visible.length - 1, 1) / 2))}
             height={chartHeight}
             fill="transparent"
             onMouseEnter={() => setSelected(index)}
+            onClick={() => setSelected(index)}
+            onTouchStart={() => setSelected(index)}
             onFocus={() => setSelected(index)}
             tabIndex={0}
-            aria-label={`${row.year}: Nike ${money(row.nike)}, S&P 500 ${money(row.benchmark)}`}
+            role="button"
+            onKeyDown={event => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault()
+                setSelected(index)
+              }
+            }}
+            aria-label={`${row.year}: ${assetTicker} ${money(row.asset)}, S&P 500 ${money(row.benchmark)}`}
           />
         ))}
 
-        {visible
-          .filter((_, index) =>
-            index === 0 ||
-            index === visible.length - 1 ||
-            index % Math.max(1, Math.ceil(visible.length / 6)) === 0,
-          )
-          .map(row => (
+        {visible.map((row, index) => {
+          const last = visible.length - 1
+          // Index-based interpolation ensures <=4 mobile labels, including endpoints.
+          const tickCount = mobile ? Math.min(4, visible.length) : Math.min(7, visible.length)
+          const tickIndices = new Set(Array.from({ length: tickCount }, (_, i) =>
+            Math.round(i * last / Math.max(1, tickCount - 1)),
+          ))
+          if (!tickIndices.has(index)) return null
+          return (
             <text
               key={row.year}
-              x={x(visible.indexOf(row))}
+              className="tni-total-return__year"
+              x={x(index)}
               y={height - 12}
-              textAnchor="middle"
-              fontSize="12"
-              fill="#64748b"
+              textAnchor={index === 0 ? 'start' : index === last ? 'end' : 'middle'}
+              fontSize={mobile ? 13 : 12}
+              fontWeight={mobile ? 600 : 400}
+              fill="#475569"
             >
               {row.year}
             </text>
-          ))}
+          )
+        })}
       </svg>
 
       <p style={{ color: '#64748b', fontSize: 12, marginBottom: 0 }}>
         Annual observations through the last completed calendar year.
         Each selected period is rebased to $10,000.
-        Sources: Yahoo Finance adjusted close (NKE);
+        Sources: Stock adjusted-close total-return series;
         TNI S&P 500 historical total-return dataset.
       </p>
 
       <section
-        aria-label="Nike versus S&P 500 total return interpretation"
+        aria-label={`${assetTicker} versus S&P 500 total return interpretation`}
         style={{
           marginTop: 24,
           paddingTop: 22,
@@ -308,7 +363,7 @@ export default function StockTotalReturnComparison() {
           lineHeight: 1.4,
           margin: '0 0 12px',
         }}>
-          Nike vs. S&amp;P 500: Total Return Analysis
+          {assetTicker} vs. S&amp;P 500: Total Return Analysis
         </h4>
 
         <p style={{
@@ -318,10 +373,10 @@ export default function StockTotalReturnComparison() {
           margin: '0 0 16px',
         }}>
           Over the {periodLabel} ({firstPoint.year}–{lastPoint.year}),
-          Nike generated a cumulative total return of{' '}
-          <strong>{formatPercent(nikeReturn)}</strong>, compared with{' '}
+          {assetTicker} generated a cumulative total return of{' '}
+          <strong>{formatPercent(assetReturn)}</strong>, compared with{' '}
           <strong>{formatPercent(benchmarkReturn)}</strong> for the
-          S&amp;P 500. Nike {relativeDescription} the benchmark by{' '}
+          S&amp;P 500. {assetTicker} {relativeDescription} the benchmark by{' '}
           <strong>{Math.abs(relativeReturn).toFixed(1)} percentage points</strong>.
           Both comparisons incorporate reinvested dividends.
         </p>
@@ -341,7 +396,7 @@ export default function StockTotalReturnComparison() {
           margin: '0 0 14px',
         }}>
           The distance between the two cumulative-return lines
-          illustrates how Nike's investment performance has
+          illustrates how {assetTicker}'s investment performance has
           diverged from the broader market. A widening positive
           gap indicates relative outperformance, while a
           narrowing or negative gap indicates weaker relative
@@ -363,7 +418,7 @@ export default function StockTotalReturnComparison() {
           lineHeight: 1.85,
           margin: 0,
         }}>
-          Nike represents exposure to a single company's
+          {assetTicker} represents exposure to a single company's
           business performance, competitive position, and
           valuation. The S&amp;P 500 provides diversified
           exposure to large U.S. companies. Comparing their

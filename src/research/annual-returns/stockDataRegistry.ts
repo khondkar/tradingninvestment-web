@@ -1,3 +1,4 @@
+import msftReturnMethods from "../../data/charts/msftReturnMethods.json"
 import aaplAnnualReturns from "../../data/charts/aaplAnnualReturns.json"
 import aaplReturnMethods from "../../data/charts/aaplReturnMethods.json"
 import brkbAnnualReturns from "../../data/charts/brkbAnnualReturns.json"
@@ -12,6 +13,8 @@ import crmVsSp500Drawdowns from "../../data/charts/crmVsSp500Drawdowns.json"
 import type { LeveragedEtfDrawdownDataset } from "../../components/research/LeveragedEtfDrawdownComparison"
 import nkeAnnualReturns from "../../data/charts/nkeAnnualReturns.json"
 import nkeReturnMethods from "../../data/charts/nkeReturnMethods.json"
+import jpmAnnualReturns from "../../data/charts/jpmAnnualReturns.json"
+import jpmReturnMethods from "../../data/charts/jpmReturnMethods.json"
 import amznAnnualReturns from "../../data/charts/amznAnnualReturns.json"
 import amznReturnMethods from "../../data/charts/amznReturnMethods.json"
 import tslaAnnualReturns from "../../data/charts/tslaAnnualReturns.json"
@@ -74,6 +77,11 @@ export const stockResearchDataRegistry:
       returnMethods: nkeReturnMethods.data as ReturnMethodRow[],
     },
 
+    JPM: {
+      annualReturns: jpmAnnualReturns as AnnualReturnsPageData,
+      returnMethods: jpmReturnMethods.data as ReturnMethodRow[],
+    },
+
     AMZN: {
       annualReturns:
         amznAnnualReturns as AnnualReturnsPageData,
@@ -100,6 +108,7 @@ export const stockResearchDataRegistry:
     },
 
     MSFT: {
+      returnMethods: msftReturnMethods.data as ReturnMethodRow[],
       annualReturns:
         msftAnnualReturns as AnnualReturnsPageData,
     },

@@ -12,6 +12,7 @@ import { brkbAnnualReturnsConfig } from "./brkb"
 import { gsAnnualReturnsConfig } from "./gs"
 import { googlAnnualReturnsConfig } from "./googl"
 import { nkeAnnualReturnsConfig } from "./nke"
+import { jpmAnnualReturnsConfig } from "./jpm"
 import { amznAnnualReturnsConfig } from "./amzn"
 import { crmAnnualReturnsConfig } from "./crm"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
@@ -106,6 +107,11 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: nkeAnnualReturnsConfig,
+      legacyPublished: true,
+      featured: false,
+    },
+    {
+      config: jpmAnnualReturnsConfig,
       legacyPublished: true,
       featured: false,
     },
