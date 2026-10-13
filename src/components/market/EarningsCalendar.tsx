@@ -10,6 +10,12 @@ import earningsData from '../../data/market-today/earnings-calendar.json'
 
 import './EarningsCalendar.css'
 
+const BankEarningsPreview2026Q3 = lazy(() => import('./BankEarningsPreview2026Q3'))
+
+function hasBankPreview(event: { ticker: string; report_date: string }) {
+  return ['BAC', 'MS'].includes(event.ticker) && event.report_date === '2026-10-14'
+}
+
 const JpmEarnings2026Q3 = lazy(() => import('./JpmEarnings2026Q3'))
 
 function hasJpmResults(event: { ticker: string; report_date: string }) {
@@ -302,7 +308,7 @@ export default function EarningsCalendar() {
     ])
 
   useEffect(() => {
-    if (!selectedEvent || hasJpmResults(selectedEvent)) {
+    if (!selectedEvent || hasJpmResults(selectedEvent) || hasBankPreview(selectedEvent)) {
       setNewsStories([])
       setNewsLoading(false)
       setNewsError(null)
@@ -683,7 +689,7 @@ export default function EarningsCalendar() {
               </div>
             </div>
 
-            {hasJpmResults(selectedEvent) ? <Suspense fallback={<p>Loading JPM results…</p>}><JpmEarnings2026Q3 /></Suspense> : <>
+            {hasJpmResults(selectedEvent) ? <Suspense fallback={<p>Loading JPM results…</p>}><JpmEarnings2026Q3 /></Suspense> : hasBankPreview(selectedEvent) ? <Suspense fallback={<p>Loading earnings preview…</p>}><BankEarningsPreview2026Q3 key={selectedEvent.ticker} ticker={selectedEvent.ticker as 'BAC' | 'MS'} /></Suspense> : <>
             <section className="earnings-drawer-event">
               <span className="earnings-drawer-section-label">
                 UPCOMING EARNINGS
