@@ -56,6 +56,85 @@ for (const page of pages) {
     html = html.replace(pattern, replacement)
   }
 
+
+  // Static, crawlable content for visitors and search engines without JS.
+  // React uses createRoot() for these routes and replaces this shell.
+  const headings = {
+    '/stock-market-today/':
+      'Stock Market Today — S&P 500, Market Movers and Trends',
+    '/stock-market-today/heatmap/':
+      'S&P 500 Stock Components Heatmap Today',
+    '/stock-market-today/sector-health/':
+      'Stock Market Sector Health Today',
+    '/stock-market-today/earnings-calendar/':
+      'Stock Market Earnings Calendar',
+  }
+
+  const links = [
+    ['/stock-market-today/', 'Stock Market Today'],
+    ['/stock-market-today/heatmap/', 'S&P 500 Heatmap'],
+    ['/stock-market-today/sector-health/', 'Sector Health'],
+    ['/stock-market-today/earnings-calendar/', 'Earnings Calendar'],
+  ]
+
+  const navigation = links.map(([href, label]) =>
+    `<a href="${href}">${escapeHtml(label)}</a>`
+  ).join(' ')
+
+  const staticBody = `
+    <div class="site">
+      <main class="stock-market-today-page">
+        <nav aria-label="Stock Market Today">${navigation}</nav>
+        <section class="market-today-hero">
+          <h1>${escapeHtml(headings[page.path])}</h1>
+          <p>${escapeHtml(page.description)}</p>
+        </section>
+      </main>
+    </div>
+  `
+
+  // Replace only the prerendered homepage root content.
+  // Preserve the root opening tag, closing tag, and script assets.
+  const rootStart = html.indexOf('<div id="root"')
+  const bodyEnd = html.lastIndexOf('</body>')
+  const rootClose = html.lastIndexOf('</div>', bodyEnd)
+
+  if (rootStart === -1 || rootClose === -1 || rootClose <= rootStart) {
+    throw new Error(`Cannot identify complete homepage root: ${page.path}`)
+  }
+
+  const rootOpenEnd = html.indexOf('>', rootStart) + 1
+  const rootOpen = html.slice(rootStart, rootOpenEnd)
+
+  html =
+    html.slice(0, rootStart) +
+    rootOpen +
+    staticBody +
+    '</div>' +
+    html.slice(rootClose + '</div>'.length)
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: headings[page.path],
+    description: page.description,
+    url: canonical,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'TradingNInvestment',
+      url: origin + '/',
+    },
+  }
+
+  html = html.replace(
+    '</head>',
+    `<script type="application/ld+json">${JSON.stringify(schema)}</script>\n</head>`
+  )
+
+  if (!html.includes(`<h1>${escapeHtml(headings[page.path])}</h1>`)) {
+    throw new Error(`Missing market-page heading: ${page.path}`)
+  }
+
   const destination = path.join(dist, page.path.slice(1), 'index.html')
   fs.mkdirSync(path.dirname(destination), { recursive: true })
   fs.writeFileSync(destination, html)
