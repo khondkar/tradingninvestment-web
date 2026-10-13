@@ -1,3 +1,5 @@
+import jnjAnnualReturns from "../../data/charts/jnjAnnualReturns.json"
+import jnjReturnMethods from "../../data/charts/jnjReturnMethods.json"
 import msftReturnMethods from "../../data/charts/msftReturnMethods.json"
 import aaplAnnualReturns from "../../data/charts/aaplAnnualReturns.json"
 import aaplReturnMethods from "../../data/charts/aaplReturnMethods.json"
@@ -10,6 +12,7 @@ import googlReturnMethods from "../../data/charts/googlReturnMethods.json"
 import crmAnnualReturns from "../../data/charts/crmAnnualReturns.json"
 import crmReturnMethods from "../../data/charts/crmReturnMethods.json"
 import crmVsSp500Drawdowns from "../../data/charts/crmVsSp500Drawdowns.json"
+import jnjVsSp500Drawdowns from "../../data/charts/jnjVsSp500Drawdowns.json"
 import type { LeveragedEtfDrawdownDataset } from "../../components/research/LeveragedEtfDrawdownComparison"
 import nkeAnnualReturns from "../../data/charts/nkeAnnualReturns.json"
 import nkeReturnMethods from "../../data/charts/nkeReturnMethods.json"
@@ -117,6 +120,12 @@ export const stockResearchDataRegistry:
       annualReturns:
         nvdaAnnualReturns as AnnualReturnsPageData,
     },
+    JNJ: {
+      annualReturns: jnjAnnualReturns as AnnualReturnsPageData,
+      returnMethods: jnjReturnMethods.data as ReturnMethodRow[],
+      drawdownData: jnjVsSp500Drawdowns as LeveragedEtfDrawdownDataset,
+    },
+
   }
 
 
