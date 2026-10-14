@@ -111,7 +111,9 @@ export default function StockTotalReturnComparison({
   // Use actual chart pixels as SVG units. A fixed 900px viewBox scaled to
   // a 340px phone was shrinking 12px labels to ~4.5px.
   const width = Math.min(900, Math.max(280, containerWidth - (containerWidth < 640 ? 24 : 40)))
-  const mobile = width < 600
+  const mobile =
+    (typeof window !== 'undefined' && window.innerWidth < 720) ||
+    width < 600
   const height = mobile ? 300 : 340
   const left = mobile ? 66 : 78
   const right = mobile ? 12 : 25
@@ -321,8 +323,8 @@ export default function StockTotalReturnComparison({
               x={x(index)}
               y={height - 12}
               textAnchor={index === 0 ? 'start' : index === last ? 'end' : 'middle'}
-              fontSize={mobile ? 13 : 12}
-              fontWeight={mobile ? 600 : 400}
+              fontSize={mobile ? 20 : 12}
+              fontWeight={mobile ? 650 : 400}
               fill="#475569"
             >
               {row.year}
