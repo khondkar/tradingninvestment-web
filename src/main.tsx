@@ -1,3 +1,4 @@
+
 import { StrictMode } from 'react'
 import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
@@ -5,10 +6,28 @@ import './components/research/ArticleProse.css'
 import App, { prepareApp } from './App.tsx'
 
 async function start() {
+  const dowPath = '/100-years-dow-jones-industrial-average-djia-events-history-chart'
+
+  if (window.location.pathname.replace(/\/$/, '') === dowPath) {
+    const response = await fetch(dowPath + '/index.html', {
+      cache: 'no-store',
+    })
+
+    if (!response.ok) {
+      throw new Error('Dow Jones article could not be loaded')
+    }
+
+    const html = await response.text()
+    document.open()
+    document.write(html)
+    document.close()
+    return
+  }
+
   const container = document.getElementById('root')!
   // Preserve the existing article HTML until its code, CSS, and data are ready.
   await prepareApp(window.location.pathname)
-  const app = <StrictMode><App /></StrictMode>
+  const app = <StrictMode>{window.location.pathname.replace(/\/$/, '') === '/100-years-dow-jones-industrial-average-djia-events-history-chart' ? <App /> : <App />}</StrictMode>
   const page = new URLSearchParams(window.location.search).get('page')
   if (container.dataset.tniHydrate === 'article' || (container.dataset.tniHydrate === 'home' && window.location.pathname === '/'
       && page !== 'articles' && page !== 'about')) {
