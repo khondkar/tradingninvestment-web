@@ -18,6 +18,8 @@ import nkeAnnualReturns from "../../data/charts/nkeAnnualReturns.json"
 import nkeReturnMethods from "../../data/charts/nkeReturnMethods.json"
 import jpmAnnualReturns from "../../data/charts/jpmAnnualReturns.json"
 import jpmReturnMethods from "../../data/charts/jpmReturnMethods.json"
+import msAnnualReturns from "../../data/charts/msAnnualReturns.json"
+import msReturnMethods from "../../data/charts/msReturnMethods.json"
 import amznAnnualReturns from "../../data/charts/amznAnnualReturns.json"
 import amznReturnMethods from "../../data/charts/amznReturnMethods.json"
 import tslaAnnualReturns from "../../data/charts/tslaAnnualReturns.json"
@@ -83,6 +85,11 @@ export const stockResearchDataRegistry:
     JPM: {
       annualReturns: jpmAnnualReturns as AnnualReturnsPageData,
       returnMethods: jpmReturnMethods.data as ReturnMethodRow[],
+    },
+
+    MS: {
+      annualReturns: msAnnualReturns as AnnualReturnsPageData,
+      returnMethods: msReturnMethods.data as ReturnMethodRow[],
     },
 
     AMZN: {

@@ -60,6 +60,30 @@ Subject: The Goldman Sachs Group, Inc.
 Symbol: GS
 Description: Explore Goldman Sachs GS historical returns, long-term performance, growth of $10,000, rolling 10-year performance, and comparison with the S&P 500.
 
+## Johnson & Johnson (JNJ) Stock Returns
+
+URL: https://tradingninvestment.com/jnj-stock-returns/
+Type: annual
+Subject: Johnson & Johnson
+Symbol: JNJ
+Description: Explore JNJ historical stock returns, dividends, long-term performance, growth of $10,000, rolling returns, and comparison with the S&P 500.
+
+## JPMorgan Chase (JPM) Stock Returns
+
+URL: https://tradingninvestment.com/jpm-stock-returns/
+Type: annual
+Subject: JPMorgan Chase & Co.
+Symbol: JPM
+Description: Explore JPM historical stock returns, dividends, long-term performance, growth of $10,000, rolling returns, and comparison with the S&P 500.
+
+## JPMorgan vs. Goldman Sachs Earnings: Historical EPS, Revenue and Market Reactions
+
+URL: https://tradingninvestment.com/research/jpm-vs-gs-earnings-analysis/
+Type: article
+Subject: JPMorgan vs. Goldman Sachs Earnings Research
+Symbol: GS
+Description: Original research comparing 46 JPMorgan and Goldman Sachs earnings announcements from 2021 to 2026, including EPS expectations, revenue, and early stock-price reactions.
+
 ## Magic Doji or Myth and How to Use Doji for Stock Trading
 
 URL: https://tradingninvestment.com/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading/
@@ -75,6 +99,14 @@ Type: annual
 Subject: Microsoft Corporation
 Symbol: MSFT
 Description: Explore Microsoft (MSFT) stock returns by year, historical performance, 5-year and 10-year returns, positive and negative years, major gains and declines, and current-year performance.
+
+## Morgan Stanley (MS) Stock Returns
+
+URL: https://tradingninvestment.com/ms-stock-returns/
+Type: annual
+Subject: Morgan Stanley
+Symbol: MS
+Description: Explore Morgan Stanley MS historical returns, dividends, long-term performance, growth of $10,000, rolling returns, and comparison with the S&P 500.
 
 ## Nasdaq Historical Returns by Year (1972–2026)
 
