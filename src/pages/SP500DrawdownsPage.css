@@ -1,3 +1,14 @@
+/* Article prose: add 2px to inherited sizes; explicit paragraph sizes below
+   retain their own responsive values. Zero specificity preserves those rules. */
+:where(.tni-drawdown-page) :where(p, li, blockquote) {
+  font-size: calc(1em + 2px);
+}
+
+/* Nested prose inherits the increase once. */
+:where(.tni-drawdown-page) :where(li, blockquote) :where(p, li, blockquote) {
+  font-size: inherit;
+}
+
 .tni-drawdown-page {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
@@ -67,14 +78,14 @@
   max-width: 820px;
   margin: 24px 0 0;
   color: #475467;
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.65;
 }
 
 .tni-drawdown-byline {
   margin: 12px 0 0;
   color: #6b7b90;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -149,7 +160,7 @@
 .tni-drawdown-methodology p {
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.75;
 }
 
@@ -197,7 +208,7 @@
 .tni-drawdown-stat p {
   margin: 13px 0 0;
   color: #667085;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.55;
 }
 
@@ -314,7 +325,7 @@
 
   .tni-drawdown-lead {
     margin-top: 20px;
-    font-size: 17px;
+    font-size: 19px;
     line-height: 1.65;
   }
 
@@ -350,7 +361,7 @@
   .tni-drawdown-finding p,
   .tni-drawdown-recovery p,
   .tni-drawdown-methodology p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 
@@ -402,7 +413,7 @@
   max-width: 820px;
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
 }
 
@@ -488,7 +499,7 @@
   }
 
   .tni-drawdown-history > p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 
@@ -531,7 +542,7 @@
 .tni-drawdown-frequency p {
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
 }
 
@@ -545,7 +556,7 @@
   }
 
   .tni-drawdown-frequency p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 }
@@ -570,7 +581,7 @@
 .tni-drawdown-frequency p {
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
 }
 
@@ -584,7 +595,7 @@
   }
 
   .tni-drawdown-frequency p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 }
@@ -610,7 +621,7 @@
   max-width: 820px;
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
 }
 
@@ -691,7 +702,7 @@
   padding-top: 18px;
   border-top: 1px solid #eaecf0;
   color: #667085 !important;
-  font-size: 15px !important;
+  font-size: 17px !important;
 }
 
 @media (max-width: 720px) {
@@ -704,7 +715,7 @@
   }
 
   .tni-drawdown-forward > p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 
@@ -727,7 +738,7 @@
   }
 
   .tni-forward-methodology {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -753,7 +764,7 @@
   max-width: 820px;
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
 }
 
@@ -797,7 +808,7 @@
 .tni-duration-grid article > p {
   margin: 12px 0 0;
   color: #667085;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.55;
 }
 
@@ -811,7 +822,7 @@
   }
 
   .tni-drawdown-duration > p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 
@@ -874,7 +885,7 @@
   max-width: 720px;
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.7;
 }
 
@@ -920,7 +931,7 @@
   }
 
   .tni-drawdown-intelligence p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 
@@ -986,7 +997,7 @@
   max-width: 820px;
   margin: 18px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72;
 }
 
@@ -1049,7 +1060,7 @@
   border-left: 3px solid #98a2b3;
   background: #f8fafc;
   color: #475467;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
@@ -1072,7 +1083,7 @@
   max-width: 820px;
   margin: 16px 0 0;
   color: #475467;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.72;
 }
 
@@ -1098,7 +1109,7 @@
 
   .tni-drawdown-2026-context > p,
   .tni-crash-2026 p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
   }
 

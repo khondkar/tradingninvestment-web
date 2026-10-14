@@ -214,7 +214,7 @@ export default function LeveragedEtfPeriodComparison({
           maxWidth: '900px',
           margin: '0 0 16px',
           color: '#6b7b90',
-          fontSize: '13px',
+          fontSize: "15px",
           lineHeight: 1.7,
         }}
       >
@@ -549,7 +549,7 @@ export default function LeveragedEtfPeriodComparison({
         style={{
           margin: '14px 0 0',
           color: '#7a899c',
-          fontSize: '11px',
+          fontSize: "13px",
           lineHeight: 1.6,
         }}
       >

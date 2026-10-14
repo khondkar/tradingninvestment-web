@@ -129,7 +129,7 @@ export default function LeveragedEtfFundFacts({
             style={{
               margin: "0 0 12px",
               color: "#43546a",
-              fontSize: "13px",
+              fontSize: "15px",
               lineHeight: 1.75,
             }}
           >
@@ -158,7 +158,7 @@ export default function LeveragedEtfFundFacts({
         style={{
           margin: 0,
           color: "#7a899c",
-          fontSize: "11px",
+          fontSize: "13px",
           lineHeight: 1.65,
         }}
       >

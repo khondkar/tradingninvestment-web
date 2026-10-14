@@ -1,3 +1,14 @@
+/* Article prose: add 2px to inherited sizes; explicit paragraph sizes below
+   retain their own responsive values. Zero specificity preserves those rules. */
+:where(.crash1929-page) :where(p, li, blockquote) {
+  font-size: calc(1em + 2px);
+}
+
+/* Nested prose inherits the increase once. */
+:where(.crash1929-page) :where(li, blockquote) :where(p, li, blockquote) {
+  font-size: inherit;
+}
+
 .crash1929-page {
   width: min(100%, 1040px);
   margin: 0 auto;
@@ -41,14 +52,14 @@
 }
 
 .crash1929-page p {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
   margin: 0 0 18px;
 }
 
 .crash1929-page .crash1929-author,
 .crash1929-page .crash1929-source {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: #526471;
 }
@@ -134,6 +145,6 @@
   }
 
   .crash1929-page p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }

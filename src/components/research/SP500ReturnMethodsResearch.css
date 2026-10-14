@@ -1,3 +1,14 @@
+/* Article prose: add 2px to inherited sizes; explicit paragraph sizes below
+   retain their own responsive values. Zero specificity preserves those rules. */
+:where(.tni-return-methods) :where(p, li, blockquote) {
+  font-size: calc(1em + 2px);
+}
+
+/* Nested prose inherits the increase once. */
+:where(.tni-return-methods) :where(li, blockquote) :where(p, li, blockquote) {
+  font-size: inherit;
+}
+
 .tni-return-methods {
   width: 100%;
   color: #12233a;
@@ -51,7 +62,7 @@
   max-width: 800px;
   margin: 0 0 14px;
   color: #5c6c7c;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
 }
 
@@ -85,7 +96,7 @@
   }
 
   .tni-return-methods__header > p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.7;
   }
 }

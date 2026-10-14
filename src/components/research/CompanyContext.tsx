@@ -49,7 +49,7 @@ export default function CompanyContext({
           style={{
             margin: index === 0 ? '0 0 14px' : '0 0 14px',
             color: '#43546a',
-            fontSize: '16px',
+            fontSize: "18px",
             lineHeight: 1.7,
           }}
         >
@@ -62,7 +62,7 @@ export default function CompanyContext({
           style={{
             margin: 0,
             color: '#10233f',
-            fontSize: '16px',
+            fontSize: "18px",
             lineHeight: 1.7,
             fontWeight: 700,
           }}

@@ -199,7 +199,7 @@ export default function StockTotalReturnComparison({
           <h3 style={{ margin: 0, color: '#10233f' }}>
             {assetTicker} vs. S&P 500 — Total Return
           </h3>
-          <p style={{ margin: '5px 0', color: '#64748b', fontSize: 13 }}>
+          <p style={{ margin: '5px 0', color: '#64748b', fontSize: 15 }}>
             Growth of $10,000 · Dividends reinvested
           </p>
         </div>
@@ -333,7 +333,7 @@ export default function StockTotalReturnComparison({
         })}
       </svg>
 
-      <p style={{ color: '#64748b', fontSize: 12, marginBottom: 0 }}>
+      <p style={{ color: '#64748b', fontSize: 14, marginBottom: 0 }}>
         Annual observations through the last completed calendar year.
         Each selected period is rebased to $10,000.
         Sources: Stock adjusted-close total-return series;
@@ -370,7 +370,7 @@ export default function StockTotalReturnComparison({
 
         <p style={{
           color: '#475569',
-          fontSize: 14,
+          fontSize: 16,
           lineHeight: 1.85,
           margin: '0 0 16px',
         }}>
@@ -393,7 +393,7 @@ export default function StockTotalReturnComparison({
 
         <p style={{
           color: '#475569',
-          fontSize: 14,
+          fontSize: 16,
           lineHeight: 1.85,
           margin: '0 0 14px',
         }}>
@@ -416,7 +416,7 @@ export default function StockTotalReturnComparison({
 
         <p style={{
           color: '#475569',
-          fontSize: 14,
+          fontSize: 16,
           lineHeight: 1.85,
           margin: 0,
         }}>

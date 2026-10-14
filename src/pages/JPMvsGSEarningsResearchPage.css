@@ -1,3 +1,14 @@
+/* Article prose: add 2px to inherited sizes; explicit paragraph sizes below
+   retain their own responsive values. Zero specificity preserves those rules. */
+:where(.bank-study article) :where(p, li, blockquote) {
+  font-size: calc(1em + 2px);
+}
+
+/* Nested prose inherits the increase once. */
+:where(.bank-study article) :where(li, blockquote) :where(p, li, blockquote) {
+  font-size: inherit;
+}
+
 .bank-study {
   max-width: 1160px;
   margin: 0 auto;
@@ -52,14 +63,14 @@
 .bank-study-dek {
   max-width: 730px;
   color: #526175;
-  font-size: clamp(18px, 2vw, 21px);
+  font-size: calc(clamp(18px, 2vw, 21px) + 2px);
   line-height: 1.65;
 }
 
 .bank-study-byline {
   margin-top: 28px;
   color: #738094;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .bank-study-key-findings {
@@ -90,7 +101,7 @@
 
 .bank-study-key-findings p {
   color: #657487;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .bank-study-body {
@@ -109,7 +120,7 @@
 }
 
 .bank-study-body p {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.85;
   color: #425269;
 }
@@ -156,7 +167,7 @@
 .bank-study-disclosure {
   padding-top: 24px;
   border-top: 1px solid #e2e8ed;
-  font-size: 13px !important;
+  font-size: 15px !important;
 }
 
 @media (max-width: 640px) {
@@ -173,6 +184,6 @@
   }
 
   .bank-study-body p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }

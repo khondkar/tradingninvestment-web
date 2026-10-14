@@ -5,6 +5,6 @@
 @media (max-width: 600px) {
   .tni-total-return { padding: 12px !important; margin: 16px 0 24px !important; }
   .tni-total-return h3 { font-size: 17px !important; line-height: 1.35; }
-  .tni-total-return p { font-size: 13px !important; line-height: 1.6 !important; }
+  .tni-total-return p { font-size: 15px !important; line-height: 1.6 !important; }
   .tni-total-return button { font-size: 13px; min-height: 38px; }
 }

@@ -946,7 +946,7 @@ export default function GenericAnnualReturnsPage({
   // ==========================================================================
 
   return (
-    <main
+    <main className="tni-annual-page"
       style={{
         minHeight: '100vh',
         background: '#ffffff',
@@ -1039,7 +1039,7 @@ export default function GenericAnnualReturnsPage({
 
               color: '#607086',
 
-              fontSize: '16px',
+              fontSize: "18px",
 
               lineHeight: 1.7,
             }}
@@ -1082,7 +1082,7 @@ export default function GenericAnnualReturnsPage({
             style={{
               margin: '12px 0 0',
               color: '#6b7b90',
-              fontSize: '13px',
+              fontSize: "15px",
               lineHeight: 1.6,
             }}
           >
@@ -1201,7 +1201,7 @@ export default function GenericAnnualReturnsPage({
               maxWidth: '900px',
               margin: '0 0 16px',
               color: '#6b7b90',
-              fontSize: '13px',
+              fontSize: "15px",
               lineHeight: 1.7,
             }}
           >
@@ -1356,7 +1356,7 @@ export default function GenericAnnualReturnsPage({
               maxWidth: '900px',
               margin: '0 0 16px',
               color: '#6b7b90',
-              fontSize: '13px',
+              fontSize: "15px",
               lineHeight: 1.7,
             }}
           >
@@ -2041,7 +2041,7 @@ export default function GenericAnnualReturnsPage({
                 margin: '8px 0 0',
                 maxWidth: '760px',
                 color: '#66768a',
-                fontSize: '14px',
+                fontSize: "16px",
                 lineHeight: 1.65,
               }}
             >
@@ -2215,7 +2215,7 @@ export default function GenericAnnualReturnsPage({
               style={{
                 margin: '0 0 10px',
                 color: '#66768a',
-                fontSize: '13px',
+                fontSize: "15px",
                 lineHeight: 1.7,
               }}
             >
@@ -2229,7 +2229,7 @@ export default function GenericAnnualReturnsPage({
               style={{
                 margin: '0 0 10px',
                 color: '#45566b',
-                fontSize: '13px',
+                fontSize: "15px",
                 fontWeight: 750,
                 lineHeight: 1.7,
               }}
@@ -2243,7 +2243,7 @@ export default function GenericAnnualReturnsPage({
               style={{
                 margin: '0 0 10px',
                 color: '#66768a',
-                fontSize: '13px',
+                fontSize: "15px",
                 lineHeight: 1.7,
               }}
             >
@@ -2265,7 +2265,7 @@ export default function GenericAnnualReturnsPage({
               style={{
                 margin: 0,
                 color: '#8794a5',
-                fontSize: '11px',
+                fontSize: "13px",
                 lineHeight: 1.65,
               }}
             >
@@ -2698,7 +2698,7 @@ export default function GenericAnnualReturnsPage({
                 '#6b7b90',
 
               fontSize:
-                '13px',
+                "15px",
 
               lineHeight:
                 1.6,
@@ -2888,7 +2888,7 @@ export default function GenericAnnualReturnsPage({
               margin: '0 0 10px',
               maxWidth: '850px',
               color: '#52657b',
-              fontSize: '14px',
+              fontSize: "16px",
               lineHeight: 1.75,
             }}
           >
@@ -2904,7 +2904,7 @@ export default function GenericAnnualReturnsPage({
               margin: 0,
               maxWidth: '850px',
               color: '#52657b',
-              fontSize: '14px',
+              fontSize: "16px",
               lineHeight: 1.75,
             }}
           >
@@ -3003,7 +3003,7 @@ export default function GenericAnnualReturnsPage({
                   '#66768a',
 
                 fontSize:
-                  '14px',
+                  "16px",
 
                 lineHeight:
                   1.75,
@@ -3090,7 +3090,7 @@ export default function GenericAnnualReturnsPage({
                 maxWidth: '820px',
                 margin: '0 0 18px',
                 color: '#66768a',
-                fontSize: '14px',
+                fontSize: "16px",
                 lineHeight: 1.75,
               }}
             >
@@ -3204,7 +3204,7 @@ export default function GenericAnnualReturnsPage({
                 '#66768a',
 
               fontSize:
-                '13px',
+                "15px",
 
               lineHeight:
                 1.8,
@@ -3226,7 +3226,7 @@ export default function GenericAnnualReturnsPage({
                 '#66768a',
 
               fontSize:
-                '13px',
+                "15px",
 
               lineHeight:
                 1.8,

@@ -55,7 +55,7 @@ export default function LeveragedEtfResearchContext({
           style={{
             margin: "0 0 14px",
             color: "#4d5d70",
-            fontSize: "14px",
+            fontSize: "16px",
             lineHeight: 1.75,
           }}
         >
@@ -74,7 +74,7 @@ export default function LeveragedEtfResearchContext({
           style={{
             margin: 0,
             color: "#4d5d70",
-            fontSize: "14px",
+            fontSize: "16px",
             lineHeight: 1.75,
           }}
         >
@@ -96,7 +96,7 @@ export default function LeveragedEtfResearchContext({
           style={{
             margin: "14px 0 0",
             color: "#4d5d70",
-            fontSize: "14px",
+            fontSize: "16px",
             lineHeight: 1.75,
           }}
         >

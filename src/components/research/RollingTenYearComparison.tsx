@@ -519,7 +519,7 @@ export default function RollingTenYearComparison({
         style={{
           margin: '12px 0 0',
           color: '#7a899c',
-          fontSize: '11px',
+          fontSize: "13px",
           lineHeight: 1.6,
         }}
       >

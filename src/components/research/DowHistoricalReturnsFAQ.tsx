@@ -328,7 +328,7 @@ export default function DowHistoricalReturnsFAQ({
               style={{
                 margin: "10px 0 0",
                 color: "#66768a",
-                fontSize: "13px",
+                fontSize: "15px",
                 lineHeight: 1.7,
               }}
             >

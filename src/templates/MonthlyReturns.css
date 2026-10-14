@@ -1,3 +1,14 @@
+/* Article prose: add 2px to inherited sizes; explicit paragraph sizes below
+   retain their own responsive values. Zero specificity preserves those rules. */
+:where(.tni-monthly-page) :where(p, li, blockquote) {
+  font-size: calc(1em + 2px);
+}
+
+/* Nested prose inherits the increase once. */
+:where(.tni-monthly-page) :where(li, blockquote) :where(p, li, blockquote) {
+  font-size: inherit;
+}
+
 .tni-monthly-page {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
@@ -49,7 +60,7 @@
 .tni-monthly-lead {
   max-width: 760px;
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.65;
   color: #475467;
 }
@@ -121,7 +132,7 @@
 .tni-current-month-card p {
   margin: 0;
   color: #667085;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .tni-current-month-card > strong {
@@ -188,7 +199,7 @@
 .tni-pattern-card p {
   margin: 6px 0 0;
   color: #667085;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .tni-value-positive {
@@ -486,7 +497,7 @@
 .monthly-seo-content p {
   margin: 0 0 18px;
   color: #475467;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -502,7 +513,7 @@
   }
 
   .monthly-seo-content p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.75;
   }
 }
@@ -547,7 +558,7 @@
 .tni-monthly-context-header p {
   margin: 0;
   color: #667085;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .tni-monthly-context-header > strong {
@@ -623,7 +634,7 @@
   border-radius: 10px;
   background: #f8fafc;
   color: #475467;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.55;
 }
 

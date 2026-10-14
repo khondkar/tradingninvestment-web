@@ -1,10 +1,21 @@
+/* Article prose: add 2px to inherited sizes; explicit paragraph sizes below
+   retain their own responsive values. Zero specificity preserves those rules. */
+:where(.tni-annual-page) :where(p, li, blockquote) {
+  font-size: calc(1em + 2px);
+}
+
+/* Nested prose inherits the increase once. */
+:where(.tni-annual-page) :where(li, blockquote) :where(p, li, blockquote) {
+  font-size: inherit;
+}
+
 /* ==========================================================================
    TNI S&P 500 ANNUAL RETURNS — TABLE INTRO TYPOGRAPHY
    Desktop readability + accessibility-first mobile typography
    ========================================================================== */
 
 .tni-annual-table-description {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .tni-return-legend {
@@ -52,7 +63,7 @@
 @media (max-width: 720px) {
 
   .tni-annual-table-description {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1.35 !important;
   }
 
@@ -590,14 +601,14 @@
 
 .sp500-research-lead {
   color: #334155;
-  font-size: 1.18rem;
+  font-size: calc(1.18rem + 2px);
   line-height: 1.75;
 }
 
 .sp500-research-article p {
   max-width: 850px;
   margin: 0 0 18px;
-  font-size: 1.02rem;
+  font-size: calc(1.02rem + 2px);
 }
 
 .sp500-research-article strong {
@@ -716,7 +727,7 @@
   padding-top: 24px;
   border-top: 1px solid #dbe3ef;
   color: #0f172a;
-  font-size: 1.08rem !important;
+  font-size: calc(1.08rem + 2px) !important;
 }
 
 
@@ -738,7 +749,7 @@
   }
 
   .sp500-research-lead {
-    font-size: 1.06rem;
+    font-size: calc(1.06rem + 2px);
   }
 
   .sp500-research-section {
@@ -752,7 +763,7 @@
   }
 
   .sp500-research-article p {
-    font-size: 0.98rem;
+    font-size: calc(0.98rem + 2px);
     line-height: 1.72;
   }
 }

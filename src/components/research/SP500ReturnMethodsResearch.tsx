@@ -4296,7 +4296,7 @@ export default function SP500ReturnMethodsResearch() {
 
         .tni-return-methods__dividend-section p {
           color: #52647b;
-          font-size: 15px;
+          font-size: 17px;
           line-height: 1.75;
         }
 
@@ -4441,7 +4441,7 @@ export default function SP500ReturnMethodsResearch() {
           max-width: 720px;
           margin: 0;
           color: #d9e3ef;
-          font-size: 12px;
+          font-size: 14px;
         }
 
 
@@ -4477,7 +4477,7 @@ export default function SP500ReturnMethodsResearch() {
           padding-top: 18px;
           border-top:
             1px solid #e4ebf3;
-          font-size: 12px !important;
+          font-size: 14px !important;
           line-height: 1.65 !important;
         }
 
@@ -4557,7 +4557,7 @@ export default function SP500ReturnMethodsResearch() {
         .tni-return-methods__header p {
           max-width: 850px;
           margin: 0;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 1.7;
           opacity: 0.76;
         }
@@ -4722,7 +4722,7 @@ export default function SP500ReturnMethodsResearch() {
         .tni-return-methods__statistics-intro {
           max-width: 820px;
           margin: 0 0 18px;
-          font-size: 13px;
+          font-size: 15px;
           line-height: 1.65;
           opacity: 0.75;
         }
@@ -4773,7 +4773,7 @@ export default function SP500ReturnMethodsResearch() {
         }
 
         .tni-return-methods__current {
-          font-size: 13px;
+          font-size: 15px;
           opacity: 0.75;
         }
 
@@ -4802,7 +4802,7 @@ export default function SP500ReturnMethodsResearch() {
 
         .tni-methodology-card p {
           margin: 0;
-          font-size: 13px;
+          font-size: 15px;
           line-height: 1.65;
           opacity: 0.76;
         }
@@ -4879,7 +4879,7 @@ export default function SP500ReturnMethodsResearch() {
         .tni-source-disclosure {
           max-width: 920px;
           margin: 18px 0 34px;
-          font-size: 0.9rem;
+          font-size: calc(0.9rem + 2px);
           line-height: 1.7;
           opacity: 0.76;
         }
@@ -4905,7 +4905,7 @@ export default function SP500ReturnMethodsResearch() {
 
         .tni-verification-grid p {
           margin: 0;
-          font-size: 0.88rem;
+          font-size: calc(0.88rem + 2px);
           line-height: 1.65;
           opacity: 0.76;
         }
@@ -4967,7 +4967,7 @@ export default function SP500ReturnMethodsResearch() {
         .tni-return-methods__annual-explanation p {
           margin: 0 0 16px;
           line-height: 1.72;
-          font-size: 0.98rem;
+          font-size: calc(0.98rem + 2px);
           opacity: 0.86;
         }
 
@@ -5034,7 +5034,7 @@ export default function SP500ReturnMethodsResearch() {
 
         .tni-return-table-note {
           margin-top: 14px;
-          font-size: 12px;
+          font-size: 14px;
           line-height: 1.6;
           opacity: 0.7;
         }
@@ -5148,7 +5148,7 @@ export default function SP500ReturnMethodsResearch() {
         .tni-return-methods__summary-explanation p {
           margin: 0 0 16px;
           line-height: 1.72;
-          font-size: 0.98rem;
+          font-size: calc(0.98rem + 2px);
           opacity: 0.86;
         }
 
@@ -5178,7 +5178,7 @@ export default function SP500ReturnMethodsResearch() {
           border: 1px solid rgba(148, 163, 184, 0.16);
           border-radius: 12px;
           line-height: 1.65;
-          font-size: 0.9rem;
+          font-size: calc(0.9rem + 2px);
           opacity: 0.78;
         }
 

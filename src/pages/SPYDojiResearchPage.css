@@ -1,3 +1,14 @@
+/* Article prose: add 2px to inherited sizes; explicit paragraph sizes below
+   retain their own responsive values. Zero specificity preserves those rules. */
+:where(.spy-doji-research article) :where(p, li, blockquote) {
+  font-size: calc(1em + 2px);
+}
+
+/* Nested prose inherits the increase once. */
+:where(.spy-doji-research article) :where(li, blockquote) :where(p, li, blockquote) {
+  font-size: inherit;
+}
+
 .spy-doji-research {
   max-width: 1160px;
   margin: 0 auto;
@@ -51,14 +62,14 @@
 .spy-doji-dek {
   max-width: 730px;
   color: #526175;
-  font-size: clamp(18px, 2vw, 21px);
+  font-size: calc(clamp(18px, 2vw, 21px) + 2px);
   line-height: 1.65;
 }
 
 .spy-doji-byline {
   margin-top: 28px;
   color: #738094;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .spy-doji-byline a {
@@ -99,7 +110,7 @@
 .spy-doji-key-findings p {
   margin: 9px 0 0;
   color: #657487;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -122,7 +133,7 @@
 .spy-doji-article-body p {
   margin: 0 0 25px;
   color: #435165;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.85;
 }
 
@@ -155,7 +166,7 @@
 
 .spy-doji-research-footer p {
   color: #697789;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.75;
 }
 
@@ -186,7 +197,7 @@
   }
 
   .spy-doji-article-body p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
   }
 

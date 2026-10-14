@@ -195,7 +195,7 @@ function LoadingComparison({
       <p
         style={{
           color: '#6b7b90',
-          fontSize: '13px',
+          fontSize: "15px",
         }}
       >
         Loading period comparison…

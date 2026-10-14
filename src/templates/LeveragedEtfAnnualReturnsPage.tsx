@@ -126,7 +126,7 @@ export default function LeveragedEtfAnnualReturnsPage({
                 style={{
                   margin: "0 0 18px",
                   color: "#4d5d70",
-                  fontSize: "14px",
+                  fontSize: "16px",
                   lineHeight: 1.75,
                 }}
               >
@@ -204,7 +204,7 @@ export default function LeveragedEtfAnnualReturnsPage({
                 style={{
                   margin: "0 0 12px",
                   color: "#7a899c",
-                  fontSize: "11px",
+                  fontSize: "13px",
                   lineHeight: 1.65,
                 }}
               >
@@ -227,7 +227,7 @@ export default function LeveragedEtfAnnualReturnsPage({
                 style={{
                   margin: 0,
                   color: "#7a899c",
-                  fontSize: "11px",
+                  fontSize: "13px",
                   lineHeight: 1.65,
                 }}
               >

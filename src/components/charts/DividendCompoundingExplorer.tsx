@@ -820,7 +820,7 @@ export default function DividendCompoundingExplorer({
         .tni-dividend-explorer__definition {
           margin: 18px 0 0;
           color: #68798b;
-          font-size: 11px;
+          font-size: 13px;
           line-height: 1.65;
         }
 
