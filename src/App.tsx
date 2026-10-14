@@ -1,3 +1,4 @@
+import TniKitSubscriptionPopup from './components/subscription/TniKitSubscriptionPopup'
 import { useState } from 'react'
 import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
 import { getStockResearchData } from './performance/researchData'
@@ -917,6 +918,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
       <div className="site">
         <Header pathname={pathname} page="research" setPage={setPage} />
         <JPMvsGSEarningsResearchPage />
+        <TniKitSubscriptionPopup />
         <Footer setPage={setPage} />
       </div>
     )
@@ -926,6 +928,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
       <div className="site">
         <Header pathname={pathname} page="research" setPage={setPage} />
         <SPYDojiResearchPage />
+        <TniKitSubscriptionPopup />
         <Footer setPage={setPage} />
       </div>
     )
@@ -1094,6 +1097,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
           setPage={setPage}
         />
         <SP500MonthlyReturnsPage />
+        <TniKitSubscriptionPopup />
         <ResearchConnections path="/sp-500-monthly-returns/" />
       </div>
     )
