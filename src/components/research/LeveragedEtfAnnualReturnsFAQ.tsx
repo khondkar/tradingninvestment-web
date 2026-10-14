@@ -1,3 +1,4 @@
+import ResearchParagraphs from './ResearchParagraphs'
 import type {
   AnnualReturnsAssetConfig,
 } from "../../research/annual-returns/types"
@@ -267,16 +268,15 @@ export default function LeveragedEtfAnnualReturnsFAQ({
                 {item.question}
               </summary>
 
-              <p
+              <ResearchParagraphs
                 style={{
                   margin:
                     "12px 0 0",
                   color: "#4d5a68",
                   lineHeight: 1.75,
                 }}
-              >
-                {item.answer}
-              </p>
+              text={item.answer}
+              />
             </details>
           ),
         )}

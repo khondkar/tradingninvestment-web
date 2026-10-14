@@ -469,8 +469,9 @@ const staticContent = `
       Research Methodology
     </h2>
 
+    ${dataset.methodology.split(/(?<=[.!?])\s+(?=[A-Z])/u)
+      .map(sentence => `<p>${escapeHtml(sentence)}</p>`).join("\n")}
     <p>
-      ${escapeHtml(dataset.methodology)}
       The dataset contains
       ${escapeHtml(formatInteger(dataset.range.daily_observations))}
       daily observations covering

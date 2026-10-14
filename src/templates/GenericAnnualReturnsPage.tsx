@@ -1030,35 +1030,60 @@ export default function GenericAnnualReturnsPage({
             </div>
           )}
 
-          <p
-            style={{
-              maxWidth: '820px',
+          {config.slug===
+            'stock-market-historical-returns'? (<><p
+              style={{
+                maxWidth: '820px',
 
-              margin:
-                '18px 0 0',
+                margin:
+                  '18px 0 0',
 
-              color: '#607086',
+                color: '#607086',
 
-              fontSize: "18px",
+                fontSize: "18px",
 
-              lineHeight: 1.7,
-            }}
-          >
-            {config.slug ===
-            'stock-market-historical-returns' ? (
-              <>
-                Explore more than 100 years of stock market historical returns
-                using the Dow Jones Industrial Average, from{' '}
-                {config.startYear} to present. Analyze Dow Jones returns by
+                lineHeight: 1.7,
+              }}
+            >
+              Explore more than 100 years of stock market historical returns
+              using the Dow Jones Industrial Average, from{' '}
+              {config.startYear} to present.</p>
+
+              <p
+                style={{
+                  maxWidth: '820px',
+
+                  margin:
+                    '18px 0 0',
+
+                  color: '#607086',
+
+                  fontSize: "18px",
+
+                  lineHeight: 1.7,
+                }}
+              >
+                Analyze Dow Jones returns by
                 year, current YTD performance, 1-year, 3-year, 5-year,
                 10-year and 20-year returns, average historical returns,
                 positive and negative years, major market declines, and
                 long-term market performance. Use the interactive historical
                 charts and download the underlying annual return data for
                 further research.
-              </>
-            ) : (
-              <>
+              </p></>):(<p
+                style={{
+                  maxWidth: '820px',
+
+                  margin:
+                    '18px 0 0',
+
+                  color: '#607086',
+
+                  fontSize: "18px",
+
+                  lineHeight: 1.7,
+                }}
+              >
                 Explore {config.name} returns by year from{' '}
                 {config.startYear} to present. Analyze the current-year
                 return,{' '}
@@ -1069,9 +1094,7 @@ export default function GenericAnnualReturnsPage({
                 ).toLowerCase()} returns, average historical returns,
                 positive and negative market years, and long-term market
                 performance using the interactive research explorer.
-              </>
-            )}
-          </p>
+              </p>)}
 
           {/* =============================================================
               TNI S&P 500 RESEARCH — VISIBLE AUTHORSHIP & ENTITY SIGNAL

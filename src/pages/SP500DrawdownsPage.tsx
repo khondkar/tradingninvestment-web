@@ -932,19 +932,23 @@ export default function SP500DrawdownsPage() {
             Will the Stock Market Crash in 2026?
           </h2>
 
-          <p>
-            A stock market crash in 2026 cannot be
-            known in advance. Historical drawdowns
-            can, however, show how often meaningful
-            declines became substantially deeper.
-            Under TNI&apos;s closing-price,
-            peak-to-full-recovery methodology, the
-            S&amp;P 500 recorded {drawdownCount}
-            independent declines of at least 10%
-            across this historical sample. Of
-            those, {bearMarketCount} reached the
-            20% bear-market threshold.
-          </p>
+          <>
+            <p>
+              A stock market crash in 2026 cannot be
+              known in advance. Historical drawdowns
+              can, however, show how often meaningful
+              declines became substantially deeper.
+              Under TNI&apos;s closing-price,
+              peak-to-full-recovery methodology, the
+              S&amp;P 500 recorded {drawdownCount}
+              independent declines of at least 10%
+              across this historical sample.</p>
+
+            <p> Of
+              those, {bearMarketCount} reached the
+              20% bear-market threshold.
+            </p>
+          </>
 
           <p>
             In other words, {

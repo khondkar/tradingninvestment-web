@@ -92,20 +92,28 @@ export default function StockMarketCrash1929Page() {
           </nav>
         </header>
 
-        <p>
-          During the Roaring Twenties, the U.S. economy and stock market
-          expanded rapidly, while buying stocks on margin let investors
-          take on greater risk. The Dow Jones Industrial Average reached
-          381.17 on September 3, 1929. After the sharp selloffs known as
-          Black Thursday, Black Monday, and Black Tuesday, it continued
-          falling until July 8, 1932, when it closed at 41.22—about 89%
-          below its peak. The Wall Street crash of 1929, also called the
-          Great Crash, was a major turning point at the beginning of the
-          Great Depression, though it was not the only cause of the
-          economic crisis. This chart places the 1929 stock market crash
-          in the context of the Roaring Twenties boom and the prolonged
-          decline that followed.
-        </p>
+        <>
+          <p>
+            During the Roaring Twenties, the U.S. economy and stock market
+            expanded rapidly, while buying stocks on margin let investors
+            take on greater risk. The Dow Jones Industrial Average reached
+            381.17 on September 3, 1929.</p>
+
+          <p> After the sharp selloffs known as
+            Black Thursday, Black Monday, and Black Tuesday, it continued
+            falling until July 8, 1932, when it closed at 41.22—about 89%
+            below its peak.</p>
+
+          <p> The Wall Street crash of 1929, also called the
+            Great Crash, was a major turning point at the beginning of the
+            Great Depression, though it was not the only cause of the
+            economic crisis.</p>
+
+          <p> This chart places the 1929 stock market crash
+            in the context of the Roaring Twenties boom and the prolonged
+            decline that followed.
+          </p>
+        </>
 
         <p className="crash1929-source">
           Source:{' '}
@@ -175,21 +183,25 @@ export default function StockMarketCrash1929Page() {
         <section aria-labelledby="crash1929-consequences">
           <h2 id="crash1929-consequences">The Crash and Its Consequences</h2>
 
-          <p>
-            By 1933, nearly half of America’s banks had failed, and
-            unemployment was approaching 15 million people, or 30 percent
-            of the workforce. It would take{' '}
-            <a
-              href="https://www.history.com/topics/world-war-ii"
-              target="_blank"
-              rel="noreferrer"
-            >
-              World War II
-            </a>
-            , and the massive level of armaments production taken on by
-            the United States, to finally bring the country out of the
-            Depression after a decade of suffering.
-          </p>
+          <>
+            <p>
+              By 1933, nearly half of America’s banks had failed, and
+              unemployment was approaching 15 million people, or 30 percent
+              of the workforce.</p>
+
+            <p> It would take{' '}
+              <a
+                href="https://www.history.com/topics/world-war-ii"
+                target="_blank"
+                rel="noreferrer"
+              >
+                World War II
+              </a>
+              , and the massive level of armaments production taken on by
+              the United States, to finally bring the country out of the
+              Depression after a decade of suffering.
+            </p>
+          </>
 
           <p className="crash1929-source">
             Source:{' '}

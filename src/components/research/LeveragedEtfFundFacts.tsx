@@ -56,7 +56,18 @@ export default function LeveragedEtfFundFacts({
           lineHeight: 1.7,
         }}
       >
-        {fund.dailyObjective} Because the investment
+        {fund.dailyObjective}
+      </p>
+
+      <p
+        style={{
+          maxWidth: "820px",
+          margin: "0 0 22px",
+          color: "#5f7084",
+          lineHeight: 1.7,
+        }}
+      >
+        Because the investment
         objective is daily, the fund&apos;s return over
         periods longer than one trading day should not be
         assumed to equal its stated leverage multiple

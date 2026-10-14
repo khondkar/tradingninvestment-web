@@ -315,31 +315,35 @@ export default function LeveragedEtfDrawdownComparison({
           {' '}just to return to the previous peak.
         </p>
 
-        <p>
-          The same comparison for {dataset.benchmark} would
-          reduce {formatCurrency(STARTING_VALUE)} to approximately{' '}
-          <strong>
-            {formatCurrency(
-              analysis.benchmarkTroughValue,
-            )}
-          </strong>
-          , requiring roughly{' '}
-          <strong>
-            {formatPercent(
-              analysis.benchmarkRecoveryGain,
-              0,
-            )}
-          </strong>
-          {' '}to recover. This illustrates why the magnitude
-          of a percentage loss matters: the gain required to
-          recover becomes increasingly large as drawdowns deepen.
-          For a different long-term equity perspective, see
-          TNI&apos;s{" "}
-          <a href="/look-berkshire-hathaway-stock-brk-b-berkshire-hathaway-performance-vs-sp-500/">
-            Berkshire Hathaway historical returns
-          </a>
-          .
-        </p>
+        <>
+          <p>
+            The same comparison for {dataset.benchmark} would
+            reduce {formatCurrency(STARTING_VALUE)} to approximately{' '}
+            <strong>
+              {formatCurrency(
+                analysis.benchmarkTroughValue,
+              )}
+            </strong>
+            , requiring roughly{' '}
+            <strong>
+              {formatPercent(
+                analysis.benchmarkRecoveryGain,
+                0,
+              )}
+            </strong>
+            {' '}to recover. This illustrates why the magnitude
+            of a percentage loss matters: the gain required to
+            recover becomes increasingly large as drawdowns deepen.</p>
+
+          <p>
+            For a different long-term equity perspective, see
+            TNI&apos;s{" "}
+            <a href="/look-berkshire-hathaway-stock-brk-b-berkshire-hathaway-performance-vs-sp-500/">
+              Berkshire Hathaway historical returns
+            </a>
+            .
+          </p>
+        </>
       </div>
 
       <div

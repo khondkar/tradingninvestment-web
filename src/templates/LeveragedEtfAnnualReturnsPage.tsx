@@ -122,24 +122,35 @@ export default function LeveragedEtfAnnualReturnsPage({
                 Risk & Due Diligence
               </h2>
 
-              <p
-                style={{
-                  margin: "0 0 18px",
-                  color: "#4d5d70",
-                  fontSize: "16px",
-                  lineHeight: 1.75,
-                }}
-              >
-                {config.shortName} should be evaluated as a
-                leveraged instrument with a daily investment
-                objective. Returns over holding periods longer
-                than one day can differ substantially from the
-                fund&apos;s stated daily leverage multiple applied
-                to {benchmarkName}. Daily compounding, volatility,
-                derivatives, financing costs and fund expenses can
-                materially affect longer-period results and the
-                potential for loss.
-              </p>
+              <>
+                <p
+                  style={{
+                    margin: "0 0 18px",
+                    color: "#4d5d70",
+                    fontSize: "16px",
+                    lineHeight: 1.75,
+                  }}
+                >
+                  {config.shortName} should be evaluated as a
+                  leveraged instrument with a daily investment
+                  objective. Returns over holding periods longer
+                  than one day can differ substantially from the
+                  fund&apos;s stated daily leverage multiple applied
+                  to {benchmarkName}.</p>
+
+                <p
+                  style={{
+                    margin: "0 0 18px",
+                    color: "#4d5d70",
+                    fontSize: "16px",
+                    lineHeight: 1.75,
+                  }}
+                > Daily compounding, volatility,
+                  derivatives, financing costs and fund expenses can
+                  materially affect longer-period results and the
+                  potential for loss.
+                </p>
+              </>
 
               <h3
                 style={{
@@ -200,28 +211,39 @@ export default function LeveragedEtfAnnualReturnsPage({
                 </li>
               </ul>
 
-              <p
-                style={{
-                  margin: "0 0 12px",
-                  color: "#7a899c",
-                  fontSize: "13px",
-                  lineHeight: 1.65,
-                }}
-              >
-                <strong>Important:</strong> Historical returns
-                and drawdowns are observations from the available
-                dataset. They are not forecasts or guarantees of
-                future performance. For broader historical
-                context across major market cycles, explore
-                TNI&apos;s{" "}
-                <a href="/stock-market-historical-returns/">
-                  stock market historical returns
-                </a>
-                . Investors should review the fund&apos;s current
-                prospectus, financial statements, and other
-                official fund documents before making an
-                investment decision.
-              </p>
+              <>
+                <p
+                  style={{
+                    margin: "0 0 12px",
+                    color: "#7a899c",
+                    fontSize: "13px",
+                    lineHeight: 1.65,
+                  }}
+                >
+                  <strong>Important:</strong> Historical returns
+                  and drawdowns are observations from the available
+                  dataset. They are not forecasts or guarantees of
+                  future performance. For broader historical
+                  context across major market cycles, explore
+                  TNI&apos;s{" "}
+                  <a href="/stock-market-historical-returns/">
+                    stock market historical returns
+                  </a>
+                  .</p>
+
+                <p
+                  style={{
+                    margin: "0 0 12px",
+                    color: "#7a899c",
+                    fontSize: "13px",
+                    lineHeight: 1.65,
+                  }}
+                > Investors should review the fund&apos;s current
+                  prospectus, financial statements, and other
+                  official fund documents before making an
+                  investment decision.
+                </p>
+              </>
 
               <p
                 style={{

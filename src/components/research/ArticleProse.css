@@ -1,0 +1,15 @@
+/* Consistent breathing room for every article paragraph. */
+:is(.tni-annual-page, .tni-monthly-page, .tni-return-methods,
+    .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page,
+    .crash1929-page, .tni-static-research-snapshot) p {
+  margin-bottom: 28px !important;
+  line-height: 1.8 !important;
+}
+
+@media (max-width: 720px) {
+  :is(.tni-annual-page, .tni-monthly-page, .tni-return-methods,
+      .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page,
+      .crash1929-page, .tni-static-research-snapshot) p {
+    margin-bottom: 24px !important;
+  }
+}

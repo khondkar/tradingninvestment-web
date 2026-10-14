@@ -51,46 +51,68 @@ export default function LeveragedEtfResearchContext({
           What This {symbol} Analysis Examines
         </h2>
 
-        <p
-          style={{
-            margin: "0 0 14px",
-            color: "#4d5d70",
-            fontSize: "16px",
-            lineHeight: 1.75,
-          }}
-        >
-          {symbol} is a {leverageLabel} ETF with a daily
-          investment objective. Because the objective resets
-          daily, returns over a week, month, year, or longer
-          period should not be assumed to equal the stated
-          leverage multiple applied to the corresponding
-          long-term return of {benchmarkName}. Daily
-          compounding, market volatility, financing costs,
-          fund expenses, and the path of returns can materially
-          affect the outcome.
-        </p>
+        <>
+          <p
+            style={{
+              margin: "0 0 14px",
+              color: "#4d5d70",
+              fontSize: "16px",
+              lineHeight: 1.75,
+            }}
+          >
+            {symbol} is a {leverageLabel} ETF with a daily
+            investment objective. Because the objective resets
+            daily, returns over a week, month, year, or longer
+            period should not be assumed to equal the stated
+            leverage multiple applied to the corresponding
+            long-term return of {benchmarkName}.</p>
 
-        <p
-          style={{
-            margin: 0,
-            color: "#4d5d70",
-            fontSize: "16px",
-            lineHeight: 1.75,
-          }}
-        >
-          This TNI research therefore examines {symbol} across
-          the historical periods supported by the available
-          data. The analysis includes annual returns,
-          drawdowns, and synchronized comparisons with{" "}
-          {benchmarkName}
-          {hasLongRollingHistory
-            ? ", together with longer-horizon rolling performance"
-            : ""}
-          . The objective is to show how {symbol} has behaved
-          across different market periods and holding
-          horizons—not to imply that historical performance
-          predicts future results.
-        </p>
+          <p
+            style={{
+              margin: "0 0 14px",
+              color: "#4d5d70",
+              fontSize: "16px",
+              lineHeight: 1.75,
+            }}
+          > Daily
+            compounding, market volatility, financing costs,
+            fund expenses, and the path of returns can materially
+            affect the outcome.
+          </p>
+        </>
+
+        <>
+          <p
+            style={{
+              margin: 0,
+              color: "#4d5d70",
+              fontSize: "16px",
+              lineHeight: 1.75,
+            }}
+          >
+            This TNI research therefore examines {symbol} across
+            the historical periods supported by the available
+            data. The analysis includes annual returns,
+            drawdowns, and synchronized comparisons with{" "}
+            {benchmarkName}
+            {hasLongRollingHistory
+              ? ", together with longer-horizon rolling performance"
+              :""}
+            .</p>
+
+          <p
+            style={{
+              margin: 0,
+              color: "#4d5d70",
+              fontSize: "16px",
+              lineHeight: 1.75,
+            }}
+          > The objective is to show how {symbol} has behaved
+            across different market periods and holding
+            horizons—not to imply that historical performance
+            predicts future results.
+          </p>
+        </>
 
         <p
           style={{
