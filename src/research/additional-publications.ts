@@ -17,6 +17,19 @@ import type { ResearchItem } from './discovery'
 // }
 
 export const additionalPublications: ResearchItem[] = [
+  {
+    slug: '100-years-dow-jones-industrial-average-djia-events-history-chart',
+    path: '/100-years-dow-jones-industrial-average-djia-events-history-chart/',
+    title: '100 Years of Dow Jones Industrial Average: Events, History & Charts (1920–2026)',
+    description: 'Explore Dow Jones history from 1920 to 2026, including major market events, historical charts, crashes, and recoveries.',
+    name: 'Dow Jones Industrial Average',
+    symbol: 'DJIA',
+    image: '/wp-content/uploads/2015/12/Dow-Jones-History-1920-to-1940-r43.jpg',
+    categories: ['index', 'dow', 'market-history'],
+    kind: 'article',
+    publishedAt: '2026-10-14',
+  },
+
 
 
   {

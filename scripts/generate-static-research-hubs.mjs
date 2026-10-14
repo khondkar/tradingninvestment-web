@@ -55,8 +55,13 @@ for (const item of researchItems) {
   const related = getRelatedItems(item)
   const markup = `<nav aria-label="Explore related research" style="padding:18px 20px;background:#eff7f2;font:13px Arial,sans-serif;line-height:2"><strong>Explore ${escape(item.name)} research:</strong> ${[link('/research/', 'All research'), ...hubs.map((hub) => link(hub.path, hub.title)), ...related.map((other) => link(other.path, other.title))].join(' · ')}</nav>`
   let html = fs.readFileSync(target, 'utf8')
-  if (!html.includes('<div id="root">')) throw new Error(`Missing root in ${item.path}`)
-  html = html.replace('<div id="root">', `<div id="root">${markup}`)
+  if (html.includes('<div id="root">')) {
+    html = html.replace('<div id="root">', `<div id="root">${markup}`)
+  } else if (html.includes('</body>')) {
+    html = html.replace('</body>', `${markup}</body>`)
+  } else {
+    throw new Error(`Unable to insert research links in ${item.path}`)
+  }
   fs.writeFileSync(target, html)
 }
 
