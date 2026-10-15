@@ -1,0 +1,108 @@
+{
+  "title": "SNXX vs SNDK Monthly Performance",
+  "methodology": "Closing-price returns using synchronized trading dates",
+  "first_common_date": "2026-01-27",
+  "last_common_date": "2026-10-15",
+  "months": [
+    {
+      "month": "2026-01",
+      "label": "January 2026",
+      "status": "launch_partial",
+      "start_date": "2026-01-27",
+      "end_date": "2026-01-30",
+      "snxx_return_pct": 41.8266,
+      "sndk_return_pct": 19.6955,
+      "difference_pp": 22.1311
+    },
+    {
+      "month": "2026-02",
+      "label": "February 2026",
+      "status": "completed",
+      "start_date": "2026-02-02",
+      "end_date": "2026-02-27",
+      "snxx_return_pct": 9.6591,
+      "sndk_return_pct": 10.2577,
+      "difference_pp": -0.5986
+    },
+    {
+      "month": "2026-03",
+      "label": "March 2026",
+      "status": "completed",
+      "start_date": "2026-03-02",
+      "end_date": "2026-03-31",
+      "snxx_return_pct": -10.1406,
+      "sndk_return_pct": -0.0031,
+      "difference_pp": -10.1375
+    },
+    {
+      "month": "2026-04",
+      "label": "April 2026",
+      "status": "completed",
+      "start_date": "2026-04-01",
+      "end_date": "2026-04-30",
+      "snxx_return_pct": 178.2262,
+      "sndk_return_pct": 72.5863,
+      "difference_pp": 105.6399
+    },
+    {
+      "month": "2026-05",
+      "label": "May 2026",
+      "status": "completed",
+      "start_date": "2026-05-01",
+      "end_date": "2026-05-29",
+      "snxx_return_pct": 117.1124,
+      "sndk_return_pct": 54.5795,
+      "difference_pp": 62.5329
+    },
+    {
+      "month": "2026-06",
+      "label": "June 2026",
+      "status": "completed",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-30",
+      "snxx_return_pct": 52.9091,
+      "sndk_return_pct": 34.1449,
+      "difference_pp": 18.7641
+    },
+    {
+      "month": "2026-07",
+      "label": "July 2026",
+      "status": "completed",
+      "start_date": "2026-07-01",
+      "end_date": "2026-07-31",
+      "snxx_return_pct": -77.7883,
+      "sndk_return_pct": -46.5711,
+      "difference_pp": -31.2173
+    },
+    {
+      "month": "2026-08",
+      "label": "August 2026",
+      "status": "completed",
+      "start_date": "2026-08-03",
+      "end_date": "2026-08-31",
+      "snxx_return_pct": 53.9615,
+      "sndk_return_pct": 28.9645,
+      "difference_pp": 24.9969
+    },
+    {
+      "month": "2026-09",
+      "label": "September 2026",
+      "status": "completed",
+      "start_date": "2026-09-01",
+      "end_date": "2026-09-30",
+      "snxx_return_pct": 15.9944,
+      "sndk_return_pct": 11.0545,
+      "difference_pp": 4.94
+    },
+    {
+      "month": "2026-10",
+      "label": "October 2026",
+      "status": "mtd",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-15",
+      "snxx_return_pct": -39.1187,
+      "sndk_return_pct": -21.1832,
+      "difference_pp": -17.9355
+    }
+  ]
+}

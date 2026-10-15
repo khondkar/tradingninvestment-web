@@ -26,6 +26,7 @@ const paths = [
   '/about/',
   '/research-license/',
   '/average-stock-market-return/',
+  '/snxx-etf/',
   ...marketTodayPaths,
   ...researchItems.map((item) => item.path),
   ...researchHubs.map((hub) => hub.path),

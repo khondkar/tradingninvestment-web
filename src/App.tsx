@@ -39,6 +39,8 @@ let SP500ReturnsEmbedPage: typeof import('./pages/SP500ReturnsEmbedPage')['defau
 
 // Existing navigation uses full document loads. Resolve only the requested
 // route before mounting, keeping its static HTML visible throughout loading.
+let SnxxResearchPage: typeof import('./pages/SnxxResearchPage')['default']
+
 export async function prepareApp(pathname: string) {
   const path = pathname.replace(/\/+$/, '') || '/'
 
@@ -63,6 +65,10 @@ export async function prepareApp(pathname: string) {
     path.startsWith('/research/')
   ) {
     await import('./components/research/ResearchDiscovery.css')
+  }
+  if (path === '/snxx-etf') {
+    SnxxResearchPage = (await import('./pages/SnxxResearchPage')).default
+    return
   }
   if (path === '/research/scanners/leveraged-etf') { LeveragedEtfScannerPage = (await import('./pages/LeveragedEtfScannerPage')).default; return }
   if (path === '/research/jpm-vs-gs-earnings-analysis') { JPMvsGSEarningsResearchPage = (await import('./pages/JPMvsGSEarningsResearchPage')).default; return }
@@ -1180,6 +1186,15 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
         )
       }
     }
+  }
+
+  if (normalizedPath === '/snxx-etf') {
+    return (
+      <div className="site">
+        <Header pathname={pathname} page="research" setPage={setPage} />
+        <SnxxResearchPage />
+      </div>
+    )
   }
 
   const dynamicLeveragedEtfEntry =

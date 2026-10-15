@@ -1,0 +1,21 @@
+{
+  "symbol": "SNXX",
+  "ticker": "SNXX",
+  "name": "Tradr 2X Long SNDK Daily ETF",
+  "provider": "Yahoo Finance",
+  "frequency": "daily",
+  "return_basis": "Close",
+  "dividends_included": false,
+  "first_date": "2026-01-27",
+  "last_date": "2026-10-15",
+  "rows": 182,
+  "retrieved_at_utc": "2026-10-15T19:26:33.537424+00:00",
+  "columns": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Adj Close",
+    "Volume"
+  ]
+}

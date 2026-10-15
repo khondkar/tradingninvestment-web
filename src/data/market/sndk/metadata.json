@@ -1,0 +1,21 @@
+{
+  "symbol": "SNDK",
+  "ticker": "SNDK",
+  "name": "Sandisk Corporation",
+  "provider": "Yahoo Finance",
+  "frequency": "daily",
+  "return_basis": "Close",
+  "dividends_included": false,
+  "first_date": "2025-02-13",
+  "last_date": "2026-10-15",
+  "rows": 420,
+  "retrieved_at_utc": "2026-10-15T19:27:35.756160+00:00",
+  "columns": [
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Adj Close",
+    "Volume"
+  ]
+}

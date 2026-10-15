@@ -1,0 +1,112 @@
+{
+  "title": "SNXX vs SNDK Weekday Performance",
+  "methodology": "Close-to-close percentage returns on synchronized trading dates",
+  "start_date": "2026-01-28",
+  "end_date": "2026-10-15",
+  "tickers": {
+    "SNXX": [
+      {
+        "day": "Monday",
+        "observations": 34,
+        "up_pct": 50.0,
+        "down_pct": 50.0,
+        "flat_pct": 0.0,
+        "average_return_pct": 2.308,
+        "average_positive_return_pct": 12.849,
+        "average_negative_return_pct": -8.233
+      },
+      {
+        "day": "Tuesday",
+        "observations": 37,
+        "up_pct": 43.2432,
+        "down_pct": 56.7568,
+        "flat_pct": 0.0,
+        "average_return_pct": -0.276,
+        "average_positive_return_pct": 12.0435,
+        "average_negative_return_pct": -9.6623
+      },
+      {
+        "day": "Wednesday",
+        "observations": 38,
+        "up_pct": 57.8947,
+        "down_pct": 42.1053,
+        "flat_pct": 0.0,
+        "average_return_pct": 1.1477,
+        "average_positive_return_pct": 8.7249,
+        "average_negative_return_pct": -9.271
+      },
+      {
+        "day": "Thursday",
+        "observations": 38,
+        "up_pct": 57.8947,
+        "down_pct": 42.1053,
+        "flat_pct": 0.0,
+        "average_return_pct": 3.3082,
+        "average_positive_return_pct": 13.836,
+        "average_negative_return_pct": -11.1675
+      },
+      {
+        "day": "Friday",
+        "observations": 34,
+        "up_pct": 50.0,
+        "down_pct": 47.0588,
+        "flat_pct": 2.9412,
+        "average_return_pct": 1.2965,
+        "average_positive_return_pct": 11.721,
+        "average_negative_return_pct": -9.6986
+      }
+    ],
+    "SNDK": [
+      {
+        "day": "Monday",
+        "observations": 34,
+        "up_pct": 50.0,
+        "down_pct": 50.0,
+        "flat_pct": 0.0,
+        "average_return_pct": 1.1998,
+        "average_positive_return_pct": 6.4674,
+        "average_negative_return_pct": -4.0678
+      },
+      {
+        "day": "Tuesday",
+        "observations": 37,
+        "up_pct": 40.5405,
+        "down_pct": 59.4595,
+        "flat_pct": 0.0,
+        "average_return_pct": -0.0924,
+        "average_positive_return_pct": 6.5339,
+        "average_negative_return_pct": -4.6103
+      },
+      {
+        "day": "Wednesday",
+        "observations": 38,
+        "up_pct": 57.8947,
+        "down_pct": 42.1053,
+        "flat_pct": 0.0,
+        "average_return_pct": 0.6208,
+        "average_positive_return_pct": 4.5007,
+        "average_negative_return_pct": -4.7141
+      },
+      {
+        "day": "Thursday",
+        "observations": 38,
+        "up_pct": 57.8947,
+        "down_pct": 42.1053,
+        "flat_pct": 0.0,
+        "average_return_pct": 1.6553,
+        "average_positive_return_pct": 6.9938,
+        "average_negative_return_pct": -5.6851
+      },
+      {
+        "day": "Friday",
+        "observations": 34,
+        "up_pct": 55.8824,
+        "down_pct": 44.1176,
+        "flat_pct": 0.0,
+        "average_return_pct": 0.699,
+        "average_positive_return_pct": 5.292,
+        "average_negative_return_pct": -5.1187
+      }
+    ]
+  }
+}
