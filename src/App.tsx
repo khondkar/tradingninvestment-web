@@ -14,6 +14,7 @@ import './SiteShell.css'
 import { loadResearchData } from './performance/researchData'
 function currentPathname() { return typeof window === 'undefined' ? '/' : window.location.pathname }
 
+let LeveragedEtfScannerPage: typeof import('./pages/LeveragedEtfScannerPage')['default']
 let JPMvsGSEarningsResearchPage: typeof import('./pages/JPMvsGSEarningsResearchPage')['default']
 let SPYDojiResearchPage: typeof import('./pages/SPYDojiResearchPage')['default']
 let MagicDojiPage: typeof import('./pages/MagicDojiPage')['default']
@@ -63,6 +64,7 @@ export async function prepareApp(pathname: string) {
   ) {
     await import('./components/research/ResearchDiscovery.css')
   }
+  if (path === '/research/scanners/leveraged-etf') { LeveragedEtfScannerPage = (await import('./pages/LeveragedEtfScannerPage')).default; return }
   if (path === '/research/jpm-vs-gs-earnings-analysis') { JPMvsGSEarningsResearchPage = (await import('./pages/JPMvsGSEarningsResearchPage')).default; return }
   if (path === '/research/doji-candlestick-spy-26-year-study') { SPYDojiResearchPage = (await import('./pages/SPYDojiResearchPage')).default; return }
   if (path === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') { MagicDojiPage = (await import('./pages/MagicDojiPage')).default; return }
@@ -225,13 +227,20 @@ function Header({
         </button>
 
         <nav className="desktop-nav">
-          <button
-            type="button"
-            className={page === 'research' ? 'active' : ''}
-            onClick={() => window.location.assign('/research/')}
-          >
-            Research
-          </button>
+          <div className="tni-research-dropdown">
+            <button
+              type="button"
+              className={page === 'research' ? 'active' : ''}
+              onClick={() => window.location.assign('/research/')}
+              aria-haspopup="true"
+            >
+              Research <span aria-hidden="true">⌄</span>
+            </button>
+            <div className="tni-research-dropdown-panel" aria-label="Research destinations">
+              <a href="/research/">Research Library <small>Original research and historical data</small></a>
+              <a href="/research/scanners/leveraged-etf/">Leveraged ETF Scanner <small>Explore leveraged and inverse funds</small></a>
+            </div>
+          </div>
 
           <button
             type="button"
@@ -277,7 +286,13 @@ function Header({
           <nav className="tni-mobile-menu-panel" aria-label="Mobile navigation">
             <a href="/">Home</a>
             <a href="/stock-market-today/">Stock Market Today <span aria-hidden="true">↗</span></a>
-            <a href="/research/">Research</a>
+            <details className="tni-mobile-research-group">
+              <summary>Research <span aria-hidden="true">⌄</span></summary>
+              <div className="tni-mobile-research-links">
+                <a href="/research/">Research Library</a>
+                <a href="/research/scanners/leveraged-etf/">Leveraged ETF Scanner</a>
+              </div>
+            </details>
             <a href="/about/">About</a>
             <button type="button" onClick={shareCurrentPage}>Share this page</button>
             <a className="tni-mobile-launch" href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer">Launch TNI <span aria-hidden="true">↗</span></a>
@@ -913,6 +928,9 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   const normalizedPath =
     pathname.replace(/\/+$/, '') || '/'
 
+  if (normalizedPath === '/research/scanners/leveraged-etf') {
+    return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><LeveragedEtfScannerPage /><Footer setPage={setPage} /></div>
+  }
   if (normalizedPath === '/research/jpm-vs-gs-earnings-analysis') {
     return (
       <div className="site">
