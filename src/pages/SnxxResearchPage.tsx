@@ -121,6 +121,27 @@ export default function SnxxResearchPage() {
             TNI Research · SNXX vs SNDK historical drawdowns · January–October 2026
           </figcaption>
         </figure>
+
+        <a
+          href="/images/social/snxx-vs-sndk-drawdown-og.png"
+          download="TNI-SNXX-vs-SNDK-Drawdowns.png"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            padding: "12px 18px",
+            borderRadius: 10,
+            background: "#07152f",
+            color: "#ffffff",
+            fontSize: 14,
+            fontWeight: 700,
+            textDecoration: "none",
+            marginBottom: 64
+          }}
+        >
+          ↓ Download TNI Drawdown Chart
+        </a>
+
         <LeveragedEtfVolatilityComparison
           etfTicker="SNXX"
           underlyingTicker="SNDK"
