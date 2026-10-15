@@ -18,6 +18,18 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'snxx-etf',
+    path: '/snxx-etf/',
+    title: 'SNXX Leveraged ETF: Performance, Returns & Risk vs. SNDK',
+    description: 'Original research comparing SNXX and SNDK through daily returns, monthly performance, growth of $10,000, drawdowns, and rolling volatility.',
+    name: 'SNXX Leveraged ETF',
+    symbol: 'SNXX',
+    categories: ['etf', 'leveraged-etf'],
+    kind: 'article',
+    publishedAt: '2026-10-15',
+  },
+
+  {
     slug: '100-years-dow-jones-industrial-average-djia-events-history-chart',
     path: '/100-years-dow-jones-industrial-average-djia-events-history-chart/',
     title: '100 Years of Dow Jones Industrial Average: Events, History & Charts (1920–2026)',
