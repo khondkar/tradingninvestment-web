@@ -77,59 +77,100 @@ export default function SnxxRiskComparison() {
         compared across the same trading dates.
       </p>
 
-      <div style={{
+      <div className="tni-leveraged-drawdown__cards" style={{
         display: "grid",
-        gridTemplateColumns: "repeat(2,minmax(0,1fr))",
-        gap: 12,
-        margin: "24px 0"
+        gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,260px),1fr))",
+        gap: 16,
+        margin: "28px 0 36px"
       }}>
         {(["snxx", "sndk"] as const).map(ticker => {
           const stats = risk.summary[ticker]
-          const color = ticker === "snxx" ? BLUE : AMBER
+          const isEtf = ticker === "snxx"
+          const trough = risk.data.reduce(
+            (worst, point) =>
+              point[ticker] < worst[ticker] ? point : worst,
+            risk.data[0]
+          )
+          const troughDate = new Date(
+            `${trough.date}T12:00:00`
+          ).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric"
+          })
 
           return (
-            <div key={ticker} style={{
-              border: "1px solid #e2e8f0",
-              borderRadius: 16,
-              padding: 16,
-              minWidth: 0
-            }}>
-              <strong style={{ color }}>
-                {ticker.toUpperCase()}
-              </strong>
+            <article
+              key={ticker}
+              style={{
+                padding: "clamp(20px,4vw,30px)",
+                borderRadius: 20,
+                border: isEtf
+                  ? "1px solid #bcd7fb"
+                  : "1px solid #e2e8f0",
+                background: isEtf ? "#f3f8ff" : "#ffffff",
+                boxShadow: "0 8px 28px rgba(15,23,42,.045)",
+                minWidth: 0
+              }}
+            >
+              <div style={{
+                color: "#334155",
+                fontSize: 13,
+                fontWeight: 800,
+                letterSpacing: ".065em"
+              }}>
+                {ticker.toUpperCase()} MAX DRAWDOWN
+              </div>
 
               <div style={{
-                fontSize: "clamp(20px,3vw,29px)",
-                fontWeight: 800,
-                color: "#dc2626",
-                marginTop: 12
+                fontSize: "clamp(36px,7vw,52px)",
+                lineHeight: 1.15,
+                fontWeight: 850,
+                letterSpacing: "-.045em",
+                color: "#b91c1c",
+                margin: "16px 0 12px"
               }}>
                 {percent(stats.max_drawdown_pct)}
               </div>
 
               <div style={{
-                color: "#334155",
-                fontSize: 12
+                fontSize: 14,
+                color: "#475569"
               }}>
-                Maximum drawdown
+                {isEtf ? "Leveraged ETF" : "Underlying stock"}
               </div>
 
               <div style={{
-                fontSize: 28.0,
-                fontWeight: 750,
-                marginTop: 16,
-                color: "#172033"
+                marginTop: 12,
+                fontSize: 13,
+                color: "#64748b"
               }}>
-                {percent(stats.annualized_volatility_pct)}
+                Maximum drawdown reached: {troughDate}
               </div>
 
               <div style={{
-                color: "#334155",
-                fontSize: 12
+                borderTop: "1px solid #dce5f0",
+                marginTop: 22,
+                paddingTop: 18
               }}>
-                Annualized volatility
+                <div style={{
+                  fontSize: 12,
+                  fontWeight: 750,
+                  color: "#64748b",
+                  letterSpacing: ".04em"
+                }}>
+                  ANNUALIZED VOLATILITY
+                </div>
+                <div style={{
+                  fontSize: 26,
+                  fontWeight: 800,
+                  color: "#172033",
+                  marginTop: 6
+                }}>
+                  {percent(stats.annualized_volatility_pct)}
+                </div>
               </div>
-            </div>
+            </article>
           )
         })}
       </div>
