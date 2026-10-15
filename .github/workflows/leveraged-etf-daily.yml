@@ -1,0 +1,31 @@
+name: Update Leveraged ETF Daily Data
+on:
+  workflow_dispatch:
+    inputs:
+      metadata:
+        description: 'Also refresh AUM and expense ratios (slower)'
+        type: boolean
+        default: true
+  schedule:
+    - cron: '30 23 * * 1-5'
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/requirements-leveraged-etf.txt
+      - run: pip install -r scripts/requirements-leveraged-etf.txt
+      - name: Update Yahoo research snapshot
+        run: python scripts/update_leveraged_etf_data.py --project . --metadata
+      - name: Commit snapshot if changed
+        run: |
+          git add src/pages/leveraged-etf-daily-metrics.json
+          if git diff --cached --quiet; then echo 'No changes'; exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'data: update leveraged ETF daily snapshot'
+          git push

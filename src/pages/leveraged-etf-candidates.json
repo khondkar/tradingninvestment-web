@@ -1,0 +1,1109 @@
+[
+  {
+    "ticker": "SOXL",
+    "name": "Semiconductor Bull 3X",
+    "exposure": "Semiconductors",
+    "category": "Sectors",
+    "direction": "Long",
+    "leverage": 3,
+    "verified": false
+  },
+  {
+    "ticker": "TQQQ",
+    "name": "UltraPro QQQ",
+    "exposure": "Nasdaq-100",
+    "category": "Indexes",
+    "direction": "Long",
+    "leverage": 3,
+    "verified": false
+  },
+  {
+    "ticker": "SQQQ",
+    "name": "UltraPro Short QQQ",
+    "exposure": "Nasdaq-100",
+    "category": "Indexes",
+    "direction": "Inverse",
+    "leverage": 3,
+    "verified": false
+  },
+  {
+    "ticker": "SOXS",
+    "name": "Semiconductor Bear 3X",
+    "exposure": "Semiconductors",
+    "category": "Sectors",
+    "direction": "Inverse",
+    "leverage": 3,
+    "verified": false
+  },
+  {
+    "ticker": "NVDL",
+    "name": "2x Long NVDA Daily",
+    "exposure": "Nvidia",
+    "category": "Stocks",
+    "direction": "Long",
+    "leverage": 2,
+    "verified": false
+  },
+  {
+    "ticker": "TSLL",
+    "name": "Daily TSLA Bull",
+    "exposure": "Tesla",
+    "category": "Stocks",
+    "direction": "Long",
+    "leverage": 2,
+    "verified": false
+  },
+  {
+    "ticker": "LABU",
+    "name": "Biotech Bull 3X",
+    "exposure": "Biotechnology",
+    "category": "Sectors",
+    "direction": "Long",
+    "leverage": 3,
+    "verified": false
+  },
+  {
+    "ticker": "UPRO",
+    "name": "UltraPro S&P 500",
+    "exposure": "S&P 500",
+    "category": "Indexes",
+    "direction": "Long",
+    "leverage": 3,
+    "verified": false
+  },
+  {
+    "ticker": "TMF",
+    "name": "Treasury Bull 3X",
+    "exposure": "Treasuries",
+    "category": "Bonds",
+    "direction": "Long",
+    "leverage": 3,
+    "verified": false
+  },
+  {
+    "ticker": "QLD",
+    "name": "Ultra QQQ",
+    "exposure": "Nasdaq-100",
+    "category": "Indexes",
+    "direction": "Long",
+    "leverage": 2,
+    "verified": false
+  },
+  {
+    "ticker": "SPXL",
+    "name": "SPXL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SPXS",
+    "name": "SPXS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TNA",
+    "name": "TNA",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TZA",
+    "name": "TZA",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FAS",
+    "name": "FAS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FAZ",
+    "name": "FAZ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ERX",
+    "name": "ERX",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DRIP",
+    "name": "DRIP",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GUSH",
+    "name": "GUSH",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DUST",
+    "name": "DUST",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NUGT",
+    "name": "NUGT",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "JNUG",
+    "name": "JNUG",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "JDST",
+    "name": "JDST",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BOIL",
+    "name": "BOIL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "KOLD",
+    "name": "KOLD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UCO",
+    "name": "UCO",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SCO",
+    "name": "SCO",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UGL",
+    "name": "UGL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GLL",
+    "name": "GLL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AGQ",
+    "name": "AGQ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ZSL",
+    "name": "ZSL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UVXY",
+    "name": "UVXY",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SVXY",
+    "name": "SVXY",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "VXX",
+    "name": "VXX",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SSO",
+    "name": "SSO",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SDS",
+    "name": "SDS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SH",
+    "name": "SH",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "PSQ",
+    "name": "PSQ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QID",
+    "name": "QID",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QQQM",
+    "name": "QQQM",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TBT",
+    "name": "TBT",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TLT",
+    "name": "TLT",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TBF",
+    "name": "TBF",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TMV",
+    "name": "TMV",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TYD",
+    "name": "TYD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UBT",
+    "name": "UBT",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DIG",
+    "name": "DIG",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DUG",
+    "name": "DUG",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UYM",
+    "name": "UYM",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SMN",
+    "name": "SMN",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ROM",
+    "name": "ROM",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "REW",
+    "name": "REW",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TECL",
+    "name": "TECL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TECS",
+    "name": "TECS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "WEBL",
+    "name": "WEBL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "WEBS",
+    "name": "WEBS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FNGU",
+    "name": "FNGU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FNGD",
+    "name": "FNGD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BULZ",
+    "name": "BULZ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BERZ",
+    "name": "BERZ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DPST",
+    "name": "DPST",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DRV",
+    "name": "DRV",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CURE",
+    "name": "CURE",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "LABD",
+    "name": "LABD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "YINN",
+    "name": "YINN",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "YANG",
+    "name": "YANG",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CHAU",
+    "name": "CHAU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FXP",
+    "name": "FXP",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "EDC",
+    "name": "EDC",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "EDZ",
+    "name": "EDZ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "EURL",
+    "name": "EURL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "EUO",
+    "name": "EUO",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ULE",
+    "name": "ULE",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "YCS",
+    "name": "YCS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "YCL",
+    "name": "YCL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BRZU",
+    "name": "BRZU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BZQ",
+    "name": "BZQ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "INDL",
+    "name": "INDL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "INDZ",
+    "name": "INDZ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "KORU",
+    "name": "KORU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MEXX",
+    "name": "MEXX",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NAIL",
+    "name": "NAIL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "PILL",
+    "name": "PILL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RETL",
+    "name": "RETL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "WANT",
+    "name": "WANT",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "PASS",
+    "name": "PASS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "HIBL",
+    "name": "HIBL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "HIBS",
+    "name": "HIBS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MIDU",
+    "name": "MIDU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MZZ",
+    "name": "MZZ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SAA",
+    "name": "SAA",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SDD",
+    "name": "SDD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "URTY",
+    "name": "URTY",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SRTY",
+    "name": "SRTY",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UDOW",
+    "name": "UDOW",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SDOW",
+    "name": "SDOW",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DDM",
+    "name": "DDM",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DXD",
+    "name": "DXD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DOG",
+    "name": "DOG",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RXL",
+    "name": "RXL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RXD",
+    "name": "RXD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UTSL",
+    "name": "UTSL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SRS",
+    "name": "SRS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TSLS",
+    "name": "TSLS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NVD",
+    "name": "NVD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SBIT",
+    "name": "SBIT",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BITX",
+    "name": "BITX",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BITU",
+    "name": "BITU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BITI",
+    "name": "BITI",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ETHU",
+    "name": "ETHU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ETHT",
+    "name": "ETHT",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSTU",
+    "name": "MSTU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSTZ",
+    "name": "MSTZ",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CONL",
+    "name": "CONL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CONI",
+    "name": "CONI",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AMDL",
+    "name": "AMDL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AMDS",
+    "name": "AMDS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GGLL",
+    "name": "GGLL",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GGLS",
+    "name": "GGLS",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AAPU",
+    "name": "AAPU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AAPD",
+    "name": "AAPD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSFU",
+    "name": "MSFU",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSFD",
+    "name": "MSFD",
+    "exposure": "Pending verification",
+    "category": "Other",
+    "direction": "Unverified",
+    "leverage": null,
+    "verified": false
+  }
+]

@@ -1,0 +1,144 @@
+.tni-etf-directory{margin:34px 0 28px;padding:28px;border:1px solid #e3eaf2;border-radius:22px;background:#fff;color:#102b4a;box-shadow:0 8px 32px rgba(19,47,83,.04)}
+.tni-etf-directory-heading{display:flex;justify-content:space-between;gap:16px;align-items:start}.tni-etf-directory-kicker{font-size:10px;letter-spacing:.17em;color:#0866d7;font-weight:750}.tni-etf-directory-heading h2{font-size:clamp(25px,3vw,36px);line-height:1.15;margin:8px 0}.tni-etf-directory-heading h2 span{display:inline-block;vertical-align:middle;font:600 12px/1.5 system-ui;padding:4px 10px;border-radius:100px;background:#edf3fb;color:#536b86}.tni-etf-directory-heading p{font-size:14px;color:#61758b;margin:8px 0 0}.tni-etf-directory-dated{white-space:nowrap;font-size:12px;color:#537194;background:#f2f7ff;padding:9px 12px;border-radius:12px}
+.tni-etf-directory-tools{display:flex;gap:10px;margin:24px 0 16px;flex-wrap:wrap}.tni-etf-directory-search{flex:1;min-width:180px}.tni-etf-directory-search input,.tni-etf-directory-select select{box-sizing:border-box;width:100%;min-height:44px;border:1px solid #dce5ef;border-radius:12px;padding:0 12px;background:#fff;color:#102b4a;font:inherit;font-size:14px}.tni-etf-directory-select{font-size:11px;color:#60748c;display:flex;gap:8px;align-items:center}.tni-etf-directory-select select{width:auto;min-width:110px}
+.tni-etf-directory-scroll{overflow-x:auto;border:1px solid #e7edf4;border-radius:14px;scrollbar-width:thin}.tni-etf-directory table{border-collapse:collapse;width:100%;min-width:850px;text-align:left;font-size:13px;font-variant-numeric:tabular-nums}.tni-etf-directory th,.tni-etf-directory td{padding:13px 12px;border-bottom:1px solid #edf1f6;white-space:nowrap}.tni-etf-directory thead{background:#f5f8fc}.tni-etf-directory thead button{border:0;background:transparent;color:#48617e;font:700 12px system-ui;cursor:pointer;padding:0;text-align:left}.tni-etf-directory tbody tr:hover{background:#f8fbff}.tni-etf-directory tbody tr:last-child>*{border-bottom:0}.tni-etf-directory tbody th{position:sticky;left:0;background:#fff;z-index:1}.tni-etf-directory tbody tr:hover th{background:#f8fbff}.tni-etf-directory tbody th a{font-weight:800;color:#0869e6;text-decoration:none}.tni-etf-directory-name{display:block;max-width:220px;overflow:hidden;text-overflow:ellipsis}.tni-etf-directory-leverage{background:#e5f7ed;color:#14794a;border-radius:7px;padding:4px 8px;font-weight:700}.tni-etf-directory-leverage.inverse{background:#fff0ed;color:#a94335}.tni-etf-directory-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:16px}.tni-etf-directory-footer p,.tni-etf-directory-note{font-size:12px;line-height:1.6;color:#657991}.tni-etf-directory-footer button{border:1px solid #cbdff7;background:#f6faff;border-radius:12px;padding:10px 15px;color:#075fc7;font-weight:700;cursor:pointer}.tni-etf-directory-note{margin:18px 0 0}
+@media(max-width:650px){.tni-etf-directory{padding:17px 12px;margin:24px 0;border-radius:17px}.tni-etf-directory-heading{display:block}.tni-etf-directory-dated{display:inline-block;margin-top:12px}.tni-etf-directory-tools{gap:8px}.tni-etf-directory-search{flex-basis:100%}.tni-etf-directory-select{flex:1}.tni-etf-directory-select select{min-width:0;flex:1}.tni-etf-directory th,.tni-etf-directory td{padding:12px 10px}.tni-etf-directory-footer{align-items:flex-start}.tni-etf-directory-footer p{max-width:62%}}
+
+/* TNI ETF directory — match scanner typography */
+.tni-etf-directory {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.tni-etf-directory-heading h2 {
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.tni-etf-directory-heading p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tni-etf-directory-tools input,
+.tni-etf-directory-tools select {
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.tni-etf-directory table {
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.tni-etf-directory th,
+.tni-etf-directory td {
+  padding: 15px 16px;
+  font-size: 15px;
+}
+
+.tni-etf-directory thead th,
+.tni-etf-directory thead button {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tni-etf-directory tbody th,
+.tni-etf-directory tbody th a {
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.tni-etf-directory-name {
+  font-size: 15px;
+}
+
+.tni-etf-directory-footer,
+.tni-etf-directory-note {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .tni-etf-directory table {
+    font-size: 15px;
+  }
+
+  .tni-etf-directory th,
+  .tni-etf-directory td {
+    padding: 14px 13px;
+    font-size: 15px;
+  }
+
+  .tni-etf-directory tbody th,
+  .tni-etf-directory tbody th a {
+    font-size: 16px;
+  }
+
+  .tni-etf-directory thead th,
+  .tni-etf-directory thead button {
+    font-size: 13px;
+  }
+
+  .tni-etf-directory-tools input,
+  .tni-etf-directory-tools select {
+    font-size: 16px;
+  }
+}
+
+/* TNI ETF Directory — premium high-contrast charcoal */
+.tni-etf-directory {
+  color: #20252b;
+  background: #ffffff;
+}
+
+.tni-etf-directory-heading h2,
+.tni-etf-directory tbody th,
+.tni-etf-directory tbody td,
+.tni-etf-directory-name {
+  color: #20252b;
+}
+
+.tni-etf-directory-heading p,
+.tni-etf-directory-footer,
+.tni-etf-directory-note,
+.tni-etf-directory-dated {
+  color: #414a54;
+}
+
+.tni-etf-directory thead th,
+.tni-etf-directory thead button {
+  color: #303841;
+  font-weight: 750;
+}
+
+.tni-etf-directory tbody th a {
+  color: #173b63;
+  font-weight: 800;
+}
+
+.tni-etf-directory-tools label,
+.tni-etf-directory-tools input,
+.tni-etf-directory-tools select {
+  color: #20252b;
+}
+
+.tni-etf-directory-tools input::placeholder {
+  color: #59636f;
+  opacity: 1;
+}
+
+.tni-etf-directory tbody tr {
+  border-bottom: 1px solid #dce2e8;
+}
+
+.tni-etf-directory tbody tr:hover {
+  background: #f2f5f8;
+}
+
+.tni-etf-directory tbody tr:focus-within {
+  background: #edf3f9;
+}

@@ -1,0 +1,237 @@
+/* Scoped, dependency-free scanner. Mobile first. */
+.tni-les{--les-ink:#132c39;--les-muted:#526773;--les-border:#dce6e9;color:var(--les-ink);background:#f6f8f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;text-align:left;min-width:0;min-height:75vh;line-height:1.5}
+.tni-les *{box-sizing:border-box}.tni-les button,.tni-les select,.tni-les input{font:inherit}.tni-les button{cursor:pointer}.tni-les-wrap{width:calc(100% - 32px);max-width:1120px;margin-inline:auto}
+.tni-les-hero{background:#102f3b;color:#fff;padding:20px 0 22px;border-bottom:3px solid #82d9bd}.tni-les-kicker{font-size:10px;font-weight:750;letter-spacing:.16em;margin:0 0 8px;color:#b5d0d8}.tni-les-hero h1{font-size:36px;line-height:1.05;letter-spacing:-.055em;margin:0 0 9px;color:#fff;font-weight:750}.tni-les-hero h1 em{font-style:normal;color:#9ae6c6}.tni-les-hero p:not(.tni-les-kicker){font-size:13px;margin:0;color:#d5e5e9}.tni-les-subline{display:none}
+.tni-les-content{padding-block:24px max(40px,env(safe-area-inset-bottom))}.tni-les-ink{color:#497369}.tni-les-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:20px}.tni-les-intro h2{font-size:25px;line-height:1.15;letter-spacing:-.04em;margin:0 0 8px}.tni-les-intro p:not(.tni-les-kicker){font-size:13px;line-height:1.6;color:var(--les-muted);margin:0;max-width:540px}.tni-les-count{white-space:nowrap;font-size:11px;font-weight:650;background:#e8efef;border-radius:20px;padding:6px 10px;margin-top:22px}
+.tni-les-search-label{display:block;font-size:12px;font-weight:650;margin:0 0 7px}.tni-les-search{display:block;width:100%;height:52px;padding:0 16px;border:1px solid #b7c9ce;border-radius:14px;background:#fff;color:var(--les-ink);font-size:16px!important;box-shadow:0 3px 10px #16334005}.tni-les-search::placeholder{color:#687d87}
+.tni-les-pills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;border:1px solid var(--les-border);background:#eaf0f1;border-radius:13px;margin:12px 0}.tni-les-pills button{min-height:44px;background:transparent;border:0;border-radius:9px;font-size:13px;font-weight:650;color:#526773}.tni-les-pills button.selected{background:#fff;color:#113c35;box-shadow:0 2px 6px #122f3910}.tni-les-pills button[aria-pressed=true]:nth-child(2){color:#14664d}.tni-les-pills button[aria-pressed=true]:nth-child(3){color:#993f49}
+.tni-les-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0}.tni-les-toolbar label{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--les-muted);min-width:0}.tni-les select{min-height:44px;max-width:100%;border:1px solid var(--les-border);border-radius:10px;background:#fff;color:var(--les-ink);padding:0 8px;font-size:16px}.tni-les-toolbar select{width:162px;font-size:13px}.tni-les-filter-button,.tni-les-filters button,.tni-les-empty button{min-height:44px;padding:8px 12px;border:1px solid var(--les-border);border-radius:10px;background:#fff;color:var(--les-ink);font-size:13px!important;font-weight:650!important}.tni-les-filter-button[aria-expanded=true]{border-color:#598c7e;background:#eaf4ef}.tni-les-filters{display:grid;gap:12px;background:#fff;border:1px solid var(--les-border);border-radius:14px;padding:16px;margin:12px 0}.tni-les-filters label{display:grid;gap:6px;font-size:12px;font-weight:650}.tni-les-filter-note{margin:0;font-size:12px;color:var(--les-muted);line-height:1.5}.tni-les-status{font-size:11px;color:var(--les-muted);margin:18px 0 10px}
+.tni-les-list{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;align-items:start}.tni-les-card{min-width:0;background:#fff;border:1px solid var(--les-border);border-radius:16px;padding:16px;box-shadow:0 3px 10px #16334003}.tni-les-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.tni-les-card h3{font-size:23px;font-weight:750;line-height:1.15;letter-spacing:-.035em;margin:0 0 5px;color:var(--les-ink)}.tni-les-card-head p{font-size:12px;color:var(--les-muted);line-height:1.5;margin:0;overflow-wrap:anywhere}.tni-les-tag{flex-shrink:0;border-radius:7px;padding:5px 8px;font-size:10px;font-weight:650;white-space:nowrap;letter-spacing:.015em}.tni-les-tag.long{color:#136347;background:#e6f5ed}.tni-les-tag.inverse{color:#923843;background:#faeaed}.tni-les-tag.unknown{color:#716041;background:#f4f0e6}.tni-les-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #edf1f2;margin-top:12px;padding-top:5px}.tni-les-card-bottom>span{font-size:11px;color:var(--les-muted)}.tni-les-card-bottom button{flex-shrink:0;border:0;min-height:44px;padding:4px 0 4px 8px;background:none;color:#216953;font-size:12px;font-weight:650}
+.tni-les-detail{background:#f3f7f6;border-radius:10px;padding:13px;margin-top:6px}.tni-les-detail dl{margin:0}.tni-les-detail dl div{display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12px;margin-bottom:10px}.tni-les-detail dt{color:var(--les-muted)}.tni-les-detail dd{margin:0;text-align:right;font-weight:600;overflow-wrap:anywhere}.tni-les-detail p{font-size:11px;color:var(--les-muted);margin:12px 0 0}.tni-les-more{display:block;min-height:48px;width:100%;max-width:360px;margin:22px auto 0;border:1px solid #183d36;border-radius:12px;background:#183d36;color:white;font-weight:650;font-size:14px}.tni-les-empty{padding:30px 18px;text-align:center;background:white;border:1px solid var(--les-border);border-radius:16px}.tni-les-empty p{font-size:13px;color:var(--les-muted)}.tni-les-risk{margin-top:28px;padding:18px 0;border-top:1px solid var(--les-border);border-bottom:1px solid var(--les-border)}.tni-les-risk>strong{font-size:13px}.tni-les-risk p{font-size:12px;line-height:1.7;color:var(--les-muted);margin:7px 0 0;max-width:800px}.tni-les-disclaimer{font-size:11px;line-height:1.7;color:var(--les-muted);margin:16px 0 0;max-width:800px}.tni-les :is(button,input,select):focus-visible{outline:3px solid #218967;outline-offset:3px}
+@media(min-width:700px){.tni-les-wrap{width:calc(100% - 64px)}.tni-les-hero{padding:28px 0}.tni-les-hero h1{font-size:48px}.tni-les-content{padding-top:32px}.tni-les-intro h2{font-size:32px}.tni-les-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.tni-les-pills{max-width:420px}.tni-les-filters{grid-template-columns:1fr 1fr auto;align-items:end}.tni-les-filter-note{grid-column:1/-1}.tni-les-count{font-size:12px}.tni-les-card{padding:20px}.tni-les-toolbar select{width:190px}.tni-les-intro p:not(.tni-les-kicker){font-size:14px}}
+@media(min-width:1050px){.tni-les-list{grid-template-columns:repeat(3,minmax(0,1fr))}.tni-les-hero h1{font-size:54px}.tni-les-hero{padding:30px 0}.tni-les-content{padding-top:36px}}
+@media(max-width:359px){.tni-les-wrap{width:calc(100% - 24px)}.tni-les-intro{display:block}.tni-les-count{display:inline-block;margin-top:10px}.tni-les-toolbar label{font-size:0}.tni-les-toolbar select{width:155px}.tni-les-card{padding:14px}}
+@media(prefers-reduced-motion:reduce){.tni-les *{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Readable scanner typography on phones */
+@media (max-width: 699px) {
+  .tni-les .tni-les-card-head p,
+  .tni-les .tni-les-card-bottom > span,
+  .tni-les .tni-les-detail dl div,
+  .tni-les .tni-les-detail p,
+  .tni-les .tni-les-intro p:not(.tni-les-kicker),
+  .tni-les .tni-les-risk p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .tni-les .tni-les-tag,
+  .tni-les .tni-les-status,
+  .tni-les .tni-les-count,
+  .tni-les .tni-les-filter-note,
+  .tni-les .tni-les-disclaimer,
+  .tni-les .tni-les-search-label,
+  .tni-les .tni-les-filters label {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .tni-les .tni-les-card-bottom button,
+  .tni-les .tni-les-toolbar select,
+  .tni-les .tni-les-pills button,
+  .tni-les .tni-les-more {
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  .tni-les .tni-les-filter-button,
+  .tni-les .tni-les-filters button {
+    font-size: 16px !important;
+    min-height: 48px;
+  }
+
+  .tni-les .tni-les-card-bottom {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+
+  .tni-les .tni-les-card-bottom button {
+    margin-left: auto;
+  }
+
+  .tni-les .tni-les-detail dl div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+    margin-bottom: 14px;
+  }
+
+  .tni-les .tni-les-detail dd {
+    text-align: left;
+  }
+}
+
+/* Four ETF market-metrics pilot; other cards remain unchanged */
+.tni-les-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 10px}
+.tni-les-metrics>div{min-width:0;border:1px solid #e3eaf2;border-radius:12px;padding:12px;background:#f8fbff}
+.tni-les-metrics small{display:block;font-size:11px;line-height:1.4;color:#53667e;margin-bottom:6px}
+.tni-les-metrics strong{display:block;font-size:clamp(17px,2vw,22px);font-weight:700;color:#102b4a;font-variant-numeric:tabular-nums}
+.tni-les-metrics>p{grid-column:1/-1;margin:0;font-size:11px;line-height:1.5;color:#64748b}
+.tni-les-metrics a{color:#075ec5}
+@media(max-width:650px){.tni-les-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tni-les-metrics>div{padding:10px}.tni-les-metrics strong{font-size:19px}}
+
+/* ============================================
+   TNI ETF Scanner — Internal Research Links
+   ============================================ */
+
+/* Featured Dow Jones link ABOVE table */
+
+.tni-les-featured-history {
+  margin: 32px 0;
+  padding: clamp(24px, 4vw, 38px);
+  background: linear-gradient(125deg, #f3f7fb, #ffffff);
+  border: 1px solid #dce2e8;
+  border-radius: 20px;
+  color: #20252b;
+}
+
+.tni-les-featured-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #526174;
+}
+
+.tni-les-featured-history h2 {
+  margin: 12px 0;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+  letter-spacing: -.035em;
+  color: #20252b;
+}
+
+.tni-les-featured-history p {
+  max-width: 680px;
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #414a54;
+}
+
+.tni-les-featured-history a {
+  display: inline-flex;
+  align-items: center;
+  color: #17568e;
+  font-size: 16px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.tni-les-featured-history a:hover {
+  text-decoration: underline;
+}
+
+/* Two research links BELOW table */
+
+.tni-les-related-bottom {
+  margin: 36px 0 44px;
+  color: #20252b;
+}
+
+.tni-les-related-bottom-heading > span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: #526174;
+}
+
+.tni-les-related-bottom-heading h2 {
+  margin: 10px 0;
+  font-size: clamp(24px, 3vw, 30px);
+  line-height: 1.25;
+  letter-spacing: -.035em;
+  color: #20252b;
+}
+
+.tni-les-related-bottom-heading p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #414a54;
+}
+
+.tni-les-related-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.tni-les-related-bottom-grid a {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dce2e8;
+  border-radius: 16px;
+  color: #20252b;
+  text-decoration: none;
+  transition: border-color .2s, transform .2s;
+}
+
+.tni-les-related-bottom-grid a:hover {
+  border-color: #547ca7;
+  transform: translateY(-2px);
+}
+
+.tni-les-related-bottom-category {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: #526174;
+}
+
+.tni-les-related-bottom-grid strong {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #20252b;
+}
+
+.tni-les-related-bottom-grid strong span {
+  color: #17568e;
+}
+
+.tni-les-related-bottom-grid small {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #414a54;
+}
+
+.tni-les-featured-history a:focus-visible,
+.tni-les-related-bottom-grid a:focus-visible {
+  outline: 3px solid #547ca7;
+  outline-offset: 4px;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .tni-les-featured-history {
+    margin: 24px 0;
+    padding: 22px;
+  }
+
+  .tni-les-related-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tni-les-related-bottom-grid a {
+    padding: 20px;
+  }
+
+  .tni-les-related-bottom-grid strong {
+    font-size: 17px;
+  }
+}

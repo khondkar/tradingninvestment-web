@@ -1,0 +1,21 @@
+/* Data panel styles are separate to preserve the installed scanner typography. */
+.tni-les .tni-les-research-detail h4 { font-size:16px;line-height:1.4;margin:22px 0 10px;color:#132c39; }
+.tni-les .tni-les-research-detail p { font-size:14px;line-height:1.7;margin:10px 0;overflow-wrap:anywhere; }
+.tni-les .tni-les-research-detail dl div { display:grid;grid-template-columns:minmax(0,1fr);gap:3px;font-size:14px;margin-bottom:12px; }
+.tni-les .tni-les-research-detail dd { text-align:left; }
+.tni-les .tni-les-snapshot { color:#216953;font-weight:650; }
+.tni-les .tni-les-nested { border-top:1px solid #cfddd8;margin-top:18px;padding-top:8px; }
+.tni-les .tni-les-nested summary { min-height:48px;padding:12px 0;font-size:15px;font-weight:650;cursor:pointer; }
+.tni-les .tni-les-nested li { font-size:14px;line-height:1.7;margin:10px 0; }
+.tni-les .tni-les-nested ul { padding-left:18px; }
+.tni-les .tni-les-detail-links { display:grid;gap:8px;margin-top:18px; }
+.tni-les .tni-les-detail-links a { display:flex;align-items:center;min-height:48px;color:#175d49;font-size:15px;font-weight:650;text-decoration:underline;text-underline-offset:4px; }
+.tni-les .tni-les-table-scroll { max-width:100%;overflow-x:auto; }
+.tni-les .tni-les-table-scroll table { width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums; }
+.tni-les .tni-les-table-scroll :is(th,td) { padding:10px 4px;text-align:right;border-bottom:1px solid #d8e3df;white-space:nowrap; }
+.tni-les .tni-les-table-scroll th:first-child { text-align:left; }
+.tni-les .tni-les-table-scroll caption { text-align:left;font-size:13px;padding:8px 0; }
+.tni-les .tni-les-card:has(.tni-les-detail) { grid-column:1/-1; }
+@media(min-width:700px){.tni-les .tni-les-research-detail dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 28px}.tni-les .tni-les-research-detail{max-width:850px;margin-inline:auto}.tni-les .tni-les-detail-links{grid-template-columns:1fr 1fr}}
+@media(max-width:699px){.tni-les .tni-les-research-detail p,.tni-les .tni-les-research-detail dl div,.tni-les .tni-les-nested li{font-size:15px}.tni-les .tni-les-table-scroll table{font-size:14px}}
+.tni-les .tni-les-nested summary:focus-visible,.tni-les .tni-les-detail-links a:focus-visible { outline:3px solid #218967;outline-offset:3px; }
