@@ -94,6 +94,33 @@ export default function SnxxResearchPage() {
         />
         <SnxxGrowthComparison />
         <SnxxRiskComparison />
+
+        <figure style={{
+          margin: "28px 0 72px",
+          padding: 0
+        }}>
+          <img
+            src="/images/social/snxx-vs-sndk-drawdown-og.png"
+            alt="TNI research chart comparing SNXX and SNDK historical drawdowns, including maximum drawdowns of 85.09% and 56.49% respectively"
+            loading="lazy"
+            decoding="async"
+            style={{
+              display: "block",
+              width: "100%",
+              height: "auto",
+              borderRadius: 16,
+              border: "1px solid #e2e8f0"
+            }}
+          />
+          <figcaption style={{
+            marginTop: 12,
+            fontSize: 13,
+            lineHeight: 1.6,
+            color: "#64748b"
+          }}>
+            TNI Research · SNXX vs SNDK historical drawdowns · January–October 2026
+          </figcaption>
+        </figure>
         <LeveragedEtfVolatilityComparison
           etfTicker="SNXX"
           underlyingTicker="SNDK"
