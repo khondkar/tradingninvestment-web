@@ -1105,5 +1105,14 @@
     "direction": "Unverified",
     "leverage": null,
     "verified": false
+  },
+  {
+    "ticker": "SNXX",
+    "name": "SNXX",
+    "exposure": "SNDK",
+    "category": "Stocks",
+    "direction": "Long",
+    "leverage": null,
+    "verified": false
   }
 ]

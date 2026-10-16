@@ -6,9 +6,16 @@ import './LeveragedEtfScannerPage.css'
 import './ScannerFundDetails.css'
 import ScannerFundDetails from './ScannerFundDetails'
 import { scannerResearchProfiles as profiles } from './scannerResearchProfiles'
+import snxxMonthly from '../data/charts/snxxSndkMonthlyComparison.json'
 
 type Fund = { ticker: string; name: string; exposure: string; direction: string; leverage: number | null; category: string; verified: boolean }
 const funds = candidates as Fund[]
+const snxxResearchPath = '/snxx-etf/'
+const snxxMonths = snxxMonthly.months
+const snxxLatest = snxxMonths[snxxMonths.length - 1]
+const snxxPct = (value: number) =>
+  `${value > 0 ? '+' : ''}${value.toFixed(2)}%`
+
 
 type Metrics = { aumBillion: number | null; expenseRatioPct: number | null; avgVolumeMillion: number | null; avgVolumePeriod: string | null; lastVolumeMillion: number | null; lastVolumeDate: string | null; asOf: string; sources: string[] }
 const metrics = fourEtfMetrics as Record<string, Metrics>
@@ -52,7 +59,24 @@ export default function LeveragedEtfScannerPage() {
       <div className="tni-les-toolbar"><button className="tni-les-filter-button" type="button" aria-expanded={filters} aria-controls="tni-les-filters" onClick={()=>setFilters(v=>!v)}>☷ Filters {filters?'−':'+'}</button><label>Sort <select value={sort} onChange={e=>{setSort(e.target.value);setVisibleCount(30)}}><option value="coverage">Research data first</option><option value="ticker">Ticker A–Z</option><option value="name">Fund name</option><option value="leverage">Leverage (high first)</option></select></label></div>
       {filters&&<div className="tni-les-filters" id="tni-les-filters"><label>Leverage factor<select value={leverage} onChange={e=>{setLeverage(e.target.value);setVisibleCount(30)}}><option value="All">All factors</option><option value="2">2×</option><option value="3">3×</option></select></label><label>Asset class<select value={category} onChange={e=>{setCategory(e.target.value);setVisibleCount(30)}}>{['All','Indexes','Sectors','Stocks','Bonds','Other'].map(c=><option key={c} value={c}>{c}</option>)}</select></label><button type="button" onClick={reset}>Clear filters</button><p className="tni-les-filter-note">Filters use preliminary labels. Candidates with unknown classifications only appear when their filters are set to All.</p></div>}
       <p className="tni-les-status" role="status">Showing {visible.length} of {results.length} candidates · 4 with saved research</p>
-      <div className="tni-les-list">{visible.map(f=><article className="tni-les-card" key={f.ticker}><div className="tni-les-card-head"><div><h3>{f.ticker}</h3><p>{profiles[f.ticker]?.name ?? (f.name !== f.ticker ? f.name : 'Fund profile not yet available')}</p></div><span className={'tni-les-tag '+(f.direction==='Long'?'long':f.direction==='Inverse'?'inverse':'unknown')}>{profiles[f.ticker] ? 'Research data' : f.name !== f.ticker ? 'Preliminary' : 'Unverified'}</span></div><ScannerMetrics ticker={f.ticker} /><div className="tni-les-card-bottom"><span>{profiles[f.ticker]?.leveragedEtf?.leverageLabel ?? (f.leverage ? `${f.leverage}× ${f.direction} · preliminary` : 'Ticker only')}</span><button type="button" aria-expanded={details===f.ticker} aria-controls={`fund-${f.ticker}`} onClick={()=>setDetails(details===f.ticker?null:f.ticker)}>{details===f.ticker?'Hide details ↑':'Details ↗'}</button></div>{details===f.ticker&&<div className="tni-les-detail" id={`fund-${f.ticker}`}>{profiles[f.ticker] ? <ScannerFundDetails key={f.ticker} ticker={f.ticker} /> : <><dl><div><dt>Ticker</dt><dd>{f.ticker}</dd></div>{f.name !== f.ticker && <><div><dt>Preliminary name</dt><dd>{f.name}</dd></div><div><dt>Preliminary exposure</dt><dd>{f.exposure}</dd></div><div><dt>Preliminary classification</dt><dd>{f.category} · {f.direction}</dd></div><div><dt>Preliminary daily target</dt><dd>{f.leverage == null ? 'Not recorded' : `${f.direction === 'Inverse' ? '−' : '+'}${f.leverage}×`}</dd></div></>}</dl><p>{f.name !== f.ticker ? 'These are unverified directory labels, not a validated fund profile.' : 'Only this ticker is stored in the current directory.'} No historical performance or market metrics are stored for this candidate yet.</p></>}</div>}</article>)}</div>
+      <div className="tni-les-list">{visible.map(f=><article className="tni-les-card" key={f.ticker}><div className="tni-les-card-head"><div><h3>{f.ticker}</h3><p>{profiles[f.ticker]?.name ?? (f.name !== f.ticker ? f.name : 'Fund profile not yet available')}</p></div><span className={'tni-les-tag '+(f.direction==='Long'?'long':f.direction==='Inverse'?'inverse':'unknown')}>{profiles[f.ticker] ? 'Research data' : f.name !== f.ticker ? 'Preliminary' : 'Unverified'}</span></div><ScannerMetrics ticker={f.ticker} /><div className="tni-les-card-bottom"><span>{profiles[f.ticker]?.leveragedEtf?.leverageLabel ?? (f.leverage ? `${f.leverage}× ${f.direction} · preliminary` : 'Ticker only')}</span><button type="button" aria-expanded={details===f.ticker} aria-controls={`fund-${f.ticker}`} onClick={()=>setDetails(details===f.ticker?null:f.ticker)}>{details===f.ticker?'Hide details ↑':'Details ↗'}</button></div>{details===f.ticker&&<div className="tni-les-detail" id={`fund-${f.ticker}`}>{profiles[f.ticker] ? <ScannerFundDetails key={f.ticker} ticker={f.ticker} /> : f.ticker === 'SNXX' ? <div className="tni-les-research-detail">
+  <p className="tni-les-snapshot">Saved TNI monthly research · Not a live quote</p>
+  <h4>SNXX monthly returns</h4>
+  <p>Monthly performance compared with underlying SNDK. Leveraged daily objectives do not imply a fixed monthly return multiple.</p>
+  <dl>
+    <div><dt>Comparison</dt><dd>SNXX vs SNDK</dd></div>
+    <div><dt>Monthly observations</dt><dd>{snxxMonths.length}</dd></div>
+    {snxxLatest && <>
+      <div><dt>Latest recorded month</dt><dd>{snxxLatest.month}</dd></div>
+      <div><dt>SNXX return</dt><dd>{snxxPct(snxxLatest.snxx_return_pct)}</dd></div>
+      <div><dt>SNDK return</dt><dd>{snxxPct(snxxLatest.sndk_return_pct)}</dd></div>
+      <div><dt>Difference</dt><dd>{snxxPct(snxxLatest.difference_pp)} percentage points</dd></div>
+    </>}
+  </dl>
+  <div className="tni-les-detail-links">
+    <a href={snxxResearchPath}>Full monthly returns &amp; charts ↗</a>
+  </div>
+</div> : <><dl><div><dt>Ticker</dt><dd>{f.ticker}</dd></div>{f.name !== f.ticker && <><div><dt>Preliminary name</dt><dd>{f.name}</dd></div><div><dt>Preliminary exposure</dt><dd>{f.exposure}</dd></div><div><dt>Preliminary classification</dt><dd>{f.category} · {f.direction}</dd></div><div><dt>Preliminary daily target</dt><dd>{f.leverage == null ? 'Not recorded' : `${f.direction === 'Inverse' ? '−' : '+'}${f.leverage}×`}</dd></div></>}</dl><p>{f.name !== f.ticker ? 'These are unverified directory labels, not a validated fund profile.' : 'Only this ticker is stored in the current directory.'} No historical performance or market metrics are stored for this candidate yet.</p></>}</div>}</article>)}</div>
       {results.length===0&&<div className="tni-les-empty"><strong>No matching ETFs</strong><p>Try another ticker or clear your filters.</p><button onClick={reset}>Reset filters</button></div>}
       {visibleCount<results.length&&<button type="button" className="tni-les-more" onClick={()=>setVisibleCount(n=>n+30)}>Show {Math.min(30,results.length-visibleCount)} more ↓</button>}
       <aside className="tni-les-featured-history">
