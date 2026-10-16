@@ -54,7 +54,7 @@ muted = "#667085"
 grid = "#e6ebf2"
 background = "#ffffff"
 
-asset_color = "#0868e8"
+asset_color = "#DC2626"
 benchmark_color = "#667085"
 
 fig = plt.figure(figsize=(12, 6.3), dpi=100)
