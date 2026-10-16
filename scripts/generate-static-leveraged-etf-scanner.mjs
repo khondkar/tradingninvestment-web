@@ -62,6 +62,63 @@ if (
 
 const canonical = origin + articlePath
 
+const scannerSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': canonical + '#webpage',
+      url: canonical,
+      name: title,
+      description,
+      inLanguage: 'en-US',
+      mainEntity: { '@id': canonical + '#application' }
+    },
+    {
+      '@type': 'WebApplication',
+      '@id': canonical + '#application',
+      name: 'TNI Leveraged ETF Scanner',
+      url: canonical,
+      description,
+      applicationCategory: 'FinanceApplication',
+      operatingSystem: 'Web',
+      isAccessibleForFree: true,
+      featureList: [
+        'Search leveraged and inverse ETF candidates',
+        'Filter by direction, leverage and asset class',
+        'Sort ETF directory and research coverage',
+        'Compare two to four selected ETFs',
+        'View available saved market-data snapshots'
+      ]
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': canonical + '#breadcrumbs',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: origin + '/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Research',
+          item: origin + '/research/'
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Leveraged ETF Scanner',
+          item: canonical
+        }
+      ]
+    }
+  ]
+}
+
+
 let html = template
   .replace(
     /<title>[\s\S]*?<\/title>/,
@@ -102,6 +159,10 @@ let html = template
   .replace(
     '<div id="root"></div>',
     `<div id="root">${markup}</div>`
+  )
+  .replace(
+    '</head>',
+    `<script type="application/ld+json">${JSON.stringify(scannerSchema).replaceAll('<', '\\u003c')}</script>\n</head>`
   )
 
 if (!html.includes(markup)) {

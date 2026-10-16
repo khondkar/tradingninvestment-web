@@ -120,6 +120,91 @@ export default function LeveragedEtfScannerPage() {
 
       <AllLeveragedEtfsTable selected={selected} onToggleCompare={toggleCompare} />
 
+      <section className="tni-les-seo-guide" aria-labelledby="tni-les-guide-title" style={{
+        margin: "48px 0 56px",
+        padding: "clamp(22px, 4vw, 44px)",
+        border: "1px solid #e1e7ed",
+        borderRadius: 18,
+        background: "#fff",
+        color: "#172033",
+        fontFamily: "inherit"
+      }}>
+        <p className="tni-les-kicker tni-les-ink">TNI ETF RESEARCH GUIDE</p>
+        <h2 id="tni-les-guide-title" style={{fontSize:"clamp(26px,4vw,36px)",lineHeight:1.2}}>
+          Understanding Leveraged ETFs
+        </h2>
+        <p style={{fontSize:"clamp(17px,2vw,19px)",lineHeight:1.8}}>
+          Learn how daily leverage, compounding, fund costs and research coverage
+          affect the comparison of leveraged and inverse exchange-traded funds.
+        </p>
+
+        <div style={{display:"grid",gap:28,marginTop:32}}>
+          <section>
+            <h3>How does daily leverage reset work?</h3>
+            <p>
+              Most leveraged ETFs seek a stated multiple of a benchmark's daily
+              return, before fees and expenses. The objective generally resets
+              each trading day rather than guaranteeing that multiple over
+              weeks, months or years.
+            </p>
+            <p>
+              Daily compounding makes longer-term returns path-dependent.
+              Volatile markets can create performance differences even when
+              the benchmark eventually returns to its starting value.
+            </p>
+          </section>
+
+          <section>
+            <h3>How to search, filter and compare leveraged ETFs</h3>
+            <p>
+              Search by ticker, fund name, exposure or category. Filter
+              available classifications by long or inverse direction,
+              leverage factor and asset class. Sort by research coverage,
+              ticker, fund name or leverage.
+            </p>
+            <p>
+              Select two to four ETFs using Compare, then open the
+              side-by-side comparison. Filters remain in place while
+              funds are selected. Missing research metrics are not
+              estimated or presented as live quotes.
+            </p>
+          </section>
+
+          <section>
+            <h3>Scanner data sources and methodology</h3>
+            <p>
+              TradingNInvestment combines an ETF candidate directory,
+              saved research profiles and available market-data snapshots.
+              Displayed fields can include leverage, assets under
+              management, expense ratios and trading volume.
+            </p>
+            <p>
+              Data coverage and observation periods differ by fund.
+              Some directory entries have preliminary or unverified
+              classifications, and some may be inactive or non-leveraged.
+              Review each fund's source links and snapshot dates.
+            </p>
+          </section>
+
+          <section>
+            <h3>What risks should investors consider?</h3>
+            <p>
+              Leverage magnifies daily market movements and potential losses.
+              Inverse ETFs seek opposite daily exposure. Compounding,
+              volatility, tracking differences, financing costs and
+              fund expenses can affect multi-day performance.
+            </p>
+            <p>
+              Compare the underlying exposure, daily objective, liquidity,
+              fees and available historical evidence before interpreting
+              results. This scanner is for research, not personalized
+              investment advice.
+            </p>
+          </section>
+        </div>
+      </section>
+
+
       <nav className="tni-les-related-bottom" aria-label="Related market research">
         <div className="tni-les-related-bottom-heading">
           <span>CONTINUE EXPLORING · TNI RESEARCH</span>
