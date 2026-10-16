@@ -24,6 +24,7 @@ export const additionalPublications: ResearchItem[] = [
     description: 'Original research comparing SNXX and SNDK through daily returns, monthly performance, growth of $10,000, drawdowns, and rolling volatility.',
     name: 'SNXX Leveraged ETF',
     symbol: 'SNXX',
+    image: '/images/social/snxx-vs-sndk-drawdown-og.png',
     categories: ['etf', 'leveraged-etf'],
     kind: 'article',
     publishedAt: '2026-10-15',
