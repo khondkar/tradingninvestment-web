@@ -1114,5 +1114,1337 @@
     "direction": "Long",
     "leverage": 2,
     "verified": true
+  },
+  {
+    "ticker": "USD",
+    "name": "ProShares Ultra Semiconductors",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GDXU",
+    "name": "MicroSectors Gold Miners 3X Leveraged ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MULL",
+    "name": "GraniteShares 2x Long MU Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FNGO",
+    "name": "MicroSectors FANG+ Index 2X Leveraged ETNs",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UYG",
+    "name": "ProShares Ultra Financials",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SPYU",
+    "name": "MAX S&P 500 4X Leveraged ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NVDU",
+    "name": "Direxion Daily NVDA Bull 2X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NVDX",
+    "name": "T-Rex 2X Long NVIDIA Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "INTW",
+    "name": "GraniteShares 2x Long INTC Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "PTIR",
+    "name": "GraniteShares 2x Long PLTR Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AMZU",
+    "name": "Direxion Daily AMZN Bull 2X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSTX",
+    "name": "Defiance Daily Target 2x Long MSTR ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MVLL",
+    "name": "GraniteShares 2x Long MRVL Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SPUU",
+    "name": "Direxion Daily S&P 500 Bull 2X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DFEN",
+    "name": "Direxion Daily Aerospace & Defense Bull 3X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MQQQ",
+    "name": "Tradr 2X Long Innovation 100 Monthly ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NBIL",
+    "name": "GraniteShares 2x Long NBIS Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UWM",
+    "name": "ProShares Ultra Russell2000",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XDEC",
+    "name": "FT Vest U.S. Equity Enhance & Moderate Buffer ETF – December",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NOWL",
+    "name": "GraniteShares 2x Long NOW Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AVGX",
+    "name": "Defiance Daily Target 2X Long AVGO ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DLLL",
+    "name": "GraniteShares 2x Long DELL Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CWEB",
+    "name": "Direxion Daily CSI China Internet Index Bull 2X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FBL",
+    "name": "GraniteShares 2x Long META Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MVV",
+    "name": "ProShares Ultra MidCap400",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SMCX",
+    "name": "Defiance Daily Target 2X Long SMCI ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XJUN",
+    "name": "FT Vest U.S. Equity Enhance & Moderate Buffer ETF – June",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BABX",
+    "name": "GraniteShares 2x Long BABA Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FNGG",
+    "name": "Direxion Daily NYSE FANG+ Bull 2X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NRGU",
+    "name": "MicroSectors U.S. Big Oil 3 Leveraged ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "IONX",
+    "name": "Defiance Daily Target 2X Long IONQ ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XSEP",
+    "name": "FT Vest U.S. Equity Enhance & Moderate Buffer ETF – September",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ROBN",
+    "name": "T-Rex 2X Long HOOD Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XBJA",
+    "name": "Innovator U.S. Equity Accelerated 9 Buffer ETF – January",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "OILU",
+    "name": "MicroSectors Oil & Gas Exp. & Prod. 3x Leveraged ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "OKLL",
+    "name": "Defiance Daily Target 2x Long OKLO ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BIB",
+    "name": "ProShares Ultra Nasdaq Biotechnology",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TSLR",
+    "name": "GraniteShares 2x Long TSLA Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XDSQ",
+    "name": "Innovator US Equity Accelerated ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CRWL",
+    "name": "GraniteShares 2x Long CRWD Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "APPX",
+    "name": "Tradr 2X Long APP Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SPCU",
+    "name": "Defiance Daily Target 2X Long SpaceX ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSFL",
+    "name": "GraniteShares 2x Long MSFT Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XBOC",
+    "name": "Innovator U.S. Equity Accelerated 9 Buffer ETF – October",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GOOX",
+    "name": "T-Rex 2X Long Alphabet Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TSYY",
+    "name": "GraniteShares YieldBOOST TSLA ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "HIMZ",
+    "name": "Defiance Daily Target 2X Long HIMS ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "IONL",
+    "name": "GraniteShares 2x Long IONQ Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QCML",
+    "name": "GraniteShares 2x Long QCOM Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RDTL",
+    "name": "GraniteShares 2x Long RDDT Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AMZZ",
+    "name": "GraniteShares 2x Long AMZN Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "WTIU",
+    "name": "MicroSectors Energy 3X Leveraged ETNs",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSOX",
+    "name": "AdvisorShares MSOS Daily Leveraged ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TEMT",
+    "name": "Tradr 2X Long TEM Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AVGU",
+    "name": "GraniteShares 2x Long AVGO Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DUSL",
+    "name": "Direxion Daily Industrials Bull 3X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TSMU",
+    "name": "GraniteShares 2x Long TSM Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SEMY",
+    "name": "GraniteShares YieldBOOST Semiconductor ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "EET",
+    "name": "ProShares Ultra MSCI Emerging Markets",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "VRTL",
+    "name": "GraniteShares 2x Long VRT Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SPAL",
+    "name": "GraniteShares 2x Long SpaceX Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SMCL",
+    "name": "GraniteShares 2x Long SMCI Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UBRL",
+    "name": "GraniteShares 2x Long UBER Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MVPL",
+    "name": "Miller Value Partners Leverage ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QTJA",
+    "name": "Innovator Growth Accelerated Plus ETF – January",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BNKU",
+    "name": "MicroSectors U.S. Big Banks 3 Leveraged ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GMEU",
+    "name": "T-REX 2X Long GME Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QQUP",
+    "name": "Proshares Ultra QQQ Mega ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UMDD",
+    "name": "ProShares UltraPro MidCap400",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NFLU",
+    "name": "T-Rex 2X Long NFLX Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MRAL",
+    "name": "GraniteShares 2x Long MARA Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UXI",
+    "name": "ProShares Ultra Industrials",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "EFO",
+    "name": "ProShares Ultra MSCI EAFE",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NVYY",
+    "name": "GraniteShares YieldBOOST NVDA ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UBOT",
+    "name": "Direxion Daily Robotics, Artificial Intelligence & Automation Index Bull 2X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XTAP",
+    "name": "Innovator U.S. Equity Accelerated Plus ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AAPB",
+    "name": "GraniteShares 2x Long AAPL Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSFX",
+    "name": "T-Rex 2X Long Microsoft Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XTOC",
+    "name": "Innovator U.S. Equity Accelerated Plus ETF – October",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XTJL",
+    "name": "Innovator U.S. Equity Accelerated Plus ETF – July",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XTJA",
+    "name": "Innovator U.S. Equity Accelerated Plus ETF – January",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QTOC",
+    "name": "Innovator Growth Accelerated Plus ETF – October",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MSTP",
+    "name": "GraniteShares 2x Long MSTR Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SMHB",
+    "name": "ETRACS 2xMonthly Pay Leveraged US Small Cap High Dividend ETN Series B",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "GOU",
+    "name": "GraniteShares 2x Long GOOGL Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TPOR",
+    "name": "Direxion Daily Transportation Bull 3X ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "COYY",
+    "name": "GraniteShares YieldBOOST COIN ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RIOX",
+    "name": "Defiance Daily Target 2X Long RIOT ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UPSX",
+    "name": "Tradr 2X Long UPST Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "KPDD",
+    "name": "KraneShares 2x Long PDD Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TARK",
+    "name": "AXS 2X Innovation ETF Fund",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QQQP",
+    "name": "Tradr 2X Long Innovation 100 Quarterly ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RVNL",
+    "name": "GraniteShares 2x Long RIVN Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UPW",
+    "name": "ProShares Ultra Utilities",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SPYQ",
+    "name": "Tradr 2X Long SPY Quarterly ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "EZJ",
+    "name": "ProShares Ultra MSCI Japan",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QUBX",
+    "name": "Tradr 2X Long QUBT Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TSL",
+    "name": "GraniteShares 1.25x Long TSLA Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UPV",
+    "name": "ProShares Ultra FTSE Europe",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "HOOX",
+    "name": "Defiance Daily Target 2X Long HOOD ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ISUL",
+    "name": "GraniteShares 2x Long ISRG Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RBLU",
+    "name": "T-REX 2X Long RBLX Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MLPR",
+    "name": "ETRACS Quarterly Pay 1.5x Leveraged Alerian MLP Index ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AAPX",
+    "name": "T-Rex 2X Long Apple Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AMYY",
+    "name": "GraniteShares YieldBOOST AMD ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UGE",
+    "name": "ProShares Ultra Consumer Staples",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "HOYY",
+    "name": "GraniteShares YieldBOOST HOOD ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UCC",
+    "name": "ProShares Ultra Consumer Discretionary",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SMHD",
+    "name": "MicroSectors -3x Short Semiconductor ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "YSPY",
+    "name": "GraniteShares YieldBOOST SPY ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XPP",
+    "name": "ProShares Ultra FTSE China 50",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "PDDL",
+    "name": "GraniteShares 2x Long PDD Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SKYU",
+    "name": "ProShares Ultra Nasdaq Cloud Computing ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "DJTU",
+    "name": "T-REX 2X Long DJT Daily Target ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BDCX",
+    "name": "ETRACS Quarterly Pay 1.5x Leveraged MarketVector BDC Liquid Index ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "KMLI",
+    "name": "KraneShares 2x Long MELI Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "SMYY",
+    "name": "GraniteShares YieldBOOST SMCI ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RGTU",
+    "name": "Tradr 2X Long RGTI Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "NUGY",
+    "name": "GraniteShares YieldBOOST Gold Miners ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TQQY",
+    "name": "GraniteShares YieldBOOST QQQ ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FLYU",
+    "name": "MicroSectors Travel 3x Leveraged ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RTYY",
+    "name": "GraniteShares YieldBoost RIOT ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "LTL",
+    "name": "ProShares Ultra Communication Services",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "HDLB",
+    "name": "ETRACS Monthly Pay 2xLeveraged US High Dividend Low Volatility ETN Series B",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "ARCX",
+    "name": "Tradr 2X Long ACHR Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MAAY",
+    "name": "GraniteShares YieldBOOST MARA ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "UBR",
+    "name": "ProShares Ultra MSCI Brazil Capped",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "IOYY",
+    "name": "GraniteShares YieldBOOST IONQ ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "KBAB",
+    "name": "KraneShares 2x Long BABA Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CARU",
+    "name": "MAX Auto Industry 3X Leveraged ETN",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "RGYY",
+    "name": "GraniteShares YieldBoost RGTI ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "PLYY",
+    "name": "GraniteShares YieldBOOST PLTR ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "AZYY",
+    "name": "GraniteShares YieldBoost AMZN ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "PUL",
+    "name": "GraniteShares 2x Long P Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "QBY",
+    "name": "GraniteShares YieldBoost QBTS ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CRY",
+    "name": "GraniteShares YieldBOOST CRCL ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BIOY",
+    "name": "GraniteShares YieldBOOST Biotech ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "MTYY",
+    "name": "GraniteShares YieldBOOST MSTR ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "CWY",
+    "name": "GraniteShares YieldBOOST CRWV ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "KBDU",
+    "name": "KraneShares 2x Long BIDU Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "HMYY",
+    "name": "GraniteShares YieldBoost HIMS ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TMYY",
+    "name": "GraniteShares YieldBOOST TSM ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BBUL",
+    "name": "GraniteShares 2x Long BB Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FINY",
+    "name": "GraniteShares YieldBOOST Financials ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "BBYY",
+    "name": "GraniteShares YieldBOOST BABA ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "XCOM",
+    "name": "Corgi All Commodities 2x Daily ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "TECY",
+    "name": "GraniteShares YieldBOOST Technology ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
+  },
+  {
+    "ticker": "FBYY",
+    "name": "GraniteShares YieldBOOST META ETF",
+    "exposure": "Not verified",
+    "category": "Other",
+    "direction": "Unknown",
+    "leverage": null,
+    "verified": false
   }
 ]
