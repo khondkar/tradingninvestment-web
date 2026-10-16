@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { lazy, Suspense, useMemo, useState } from 'react'
 import candidates from './leveraged-etf-candidates.json'
 import AllLeveragedEtfsTable from './AllLeveragedEtfsTable'
 import fourEtfMetrics from './four-etf-metrics.json'
@@ -7,6 +7,9 @@ import './ScannerFundDetails.css'
 import ScannerFundDetails from './ScannerFundDetails'
 import { scannerResearchProfiles as profiles } from './scannerResearchProfiles'
 import snxxMonthly from '../data/charts/snxxSndkMonthlyComparison.json'
+
+import './EtfComparison.css'
+const EtfComparison = lazy(() => import('./EtfComparison'))
 
 type Fund = { ticker: string; name: string; exposure: string; direction: string; leverage: number | null; category: string; verified: boolean }
 const funds = candidates as Fund[]
@@ -33,6 +36,9 @@ const ScannerMetrics = ({ ticker }: { ticker: string }) => {
 }
 
 export default function LeveragedEtfScannerPage() {
+  const [selected, setSelected] = useState<string[]>([])
+  const [comparing, setComparing] = useState(false)
+  const toggleCompare = (ticker: string) => setSelected(current => current.includes(ticker) ? current.filter(t => t !== ticker) : current.length < 4 ? [...current, ticker] : current)
   const [search, setSearch] = useState('')
   const [direction, setDirection] = useState('All')
   const [leverage, setLeverage] = useState('All')
@@ -54,12 +60,13 @@ export default function LeveragedEtfScannerPage() {
     <section className="tni-les-hero"><div className="tni-les-wrap"><p className="tni-les-kicker">TNI / RESEARCH / ETF SCANNERS</p><h1>Leverage <em>Decoded.</em></h1><p>Find your exposure. Understand the risk.</p><span className="tni-les-subline">Leveraged & inverse ETF explorer</span></div></section>
     <div className="tni-les-wrap tni-les-content">
       <div className="tni-les-intro"><div><p className="tni-les-kicker tni-les-ink">ETF INTELLIGENCE</p><h2>Explore leveraged ETFs</h2><p>Explore fund profiles and saved return history. Detailed research is available for TQQQ, SOXL, NVDL and TSLL.</p></div><span className="tni-les-count">{results.length} matches</span></div>
+      <aside className="tni-compare-intro"><div><strong>Compare ETFs side by side</strong><p>Select 2–4 funds to explore costs, exposure and saved performance. Your filters stay in place.</p></div></aside>
       <label className="tni-les-search-label" htmlFor="tni-les-search">Search ETFs</label><input id="tni-les-search" className="tni-les-search" type="search" placeholder="Ticker, fund, index or sector…" value={search} onChange={e=>{setSearch(e.target.value);setVisibleCount(30)}} />
       <div className="tni-les-pills" role="group" aria-label="Direction filter">{['All','Long','Inverse'].map(d=><button key={d} type="button" aria-pressed={direction===d} className={direction===d?'selected':''} onClick={()=>{setDirection(d);setVisibleCount(30)}}>{d==='All'?'All ETFs':d==='Long'?'↗ Long':'↘ Inverse'}</button>)}</div>
       <div className="tni-les-toolbar"><button className="tni-les-filter-button" type="button" aria-expanded={filters} aria-controls="tni-les-filters" onClick={()=>setFilters(v=>!v)}>☷ Filters {filters?'−':'+'}</button><label>Sort <select value={sort} onChange={e=>{setSort(e.target.value);setVisibleCount(30)}}><option value="coverage">Research data first</option><option value="ticker">Ticker A–Z</option><option value="name">Fund name</option><option value="leverage">Leverage (high first)</option></select></label></div>
       {filters&&<div className="tni-les-filters" id="tni-les-filters"><label>Leverage factor<select value={leverage} onChange={e=>{setLeverage(e.target.value);setVisibleCount(30)}}><option value="All">All factors</option><option value="2">2×</option><option value="3">3×</option></select></label><label>Asset class<select value={category} onChange={e=>{setCategory(e.target.value);setVisibleCount(30)}}>{['All','Indexes','Sectors','Stocks','Bonds','Other'].map(c=><option key={c} value={c}>{c}</option>)}</select></label><button type="button" onClick={reset}>Clear filters</button><p className="tni-les-filter-note">Filters use preliminary labels. Candidates with unknown classifications only appear when their filters are set to All.</p></div>}
       <p className="tni-les-status" role="status">Showing {visible.length} of {results.length} candidates · 4 with saved research</p>
-      <div className="tni-les-list">{visible.map(f=><article className="tni-les-card" key={f.ticker}><div className="tni-les-card-head"><div><h3>{f.ticker}</h3><p>{profiles[f.ticker]?.name ?? (f.name !== f.ticker ? f.name : 'Fund profile not yet available')}</p></div><span className={'tni-les-tag '+(f.direction==='Long'?'long':f.direction==='Inverse'?'inverse':'unknown')}>{profiles[f.ticker] ? 'Research data' : f.ticker === 'SNXX' ? 'Monthly research' : f.name !== f.ticker ? 'Preliminary' : 'Unverified'}</span></div><ScannerMetrics ticker={f.ticker} /><div className="tni-les-card-bottom"><span>{profiles[f.ticker]?.leveragedEtf?.leverageLabel ?? (f.ticker === 'SNXX' ? '2× long · daily objective' : f.leverage ? `${f.leverage}× ${f.direction} · preliminary` : 'Ticker only')}</span><button type="button" aria-expanded={details===f.ticker} aria-controls={`fund-${f.ticker}`} onClick={()=>setDetails(details===f.ticker?null:f.ticker)}>{details===f.ticker?'Hide details ↑':'Details ↗'}</button></div>{details===f.ticker&&<div className="tni-les-detail" id={`fund-${f.ticker}`}>{profiles[f.ticker] ? <ScannerFundDetails key={f.ticker} ticker={f.ticker} /> : f.ticker === 'SNXX' ? <div className="tni-les-research-detail">
+      <div className="tni-les-list">{visible.map(f=><article className="tni-les-card" key={f.ticker}><div className="tni-les-card-head"><div><h3>{f.ticker}</h3><p>{profiles[f.ticker]?.name ?? (f.name !== f.ticker ? f.name : 'Fund profile not yet available')}</p></div><span className={'tni-les-tag '+(f.direction==='Long'?'long':f.direction==='Inverse'?'inverse':'unknown')}>{profiles[f.ticker] ? 'Research data' : f.ticker === 'SNXX' ? 'Monthly research' : f.name !== f.ticker ? 'Preliminary' : 'Unverified'}</span></div><label className="tni-compare-select"><input type="checkbox" aria-label={`Compare ${f.ticker}`} checked={selected.includes(f.ticker)} disabled={selected.length===4&&!selected.includes(f.ticker)} onChange={()=>toggleCompare(f.ticker)} />Compare</label><ScannerMetrics ticker={f.ticker} /><div className="tni-les-card-bottom"><span>{profiles[f.ticker]?.leveragedEtf?.leverageLabel ?? (f.ticker === 'SNXX' ? '2× long · daily objective' : f.leverage ? `${f.leverage}× ${f.direction} · preliminary` : 'Ticker only')}</span><button type="button" aria-expanded={details===f.ticker} aria-controls={`fund-${f.ticker}`} onClick={()=>setDetails(details===f.ticker?null:f.ticker)}>{details===f.ticker?'Hide details ↑':'Details ↗'}</button></div>{details===f.ticker&&<div className="tni-les-detail" id={`fund-${f.ticker}`}>{profiles[f.ticker] ? <ScannerFundDetails key={f.ticker} ticker={f.ticker} /> : f.ticker === 'SNXX' ? <div className="tni-les-research-detail">
   <p className="tni-les-snapshot">Saved TNI monthly research · Not a live quote</p>
   <h4>Fund profile</h4>
   <dl>
@@ -111,7 +118,7 @@ export default function LeveragedEtfScannerPage() {
         </a>
       </aside>
 
-      <AllLeveragedEtfsTable />
+      <AllLeveragedEtfsTable selected={selected} onToggleCompare={toggleCompare} />
 
       <nav className="tni-les-related-bottom" aria-label="Related market research">
         <div className="tni-les-related-bottom-heading">
@@ -137,5 +144,7 @@ export default function LeveragedEtfScannerPage() {
       <aside className="tni-les-risk"><strong>Know the risk</strong><p>Leveraged and inverse ETFs generally target a multiple of a benchmark's <strong>daily</strong> return. Longer-term performance can differ substantially because of compounding, volatility, fees and tracking effects.</p></aside>
       <p className="tni-les-disclaimer">Saved research is available for four funds. Other entries contain preliminary labels or ticker candidates that may be inactive or non-leveraged. Snapshot dates vary by fund; this is not live market data.</p>
     </div>
+    {selected.length>0&&<aside className="tni-compare-tray" aria-label="Selected ETFs"><p role="status">{selected.length} of 4 selected · {selected.length<2?'Select one more fund':selected.length===4?'Maximum reached — remove a fund to replace it':'Ready to compare'}</p><div className="tni-compare-chips">{selected.map(t=><button key={t} onClick={()=>toggleCompare(t)} aria-label={`Remove ${t}`}>{t} ×</button>)}</div><button onClick={()=>setSelected([])}>Clear all</button><button className="tni-compare-go" disabled={selected.length<2} onClick={()=>setComparing(true)}>Compare ({selected.length}) →</button></aside>}
+    {comparing&&<Suspense fallback={<div className="tni-compare-tray" role="status">Loading comparison…<button onClick={()=>setComparing(false)}>Cancel</button></div>}><EtfComparison tickers={selected} onClose={()=>setComparing(false)} /></Suspense>}
   </main>
 }
