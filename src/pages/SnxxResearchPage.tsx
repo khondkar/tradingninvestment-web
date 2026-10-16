@@ -1,4 +1,5 @@
 import SnxxWeekdayComparison from "../components/research/SnxxWeekdayComparison"
+import SnxxHourlyReturns from "../components/research/SnxxHourlyReturns"
 import LeveragedEtfMonthlyComparison from "../components/research/leveraged-etf/LeveragedEtfMonthlyComparison"
 import { normalizeComparison } from "../research/leveraged-etf/normalizeComparison"
 import growth from "../data/charts/snxxSndkGrowthComparison.json"
@@ -85,6 +86,7 @@ export default function SnxxResearchPage() {
         </section>
 
         <SnxxWeekdayComparison />
+        <SnxxHourlyReturns />
         <LeveragedEtfMonthlyComparison
           etfTicker="SNXX"
           underlyingTicker="SNDK"
