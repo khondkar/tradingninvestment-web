@@ -1108,11 +1108,11 @@
   },
   {
     "ticker": "SNXX",
-    "name": "SNXX",
-    "exposure": "SNDK",
+    "name": "Tradr 2X Long SNDK Daily ETF",
+    "exposure": "Sandisk Corporation (SNDK)",
     "category": "Stocks",
     "direction": "Long",
-    "leverage": null,
-    "verified": false
+    "leverage": 2,
+    "verified": true
   }
 ]

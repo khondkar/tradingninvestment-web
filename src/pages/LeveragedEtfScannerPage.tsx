@@ -59,9 +59,27 @@ export default function LeveragedEtfScannerPage() {
       <div className="tni-les-toolbar"><button className="tni-les-filter-button" type="button" aria-expanded={filters} aria-controls="tni-les-filters" onClick={()=>setFilters(v=>!v)}>☷ Filters {filters?'−':'+'}</button><label>Sort <select value={sort} onChange={e=>{setSort(e.target.value);setVisibleCount(30)}}><option value="coverage">Research data first</option><option value="ticker">Ticker A–Z</option><option value="name">Fund name</option><option value="leverage">Leverage (high first)</option></select></label></div>
       {filters&&<div className="tni-les-filters" id="tni-les-filters"><label>Leverage factor<select value={leverage} onChange={e=>{setLeverage(e.target.value);setVisibleCount(30)}}><option value="All">All factors</option><option value="2">2×</option><option value="3">3×</option></select></label><label>Asset class<select value={category} onChange={e=>{setCategory(e.target.value);setVisibleCount(30)}}>{['All','Indexes','Sectors','Stocks','Bonds','Other'].map(c=><option key={c} value={c}>{c}</option>)}</select></label><button type="button" onClick={reset}>Clear filters</button><p className="tni-les-filter-note">Filters use preliminary labels. Candidates with unknown classifications only appear when their filters are set to All.</p></div>}
       <p className="tni-les-status" role="status">Showing {visible.length} of {results.length} candidates · 4 with saved research</p>
-      <div className="tni-les-list">{visible.map(f=><article className="tni-les-card" key={f.ticker}><div className="tni-les-card-head"><div><h3>{f.ticker}</h3><p>{profiles[f.ticker]?.name ?? (f.name !== f.ticker ? f.name : 'Fund profile not yet available')}</p></div><span className={'tni-les-tag '+(f.direction==='Long'?'long':f.direction==='Inverse'?'inverse':'unknown')}>{profiles[f.ticker] ? 'Research data' : f.name !== f.ticker ? 'Preliminary' : 'Unverified'}</span></div><ScannerMetrics ticker={f.ticker} /><div className="tni-les-card-bottom"><span>{profiles[f.ticker]?.leveragedEtf?.leverageLabel ?? (f.leverage ? `${f.leverage}× ${f.direction} · preliminary` : 'Ticker only')}</span><button type="button" aria-expanded={details===f.ticker} aria-controls={`fund-${f.ticker}`} onClick={()=>setDetails(details===f.ticker?null:f.ticker)}>{details===f.ticker?'Hide details ↑':'Details ↗'}</button></div>{details===f.ticker&&<div className="tni-les-detail" id={`fund-${f.ticker}`}>{profiles[f.ticker] ? <ScannerFundDetails key={f.ticker} ticker={f.ticker} /> : f.ticker === 'SNXX' ? <div className="tni-les-research-detail">
+      <div className="tni-les-list">{visible.map(f=><article className="tni-les-card" key={f.ticker}><div className="tni-les-card-head"><div><h3>{f.ticker}</h3><p>{profiles[f.ticker]?.name ?? (f.name !== f.ticker ? f.name : 'Fund profile not yet available')}</p></div><span className={'tni-les-tag '+(f.direction==='Long'?'long':f.direction==='Inverse'?'inverse':'unknown')}>{profiles[f.ticker] ? 'Research data' : f.ticker === 'SNXX' ? 'Monthly research' : f.name !== f.ticker ? 'Preliminary' : 'Unverified'}</span></div><ScannerMetrics ticker={f.ticker} /><div className="tni-les-card-bottom"><span>{profiles[f.ticker]?.leveragedEtf?.leverageLabel ?? (f.ticker === 'SNXX' ? '2× long · daily objective' : f.leverage ? `${f.leverage}× ${f.direction} · preliminary` : 'Ticker only')}</span><button type="button" aria-expanded={details===f.ticker} aria-controls={`fund-${f.ticker}`} onClick={()=>setDetails(details===f.ticker?null:f.ticker)}>{details===f.ticker?'Hide details ↑':'Details ↗'}</button></div>{details===f.ticker&&<div className="tni-les-detail" id={`fund-${f.ticker}`}>{profiles[f.ticker] ? <ScannerFundDetails key={f.ticker} ticker={f.ticker} /> : f.ticker === 'SNXX' ? <div className="tni-les-research-detail">
   <p className="tni-les-snapshot">Saved TNI monthly research · Not a live quote</p>
-  <h4>SNXX monthly returns</h4>
+  <h4>Fund profile</h4>
+  <dl>
+    <div><dt>Fund</dt><dd>Tradr 2X Long SNDK Daily ETF</dd></div>
+    <div><dt>Issuer</dt><dd>Tradr ETFs</dd></div>
+    <div><dt>Daily objective</dt><dd>2× long</dd></div>
+    <div><dt>Inception</dt><dd>2026-01-26</dd></div>
+  </dl>
+  <p>Seeks two times (200%) the daily percentage change of Sandisk Corporation (SNDK), before fees and expenses.</p>
+  <p>The fund is actively managed and uses derivatives, including swaps and options, to pursue leveraged daily exposure to SNDK. Its exposure is reset daily, so performance over longer holding periods may differ materially from twice the underlying stock's return.</p>
+  <details className="tni-les-nested">
+    <summary>Structure &amp; leverage history</summary>
+    <ul>
+      <li>Underlying exposure: Sandisk Corporation (SNDK).</li>
+      <li>Daily leverage objective: 200% of SNDK's daily performance, before fees and expenses.</li>
+      <li>Derivative exposure may include swaps and listed options; direct equity holdings may also be used.</li>
+      <li>Compounding, volatility and daily rebalancing affect multi-day returns.</li>
+    </ul>
+  </details>
+  <h4>Monthly returns</h4>
   <p>Monthly performance compared with underlying SNDK. Leveraged daily objectives do not imply a fixed monthly return multiple.</p>
   <dl>
     <div><dt>Comparison</dt><dd>SNXX vs SNDK</dd></div>
@@ -75,6 +93,7 @@ export default function LeveragedEtfScannerPage() {
   </dl>
   <div className="tni-les-detail-links">
     <a href={snxxResearchPath}>Full monthly returns &amp; charts ↗</a>
+    <a href="https://www.tradretfs.com/snxx" target="_blank" rel="noopener noreferrer">Issuer fund page ↗</a>
   </div>
 </div> : <><dl><div><dt>Ticker</dt><dd>{f.ticker}</dd></div>{f.name !== f.ticker && <><div><dt>Preliminary name</dt><dd>{f.name}</dd></div><div><dt>Preliminary exposure</dt><dd>{f.exposure}</dd></div><div><dt>Preliminary classification</dt><dd>{f.category} · {f.direction}</dd></div><div><dt>Preliminary daily target</dt><dd>{f.leverage == null ? 'Not recorded' : `${f.direction === 'Inverse' ? '−' : '+'}${f.leverage}×`}</dd></div></>}</dl><p>{f.name !== f.ticker ? 'These are unverified directory labels, not a validated fund profile.' : 'Only this ticker is stored in the current directory.'} No historical performance or market metrics are stored for this candidate yet.</p></>}</div>}</article>)}</div>
       {results.length===0&&<div className="tni-les-empty"><strong>No matching ETFs</strong><p>Try another ticker or clear your filters.</p><button onClick={reset}>Reset filters</button></div>}
