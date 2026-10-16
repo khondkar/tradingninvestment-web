@@ -409,6 +409,55 @@ export default function SnxxResearchPage() {
           ))}
         </section>
 
+
+        <section
+          id="snxx-continue-exploring"
+          aria-labelledby="snxx-explore-title"
+          style={{ margin: "56px 0 32px", maxWidth: 860 }}
+        >
+          <p style={{
+            color: "#087BFA",
+            fontSize: 15,
+            fontWeight: 750,
+            letterSpacing: ".12em"
+          }}>
+            CONTINUE EXPLORING
+          </p>
+          <h2 id="snxx-explore-title" style={{
+            fontSize: "clamp(25px,4vw,34px)",
+            letterSpacing: "-.035em",
+            marginBottom: 20
+          }}>
+            Explore More Market Research
+          </h2>
+          <nav aria-label="Related investment research"
+            style={{ display: "grid", gap: 12 }}>
+            {[
+              ["Leveraged ETF Scanner", "/research/scanners/leveraged-etf/"],
+              ["TQQQ Historical Returns", "/tqqq-returns/"],
+              ["Explore Investment Research", "/research/"]
+            ].map(([label, href]) => (
+              <a key={href} href={href} style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 16,
+                padding: "16px 18px",
+                border: "1px solid #e2e8f0",
+                borderRadius: 12,
+                color: "#172033",
+                fontSize: 16,
+                fontWeight: 650,
+                textDecoration: "none",
+                minHeight: 56
+              }}>
+                <span>{label}</span>
+                <span aria-hidden="true" style={{ color: "#087BFA" }}>↗</span>
+              </a>
+            ))}
+          </nav>
+        </section>
+
         <footer style={{
           marginTop: 64,
           borderTop: "1px solid #e5e7eb",
