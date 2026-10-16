@@ -47,7 +47,7 @@ export default function LeveragedEtfScannerPage() {
       (direction === 'All' || f.direction === direction) &&
       (leverage === 'All' || String(f.leverage) === leverage) &&
       (category === 'All' || f.category === category)
-  }).sort((a,b) => sort === 'coverage' ? Number(Boolean(profiles[b.ticker]))-Number(Boolean(profiles[a.ticker])) || a.ticker.localeCompare(b.ticker) : sort === 'name' ? a.name.localeCompare(b.name) : sort === 'leverage' ? (b.leverage ?? -1)-(a.leverage ?? -1) || a.ticker.localeCompare(b.ticker) : a.ticker.localeCompare(b.ticker)), [search,direction,leverage,sort,category])
+  }).sort((a,b) => sort === 'coverage' ? Number(Boolean(profiles[b.ticker]) || b.ticker === 'SNXX')-Number(Boolean(profiles[a.ticker]) || a.ticker === 'SNXX') || a.ticker.localeCompare(b.ticker) : sort === 'name' ? a.name.localeCompare(b.name) : sort === 'leverage' ? (b.leverage ?? -1)-(a.leverage ?? -1) || a.ticker.localeCompare(b.ticker) : a.ticker.localeCompare(b.ticker)), [search,direction,leverage,sort,category])
   const visible = results.slice(0,visibleCount)
   const reset = () => {setSearch('');setDirection('All');setLeverage('All');setCategory('All');setSort('coverage');setDetails(null);setVisibleCount(30)}
   return <main className="tni-les">

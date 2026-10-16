@@ -1,6 +1,67 @@
 {
- "TQQQ":{"aumBillion":35.97,"expenseRatioPct":0.97,"avgVolumeMillion":48.71,"avgVolumePeriod":"10d","lastVolumeMillion":68.832,"lastVolumeDate":"2026-10-14","asOf":"2026-10-14","sources":["https://www.etfcentral.com/fund/TQQQ","https://www.schwab.wallst.com/Prospect/Research/etfs/summary.asp?symbol=TQQQ","https://www.financecharts.com/etfs/TQQQ/summary/volume-averages"]},
- "SOXL":{"aumBillion":21.85,"expenseRatioPct":0.75,"avgVolumeMillion":62.15,"avgVolumePeriod":"30d","lastVolumeMillion":104.827,"lastVolumeDate":"2026-10-14","asOf":"2026-10-14","sources":["https://stockanalysis.com/etf/soxl/","https://ycharts.com/companies/SOXL/average_volume_30","https://www.financecharts.com/etfs/SOXL/summary/volume"]},
- "NVDL":{"aumBillion":null,"expenseRatioPct":null,"avgVolumeMillion":null,"avgVolumePeriod":null,"lastVolumeMillion":8.477,"lastVolumeDate":"2026-10-14","asOf":"2026-10-14","sources":["https://www.financecharts.com/etfs/NVDL/summary/volume"]},
- "TSLL":{"aumBillion":3.78,"expenseRatioPct":0.83,"avgVolumeMillion":78.58,"avgVolumePeriod":"provider","lastVolumeMillion":null,"lastVolumeDate":null,"asOf":"2026-10-14","sources":["https://www.marketbeat.com/stocks/NASDAQ/TSLL/","https://ycharts.com/companies/TSLL/total_assets_under_management"]}
+  "TQQQ": {
+    "aumBillion": 35.97,
+    "expenseRatioPct": 0.97,
+    "avgVolumeMillion": 48.71,
+    "avgVolumePeriod": "10d",
+    "lastVolumeMillion": 68.832,
+    "lastVolumeDate": "2026-10-14",
+    "asOf": "2026-10-14",
+    "sources": [
+      "https://www.etfcentral.com/fund/TQQQ",
+      "https://www.schwab.wallst.com/Prospect/Research/etfs/summary.asp?symbol=TQQQ",
+      "https://www.financecharts.com/etfs/TQQQ/summary/volume-averages"
+    ]
+  },
+  "SOXL": {
+    "aumBillion": 21.85,
+    "expenseRatioPct": 0.75,
+    "avgVolumeMillion": 62.15,
+    "avgVolumePeriod": "30d",
+    "lastVolumeMillion": 104.827,
+    "lastVolumeDate": "2026-10-14",
+    "asOf": "2026-10-14",
+    "sources": [
+      "https://stockanalysis.com/etf/soxl/",
+      "https://ycharts.com/companies/SOXL/average_volume_30",
+      "https://www.financecharts.com/etfs/SOXL/summary/volume"
+    ]
+  },
+  "NVDL": {
+    "aumBillion": null,
+    "expenseRatioPct": null,
+    "avgVolumeMillion": null,
+    "avgVolumePeriod": null,
+    "lastVolumeMillion": 8.477,
+    "lastVolumeDate": "2026-10-14",
+    "asOf": "2026-10-14",
+    "sources": [
+      "https://www.financecharts.com/etfs/NVDL/summary/volume"
+    ]
+  },
+  "TSLL": {
+    "aumBillion": 3.78,
+    "expenseRatioPct": 0.83,
+    "avgVolumeMillion": 78.58,
+    "avgVolumePeriod": "provider",
+    "lastVolumeMillion": null,
+    "lastVolumeDate": null,
+    "asOf": "2026-10-14",
+    "sources": [
+      "https://www.marketbeat.com/stocks/NASDAQ/TSLL/",
+      "https://ycharts.com/companies/TSLL/total_assets_under_management"
+    ]
+  },
+  "SNXX": {
+    "aumBillion": 1.932884992,
+    "expenseRatioPct": null,
+    "avgVolumeMillion": 46.52807,
+    "avgVolumePeriod": "10d",
+    "lastVolumeMillion": 48.3912,
+    "lastVolumeDate": "2026-10-14",
+    "asOf": "2026-10-14",
+    "sources": [
+      "https://finance.yahoo.com/quote/SNXX/"
+    ]
+  }
 }
