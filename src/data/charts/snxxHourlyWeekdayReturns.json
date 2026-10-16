@@ -1,7 +1,7 @@
 {
   "ticker": "SNXX",
   "source": "Yahoo Finance 30-minute historical OHLC",
-  "generatedAt": "2026-10-16T01:28:54.766598-04:00",
+  "generatedAt": "2026-10-16T05:53:11.892015+00:00",
   "weekdays": {
     "Monday": {
       "sampleSize": 11,
