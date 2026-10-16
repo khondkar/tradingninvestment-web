@@ -1,0 +1,311 @@
+.ns26-page {
+  box-sizing: border-box;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+  color: #192b32;
+  background: #fff;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.ns26-page * { box-sizing: border-box; }
+
+.ns26-page a { color: #087965; text-underline-offset: 3px; }
+
+.ns26-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #687981;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ns26-hero { padding: 36px 0 24px; }
+
+.ns26-eyebrow {
+  color: #087965;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .13em;
+}
+
+.ns26-hero h1 {
+  max-width: 900px;
+  margin: 14px 0 18px;
+  font-size: clamp(32px, 6.5vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -.04em;
+}
+
+.ns26-deck {
+  max-width: 780px;
+  color: #536772;
+  font-size: clamp(18px, 2.5vw, 22px);
+  line-height: 1.6;
+}
+
+.ns26-byline {
+  margin-top: 22px;
+  color: #667780;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.ns26-page section { margin-top: 52px; }
+
+.ns26-page h2 {
+  margin: 0 0 20px;
+  font-size: clamp(25px, 4vw, 34px);
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+
+.ns26-page p {
+  max-width: 760px;
+  margin: 0 0 19px;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.ns26-snapshot {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.ns26-snapshot > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid #e1e9e6;
+  border-radius: 14px;
+  background: #f9fbfa;
+}
+
+.ns26-snapshot span { font-size: 13px; color: #5d6f77; }
+
+.ns26-snapshot strong {
+  color: #ba4545;
+  font-size: 32px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.04em;
+}
+
+.ns26-snapshot small { color: #687981; }
+
+.ns26-chart {
+  margin: 28px 0 36px;
+  padding: 18px 14px;
+  border: 1px solid #e1e9e6;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.ns26-chart figcaption {
+  margin-bottom: 22px;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.ns26-chart svg { display: block; width: 100%; height: auto; }
+
+.ns26-bars { display: grid; gap: 18px; }
+
+.ns26-bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 7px;
+  font-size: 13px;
+}
+
+.ns26-bar-label strong {
+  color: #a83d3d;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.ns26-track {
+  height: 11px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: #edf1f0;
+}
+
+.ns26-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #7a9c94;
+}
+
+.ns26-fill-soxl { background: #c44e4e; }
+
+.ns26-page .ns26-chart-note {
+  margin: 18px 0 0;
+  color: #687981;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.ns26-cta {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  max-width: 100%;
+  margin-top: 12px;
+  padding: 15px 19px;
+  border: 1px solid #bddad1;
+  border-radius: 12px;
+  background: #f1f8f5;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ns26-methodology {
+  padding-top: 26px;
+  border-top: 1px solid #dfe8e4;
+}
+
+@media (min-width: 700px) {
+  .ns26-page { padding: 34px 32px 100px; }
+  .ns26-snapshot { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .ns26-chart { padding: 28px; }
+  .ns26-page p { font-size: 19px; }
+  .ns26-bar-label { font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ns26-cta { transition: background .18s ease; }
+  .ns26-cta:hover { background: #e4f2eb; }
+}
+
+/* TNI Semiconductor Drawdown Research */
+.tni-chip-drawdowns {
+  margin: 36px auto;
+  padding: clamp(20px, 4vw, 40px);
+  background: #fff;
+  border: 1px solid #e5eaf0;
+  border-radius: 18px;
+  color: #10213a;
+}
+
+.tni-chip-drawdowns__eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #1267a3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.tni-chip-drawdowns__heading h2 {
+  margin: 0 0 12px;
+  font-size: clamp(23px, 3vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.tni-chip-drawdowns__heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.tni-chip-drawdowns__chart {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.tni-chip-drawdowns__row {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) 78px;
+  align-items: center;
+  gap: 12px;
+}
+
+.tni-chip-drawdowns__ticker {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tni-chip-drawdowns__track {
+  height: 19px;
+  background: #f1f4f8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tni-chip-drawdowns__bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ed7379, #c72536);
+  border-radius: 4px;
+}
+
+.tni-chip-drawdowns__value {
+  color: #b91c2c;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.tni-chip-drawdowns__source {
+  margin: 28px 0 0;
+  padding-top: 15px;
+  border-top: 1px solid #e8edf3;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .tni-chip-drawdowns {
+    margin: 24px 0;
+    padding: 20px 14px;
+    border-radius: 14px;
+  }
+
+  .tni-chip-drawdowns__row {
+    grid-template-columns: 43px minmax(0, 1fr) 68px;
+    gap: 8px;
+  }
+
+  .tni-chip-drawdowns__chart {
+    gap: 17px;
+  }
+
+  .tni-chip-drawdowns__track {
+    height: 16px;
+  }
+
+  .tni-chip-drawdowns__value {
+    font-size: 12px;
+  }
+}
+
+/* Mobile-first research hero chart */
+.ns26-hero-chart {
+  margin: 24px 0 32px;
+  width: 100%;
+}
+.ns26-hero-chart img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e5eaf0;
+  border-radius: 12px;
+}
+.ns26-hero-chart figcaption {
+  margin-top: 9px;
+  color: #68778e;
+  font-size: 12px;
+  line-height: 1.6;
+}

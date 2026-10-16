@@ -18,6 +18,7 @@ let LeveragedEtfScannerPage: typeof import('./pages/LeveragedEtfScannerPage')['d
 let JPMvsGSEarningsResearchPage: typeof import('./pages/JPMvsGSEarningsResearchPage')['default']
 let SPYDojiResearchPage: typeof import('./pages/SPYDojiResearchPage')['default']
 let MagicDojiPage: typeof import('./pages/MagicDojiPage')['default']
+let NasdaqSelloff2026Page: typeof import('./pages/NasdaqSelloff2026Page')['default']
 let StockMarketCrash1929Page: typeof import('./pages/StockMarketCrash1929Page')['default']
 let SP500ReturnsPage: typeof import('./pages/SP500ReturnsPage')['default']
 let AverageStockMarketReturnPage: typeof import('./pages/AverageStockMarketReturnPage')['default']
@@ -74,6 +75,7 @@ export async function prepareApp(pathname: string) {
   if (path === '/research/jpm-vs-gs-earnings-analysis') { JPMvsGSEarningsResearchPage = (await import('./pages/JPMvsGSEarningsResearchPage')).default; return }
   if (path === '/research/doji-candlestick-spy-26-year-study') { SPYDojiResearchPage = (await import('./pages/SPYDojiResearchPage')).default; return }
   if (path === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') { MagicDojiPage = (await import('./pages/MagicDojiPage')).default; return }
+  if (path === '/nasdaq-selloff-2026') { NasdaqSelloff2026Page = (await import('./pages/NasdaqSelloff2026Page')).default; return }
   if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
   if (path === '/stock-market-today/earnings-calendar') { StockMarketEarningsCalendarPage = (await import('./pages/StockMarketEarningsCalendarPage')).default; return }
   if (path === '/stock-market-today/sector-health') { StockMarketSectorHealthPage = (await import('./pages/StockMarketSectorHealthPage')).default; return }
@@ -960,6 +962,16 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   if (normalizedPath === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') {
     return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><MagicDojiPage /><Footer setPage={setPage} /></div>
   }
+  if (normalizedPath === '/nasdaq-selloff-2026') {
+    return (
+      <div className="site">
+        <Header pathname={pathname} page="research" setPage={setPage} />
+        <NasdaqSelloff2026Page />
+        <Footer setPage={setPage} />
+      </div>
+    )
+  }
+
   if (normalizedPath === '/stock-market-crash-of-1929') {
     return (
       <div className="site">

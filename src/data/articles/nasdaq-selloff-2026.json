@@ -1,0 +1,272 @@
+{
+  "as_of": "2026-10-16",
+  "source": "Yahoo Finance historical daily Close via yfinance",
+  "basis": "Unadjusted daily closing prices; not total returns",
+  "symbols": {
+    "nasdaq": "nasdaq-composite.csv",
+    "nasdaq100": "nasdaq-100.csv",
+    "sox": "phlx-semiconductor-index.csv",
+    "smh": "semiconductors-smh.csv",
+    "soxl": "leveraged-semiconductors-soxl.csv"
+  },
+  "summary": {
+    "nasdaq": {
+      "close": 26183.125,
+      "daily_return_pct": -1.9837,
+      "drawdown_from_2026_peak_pct": -5.1329,
+      "oct13_to_latest_pct": -3.754
+    },
+    "nasdaq100": {
+      "close": 29269.5117,
+      "daily_return_pct": -2.2251,
+      "drawdown_from_2026_peak_pct": -6.261,
+      "oct13_to_latest_pct": -4.2525
+    },
+    "sox": {
+      "close": 11258.7236,
+      "daily_return_pct": -2.7846,
+      "drawdown_from_2026_peak_pct": -23.0684,
+      "oct13_to_latest_pct": -7.7818
+    },
+    "smh": {
+      "close": 545.16,
+      "daily_return_pct": -2.4479,
+      "drawdown_from_2026_peak_pct": -18.5002,
+      "oct13_to_latest_pct": -7.3046
+    },
+    "soxl": {
+      "close": 97.16,
+      "daily_return_pct": -9.4923,
+      "drawdown_from_2026_peak_pct": -67.6962,
+      "oct13_to_latest_pct": -23.8379
+    }
+  },
+  "nasdaq_drawdown": [
+    {
+      "date": "2026-09-01",
+      "close": 26099.7695,
+      "drawdown_pct": -3.6692
+    },
+    {
+      "date": "2026-09-02",
+      "close": 26217.8301,
+      "drawdown_pct": -3.2335
+    },
+    {
+      "date": "2026-09-03",
+      "close": 26584.0605,
+      "drawdown_pct": -1.8818
+    },
+    {
+      "date": "2026-09-04",
+      "close": 26506.9902,
+      "drawdown_pct": -2.1662
+    },
+    {
+      "date": "2026-09-08",
+      "close": 26421.4102,
+      "drawdown_pct": -2.4821
+    },
+    {
+      "date": "2026-09-09",
+      "close": 26253.3398,
+      "drawdown_pct": -3.1024
+    },
+    {
+      "date": "2026-09-10",
+      "close": 26081.7207,
+      "drawdown_pct": -3.7358
+    },
+    {
+      "date": "2026-09-11",
+      "close": 26333.0391,
+      "drawdown_pct": -2.8082
+    },
+    {
+      "date": "2026-09-14",
+      "close": 26186.4102,
+      "drawdown_pct": -3.3494
+    },
+    {
+      "date": "2026-09-15",
+      "close": 25981.5703,
+      "drawdown_pct": -4.1055
+    },
+    {
+      "date": "2026-09-16",
+      "close": 25978.4297,
+      "drawdown_pct": -4.1171
+    },
+    {
+      "date": "2026-09-17",
+      "close": 26418.3008,
+      "drawdown_pct": -2.4935
+    },
+    {
+      "date": "2026-09-18",
+      "close": 26522.5391,
+      "drawdown_pct": -2.1088
+    },
+    {
+      "date": "2026-09-21",
+      "close": 27122.0898,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-09-22",
+      "close": 27244.2793,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-09-23",
+      "close": 26936.0391,
+      "drawdown_pct": -1.1314
+    },
+    {
+      "date": "2026-09-24",
+      "close": 26939.3691,
+      "drawdown_pct": -1.1192
+    },
+    {
+      "date": "2026-09-25",
+      "close": 27068.7207,
+      "drawdown_pct": -0.6444
+    },
+    {
+      "date": "2026-09-28",
+      "close": 26820.3809,
+      "drawdown_pct": -1.5559
+    },
+    {
+      "date": "2026-09-29",
+      "close": 26797.5391,
+      "drawdown_pct": -1.6398
+    },
+    {
+      "date": "2026-09-30",
+      "close": 26861.0605,
+      "drawdown_pct": -1.4066
+    },
+    {
+      "date": "2026-10-01",
+      "close": 26871.5996,
+      "drawdown_pct": -1.3679
+    },
+    {
+      "date": "2026-10-02",
+      "close": 27190.8594,
+      "drawdown_pct": -0.1961
+    },
+    {
+      "date": "2026-10-05",
+      "close": 27477.3105,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-10-06",
+      "close": 27599.7891,
+      "drawdown_pct": 0.0
+    },
+    {
+      "date": "2026-10-07",
+      "close": 27538.6895,
+      "drawdown_pct": -0.2214
+    },
+    {
+      "date": "2026-10-08",
+      "close": 27193.3398,
+      "drawdown_pct": -1.4727
+    },
+    {
+      "date": "2026-10-09",
+      "close": 27366.1699,
+      "drawdown_pct": -0.8465
+    },
+    {
+      "date": "2026-10-12",
+      "close": 27245.9004,
+      "drawdown_pct": -1.2822
+    },
+    {
+      "date": "2026-10-13",
+      "close": 27204.3809,
+      "drawdown_pct": -1.4326
+    },
+    {
+      "date": "2026-10-14",
+      "close": 26692.8691,
+      "drawdown_pct": -3.286
+    },
+    {
+      "date": "2026-10-15",
+      "close": 26713.0293,
+      "drawdown_pct": -3.2129
+    },
+    {
+      "date": "2026-10-16",
+      "close": 26183.125,
+      "drawdown_pct": -5.1329
+    }
+  ],
+  "october_comparison": [
+    {
+      "date": "2026-10-13",
+      "nasdaq": 100.0,
+      "nasdaq100": 100.0,
+      "sox": 100.0,
+      "smh": 100.0,
+      "soxl": 100.0
+    },
+    {
+      "date": "2026-10-14",
+      "nasdaq": 98.1197,
+      "nasdaq100": 97.9762,
+      "sox": 95.7047,
+      "smh": 96.0246,
+      "soxl": 86.6505
+    },
+    {
+      "date": "2026-10-15",
+      "nasdaq": 98.1939,
+      "nasdaq100": 97.9264,
+      "sox": 94.8596,
+      "smh": 95.0214,
+      "soxl": 84.1499
+    },
+    {
+      "date": "2026-10-16",
+      "nasdaq": 96.246,
+      "nasdaq100": 95.7475,
+      "sox": 92.2182,
+      "smh": 92.6954,
+      "soxl": 76.1621
+    }
+  ],
+  "historical_drawdowns": [
+    {
+      "label": "Dot-com bust",
+      "trough_date": "2002-10-09",
+      "max_drawdown_pct": -77.93
+    },
+    {
+      "label": "Global financial crisis",
+      "trough_date": "2009-03-09",
+      "max_drawdown_pct": -74.87
+    },
+    {
+      "label": "COVID crash",
+      "trough_date": "2020-03-23",
+      "max_drawdown_pct": -30.12
+    },
+    {
+      "label": "2022 bear market",
+      "trough_date": "2022-12-28",
+      "max_drawdown_pct": -36.4
+    },
+    {
+      "label": "2026 selloff",
+      "trough_date": "2026-03-30",
+      "max_drawdown_pct": -13.21
+    }
+  ]
+}

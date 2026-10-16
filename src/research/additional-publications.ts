@@ -18,6 +18,18 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'nasdaq-selloff-2026',
+    path: '/nasdaq-selloff-2026/',
+    title: 'Nasdaq Selloff 2026: AI Stocks, Semiconductor Risk and SOXL',
+    description: 'Original TNI research on the 2026 Nasdaq selloff, semiconductor stock drawdowns, SOXL daily leverage risk and historical market corrections.',
+    name: 'Nasdaq Composite',
+    symbol: 'IXIC',
+    image: '/images/social/research/nasdaq-selloff-2026-tni-horizontal.svg',
+    categories: ['index', 'nasdaq', 'etf', 'leveraged-etf', 'market-history'],
+    kind: 'article',
+    publishedAt: '2026-10-16',
+  },
+  {
     slug: 'snxx-etf',
     path: '/snxx-etf/',
     title: 'SNXX Leveraged ETF: Performance, Returns & Risk vs. SNDK',

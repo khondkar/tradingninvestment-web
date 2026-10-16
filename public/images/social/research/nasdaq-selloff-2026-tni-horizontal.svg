@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#ffffff"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="54" y="48" fill="#0b1c36" font-size="32" font-weight="800">TNI</text>
+<line x1="137" y1="20" x2="137" y2="54" stroke="#8390a3" stroke-width="2"/>
+<text x="155" y="46" fill="#0b1c36" font-size="21" font-weight="700" letter-spacing="3">RESEARCH</text>
+<text x="54" y="112" fill="#0b1c36" font-size="44" font-weight="800">Nasdaq Selloff 2026</text>
+<text x="55" y="151" fill="#1267a3" font-size="23" font-weight="700">The Hidden Damage Beneath the Index</text>
+<text x="55" y="181" fill="#68778e" font-size="14">Drawdown from each asset’s own 2026 closing high</text>
+<text x="1145" y="181" text-anchor="end" fill="#68778e" font-size="13">OCT 16, 2026</text>
+<text x="55" y="246" fill="#14243c" font-size="19" font-weight="700">Nasdaq Composite</text>
+<rect x="305" y="224" width="685" height="29" rx="5" fill="#edf1f6"/>
+<rect x="305" y="224" width="50.23" height="29" rx="5" fill="#df5a66"/>
+<text x="1138" y="246" text-anchor="end" fill="#b51f32" font-size="21" font-weight="800">−5.13%</text>
+<text x="55" y="311" fill="#14243c" font-size="19" font-weight="700">Nasdaq-100</text>
+<rect x="305" y="289" width="685" height="29" rx="5" fill="#edf1f6"/>
+<rect x="305" y="289" width="61.27" height="29" rx="5" fill="#df5a66"/>
+<text x="1138" y="311" text-anchor="end" fill="#b51f32" font-size="21" font-weight="800">−6.26%</text>
+<text x="55" y="376" fill="#14243c" font-size="19" font-weight="700">PHLX Semiconductor</text>
+<rect x="305" y="354" width="685" height="29" rx="5" fill="#edf1f6"/>
+<rect x="305" y="354" width="225.74" height="29" rx="5" fill="#df5a66"/>
+<text x="1138" y="376" text-anchor="end" fill="#b51f32" font-size="21" font-weight="800">−23.07%</text>
+<text x="55" y="441" fill="#14243c" font-size="19" font-weight="700">SMH</text>
+<rect x="305" y="419" width="685" height="29" rx="5" fill="#edf1f6"/>
+<rect x="305" y="419" width="181.04" height="29" rx="5" fill="#df5a66"/>
+<text x="1138" y="441" text-anchor="end" fill="#b51f32" font-size="21" font-weight="800">−18.50%</text>
+<text x="55" y="506" fill="#14243c" font-size="19" font-weight="700">SOXL</text>
+<rect x="305" y="484" width="685" height="29" rx="5" fill="#edf1f6"/>
+<rect x="305" y="484" width="662.46" height="29" rx="5" fill="#b51f32"/>
+<text x="1138" y="506" text-anchor="end" fill="#b51f32" font-size="21" font-weight="800">−67.70%</text>
+<text x="54" y="566" fill="#69788e" font-size="12">Source: Yahoo Finance closing prices · TNI calculations · Individual peak dates vary</text>
+<rect x="0" y="584" width="1200" height="46" fill="#0b1c36"/>
+<text x="54" y="613" fill="#ffffff" font-size="13" font-weight="700" letter-spacing="2">TRADINGNINVESTMENT.COM</text>
+<text x="1145" y="613" text-anchor="end" fill="#ffffff" font-size="12" letter-spacing="2">MARKETS  |  DATA  |  RESEARCH  |  INTELLIGENCE</text>
+</g>
+</svg>
