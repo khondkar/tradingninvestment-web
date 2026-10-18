@@ -9,3 +9,14 @@
 @media(min-width:600px){.tni-hm-movers{grid-template-columns:1fr 1fr;gap:16px}.tni-hm-mover{padding:16px 18px}.tni-hm-promotion{flex-direction:row;justify-content:space-between;align-items:center}.tni-hm-controls label{width:auto}.tni-hm-main h1{font-size:34px}.tni-hm-benchmark{font-size:13px}.tni-hm-section-head h2{font-size:22px}}
 @media(min-width:1000px){.tni-hm-layout{display:grid;grid-template-columns:225px minmax(0,1fr)}.tni-hm-sidebar{display:block;background:#f7f9fc;border-right:1px solid #e0e7ee;padding:25px 12px}.tni-hm-sidebar>p{font-size:11px;letter-spacing:.07em;font-weight:800;color:#697b90;margin:0 12px 14px}.tni-hm-sidebar a{display:block;padding:12px;border-radius:9px;margin:3px 0;font-size:14px;color:#2a3f56}.tni-hm-sidebar a:hover{background:#e8f0fb}.tni-hm-sidebar a[aria-current]{background:#dcecff;color:#075fc9;font-weight:750}.tni-hm-main{padding:26px 28px 70px}.tni-hm-mover h2{font-size:19px}}
 .tni-hm-layout.is-expanded{grid-template-columns:1fr}.tni-hm-layout.is-expanded .tni-hm-sidebar{display:none}.tni-hm-layout.is-expanded .tni-hm-main{max-width:none}
+
+/* Existing promotion, strengthened without adding a second placement. */
+.tni-hm-promotion.tni-hm-tradingview-cta{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:22px 18px;border:2px solid #9ac3f5;border-left:6px solid #0756c9;border-radius:14px;background:linear-gradient(120deg,#eff6ff,#e0edff);color:#102c4d;box-shadow:0 6px 18px #0756c912}
+.tni-tv-eyebrow{display:block;color:#0750a8;font-size:11px;font-weight:800;letter-spacing:.07em;line-height:1.5;margin-bottom:7px}
+.tni-hm-tradingview-cta h2{font-size:23px;line-height:1.25;font-weight:850;color:#102c4d;margin:0 0 8px}
+.tni-hm-tradingview-cta p{font-size:15px;line-height:1.5;color:#294866;margin:0}
+.tni-hm-promotion.tni-hm-tradingview-cta>a{display:flex;justify-content:center;align-items:center;gap:12px;min-height:52px;box-sizing:border-box;padding:14px 18px;background:#0756c9;color:#fff;font-size:17px;font-weight:800;border-radius:9px;text-decoration:none;white-space:normal;line-height:1.4;text-align:center;box-shadow:0 3px 8px #0756c925}
+.tni-hm-promotion.tni-hm-tradingview-cta>a:hover{background:#06449e}
+.tni-hm-promotion.tni-hm-tradingview-cta>a:focus-visible{outline:3px solid #102c4d;outline-offset:4px}
+.tni-hm-promotion .tni-tv-disclosure{font-size:13px;color:#3d536d;line-height:1.5;margin:0}
+@media(min-width:750px){.tni-hm-promotion.tni-hm-tradingview-cta{grid-template-columns:minmax(0,1fr) auto;padding:24px;gap:14px 24px}.tni-hm-tradingview-cta h2{font-size:27px}.tni-hm-tradingview-cta .tni-tv-disclosure{grid-column:1/-1}}

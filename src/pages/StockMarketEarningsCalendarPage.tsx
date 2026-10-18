@@ -1,5 +1,5 @@
-import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
 import { useMarketTodaySnapshot } from '../hooks/useMarketTodaySnapshot'
+import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
 import { MarketPageLayout } from '../components/market/MarketSectionNavigation'
 import EarningsCalendar from '../components/market/EarningsCalendar'
 

@@ -1,5 +1,5 @@
-import MarketSectionNavigation from '../components/market/MarketSectionNavigation'
 import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
+import MarketSectionNavigation from '../components/market/MarketSectionNavigation'
 import { useMemo, useRef, useState, useEffect } from 'react'
 import SP500DailyHeatmap, { StockDetails, formatReturn } from '../components/market/SP500DailyHeatmap'
 import { useMarketTodaySnapshot, type MarketRecord } from '../hooks/useMarketTodaySnapshot'
@@ -39,7 +39,11 @@ export default function StockMarketHeatmapPage() {
       <p className="tni-hm-subtitle">Find the market’s biggest winners and losers in 10 seconds, then explore stocks by sector.</p>
       <p className="tni-hm-status">Snapshot: {snapshot.generated_at_et ? new Date(snapshot.generated_at_et).toLocaleString('en-US', {timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'}) + ' ET' : 'Unavailable'} · {stocks.length} stocks · Data may be delayed</p>
       <div className="tni-hm-movers">{movers('Top 5 Gainers', gainers)}{movers('Top 5 Losers', losers, true)}</div>
-      <section className="tni-hm-promotion"><div><strong>Advanced charts with TradingView ↗</strong><small>Explore technical indicators and advanced charting.</small></div><a href="https://www.tradingview.com/chart/" target="_blank" rel="noopener noreferrer">Explore charts ↗</a></section>
+      <section className="tni-hm-promotion tni-hm-tradingview-cta" aria-labelledby="tni-tradingview-title">
+        <div className="tni-tv-copy"><span className="tni-tv-eyebrow">GO DEEPER WITH ADVANCED CHARTS</span><h2 id="tni-tradingview-title">See the move. Explore the chart.</h2><p>Explore technical indicators and advanced charts on TradingView.</p></div>
+        <a href="https://www.tradingview.com/?aff_id=1172820" target="_blank" rel="sponsored noopener noreferrer">Analyze on TradingView <span aria-hidden="true">↗</span></a>
+        <small className="tni-tv-disclosure">Affiliate link—we may earn a commission if you purchase.</small>
+      </section>
       <div className="tni-hm-section-head"><h2>Explore the Heatmap</h2><span>Daily performance</span></div>
       <div className="tni-hm-controls"><label>Sector<select value={sector} onChange={e => setSector(e.target.value)}><option value="all">All {sectors.length} sectors</option>{sectors.map(s => <option key={s}>{s}</option>)}</select></label><span className="tni-hm-period" aria-label="Timeframe: one day">1D</span><button type="button" aria-pressed={expanded} onClick={() => setExpanded(!expanded)}>{expanded ? '↙ Exit expanded view' : '⛶ Expand heatmap'}</button></div>
       <SP500DailyHeatmap stocks={stocks} sector={sector} onSelect={setSelected} />

@@ -1,5 +1,5 @@
-import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
 import { useMarketTodaySnapshot } from '../hooks/useMarketTodaySnapshot'
+import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
 import { MarketPageLayout } from '../components/market/MarketSectionNavigation'
 import { lazy, Suspense, useMemo, useState } from 'react'
 import candidates from './leveraged-etf-candidates.json'

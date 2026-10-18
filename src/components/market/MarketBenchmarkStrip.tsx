@@ -3,7 +3,6 @@ import './MarketBenchmarkStrip.css'
 
 export default function MarketBenchmarkStrip({benchmarks}: {benchmarks: Benchmark[]}) {
   return <section className="tni-benchmark-strip" aria-label="Major market benchmarks" tabIndex={0}><div className="tni-benchmark-strip-row">
-    <span className="tni-benchmark-strip-label">MAJOR MARKET BENCHMARKS</span>
     {['SPY', 'DIA', 'QQQ', 'IWM', 'VIX'].map(symbol => {
       const b = benchmarks.find(b => b.symbol === symbol || (symbol === 'VIX' && b.symbol === '^VIX'))
       const price = b?.available && Number.isFinite(b.price) ? b!.price!.toFixed(2) : '—'

@@ -256,3 +256,9 @@
  .site .orbit-page .tni-heatmap-preview-tile>b{font-size:20px}
  .site .orbit-page .tni-heatmap-preview-action{font-size:17px}
 }
+
+.site .orbit-page .tni-heatmap-sector-groups{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.site .orbit-page .tni-heatmap-sector-group{display:flex;flex-direction:column;gap:8px;min-width:0}
+.site .orbit-page .tni-heatmap-group-label{font-size:14px;font-weight:800;color:#173451;line-height:1.4}
+.site .orbit-page .tni-heatmap-sector-group .tni-heatmap-preview-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(min-width:800px){.site .orbit-page .tni-heatmap-sector-groups{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
