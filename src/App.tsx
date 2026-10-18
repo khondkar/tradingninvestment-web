@@ -1,3 +1,5 @@
+import TradingLinks from './components/trading/TradingLinks'
+import tradingRoutes from './components/trading/routes.json'
 import TniKitSubscriptionPopup from './components/subscription/TniKitSubscriptionPopup'
 import { useState } from 'react'
 import { publishedAnnualReturnsResearchRegistry } from './research/annual-returns/registry'
@@ -30,6 +32,7 @@ let SP500MonthlyReturnsPage: typeof import('./pages/SP500MonthlyReturnsPage')['d
 let SP500DrawdownsPage: typeof import('./pages/SP500DrawdownsPage')['default']
 let NVDAReturnsPage: typeof import('./pages/NVDAReturnsPage')['default']
 let MSFTReturnsPage: typeof import('./pages/MSFTReturnsPage')['default']
+let TradingPage: typeof import('./pages/TradingPage')['default']
 let StockMarketTodayPage: typeof import('./pages/StockMarketTodayPage')['default']
 let StockMarketHeatmapPage: typeof import('./pages/StockMarketHeatmapPage')['default']
 let StockMarketSectorHealthPage: typeof import('./pages/StockMarketSectorHealthPage')['default']
@@ -46,6 +49,7 @@ let SnxxResearchPage: typeof import('./pages/SnxxResearchPage')['default']
 
 export async function prepareApp(pathname: string) {
   const path = pathname.replace(/\/+$/, '') || '/'
+  if (tradingRoutes.some(route => route.path === path + '/')) { TradingPage = (await import('./pages/TradingPage')).default; return }
 
   // Route CSS that is not required by annual-return article first paint.
   if (path === '/') {
@@ -132,7 +136,7 @@ export async function prepareApp(pathname: string) {
    TNI PUBLIC WEBSITE — PAGE TYPES
    ========================================================================== */
 
-type PageName = 'research' | 'market' | 'articles' | 'about'
+type PageName = 'research' | 'market' | 'articles' | 'about' | 'trading'
 
 const publishedResearchRegistry = [
   ...publishedAnnualReturnsResearchRegistry.map((entry) => ({
@@ -271,6 +275,11 @@ function Header({
             </nav>
           </details>
 
+          <details className="tni-market-dropdown" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
+            <summary className={page === 'trading' ? 'active' : ''}>Trading <span aria-hidden="true">⌄</span></summary>
+            <nav className="tni-market-dropdown-panel" aria-label="Trading destinations"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /></nav>
+          </details>
+
           <button
             type="button"
             className={page === 'about' ? 'active' : ''}
@@ -326,6 +335,7 @@ function Header({
                 <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
               </div>
             </details>
+            <details className="tni-mobile-research-group" open={page === 'trading' || undefined}><summary>Trading <span aria-hidden="true">⌄</span></summary><div className="tni-mobile-research-links"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /></div></details>
             <a href="/about/">About</a>
             <button type="button" onClick={shareCurrentPage}>Share this page</button>
             <a className="tni-mobile-launch" href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer">Launch TNI <span aria-hidden="true">↗</span></a>
@@ -1039,6 +1049,9 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   // TNI STOCK MARKET TODAY — LIVE MARKET DASHBOARD
   // Canonical URL: /stock-market-today/
   // ============================================================================
+
+  const tradingRoute = tradingRoutes.find(route => route.path === normalizedPath + '/')
+  if (tradingRoute) return <div className="site"><Header pathname={pathname} page="trading" setPage={setPage} /><TradingPage path={tradingRoute.path} /><Footer setPage={setPage} /></div>
 
   if (normalizedPath === '/stock-market-today/earnings-calendar') {
     return (

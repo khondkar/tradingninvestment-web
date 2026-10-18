@@ -3,6 +3,7 @@ import { researchItems } from '../../research/discovery'
 import './HomeTop.css'
 
 const tools = [
+  {title: 'Trading — Strategies, Patterns & Tools', path: '/trading/'},
   {title: 'Stock Market Today', path: '/stock-market-today/'},
   {title: 'S&P 500 Heatmap', path: '/stock-market-today/heatmap/'},
   {title: 'Sector Health', path: '/stock-market-today/sector-health/'},

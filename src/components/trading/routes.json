@@ -1,0 +1,11 @@
+[
+ {"path":"/trading/","title":"Trading","description":"Trading strategies, candlestick patterns, original research, trading tools and brokerage guides."},
+ {"path":"/trading/strategies/","title":"Trading Strategies","description":"Explore every published guide and study in Trading & Technical Analysis."},
+ {"path":"/trading/candlestick-patterns/","title":"Candlestick Patterns","description":"Explore the complete published collection of candlestick guides and research."},
+ {"path":"/trading/research/","title":"Trading Research","description":"Original trading research, historical evidence and transparent methodology."},
+ {"path":"/trading/tools/","title":"Trading Tools","description":"Scan and compare leveraged ETFs, and explore stock market performance."},
+ {"path":"/trading/brokerage/","title":"Brokerage","description":"Explore regular brokerage, options trading brokerage and funded account categories."},
+ {"path":"/trading/brokerage/regular/","title":"Regular Brokerage","description":"Stock and ETF brokerage comparison coverage."},
+ {"path":"/trading/brokerage/options/","title":"Options Trading Brokerage","description":"Options platform and brokerage comparison coverage."},
+ {"path":"/trading/brokerage/funded-accounts/","title":"Funded Accounts","description":"Funded trading account comparison coverage."}
+]

@@ -28,6 +28,7 @@ const paths = [
   '/average-stock-market-return/',
   '/snxx-etf/',
   ...marketTodayPaths,
+  ...JSON.parse(fs.readFileSync(path.join(root, 'src/components/trading/routes.json'), 'utf8')).map(route => route.path),
   ...researchItems.map((item) => item.path),
   ...researchHubs.map((hub) => hub.path),
 ]
