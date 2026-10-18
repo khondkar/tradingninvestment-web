@@ -1,0 +1,289 @@
+{
+  "symbol": "SNDK",
+  "ticker": "SNDK",
+  "name": "Sandisk Corporation",
+  "metric": "monthly_return_pct",
+  "return_type": "price_return",
+  "source": "Yahoo Finance — SNDK",
+  "methodology": "Calendar-month price return calculated from the final closing price of each month relative to the final closing price of the previous month. Dividends are excluded. The current month is month-to-date through the latest available close.",
+  "range": {
+    "start_year": 2026,
+    "start_month": 1,
+    "end_year": 2026,
+    "end_month": 10,
+    "observations": 10
+  },
+  "current_month": {
+    "year": 2026,
+    "month": 10,
+    "month_name": "October",
+    "label": "October 2026 MTD",
+    "return_pct": -21.1832,
+    "through_date": "2026-10-15"
+  },
+  "current_month_risk": null,
+  "leaders": {
+    "highest_positive_frequency": {
+      "month_name": "January",
+      "positive_pct": 100.0,
+      "positive_count": 1,
+      "negative_count": 0
+    },
+    "highest_negative_frequency": {
+      "month_name": "March",
+      "negative_pct": 100.0,
+      "negative_count": 1,
+      "positive_count": 0
+    },
+    "highest_average_return": {
+      "month_name": "January",
+      "average_return_pct": 142.7542
+    },
+    "lowest_average_return": {
+      "month_name": "July",
+      "average_return_pct": -46.5711
+    }
+  },
+  "month_statistics": [
+    {
+      "month": 1,
+      "month_name": "January",
+      "observations": 1,
+      "positive_count": 1,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": 100.0,
+      "negative_pct": 0.0,
+      "average_return_pct": 142.7542,
+      "median_return_pct": 142.7542,
+      "best_return_pct": 142.7542,
+      "worst_return_pct": 142.7542
+    },
+    {
+      "month": 2,
+      "month_name": "February",
+      "observations": 1,
+      "positive_count": 1,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": 100.0,
+      "negative_pct": 0.0,
+      "average_return_pct": 10.2577,
+      "median_return_pct": 10.2577,
+      "best_return_pct": 10.2577,
+      "worst_return_pct": 10.2577
+    },
+    {
+      "month": 3,
+      "month_name": "March",
+      "observations": 1,
+      "positive_count": 0,
+      "negative_count": 1,
+      "flat_count": 0,
+      "positive_pct": 0.0,
+      "negative_pct": 100.0,
+      "average_return_pct": -0.0031,
+      "median_return_pct": -0.0031,
+      "best_return_pct": -0.0031,
+      "worst_return_pct": -0.0031
+    },
+    {
+      "month": 4,
+      "month_name": "April",
+      "observations": 1,
+      "positive_count": 1,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": 100.0,
+      "negative_pct": 0.0,
+      "average_return_pct": 72.5863,
+      "median_return_pct": 72.5863,
+      "best_return_pct": 72.5863,
+      "worst_return_pct": 72.5863
+    },
+    {
+      "month": 5,
+      "month_name": "May",
+      "observations": 1,
+      "positive_count": 1,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": 100.0,
+      "negative_pct": 0.0,
+      "average_return_pct": 54.5795,
+      "median_return_pct": 54.5795,
+      "best_return_pct": 54.5795,
+      "worst_return_pct": 54.5795
+    },
+    {
+      "month": 6,
+      "month_name": "June",
+      "observations": 1,
+      "positive_count": 1,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": 100.0,
+      "negative_pct": 0.0,
+      "average_return_pct": 34.1449,
+      "median_return_pct": 34.1449,
+      "best_return_pct": 34.1449,
+      "worst_return_pct": 34.1449
+    },
+    {
+      "month": 7,
+      "month_name": "July",
+      "observations": 1,
+      "positive_count": 0,
+      "negative_count": 1,
+      "flat_count": 0,
+      "positive_pct": 0.0,
+      "negative_pct": 100.0,
+      "average_return_pct": -46.5711,
+      "median_return_pct": -46.5711,
+      "best_return_pct": -46.5711,
+      "worst_return_pct": -46.5711
+    },
+    {
+      "month": 8,
+      "month_name": "August",
+      "observations": 1,
+      "positive_count": 1,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": 100.0,
+      "negative_pct": 0.0,
+      "average_return_pct": 28.9645,
+      "median_return_pct": 28.9645,
+      "best_return_pct": 28.9645,
+      "worst_return_pct": 28.9645
+    },
+    {
+      "month": 9,
+      "month_name": "September",
+      "observations": 1,
+      "positive_count": 1,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": 100.0,
+      "negative_pct": 0.0,
+      "average_return_pct": 11.0545,
+      "median_return_pct": 11.0545,
+      "best_return_pct": 11.0545,
+      "worst_return_pct": 11.0545
+    },
+    {
+      "month": 10,
+      "month_name": "October",
+      "observations": 0,
+      "positive_count": 0,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": null,
+      "negative_pct": null,
+      "average_return_pct": null,
+      "median_return_pct": null,
+      "best_return_pct": null,
+      "worst_return_pct": null
+    },
+    {
+      "month": 11,
+      "month_name": "November",
+      "observations": 0,
+      "positive_count": 0,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": null,
+      "negative_pct": null,
+      "average_return_pct": null,
+      "median_return_pct": null,
+      "best_return_pct": null,
+      "worst_return_pct": null
+    },
+    {
+      "month": 12,
+      "month_name": "December",
+      "observations": 0,
+      "positive_count": 0,
+      "negative_count": 0,
+      "flat_count": 0,
+      "positive_pct": null,
+      "negative_pct": null,
+      "average_return_pct": null,
+      "median_return_pct": null,
+      "best_return_pct": null,
+      "worst_return_pct": null
+    }
+  ],
+  "data": [
+    {
+      "year": 2026,
+      "month": 1,
+      "month_name": "January",
+      "value": 142.7542,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "month_name": "February",
+      "value": 10.2577,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "month_name": "March",
+      "value": -0.0031,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "month_name": "April",
+      "value": 72.5863,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "month_name": "May",
+      "value": 54.5795,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "month_name": "June",
+      "value": 34.1449,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 7,
+      "month_name": "July",
+      "value": -46.5711,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "month_name": "August",
+      "value": 28.9645,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 9,
+      "month_name": "September",
+      "value": 11.0545,
+      "status": "positive"
+    },
+    {
+      "year": 2026,
+      "month": 10,
+      "month_name": "October",
+      "value": -21.1832,
+      "status": "negative"
+    }
+  ]
+}

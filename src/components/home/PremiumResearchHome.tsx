@@ -1,5 +1,7 @@
 import { researchItems } from '../../research/discovery'
 import './EditorialHome.css'
+import './HomeTop.css'
+import { HomeGlobe, HomeIcon } from './HomeVisuals'
 
 const citations = [
   { name: 'Florida State University', detail: 'Law Review', logo: '/images/citations/fsu.svg', logoClass: 'fsu', href: 'https://ir.law.fsu.edu/lr/vol46/iss4/3/' },
@@ -20,29 +22,46 @@ const more = researchItems.filter(item => item.homepagePlacement === 'regular' |
 
 export default function PremiumResearchHome() {
   return <main className="tni-home tni-editorial" id="top">
-    <section className="editorial-hero editorial-wrap">
-      <p className="editorial-eyebrow">STOCK MARKET RESEARCH &amp; INVESTMENT INTELLIGENCE</p>
-      <h1>Understand the market.<br />Go further.</h1>
-      <p className="editorial-deck">Data. Evidence. Research. Decision.</p>
-      <div className="editorial-hero-links">
-        <a className="editorial-button" href="/research/">Explore research <span aria-hidden="true">↗</span></a>
-        <a className="editorial-product-link" href="https://app.tradingninvestment.com/live/news">Explore TNI Intelligence <span aria-hidden="true">↗</span></a>
-      </div>
+    <div className="tni-home-hero-backdrop"><HomeGlobe /></div>
+    <section className="tni-home-intro editorial-wrap">
+      <p className="tni-home-intro-tagline">TRADING · INVESTMENT · RESEARCH · INTELLIGENCE</p>
+      <h1>Understand the Market.<br />Invest with <span>Intelligence.</span></h1>
+      <p className="tni-home-intro-description">Independent financial research, historical market data, and quantitative intelligence.</p>
     </section>
     <div className="editorial-wrap">
-      <a className="editorial-market" href="/stock-market-today/">
-        <span><strong>Stock Market Today</strong><small>Your daily market perspective</small></span>
-        <span aria-hidden="true">→</span>
-      </a>
-      <section className="editorial-trust" aria-labelledby="editorial-citations">
-        <h2 id="editorial-citations">Cited &amp; referenced by</h2>
-        <div className="editorial-citations">{citations.map(citation => <a key={citation.name} href={citation.href} target="_blank" rel="noreferrer">
-          <img src={citation.logo} alt="" width="44" height="36" loading="lazy" decoding="async" />
-          <span><strong>{citation.name}</strong><small>{citation.detail}</small></span>
-        </a>)}</div>
-        <p>References are not endorsements.</p>
-        <a className="editorial-link" href="https://app.tradingninvestment.com/research/citations">Explore all citations ↗</a>
+      <div className="tni-home-feature-stack">
+        <section className="tni-home-feature tni-home-feature-intelligence">
+          <div className="tni-home-feature-icon"><HomeIcon kind="brain" /></div><div className="tni-home-feature-label">TNI Intelligence</div>
+          <h2>Smarter market decisions start here.</h2>
+          <p>Explore quantitative signals, AI-powered research, and market intelligence.</p>
+          <a href="https://app.tradingninvestment.com/live/news">Launch TNI <span aria-hidden="true">→</span></a>
+        </section>
+        <section className="tni-home-feature tni-home-feature-market">
+          <div className="tni-home-feature-icon"><HomeIcon kind="market" /></div><div className="tni-home-feature-label">Stock Market Today</div>
+          <h2>See what’s moving the market.</h2>
+          <p>Follow market benchmarks, sector performance, heatmaps, and earnings developments.</p>
+          <a href="/stock-market-today/">Explore Stock Market Today <span aria-hidden="true">↗</span></a>
+        </section>
+        <section className="tni-home-citations" aria-labelledby="editorial-citations">
+          <div className="tni-home-citations-icon"><HomeIcon kind="cap" /></div><h2 id="editorial-citations">Cited &amp; Referenced By</h2>
+          <p>Historical market research referenced by academic, publication, and industry sources.</p>
+          <div className="tni-home-citation-links">{citations.map(citation => <a key={citation.name} href={citation.href} target="_blank" rel="noopener noreferrer">
+            <img src={citation.logo} alt="" width="80" height="64" loading="lazy" decoding="async" />
+            <span><strong>{citation.name}</strong><small>{citation.detail}</small></span>
+          </a>)}</div>
+          <div className="tni-home-citations-bottom"><small>References are not endorsements.</small><a href="https://app.tradingninvestment.com/research/citations">Explore all citations ↗</a></div>
+        </section>
+      </div>
+      <section className="tni-home-explore" aria-labelledby="tni-home-explore-title">
+        <h2 id="tni-home-explore-title">Explore TradingNInvestment</h2>
+        <div>{([
+          ['market','Market Today','/stock-market-today/','Benchmarks, sectors, and market breadth.','Explore market'],
+          ['grid','S&P 500 Heatmap','/stock-market-today/heatmap/','See winners, losers, and sector moves.','View heatmap'],
+          ['book','Research','/research/','Original studies and historical market data.','Read research'],
+          ['search','ETF Scanner','/research/scanners/leveraged-etf/','Find and compare leveraged ETFs.','Open scanner'],
+        ] as const).map(([icon,label,href,description,cta]) => <a key={href} href={href} className={`tni-explore-card tni-explore-${icon}`}><div className="tni-explore-thumbnail" aria-hidden="true"><HomeIcon kind={icon}/></div><strong>{label}</strong><p>{description}</p><span className="tni-explore-cta">{cta} <span aria-hidden="true">→</span></span></a>)}</div>
       </section>
+      <h2 className="tni-home-featured-heading">Featured Research</h2>
       <section id="featured-research" className="editorial-studies" aria-label="Featured research">
         {lead.map(item => {
           const doji = item.path === priorities[0]

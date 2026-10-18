@@ -1,34 +1,16 @@
+import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
+import { useMarketTodaySnapshot } from '../hooks/useMarketTodaySnapshot'
+import { MarketPageLayout } from '../components/market/MarketSectionNavigation'
 import SectorHealthBoard from '../components/market/SectorHealthBoard'
 
 import '../components/market/StockMarketToday.css'
 
 export default function StockMarketSectorHealthPage() {
+  const marketSnapshot = useMarketTodaySnapshot()
   return (
-    <main className="market-today-page">
-      <nav
-        className="market-today-subnav"
-        aria-label="Stock Market Today sections"
-      >
-        <a href="/stock-market-today/">
-          Overview
-        </a>
+    <MarketPageLayout active="/stock-market-today/sector-health/"><main className="market-today-page">
+      <MarketBenchmarkStrip benchmarks={marketSnapshot.benchmarks} />
 
-        <a href="/stock-market-today/heatmap/">
-          Heatmap
-        </a>
-
-        <a
-          href="/stock-market-today/sector-health/"
-          className="active"
-          aria-current="page"
-        >
-          Sector Health
-        </a>
-
-        <a href="/stock-market-today/earnings-calendar/">
-          Earnings Calendar
-        </a>
-      </nav>
 
       <section className="market-today-hero">
         <span className="market-today-eyebrow">
@@ -85,6 +67,6 @@ export default function StockMarketSectorHealthPage() {
         </p>
       </section>
 
-    </main>
+    </main></MarketPageLayout>
   )
 }

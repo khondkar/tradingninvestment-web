@@ -1,3 +1,6 @@
+import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
+import { useMarketTodaySnapshot } from '../hooks/useMarketTodaySnapshot'
+import { MarketPageLayout } from '../components/market/MarketSectionNavigation'
 import { lazy, Suspense, useMemo, useState } from 'react'
 import candidates from './leveraged-etf-candidates.json'
 import AllLeveragedEtfsTable from './AllLeveragedEtfsTable'
@@ -36,6 +39,7 @@ const ScannerMetrics = ({ ticker }: { ticker: string }) => {
 }
 
 export default function LeveragedEtfScannerPage() {
+  const marketSnapshot = useMarketTodaySnapshot()
   const [selected, setSelected] = useState<string[]>([])
   const [comparing, setComparing] = useState(false)
   const toggleCompare = (ticker: string) => setSelected(current => current.includes(ticker) ? current.filter(t => t !== ticker) : current.length < 4 ? [...current, ticker] : current)
@@ -56,7 +60,8 @@ export default function LeveragedEtfScannerPage() {
   }).sort((a,b) => sort === 'coverage' ? Number(Boolean(profiles[b.ticker]) || b.ticker === 'SNXX')-Number(Boolean(profiles[a.ticker]) || a.ticker === 'SNXX') || a.ticker.localeCompare(b.ticker) : sort === 'name' ? a.name.localeCompare(b.name) : sort === 'leverage' ? (b.leverage ?? -1)-(a.leverage ?? -1) || a.ticker.localeCompare(b.ticker) : a.ticker.localeCompare(b.ticker)), [search,direction,leverage,sort,category])
   const visible = results.slice(0,visibleCount)
   const reset = () => {setSearch('');setDirection('All');setLeverage('All');setCategory('All');setSort('coverage');setDetails(null);setVisibleCount(30)}
-  return <main className="tni-les">
+  return <MarketPageLayout active="/research/scanners/leveraged-etf/"><main className="tni-les">
+    <div className="tni-les-wrap"><MarketBenchmarkStrip benchmarks={marketSnapshot.benchmarks} /></div>
     <section className="tni-les-hero"><div className="tni-les-wrap"><p className="tni-les-kicker">TNI / RESEARCH / ETF SCANNERS</p><h1>Leverage <em>Decoded.</em></h1><p>Find your exposure. Understand the risk.</p><span className="tni-les-subline">Leveraged & inverse ETF explorer</span></div></section>
     <div className="tni-les-wrap tni-les-content">
       <div className="tni-les-intro"><div><p className="tni-les-kicker tni-les-ink">ETF INTELLIGENCE</p><h2>Explore leveraged ETFs</h2><p>Explore fund profiles and saved return history. Detailed research is available for TQQQ, SOXL, NVDL and TSLL.</p></div><span className="tni-les-count">{results.length} matches</span></div>
@@ -231,5 +236,5 @@ export default function LeveragedEtfScannerPage() {
     </div>
     {selected.length>0&&<aside className="tni-compare-tray" aria-label="Selected ETFs"><p role="status">{selected.length} of 4 selected · {selected.length<2?'Select one more fund':selected.length===4?'Maximum reached — remove a fund to replace it':'Ready to compare'}</p><div className="tni-compare-chips">{selected.map(t=><button key={t} onClick={()=>toggleCompare(t)} aria-label={`Remove ${t}`}>{t} ×</button>)}</div><button onClick={()=>setSelected([])}>Clear all</button><button className="tni-compare-go" disabled={selected.length<2} onClick={()=>setComparing(true)}>Compare ({selected.length}) →</button></aside>}
     {comparing&&<Suspense fallback={<div className="tni-compare-tray" role="status">Loading comparison…<button onClick={()=>setComparing(false)}>Cancel</button></div>}><EtfComparison tickers={selected} onClose={()=>setComparing(false)} /></Suspense>}
-  </main>
+  </main></MarketPageLayout>
 }

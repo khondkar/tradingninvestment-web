@@ -1,7 +1,10 @@
+import { MarketPageLayout } from '../components/market/MarketSectionNavigation'
+import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
 import { useEffect } from 'react'
-import MarketBreadthDonut, { MarketOrbitNavigation } from '../components/market/MarketBreadthDonut'
+import MarketBreadthDonut from '../components/market/MarketBreadthDonut'
 
 import '../components/market/StockMarketToday.css'
+import './StockMarketTodayReadability.css'
 
 import {
   useMarketTodaySnapshot,
@@ -173,8 +176,7 @@ export default function StockMarketTodayPage() {
   const marketIsOpen = !stale && snapshot.market_status.toLowerCase() === 'open'
 
   return (
-    <>
-      <MarketOrbitNavigation />
+    <MarketPageLayout active="/stock-market-today/">
 
       <main className="market-today-page orbit-page">
         <section
@@ -186,6 +188,7 @@ export default function StockMarketTodayPage() {
           </span>
 
           <h1>Stock Market Today</h1>
+          <MarketBenchmarkStrip benchmarks={snapshot.benchmarks} />
 
           <p>
             Track major U.S. market benchmarks, sector leadership,
@@ -215,7 +218,23 @@ export default function StockMarketTodayPage() {
           </div>
         </section>
 
-        <MarketBreadthDonut snapshot={snapshot} />
+        <a className="tni-overview-heatmap-cta tni-heatmap-preview" href="/stock-market-today/heatmap/">
+          <span className="tni-heatmap-preview-heading"><strong>S&amp;P 500 Market Heatmap</strong><span aria-hidden="true">↗</span></span>
+          <span className="tni-heatmap-preview-description">Sector snapshot · Average daily stock change</span>
+          <span className="tni-heatmap-preview-tiles">
+            {(snapshot.sectors ?? []).filter(sector => Number.isFinite(sector.average_change_pct)).slice(0, 6).map(sector => {
+              const change = sector.average_change_pct
+              const label = sector.sector.replace('Information Technology', 'Technology').replace('Communication Services', 'Communication')
+              return <span key={sector.sector} className={`tni-heatmap-preview-tile ${change > 0 ? 'is-up' : change < 0 ? 'is-down' : 'is-flat'}`}>
+                <span>{label}</span><b>{change > 0 ? '+' : ''}{change.toFixed(2)}%</b>
+              </span>
+            })}
+          </span>
+          {!(snapshot.sectors ?? []).some(sector => Number.isFinite(sector.average_change_pct)) && <span className="tni-heatmap-preview-description">Sector preview unavailable. Open the full heatmap to explore stocks.</span>}
+          <span className="tni-heatmap-preview-action">View full S&amp;P 500 heatmap <span aria-hidden="true">→</span></span>
+        </a>
+
+        <MarketBreadthDonut snapshot={snapshot} showBenchmarks={false} />
 
         <section
           className="market-overview-explainer"
@@ -529,6 +548,6 @@ export default function StockMarketTodayPage() {
         </section>
 
       </main>
-    </>
+    </MarketPageLayout>
   )
 }

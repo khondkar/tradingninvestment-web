@@ -117,7 +117,11 @@ export function renderAnnualReturnsChart(
   // Mobile and desktop receive dedicated spacing and typography
   // ==========================================================
 
+  const viewportWidth =
+    window.innerWidth;
+
   const isMobile =
+    viewportWidth < 720 ||
     width < 720;
 
   // ==========================================================

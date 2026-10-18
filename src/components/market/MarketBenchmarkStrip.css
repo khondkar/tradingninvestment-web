@@ -1,0 +1,13 @@
+.tni-benchmark-strip{box-sizing:border-box;background:#eef2f6;border:1px solid #d7e0e8;border-radius:11px;padding:11px 12px;margin:12px 0 17px;overflow-x:auto;max-width:100%;scrollbar-width:thin;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.tni-benchmark-strip:focus-visible{outline:3px solid #62a4ff;outline-offset:2px}
+.tni-benchmark-strip-row{display:flex;align-items:center;gap:20px;width:max-content;min-width:100%;white-space:nowrap}
+.tni-benchmark-strip-label{font-size:10px;letter-spacing:.045em;color:#52657a;font-weight:800}
+.tni-benchmark-strip-item{display:flex;align-items:baseline;gap:7px;font-size:12px;font-variant-numeric:tabular-nums}
+.tni-benchmark-strip-item strong,.tni-benchmark-strip-item b{color:#18283b;font-weight:800;font-size:inherit}
+.tni-benchmark-strip-item em{font-style:normal;font-weight:850}.tni-benchmark-strip-item .is-down{color:#c72c42}.tni-benchmark-strip-item .is-up{color:#087e52}
+.orbit-page .market-today-hero:has(.tni-benchmark-strip){min-width:0}
+@media(min-width:600px){.tni-benchmark-strip{padding:11px 15px}.tni-benchmark-strip-item{font-size:13px}}
+/* Additional 20% size increase across market pages. */
+.tni-benchmark-strip-label{font-size:12px}
+.tni-benchmark-strip-item{font-size:14.4px}
+@media(min-width:600px){.tni-benchmark-strip-item{font-size:15.6px}}

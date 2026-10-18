@@ -64,13 +64,37 @@ export default function GenericAnnualReturnsChart({
       return
     }
 
-    const cleanup =
-      renderAnnualReturnsChart(
+    let cleanup = renderAnnualReturnsChart(
+      container,
+      chartConfig,
+    )
+
+    let previousWidth = container.clientWidth
+
+    const observer = new ResizeObserver(() => {
+      const nextWidth = container.clientWidth
+
+      if (
+        nextWidth <= 0 ||
+        Math.abs(nextWidth - previousWidth) < 1
+      ) {
+        return
+      }
+
+      previousWidth = nextWidth
+      cleanup?.()
+      cleanup = renderAnnualReturnsChart(
         container,
         chartConfig,
       )
+    })
 
-    return cleanup
+    observer.observe(container)
+
+    return () => {
+      observer.disconnect()
+      cleanup?.()
+    }
   }, [chartConfig])
 
   // ==========================================================================

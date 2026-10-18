@@ -1,34 +1,16 @@
+import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
+import { useMarketTodaySnapshot } from '../hooks/useMarketTodaySnapshot'
+import { MarketPageLayout } from '../components/market/MarketSectionNavigation'
 import EarningsCalendar from '../components/market/EarningsCalendar'
 
 import '../components/market/StockMarketToday.css'
 
 export default function StockMarketEarningsCalendarPage() {
+  const marketSnapshot = useMarketTodaySnapshot()
   return (
-    <main className="stock-market-today-page earnings-calendar-page">
-      <nav
-        className="market-today-subnav"
-        aria-label="Stock Market Today"
-      >
-        <a href="/stock-market-today/">
-          Overview
-        </a>
+    <MarketPageLayout active="/stock-market-today/earnings-calendar/"><main className="stock-market-today-page earnings-calendar-page">
+      <MarketBenchmarkStrip benchmarks={marketSnapshot.benchmarks} />
 
-        <a href="/stock-market-today/heatmap/">
-          Heatmap
-        </a>
-
-        <a href="/stock-market-today/sector-health/">
-          Sector Health
-        </a>
-
-        <a
-          href="/stock-market-today/earnings-calendar/"
-          className="active"
-          aria-current="page"
-        >
-          Earnings Calendar
-        </a>
-      </nav>
 
       <section className="market-today-hero">
         <div>
@@ -54,6 +36,6 @@ export default function StockMarketEarningsCalendarPage() {
       </section>
 
       <EarningsCalendar />
-    </main>
+    </main></MarketPageLayout>
   )
 }

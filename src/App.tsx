@@ -9,6 +9,7 @@ import { drawdownsResearchRegistry } from './research/drawdowns/registry'
 import { ResearchConnections, ResearchHubPage, ResearchTrail } from './components/research/ResearchDiscovery'
 import { getHub } from './research/discovery'
 import PremiumResearchHome from './components/home/PremiumResearchHome'
+import HomeSearch from './components/home/HomeSearch'
 import './SiteShell.css'
 
 import { loadResearchData } from './performance/researchData'
@@ -192,6 +193,7 @@ function Header({
   page: PageName
   setPage: (page: PageName) => void
 }) {
+  const isHome = (pathname.replace(/\/+$/, '') || '/') === '/' && page === 'research'
   function navigate(nextPage: PageName) {
     if (nextPage === 'about') {
       window.location.assign('/about/')
@@ -235,10 +237,11 @@ function Header({
         </button>
 
         <nav className="desktop-nav">
+          {isHome && <a href="/" className="tni-home-nav-home" aria-current="page">Home</a>}
           <div className="tni-research-dropdown">
             <button
               type="button"
-              className={page === 'research' ? 'active' : ''}
+              className={page === 'research' && !isHome ? 'active' : ''}
               onClick={() => window.location.assign('/research/')}
               aria-haspopup="true"
             >
@@ -246,17 +249,22 @@ function Header({
             </button>
             <div className="tni-research-dropdown-panel" aria-label="Research destinations">
               <a href="/research/">Research Library <small>Original research and historical data</small></a>
-              <a href="/research/scanners/leveraged-etf/">Leveraged ETF Scanner <small>Explore leveraged and inverse funds</small></a>
+              <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
             </div>
           </div>
 
-          <button
-            type="button"
-            className={page === 'market' ? 'active' : ''}
-            onClick={() => window.location.assign('/stock-market-today/')}
-          >
-            Stock Market Today
-          </button>
+          <details className="tni-market-dropdown" onKeyDown={event => {
+            if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() }
+          }}>
+            <summary className={page === 'market' ? 'active' : ''}>Stock Market Today <span aria-hidden="true">⌄</span></summary>
+            <nav className="tni-market-dropdown-panel" aria-label="Stock Market Today destinations">
+              <a href="/stock-market-today/">Overview</a>
+              <details className="tni-scanner-group" open={pathname.includes('/stock-market-today/heatmap') || undefined}><summary>Heatmap + Scanner <span aria-hidden="true">⌄</span></summary><a href="/stock-market-today/heatmap/">S&amp;P 500</a></details>
+              <a href="/stock-market-today/sector-health/">Sector Health</a>
+              <a href="/stock-market-today/earnings-calendar/">Earnings Calendar</a>
+              <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
+            </nav>
+          </details>
 
           <button
             type="button"
@@ -267,6 +275,9 @@ function Header({
           </button>
         </nav>
 
+        {isHome && <button className="tni-home-share" type="button" onClick={shareCurrentPage} aria-label="Share this page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4m-6.8 7 6.8 4"/></svg></button>}
+        {isHome && <HomeSearch />}
+        {isHome && <a className="tni-home-header-launch" href="https://app.tradingninvestment.com/live/news">Launch TNI <span aria-hidden="true">→</span></a>}
         <div className="header-actions">
 
           <button
@@ -293,12 +304,21 @@ function Header({
           <summary>Menu <span aria-hidden="true">⌄</span></summary>
           <nav className="tni-mobile-menu-panel" aria-label="Mobile navigation">
             <a href="/">Home</a>
-            <a href="/stock-market-today/">Stock Market Today <span aria-hidden="true">↗</span></a>
+            <details className="tni-mobile-research-group" open={page === 'market' || undefined}>
+              <summary>Stock Market Today <span aria-hidden="true">⌄</span></summary>
+              <div className="tni-mobile-research-links">
+                <a href="/stock-market-today/">Overview</a>
+                <details className="tni-scanner-group" open={pathname.includes('/stock-market-today/heatmap') || undefined}><summary>Heatmap + Scanner <span aria-hidden="true">⌄</span></summary><a href="/stock-market-today/heatmap/">S&amp;P 500</a></details>
+                <a href="/stock-market-today/sector-health/">Sector Health</a>
+                <a href="/stock-market-today/earnings-calendar/">Earnings Calendar</a>
+                <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
+              </div>
+            </details>
             <details className="tni-mobile-research-group">
               <summary>Research <span aria-hidden="true">⌄</span></summary>
               <div className="tni-mobile-research-links">
                 <a href="/research/">Research Library</a>
-                <a href="/research/scanners/leveraged-etf/">Leveraged ETF Scanner</a>
+                <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
               </div>
             </details>
             <a href="/about/">About</a>
@@ -1056,6 +1076,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   if (normalizedPath === '/stock-market-today') {
     return (
       <div className="site orbit-site">
+        <Header pathname={pathname} page="market" setPage={setPage} />
         <StockMarketTodayPage />
       </div>
     )

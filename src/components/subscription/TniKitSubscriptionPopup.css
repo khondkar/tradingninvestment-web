@@ -5,3 +5,37 @@
 .tni-kit-form-host .formkit-form[data-uid="8f25beaeb4"]{width:100%!important;max-width:none!important;border:0!important;background:transparent!important;border-radius:0!important;overflow:visible!important}.tni-kit-form-host .formkit-background,.tni-kit-form-host .formkit-header,.tni-kit-form-host .formkit-subheader{display:none!important}.tni-kit-form-host .formkit-form[data-uid="8f25beaeb4"] [data-style="minimal"]{padding:0!important}.tni-kit-form-host .formkit-fields{display:flex!important;flex-direction:column!important;gap:12px!important;margin:0!important}.tni-kit-form-host .formkit-field,.tni-kit-form-host .formkit-submit{width:100%!important;min-width:0!important;margin:0!important;flex:0 0 auto!important}.tni-kit-form-host input[name="email_address"]{width:100%!important;padding:15px 16px!important;border:1px solid #dedbd8!important;border-radius:8px!important;background:#fff!important;color:#191919!important;font-size:14px!important}.tni-kit-form-host input[name="email_address"]:focus{border-color:#b52d2d!important;outline:2px solid #b52d2d30!important}.tni-kit-form-host .formkit-submit{background:#b52d2d!important;border-radius:8px!important;color:#fff!important;min-height:48px!important}.tni-kit-form-host .formkit-submit:hover{background:#9e2525!important}.tni-kit-form-host .formkit-submit>span{padding:14px!important}.tni-kit-form-host .formkit-guarantee{font-size:11px!important;color:#96908b!important;margin:10px 0 0!important}.tni-kit-form-host .formkit-powered-by-convertkit-container{margin:5px 0 0!important}
 @media(max-width:480px){.tni-kit-content{padding:22px}.tni-kit-intro h2{font-size:29px!important}.tni-kit-footer{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.tni-kit-overlay{backdrop-filter:none}}
+
+/* Spacious desktop subscription popup */
+@media (min-width: 768px) {
+  .tni-kit-dialog {
+    width: min(100%, 640px);
+  }
+
+  .tni-kit-content {
+    padding: 36px 40px;
+  }
+
+  .tni-kit-intro h2 {
+    font-size: 40px !important;
+  }
+
+  .tni-kit-intro p {
+    font-size: 16px;
+  }
+
+  .tni-kit-form-host .formkit-fields {
+    flex-direction: row !important;
+    align-items: stretch !important;
+  }
+
+  .tni-kit-form-host .formkit-field {
+    width: auto !important;
+    flex: 1 1 0 !important;
+  }
+
+  .tni-kit-form-host .formkit-submit {
+    width: 150px !important;
+    flex: 0 0 150px !important;
+  }
+}

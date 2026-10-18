@@ -1,0 +1,61 @@
+import { useMemo, useState } from 'react'
+import candidates from './leveraged-etf-candidates.json'
+import fourEtfMetrics from './four-etf-metrics.json'
+import './LeveragedEtfScannerPage.css'
+import './ScannerFundDetails.css'
+import ScannerFundDetails from './ScannerFundDetails'
+import { scannerResearchProfiles as profiles } from './scannerResearchProfiles'
+
+type Fund = { ticker: string; name: string; exposure: string; direction: string; leverage: number | null; category: string; verified: boolean }
+const funds = candidates as Fund[]
+
+type Metrics = { aumBillion: number | null; expenseRatioPct: number | null; avgVolumeMillion: number | null; avgVolumePeriod: string | null; lastVolumeMillion: number | null; lastVolumeDate: string | null; asOf: string; sources: string[] }
+const metrics = fourEtfMetrics as Record<string, Metrics>
+const metricText = (n: number | null, suffix: string, decimals = 2) => n == null ? '—' : `${n.toFixed(decimals)}${suffix}`
+const ScannerMetrics = ({ ticker }: { ticker: string }) => {
+  const m = metrics[ticker]
+  if (!m) return null
+  return <div className="tni-les-metrics" aria-label={`${ticker} ETF market metrics`}>
+    <div><small>AUM</small><strong>{metricText(m.aumBillion, 'B')}</strong></div>
+    <div><small>Expense ratio</small><strong>{metricText(m.expenseRatioPct, '%')}</strong></div>
+    <div><small>Avg. volume{m.avgVolumePeriod ? ` (${m.avgVolumePeriod})` : ''}</small><strong>{metricText(m.avgVolumeMillion, 'M')}</strong></div>
+    <div><small>Last-session volume</small><strong>{metricText(m.lastVolumeMillion, 'M')}</strong></div>
+    <p>Snapshot {m.asOf}{m.lastVolumeDate ? ` · Volume ${m.lastVolumeDate}` : ''} · Not live · <a href={m.sources[0]} target="_blank" rel="noopener noreferrer">Sources ↗</a></p>
+  </div>
+}
+
+export default function LeveragedEtfScannerPage() {
+  const [search, setSearch] = useState('')
+  const [direction, setDirection] = useState('All')
+  const [leverage, setLeverage] = useState('All')
+  const [sort, setSort] = useState('coverage')
+  const [category, setCategory] = useState('All')
+  const [visibleCount, setVisibleCount] = useState(30)
+  const [details, setDetails] = useState<string | null>(null)
+  const [filters, setFilters] = useState(false)
+  const results = useMemo(() => funds.filter(f => {
+    const q = search.trim().toLowerCase()
+    return (!q || `${f.ticker} ${f.name} ${f.exposure} ${f.category} ${profiles[f.ticker]?.name ?? ''} ${profiles[f.ticker]?.leveragedEtf?.issuer ?? ''}`.toLowerCase().includes(q)) &&
+      (direction === 'All' || f.direction === direction) &&
+      (leverage === 'All' || String(f.leverage) === leverage) &&
+      (category === 'All' || f.category === category)
+  }).sort((a,b) => sort === 'coverage' ? Number(Boolean(profiles[b.ticker]))-Number(Boolean(profiles[a.ticker])) || a.ticker.localeCompare(b.ticker) : sort === 'name' ? a.name.localeCompare(b.name) : sort === 'leverage' ? (b.leverage ?? -1)-(a.leverage ?? -1) || a.ticker.localeCompare(b.ticker) : a.ticker.localeCompare(b.ticker)), [search,direction,leverage,sort,category])
+  const visible = results.slice(0,visibleCount)
+  const reset = () => {setSearch('');setDirection('All');setLeverage('All');setCategory('All');setSort('coverage');setDetails(null);setVisibleCount(30)}
+  return <main className="tni-les">
+    <section className="tni-les-hero"><div className="tni-les-wrap"><p className="tni-les-kicker">TNI / RESEARCH / ETF SCANNERS</p><h1>Leverage <em>Decoded.</em></h1><p>Find your exposure. Understand the risk.</p><span className="tni-les-subline">Leveraged & inverse ETF explorer</span></div></section>
+    <div className="tni-les-wrap tni-les-content">
+      <div className="tni-les-intro"><div><p className="tni-les-kicker tni-les-ink">ETF INTELLIGENCE</p><h2>Explore leveraged ETFs</h2><p>Explore fund profiles and saved return history. Detailed research is available for TQQQ, SOXL, NVDL and TSLL.</p></div><span className="tni-les-count">{results.length} matches</span></div>
+      <label className="tni-les-search-label" htmlFor="tni-les-search">Search ETFs</label><input id="tni-les-search" className="tni-les-search" type="search" placeholder="Ticker, fund, index or sector…" value={search} onChange={e=>{setSearch(e.target.value);setVisibleCount(30)}} />
+      <div className="tni-les-pills" role="group" aria-label="Direction filter">{['All','Long','Inverse'].map(d=><button key={d} type="button" aria-pressed={direction===d} className={direction===d?'selected':''} onClick={()=>{setDirection(d);setVisibleCount(30)}}>{d==='All'?'All ETFs':d==='Long'?'↗ Long':'↘ Inverse'}</button>)}</div>
+      <div className="tni-les-toolbar"><button className="tni-les-filter-button" type="button" aria-expanded={filters} aria-controls="tni-les-filters" onClick={()=>setFilters(v=>!v)}>☷ Filters {filters?'−':'+'}</button><label>Sort <select value={sort} onChange={e=>{setSort(e.target.value);setVisibleCount(30)}}><option value="coverage">Research data first</option><option value="ticker">Ticker A–Z</option><option value="name">Fund name</option><option value="leverage">Leverage (high first)</option></select></label></div>
+      {filters&&<div className="tni-les-filters" id="tni-les-filters"><label>Leverage factor<select value={leverage} onChange={e=>{setLeverage(e.target.value);setVisibleCount(30)}}><option value="All">All factors</option><option value="2">2×</option><option value="3">3×</option></select></label><label>Asset class<select value={category} onChange={e=>{setCategory(e.target.value);setVisibleCount(30)}}>{['All','Indexes','Sectors','Stocks','Bonds','Other'].map(c=><option key={c} value={c}>{c}</option>)}</select></label><button type="button" onClick={reset}>Clear filters</button><p className="tni-les-filter-note">Filters use preliminary labels. Candidates with unknown classifications only appear when their filters are set to All.</p></div>}
+      <p className="tni-les-status" role="status">Showing {visible.length} of {results.length} candidates · 4 with saved research</p>
+      <div className="tni-les-list">{visible.map(f=><article className="tni-les-card" key={f.ticker}><div className="tni-les-card-head"><div><h3>{f.ticker}</h3><p>{profiles[f.ticker]?.name ?? (f.name !== f.ticker ? f.name : 'Fund profile not yet available')}</p></div><span className={'tni-les-tag '+(f.direction==='Long'?'long':f.direction==='Inverse'?'inverse':'unknown')}>{profiles[f.ticker] ? 'Research data' : f.name !== f.ticker ? 'Preliminary' : 'Unverified'}</span></div><ScannerMetrics ticker={f.ticker} /><div className="tni-les-card-bottom"><span>{profiles[f.ticker]?.leveragedEtf?.leverageLabel ?? (f.leverage ? `${f.leverage}× ${f.direction} · preliminary` : 'Ticker only')}</span><button type="button" aria-expanded={details===f.ticker} aria-controls={`fund-${f.ticker}`} onClick={()=>setDetails(details===f.ticker?null:f.ticker)}>{details===f.ticker?'Hide details ↑':'Details ↗'}</button></div>{details===f.ticker&&<div className="tni-les-detail" id={`fund-${f.ticker}`}>{profiles[f.ticker] ? <ScannerFundDetails key={f.ticker} ticker={f.ticker} /> : <><dl><div><dt>Ticker</dt><dd>{f.ticker}</dd></div>{f.name !== f.ticker && <><div><dt>Preliminary name</dt><dd>{f.name}</dd></div><div><dt>Preliminary exposure</dt><dd>{f.exposure}</dd></div><div><dt>Preliminary classification</dt><dd>{f.category} · {f.direction}</dd></div><div><dt>Preliminary daily target</dt><dd>{f.leverage == null ? 'Not recorded' : `${f.direction === 'Inverse' ? '−' : '+'}${f.leverage}×`}</dd></div></>}</dl><p>{f.name !== f.ticker ? 'These are unverified directory labels, not a validated fund profile.' : 'Only this ticker is stored in the current directory.'} No historical performance or market metrics are stored for this candidate yet.</p></>}</div>}</article>)}</div>
+      {results.length===0&&<div className="tni-les-empty"><strong>No matching ETFs</strong><p>Try another ticker or clear your filters.</p><button onClick={reset}>Reset filters</button></div>}
+      {visibleCount<results.length&&<button type="button" className="tni-les-more" onClick={()=>setVisibleCount(n=>n+30)}>Show {Math.min(30,results.length-visibleCount)} more ↓</button>}
+      <aside className="tni-les-risk"><strong>Know the risk</strong><p>Leveraged and inverse ETFs generally target a multiple of a benchmark's <strong>daily</strong> return. Longer-term performance can differ substantially because of compounding, volatility, fees and tracking effects.</p></aside>
+      <p className="tni-les-disclaimer">Saved research is available for four funds. Other entries contain preliminary labels or ticker candidates that may be inactive or non-leveraged. Snapshot dates vary by fund; this is not live market data.</p>
+    </div>
+  </main>
+}

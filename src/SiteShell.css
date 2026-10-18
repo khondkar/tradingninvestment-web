@@ -502,3 +502,79 @@
 .site-header .header-share-button { min-height: 44px; padding: 0 12px; border: 1px solid #dce6f0; border-radius: 9px; background: #fff; color: #365573; cursor: pointer; font: inherit; font-size: 13px; }
 .site-footer :focus-visible { outline: 3px solid #0878ff; outline-offset: 4px; }
 @media(max-width:600px) { .site-footer { width: calc(100% - 36px); } .footer-main { align-items: flex-start; flex-direction: column; } }
+
+/* Accessible Stock Market Today menu, shared by all routes. */
+.tni-market-dropdown{position:relative;color:#314359;text-align:left}
+.tni-market-dropdown>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;min-height:48px;font-size:14px;font-weight:650}
+.tni-market-dropdown>summary::-webkit-details-marker{display:none}
+.tni-market-dropdown>summary.active{color:#0869da}
+.tni-market-dropdown-panel{position:absolute;top:100%;left:-14px;z-index:120;width:240px;display:grid;padding:8px;border:1px solid #dce6f0;border-radius:12px;background:#fff;box-shadow:0 15px 40px #11233b20}
+.tni-market-dropdown-panel a{display:block;padding:12px;border-radius:7px;color:#314359;font-size:13px;text-decoration:none}
+.tni-market-dropdown-panel a:hover,.tni-market-dropdown-panel a:focus-visible{background:#eef5ff}
+.tni-market-dropdown :focus-visible{outline:3px solid #62a4ff;outline-offset:2px}
+
+/* TNI navigation contrast fix v1 */
+.site .site-header{background:#fff;color:#15263d}
+.site .site-header .desktop-nav button,
+.site .site-header .desktop-nav summary{color:#15263d;font-size:15px;font-weight:750;opacity:1}
+.site .site-header .desktop-nav button.active,
+.site .site-header .desktop-nav summary.active{color:#0756b3;font-weight:800}
+.site .site-header .tni-market-dropdown-panel,
+.site .site-header .tni-research-dropdown-panel,
+.site .site-header .tni-mobile-menu-panel{background:#fff;border-color:#b8c7d8}
+.site .site-header .tni-market-dropdown-panel a,
+.site .site-header .tni-research-dropdown-panel a,
+.site .site-header .tni-mobile-menu-panel a,
+.site .site-header .tni-mobile-menu-panel button,
+.site .site-header .tni-mobile-menu summary{color:#15263d;font-weight:750;font-size:15px;opacity:1}
+.site .site-header .tni-research-dropdown-panel a small{color:#40536b;font-weight:600}
+.site .site-header .tni-mobile-menu summary{background:#edf3fa;border-color:#b8c7d8}
+.site .tni-market-sidebar,.site .tni-hm-sidebar{background:#f0f4f8;border-right-color:#c5d1df}
+.site .tni-market-sidebar>p,.site .tni-hm-sidebar>p{color:#40536b;font-weight:800}
+.site .tni-market-sidebar nav a,.site .tni-hm-sidebar a{color:#15263d;font-size:15px;font-weight:700;opacity:1}
+.site .tni-market-sidebar nav a[aria-current="page"],
+.site .tni-hm-sidebar a[aria-current="page"]{color:#074b98;background:#dceaff;font-weight:800;box-shadow:inset 3px 0 #0756b3}
+.site .site-header .tni-market-dropdown-panel a:hover,
+.site .site-header .tni-research-dropdown-panel a:hover,
+.site .site-header .tni-mobile-menu-panel a:hover,
+.site .site-header .tni-mobile-menu-panel button:hover,
+.site .tni-market-sidebar nav a:hover{color:#074b98;background:#e4edf9}
+.site .site-header .tni-mobile-menu-panel .tni-mobile-launch{color:#fff;background:#0756b3}
+.site .site-header nav :focus-visible,
+.site .site-header summary:focus-visible,
+.site .tni-market-sidebar a:focus-visible{outline:3px solid #0756b3;outline-offset:3px}
+/* End TNI navigation contrast fix v1 */
+
+/* Scanner parent menu: desktop dropdowns, mobile menu and page sidebar. */
+.site .tni-scanner-group>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;cursor:pointer;padding:12px;border-radius:8px;color:#15263d;background:transparent;font-size:15px;font-weight:750;min-height:44px}
+.site .tni-scanner-group>summary::-webkit-details-marker{display:none}
+.site .tni-scanner-group>summary:hover{color:#074b98;background:#e4edf9}
+.site .tni-scanner-group>summary:focus-visible{outline:3px solid #0756b3;outline-offset:2px}
+.site .tni-scanner-group>a{margin-left:12px;padding-left:16px;border-left:2px solid #b8c7d8}
+.site .tni-mobile-menu-panel .tni-scanner-group>a{width:calc(100% - 12px)}
+
+/* Large, high-contrast main and side navigation. */
+.site .site-header .desktop-nav{gap:22px}
+.site .site-header .desktop-nav button,
+.site .site-header .desktop-nav summary,
+.site .site-header .tni-market-dropdown-panel a,
+.site .site-header .tni-research-dropdown-panel a,
+.site .site-header .tni-mobile-menu-panel a,
+.site .site-header .tni-mobile-menu-panel button,
+.site .site-header .tni-mobile-menu summary,
+.site .tni-market-sidebar nav a,
+.site .tni-market-sidebar .tni-scanner-group>summary{font-size:19.5px;font-weight:800;color:#07101c;opacity:1;line-height:1.45}
+.site .tni-market-sidebar{background:#f7f9fc}
+.site .tni-market-sidebar>p{font-size:14.3px;color:#17283d;font-weight:850;line-height:1.45}
+.site .site-header .desktop-nav button.active,
+.site .site-header .desktop-nav summary.active{color:#063d80}
+.site .tni-market-sidebar nav a[aria-current="page"]{background:#dceaff;color:#063d80;font-weight:850;box-shadow:inset 4px 0 #063d80}
+.site .site-header .tni-market-dropdown-panel,
+.site .site-header .tni-research-dropdown-panel{width:300px;max-width:calc(100vw - 32px)}
+.site .site-header .tni-research-dropdown-panel a small{font-size:15.6px;color:#25374c;font-weight:650}
+.site .site-header .tni-mobile-menu-panel .tni-mobile-launch{color:#fff;background:#063d80}
+.site .tni-market-sidebar .tni-scanner-group>summary{align-items:flex-start;overflow-wrap:normal}
+.site .site-header .tni-scanner-group>summary{white-space:normal}
+.site .tni-market-sidebar nav a:hover,
+.site .site-header .tni-market-dropdown-panel a:hover,
+.site .site-header .tni-research-dropdown-panel a:hover{color:#063d80;background:#e4edf9}

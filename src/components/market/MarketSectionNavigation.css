@@ -1,0 +1,16 @@
+.tni-market-layout{display:block;background:#fff;text-align:left;min-width:0}
+.tni-market-content{min-width:0;width:100%}
+.tni-market-sidebar{display:none;box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+.tni-market-sidebar *{box-sizing:border-box}
+.tni-market-sidebar>p{font-size:11px;letter-spacing:.07em;font-weight:800;color:#697b90;margin:0 12px 14px}
+.tni-market-sidebar a{display:block;padding:12px;border-radius:9px;margin:3px 0;font-size:14px;color:#2a3f56;text-decoration:none;line-height:1.5}
+.tni-market-sidebar a:hover{background:#e8f0fb}
+.tni-market-sidebar a[aria-current]{background:#dcecff;color:#075fc9;font-weight:750}
+.tni-market-sidebar a:focus-visible{outline:3px solid #62a4ff;outline-offset:2px}
+.tni-market-content>.stock-market-today-page{box-sizing:border-box;width:100%;padding:18px 15px 50px;min-width:0;margin:0 auto}
+@media(min-width:1000px){
+ .tni-market-layout{display:grid;grid-template-columns:225px minmax(0,1fr)}
+ .tni-market-sidebar{display:block;background:#f7f9fc;border-right:1px solid #e0e7ee;padding:25px 12px}
+ .tni-market-content>.market-today-page,.tni-market-content>.stock-market-today-page{box-sizing:border-box;width:100%;max-width:1560px;padding:26px 28px 70px;margin:0 auto}
+}
+.tni-hm-layout.is-expanded>.tni-market-sidebar{display:none}

@@ -1,82 +1,53 @@
-import SP500DailyHeatmap from '../components/market/SP500DailyHeatmap'
-import '../components/market/StockMarketToday.css'
+import MarketSectionNavigation from '../components/market/MarketSectionNavigation'
+import MarketBenchmarkStrip from '../components/market/MarketBenchmarkStrip'
+import { useMemo, useRef, useState, useEffect } from 'react'
+import SP500DailyHeatmap, { StockDetails, formatReturn } from '../components/market/SP500DailyHeatmap'
+import { useMarketTodaySnapshot, type MarketRecord } from '../hooks/useMarketTodaySnapshot'
+import './StockMarketHeatmapPage.css'
 
 export default function StockMarketHeatmapPage() {
-  return (
-    <main className="stock-market-today-page">
-      <nav
-        className="market-today-subnav"
-        aria-label="Stock Market Today"
-      >
-        <a href="/stock-market-today/">
-          Overview
-        </a>
-
-        <a
-          href="/stock-market-today/heatmap/"
-          className="active"
-          aria-current="page"
-        >
-          Heatmap
-        </a>
-
-        <a href="/stock-market-today/sector-health/">
-          Sector Health
-        </a>
-
-        <a href="/stock-market-today/earnings-calendar/">
-          Earnings Calendar
-        </a>
-      </nav>
-
-      <section className="market-today-hero">
-        <div>
-          <span className="market-today-eyebrow">
-            STOCK MARKET TODAY
-          </span>
-
-          <h1 className="heatmap-page-title">
-            S&amp;P 500 Stock Components Heatmap Today
-          </h1>
-        </div>
-      </section>
-
-      <SP500DailyHeatmap />
-
-      <section className="market-guide" aria-labelledby="heatmap-guide-title">
-        <h2 id="heatmap-guide-title">How to Read the S&amp;P 500 Heatmap</h2>
-        <p>
-          Explore daily stock performance across the S&amp;P 500.
-          The heatmap helps identify market leaders, laggards, and
-          concentrations of strength or weakness.
-        </p>
-
-        <h3>Understand the Colors</h3>
-        <p>
-          Green indicates positive price performance, while red indicates
-          negative performance. Stronger color intensity generally
-          represents larger price changes.
-        </p>
-
-        <h3>Explore Individual Stocks</h3>
-        <p>
-          Hover over any stock tile to view its ticker symbol,
-          latest available stock price, price change, sector, and industry.
-        </p>
-
-        <h3>Identify Market Trends</h3>
-        <p>
-          Compare stocks within sectors to identify broad market participation
-          or concentrated leadership. Look for clusters of advancing and
-          declining companies.
-        </p>
-
-        <p className="market-guide-note">
-          Market data may be delayed. Price movements do not constitute
-          investment recommendations.
-        </p>
-      </section>
-
+  const snapshot = useMarketTodaySnapshot()
+  const [sector, setSector] = useState('all')
+  const [expanded, setExpanded] = useState(false)
+  const [selected, setSelected] = useState<MarketRecord | null>(null)
+  const dialog = useRef<HTMLDialogElement>(null)
+  const stocks = useMemo(() => snapshot.constituents.filter(s => Number.isFinite(s.change_pct) && Number.isFinite(s.price)), [snapshot.constituents])
+  const sectors = useMemo(() => [...new Set(stocks.map(s => s.sector))].sort(), [stocks])
+  const gainers = useMemo(() => stocks.filter(s => s.change_pct > 0).sort((a, b) => b.change_pct - a.change_pct).slice(0, 5), [stocks])
+  const losers = useMemo(() => stocks.filter(s => s.change_pct < 0).sort((a, b) => a.change_pct - b.change_pct).slice(0, 5), [stocks])
+  useEffect(() => { if (selected && !dialog.current?.open) dialog.current?.showModal() }, [selected])
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) { if (event.key === 'Escape') setExpanded(false) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [])
+  function movers(title: string, rows: MarketRecord[], loss = false) {
+    const maximum = Math.max(1, ...rows.map(s => Math.abs(s.change_pct)))
+    return <section className={`tni-hm-mover${loss ? ' is-loss' : ''}`}>
+      <h2><i />{title} <small>· S&amp;P 500</small></h2>
+      <div className="tni-hm-stocks">{rows.map(s => <button type="button" className="tni-hm-stock" key={s.ticker} onClick={() => setSelected(s)} aria-label={`${s.company}, ${formatReturn(s.change_pct)}, view details`}>
+        <strong>{s.ticker}</strong><span className="tni-hm-bar"><span style={{width: `${Math.abs(s.change_pct) / maximum * 100}%`}} /></span><b>{formatReturn(s.change_pct)}</b>
+      </button>)}{!rows.length && <p>No {loss ? 'declining' : 'advancing'} stocks in this snapshot.</p>}</div>
+    </section>
+  }
+  return <div className={`tni-hm-layout${expanded ? ' is-expanded' : ''}`}>
+    <MarketSectionNavigation active="/stock-market-today/heatmap/" />
+    <main className="tni-hm-main">
+      <div className="tni-hm-crumb"><a href="/stock-market-today/">Stock Market Today</a> › S&amp;P 500 Heatmap</div>
+      <MarketBenchmarkStrip benchmarks={snapshot.benchmarks} />
+      <h1>S&amp;P 500 Heatmap</h1>
+      <p className="tni-hm-subtitle">Find the market’s biggest winners and losers in 10 seconds, then explore stocks by sector.</p>
+      <p className="tni-hm-status">Snapshot: {snapshot.generated_at_et ? new Date(snapshot.generated_at_et).toLocaleString('en-US', {timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'}) + ' ET' : 'Unavailable'} · {stocks.length} stocks · Data may be delayed</p>
+      <div className="tni-hm-movers">{movers('Top 5 Gainers', gainers)}{movers('Top 5 Losers', losers, true)}</div>
+      <section className="tni-hm-promotion"><div><strong>Advanced charts with TradingView ↗</strong><small>Explore technical indicators and advanced charting.</small></div><a href="https://www.tradingview.com/chart/" target="_blank" rel="noopener noreferrer">Explore charts ↗</a></section>
+      <div className="tni-hm-section-head"><h2>Explore the Heatmap</h2><span>Daily performance</span></div>
+      <div className="tni-hm-controls"><label>Sector<select value={sector} onChange={e => setSector(e.target.value)}><option value="all">All {sectors.length} sectors</option>{sectors.map(s => <option key={s}>{s}</option>)}</select></label><span className="tni-hm-period" aria-label="Timeframe: one day">1D</span><button type="button" aria-pressed={expanded} onClick={() => setExpanded(!expanded)}>{expanded ? '↙ Exit expanded view' : '⛶ Expand heatmap'}</button></div>
+      <SP500DailyHeatmap stocks={stocks} sector={sector} onSelect={setSelected} />
+      <section className="tni-hm-guide"><h2>How to Read the S&amp;P 500 Heatmap</h2><p>Green indicates a gain versus the previous close; red indicates a decline. Stronger colors represent larger moves. Tile size reflects absolute daily price movement within each sector, not company market value.</p><p>Choose a sector to inspect its stocks. Hover on desktop or tap a tile to view the latest available price, daily change, sector and industry. Sector percentages are equal-weight averages of available stock returns.</p><p>Market data may be delayed. Price movements do not constitute investment recommendations.</p></section>
     </main>
-  )
+    <dialog ref={dialog} className="tni-hm-dialog" aria-labelledby="tni-hm-detail-title" onClose={() => setSelected(null)} onClick={e => { if (e.target === e.currentTarget) dialog.current?.close() }}>
+      <button type="button" className="tni-hm-close" onClick={() => dialog.current?.close()} aria-label="Close stock details">✕</button>
+      {selected && <StockDetails stock={stocks.find(s => s.ticker === selected.ticker) ?? selected} titleId="tni-hm-detail-title" />}
+    </dialog>
+  </div>
 }
