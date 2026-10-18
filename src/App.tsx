@@ -18,6 +18,7 @@ function currentPathname() { return typeof window === 'undefined' ? '/' : window
 let LeveragedEtfScannerPage: typeof import('./pages/LeveragedEtfScannerPage')['default']
 let JPMvsGSEarningsResearchPage: typeof import('./pages/JPMvsGSEarningsResearchPage')['default']
 let SPYDojiResearchPage: typeof import('./pages/SPYDojiResearchPage')['default']
+let GravestoneDojiArticle: typeof import('./pages/GravestoneDojiArticle')['default']
 let MagicDojiPage: typeof import('./pages/MagicDojiPage')['default']
 let NasdaqSelloff2026Page: typeof import('./pages/NasdaqSelloff2026Page')['default']
 let StockMarketCrash1929Page: typeof import('./pages/StockMarketCrash1929Page')['default']
@@ -75,6 +76,10 @@ export async function prepareApp(pathname: string) {
   if (path === '/research/scanners/leveraged-etf') { LeveragedEtfScannerPage = (await import('./pages/LeveragedEtfScannerPage')).default; return }
   if (path === '/research/jpm-vs-gs-earnings-analysis') { JPMvsGSEarningsResearchPage = (await import('./pages/JPMvsGSEarningsResearchPage')).default; return }
   if (path === '/research/doji-candlestick-spy-26-year-study') { SPYDojiResearchPage = (await import('./pages/SPYDojiResearchPage')).default; return }
+  if (path === '/gravestone-doji-candlestick-pattern') {
+    GravestoneDojiArticle = (await import('./pages/GravestoneDojiArticle')).default;
+    return
+  }
   if (path === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') { MagicDojiPage = (await import('./pages/MagicDojiPage')).default; return }
   if (path === '/nasdaq-selloff-2026') { NasdaqSelloff2026Page = (await import('./pages/NasdaqSelloff2026Page')).default; return }
   if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
@@ -979,6 +984,10 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
       </div>
     )
   }
+  if (normalizedPath === '/gravestone-doji-candlestick-pattern') {
+    return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><GravestoneDojiArticle /><Footer setPage={setPage} /></div>
+  }
+
   if (normalizedPath === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') {
     return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><MagicDojiPage /><Footer setPage={setPage} /></div>
   }

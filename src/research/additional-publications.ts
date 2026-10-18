@@ -81,6 +81,17 @@ export const additionalPublications: ResearchItem[] = [
     publishedAt: '2026-10-11',
   },
   {
+    slug: 'gravestone-doji-candlestick-pattern',
+    path: '/gravestone-doji-candlestick-pattern/',
+    title: 'Trading Setups for Bearish and Bullish Gravestone Doji',
+    description: 'Original 2016 TradingNInvestment article explaining Gravestone Doji candlestick formations, bullish and bearish trading setups, and historical chart examples.',
+    name: 'Gravestone Doji Candlestick Pattern',
+    symbol: 'DOJI',
+    categories: ['technical-analysis', 'trading', 'candlestick-patterns'],
+    kind: 'article',
+    publishedAt: '2016-01-21',
+  },
+  {
     slug: 'magic-doji-or-myth-and-how-to-use-doji-for-stock-trading',
     path: '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading/',
     title: 'Magic Doji or Myth and How to Use Doji for Stock Trading',
