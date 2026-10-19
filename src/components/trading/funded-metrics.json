@@ -1,0 +1,2420 @@
+{
+  "topstep": {
+    "plan": "Trading Combine · $50K Standard",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K / $100K / $150K",
+        "source": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions"
+      },
+      "fee": {
+        "value": "$49/month · $50K Standard",
+        "source": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions"
+      },
+      "activation": {
+        "value": "$149 per Express Funded Account",
+        "source": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions"
+      },
+      "reset": {
+        "value": "$49 · $50K Standard",
+        "source": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions"
+      },
+      "platforms": {
+        "value": "TopstepX",
+        "source": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions"
+      },
+      "data": {
+        "value": "Level 1 included; optional Level 2 $38/month",
+        "source": "https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep"
+      },
+      "consistency": {
+        "value": "55% best-day limit in evaluation",
+        "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep"
+      },
+      "days": {
+        "value": "As few as 2 evaluation days",
+        "source": "https://help.topstep.com/en/articles/8284208-consistency-at-topstep"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://help.topstep.com/en/articles/8284204-what-is-the-maximum-loss-limit"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://www.topstep.com/express-funded-account-rules"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://www.topstep.com/express-funded-account-rules"
+      },
+      "account": {
+        "value": "Express Funded Account is simulated",
+        "source": "https://www.topstep.com/express-funded-account-rules"
+      },
+      "payout": {
+        "value": "Standard: 5 winning days of $150+; separate consistency option",
+        "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+      },
+      "payoutLimits": {
+        "value": "Eligibility, balance limits and withdrawal caps apply; legacy terms differ",
+        "source": "https://help.topstep.com/en/articles/8284233-topstep-payout-policy"
+      }
+    }
+  },
+  "apex-trader-funding": {
+    "plan": "Intraday Trailing Evaluation · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K",
+        "source": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/"
+      },
+      "drawdown": {
+        "value": "Intraday trailing",
+        "source": "https://apextraderfunding.com/help-center/evaluation-accounts-ea/intraday-trailing-drawdown-evaluations/"
+      },
+      "payout": {
+        "value": "5 qualifying days of $200+ on $50K",
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+      },
+      "consistency": {
+        "value": "50% best-day rule for payout",
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+      },
+      "payoutLimits": {
+        "value": "$52,600 minimum balance for $50K payout eligibility; maximum 6 payouts",
+        "source": "https://apextraderfunding.com/help-center/intraday-trailing-drawdown-accounts/intraday-trailing-drawdown-payouts/"
+      }
+    }
+  },
+  "my-funded-futures": {
+    "plan": "Rapid · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "fee": {
+        "value": "$209 one-time list; $125 promotion displayed",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "drawdown": {
+        "value": "EOD evaluation; intraday trailing sim-funded",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "dailyLoss": {
+        "value": "None",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "days": {
+        "value": "2 evaluation days",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "consistency": {
+        "value": "50% evaluation; none sim-funded",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "payout": {
+        "value": "Daily after required buffer",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "payoutLimits": {
+        "value": "$500 minimum; $2,100 buffer on $50K",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "contracts": {
+        "value": "5 mini / 50 micro · $50K sim-funded",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "news": {
+        "value": "Allowed evaluation; Tier 1 restricted sim-funded",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "holding": {
+        "value": "Intraday only; close before session ends",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      },
+      "account": {
+        "value": "Evaluation and funded stages simulated; live invitation discretionary",
+        "source": "https://myfundedfutures.com/plans/rapid"
+      }
+    }
+  },
+  "tradeify": {
+    "plan": "Select · $50K · 40% consistency",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K; limited $300K",
+        "source": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference"
+      },
+      "fee": {
+        "value": "$165 one-time · $50K",
+        "source": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference"
+      },
+      "split": {
+        "value": "90% simulated; 80% Elite Live",
+        "source": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference"
+      },
+      "platforms": {
+        "value": "Tradovate, NinjaTrader, TradingView, Rithmic, Tradesea, WealthCharts",
+        "source": "https://help.tradeify.co/en/articles/14369021-tradeify-pricing-reference"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you"
+      },
+      "dailyLoss": {
+        "value": "None in evaluation",
+        "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you"
+      },
+      "days": {
+        "value": "3 minimum evaluation days",
+        "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you"
+      },
+      "consistency": {
+        "value": "40% evaluation best-day limit",
+        "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you"
+      },
+      "payout": {
+        "value": "Choose Select Flex (5-day) or Daily; rules differ",
+        "source": "https://help.tradeify.co/en/articles/10468265-which-plan-is-right-for-you"
+      }
+    }
+  },
+  "take-profit-trader": {
+    "plan": "Test → PRO",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://takeprofittrader.com/"
+      },
+      "activation": {
+        "value": "$130 one-time PRO fee",
+        "source": "https://takeprofittrader.com/"
+      },
+      "split": {
+        "value": "80% PRO; 90% PRO+",
+        "source": "https://takeprofittrader.com/"
+      },
+      "days": {
+        "value": "3 evaluation days advertised",
+        "source": "https://takeprofittrader.com/"
+      },
+      "payout": {
+        "value": "PRO: day-one withdrawals above buffer",
+        "source": "https://takeprofittrader.com/"
+      },
+      "payoutLimits": {
+        "value": "PRO: no maximum withdrawal above buffer",
+        "source": "https://takeprofittrader.com/"
+      },
+      "platforms": {
+        "value": "NinjaTrader, TradingView, Tradovate, RTrader, Quantower, MotiveWave",
+        "source": "https://takeprofittrader.com/"
+      },
+      "account": {
+        "value": "Test and PRO simulated; PRO+ live",
+        "source": "https://takeprofittrader.com/"
+      }
+    }
+  },
+  "earn2trade": {
+    "plan": "Gauntlet Mini · GAU50",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K / $100K / $150K / $200K",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "fee": {
+        "value": "From $170/month · GAU50",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "activation": {
+        "value": "No upfront activation fee",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "target": {
+        "value": "$3,000 · GAU50",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "drawdown": {
+        "value": "EOD evaluation / LiveSim; trailing live",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "maxLoss": {
+        "value": "$2,000 · GAU50",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "dailyLoss": {
+        "value": "$1,100 · GAU50",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "split": {
+        "value": "50% below $2,250; 80% above $2,250",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "days": {
+        "value": "No minimum stated in current rules",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "consistency": {
+        "value": "30% evaluation; none funded",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "payout": {
+        "value": "Weekly; no buffer requirement stated",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "contracts": {
+        "value": "Up to 6 contracts with progression ladder",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "news": {
+        "value": "Allowed",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      },
+      "account": {
+        "value": "LiveSim or live after evaluation",
+        "source": "https://www.earn2trade.com/gauntlet-mini"
+      }
+    }
+  },
+  "tradeday": {
+    "plan": "50K EOD evaluation + EOD funded",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K shown for selected plan",
+        "source": "https://www.tradeday.com/"
+      },
+      "fee": {
+        "value": "$189/month list; $95 promotion displayed",
+        "source": "https://www.tradeday.com/"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://www.tradeday.com/"
+      },
+      "reset": {
+        "value": "$95 promotional reset",
+        "source": "https://www.tradeday.com/"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://www.tradeday.com/"
+      },
+      "target": {
+        "value": "$3,000",
+        "source": "https://www.tradeday.com/"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://www.tradeday.com/"
+      },
+      "maxLoss": {
+        "value": "$2,000",
+        "source": "https://www.tradeday.com/"
+      },
+      "split": {
+        "value": "80% sim-funded; 90% live",
+        "source": "https://www.tradeday.com/"
+      },
+      "days": {
+        "value": "3 evaluation days",
+        "source": "https://www.tradeday.com/"
+      },
+      "consistency": {
+        "value": "45%",
+        "source": "https://www.tradeday.com/"
+      },
+      "payout": {
+        "value": "5 winning days of $150+",
+        "source": "https://www.tradeday.com/"
+      },
+      "payoutLimits": {
+        "value": "$250 minimum; $1,500 cap per cycle",
+        "source": "https://www.tradeday.com/"
+      },
+      "contracts": {
+        "value": "2 initially; scaling applies",
+        "source": "https://www.tradeday.com/"
+      }
+    }
+  },
+  "alpha-futures": {
+    "plan": "Standard · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K / $100K / $150K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "fee": {
+        "value": "$129/month · $50K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "reset": {
+        "value": "$109 · $50K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "dailyLoss": {
+        "value": "None evaluation; $1,000 funded · $50K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "consistency": {
+        "value": "50% evaluation; 40% funded",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "payout": {
+        "value": "5 winning days of $200+",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "payoutLimits": {
+        "value": "$500 minimum; up to 50% of profits, $3,000 cap · $50K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "contracts": {
+        "value": "5 mini / 50 micro · $50K",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      },
+      "news": {
+        "value": "Allowed evaluation; restricted funded",
+        "source": "https://help.alpha-futures.com/en/articles/11632512-standard-account-overview"
+      }
+    }
+  },
+  "lucid-trading": {
+    "plan": "LucidFlex funded stage",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://support.lucidtrading.com/en/articles/12945795-lucidflex-funded-account"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://support.lucidtrading.com/en/articles/12945795-lucidflex-funded-account"
+      },
+      "consistency": {
+        "value": "No funded consistency rule",
+        "source": "https://support.lucidtrading.com/en/articles/12945795-lucidflex-funded-account"
+      },
+      "dailyLoss": {
+        "value": "Optional",
+        "source": "https://support.lucidtrading.com/en/articles/12945795-lucidflex-funded-account"
+      },
+      "payoutLimits": {
+        "value": "No payout buffer",
+        "source": "https://support.lucidtrading.com/en/articles/12945795-lucidflex-funded-account"
+      }
+    }
+  },
+  "bulenox": {
+    "plan": "Momentum · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K selected plan",
+        "source": "https://bulenox.com/help-center/momentum"
+      },
+      "fee": {
+        "value": "$143 one-time · $50K",
+        "source": "https://bulenox.com/help-center/momentum"
+      },
+      "target": {
+        "value": "$3,000",
+        "source": "https://bulenox.com/help-center/momentum"
+      },
+      "maxLoss": {
+        "value": "$2,250 trailing limit",
+        "source": "https://bulenox.com/help-center/momentum"
+      },
+      "drawdown": {
+        "value": "Trailing",
+        "source": "https://bulenox.com/help-center/momentum"
+      },
+      "contracts": {
+        "value": "7 mini / 70 micro",
+        "source": "https://bulenox.com/help-center/momentum"
+      }
+    }
+  },
+  "oneup-trader": {
+    "plan": "Standard evaluation · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K / $250K",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "fee": {
+        "value": "$75/month · $50K Standard",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "maxLoss": {
+        "value": "$2,500 · $50K",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "drawdown": {
+        "value": "Trailing",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "dailyLoss": {
+        "value": "None",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "split": {
+        "value": "100% of first $10K; then 90%",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "days": {
+        "value": "10 evaluation days · Standard",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "contracts": {
+        "value": "6 contracts · $50K",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "reset": {
+        "value": "Unlimited resets advertised",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "platforms": {
+        "value": "NinjaTrader included",
+        "source": "https://www.oneuptrader.com/"
+      },
+      "data": {
+        "value": "Level 2 included",
+        "source": "https://www.oneuptrader.com/"
+      }
+    }
+  },
+  "elite-trader-funding": {
+    "plan": "Revamped EOD · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://help.elitetraderfunding.com/help/how-the-revamped-eod-plan-works"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://help.elitetraderfunding.com/help/how-the-revamped-eod-plan-works"
+      }
+    }
+  },
+  "uprofit": {
+    "plan": "ONE · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K",
+        "source": "https://uprofit.com/help/how-does-the-one-50k-account-work-49114317399828"
+      },
+      "fee": {
+        "value": "$120 · billing period not confirmed",
+        "source": "https://uprofit.com/help/how-does-the-one-50k-account-work-49114317399828"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://uprofit.com/help/how-does-the-one-50k-account-work-49114317399828"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://uprofit.com/help/what-is-static-drawdown-in-the-one-50k-account-49114355917716"
+      },
+      "maxLoss": {
+        "value": "$1,000",
+        "source": "https://uprofit.com/help/what-is-static-drawdown-in-the-one-50k-account-49114355917716"
+      }
+    }
+  },
+  "blusky-trading": {
+    "plan": "Orbit",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K / $100K / $150K / $200K",
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts"
+      },
+      "evaluation": {
+        "value": "1 evaluation, then funded stage",
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts"
+      },
+      "days": {
+        "value": "As few as 1 evaluation day",
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts"
+      },
+      "drawdown": {
+        "value": "EOD trailing ($50K–$150K); static ($200K)",
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts"
+      },
+      "payout": {
+        "value": "After 3 qualifying trading days",
+        "source": "https://help.blusky.pro/en/articles/16300866-orbit-plans-two-phases-faster-payouts"
+      }
+    }
+  },
+  "phidias-propfirm": {
+    "plan": "Premium · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K / $100K / $150K",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "target": {
+        "value": "$4,000 · $50K",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "maxLoss": {
+        "value": "$2,500 · $50K",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "activation": {
+        "value": "$149 · $50K",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "days": {
+        "value": "1 evaluation day",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "dailyLoss": {
+        "value": "None",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "contracts": {
+        "value": "10 mini / 100 micro · $50K",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "consistency": {
+        "value": "None evaluation; 30% funded",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "payout": {
+        "value": "5 days between payouts; $150 qualifying day · $50K",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "payoutLimits": {
+        "value": "$2,000 cap · $50K",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "split": {
+        "value": "75% first payout → 100% fifth payout",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "news": {
+        "value": "Allowed",
+        "source": "https://phidiaspropfirm.com/rules"
+      },
+      "holding": {
+        "value": "Overnight and weekend allowed",
+        "source": "https://phidiaspropfirm.com/rules"
+      }
+    }
+  },
+  "top-one-futures": {
+    "plan": "Elite ACCESS",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "fee": {
+        "value": "$39 one-time evaluation",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "activation": {
+        "value": "$139–$359 by account size",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "reset": {
+        "value": "$35",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "evaluation": {
+        "value": "1 step · 30-day evaluation",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "target": {
+        "value": "6%",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "days": {
+        "value": "As few as 1 day",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "maxLoss": {
+        "value": "$50K: $2,000 evaluation and funded",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      },
+      "consistency": {
+        "value": "40% funded",
+        "source": "https://help.toponefutures.com/en/articles/14595016-elite-access-accounts-overview"
+      }
+    }
+  },
+  "purdia-capital": {
+    "plan": "Pro Evaluation",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "fee": {
+        "value": "Monthly subscription; amount not confirmed",
+        "source": "https://purdia.com/knowledgebase/general/account-types/pro-evaluation"
+      },
+      "activation": {
+        "value": "$130 after passing",
+        "source": "https://purdia.com/knowledgebase/general/account-types/pro-evaluation"
+      }
+    }
+  },
+  "legends-trading": {
+    "plan": "Apprentice · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "fee": {
+        "value": "$185/month list; $37 with LTG promotion",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "activation": {
+        "value": "$99 · $50K",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "consistency": {
+        "value": "30%",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "payout": {
+        "value": "Up to twice monthly, subject to consistency",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "platforms": {
+        "value": "Tradovate, NinjaTrader, Rithmic, Sierra Chart, Quantower",
+        "source": "https://thelegendstrading.com/plans"
+      },
+      "contracts": {
+        "value": "10 contracts / 50 micros shown · $50K",
+        "source": "https://thelegendstrading.com/plans"
+      }
+    }
+  },
+  "day-traders": {
+    "plan": "Evaluation → sim-funded",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "activation": {
+        "value": "$5 flat activation fee",
+        "source": "https://daytraders.com/"
+      },
+      "split": {
+        "value": "100% on sim-funded accounts",
+        "source": "https://daytraders.com/"
+      },
+      "platforms": {
+        "value": "ArcTrader browser platform; Rithmic connection",
+        "source": "https://daytraders.com/"
+      },
+      "account": {
+        "value": "Evaluation and Pro accounts simulated; S2L live program separate",
+        "source": "https://daytraders.com/"
+      }
+    }
+  },
+  "the-trading-pit": {
+    "plan": "Futures Prime · $50K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$50K / $100K / $150K",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "fee": {
+        "value": "€99 one-time · $50K",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "activation": {
+        "value": "€0 displayed promotion (list €129)",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "reset": {
+        "value": "€79 · $50K; remaining challenge days retained",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "evaluation": {
+        "value": "1 step · 30-day challenge",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing; floor stops at initial balance",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "dailyLoss": {
+        "value": "$1,000 evaluation soft pause",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "payout": {
+        "value": "Every 7 days; 5 winning days of $150+",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "payoutLimits": {
+        "value": "Up to 50% of profits, capped $2,500 · $50K",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "contracts": {
+        "value": "Evaluation: 5 standard / 50 micro; funded scaling applies",
+        "source": "https://www.thetradingpit.com/futures"
+      },
+      "account": {
+        "value": "Demo accounts with virtual funds",
+        "source": "https://www.thetradingpit.com/futures"
+      }
+    }
+  },
+  "ftmo": {
+    "plan": "FTMO Challenge · 2-Step",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://ftmo.com/en/trading-objectives/"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://ftmo.com/en/trading-objectives/"
+      },
+      "dailyLoss": {
+        "value": "5% of initial capital; daily balance-based floor",
+        "source": "https://ftmo.com/en/trading-objectives/"
+      },
+      "maxLoss": {
+        "value": "10% of initial capital",
+        "source": "https://ftmo.com/en/trading-objectives/"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://ftmo.com/en/trading-objectives/"
+      },
+      "days": {
+        "value": "4 trading days per evaluation phase",
+        "source": "https://ftmo.com/en/trading-objectives/"
+      },
+      "account": {
+        "value": "Simulated capital",
+        "source": "https://ftmo.com/en/trading-objectives/"
+      }
+    }
+  },
+  "the5ers": {
+    "plan": "High Stakes · $2.5K entry plan",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$2.5K / $5K / $10K / $25K / $50K / $100K",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "fee": {
+        "value": "$19 one-time · $2.5K",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "dailyLoss": {
+        "value": "5%",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "split": {
+        "value": "80% base; up to 100% through scaling",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "days": {
+        "value": "3 profitable days per phase, each ≥0.5%",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "platforms": {
+        "value": "MetaTrader 5 Hedge",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "leverage": {
+        "value": "Up to 1:100",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "holding": {
+        "value": "Overnight and weekend allowed",
+        "source": "https://the5ers.com/high-stakes/"
+      },
+      "news": {
+        "value": "Orders restricted ±2 minutes around high-impact news",
+        "source": "https://the5ers.com/high-stakes/"
+      }
+    }
+  },
+  "fundednext": {
+    "plan": "Stellar 2-Step · $6K entry plan",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$6K / $15K / $25K / $50K / $100K / $200K",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "fee": {
+        "value": "Approx. $59.99 · $6K; official guide estimate",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "target": {
+        "value": "8% phase 1; 5% phase 2",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "dailyLoss": {
+        "value": "5%",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "days": {
+        "value": "5 trading days per phase",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      },
+      "news": {
+        "value": "Funded: only 40% of profits count within ±5 minutes of specified news",
+        "source": "https://help.fundednext.com/en/articles/17255124-stellar-2-step-challenge"
+      }
+    }
+  },
+  "fundingpips": {
+    "plan": "2-Step Flex · 80% reward option",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$5K / $10K / $25K / $50K / $100K",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "target": {
+        "value": "10% phase 1; 8% phase 2",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "dailyLoss": {
+        "value": "4% of higher opening balance/equity",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "maxLoss": {
+        "value": "12%",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "split": {
+        "value": "80% selected; 95% option has different rules",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "days": {
+        "value": "1 minimum day on 80% option",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "payout": {
+        "value": "Biweekly on selected option",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "platforms": {
+        "value": "MT5, cTrader, Match-Trader",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "leverage": {
+        "value": "Forex up to 1:100",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      },
+      "holding": {
+        "value": "Funded overnight/weekend requires Swing add-on",
+        "source": "https://help.fundingpips.com/hc/en-us/articles/47835196271249-2-Step-Flex"
+      }
+    }
+  },
+  "alpha-capital-group": {
+    "plan": "Alpha Pro 6%",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.alphacapitalgroup.uk/en/articles/11378706-alpha-pro-6"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.alphacapitalgroup.uk/en/articles/11378706-alpha-pro-6"
+      },
+      "maxLoss": {
+        "value": "6%",
+        "source": "https://help.alphacapitalgroup.uk/en/articles/11378706-alpha-pro-6"
+      },
+      "dailyLoss": {
+        "value": "3%",
+        "source": "https://help.alphacapitalgroup.uk/en/articles/11378706-alpha-pro-6"
+      },
+      "leverage": {
+        "value": "Forex up to 1:100",
+        "source": "https://help.alphacapitalgroup.uk/en/articles/11378706-alpha-pro-6"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://alphacapitalgroup.uk/assets/terms-and-conditions.pdf"
+      }
+    }
+  },
+  "e8-markets": {
+    "plan": "E8 One · $100K · displayed 6%/4% configuration",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$100K / $200K / $400K / $500K displayed",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "fee": {
+        "value": "$488 list; $366 with displayed E8 promotion · $100K",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "target": {
+        "value": "$9,000 · $100K",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "maxLoss": {
+        "value": "$6,000 · selected configuration",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "dailyLoss": {
+        "value": "$4,000 · selected configuration",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "drawdown": {
+        "value": "Dynamic",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "split": {
+        "value": "80% selected; 90% / 100% options available",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "days": {
+        "value": "As few as 1 evaluation day",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "consistency": {
+        "value": "40% funded",
+        "source": "https://e8markets.com/e8-one"
+      },
+      "payout": {
+        "value": "First request as early as 3 days; eligibility applies",
+        "source": "https://e8markets.com/e8-one"
+      }
+    }
+  },
+  "fxify": {
+    "plan": "2 Phase Pro",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+      },
+      "target": {
+        "value": "4% phase 1; 8% phase 2",
+        "source": "https://fxify.com/blog/introducing-fxify-2-phase-pro/"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://fxify.com/blog/1-step-vs-2-step-prop-firm-challenges/"
+      },
+      "maxLoss": {
+        "value": "8%",
+        "source": "https://fxify.com/blog/1-step-vs-2-step-prop-firm-challenges/"
+      },
+      "dailyLoss": {
+        "value": "4%",
+        "source": "https://fxify.com/blog/1-step-vs-2-step-prop-firm-challenges/"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://fxify.com/blog/1-step-vs-2-step-prop-firm-challenges/"
+      },
+      "payout": {
+        "value": "10-day cycle",
+        "source": "https://fxify.com/blog/1-step-vs-2-step-prop-firm-challenges/"
+      },
+      "payoutLimits": {
+        "value": "First 2 withdrawals capped at 5% or $8,000, whichever is lower",
+        "source": "https://fxify.com/blog/1-step-vs-2-step-prop-firm-challenges/"
+      }
+    }
+  },
+  "funded-trading-plus": {
+    "plan": "2-Step Classic",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+      },
+      "target": {
+        "value": "7% phase 1; 7% phase 2",
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+      },
+      "maxLoss": {
+        "value": "8%",
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+      },
+      "dailyLoss": {
+        "value": "4%",
+        "source": "https://help.fundedtradingplus.com/2-step-classic-program-information/"
+      },
+      "sizes": {
+        "value": "$10K / $25K / $50K / $100K",
+        "source": "https://help.fundedtradingplus.com/consistency-rule/"
+      },
+      "consistency": {
+        "value": "35% evaluation best-day limit",
+        "source": "https://help.fundedtradingplus.com/consistency-rule/"
+      }
+    }
+  },
+  "funderpro": {
+    "plan": "Classic · $5K entry plan",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$5K / $10K / $25K / $50K / $100K / $150K / $200K",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "fee": {
+        "value": "$69 · $5K Classic",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "dailyLoss": {
+        "value": "5%",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "days": {
+        "value": "4 days per phase",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "split": {
+        "value": "80% base; 90% add-on",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "payout": {
+        "value": "Biweekly",
+        "source": "https://funderpro.com/the-challenge/"
+      },
+      "refund": {
+        "value": "Challenge fee credited with first reward",
+        "source": "https://funderpro.com/the-challenge/"
+      }
+    }
+  },
+  "brightfunded": {
+    "plan": "2-Step Classic",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.brightfunded.com/en/articles/14284844-brightfunded-2-step-classic"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://help.brightfunded.com/en/articles/14284844-brightfunded-2-step-classic"
+      },
+      "dailyLoss": {
+        "value": "5% based on higher balance/equity",
+        "source": "https://help.brightfunded.com/en/articles/14284844-brightfunded-2-step-classic"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.brightfunded.com/en/articles/14284844-brightfunded-2-step-classic"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://help.brightfunded.com/en/articles/14284844-brightfunded-2-step-classic"
+      }
+    }
+  },
+  "maven-trading": {
+    "plan": "2-Step · $2K entry plan",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$2K / $5K / $10K / $20K / $50K / $100K",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "fee": {
+        "value": "$19 · $2K; $220 · $50K (before coupons)",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "target": {
+        "value": "8% phase 1; 5% phase 2",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "maxLoss": {
+        "value": "8%",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "dailyLoss": {
+        "value": "4%",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "payout": {
+        "value": "Every 10 business days",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "consistency": {
+        "value": "None",
+        "source": "https://maventrading.com/challenges/2-step"
+      },
+      "refund": {
+        "value": "Fee refunded with third withdrawal",
+        "source": "https://maventrading.com/challenges/2-step"
+      }
+    }
+  },
+  "goat-funded-trader": {
+    "plan": "2-Step Standard",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "dailyLoss": {
+        "value": "5%",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "days": {
+        "value": "3 profitable days per phase, each ≥0.5%",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "split": {
+        "value": "80% base; 100% add-on",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "payout": {
+        "value": "Every 14 days; new funded accounts need 4 days",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "payoutLimits": {
+        "value": "First 2: lower of 6% or $10K; $5K account 4%",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      },
+      "leverage": {
+        "value": "Forex 1:100 evaluation; 1:50 funded",
+        "source": "https://help.goatfundedtrader.com/2-step-standard.html"
+      }
+    }
+  },
+  "blue-guardian": {
+    "plan": "2-Step Standard",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "target": {
+        "value": "8% phase 1; 4% phase 2",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "maxLoss": {
+        "value": "8%",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "dailyLoss": {
+        "value": "4% of initial capital; opening balance/equity reference",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "days": {
+        "value": "3 profitable days per phase, each ≥0.5%",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "split": {
+        "value": "85% base; 90% add-on",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "payout": {
+        "value": "Every 14 days; 7-day add-on",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "payoutLimits": {
+        "value": "$100 minimum crypto; $500 Rise",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "news": {
+        "value": "Funded restricted ±5 minutes",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "holding": {
+        "value": "Overnight and weekend allowed",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      },
+      "restrictions": {
+        "value": "Guardian Shield 2% floating loss; first event cuts share to 50%, second breaches",
+        "source": "https://help.blueguardian.com/en/articles/14062291-2-step-standard-rules"
+      }
+    }
+  },
+  "city-traders-imperium": {
+    "plan": "2-Step · $2.5K entry plan",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$2.5K / $5K / $10K / $25K / $50K / $100K",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "fee": {
+        "value": "$39 · $2.5K; $329 · $50K",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "drawdown": {
+        "value": "Static; balance-based",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "dailyLoss": {
+        "value": "5% of initial balance from daily starting balance",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "days": {
+        "value": "3 profitable days per phase",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "split": {
+        "value": "80% base → 100% through VIP progression",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "payout": {
+        "value": "First request from 7 days",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "consistency": {
+        "value": "None",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "platforms": {
+        "value": "MT5, Match-Trader",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "news": {
+        "value": "Allowed",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "holding": {
+        "value": "Overnight and weekend allowed",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      },
+      "account": {
+        "value": "Simulated assessment environment",
+        "source": "https://citytradersimperium.com/2-step-challenge/"
+      }
+    }
+  },
+  "fintokei": {
+    "plan": "ProTrader",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://www.fintokei.com/programs/"
+      },
+      "target": {
+        "value": "8% phase 1; 6% phase 2",
+        "source": "https://www.fintokei.com/programs/"
+      },
+      "split": {
+        "value": "80% base; loyalty increases possible",
+        "source": "https://support.fintokei.com/en/articles/6538873-what-is-the-performance-reward-ratio-on-protrader-accounts"
+      },
+      "days": {
+        "value": "3 minimum trading days",
+        "source": "https://support.fintokei.com/en/articles/6538822-how-does-the-protrader-challenge-work-what-are-the-rules"
+      }
+    }
+  },
+  "lux-trading-firm": {
+    "plan": "1-Step Evaluation",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://luxtradingfirm.com/1-step-evaluation/"
+      },
+      "refund": {
+        "value": "100% evaluation fee refund after passing",
+        "source": "https://luxtradingfirm.com/1-step-evaluation/"
+      },
+      "sizes": {
+        "value": "$1M evaluation advertised",
+        "source": "https://luxtradingfirm.com/1-step-evaluation/"
+      }
+    }
+  },
+  "instant-funding": {
+    "plan": "One Phase Clarity",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://instantfunding.com/help/one-phase-clarity/"
+      },
+      "drawdown": {
+        "value": "Trailing",
+        "source": "https://instantfunding.com/help/one-phase-clarity/"
+      },
+      "maxLoss": {
+        "value": "6%",
+        "source": "https://instantfunding.com/help/one-phase-clarity/"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://instantfunding.com/help/one-phase-clarity/"
+      }
+    }
+  },
+  "aquafunded": {
+    "plan": "2-Step Standard",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "target": {
+        "value": "8% phase 1; 5% phase 2",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "maxLoss": {
+        "value": "8%",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "dailyLoss": {
+        "value": "5% of higher prior balance/equity",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "days": {
+        "value": "3 profitable days per phase, each ≥0.5%",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "split": {
+        "value": "90% base; 100% add-on",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "payout": {
+        "value": "14 days; first payout in 7 days with add-on",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      },
+      "leverage": {
+        "value": "Forex 1:100 evaluation; 1:50 funded",
+        "source": "https://help.aquafunded.com/en/articles/15281226-2-step-standard"
+      }
+    }
+  },
+  "pipfarm": {
+    "plan": "Classic mode",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.pipfarm.com/en/articles/7719299-classic-mode-introduction"
+      },
+      "target": {
+        "value": "9% phase 1; 6% phase 2",
+        "source": "https://help.pipfarm.com/en/articles/7719299-classic-mode-introduction"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://updates.pipfarm.com/en/help/articles/7840043-static-max-loss-rule-explained"
+      },
+      "maxLoss": {
+        "value": "9% initial; 10% from rank 2",
+        "source": "https://updates.pipfarm.com/en/help/articles/7840043-static-max-loss-rule-explained"
+      }
+    }
+  },
+  "ftuk": {
+    "plan": "Two-Step Forex",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "target": {
+        "value": "8% phase 1; 8% phase 2",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "maxLoss": {
+        "value": "8%",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "dailyLoss": {
+        "value": "5%",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "days": {
+        "value": "3 days per phase, each ≥0.5%",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "payout": {
+        "value": "14-day cycle; 3 qualifying days",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "leverage": {
+        "value": "Forex 1:30 initially; scaling to 1:100",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "holding": {
+        "value": "Overnight and weekend allowed",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      },
+      "restrictions": {
+        "value": "Maximum floating loss 2%",
+        "source": "https://faq.ftuk.com/en/articles/12310204-two-step-program-rules-forex"
+      }
+    }
+  },
+  "for-traders": {
+    "plan": "Classic Forex",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.fortraders.com/en/articles/15378600-classic-account-forex"
+      },
+      "target": {
+        "value": "8% phase 1; 5% phase 2",
+        "source": "https://help.fortraders.com/en/articles/15378600-classic-account-forex"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://help.fortraders.com/en/articles/15378600-classic-account-forex"
+      },
+      "maxLoss": {
+        "value": "8% or 10%, depending on purchased configuration",
+        "source": "https://help.fortraders.com/en/articles/15378600-classic-account-forex"
+      },
+      "dailyLoss": {
+        "value": "3% or 4%, depending on purchased configuration",
+        "source": "https://help.fortraders.com/en/articles/15378600-classic-account-forex"
+      }
+    }
+  },
+  "dna-funded": {
+    "plan": "Single Phase · $5K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$5K selected plan",
+        "source": "https://dnafunded.com/product/5000-single-phase-evaluation/"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://dnafunded.com/product/5000-single-phase-evaluation/"
+      }
+    }
+  },
+  "atlas-funded": {
+    "plan": "Two-Step",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$5K / $10K / $25K / $50K / $100K / $200K",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "target": {
+        "value": "8% phase 1; 5% phase 2",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "drawdown": {
+        "value": "Static; re-anchoring after payouts applies",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "dailyLoss": {
+        "value": "5%",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "days": {
+        "value": "3 evaluation days; 5 funded days of ≥0.5%",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "split": {
+        "value": "90% base; 100% add-on",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "payout": {
+        "value": "14-day cycle",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "payoutLimits": {
+        "value": "$100 minimum",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "platforms": {
+        "value": "MT5, TradeLocker, Match-Trader",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "leverage": {
+        "value": "Forex up to 1:100",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "news": {
+        "value": "Funded profits removed within ±5 minutes",
+        "source": "https://help.atlasfunded.com/two-step"
+      },
+      "restrictions": {
+        "value": "2% floating-loss protector; minimum 3-minute trades; 30-day inactivity",
+        "source": "https://help.atlasfunded.com/two-step"
+      }
+    }
+  },
+  "funding-traders": {
+    "plan": "2-Step Pro10 · $100K",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$100K selected plan",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "fee": {
+        "value": "$599 · $100K Pro10",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "dailyLoss": {
+        "value": "5% of starting-day balance",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "days": {
+        "value": "4 days per phase",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "split": {
+        "value": "80% base; 90–100% add-ons",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      },
+      "platforms": {
+        "value": "MT5, TradeLocker",
+        "source": "https://fundingtraders.com/blog/best-prop-firms-in-nigeria/"
+      }
+    }
+  },
+  "ment-funding": {
+    "plan": "Forex 1-Step · $25K–$1M tiers",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $200K / $400K / $1M",
+        "source": "https://mentfunding.com/"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://mentfunding.com/"
+      },
+      "target": {
+        "value": "10%",
+        "source": "https://mentfunding.com/"
+      },
+      "drawdown": {
+        "value": "Static; locks at initial balance after first payout",
+        "source": "https://mentfunding.com/"
+      },
+      "maxLoss": {
+        "value": "6%",
+        "source": "https://mentfunding.com/"
+      },
+      "dailyLoss": {
+        "value": "5% of previous-day balance",
+        "source": "https://mentfunding.com/"
+      },
+      "split": {
+        "value": "75% base; 90% add-on",
+        "source": "https://mentfunding.com/"
+      },
+      "days": {
+        "value": "No minimum or maximum evaluation days",
+        "source": "https://mentfunding.com/"
+      },
+      "consistency": {
+        "value": "None for $25K–$1M tiers",
+        "source": "https://mentfunding.com/"
+      },
+      "payout": {
+        "value": "First request anytime eligible; then every 30 days",
+        "source": "https://mentfunding.com/"
+      },
+      "payoutLimits": {
+        "value": "Retain a cushion above initial balance after withdrawal",
+        "source": "https://mentfunding.com/"
+      }
+    }
+  },
+  "qt-funded": {
+    "plan": "QT Two",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "target": {
+        "value": "8% phase 1; 5% phase 2",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "maxLoss": {
+        "value": "8%",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "dailyLoss": {
+        "value": "4% of initial balance",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "days": {
+        "value": "4 evaluation days per phase",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "payout": {
+        "value": "14 days; 4 funded days of ≥0.5%",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "payoutLimits": {
+        "value": "5% profit cap per cycle",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      },
+      "restrictions": {
+        "value": "1% floating loss; stop loss within 60 seconds; 14-day inactivity",
+        "source": "https://support.qtfunded.com/support/articles/9000000000002-qt-two"
+      }
+    }
+  },
+  "lark-funding": {
+    "plan": "1-Step Career",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://larkfunding.com/help/trading-rules-guidelines/1-step-career-evaluation-details"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://larkfunding.com/help/trading-rules-guidelines/1-step-career-evaluation-details"
+      },
+      "maxLoss": {
+        "value": "7%",
+        "source": "https://larkfunding.com/help/trading-rules-guidelines/1-step-career-evaluation-details"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://larkfunding.com/help/trading-rules-guidelines/1-step-career-evaluation-details"
+      }
+    }
+  },
+  "ofp-funding": {
+    "plan": "Instant Classic · 5% Daily variant",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$5K / $10K / $25K / $50K / $100K / $200K / $300K",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "evaluation": {
+        "value": "Instant · no evaluation",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "target": {
+        "value": "No profit target",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "dailyLoss": {
+        "value": "5%",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "split": {
+        "value": "100% to trader",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "consistency": {
+        "value": "20%",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "days": {
+        "value": "No minimum days",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      },
+      "leverage": {
+        "value": "Forex up to 1:100",
+        "source": "https://my.ofpfunding.com/files/Terms-and-Conditions-of-Business.pdf"
+      }
+    }
+  },
+  "fundedhive": {
+    "plan": "Pay From Profits · 1-Step",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$5K / $10K / $25K / $50K / $100K / $200K",
+        "source": "https://fundedhive.com/"
+      },
+      "fee": {
+        "value": "$19 access; funded fee from $49, varies by risk category",
+        "source": "https://fundedhive.com/"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://fundedhive.com/"
+      },
+      "target": {
+        "value": "10%",
+        "source": "https://fundedhive.com/"
+      },
+      "drawdown": {
+        "value": "Static",
+        "source": "https://fundedhive.com/"
+      },
+      "maxLoss": {
+        "value": "10%",
+        "source": "https://fundedhive.com/"
+      },
+      "dailyLoss": {
+        "value": "5% EOD-based",
+        "source": "https://fundedhive.com/"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://fundedhive.com/"
+      },
+      "days": {
+        "value": "3 profitable days",
+        "source": "https://fundedhive.com/"
+      },
+      "consistency": {
+        "value": "None",
+        "source": "https://fundedhive.com/"
+      },
+      "leverage": {
+        "value": "Forex up to 1:50",
+        "source": "https://fundedhive.com/"
+      },
+      "news": {
+        "value": "Allowed",
+        "source": "https://fundedhive.com/"
+      },
+      "holding": {
+        "value": "Weekend allowed evaluation; not funded",
+        "source": "https://fundedhive.com/"
+      },
+      "restrictions": {
+        "value": "3% maximum loss per trade",
+        "source": "https://fundedhive.com/"
+      },
+      "refund": {
+        "value": "HiveCoins credit, not cash refund",
+        "source": "https://fundedhive.com/"
+      }
+    }
+  },
+  "audacity-capital": {
+    "plan": "Ability Challenge · 2-Step",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "2 steps",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "target": {
+        "value": "10% phase 1; 5% phase 2",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "dailyLoss": {
+        "value": "7.5% phase 1; 5% phase 2",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "drawdown": {
+        "value": "Static total loss; daily floor resets",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "maxLoss": {
+        "value": "15% phase 1; 10% phase 2 / live",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "days": {
+        "value": "4 trading days per phase",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "split": {
+        "value": "75% base; 85–90% subject to milestones",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "payout": {
+        "value": "First after 14 days; then biweekly",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "refund": {
+        "value": "First payout if payout exceeds fee and rules met",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "us": {
+        "value": "US residents via DXtrade only where permitted",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      },
+      "established": {
+        "value": "2012 (firm statement)",
+        "source": "https://audacity.capital/knowledge-center/ability-challenge/"
+      }
+    }
+  },
+  "fundednext-futures": {
+    "plan": "Rapid Pro · $50K · no DLL add-on",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "fee": {
+        "value": "$299.98 one-time list; $149.99 displayed discount · $50K",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "reset": {
+        "value": "$157.99 · $50K challenge only",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "dailyLoss": {
+        "value": "None by default; optional discounted DLL add-on",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "days": {
+        "value": "As few as 1 evaluation day",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "consistency": {
+        "value": "None evaluation; 40% funded",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "payout": {
+        "value": "Every 3 days, eligibility required",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      },
+      "payoutLimits": {
+        "value": "At least $500 cycle profit; no buffer on Pro",
+        "source": "https://helpfutures.fundednext.com/en/articles/17229667-what-is-fundednext-futures-rapid-pro-daily-challenge"
+      }
+    }
+  },
+  "ftmo-futures": {
+    "plan": "Growth · Futures",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "activation": {
+        "value": "$0",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "fee": {
+        "value": "Monthly subscription; amount not confirmed",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "split": {
+        "value": "90% to trader",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "consistency": {
+        "value": "None sim-funded",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "payout": {
+        "value": "Growth: every 4 qualifying days",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "payoutLimits": {
+        "value": "Growth caps start at $2,500",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "news": {
+        "value": "Allowed",
+        "source": "https://ftmo.com/en/futures/"
+      },
+      "account": {
+        "value": "Evaluation and Sim-Funded simulated; live considered for top performers",
+        "source": "https://ftmo.com/en/futures/"
+      }
+    }
+  },
+  "e8-futures": {
+    "plan": "Signature Futures · $50K · post-Oct 1, 2026",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "evaluation": {
+        "value": "1 step",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "target": {
+        "value": "$3,000 · $50K",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "drawdown": {
+        "value": "End-of-day dynamic; floor locks at initial balance",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "maxLoss": {
+        "value": "$2,000 · $50K",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "dailyLoss": {
+        "value": "Funded: 2% soft pause ($1,000 on $50K initially)",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "split": {
+        "value": "80% to trader",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "consistency": {
+        "value": "35% best-day payout rule",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "payout": {
+        "value": "5 profitable days between payouts, except first; each ≥0.3%",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "payoutLimits": {
+        "value": "$100 net minimum; $2,000 buffer on $50K; maximum 4 payouts then account closes",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "contracts": {
+        "value": "4 contracts · $50K",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "news": {
+        "value": "Allowed",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "holding": {
+        "value": "Positions close at 23:00 server time",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      },
+      "account": {
+        "value": "Simulated challenge and performance accounts",
+        "source": "https://helpfutures.e8markets.com/en/articles/11755943-e8-signature"
+      }
+    }
+  },
+  "upcomers": {
+    "plan": "Vanguard CFD · Instant · $100K example",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$2K / $3K / $4K / $5K / $10K / $25K / $50K / $100K / $150K / $200K / $250K / $300K / $500K / $600K / $700K / $800K / $900K / $1M / $1.5M",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "evaluation": {
+        "value": "Instant · no evaluation",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "target": {
+        "value": "None for evaluation; 1% profit per payout cycle",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "split": {
+        "value": "90% standard; checkout options 80% / 100% change price",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "drawdown": {
+        "value": "Equity trailing; locks at initial balance",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "maxLoss": {
+        "value": "7%",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "dailyLoss": {
+        "value": "4%; midnight UTC reset",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "days": {
+        "value": "No evaluation; 6 profitable days of ≥0.5% per payout cycle",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "consistency": {
+        "value": "20% best-day payout rule",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "payout": {
+        "value": "On demand after profit and qualifying-day requirements",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "payoutLimits": {
+        "value": "1% profit of initial balance per cycle",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "leverage": {
+        "value": "Up to 1:100",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "news": {
+        "value": "Allowed",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "holding": {
+        "value": "Weekend holding allowed",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "restrictions": {
+        "value": "2% maximum loss per trade; same-direction positions aggregated",
+        "source": "https://help.upcomers.com/en/articles/12959391-vanguard-cfd-instant-funding-program"
+      },
+      "fee": {
+        "value": "$2,399 list; $239.90 displayed promotion · $100K; confirm selected split at checkout",
+        "source": "https://www.upcomers.com/"
+      }
+    }
+  },
+  "upcomers-futures": {
+    "plan": "Vanguard Futures · Instant · $100K example",
+    "checkedAt": "2026-10-18",
+    "metrics": {
+      "sizes": {
+        "value": "$25K / $50K / $100K / $150K / $200K / $300K / $400K",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "evaluation": {
+        "value": "Instant · no evaluation",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "target": {
+        "value": "6% profit required per payout",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "split": {
+        "value": "90% standard; 80% / 100% checkout options change price",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "drawdown": {
+        "value": "End-of-day trailing; locks at initial balance",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "maxLoss": {
+        "value": "3% of highest closing balance",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "dailyLoss": {
+        "value": "2% of higher balance/equity; reset 5 PM ET",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "days": {
+        "value": "No minimum days; consistency still applies",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "consistency": {
+        "value": "20% best-day payout rule",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "payout": {
+        "value": "On demand once requirements met",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "payoutLimits": {
+        "value": "$100 net minimum; $100K caps: $1,200 first, $2,000 payouts 2–4, $3,000 payouts 5–7",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "platforms": {
+        "value": "Upcomers X",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "holding": {
+        "value": "No overnight/weekend; auto-close 4:50 PM ET",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      },
+      "restrictions": {
+        "value": "1.5% max trade loss; 14-day inactivity closure. Payout fees: bank $19.90 + 2.49%; crypto $19.90 + 30%, reduced to 2.49% if >50% of orders paid in crypto",
+        "source": "https://help.upcomers.com/en/articles/15729214-vanguard-futures-instant-funding-complete-rules-and-overview"
+      }
+    }
+  }
+}

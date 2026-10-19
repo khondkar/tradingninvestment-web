@@ -1,0 +1,442 @@
+[
+  {
+    "id": "topstep",
+    "companyId": "topstep",
+    "name": "Topstep",
+    "market": "Futures",
+    "order": 1,
+    "priority": "First launch"
+  },
+  {
+    "id": "apex-trader-funding",
+    "companyId": "apex-trader-funding",
+    "name": "Apex Trader Funding",
+    "market": "Futures",
+    "order": 2,
+    "priority": "First launch"
+  },
+  {
+    "id": "my-funded-futures",
+    "companyId": "my-funded-futures",
+    "name": "My Funded Futures",
+    "market": "Futures",
+    "order": 3,
+    "priority": "First launch"
+  },
+  {
+    "id": "tradeify",
+    "companyId": "tradeify",
+    "name": "Tradeify",
+    "market": "Futures",
+    "order": 4,
+    "priority": "First launch"
+  },
+  {
+    "id": "take-profit-trader",
+    "companyId": "take-profit-trader",
+    "name": "Take Profit Trader",
+    "market": "Futures",
+    "order": 5,
+    "priority": "First launch"
+  },
+  {
+    "id": "earn2trade",
+    "companyId": "earn2trade",
+    "name": "Earn2Trade",
+    "market": "Futures",
+    "order": 6,
+    "priority": "First launch"
+  },
+  {
+    "id": "tradeday",
+    "companyId": "tradeday",
+    "name": "TradeDay",
+    "market": "Futures",
+    "order": 7,
+    "priority": "First launch"
+  },
+  {
+    "id": "alpha-futures",
+    "companyId": "alpha-futures",
+    "name": "Alpha Futures",
+    "market": "Futures",
+    "order": 8,
+    "priority": "First launch"
+  },
+  {
+    "id": "lucid-trading",
+    "companyId": "lucid-trading",
+    "name": "Lucid Trading",
+    "market": "Futures",
+    "order": 9,
+    "priority": "First launch"
+  },
+  {
+    "id": "bulenox",
+    "companyId": "bulenox",
+    "name": "Bulenox",
+    "market": "Futures",
+    "order": 10,
+    "priority": "First launch"
+  },
+  {
+    "id": "oneup-trader",
+    "companyId": "oneup-trader",
+    "name": "OneUp Trader",
+    "market": "Futures",
+    "order": 11,
+    "priority": "Expansion"
+  },
+  {
+    "id": "elite-trader-funding",
+    "companyId": "elite-trader-funding",
+    "name": "Elite Trader Funding",
+    "market": "Futures",
+    "order": 12,
+    "priority": "Expansion"
+  },
+  {
+    "id": "uprofit",
+    "companyId": "uprofit",
+    "name": "UProfit",
+    "market": "Futures",
+    "order": 13,
+    "priority": "Expansion"
+  },
+  {
+    "id": "blusky-trading",
+    "companyId": "blusky-trading",
+    "name": "BluSky Trading",
+    "market": "Futures",
+    "order": 14,
+    "priority": "Expansion"
+  },
+  {
+    "id": "phidias-propfirm",
+    "companyId": "phidias-propfirm",
+    "name": "Phidias Propfirm",
+    "market": "Futures",
+    "order": 15,
+    "priority": "Expansion"
+  },
+  {
+    "id": "top-one-futures",
+    "companyId": "top-one-futures",
+    "name": "Top One Futures",
+    "market": "Futures",
+    "order": 16,
+    "priority": "Expansion"
+  },
+  {
+    "id": "purdia-capital",
+    "companyId": "purdia-capital",
+    "name": "Purdia Capital",
+    "market": "Futures",
+    "order": 17,
+    "priority": "Expansion"
+  },
+  {
+    "id": "legends-trading",
+    "companyId": "legends-trading",
+    "name": "Legends Trading",
+    "market": "Futures",
+    "order": 18,
+    "priority": "Expansion"
+  },
+  {
+    "id": "day-traders",
+    "companyId": "day-traders",
+    "name": "Day Traders",
+    "market": "Futures",
+    "order": 19,
+    "priority": "Expansion"
+  },
+  {
+    "id": "the-trading-pit",
+    "companyId": "the-trading-pit",
+    "name": "The Trading Pit",
+    "market": "Futures",
+    "order": 20,
+    "priority": "Expansion"
+  },
+  {
+    "id": "upcomers-futures",
+    "companyId": "upcomers",
+    "name": "Upcomers Futures",
+    "market": "Futures",
+    "order": 21,
+    "priority": "Expansion"
+  },
+  {
+    "id": "ftmo",
+    "companyId": "ftmo",
+    "name": "FTMO",
+    "market": "Forex/CFD",
+    "order": 1,
+    "priority": "First launch"
+  },
+  {
+    "id": "the5ers",
+    "companyId": "the5ers",
+    "name": "The5ers",
+    "market": "Forex/CFD",
+    "order": 2,
+    "priority": "First launch"
+  },
+  {
+    "id": "fundednext",
+    "companyId": "fundednext",
+    "name": "FundedNext",
+    "market": "Forex/CFD",
+    "order": 3,
+    "priority": "First launch"
+  },
+  {
+    "id": "fundingpips",
+    "companyId": "fundingpips",
+    "name": "FundingPips",
+    "market": "Forex/CFD",
+    "order": 4,
+    "priority": "First launch"
+  },
+  {
+    "id": "alpha-capital-group",
+    "companyId": "alpha-capital-group",
+    "name": "Alpha Capital Group",
+    "market": "Forex/CFD",
+    "order": 5,
+    "priority": "First launch"
+  },
+  {
+    "id": "e8-markets",
+    "companyId": "e8-markets",
+    "name": "E8 Markets",
+    "market": "Forex/CFD",
+    "order": 6,
+    "priority": "First launch"
+  },
+  {
+    "id": "fxify",
+    "companyId": "fxify",
+    "name": "FXIFY",
+    "market": "Forex/CFD",
+    "order": 7,
+    "priority": "First launch"
+  },
+  {
+    "id": "funded-trading-plus",
+    "companyId": "funded-trading-plus",
+    "name": "Funded Trading Plus",
+    "market": "Forex/CFD",
+    "order": 8,
+    "priority": "First launch"
+  },
+  {
+    "id": "funderpro",
+    "companyId": "funderpro",
+    "name": "FunderPro",
+    "market": "Forex/CFD",
+    "order": 9,
+    "priority": "First launch"
+  },
+  {
+    "id": "brightfunded",
+    "companyId": "brightfunded",
+    "name": "BrightFunded",
+    "market": "Forex/CFD",
+    "order": 10,
+    "priority": "First launch"
+  },
+  {
+    "id": "maven-trading",
+    "companyId": "maven-trading",
+    "name": "Maven Trading",
+    "market": "Forex/CFD",
+    "order": 11,
+    "priority": "Expansion"
+  },
+  {
+    "id": "goat-funded-trader",
+    "companyId": "goat-funded-trader",
+    "name": "Goat Funded Trader",
+    "market": "Forex/CFD",
+    "order": 12,
+    "priority": "Expansion"
+  },
+  {
+    "id": "blue-guardian",
+    "companyId": "blue-guardian",
+    "name": "Blue Guardian",
+    "market": "Forex/CFD",
+    "order": 13,
+    "priority": "Expansion"
+  },
+  {
+    "id": "audacity-capital",
+    "companyId": "audacity-capital",
+    "name": "Audacity Capital",
+    "market": "Forex/CFD",
+    "order": 14,
+    "priority": "Expansion"
+  },
+  {
+    "id": "city-traders-imperium",
+    "companyId": "city-traders-imperium",
+    "name": "City Traders Imperium",
+    "market": "Forex/CFD",
+    "order": 15,
+    "priority": "Expansion"
+  },
+  {
+    "id": "fintokei",
+    "companyId": "fintokei",
+    "name": "Fintokei",
+    "market": "Forex/CFD",
+    "order": 16,
+    "priority": "Expansion"
+  },
+  {
+    "id": "lux-trading-firm",
+    "companyId": "lux-trading-firm",
+    "name": "Lux Trading Firm",
+    "market": "Forex/CFD",
+    "order": 17,
+    "priority": "Expansion"
+  },
+  {
+    "id": "instant-funding",
+    "companyId": "instant-funding",
+    "name": "Instant Funding",
+    "market": "Forex/CFD",
+    "order": 18,
+    "priority": "Expansion"
+  },
+  {
+    "id": "aquafunded",
+    "companyId": "aquafunded",
+    "name": "AquaFunded",
+    "market": "Forex/CFD",
+    "order": 19,
+    "priority": "Expansion"
+  },
+  {
+    "id": "pipfarm",
+    "companyId": "pipfarm",
+    "name": "PipFarm",
+    "market": "Forex/CFD",
+    "order": 20,
+    "priority": "Expansion"
+  },
+  {
+    "id": "ftuk",
+    "companyId": "ftuk",
+    "name": "FTUK",
+    "market": "Forex/CFD",
+    "order": 21,
+    "priority": "Expansion"
+  },
+  {
+    "id": "for-traders",
+    "companyId": "for-traders",
+    "name": "For Traders",
+    "market": "Forex/CFD",
+    "order": 22,
+    "priority": "Expansion"
+  },
+  {
+    "id": "dna-funded",
+    "companyId": "dna-funded",
+    "name": "DNA Funded",
+    "market": "Forex/CFD",
+    "order": 23,
+    "priority": "Expansion"
+  },
+  {
+    "id": "atlas-funded",
+    "companyId": "atlas-funded",
+    "name": "Atlas Funded",
+    "market": "Forex/CFD",
+    "order": 24,
+    "priority": "Expansion"
+  },
+  {
+    "id": "funding-traders",
+    "companyId": "funding-traders",
+    "name": "Funding Traders",
+    "market": "Forex/CFD",
+    "order": 25,
+    "priority": "Expansion"
+  },
+  {
+    "id": "ment-funding",
+    "companyId": "ment-funding",
+    "name": "Ment Funding",
+    "market": "Forex/CFD",
+    "order": 26,
+    "priority": "Expansion"
+  },
+  {
+    "id": "qt-funded",
+    "companyId": "qt-funded",
+    "name": "QT Funded",
+    "market": "Forex/CFD",
+    "order": 27,
+    "priority": "Expansion"
+  },
+  {
+    "id": "lark-funding",
+    "companyId": "lark-funding",
+    "name": "Lark Funding",
+    "market": "Forex/CFD",
+    "order": 28,
+    "priority": "Expansion"
+  },
+  {
+    "id": "ofp-funding",
+    "companyId": "ofp-funding",
+    "name": "OFP Funding",
+    "market": "Forex/CFD",
+    "order": 29,
+    "priority": "Expansion"
+  },
+  {
+    "id": "fundedhive",
+    "companyId": "fundedhive",
+    "name": "FundedHive",
+    "market": "Forex/CFD",
+    "order": 30,
+    "priority": "Expansion"
+  },
+  {
+    "id": "upcomers",
+    "companyId": "upcomers",
+    "name": "Upcomers",
+    "market": "Forex/CFD",
+    "order": 31,
+    "priority": "Expansion"
+  },
+  {
+    "id": "ftmo-futures",
+    "companyId": "ftmo",
+    "name": "FTMO Futures",
+    "market": "Futures",
+    "order": 21,
+    "priority": "Program verification pending"
+  },
+  {
+    "id": "fundednext-futures",
+    "companyId": "fundednext",
+    "name": "FundedNext Futures",
+    "market": "Futures",
+    "order": 22,
+    "priority": "Program verification pending"
+  },
+  {
+    "id": "e8-futures",
+    "companyId": "e8-markets",
+    "name": "E8 Futures",
+    "market": "Futures",
+    "order": 23,
+    "priority": "Program verification pending"
+  }
+]
