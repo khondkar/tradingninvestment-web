@@ -1,0 +1,21 @@
+/* The nested Brokerage menu expands in normal flow, inside a scrollable menu. */
+.site .tni-brokerage-menu { min-width: 0; width: 100%; }
+.site .tni-brokerage-menu > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  box-sizing: border-box; min-height: 48px; padding: 12px;
+  list-style: none; cursor: pointer; border-radius: 8px;
+  background: #edf4ff; color: #102847; font: inherit; font-weight: 800;
+}
+.site .tni-brokerage-menu > summary::-webkit-details-marker { display: none; }
+.site .tni-brokerage-chevron { font-size: 24px; line-height: 1; flex-shrink: 0; }
+.site .tni-brokerage-menu[open] > summary .tni-brokerage-chevron { transform: rotate(180deg); }
+.site .tni-brokerage-links { display: grid; gap: 4px; margin: 6px 0 6px 10px; border-left: 2px solid #95b6e0; padding-left: 6px; }
+.site .tni-brokerage-links > a { display: block; box-sizing: border-box; width: 100%; min-height: 48px; padding: 12px; white-space: normal; line-height: 1.45; text-decoration: none; color: #102847; }
+.site .tni-brokerage-links > a[aria-current="page"] { background: #dceaff; color: #063d80; font-weight: 800; border-radius: 8px; }
+.site .tni-brokerage-menu > summary:focus-visible, .site .tni-brokerage-links > a:focus-visible { outline: 3px solid #0756b3; outline-offset: -3px; }
+.site .site-header .tni-market-dropdown-panel[aria-label="Trading destinations"] {
+  box-sizing: border-box; max-height: calc(100vh - 140px); max-height: calc(100dvh - 140px);
+  overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable;
+}
+.site .tni-mobile-menu-panel { overscroll-behavior: contain; }
+.site .tni-market-sidebar .tni-brokerage-menu > summary { font-size: 19.5px; line-height: 1.45; }
