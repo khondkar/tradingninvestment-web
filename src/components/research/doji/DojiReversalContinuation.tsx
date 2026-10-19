@@ -103,7 +103,7 @@ export default function DojiReversalContinuation() {
         </p>
 
         <div className="doji-rc-table-scroll">
-          <table className="doji-rc-table">
+          <table data-tni-readable-table="data" className="doji-rc-table">
             <thead>
               <tr>
                 <th scope="col">Signal classification</th>

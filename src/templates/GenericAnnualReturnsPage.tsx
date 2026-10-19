@@ -2426,7 +2426,7 @@ export default function GenericAnnualReturnsPage({
                 '#ffffff',
             }}
           >
-            <table
+            <table data-tni-readable-table="data"
               className="tni-annual-returns-table"
               style={{
                 width: '100%',
@@ -2543,6 +2543,7 @@ export default function GenericAnnualReturnsPage({
                         key={
                           row.year
                         }
+                        data-return-sign={row.value > 0 ? "positive" : row.value < 0 ? "negative" : "neutral"}
                         style={{
                           borderBottom:
                             '1px solid #edf1f6',

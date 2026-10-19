@@ -104,7 +104,7 @@ export default function GenericMonthlyReturnsHeatmap({
 
       <div className="tni-monthly-heatmap-scroll">
 
-        <table className="tni-monthly-heatmap">
+        <table data-tni-readable-table="heatmap" className="tni-monthly-heatmap">
 
           <thead>
             <tr>

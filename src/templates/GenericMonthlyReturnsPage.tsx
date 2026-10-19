@@ -921,7 +921,7 @@ export default function GenericMonthlyReturnsPage({
 
 
         <div className="tni-monthly-table-scroll">
-          <table className="tni-monthly-table">
+          <table data-tni-readable-table="data" className="tni-monthly-table">
             <thead>
               <tr>
                 <th>Month</th>

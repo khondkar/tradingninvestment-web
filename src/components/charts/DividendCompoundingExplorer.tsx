@@ -415,7 +415,7 @@ export default function DividendCompoundingExplorer({
         </div>
 
         <div className="tni-dividend-explorer__table-wrap">
-          <table>
+          <table data-tni-readable-table="data">
             <thead>
               <tr>
                 <th>
@@ -534,7 +534,7 @@ export default function DividendCompoundingExplorer({
         </div>
 
         <div className="tni-dividend-explorer__table-wrap">
-          <table>
+          <table data-tni-readable-table="data">
             <thead>
               <tr>
                 <th>Year</th>

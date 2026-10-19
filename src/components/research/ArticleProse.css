@@ -13,3 +13,128 @@
     margin-bottom: 24px !important;
   }
 }
+
+/* Shared article body contrast. Only light-background prose; no font-size change.
+   Black is a safe fallback for inherited/inline prose colors. Explicit neutral
+   paragraph colors below get a calculated +30% contrast on white (max 21:1).
+   New light article templates can opt in using data-article-prose="light".
+   Dark prose blocks opt out using data-article-contrast="preserve". */
+:is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]) :is(p, li, blockquote):not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) {
+  color: #000000 !important;
+}
+/* #18212b → #000000; 16.26:1 → 21.00:1 on white */
+html body .tni-iphone p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #000000 !important; }
+/* #657487 → #556272; 4.77:1 → 6.22:1 on white */
+html body .bank-study-key-findings p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #556272 !important; }
+/* #425269 → #344153; 7.95:1 → 10.36:1 on white */
+html body .bank-study-body p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #344153 !important; }
+/* #566678 → #475463; 5.89:1 → 7.73:1 on white */
+html body .tni-doji-research-link p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #475463 !important; }
+/* #455568 → #374453; 7.63:1 → 9.93:1 on white */
+html body .tni-doji-study-excerpt > p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #374453 !important; }
+/* #617080 → #525e6c; 5.08:1 → 6.61:1 on white */
+html body .tni-doji-study-continue p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #525e6c !important; }
+/* #52645b → #44524b; 6.30:1 → 8.22:1 on white */
+html body .tni-doji-data-license p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #44524b !important; }
+/* #64748b → #546275; 4.76:1 → 6.21:1 on white */
+html body .tni-chip-drawdowns__heading p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #546275 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-definition p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])),
+html body .tni-drawdown-chart-heading p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])),
+html body .tni-drawdown-finding p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])),
+html body .tni-drawdown-recovery p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])),
+html body .tni-drawdown-methodology p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #667085 → #565e70; 4.97:1 → 6.50:1 on white */
+html body .tni-drawdown-stat p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #565e70 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-history > p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-frequency p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-frequency p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-forward > p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-duration > p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #667085 → #565e70; 4.97:1 → 6.50:1 on white */
+html body .tni-duration-grid article > p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #565e70 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-intelligence p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-drawdown-2026-context > p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .tni-crash-2026 p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+/* #657487 → #556272; 4.77:1 → 6.22:1 on white */
+html body .spy-doji-key-findings p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #556272 !important; }
+/* #435165 → #354050; 8.07:1 → 10.50:1 on white */
+html body .spy-doji-article-body p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #354050 !important; }
+/* #667085 → #565e70; 4.97:1 → 6.50:1 on white */
+html body .tni-current-month-card p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #565e70 !important; }
+/* #667085 → #565e70; 4.97:1 → 6.50:1 on white */
+html body .tni-monthly-methodology p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #565e70 !important; }
+/* #667085 → #565e70; 4.97:1 → 6.50:1 on white */
+html body .tni-pattern-card p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #565e70 !important; }
+/* #475467 → #394352; 7.69:1 → 10.01:1 on white */
+html body .monthly-seo-content p:not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { color: #394352 !important; }
+
+/* Shared research tables. Explicit marker includes embedded comparison tools. */
+html body table[data-tni-readable-table="data"] :is(th, td) {
+  color: #172b45 !important;
+  background-color: #ffffff !important;
+  font-size: 17px !important;
+  font-weight: 650 !important;
+  line-height: 1.5 !important;
+  opacity: 1 !important;
+  font-variant-numeric: tabular-nums;
+}
+html body table[data-tni-readable-table="data"] th {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  background-color: #eef3f9 !important;
+  letter-spacing: .01em !important;
+  white-space: normal !important;
+}
+html body table[data-tni-readable-table="data"] :is(th, td) :is(span, strong, b, small, em) {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  opacity: 1 !important;
+}
+html body table[data-tni-readable-table="data"] a {
+  color: #064eaa !important;
+  font-weight: 700 !important;
+  text-decoration: underline;
+}
+html body table[data-tni-readable-table="data"] caption {
+  color: #243b53 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.5;
+}
+/* Retain return sign colors in the annual table, with darker readable tones. */
+html body table[data-tni-readable-table="data"] tr[data-return-sign="positive"] :is(td:nth-child(2), td:nth-child(3)) { color: #075d36 !important; }
+html body table[data-tni-readable-table="data"] tr[data-return-sign="negative"] :is(td:nth-child(2), td:nth-child(3)) { color: #a11526 !important; }
+/* Heatmap cell backgrounds and contrast-aware foreground colors remain intact. */
+html body table[data-tni-readable-table="heatmap"] :is(th, td) {
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  line-height: 1.4 !important;
+}
+@media (max-width: 720px) {
+  html body table[data-tni-readable-table="data"] td { font-size: 16px !important; }
+  html body table[data-tni-readable-table="data"] th { font-size: 15px !important; }
+  html body table[data-tni-readable-table="data"].tni-annual-returns-table td:nth-child(3) { font-size: 14px !important; }
+}
+
+/* Larger, medium-weight article prose; preserve the existing font family. */
+html body :is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]):is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]) :is(p, li, blockquote):not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) {
+  color: #000000 !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 1.8 !important;
+}
+html body :is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]):is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]) :is(p, li, blockquote):not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) :is(span, em) { color: inherit !important; font-size: inherit !important; }
+html body :is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]):is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]) :is(p, li, blockquote):not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) :is(strong, b) { color: inherit !important; font-weight: 750 !important; }
+@media (max-width: 720px) {
+html body :is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]):is(.tni-annual-page, .tni-monthly-page, .tni-return-methods, .tni-doji, .spy-doji-research, .bank-study, .tni-drawdown-page, .crash1929-page, .tni-static-research-snapshot, .ns26-page, .tni-gravestone, .tni-iphone, .tni-dow-react-root, .tni-snxx-research, .article-content, [data-article-prose="light"]) :is(p, li, blockquote):not(:where(header *, nav *, footer *, a *, button *, figure *, svg *, table *, .tni-return-explorer-header *, [data-article-contrast="preserve"] *, [data-article-contrast="preserve"], [class*="eyebrow"], [class*="kicker"], [class*="byline"], [class*="breadcrumb"])) { font-size: 20px !important; }
+}

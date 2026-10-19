@@ -391,7 +391,7 @@ export default function LeveragedEtfPeriodComparison({
           borderRadius: '10px',
         }}
       >
-        <table
+        <table data-tni-readable-table="data"
           style={{
             width: '100%',
             borderCollapse:

@@ -25,6 +25,7 @@ export default function SnxxResearchPage() {
   return (
     <main
       id="main-content"
+      className="tni-snxx-research"
       style={{
         maxWidth: 1080,
         fontSize: "clamp(18px, 2vw, 21px)",
@@ -203,7 +204,7 @@ export default function SnxxResearchPage() {
             borderRadius: 16,
             margin: "24px 0",
           }}>
-            <table style={{
+            <table data-tni-readable-table="data" style={{
               width: "100%",
               borderCollapse: "collapse",
               textAlign: "right",

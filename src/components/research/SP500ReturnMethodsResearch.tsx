@@ -2211,7 +2211,7 @@ export default function SP500ReturnMethodsResearch() {
         </header>
 
         <div className="tni-return-methods__summary-table-wrap">
-          <table className="tni-return-methods__summary-table">
+          <table data-tni-readable-table="data" className="tni-return-methods__summary-table">
             <thead>
               <tr>
                 <th scope="col">
@@ -2734,7 +2734,7 @@ export default function SP500ReturnMethodsResearch() {
               </div>
 
               <div className="tni-dividend-period-table-shell">
-                <table
+                <table data-tni-readable-table="data"
                   className="tni-dividend-period-table"
                   aria-describedby="dividend-return-table-description"
                 >
@@ -3388,7 +3388,7 @@ export default function SP500ReturnMethodsResearch() {
         </p>
 
         <div className="tni-source-table-wrap">
-          <table className="tni-source-table">
+          <table data-tni-readable-table="data" className="tni-source-table">
             <thead>
               <tr>
                 <th scope="col">
@@ -3880,7 +3880,7 @@ export default function SP500ReturnMethodsResearch() {
         </header>
 
         <div className="tni-return-table-wrap">
-          <table className="tni-return-table">
+          <table data-tni-readable-table="data" className="tni-return-table">
             <thead>
               <tr>
                 <th scope="col">

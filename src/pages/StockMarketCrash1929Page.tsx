@@ -158,7 +158,7 @@ export default function StockMarketCrash1929Page() {
             aria-labelledby="crash1929-timeline"
             tabIndex={0}
           >
-            <table className="crash1929-table">
+            <table data-tni-readable-table="data" className="crash1929-table">
               <thead>
                 <tr>
                   <th scope="col">Date</th>

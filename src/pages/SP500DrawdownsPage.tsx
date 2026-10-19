@@ -1050,7 +1050,7 @@ export default function SP500DrawdownsPage() {
         </p>
 
         <div className="tni-drawdown-table-wrap">
-          <table className="tni-drawdown-table">
+          <table data-tni-readable-table="data" className="tni-drawdown-table">
             <thead>
               <tr>
                 <th>Peak</th>
@@ -1312,7 +1312,7 @@ export default function SP500DrawdownsPage() {
         </p>
 
         <div className="tni-forward-table-wrap">
-          <table className="tni-forward-table">
+          <table data-tni-readable-table="data" className="tni-forward-table">
 
             <thead>
               <tr>

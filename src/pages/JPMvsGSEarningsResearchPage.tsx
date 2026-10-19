@@ -42,7 +42,7 @@ function ReactionTable() {
 
   return (
     <div className="bank-study-table-wrap">
-      <table>
+      <table data-tni-readable-table="data">
         <caption>
           Five-day pre-earnings momentum and first 30-minute reactions
         </caption>
