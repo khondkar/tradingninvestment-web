@@ -7,6 +7,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..')
 const dist=path.join(root,'dist')
 const routes=JSON.parse(fs.readFileSync(path.join(root,'src/components/trading/routes.json'),'utf8'))
+routes.push(...JSON.parse(fs.readFileSync(path.join(root,'src/components/trading/funded-routes.json'),'utf8')))
 const server=await createServer({root,server:{middlewareMode:true,hmr:false},appType:'custom',logLevel:'error'})
 let TradingPage
 try { TradingPage=(await server.ssrLoadModule('/src/pages/TradingPage.tsx')).default } finally { await server.close() }
