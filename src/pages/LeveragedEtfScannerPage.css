@@ -235,3 +235,24 @@
     font-size: 17px;
   }
 }
+
+/* Complete saved-snapshot cards. Keep unavailable fields visible. */
+.tni-les-card { scroll-margin-top: 100px; min-width: 0; }
+.tni-les-card-data { margin-top: 16px; color: #12243b; }
+.tni-les-quote { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px; border-radius: 12px; background: #edf5ff; }
+.tni-les-quote small, .tni-les-quote strong { display: block; }
+.tni-les-quote small { color: #334860; font-size: 13px; font-weight: 600; }
+.tni-les-quote strong { font-size: clamp(19px, 2vw, 25px); line-height: 1.4; }
+.tni-les-quote .gain strong { color: #06713d; }
+.tni-les-quote .loss strong { color: #b52335; }
+.tni-les-data-date { font-size: 12px; color: #43556c; margin: 8px 0 14px; }
+.tni-les-card-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; margin: 0; }
+.tni-les-card-metrics > div { min-width: 0; border-bottom: 1px solid #dce5ef; padding-bottom: 12px; }
+.tni-les-card-metrics dt { font-size: 13px; color: #334860; font-weight: 600; }
+.tni-les-card-metrics dd { margin: 4px 0; font-size: 18px; font-weight: 750; }
+.tni-les-card-metrics small { display: block; font-size: 11px; color: #43556c; }
+.tni-les-card-sources { margin: 14px 0; font-size: 13px; line-height: 1.6; }
+.tni-les-card-sources summary { cursor: pointer; color: #064eae; font-weight: 700; min-height: 32px; }
+.tni-les-card-sources a { display: inline-block; margin: 4px 12px 4px 0; text-decoration: underline; overflow-wrap: anywhere; }
+.tni-les-card:focus-visible { outline: 3px solid #075dce; outline-offset: 4px; }
+@media (max-width: 380px) { .tni-les-quote { padding: 12px; } .tni-les-card-metrics dd { font-size: 16px; } }
