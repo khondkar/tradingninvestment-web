@@ -142,3 +142,7 @@
  .tni-editorial .tni-home-citation-links>a{flex-direction:column;align-items:flex-start;gap:12px}
  .tni-home-citation-links img{width:100px;height:76px;flex-basis:auto}
 }
+
+/* Responsive sources must retain the original image's flex/grid sizing. */
+.tni-editorial .tni-home-citation-links picture,
+.tni-editorial .editorial-study-image picture { display: contents; }

@@ -35,3 +35,5 @@ try {
 } finally {
   await vite.close()
 }
+
+await import('./generate-homepage-thumbnails.mjs')

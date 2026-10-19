@@ -25,6 +25,14 @@ async function start() {
   }
 
   const container = document.getElementById('root')!
+  // Let the browser paint the fully styled server-rendered homepage before
+  // hydration competes for the main thread. No idle timeout or interaction gate.
+  const homePage = new URLSearchParams(window.location.search).get('page')
+  if (container.dataset.tniHydrate === 'home' && window.location.pathname === '/'
+      && homePage !== 'articles' && homePage !== 'about'
+      && document.visibilityState === 'visible') {
+    await new Promise<void>(resolve => requestAnimationFrame(() => setTimeout(resolve, 0)))
+  }
   // Preserve the existing article HTML until its code, CSS, and data are ready.
   await prepareApp(window.location.pathname)
   const app = <StrictMode>{window.location.pathname.replace(/\/$/, '') === '/100-years-dow-jones-industrial-average-djia-events-history-chart' ? <App /> : <App />}</StrictMode>

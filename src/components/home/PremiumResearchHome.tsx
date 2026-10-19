@@ -12,6 +12,11 @@ const citations = [
 ]
 
 
+const homeThumbnails: Record<string, string> = {
+  '/images/social/research/doji-candlestick-spy-26-year-study-tni-og.png': 'spy-doji',
+  '/images/social/average-stock-market-return-og.png': 'market-history',
+}
+
 const priorities = ['/research/doji-candlestick-spy-26-year-study/', '/average-stock-market-return/']
 const featured = researchItems.filter(item => item.homepagePlacement === 'featured').sort((a, b) => {
   const rank = (path: string) => priorities.includes(path) ? priorities.indexOf(path) : 2
@@ -47,7 +52,10 @@ export default function PremiumResearchHome() {
           <div className="tni-home-citations-icon"><HomeIcon kind="cap" /></div><h2 id="editorial-citations">Cited &amp; Referenced By</h2>
           <p>Historical market research referenced by academic, publication, and industry sources.</p>
           <div className="tni-home-citation-links">{citations.map(citation => <a key={citation.name} href={citation.href} target="_blank" rel="noopener noreferrer">
-            <img src={citation.logo} alt="" width="80" height="64" loading="lazy" decoding="async" />
+            <picture>
+              {citation.name === 'Sorbonne University' && <source type="image/webp" srcSet="/images/home-thumbnails/sorbonne-160.webp" />}
+              <img src={citation.logo} alt="" width="80" height="64" loading="lazy" decoding="async" />
+            </picture>
             <span><strong>{citation.name}</strong><small>{citation.detail}</small></span>
           </a>)}</div>
           <div className="tni-home-citations-bottom"><small>References are not endorsements.</small><a href="https://app.tradingninvestment.com/research/citations">Explore all citations ↗</a></div>
@@ -74,7 +82,12 @@ export default function PremiumResearchHome() {
               <a className="editorial-link" href={item.path}>{doji ? 'Explore the study' : 'Explore market history'} ↗</a>
             </div>
             {item.image && <a className="editorial-study-image" href={item.path} aria-label={`Read ${item.title}`}>
-              <img src={item.image} alt={`${item.name} — TNI research chart`} width="1200" height="630" loading="lazy" decoding="async" />
+              <picture>
+                {homeThumbnails[item.image] && <source type="image/webp"
+                  srcSet={`/images/home-thumbnails/${homeThumbnails[item.image]}-480.webp 480w, /images/home-thumbnails/${homeThumbnails[item.image]}-960.webp 960w`}
+                  sizes="(max-width: 700px) calc(100vw - 28px), 600px" />}
+                <img src={item.image} alt={`${item.name} — TNI research chart`} width="1200" height="630" loading="lazy" decoding="async" />
+              </picture>
             </a>}
           </article>
         })}
