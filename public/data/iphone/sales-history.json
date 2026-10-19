@@ -1,0 +1,30 @@
+[
+  {
+    "quarter": "FY2025 Q3",
+    "reportDate": "2025-07-31",
+    "revenueBillion": 44.582,
+    "priorYearBillion": 39.296,
+    "source": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000073/aapl-20250628.htm"
+  },
+  {
+    "quarter": "FY2025 Q4",
+    "reportDate": "2025-10-30",
+    "revenueBillion": 49.025,
+    "priorYearBillion": 46.222,
+    "source": "https://www.apple.com/newsroom/pdfs/fy2025-q4/FY25_Q4_Consolidated_Financial_Statements.pdf"
+  },
+  {
+    "quarter": "FY2026 Q1",
+    "reportDate": "2026-01-29",
+    "revenueBillion": 85.269,
+    "priorYearBillion": 69.138,
+    "source": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm"
+  },
+  {
+    "quarter": "FY2026 Q3",
+    "reportDate": "2026-07-30",
+    "revenueBillion": 54.252,
+    "priorYearBillion": 44.582,
+    "source": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm"
+  }
+]

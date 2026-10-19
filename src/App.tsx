@@ -20,6 +20,7 @@ function currentPathname() { return typeof window === 'undefined' ? '/' : window
 let LeveragedEtfScannerPage: typeof import('./pages/LeveragedEtfScannerPage')['default']
 let JPMvsGSEarningsResearchPage: typeof import('./pages/JPMvsGSEarningsResearchPage')['default']
 let SPYDojiResearchPage: typeof import('./pages/SPYDojiResearchPage')['default']
+let AppleIphoneResearchPage: typeof import('./pages/AppleIphoneResearchPage')['default']
 let GravestoneDojiArticle: typeof import('./pages/GravestoneDojiArticle')['default']
 let MagicDojiPage: typeof import('./pages/MagicDojiPage')['default']
 let NasdaqSelloff2026Page: typeof import('./pages/NasdaqSelloff2026Page')['default']
@@ -80,6 +81,7 @@ export async function prepareApp(pathname: string) {
   if (path === '/research/scanners/leveraged-etf') { LeveragedEtfScannerPage = (await import('./pages/LeveragedEtfScannerPage')).default; return }
   if (path === '/research/jpm-vs-gs-earnings-analysis') { JPMvsGSEarningsResearchPage = (await import('./pages/JPMvsGSEarningsResearchPage')).default; return }
   if (path === '/research/doji-candlestick-spy-26-year-study') { SPYDojiResearchPage = (await import('./pages/SPYDojiResearchPage')).default; return }
+  if (path === '/new-iphone-release-apple-stock-price-history') { AppleIphoneResearchPage = (await import('./pages/AppleIphoneResearchPage')).default; return }
   if (path === '/gravestone-doji-candlestick-pattern') {
     GravestoneDojiArticle = (await import('./pages/GravestoneDojiArticle')).default;
     return
@@ -993,6 +995,9 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
         <Footer setPage={setPage} />
       </div>
     )
+  }
+  if (normalizedPath === '/new-iphone-release-apple-stock-price-history') {
+    return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><AppleIphoneResearchPage /><Footer setPage={setPage} /></div>
   }
   if (normalizedPath === '/gravestone-doji-candlestick-pattern') {
     return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><GravestoneDojiArticle /><Footer setPage={setPage} /></div>

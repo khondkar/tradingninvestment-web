@@ -1,0 +1,242 @@
+/* TNI iPhone Research — consolidated page styles */
+.tni-iphone {
+  --ink: #101820;
+  --muted: #374151;
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px 20px 80px;
+  color: var(--ink);
+  background: #fff;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+.tni-iphone a {
+  color: #064d82;
+  font-weight: 750;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.tni-iphone-crumb { font-size: 19.5px; color: var(--muted); margin-bottom: 28px; }
+.tni-iphone-hero { padding: 34px 0 45px; border-bottom: 1px solid #dfe6ed; }
+.tni-iphone-eyebrow {
+  font-size: 16.5px !important;
+  letter-spacing: .14em;
+  font-weight: 800;
+  color: #104d75 !important;
+}
+.tni-iphone h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -.04em;
+  max-width: 880px;
+  margin: 12px 0 20px;
+  color: var(--ink);
+}
+.tni-iphone h2 {
+  font-size: clamp(34px, 4vw, 54px);
+  letter-spacing: -.035em;
+  margin: 12px 0;
+  color: var(--ink);
+}
+.tni-iphone h3 { color: var(--ink); }
+.tni-iphone p {
+  max-width: 720px;
+  margin-top: 0;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #18212b;
+  text-align: left;
+  overflow-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+  hyphens: none;
+}
+.tni-iphone-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+.tni-iphone-links a {
+  border: 1px solid #9aabb8;
+  border-radius: 9px;
+  padding: 10px 13px;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 650;
+}
+.tni-iphone section { padding: 48px 0; border-bottom: 1px solid #e4e9ef; scroll-margin-top: 80px; }
+.tni-iphone-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 12px 0 20px; }
+.tni-iphone-tabs button {
+  border: 1px solid #899eae;
+  border-radius: 9px;
+  background: #fff;
+  color: #102c40;
+  padding: 12px 16px;
+  min-width: 55px;
+  min-height: 54px;
+  font-size: 21px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.tni-iphone-tabs button[aria-pressed=true] { background: #163b57; color: #fff; border-color: #163b57; }
+.tni-iphone-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #f2f6fa;
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+.tni-iphone-stat span, .tni-iphone-stat small { font-size: 18px; color: #263746; }
+.tni-iphone-stat strong { font-size: 45px; color: var(--ink); }
+.tni-iphone-table { width: 100%; overflow-x: auto; border: 1px solid #dce5ec; border-radius: 12px; }
+.tni-iphone table { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 21px; }
+.tni-iphone th {
+  text-align: left;
+  background: #e9f0f5;
+  color: #182b3a;
+  font-weight: 800;
+  padding: 14px;
+  white-space: nowrap;
+}
+.tni-iphone td { padding: 15px 14px; border-top: 1px solid #e8edf2; color: #142636; }
+.tni-iphone-note { font-size: 21px !important; color: #374151 !important; }
+.tni-iphone-footer { padding-top: 25px; color: #263746; font-size: 19.5px; line-height: 1.7; }
+
+/* Introduction and editorial paragraphs */
+.tni-iphone-introduction { width: 100%; max-width: 850px; margin: 36px auto 42px; }
+.tni-iphone .tni-iphone-introduction p {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 26px;
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: left;
+}
+.tni-iphone .tni-iphone-hero > p {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Preserved historical article */
+.tni-iphone-original-content {
+  font-size: 24px;
+  line-height: 1.8;
+  color: #182b3a;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+.tni-iphone .tni-iphone-original-content p { margin: 1rem 0 1.35rem; font-size: 18px; text-align: left; }
+.tni-iphone-original-content figure { width: 100%; max-width: 100%; margin: 1.7rem 0; }
+.tni-iphone-original-content img { display: block; width: auto; max-width: 100%; height: auto; margin: auto; }
+.tni-iphone-original-content figcaption {
+  text-align: center;
+  font-size: 19px;
+  opacity: 1;
+  color: #263746;
+  margin-top: .6rem;
+}
+.tni-iphone-original-content table { width: 100%; border-collapse: collapse; font-size: 21px; }
+.tni-iphone-original-content td, .tni-iphone-original-content th {
+  border-bottom: 1px solid #ddd;
+  padding: .65rem .5rem;
+  text-align: left;
+  min-width: 0;
+}
+
+/* iPhone generations timeline */
+.tni-iphone-timeline { display: grid; gap: 0; margin: 24px 0 4px; border-top: 1px solid #e7e9ed; }
+.tni-iphone-milestone {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid #e7e9ed;
+}
+.tni-iphone-milestone > * { min-width: 0; }
+.tni-iphone-milestone time { font-size: 19.5px; font-weight: 700; color: #263746; font-variant-numeric: tabular-nums; }
+.tni-iphone-milestone h3 { font-size: 28.5px; line-height: 1.35; margin: 0 0 8px; }
+.tni-iphone .tni-iphone-milestone p { max-width: 100%; margin: 0 0 9px; font-size: 18px; line-height: 1.75; text-align: left; }
+.tni-iphone-milestone a { font-size: 19.5px; font-weight: 650; }
+.tni-iphone-chart-missing:not([hidden]) {
+  display: block;
+  padding: 22px;
+  border: 1px dashed #cbd5e1;
+  background: #f8fafc;
+  color: #263746;
+  border-radius: 12px;
+  font-size: 21px;
+}
+
+/* Event-study summary, charts and tables */
+.tni-iphone-summary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0 0 20px; }
+.tni-iphone-summary-grid > div {
+  background: #f6f8fa;
+  border: 1px solid #e3eaf0;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.tni-iphone-summary-grid span { font-size: 18px; color: #263746; font-weight: 650; }
+.tni-iphone-summary-grid strong { font-size: clamp(27px, 3.5vw, 40px); color: var(--ink); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.tni-iphone-chart-card { border: 1px solid #e0e8ef; border-radius: 16px; padding: 18px 12px 12px; margin: 16px 0 26px; background: #fff; }
+.tni-iphone-chart-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; padding: 0 8px; }
+.tni-iphone-chart-heading h3 { font-size: 28.5px; margin: 0; }
+.tni-iphone-chart-heading span { font-size: 18px; color: #263746; }
+.tni-iphone-chart-legend { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 6px 4px; }
+.tni-iphone-chart-legend button {
+  border: 1px solid #a6b7c4;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  color: #142636;
+  font-size: 19.5px;
+  font-weight: 650;
+  cursor: pointer;
+  min-height: 48px;
+}
+.tni-iphone-chart-legend button[aria-pressed=false] { opacity: 1; background: #e9edf0; color: #334454; text-decoration: line-through; }
+.tni-iphone-legend-dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.tni-iphone-chart-scroll { overflow-x: auto; overscroll-behavior-inline: contain; }
+.tni-iphone-chart-scroll svg { width: 100%; min-width: 880px; height: auto; display: block; }
+.tni-iphone-chart-scroll svg text { font-size: 17px !important; fill: #182b3a !important; font-weight: 650; }
+.tni-iphone-chart-caption { font-size: 18px !important; line-height: 1.55 !important; color: #374151 !important; margin: 2px 8px 6px; }
+.tni-iphone-table-heading { font-size: 28.5px; margin: 20px 0 12px; }
+.tni-iphone-average-row { background: #dcebf4; font-weight: 750; }
+.tni-iphone-average-row td, .tni-iphone-average-row th { border-top: 2px solid #b9cbd9; }
+
+@media (min-width: 760px) {
+  .tni-iphone-summary-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .tni-iphone-chart-card { padding: 22px; }
+}
+@media (min-width: 761px) {
+  .tni-iphone-milestone { grid-template-columns: 150px minmax(0, 1fr); gap: 28px; align-items: start; }
+  .tni-iphone section > p { max-width: 900px; }
+}
+@media (max-width: 600px) {
+  .tni-iphone { padding: 20px 16px 64px; }
+  .tni-iphone-hero { padding: 16px 0 32px; }
+  .tni-iphone section { padding: 34px 0; }
+  .tni-iphone p { font-size: 17px; line-height: 1.7; }
+  .tni-iphone h1 { font-size: clamp(37px, 9vw, 52px); }
+  .tni-iphone h2 { font-size: clamp(31px, 7vw, 40px); }
+  .tni-iphone-links a { flex: 1 1 auto; text-align: center; }
+  .tni-iphone-milestone { grid-template-columns: 1fr; gap: 7px; padding: 19px 0; }
+  .tni-iphone-milestone h3 { font-size: 27px; }
+  .tni-iphone .tni-iphone-milestone p,
+  .tni-iphone .tni-iphone-original-content p,
+  .tni-iphone .tni-iphone-introduction p { font-size: 17px; line-height: 1.7; }
+  .tni-iphone-introduction { margin: 26px auto 38px; }
+  .tni-iphone .tni-iphone-introduction p { margin-bottom: 24px; }
+  .tni-iphone-summary-grid > div { padding: 13px; }
+  .tni-iphone-summary-grid strong { font-size: 27px; }
+  .tni-iphone table { font-size: 20px; }
+  .tni-iphone-original-content table { display: block; overflow-x: auto; white-space: nowrap; }
+}

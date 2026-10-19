@@ -60,6 +60,19 @@ export const researchItems: ResearchItem[] = [
     categories: config.categories,
     kind: 'drawdowns' as const,
   })),
+  {
+    slug: 'new-iphone-release-apple-stock-price-history',
+    path: '/new-iphone-release-apple-stock-price-history/',
+    title: 'iPhone Launch & Stock Performance (2007–2026)',
+    description: 'Interactive AAPL versus S&P 500 announcement returns, excess performance, and historical iPhone sales research.',
+    name: 'Apple Inc.',
+    symbol: 'AAPL',
+    categories: ['stock', 'trading', 'comparison'],
+    kind: 'article',
+    image: '/images/research/tni-iphone-launch-stock-performance.webp',
+    topics: ['comparisons'],
+    publishedAt: '2026-10-18',
+  },
   ...additionalPublications,
 ]
 

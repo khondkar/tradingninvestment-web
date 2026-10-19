@@ -1,0 +1,245 @@
+[
+  {
+    "date": "2018-09-12",
+    "model": "iPhone XS / XS Max",
+    "description": "A12 Bionic, Face ID and larger OLED display",
+    "source": "https://www.apple.com/newsroom/2018/09/iphone-xs-and-iphone-xs-max-bring-the-best-and-biggest-displays-to-iphone/",
+    "returns": {
+      "1D": -1.2419,
+      "5D": -2.5062,
+      "10D": -0.7416,
+      "20D": 1.3491,
+      "3M": -24.4055,
+      "6M": -17.2831,
+      "1Y": 1.207
+    },
+    "benchmark": {
+      "1D": 0.0357,
+      "5D": 0.5686,
+      "10D": 0.9581,
+      "20D": -0.2614,
+      "3M": -8.6953,
+      "6M": -2.7498,
+      "1Y": 4.2135
+    },
+    "baselineDate": "2018-09-11",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2019-09-10",
+    "model": "iPhone 11",
+    "description": "Dual-camera system and Night mode",
+    "source": "https://www.apple.com/newsroom/2019/09/apple-introduces-dual-camera-iphone-11/",
+    "returns": {
+      "1D": 1.1813,
+      "5D": 2.6755,
+      "10D": 2.1245,
+      "20D": 6.0186,
+      "3M": 26.7791,
+      "6M": 33.9478,
+      "1Y": 112.8017
+    },
+    "benchmark": {
+      "1D": 0.0322,
+      "5D": 0.6557,
+      "10D": 0.4482,
+      "20D": -1.3309,
+      "3M": 5.6231,
+      "6M": -3.2299,
+      "1Y": 11.8657
+    },
+    "baselineDate": "2019-09-09",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2020-10-13",
+    "model": "iPhone 12",
+    "description": "5G, OLED and MagSafe",
+    "source": "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
+    "returns": {
+      "1D": -2.6527,
+      "5D": -6.7685,
+      "10D": -7.5161,
+      "20D": -6.3338,
+      "3M": 3.7156,
+      "6M": 6.4754,
+      "1Y": 14.4857
+    },
+    "benchmark": {
+      "1D": -0.6307,
+      "5D": -3.036,
+      "10D": -3.7703,
+      "20D": 0.4606,
+      "3M": 7.5539,
+      "6M": 16.7064,
+      "1Y": 23.1007
+    },
+    "baselineDate": "2020-10-12",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2021-09-14",
+    "model": "iPhone 13",
+    "description": "Cinematic mode, camera upgrades and A15 Bionic",
+    "source": "https://www.apple.com/newsroom/2021/09/apple-introduces-iphone-13-and-iphone-13-mini/",
+    "returns": {
+      "1D": -0.9562,
+      "5D": -4.4199,
+      "10D": -2.795,
+      "20D": -4.5068,
+      "3M": 20.1684,
+      "6M": 0.991,
+      "1Y": 3.445
+    },
+    "benchmark": {
+      "1D": -0.5747,
+      "5D": -2.4839,
+      "10D": -0.5733,
+      "20D": -2.4065,
+      "3M": 5.4443,
+      "6M": -6.6153,
+      "1Y": -11.9954
+    },
+    "baselineDate": "2021-09-13",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2022-09-07",
+    "model": "iPhone 14",
+    "description": "Crash Detection and Emergency SOS via satellite",
+    "source": "https://www.apple.com/newsroom/2022/09/apple-introduces-iphone-14-and-iphone-14-plus/",
+    "returns": {
+      "1D": 0.9254,
+      "5D": -0.4465,
+      "10D": 1.5337,
+      "20D": -5.4552,
+      "3M": -4.9549,
+      "6M": -0.7588,
+      "1Y": 15.5849
+    },
+    "benchmark": {
+      "1D": 1.8341,
+      "5D": 0.6269,
+      "10D": -1.3372,
+      "20D": -3.0004,
+      "3M": 2.3195,
+      "6M": 2.1447,
+      "1Y": 13.8926
+    },
+    "baselineDate": "2022-09-06",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2023-09-12",
+    "model": "iPhone 15",
+    "description": "USB-C, Dynamic Island and 48MP main camera",
+    "source": "https://www.apple.com/newsroom/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/",
+    "returns": {
+      "1D": -1.7061,
+      "5D": -0.775,
+      "10D": -1.8287,
+      "20D": -0.2063,
+      "3M": 9.2595,
+      "6M": -3.167,
+      "1Y": 24.7766
+    },
+    "benchmark": {
+      "1D": -0.5696,
+      "5D": -0.7561,
+      "10D": -3.3431,
+      "20D": -3.3828,
+      "3M": 2.6053,
+      "6M": 15.3274,
+      "1Y": 23.77
+    },
+    "baselineDate": "2023-09-11",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2024-09-09",
+    "model": "iPhone 16",
+    "description": "Camera Control and A18 chip",
+    "source": "https://www.apple.com/newsroom/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/",
+    "returns": {
+      "1D": 0.0407,
+      "5D": 0.7608,
+      "10D": 3.3421,
+      "20D": 2.7081,
+      "3M": 10.1836,
+      "6M": 0.2292,
+      "1Y": 3.1815
+    },
+    "benchmark": {
+      "1D": 1.158,
+      "5D": 4.0234,
+      "10D": 5.4384,
+      "20D": 6.3355,
+      "3M": 12.3269,
+      "6M": 3.0258,
+      "1Y": 20.7754
+    },
+    "baselineDate": "2024-09-06",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2025-09-09",
+    "model": "iPhone 17",
+    "description": "Center Stage front camera, A19 and ProMotion",
+    "source": "https://www.apple.com/newsroom/2025/09/apple-debuts-iphone-17/",
+    "returns": {
+      "1D": -1.4839,
+      "5D": -0.496,
+      "10D": 7.6509,
+      "20D": 7.9073,
+      "3M": 17.3071,
+      "6M": 9.8567,
+      "1Y": 33.0523
+    },
+    "benchmark": {
+      "1D": 0.2688,
+      "5D": 1.8495,
+      "10D": 3.0577,
+      "20D": 3.774,
+      "3M": 5.7774,
+      "6M": 4.4084,
+      "1Y": 17.5702
+    },
+    "baselineDate": "2025-09-08",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  },
+  {
+    "date": "2026-09-09",
+    "model": "iPhone 18 Pro / Pro Max",
+    "description": "Variable aperture, A20 Pro and Siri AI",
+    "source": "https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/",
+    "returns": {
+      "1D": -0.2783,
+      "5D": 4.7815,
+      "10D": 7.441,
+      "20D": 5.5057,
+      "3M": null,
+      "6M": null,
+      "1Y": null
+    },
+    "benchmark": {
+      "1D": -0.4843,
+      "5D": -1.1441,
+      "10D": 1.1875,
+      "20D": 1.895,
+      "3M": null,
+      "6M": null,
+      "1Y": null
+    },
+    "baselineDate": "2026-09-08",
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+  }
+]
