@@ -10,6 +10,12 @@ export const tradingCollection = (path: string) => { const hub = getHub(path); r
 const strategies = tradingCollection('/research/trading/')
 const patterns = tradingCollection('/research/trading/candlestick-patterns/')
 const studies = sortResearch([
+  {
+    path: '/spy-opening-gaps-drawdowns-recovery/',
+    title: 'SPY Opening Gaps, Drawdowns & Recovery',
+    description: 'Historical analysis of SPY opening gaps, intraday lows, first-hour drawdowns, and recovery behavior from 2020–2025.',
+    image: '/spy-opening-gaps-drawdowns-recovery/assets/chart-1.png',
+  } as ResearchItem,
   ...strategies.filter(item => item.path === '/research/doji-candlestick-spy-26-year-study/'),
   ...tradingCollection('/research/stocks/aapl/').filter(item => item.path === '/new-iphone-release-apple-stock-price-history/'),
   {
