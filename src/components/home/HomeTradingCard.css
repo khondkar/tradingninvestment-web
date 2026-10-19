@@ -1,0 +1,7 @@
+.tni-editorial .tni-home-explore a.tni-explore-trading { border: 2px solid #1769d2; box-shadow: 0 6px 20px #0756c91a; }
+.tni-home-explore .tni-explore-trading .tni-explore-thumbnail { height: 116px; background: linear-gradient(135deg, #06192e, #123d74); }
+.tni-home-explore .tni-explore-trading .tni-explore-thumbnail svg { width: 100%; height: 108px; }
+.tni-editorial .tni-home-explore .tni-explore-trading > .tni-explore-cta { background: #0756c9; color: #fff; font-weight: 800; }
+.tni-editorial .tni-home-explore a.tni-explore-trading:hover { border-color: #063d80; box-shadow: 0 8px 24px #0756c930; }
+.tni-editorial .tni-home-explore a.tni-explore-trading:focus-visible { outline: 3px solid #0756c9; outline-offset: 4px; }
+@media (min-width: 760px) { .tni-home-explore .tni-explore-trading .tni-explore-thumbnail { height: 136px; } .tni-home-explore .tni-explore-trading .tni-explore-thumbnail svg { height: 128px; } }

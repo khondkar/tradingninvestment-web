@@ -1,6 +1,7 @@
 import { researchItems } from '../../research/discovery'
 import './EditorialHome.css'
 import './HomeTop.css'
+import './HomeTradingCard.css'
 import { HomeGlobe, HomeIcon } from './HomeVisuals'
 
 const citations = [
@@ -55,7 +56,7 @@ export default function PremiumResearchHome() {
       <section className="tni-home-explore" aria-labelledby="tni-home-explore-title">
         <h2 id="tni-home-explore-title">Explore TradingNInvestment</h2>
         <div>{([
-          ['market','Market Today','/stock-market-today/','Benchmarks, sectors, and market breadth.','Explore market'],
+          ['trading','Trading','/trading/','Strategies, candlestick research, tools and funded accounts.','Explore trading'],
           ['grid','S&P 500 Heatmap','/stock-market-today/heatmap/','See winners, losers, and sector moves.','View heatmap'],
           ['book','Research','/research/','Original studies and historical market data.','Read research'],
           ['search','ETF Scanner','/research/scanners/leveraged-etf/','Find and compare leveraged ETFs.','Open scanner'],

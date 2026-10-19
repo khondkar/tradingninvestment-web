@@ -1,6 +1,10 @@
-export function HomeIcon({kind}: {kind: 'brain' | 'market' | 'cap' | 'grid' | 'book' | 'search'}) {
+export function HomeIcon({kind}: {kind: 'trading' | 'brain' | 'market' | 'cap' | 'grid' | 'book' | 'search'}) {
   return <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {kind === 'brain' ? <><path d="M29 10c-7-9-17-2-16 6-9 0-11 12-5 16-7 6-4 17 4 18 0 9 13 12 17 4V10Zm6 0c7-9 17-2 16 6 9 0 11 12 5 16 7 6 4 17-4 18 0 9-13 12-17 4V10Z"/><path d="M13 16v8m-5 8h9m-5 18 7-4m32-30v8m5 8h-9m5 18-7-4M24 23h16v18H24zM20 28h4m-4 8h4m16-8h4m-4 8h4m-16-17v4m8-4v4m-8 18v4m8-4v4"/></> :
+    {kind === 'trading' ? <>
+      <path d="M4 16h56M4 32h56M4 48h56M16 5v54M32 5v54M48 5v54" stroke="#91bdf1" strokeWidth=".5" opacity=".25"/>
+      <path d="M5 53 15 43 24 47 34 30 44 34 59 12" stroke="#78b6ff" strokeWidth="1.5"/>
+      {[{x:10,y:38,h:10,up:true},{x:22,y:35,h:9,up:false},{x:34,y:24,h:14,up:true},{x:46,y:19,h:8,up:false},{x:56,y:9,h:13,up:true}].map(c => <g key={c.x} stroke={c.up ? '#43e3b2' : '#ff8192'} strokeWidth="1.3"><path d={`M${c.x} ${c.y-5}v${c.h+10}`}/><rect x={c.x-3} y={c.y} width="6" height={c.h} rx=".8" fill={c.up ? '#43e3b2' : '#ff8192'}/></g>)}
+    </> : kind === 'brain' ? <><path d="M29 10c-7-9-17-2-16 6-9 0-11 12-5 16-7 6-4 17 4 18 0 9 13 12 17 4V10Zm6 0c7-9 17-2 16 6 9 0 11 12 5 16 7 6 4 17-4 18 0 9-13 12-17 4V10Z"/><path d="M13 16v8m-5 8h9m-5 18 7-4m32-30v8m5 8h-9m5 18-7-4M24 23h16v18H24zM20 28h4m-4 8h4m16-8h4m-4 8h4m-16-17v4m8-4v4m-8 18v4m8-4v4"/></> :
     kind === 'market' ? <><path d="m7 29 15-15 12 8L55 3m-13 0h13v13"/><path d="M7 40h10v20H7zM27 32h10v28H27zM47 23h10v37H47z" fill="currentColor" strokeWidth="1"/></> :
     kind === 'cap' ? <><path d="m3 24 29-14 29 14-29 14L3 24Z" fill="currentColor"/><path d="M15 31v15l17 8 17-8V31M59 27v19"/></> :
     kind === 'grid' ? <g stroke="#092c31" strokeWidth="1.2">
