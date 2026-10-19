@@ -1,0 +1,11 @@
+.tni-iphone-research-card{display:flex;flex-direction:column;overflow:hidden;border:1px solid #cbd5e1;border-radius:12px;background:#fff;color:#0b1730;text-decoration:none;box-shadow:0 3px 14px #0b17300a;transition:box-shadow .2s ease}
+.tni-iphone-research-card:hover,.tni-iphone-research-card:focus-visible{box-shadow:0 8px 22px #0b173025;outline:2px solid #1769e0;outline-offset:2px}
+.tni-iphone-research-card>img{display:block;width:100%;height:180px;object-fit:cover;object-position:center;background:#06142c}
+.tni-iphone-research-card__body{display:flex;flex-direction:column;gap:8px;padding:18px;min-width:0}
+.tni-iphone-research-card__eyebrow{color:#0751bd;font-size:14px;font-weight:800;letter-spacing:.03em}
+.tni-iphone-research-card__body strong{font-size:clamp(20px,2vw,24px);line-height:1.22;color:#07172f}
+.tni-iphone-research-card__period{font-size:16px;font-weight:700;color:#24456d}
+.tni-iphone-research-card__body p{font-size:16px;line-height:1.55;color:#24364c;margin:0}
+.tni-iphone-research-card__cta{font-size:16px;font-weight:800;color:#0751bd;margin-top:6px}
+@media(min-width:700px){.tni-iphone-research-card--horizontal{flex-direction:row}.tni-iphone-research-card--horizontal>img{width:40%;height:auto;min-height:210px;object-fit:cover}.tni-iphone-research-card--horizontal .tni-iphone-research-card__body{flex:1;justify-content:center}}
+@media(max-width:699px){.tni-iphone-research-card>img{height:160px}.tni-iphone-research-card__body{padding:16px}}
