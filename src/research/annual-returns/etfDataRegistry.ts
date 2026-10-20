@@ -1,5 +1,7 @@
 import qqqAnnualReturns from "../../data/charts/qqqAnnualReturns.json"
 import qqqReturnMethods from "../../data/charts/qqqReturnMethods.json"
+import iwmAnnualReturns from "../../data/charts/iwmAnnualReturns.json"
+import iwmReturnMethods from "../../data/charts/iwmReturnMethods.json"
 import spyAnnualReturns from "../../data/charts/spyAnnualReturns.json"
 import spyReturnMethods from "../../data/charts/spyReturnMethods.json"
 
@@ -30,6 +32,14 @@ const etfResearchDataRegistry: Record<
 
     returnMethods:
       qqqReturnMethods.data as ReturnMethodRow[],
+  },
+
+  IWM: {
+    annualReturns:
+      iwmAnnualReturns as AnnualReturnsPageData,
+
+    returnMethods:
+      iwmReturnMethods.data as ReturnMethodRow[],
   },
 
   SPY: {

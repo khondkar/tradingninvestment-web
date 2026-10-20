@@ -19,6 +19,7 @@ import { amznAnnualReturnsConfig } from "./amzn"
 import { crmAnnualReturnsConfig } from "./crm"
 import { tqqqAnnualReturnsConfig } from "./tqqq"
 import { qqqAnnualReturnsConfig } from "./qqq"
+import { iwmAnnualReturnsConfig } from "./iwm"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
 import { tsllAnnualReturnsConfig } from "./tsll"
 import { soxlAnnualReturnsConfig } from "./soxl"
@@ -152,6 +153,13 @@ export const annualReturnsResearchRegistry:
       config: qqqAnnualReturnsConfig,
       legacyPublished: true,
       featured: false,
+    },
+    {
+      config: iwmAnnualReturnsConfig,
+      legacyPublished: true,
+      featured: false,
+      previewImage:
+        "/images/social/research/iwm-returns-tni-og.png",
     },
     {
       config: nvdlAnnualReturnsConfig,

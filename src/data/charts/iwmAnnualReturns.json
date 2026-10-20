@@ -1,0 +1,189 @@
+{
+  "symbol": "iShares Russell 2000 ETF",
+  "ticker": "IWM",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / IWM",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 25,
+    "start_year": 2001,
+    "end_year": 2025,
+    "positive_years": 18,
+    "negative_years": 7,
+    "positive_year_pct": 72.0,
+    "negative_year_pct": 28.0,
+    "average_annual_return_pct": 8.44,
+    "median_annual_return_pct": 13.06,
+    "best_year": {
+      "year": 2003,
+      "return_pct": 46.15
+    },
+    "worst_year": {
+      "year": 2008,
+      "return_pct": -35.13
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 12.19,
+    "through_date": "2026-10-20"
+  },
+  "data": [
+    {
+      "year": 2001,
+      "value": 0.6266,
+      "label": "2001",
+      "status": "positive"
+    },
+    {
+      "year": 2002,
+      "value": -21.3181,
+      "label": "2002",
+      "status": "negative"
+    },
+    {
+      "year": 2003,
+      "value": 46.1549,
+      "label": "2003",
+      "status": "positive"
+    },
+    {
+      "year": 2004,
+      "value": 16.8773,
+      "label": "2004",
+      "status": "positive"
+    },
+    {
+      "year": 2005,
+      "value": 3.0425,
+      "label": "2005",
+      "status": "positive"
+    },
+    {
+      "year": 2006,
+      "value": 16.9514,
+      "label": "2006",
+      "status": "positive"
+    },
+    {
+      "year": 2007,
+      "value": -2.7297,
+      "label": "2007",
+      "status": "negative"
+    },
+    {
+      "year": 2008,
+      "value": -35.1252,
+      "label": "2008",
+      "status": "negative"
+    },
+    {
+      "year": 2009,
+      "value": 26.8075,
+      "label": "2009",
+      "status": "positive"
+    },
+    {
+      "year": 2010,
+      "value": 25.3043,
+      "label": "2010",
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "value": -5.7387,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 14.3322,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 36.8121,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 3.6928,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": -5.8519,
+      "label": "2015",
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "value": 19.7389,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 13.059,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -12.1737,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 23.7267,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 18.3437,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 13.4602,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -21.6183,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 15.1124,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 10.0892,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 11.4048,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

@@ -9,7 +9,9 @@ const collectionDescriptions = ['The broad market, in perspective.', 'One compan
 
 function StudyCard({ item, eager = false }: { item: ResearchItem; eager?: boolean }) {
   const [broken, setBroken] = useState(false)
-  const image = item.image?.startsWith('/') || item.image?.startsWith('https://') ? item.image : undefined
+  const image = item.symbol === 'IWM'
+    ? '/images/social/research/iwm-returns-tni-og.png'
+    : item.image?.startsWith('/') || item.image?.startsWith('https://') ? item.image : undefined
   return <a className="tni-r-study" href={item.path}>
     {image && !broken ? <div className="tni-r-study-art"><img src={image} alt={item.title} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setBroken(true)} /></div>
       : <div className="tni-r-study-art tni-r-editorial-art"><span>TRADINGNINVESTMENT / ORIGINAL RESEARCH</span><strong>{item.name}</strong><small>{researchTopics.find((topic) => topic.id === getResearchTopics(item)[0])?.name || 'Research'}</small></div>}

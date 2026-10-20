@@ -2134,7 +2134,9 @@ export default function GenericAnnualReturnsPage({
             {config.seo.socialImage ? (
               <a
                 href={config.seo.socialImage}
-                download
+                download={config.symbol === 'IWM'
+                  ? 'IWM-vs-SPY-Historical-Returns-TNI.png'
+                  : true}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -2150,7 +2152,9 @@ export default function GenericAnnualReturnsPage({
                   textDecoration: 'none',
                 }}
               >
-                Download TNI Social Chart
+                {config.symbol === 'IWM'
+                  ? '↓ Download IWM vs SPY Chart (PNG)'
+                  : 'Download TNI Social Chart'}
               </a>
             ) : (
               <button
@@ -3165,6 +3169,86 @@ export default function GenericAnnualReturnsPage({
               >
                 TQQQ Historical Returns →
               </a>
+            </div>
+          </section>
+        )}
+
+
+        {config.symbol === 'IWM' && (
+          <section
+            aria-labelledby="iwm-related-research-heading"
+            style={{
+              margin: '8px 0 42px',
+              padding: '26px 28px',
+              border: '1px solid #e4ebf3',
+              borderRadius: '14px',
+              background: '#f8fbff',
+            }}
+          >
+            <div
+              style={{
+                marginBottom: '8px',
+                color: '#1677ff',
+                fontSize: '11px',
+                fontWeight: 800,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Related IWM & Market Research
+            </div>
+
+            <h2
+              id="iwm-related-research-heading"
+              style={{
+                margin: '0 0 10px',
+                color: '#10233f',
+                fontSize: '24px',
+                lineHeight: 1.25,
+              }}
+            >
+              Explore Small-Cap and U.S. Market Returns
+            </h2>
+
+            <p
+              style={{
+                maxWidth: '820px',
+                margin: '0 0 18px',
+                color: '#66768a',
+                fontSize: '16px',
+                lineHeight: 1.75,
+              }}
+            >
+              Compare IWM small-cap returns with QQQ,
+              the broader U.S. equity market, and
+              historical S&P 500 performance.
+            </p>
+
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '12px 22px',
+              }}
+            >
+              {[
+                ['QQQ Historical Returns', '/qqq-returns/'],
+                ['S&P 500 Historical Returns', '/sp500-returns/'],
+                ['Average Stock Market Return', '/average-stock-market-return/'],
+              ].map(([label, href]) => (
+                <a
+                  key={href}
+                  href={href}
+                  style={{
+                    color: '#1677ff',
+                    fontSize: '14px',
+                    fontWeight: 800,
+                    textDecoration: 'none',
+                  }}
+                >
+                  {label} →
+                </a>
+              ))}
             </div>
           </section>
         )}

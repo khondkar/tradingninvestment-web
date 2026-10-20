@@ -121,7 +121,7 @@ export async function prepareApp(pathname: string) {
   if (entry?.config.categories.includes('etf')) {
     await Promise.all([
       loadResearchData('etf', entry.config.symbol),
-      ...(entry.config.symbol === 'QQQ' ? [loadResearchData('etf', 'SPY')] : []),
+      ...(['QQQ', 'IWM'].includes(entry.config.symbol) ? [loadResearchData('etf', 'SPY')] : []),
       import('./templates/EtfAnnualReturnsPage').then(module => { EtfAnnualReturnsPage = module.default }),
     ])
     return
@@ -1358,7 +1358,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
           />
 
           <EtfAnnualReturnsPage
-            benchmarkDataset={dynamicEtfEntry.config.symbol === 'QQQ' ? getEtfResearchData('SPY')?.annualReturns : undefined}
+            benchmarkDataset={['QQQ', 'IWM'].includes(dynamicEtfEntry.config.symbol) ? getEtfResearchData('SPY')?.annualReturns : undefined}
             config={
               dynamicEtfEntry.config
             }
