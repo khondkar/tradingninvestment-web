@@ -1,3 +1,4 @@
+import { isArticlePublic } from '../research/articleVisibility'
 import FundedAccountsPage from './FundedAccountsPage'
 import { useEffect, useState } from 'react'
 import TradingLinks from '../components/trading/TradingLinks'
@@ -14,7 +15,7 @@ const studies = sortResearch([
     path: '/spy-opening-gaps-drawdowns-recovery/',
     title: 'SPY Opening Gaps, Drawdowns & Recovery',
     description: 'Historical analysis of SPY opening gaps, intraday lows, first-hour drawdowns, and recovery behavior from 2020–2025.',
-    image: '/spy-opening-gaps-drawdowns-recovery/assets/chart-1.png',
+    image: '',
   } as ResearchItem,
   ...strategies.filter(item => item.path === '/research/doji-candlestick-spy-26-year-study/'),
   ...tradingCollection('/research/stocks/aapl/').filter(item => item.path === '/new-iphone-release-apple-stock-price-history/'),
@@ -24,7 +25,7 @@ const studies = sortResearch([
     description: 'Explore SNXX ETF performance, historical returns, and investment research.',
     image: '',
   } as ResearchItem,
-])
+].filter(item => isArticlePublic(item.path)))
 const tools = [{path:'/research/scanners/leveraged-etf/',title:'Leveraged ETF Scanner',description:'Search leveraged and inverse funds, compare ETFs, and explore historical research.'},{path:'/stock-market-today/heatmap/',title:'S&P 500 Heatmap',description:'Explore stock moves and sector performance in the latest available market snapshot.'}]
 function Candles() { return <svg viewBox="0 0 600 220" aria-hidden="true"><path d="M0 180 80 168 150 180 230 120 300 140 390 78 460 98 600 15" fill="none" stroke="#1a71ac" strokeWidth="2"/>{Array.from({length:19},(_,i)=><g key={i} fill={i%4===1?'#f06476':'#31d5b2'} stroke={i%4===1?'#f06476':'#31d5b2'}><path d={`M${22+i*31} ${170-i*7-(i%3)*12}v55`} /><rect x={17+i*31} y={180-i*7-(i%3)*12} width="10" height={18+(i%3)*7} rx="1"/></g>)}</svg> }
 function StudyCard({item}: {item:ResearchItem}) { const [broken,setBroken]=useState(false); return <a className="tni-tr-study" href={item.path}>{item.image&&!broken?<img src={item.image} alt="" loading="lazy" decoding="async" width="600" height="320" onError={()=>setBroken(true)}/>:<div className="tni-tr-fallback"><Candles/></div>}<div><span className="tni-tr-kicker">TRADINGNINVESTMENT RESEARCH</span><h3>{item.title}</h3><p>{item.description}</p><b>Read research <span aria-hidden="true">→</span></b></div></a> }

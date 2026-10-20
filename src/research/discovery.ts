@@ -1,3 +1,4 @@
+import { isArticlePublic } from './articleVisibility'
 import { getHomepagePlacement, getPublicationImage, type HomepagePlacement } from './publication'
 import { publishedAnnualReturnsResearchRegistry } from './annual-returns/registry'
 import { monthlyReturnsRegistry } from './monthly-returns/registry'
@@ -22,7 +23,7 @@ export type ResearchItem = {
   sector?: string
 }
 
-export const researchItems: ResearchItem[] = [
+export const researchItems: ResearchItem[] = ([
   ...publishedAnnualReturnsResearchRegistry.map(({ config, previewImage, featured, publishAt }) => ({
     image: config.seo.socialImage || previewImage || config.annualReturnImage,
     publishedAt: publishAt,
@@ -74,7 +75,7 @@ export const researchItems: ResearchItem[] = [
     publishedAt: '2026-10-18',
   },
   ...additionalPublications,
-]
+] satisfies ResearchItem[]).filter(item => isArticlePublic(item.path))
 
 // Source metadata is retained for the build-time image audit; final image paths
 // are shared by the research cards, homepage cards, and article social metadata.
