@@ -14,6 +14,9 @@ import crmReturnMethods from "../../data/charts/crmReturnMethods.json"
 import crmVsSp500Drawdowns from "../../data/charts/crmVsSp500Drawdowns.json"
 import jnjVsSp500Drawdowns from "../../data/charts/jnjVsSp500Drawdowns.json"
 import type { LeveragedEtfDrawdownDataset } from "../../components/research/LeveragedEtfDrawdownComparison"
+import ibmAnnualReturns from "../../data/charts/ibmAnnualReturns.json"
+import ibmReturnMethods from "../../data/charts/ibmReturnMethods.json"
+import ibmVsSp500Drawdowns from "../../data/charts/ibmVsSp500Drawdowns.json"
 import nkeAnnualReturns from "../../data/charts/nkeAnnualReturns.json"
 import nkeReturnMethods from "../../data/charts/nkeReturnMethods.json"
 import jpmAnnualReturns from "../../data/charts/jpmAnnualReturns.json"
@@ -75,6 +78,12 @@ export const stockResearchDataRegistry:
 
       returnMethods:
         googlReturnMethods.data as ReturnMethodRow[],
+    },
+
+    IBM: {
+      annualReturns: ibmAnnualReturns as AnnualReturnsPageData,
+      returnMethods: ibmReturnMethods.data as ReturnMethodRow[],
+      drawdownData: ibmVsSp500Drawdowns as LeveragedEtfDrawdownDataset,
     },
 
     NKE: {

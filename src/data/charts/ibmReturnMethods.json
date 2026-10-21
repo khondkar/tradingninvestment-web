@@ -1,0 +1,649 @@
+{
+  "dataset": "International Business Machines Corporation price return and total return",
+  "ticker": "IBM",
+  "start_year": 1963,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 1963,
+      "price_return": 30.0,
+      "total_return": 30.1223,
+      "is_ytd": false,
+      "data_through": "1963-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1964,
+      "price_return": 0.9615,
+      "total_return": 1.0681,
+      "is_ytd": false,
+      "data_through": "1964-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1965,
+      "price_return": 21.8559,
+      "total_return": 22.0076,
+      "is_ytd": false,
+      "data_through": "1965-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1966,
+      "price_return": 11.6733,
+      "total_return": 11.8117,
+      "is_ytd": false,
+      "data_through": "1966-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1967,
+      "price_return": 68.7752,
+      "total_return": 69.215,
+      "is_ytd": false,
+      "data_through": "1967-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1968,
+      "price_return": 0.4785,
+      "total_return": 1.0811,
+      "is_ytd": false,
+      "data_through": "1968-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1969,
+      "price_return": 15.7143,
+      "total_return": 16.997,
+      "is_ytd": false,
+      "data_through": "1969-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1970,
+      "price_return": -12.8258,
+      "total_return": -11.7021,
+      "is_ytd": false,
+      "data_through": "1970-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1971,
+      "price_return": 5.9009,
+      "total_return": 7.6652,
+      "is_ytd": false,
+      "data_through": "1971-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1972,
+      "price_return": 19.4651,
+      "total_return": 21.1548,
+      "is_ytd": false,
+      "data_through": "1972-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1973,
+      "price_return": -23.2743,
+      "total_return": -22.1763,
+      "is_ytd": false,
+      "data_through": "1973-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1974,
+      "price_return": -31.9149,
+      "total_return": -30.1393,
+      "is_ytd": false,
+      "data_through": "1974-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1975,
+      "price_return": 33.4821,
+      "total_return": 37.8646,
+      "is_ytd": false,
+      "data_through": "1975-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1976,
+      "price_return": 24.4705,
+      "total_return": 28.2966,
+      "is_ytd": false,
+      "data_through": "1976-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1977,
+      "price_return": -2.0152,
+      "total_return": 1.7643,
+      "is_ytd": false,
+      "data_through": "1977-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1978,
+      "price_return": 9.1408,
+      "total_return": 13.9176,
+      "is_ytd": false,
+      "data_through": "1978-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1979,
+      "price_return": -13.7353,
+      "total_return": -9.4713,
+      "is_ytd": false,
+      "data_through": "1979-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1980,
+      "price_return": 5.4369,
+      "total_return": 11.3055,
+      "is_ytd": false,
+      "data_through": "1980-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1981,
+      "price_return": -16.2063,
+      "total_return": -11.0607,
+      "is_ytd": false,
+      "data_through": "1981-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1982,
+      "price_return": 69.2308,
+      "total_return": 77.9827,
+      "is_ytd": false,
+      "data_through": "1982-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1983,
+      "price_return": 26.7533,
+      "total_return": 30.9504,
+      "is_ytd": false,
+      "data_through": "1983-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1984,
+      "price_return": 0.9221,
+      "total_return": 4.4564,
+      "is_ytd": false,
+      "data_through": "1984-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1985,
+      "price_return": 26.2944,
+      "total_return": 30.6273,
+      "is_ytd": false,
+      "data_through": "1985-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1986,
+      "price_return": -22.8296,
+      "total_return": -20.3502,
+      "is_ytd": false,
+      "data_through": "1986-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1987,
+      "price_return": -3.75,
+      "total_return": -0.7353,
+      "is_ytd": false,
+      "data_through": "1987-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1988,
+      "price_return": 5.5195,
+      "total_return": 9.5766,
+      "is_ytd": false,
+      "data_through": "1988-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1989,
+      "price_return": -22.7692,
+      "total_return": -19.4341,
+      "is_ytd": false,
+      "data_through": "1989-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1990,
+      "price_return": 20.0531,
+      "total_return": 25.704,
+      "is_ytd": false,
+      "data_through": "1990-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1991,
+      "price_return": -21.2389,
+      "total_return": -17.5514,
+      "is_ytd": false,
+      "data_through": "1991-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1992,
+      "price_return": -43.3989,
+      "total_return": -40.0445,
+      "is_ytd": false,
+      "data_through": "1992-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1993,
+      "price_return": 12.1588,
+      "total_return": 15.8295,
+      "is_ytd": false,
+      "data_through": "1993-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1994,
+      "price_return": 30.0885,
+      "total_return": 32.2152,
+      "is_ytd": false,
+      "data_through": "1994-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1995,
+      "price_return": 24.3197,
+      "total_return": 25.6754,
+      "is_ytd": false,
+      "data_through": "1995-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1996,
+      "price_return": 65.8003,
+      "total_return": 67.6979,
+      "is_ytd": false,
+      "data_through": "1996-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1997,
+      "price_return": 38.1188,
+      "total_return": 39.309,
+      "is_ytd": false,
+      "data_through": "1997-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1998,
+      "price_return": 76.2246,
+      "total_return": 77.4746,
+      "is_ytd": false,
+      "data_through": "1998-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 1999,
+      "price_return": 17.017,
+      "total_return": 17.5756,
+      "is_ytd": false,
+      "data_through": "1999-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2000,
+      "price_return": -21.2051,
+      "total_return": -20.838,
+      "is_ytd": false,
+      "data_through": "2000-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2001,
+      "price_return": 42.3059,
+      "total_return": 43.0048,
+      "is_ytd": false,
+      "data_through": "2001-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2002,
+      "price_return": -35.9292,
+      "total_return": -35.4578,
+      "is_ytd": false,
+      "data_through": "2002-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2003,
+      "price_return": 19.5871,
+      "total_return": 20.498,
+      "is_ytd": false,
+      "data_through": "2003-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2004,
+      "price_return": 6.366,
+      "total_return": 7.1874,
+      "is_ytd": false,
+      "data_through": "2004-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2005,
+      "price_return": -16.616,
+      "total_return": -15.8322,
+      "is_ytd": false,
+      "data_through": "2005-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2006,
+      "price_return": 18.1874,
+      "total_return": 19.7742,
+      "is_ytd": false,
+      "data_through": "2006-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2007,
+      "price_return": 11.2712,
+      "total_return": 12.8359,
+      "is_ytd": false,
+      "data_through": "2007-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2008,
+      "price_return": -22.1462,
+      "total_return": -20.783,
+      "is_ytd": false,
+      "data_through": "2008-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2009,
+      "price_return": 55.5371,
+      "total_return": 58.642,
+      "is_ytd": false,
+      "data_through": "2009-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2010,
+      "price_return": 12.1161,
+      "total_return": 14.2612,
+      "is_ytd": false,
+      "data_through": "2010-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2011,
+      "price_return": 25.293,
+      "total_return": 27.412,
+      "is_ytd": false,
+      "data_through": "2011-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2012,
+      "price_return": 4.1712,
+      "total_return": 5.9249,
+      "is_ytd": false,
+      "data_through": "2012-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2013,
+      "price_return": -2.0778,
+      "total_return": -0.1776,
+      "is_ytd": false,
+      "data_through": "2013-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2014,
+      "price_return": -14.4639,
+      "total_return": -12.3871,
+      "is_ytd": false,
+      "data_through": "2014-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2015,
+      "price_return": -14.2234,
+      "total_return": -11.4223,
+      "is_ytd": false,
+      "data_through": "2015-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2016,
+      "price_return": 20.6147,
+      "total_return": 25.2108,
+      "is_ytd": false,
+      "data_through": "2016-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2017,
+      "price_return": -7.5727,
+      "total_return": -3.9878,
+      "is_ytd": false,
+      "data_through": "2017-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2018,
+      "price_return": -25.9093,
+      "total_return": -22.558,
+      "is_ytd": false,
+      "data_through": "2018-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2019,
+      "price_return": 17.9203,
+      "total_return": 23.5761,
+      "is_ytd": false,
+      "data_through": "2019-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2020,
+      "price_return": -6.0877,
+      "total_return": -1.1626,
+      "is_ytd": false,
+      "data_through": "2020-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2021,
+      "price_return": 11.0648,
+      "total_return": 16.6528,
+      "is_ytd": false,
+      "data_through": "2021-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2022,
+      "price_return": 5.4092,
+      "total_return": 10.637,
+      "is_ytd": false,
+      "data_through": "2022-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2023,
+      "price_return": 16.0835,
+      "total_return": 21.8488,
+      "is_ytd": false,
+      "data_through": "2023-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2024,
+      "price_return": 34.4115,
+      "total_return": 39.2704,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2025,
+      "price_return": 34.745,
+      "total_return": 38.2265,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    },
+    {
+      "year": 2026,
+      "price_return": -15.1075,
+      "total_return": -13.3782,
+      "is_ytd": true,
+      "data_through": "2026-10-21",
+      "price_source": "Yahoo Finance IBM Close",
+      "total_return_source": "Yahoo Finance IBM Adjusted Close",
+      "methodology": "yahoo_close_and_adjusted_close"
+    }
+  ]
+}
