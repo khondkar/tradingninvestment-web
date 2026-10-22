@@ -983,7 +983,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
       <div className="site">
         <Header pathname={pathname} page="research" setPage={setPage} />
         <IBMEarningsResearchPage />
-        <TniKitSubscriptionPopup />
+        <TniKitSubscriptionPopup delayMs={30000} onceEver />
         <Footer setPage={setPage} />
       </div>
     )

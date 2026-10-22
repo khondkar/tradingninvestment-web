@@ -2,16 +2,18 @@ import { useEffect, useRef, useState } from 'react';
 import './TniKitSubscriptionPopup.css';
 
 const DISMISS_KEY = 'tni-kit-subscription-dismissed-until';
+const IBM_SHOWN_KEY = 'tni-ibm-subscription-shown';
 const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
 
 /** Render once in a shared research-article layout, not once per card. */
-export default function TniKitSubscriptionPopup() {
+export default function TniKitSubscriptionPopup({ delayMs = 15000, onceEver = false }: { delayMs?: number; onceEver?: boolean }) {
   const [ready, setReady] = useState(false);
   const [open, setOpen] = useState(false);
   const closeButton = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     try {
+      if (onceEver && localStorage.getItem(IBM_SHOWN_KEY)) return;
       if (Number(localStorage.getItem(DISMISS_KEY) || 0) > Date.now()) return;
     } catch { /* Private browsing: continue without persistence. */ }
 
@@ -23,13 +25,22 @@ export default function TniKitSubscriptionPopup() {
       scrolled = available > 0 && window.scrollY / available >= 0.5;
       maybeOpen();
     };
-    const timer = window.setTimeout(() => { elapsed = true; maybeOpen(); }, 15000);
+    const timer = window.setTimeout(() => { elapsed = true; maybeOpen(); }, delayMs);
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => { window.clearTimeout(timer); window.removeEventListener('scroll', onScroll); };
-  }, []);
+  }, [delayMs, onceEver]);
 
-  useEffect(() => { if (ready) setOpen(true); }, [ready]);
+  useEffect(() => {
+    if (!ready) return;
+    if (onceEver) {
+      try {
+        if (localStorage.getItem(IBM_SHOWN_KEY)) return;
+        localStorage.setItem(IBM_SHOWN_KEY, '1');
+      } catch { /* Browser storage unavailable. */ }
+    }
+    setOpen(true);
+  }, [ready, onceEver]);
   useEffect(() => { if (open) closeButton.current?.focus(); }, [open]);
 
 
