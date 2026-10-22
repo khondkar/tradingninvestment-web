@@ -20,3 +20,19 @@
 .tni-hm-promotion.tni-hm-tradingview-cta>a:focus-visible{outline:3px solid #102c4d;outline-offset:4px}
 .tni-hm-promotion .tni-tv-disclosure{font-size:13px;color:#3d536d;line-height:1.5;margin:0}
 @media(min-width:750px){.tni-hm-promotion.tni-hm-tradingview-cta{grid-template-columns:minmax(0,1fr) auto;padding:24px;gap:14px 24px}.tni-hm-tradingview-cta h2{font-size:27px}.tni-hm-tradingview-cta .tni-tv-disclosure{grid-column:1/-1}}
+
+/* Overview sector preview, adapted to the heatmap without extra requests. */
+.tni-hm-layout .tni-hm-sector-preview{margin:0 0 18px;padding:16px;background:#f7fbff;border:1px solid #c4d9ef;border-radius:14px;color:#0c2342}
+.tni-hm-layout .tni-hm-sector-preview h2{margin:0 0 8px;font-size:23px;font-weight:850;line-height:1.3;color:#0c2342}
+.tni-hm-layout .tni-hm-sector-preview p{margin:0 0 12px;font-size:14px;font-weight:700;line-height:1.5;color:#243e59}
+.tni-hm-layout .tni-hm-sector-groups{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.tni-hm-layout .tni-hm-sector-group{min-width:0}
+.tni-hm-layout .tni-hm-sector-group h3{margin:0 0 8px;font-size:17px;font-weight:800;line-height:1.4;color:#0c2342}
+.tni-hm-layout .tni-hm-sector-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.tni-hm-layout .tni-hm-sector-tile{display:flex;flex-direction:column;justify-content:space-between;gap:12px;min-width:0;min-height:100px;padding:12px 9px;border-radius:7px;color:#fff}
+.tni-hm-layout .tni-hm-sector-tile.is-up{background:#006837}
+.tni-hm-layout .tni-hm-sector-tile.is-down{background:#a91e30}
+.tni-hm-layout .tni-hm-sector-tile span{font-size:14px;font-weight:800;line-height:1.4;overflow-wrap:anywhere;color:#fff}
+.tni-hm-layout .tni-hm-sector-tile b{font-size:19px;font-weight:850;line-height:1.3;color:#fff;font-variant-numeric:tabular-nums}
+.tni-hm-layout .tni-hm-sector-group p{margin:8px 0 0}
+@media(min-width:800px){.tni-hm-layout .tni-hm-sector-groups{grid-template-columns:repeat(2,minmax(0,1fr))}.tni-hm-layout .tni-hm-sector-preview{padding:20px}.tni-hm-layout .tni-hm-sector-tile{padding:14px 12px}.tni-hm-layout .tni-hm-sector-tile b{font-size:22px}}

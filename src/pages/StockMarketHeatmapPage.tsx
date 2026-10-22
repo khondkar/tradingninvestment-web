@@ -38,6 +38,23 @@ export default function StockMarketHeatmapPage() {
       <h1>S&amp;P 500 Heatmap</h1>
       <p className="tni-hm-subtitle">Find the market’s biggest winners and losers in 10 seconds, then explore stocks by sector.</p>
       <p className="tni-hm-status">Snapshot: {snapshot.generated_at_et ? new Date(snapshot.generated_at_et).toLocaleString('en-US', {timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit'}) + ' ET' : 'Unavailable'} · {stocks.length} stocks · Data may be delayed</p>
+      <section className="tni-hm-sector-preview" aria-labelledby="tni-hm-sector-title">
+        <h2 id="tni-hm-sector-title">Sector Leaders &amp; Laggards</h2>
+        <p>Sector snapshot · Average daily stock change</p>
+        <div className="tni-hm-sector-groups">
+          {(['gainers', 'decliners'] as const).map(direction => {
+            const rows = (snapshot.sectors ?? []).filter(s => Number.isFinite(s.average_change_pct) && (direction === 'gainers' ? s.average_change_pct > 0 : s.average_change_pct < 0)).sort((a,b) => direction === 'gainers' ? b.average_change_pct - a.average_change_pct : a.average_change_pct - b.average_change_pct).slice(0,3)
+            return <section className="tni-hm-sector-group" key={direction}>
+              <h3>{direction === 'gainers' ? 'Top 3 Gaining Sectors' : 'Worst 3 Declining Sectors'}</h3>
+              <div className="tni-hm-sector-tiles">{rows.map(item => <div key={item.sector} className={`tni-hm-sector-tile ${item.average_change_pct > 0 ? 'is-up' : 'is-down'}`}>
+                <span>{item.sector.replace('Information Technology', 'Technology').replace('Communication Services', 'Communication')}</span>
+                <b>{formatReturn(item.average_change_pct)}</b>
+              </div>)}</div>
+              {rows.length < 3 && <p>{rows.length === 0 ? `No ${direction === 'gainers' ? 'gaining' : 'declining'} sectors in this snapshot.` : `Only ${rows.length} ${direction === 'gainers' ? 'gaining' : 'declining'} sectors in this snapshot.`}</p>}
+            </section>
+          })}
+        </div>
+      </section>
       <div className="tni-hm-movers">{movers('Top 5 Gainers', gainers)}{movers('Top 5 Losers', losers, true)}</div>
       <section className="tni-hm-promotion tni-hm-tradingview-cta" aria-labelledby="tni-tradingview-title">
         <div className="tni-tv-copy"><span className="tni-tv-eyebrow">GO DEEPER WITH ADVANCED CHARTS</span><h2 id="tni-tradingview-title">See the move. Explore the chart.</h2><p>Explore technical indicators and advanced charts on TradingView.</p></div>
