@@ -18,6 +18,19 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'ibm-earnings-prediction-october-2026',
+    topics: ['earnings'],
+    path: '/research/ibm-earnings-prediction-october-2026/',
+    title: 'IBM Earnings Prediction: First 30 Minutes, Hourly Returns and Full-Day Outlook',
+    description: 'Original IBM earnings research covering 23 historical events, intraday returns, walk-forward model validation and the October 22, 2026 outlook.',
+    name: 'International Business Machines',
+    symbol: 'IBM',
+    image: '/images/social/research/ibm-earnings-forecast-og.png',
+    categories: ['stock', 'earnings', 'dow'],
+    kind: 'article',
+    publishedAt: '2026-10-21',
+  },
+  {
     slug: 'nasdaq-selloff-2026',
     path: '/nasdaq-selloff-2026/',
     title: 'Nasdaq Selloff 2026: AI Stocks, Semiconductor Risk and SOXL',

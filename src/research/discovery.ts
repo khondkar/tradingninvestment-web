@@ -320,6 +320,7 @@ export const researchTopics = [
   { id: 'comparisons', name: 'Benchmark Comparisons', description: 'Put performance in context against a benchmark.' },
   { id: 'seasonality', name: 'Seasonality', description: 'Monthly returns and patterns across the calendar.' },
   { id: 'history', name: 'Market History', description: 'Market cycles and the events that shaped them.' },
+  { id: 'earnings', name: 'Earnings', description: 'Earnings forecasts, historical reactions, and company results.' },
   { id: 'other', name: 'More Research', description: 'Additional published perspectives and company studies.' },
 ]
 export function getResearchTopics(item: ResearchItem): string[] {
