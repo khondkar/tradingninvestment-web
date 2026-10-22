@@ -1,3 +1,5 @@
+import ScannerLinks from './components/market/ScannerLinks'
+import fundedRoutes from './components/trading/funded-routes.json'
 import TradingLinks from './components/trading/TradingLinks'
 import tradingRoutes from './components/trading/routes.json'
 import TniKitSubscriptionPopup from './components/subscription/TniKitSubscriptionPopup'
@@ -51,7 +53,7 @@ let SnxxResearchPage: typeof import('./pages/SnxxResearchPage')['default']
 
 export async function prepareApp(pathname: string) {
   const path = pathname.replace(/\/+$/, '') || '/'
-  if (tradingRoutes.some(route => route.path === path + '/')) { TradingPage = (await import('./pages/TradingPage')).default; return }
+  if ([...tradingRoutes, ...fundedRoutes].some(route => route.path === path + '/')) { TradingPage = (await import('./pages/TradingPage')).default; return }
 
   // Route CSS that is not required by annual-return article first paint.
   if (path === '/') {
@@ -262,7 +264,7 @@ function Header({
             </button>
             <div className="tni-research-dropdown-panel" aria-label="Research destinations">
               <a href="/research/">Research Library <small>Original research and historical data</small></a>
-              <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
+              <ScannerLinks active={pathname}/>
             </div>
           </div>
 
@@ -275,13 +277,13 @@ function Header({
               <details className="tni-scanner-group" open={pathname.includes('/stock-market-today/heatmap') || undefined}><summary>Heatmap + Scanner <span aria-hidden="true">⌄</span></summary><a href="/stock-market-today/heatmap/">S&amp;P 500</a></details>
               <a href="/stock-market-today/sector-health/">Sector Health</a>
               <a href="/stock-market-today/earnings-calendar/">Earnings Calendar</a>
-              <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
+              <ScannerLinks active={pathname}/>
             </nav>
           </details>
 
           <details className="tni-market-dropdown" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
             <summary className={page === 'trading' ? 'active' : ''}>Trading <span aria-hidden="true">⌄</span></summary>
-            <nav className="tni-market-dropdown-panel" aria-label="Trading destinations"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /></nav>
+            <nav className="tni-market-dropdown-panel" aria-label="Trading destinations"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /><ScannerLinks active={pathname}/></nav>
           </details>
 
           <button
@@ -329,17 +331,17 @@ function Header({
                 <details className="tni-scanner-group" open={pathname.includes('/stock-market-today/heatmap') || undefined}><summary>Heatmap + Scanner <span aria-hidden="true">⌄</span></summary><a href="/stock-market-today/heatmap/">S&amp;P 500</a></details>
                 <a href="/stock-market-today/sector-health/">Sector Health</a>
                 <a href="/stock-market-today/earnings-calendar/">Earnings Calendar</a>
-                <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
+                <ScannerLinks active={pathname}/>
               </div>
             </details>
             <details className="tni-mobile-research-group">
               <summary>Research <span aria-hidden="true">⌄</span></summary>
               <div className="tni-mobile-research-links">
                 <a href="/research/">Research Library</a>
-                <details className="tni-scanner-group" open={pathname.includes('/research/scanners/') || undefined}><summary>Scanner <span aria-hidden="true">⌄</span></summary><a href="/research/scanners/leveraged-etf/">Leveraged ETF</a></details>
+                <ScannerLinks active={pathname}/>
               </div>
             </details>
-            <details className="tni-mobile-research-group" open={page === 'trading' || undefined}><summary>Trading <span aria-hidden="true">⌄</span></summary><div className="tni-mobile-research-links"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /></div></details>
+            <details className="tni-mobile-research-group" open={page === 'trading' || undefined}><summary>Trading <span aria-hidden="true">⌄</span></summary><div className="tni-mobile-research-links"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /><ScannerLinks active={pathname}/></div></details>
             <a href="/about/">About</a>
             <button type="button" onClick={shareCurrentPage}>Share this page</button>
             <a className="tni-mobile-launch" href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer">Launch TNI <span aria-hidden="true">↗</span></a>
@@ -1011,6 +1013,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   if (normalizedPath === '/new-iphone-release-apple-stock-price-history') {
     return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><AppleIphoneResearchPage /><Footer setPage={setPage} /></div>
   }
+
   if (normalizedPath === '/gravestone-doji-candlestick-pattern') {
     return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><GravestoneDojiArticle /><Footer setPage={setPage} /></div>
   }
@@ -1067,7 +1070,7 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
   // Canonical URL: /stock-market-today/
   // ============================================================================
 
-  const tradingRoute = tradingRoutes.find(route => route.path === normalizedPath + '/')
+  const tradingRoute = [...tradingRoutes, ...fundedRoutes].find(route => route.path === normalizedPath + '/')
   if (tradingRoute) return <div className="site"><Header pathname={pathname} page="trading" setPage={setPage} /><TradingPage path={tradingRoute.path} /><Footer setPage={setPage} /></div>
 
   if (normalizedPath === '/stock-market-today/earnings-calendar') {
