@@ -18,16 +18,16 @@
     "month": 10,
     "month_name": "October",
     "label": "October 2026 MTD",
-    "return_pct": 0.1554,
-    "through_date": "2026-10-22"
+    "return_pct": -0.3641,
+    "through_date": "2026-10-23"
   },
   "current_month_risk": {
     "month": 10,
     "month_name": "October",
-    "through_date": "2026-10-22",
+    "through_date": "2026-10-23",
     "previous_month_end_close": 7651.54,
-    "current_max_drawdown_pct": -2.0398,
-    "current_adverse_excursion_pct": -0.4543,
+    "current_max_drawdown_pct": -2.4971,
+    "current_adverse_excursion_pct": -0.5158,
     "historical_observations": 98,
     "average_max_drawdown_pct": -5.4164,
     "median_max_drawdown_pct": -3.6132,
@@ -37,7 +37,7 @@
     "median_adverse_excursion_pct": -2.468,
     "worst_adverse_excursion_pct": -32.7409,
     "worst_adverse_excursion_year": 1987,
-    "drawdown_percentile": 77.55
+    "drawdown_percentile": 70.41
   },
   "leaders": {
     "highest_positive_frequency": {
@@ -8531,8 +8531,8 @@
       "year": 2026,
       "month": 10,
       "month_name": "October",
-      "value": 0.1554,
-      "status": "positive"
+      "value": -0.3641,
+      "status": "negative"
     }
   ]
 }
