@@ -264,7 +264,6 @@ function Header({
             </button>
             <div className="tni-research-dropdown-panel" aria-label="Research destinations">
               <a href="/research/">Research Library <small>Original research and historical data</small></a>
-              <ScannerLinks active={pathname}/>
             </div>
           </div>
 
@@ -283,7 +282,7 @@ function Header({
 
           <details className="tni-market-dropdown" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
             <summary className={page === 'trading' ? 'active' : ''}>Trading <span aria-hidden="true">⌄</span></summary>
-            <nav className="tni-market-dropdown-panel" aria-label="Trading destinations"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /><ScannerLinks active={pathname}/></nav>
+            <nav className="tni-market-dropdown-panel" aria-label="Trading destinations"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /></nav>
           </details>
 
           <button
@@ -338,10 +337,9 @@ function Header({
               <summary>Research <span aria-hidden="true">⌄</span></summary>
               <div className="tni-mobile-research-links">
                 <a href="/research/">Research Library</a>
-                <ScannerLinks active={pathname}/>
               </div>
             </details>
-            <details className="tni-mobile-research-group" open={page === 'trading' || undefined}><summary>Trading <span aria-hidden="true">⌄</span></summary><div className="tni-mobile-research-links"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /><ScannerLinks active={pathname}/></div></details>
+            <details className="tni-mobile-research-group" open={page === 'trading' || undefined}><summary>Trading <span aria-hidden="true">⌄</span></summary><div className="tni-mobile-research-links"><TradingLinks active={pathname.replace(/\/+$/, '') + '/'} /></div></details>
             <a href="/about/">About</a>
             <button type="button" onClick={shareCurrentPage}>Share this page</button>
             <a className="tni-mobile-launch" href="https://app.tradingninvestment.com/live/news" target="_blank" rel="noreferrer">Launch TNI <span aria-hidden="true">↗</span></a>
