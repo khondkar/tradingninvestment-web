@@ -1,0 +1,60 @@
+/* Isolated homepage additions: existing navigation, research and citations retain their styles. */
+.tni-editorial .tni-mini-lab{display:grid;gap:22px;margin:12px 0 28px;padding:20px 14px;border-radius:20px;border:1px solid #284e61;background:linear-gradient(125deg,#102b42,#073d45);color:#fff;box-shadow:0 12px 32px #102b4218;text-align:left}
+.tni-mini-lab *, .tni-tableau-showcase *{box-sizing:border-box;min-width:0}
+.tni-mini-lab .tni-mini-eyebrow{display:inline-block;padding:7px 10px;border-radius:30px;background:#b8f4de;color:#064738;font-size:12px;font-weight:850;letter-spacing:.035em}
+.tni-editorial .tni-mini-copy h2{font:850 clamp(28px,4vw,44px)/1.13 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:-1px;color:#fff;margin:14px 0 10px}
+.tni-mini-copy>p{color:#fff;font-size:17px;font-weight:650;line-height:1.5;margin:0}
+.tni-mini-copy ol{display:none;list-style:none;padding:0;margin:28px 0;gap:22px}
+.tni-mini-copy li{display:flex;gap:14px;align-items:center;font-size:16px;font-weight:600;line-height:1.5;color:#fff}
+.tni-mini-copy li>b{display:grid;place-items:center;flex:0 0 40px;height:40px;border:1px solid #80cbb7;border-radius:12px;color:#b8f4de;font-size:17px}
+.tni-mini-copy li strong{display:block;font-size:18px;font-weight:800}
+.tni-mini-copy .tni-mini-public{display:none;font-size:14px}
+.tni-mini-app{padding:12px;border-radius:15px;background:#fff;color:#102b42}
+.tni-mini-lab button{font-family:inherit;cursor:pointer}
+.tni-mini-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.tni-mini-tabs button{border:1px solid #b9cdd9;border-radius:8px;background:#edf4f8;color:#102b42;padding:10px 2px;min-height:48px;font-size:16px;font-weight:850}
+.tni-mini-tabs button[aria-pressed=true]{background:#08776d;border-color:#08776d;color:#fff;box-shadow:0 3px 9px #08776d25}
+.tni-mini-tabs span{display:block;margin-top:3px;font-size:11px;font-weight:750}
+.tni-mini-market{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0 12px;font-size:16px}
+.tni-mini-market>span{font-size:12px;font-weight:750;background:#edf4f8;padding:5px 7px;border-radius:6px;color:#163e57}
+.tni-mini-decision{display:flex;flex-direction:column;align-items:center;padding:17px;border-radius:12px;background:#102b42;color:#fff;gap:4px}
+.tni-mini-decision>span{font-size:13px;font-weight:750;color:white}
+.tni-mini-decision strong{font-size:40px;letter-spacing:-1px;line-height:1.15;font-weight:900;color:#ffda75}
+.tni-mini-decision.tni-mini-buy strong{color:#a6ffdb}.tni-mini-decision.tni-mini-sell strong{color:#ffb9b9}
+.tni-mini-decision>b{font-size:15px;color:white;font-weight:750}
+.tni-mini-why{border:1px solid #c5d6df;border-radius:8px;margin-top:10px;color:#102b42}
+.tni-mini-why summary{padding:13px 12px;font-size:15px;font-weight:800;cursor:pointer;min-height:46px}
+.tni-mini-why p{padding:0 12px 12px;margin:0;font-size:15px;font-weight:650;line-height:1.55;color:#17384c}
+.tni-mini-time{font-size:12px;font-weight:700;color:#29495e;line-height:1.4;margin:9px 0 15px}
+.tni-mini-voting{padding-top:14px;border-top:1px solid #d4e0e8}
+.tni-editorial .tni-mini-voting h3{font-family:inherit;font-size:17px;line-height:1.4;color:#102b42;font-weight:850;margin:0}
+.tni-mini-voting>p{font-size:14px;color:#29495e;font-weight:700;margin:5px 0 12px}
+.tni-mini-votes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:12px}
+.tni-mini-vote{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:78px;padding:8px 2px;border:1px solid #b6ccd9;border-radius:9px;background:#ecf2f7;color:#18364c;font-size:13px;font-weight:850}
+.tni-mini-vote>span{font-size:28px;line-height:1;font-weight:850}
+.tni-mini-bullish{background:#e2f6ed;color:#075837;border-color:#8cc9ae}.tni-mini-bearish{background:#fff0f0;color:#a4142c;border-color:#e8a6af}
+.tni-mini-vote[aria-pressed=true]{outline:3px solid #102b42;outline-offset:1px}
+.tni-mini-lab button:disabled{cursor:wait;filter:grayscale(.55)}
+.tni-mini-text-button{display:inline-block;min-height:44px;border:0;background:transparent;color:#075c67;font-size:14px;font-weight:800;text-decoration:underline;text-underline-offset:3px;padding:10px 0}
+.tni-editorial .tni-mini-cta{display:flex;align-items:center;justify-content:center;gap:20px;min-height:48px;border-radius:9px;background:#08776d;color:#fff;font-size:16px;font-weight:850;padding:12px;margin-top:10px;line-height:1.4;text-decoration:none}
+.tni-mini-cta:hover{background:#055b54}.tni-mini-note{font-size:12px;font-weight:750;line-height:1.5;text-align:center;color:#29495e;margin:10px 0 0}
+.tni-mini-loading,.tni-mini-error{padding:22px 12px;border-radius:12px;background:#edf4f8;min-height:180px;font-size:16px;font-weight:750;color:#102b42;text-align:center}
+.tni-mini-loading p,.tni-mini-error p{font-size:15px;line-height:1.6;font-weight:650}
+.tni-mini-loader{display:block;margin:0 auto 15px;width:27px;height:27px;border:3px solid #bfd2dd;border-top-color:#08776d;border-radius:50%;animation:tni-mini-spin .9s linear infinite}
+.tni-mini-error button{padding:12px 20px;border:0;border-radius:8px;color:white;background:#08776d;font-size:16px;font-weight:800;min-height:44px}
+.tni-mini-voting .tni-mini-error-text{color:#9c1730;font-weight:750;line-height:1.5}
+.tni-mini-community{padding:13px;margin:8px 0 14px;background:#edf6f3;border:1px solid #bbd9cb;border-radius:10px;font-size:15px;color:#102b42}
+.tni-mini-community p{margin:6px 0 10px;font-size:14px;font-weight:700}.tni-mini-community small{display:block;font-size:12px;font-weight:700;line-height:1.4;margin-top:9px;color:#29495e}
+.tni-mini-result{display:grid;grid-template-columns:64px minmax(0,1fr) 42px;gap:6px;align-items:center;margin:8px 0;font-size:13px;font-weight:750}.tni-mini-result meter{width:100%;height:18px;accent-color:#08776d}
+.tni-mini-lab :focus-visible,.tni-tableau-showcase :focus-visible{outline:3px solid #0874d5;outline-offset:4px}
+@keyframes tni-mini-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.tni-mini-loader{animation:none}}
+@media(min-width:850px){.tni-editorial .tni-mini-lab{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);padding:32px;gap:36px;align-items:center}.tni-mini-copy ol{display:grid}.tni-mini-copy .tni-mini-public{display:block}.tni-mini-app{padding:18px}.tni-mini-tabs span{font-size:12px}}
+.tni-editorial .tni-tableau-showcase{margin:30px 0;color:#102b42;text-align:left}
+.tni-editorial .tni-tableau-showcase h2{font:850 clamp(24px,3vw,32px)/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#102b42;margin:0 0 9px;letter-spacing:-.6px}
+.tni-tableau-showcase>p{font-size:16px;line-height:1.6;font-weight:650;color:#29495e;margin:0 0 18px}
+.tni-tableau-grid{display:grid;grid-template-columns:1fr;gap:18px}
+.tni-editorial .tni-tableau-card{display:block;border:1px solid #c8d9e3;border-radius:14px;overflow:hidden;color:#102b42;background:#fff;text-decoration:none}
+.tni-tableau-card img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:contain;background:#f5f8fb;border-bottom:1px solid #d2e0e8}
+.tni-tableau-card>div{padding:18px}.tni-tableau-card strong{display:block;font-size:20px;font-weight:850;line-height:1.3;color:#102b42}.tni-tableau-card p{font-size:15px;font-weight:650;line-height:1.6;color:#29495e;margin:9px 0}.tni-tableau-card span{display:block;min-height:44px;padding-top:12px;font-size:15px;font-weight:850;color:#056258}.tni-tableau-card:hover{border-color:#08776d}
+@media(min-width:700px){.tni-tableau-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

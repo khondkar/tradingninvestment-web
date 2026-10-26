@@ -1,3 +1,5 @@
+import MiniPredictionLab from './MiniPredictionLab'
+import HomeTableau from './HomeTableau'
 import { researchItems } from '../../research/discovery'
 import './EditorialHome.css'
 import './HomeTop.css'
@@ -35,6 +37,7 @@ export default function PremiumResearchHome() {
       <p className="tni-home-intro-description">Independent financial research, historical market data, and quantitative intelligence.</p>
     </section>
     <div className="editorial-wrap">
+      <MiniPredictionLab />
       <div className="tni-home-feature-stack">
         <section className="tni-home-feature tni-home-feature-intelligence">
           <div className="tni-home-feature-icon"><HomeIcon kind="brain" /></div><div className="tni-home-feature-label">TNI Intelligence</div>
@@ -93,6 +96,7 @@ export default function PremiumResearchHome() {
         })}
       </section>
       <a className="editorial-browse editorial-link" href="/research/">Browse all research <span aria-hidden="true">↗</span></a>
+      <HomeTableau />
       {more.length > 0 && <section className="editorial-more" aria-labelledby="editorial-more-title">
         <h2 id="editorial-more-title">More perspectives.</h2>
         <div>{more.map(item => <a key={item.path} href={item.path}>

@@ -1,0 +1,9 @@
+const dashboards = [
+  { title: 'S&P 500 Historical Returns', description: 'Explore historical stock market returns and dividend yield in our original Tableau dashboard.', image: 'sp500-historical-returns.webp', href: 'https://public.tableau.com/app/profile/kamalkhondkar/viz/SPhistoricalreturnwithdividendYield/StockmarketReturn' },
+  { title: 'Apple (AAPL) Yearly Returns', description: 'Explore annual Apple stock returns in our original interactive Tableau dashboard.', image: 'apple-yearly-returns.webp', href: 'https://public.tableau.com/app/profile/kamalkhondkar/viz/AAPLYearlyReturn/AAPLyearlyreturn' },
+  { title: 'Warren Buffett Portfolio Tracker', description: 'Explore the holdings and portfolio visualizations published in our Tableau research.', image: 'buffett-portfolio.webp', href: 'https://public.tableau.com/app/profile/kamalkhondkar/viz/WarrenBuffetportfolioTracker/Buffetportfolio' },
+  { title: 'Berkshire Hathaway Yearly Returns', description: 'Compare Berkshire Hathaway’s annual returns across the years shown in our Tableau research.', image: 'berkshire-yearly-returns.webp', href: 'https://public.tableau.com/app/profile/kamalkhondkar/viz/BRKReturn/BirkshireHathawayYearlyreturn' },
+]
+export default function HomeTableau() {
+  return <section className="tni-tableau-showcase" aria-labelledby="tni-tableau-title"><h2 id="tni-tableau-title">Financial visualizations</h2><p>Explore our work on Tableau Public. Open a dashboard to interact with the original research.</p><div className="tni-tableau-grid">{dashboards.map(d => <a key={d.href} className="tni-tableau-card" href={d.href} target="_blank" rel="noopener noreferrer"><img src={'/images/home-tableau/' + d.image} alt={d.title + ' — original Tableau dashboard preview'} width="800" height="500" loading="lazy" decoding="async" /><div><strong>{d.title}</strong><p>{d.description}</p><span>Explore dashboard ↗</span></div></a>)}</div></section>
+}
