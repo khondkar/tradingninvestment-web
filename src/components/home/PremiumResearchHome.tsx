@@ -4,6 +4,7 @@ import { researchItems } from '../../research/discovery'
 import './EditorialHome.css'
 import './HomeTop.css'
 import './HomeTradingCard.css'
+import './HomeArt.css'
 import { HomeGlobe, HomeIcon } from './HomeVisuals'
 
 const citations = [
@@ -32,9 +33,10 @@ export default function PremiumResearchHome() {
   return <main className="tni-home tni-editorial" id="top">
     <div className="tni-home-hero-backdrop"><HomeGlobe /></div>
     <section className="tni-home-intro editorial-wrap">
-      <p className="tni-home-intro-tagline">TRADING · INVESTMENT · RESEARCH · INTELLIGENCE</p>
-      <h1>Understand the Market.<br />Invest with <span>Intelligence.</span></h1>
-      <p className="tni-home-intro-description">Independent financial research, historical market data, and quantitative intelligence.</p>
+      <p className="tni-home-intro-tagline">QUANTITATIVE AI · MARKET INTELLIGENCE · ORIGINAL RESEARCH</p>
+      <h1>From Market Data<br />to <span>Market Intelligence.</span></h1>
+      <p className="tni-home-intro-description">Explore market outlooks, understand the evidence behind them, and discover original financial research.</p>
+      <div className="tni-art-hero-actions"><a href="#tni-mini-lab">Try Prediction Lab <span aria-hidden="true">↗</span></a><a href="/stock-market-today/">Explore markets <span aria-hidden="true">→</span></a></div>
     </section>
     <div className="editorial-wrap">
       <MiniPredictionLab />
@@ -98,10 +100,11 @@ export default function PremiumResearchHome() {
       <a className="editorial-browse editorial-link" href="/research/">Browse all research <span aria-hidden="true">↗</span></a>
       <HomeTableau />
       {more.length > 0 && <section className="editorial-more" aria-labelledby="editorial-more-title">
-        <h2 id="editorial-more-title">More perspectives.</h2>
-        <div>{more.map(item => <a key={item.path} href={item.path}>
+        <h2 id="editorial-more-title">More Research</h2>
+        <div>{more.slice(0, 8).map(item => <a key={item.path} href={item.path}>
           <span><small>{item.categories.includes('stock') ? 'STOCK RESEARCH' : 'MARKET RESEARCH'}</small><strong>{item.title}</strong></span><span aria-hidden="true">↗</span>
         </a>)}</div>
+        <a className="tni-art-research-all" href="/research/">Explore all research <span aria-hidden="true">→</span></a>
       </section>}
     </div>
     <section

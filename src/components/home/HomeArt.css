@@ -1,0 +1,58 @@
+/* Homepage art direction. Scope excludes global navigation, featured research,
+   citations, article pages and Work with TNI. Existing API behavior is unchanged. */
+.site.tni-home-site .tni-editorial{background:#f5f9fa}
+.tni-editorial .tni-home-hero-backdrop{display:none}
+.tni-editorial .tni-home-intro{text-align:center;padding-top:40px;padding-bottom:20px}
+.tni-editorial .tni-home-intro-tagline{color:#006d65;font-size:11px;letter-spacing:1.7px;line-height:1.7;white-space:normal;font-weight:850;margin-bottom:15px}
+.tni-editorial .tni-home-intro h1{max-width:900px;margin:0 auto 17px;font-size:clamp(34px,5vw,62px);line-height:1.05;letter-spacing:-2px;font-weight:850;color:#102d40}
+.tni-editorial .tni-home-intro h1>span{color:#007e73}
+.tni-editorial .tni-home-intro-description{max-width:610px;margin:0 auto;font-size:17px;font-weight:650;line-height:1.6;color:#294858}
+.tni-art-hero-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 10px}
+.tni-editorial .tni-art-hero-actions a{display:flex;justify-content:center;align-items:center;gap:18px;min-height:48px;padding:13px 22px;background:#007d72;color:#fff;border:1px solid #007d72;border-radius:10px;font-size:15px;font-weight:800;text-decoration:none}
+.tni-editorial .tni-art-hero-actions a+ a{background:white;color:#102d40;border-color:#c4d9de}
+.tni-editorial #tni-mini-lab{scroll-margin-top:20px;position:relative;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:28px 40px;align-items:center;padding:0 32px 32px;margin:14px 0 34px;border-radius:24px;border:1px solid #174450;background:radial-gradient(ellipse at 100% 0%,#155159,transparent 70%),#0b283a;box-shadow:0 18px 42px #092d3c18;color:white}
+.tni-art-lab-bar{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 0;border-bottom:1px solid #406570;min-width:0}
+.tni-art-lab-bar>span{color:#fff;font-size:11px;font-weight:850;letter-spacing:1px}
+.tni-art-lab-bar>strong{color:#bcf4e3;font-size:10px;letter-spacing:.8px;font-weight:800;border:1px solid #4b7d80;padding:6px 10px;border-radius:20px}
+#tni-mini-lab .tni-mini-copy{align-self:center}
+#tni-mini-lab .tni-mini-eyebrow{background:none;color:#a9eedc;padding:0;border:0;border-radius:0;font-size:10px;letter-spacing:1.4px;font-weight:850}
+.tni-editorial #tni-mini-lab .tni-mini-copy h2{font-size:clamp(30px,3.7vw,45px);font-weight:850;line-height:1.1;letter-spacing:-1.4px;margin:14px 0 18px;color:white}
+#tni-mini-lab .tni-mini-copy h2 span{color:#a9eedc}
+#tni-mini-lab .tni-mini-copy>p{font-size:16px;font-weight:650;line-height:1.65;max-width:370px;color:#fff}
+#tni-mini-lab .tni-mini-copy ol{display:grid;gap:18px;margin:25px 0;padding:0}
+#tni-mini-lab .tni-mini-copy li{font-size:14px;font-weight:650;gap:12px;color:#fff}
+#tni-mini-lab .tni-mini-copy li strong{font-size:16px;font-weight:850}
+#tni-mini-lab .tni-mini-copy li>b{height:35px;flex-basis:35px;font-size:12px;border-radius:10px;background:#174b50;border:1px solid #397774;color:#baffea}
+#tni-mini-lab .tni-art-launch{display:flex;align-items:center;justify-content:space-between;gap:22px;width:fit-content;min-height:48px;padding:13px 19px;background:#b5f3df;color:#0c3a3c;font-size:14px;font-weight:850;border-radius:10px;text-decoration:none;margin:20px 0 12px}
+#tni-mini-lab .tni-mini-copy .tni-mini-public{display:block;font-size:12px;font-weight:700;line-height:1.6;color:#fff}
+#tni-mini-lab .tni-mini-app{padding:20px;border-radius:18px;box-shadow:0 12px 30px #001b241c;color:#102d40}
+.tni-art-app-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:16px}.tni-art-app-heading strong{font-size:16px;font-weight:850;color:#102d40}.tni-art-app-heading span{padding:6px 8px;font-size:9px;font-weight:850;letter-spacing:.4px;background:#e5f6f0;color:#00655b;border-radius:20px;white-space:nowrap}
+#tni-mini-lab .tni-mini-tabs button{font-size:15px;border-radius:9px;background:#f3f8f8;border-color:#c9dddf;color:#102d40;min-height:48px}#tni-mini-lab .tni-mini-tabs button[aria-pressed=true]{outline:none}
+#tni-mini-lab .tni-mini-tabs button[aria-pressed=true]{background:#087c70;border-color:#087c70;color:#fff;box-shadow:none}
+#tni-mini-lab .tni-mini-tabs span{font-size:10px;font-weight:750}
+#tni-mini-lab .tni-mini-market{margin:17px 0 10px;font-size:15px}#tni-mini-lab .tni-mini-market>span{background:#edf6f5;color:#23524f;font-size:11px}
+#tni-mini-lab .tni-mini-decision{position:relative;text-align:left;align-items:flex-start;display:grid;grid-template-columns:1fr auto;padding:20px;background:radial-gradient(ellipse at 100% 0%,#195359,transparent 80%),#0b283a;border-radius:14px;gap:6px 12px}
+#tni-mini-lab .tni-mini-decision>span{grid-column:1/-1;color:#d4fff1;letter-spacing:1px;font-size:11px;font-weight:850;text-transform:uppercase}
+#tni-mini-lab .tni-mini-decision strong{font-size:45px;font-weight:900;letter-spacing:-1.5px}#tni-mini-lab .tni-mini-decision>b{align-self:center;font-size:13px;font-weight:750;max-width:110px;line-height:1.5;color:#fff}
+#tni-mini-lab .tni-mini-why{border-color:#cbdfe1;border-radius:10px;background:#f7fbfa}#tni-mini-lab .tni-mini-why summary{font-size:14px;padding:11px 13px;color:#102d40}
+#tni-mini-lab .tni-mini-time{color:#294858;font-size:11px;margin:9px 0 13px}
+#tni-mini-lab .tni-mini-voting{padding-top:13px}#tni-mini-lab .tni-mini-voting h3{font-size:17px;color:#102d40;font-weight:850}#tni-mini-lab .tni-mini-voting>p{font-size:13px;font-weight:700;color:#294858}
+#tni-mini-lab .tni-mini-vote{min-height:70px;border-radius:10px;font-size:13px}#tni-mini-lab .tni-mini-vote>span{font-size:24px}
+#tni-mini-lab .tni-mini-cta{background:#007d72;border-radius:10px;font-size:15px}#tni-mini-lab .tni-mini-note{color:#294858;font-size:11px;font-weight:700}
+#tni-mini-lab .tni-mini-text-button{color:#006d62;font-size:13px;font-weight:800}
+#tni-mini-lab button:focus-visible,#tni-mini-lab a:focus-visible,.tni-art-hero-actions a:focus-visible{outline:3px solid #008c7c;outline-offset:4px}
+#tni-mini-lab .tni-art-launch:focus-visible{outline-color:white}
+.tni-editorial .tni-tableau-showcase{margin:40px 0;padding-top:28px;border-top:1px solid #d5e3e5}
+.tni-editorial .tni-tableau-showcase h2{color:#102d40;font-weight:850;letter-spacing:-.8px}.tni-editorial .tni-tableau-showcase>p{color:#294858;font-weight:650}
+.tni-editorial .tni-tableau-card{border-color:#cadde1;border-radius:16px;box-shadow:0 6px 18px #14334405}
+.tni-editorial .tni-tableau-card strong{color:#102d40;font-size:20px;font-weight:850}.tni-editorial .tni-tableau-card p{color:#294858;font-weight:650}.tni-editorial .tni-tableau-card span{color:#006b60;font-weight:850}
+.tni-editorial .editorial-more{border-top:1px solid #d5e3e5;padding:30px 0}.tni-editorial .editorial-more h2{font-family:inherit;color:#102d40;font-size:28px;font-weight:850;letter-spacing:-.8px;margin-bottom:12px}
+.tni-editorial .editorial-more strong{color:#102d40;font-weight:750;font-size:16px;line-height:1.5}.tni-editorial .editorial-more small{color:#006c62;font-size:11px;font-weight:800}.tni-editorial .editorial-more a{border-color:#d1e1e4}
+.tni-editorial .editorial-more .tni-art-research-all{display:flex;justify-content:center;gap:24px;width:fit-content;min-height:48px;padding:12px 22px;border:1px solid #007d72;border-radius:10px;margin-top:22px;background:#007d72;color:white;font-size:15px;font-weight:850}
+@media(max-width:849px){
+ .tni-editorial .tni-home-intro{padding-top:26px;padding-bottom:10px}.tni-editorial .tni-home-intro h1{font-size:clamp(32px,6.8vw,46px);letter-spacing:-1.2px}.tni-editorial .tni-home-intro-tagline{font-size:9px;letter-spacing:1px;max-width:330px;margin:0 auto 12px}.tni-editorial .tni-home-intro-description{font-size:15px;max-width:480px}.tni-art-hero-actions{margin:18px 0 12px}.tni-editorial .tni-art-hero-actions a{font-size:13px;padding:12px 15px;gap:12px}
+ .tni-editorial #tni-mini-lab{grid-template-columns:minmax(0,1fr);gap:20px;padding:0 16px 16px;margin-top:12px;border-radius:20px}.tni-art-lab-bar{padding:16px 0;gap:6px}.tni-art-lab-bar>span{font-size:9px;letter-spacing:.5px}.tni-art-lab-bar>strong{font-size:8px;padding:5px 7px;letter-spacing:.3px}
+ #tni-mini-lab .tni-mini-copy{padding:0 3px}.tni-editorial #tni-mini-lab .tni-mini-copy h2{font-size:34px;margin:10px 0 12px;letter-spacing:-1px}#tni-mini-lab .tni-mini-copy>p{font-size:14px;max-width:100%}#tni-mini-lab .tni-mini-copy ol{display:none}#tni-mini-lab .tni-art-launch{display:none}#tni-mini-lab .tni-mini-copy .tni-mini-public{font-size:11px;margin-top:10px}#tni-mini-lab .tni-mini-app{padding:14px;border-radius:14px}.tni-art-app-heading strong{font-size:14px}.tni-art-app-heading span{font-size:8px;padding:5px 7px}#tni-mini-lab .tni-mini-tabs span{font-size:9px}#tni-mini-lab .tni-mini-decision{padding:17px 14px}#tni-mini-lab .tni-mini-decision strong{font-size:40px}
+ .tni-editorial .tni-tableau-showcase{margin:30px 0;padding-top:24px}.tni-editorial .editorial-more .tni-art-research-all{width:100%;box-sizing:border-box}
+}
+@media(prefers-reduced-motion:no-preference){#tni-mini-lab .tni-mini-tabs button,#tni-mini-lab .tni-mini-vote{transition:background-color .15s,border-color .15s}}
