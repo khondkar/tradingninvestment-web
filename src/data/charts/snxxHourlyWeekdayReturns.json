@@ -1,82 +1,82 @@
 {
   "ticker": "SNXX",
   "source": "Yahoo Finance 30-minute historical OHLC",
-  "generatedAt": "2026-10-24T01:57:33.745955+00:00",
+  "generatedAt": "2026-10-27T02:24:49.868369+00:00",
   "weekdays": {
     "Monday": {
-      "sampleSize": 11,
+      "sampleSize": 12,
       "firstDate": "2026-08-03",
-      "lastDate": "2026-10-19",
+      "lastDate": "2026-10-26",
       "intervals": [
         {
           "start": "09:30",
           "end": "10:00",
-          "averageReturnPct": 1.1551,
+          "averageReturnPct": 0.9888,
           "positiveCount": 6,
-          "negativeCount": 5,
+          "negativeCount": 6,
           "neutralCount": 0,
           "averageGainPct": 6.3449,
-          "averageLossPct": -5.0726
+          "averageLossPct": -4.3672
         },
         {
           "start": "10:00",
           "end": "11:00",
-          "averageReturnPct": 1.0185,
-          "positiveCount": 6,
+          "averageReturnPct": 1.0999,
+          "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 3.0092,
+          "averageGainPct": 2.8643,
           "averageLossPct": -1.3703
         },
         {
           "start": "11:00",
           "end": "12:00",
-          "averageReturnPct": 0.0666,
+          "averageReturnPct": 0.0528,
           "positiveCount": 5,
-          "negativeCount": 6,
+          "negativeCount": 7,
           "neutralCount": 0,
           "averageGainPct": 2.1592,
-          "averageLossPct": -1.6773
+          "averageLossPct": -1.4517
         },
         {
           "start": "12:00",
           "end": "13:00",
-          "averageReturnPct": 0.4817,
-          "positiveCount": 7,
+          "averageReturnPct": 0.491,
+          "positiveCount": 8,
           "negativeCount": 4,
           "neutralCount": 0,
-          "averageGainPct": 1.6954,
+          "averageGainPct": 1.5576,
           "averageLossPct": -1.6422
         },
         {
           "start": "13:00",
           "end": "14:00",
-          "averageReturnPct": 0.5884,
-          "positiveCount": 6,
+          "averageReturnPct": 0.8194,
+          "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 1.9501,
+          "averageGainPct": 2.1516,
           "averageLossPct": -1.0457
         },
         {
           "start": "14:00",
           "end": "15:00",
-          "averageReturnPct": -0.7768,
+          "averageReturnPct": -0.9733,
           "positiveCount": 3,
-          "negativeCount": 8,
+          "negativeCount": 9,
           "neutralCount": 0,
           "averageGainPct": 2.0815,
-          "averageLossPct": -1.8486
+          "averageLossPct": -1.9916
         },
         {
           "start": "15:00",
           "end": "16:00",
-          "averageReturnPct": 0.9509,
+          "averageReturnPct": 0.7445,
           "positiveCount": 4,
-          "negativeCount": 7,
+          "negativeCount": 8,
           "neutralCount": 0,
           "averageGainPct": 4.1495,
-          "averageLossPct": -0.877
+          "averageLossPct": -0.9581
         }
       ]
     },
@@ -312,79 +312,79 @@
       ]
     },
     "Friday": {
-      "sampleSize": 13,
-      "firstDate": "2026-07-31",
+      "sampleSize": 12,
+      "firstDate": "2026-08-07",
       "lastDate": "2026-10-23",
       "intervals": [
         {
           "start": "09:30",
           "end": "10:00",
-          "averageReturnPct": -2.341,
+          "averageReturnPct": -0.9478,
           "positiveCount": 4,
-          "negativeCount": 9,
+          "negativeCount": 8,
           "neutralCount": 0,
           "averageGainPct": 6.3085,
-          "averageLossPct": -6.1852
+          "averageLossPct": -4.576
         },
         {
           "start": "10:00",
           "end": "11:00",
-          "averageReturnPct": 0.2849,
-          "positiveCount": 9,
+          "averageReturnPct": 0.2491,
+          "positiveCount": 8,
           "negativeCount": 4,
           "neutralCount": 0,
-          "averageGainPct": 1.2384,
+          "averageGainPct": 1.304,
           "averageLossPct": -1.8605
         },
         {
           "start": "11:00",
           "end": "12:00",
-          "averageReturnPct": 0.0155,
+          "averageReturnPct": 0.4124,
           "positiveCount": 7,
-          "negativeCount": 6,
+          "negativeCount": 5,
           "neutralCount": 0,
           "averageGainPct": 1.4101,
-          "averageLossPct": -1.6116
+          "averageLossPct": -0.9844
         },
         {
           "start": "12:00",
           "end": "13:00",
-          "averageReturnPct": 0.3102,
-          "positiveCount": 8,
+          "averageReturnPct": 0.0843,
+          "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 1.3994,
+          "averageGainPct": 1.1677,
           "averageLossPct": -1.4325
         },
         {
           "start": "13:00",
           "end": "14:00",
-          "averageReturnPct": 0.2275,
-          "positiveCount": 8,
+          "averageReturnPct": 0.0139,
+          "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 0.7101,
+          "averageGainPct": 0.4129,
           "averageLossPct": -0.5447
         },
         {
           "start": "14:00",
           "end": "15:00",
-          "averageReturnPct": -0.6623,
+          "averageReturnPct": -0.6549,
           "positiveCount": 3,
-          "negativeCount": 10,
+          "negativeCount": 9,
           "neutralCount": 0,
           "averageGainPct": 0.1603,
-          "averageLossPct": -0.9091
+          "averageLossPct": -0.9267
         },
         {
           "start": "15:00",
           "end": "16:00",
-          "averageReturnPct": -0.4544,
+          "averageReturnPct": -0.013,
           "positiveCount": 6,
-          "negativeCount": 7,
+          "negativeCount": 6,
           "neutralCount": 0,
           "averageGainPct": 1.5789,
-          "averageLossPct": -2.1973
+          "averageLossPct": -1.6049
         }
       ]
     }
