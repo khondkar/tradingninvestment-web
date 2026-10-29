@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/enforce-research-privacy.mjs --source && node scripts/generate-performance-data.mjs && npm run generate:sitemap && npm run generate:ai-discovery && tsc -b && vite build && npm run generate:static && npm run validate:research-authors && node scripts/finalize-performance.mjs && node scripts/check-performance-budget.mjs && node scripts/enforce-research-privacy.mjs --dist",
+    "build": "node scripts/enforce-research-privacy.mjs --source && node scripts/generate-performance-data.mjs && npm run generate:sitemap && npm run generate:ai-discovery && tsc -b && vite build && npm run generate:static && npm run validate:research-authors && node scripts/finalize-performance.mjs && node scripts/check-performance-budget.mjs && node scripts/check-tni-brand-seo.mjs && node scripts/enforce-research-privacy.mjs --dist",
     "lint": "oxlint",
     "preview": "vite preview",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",

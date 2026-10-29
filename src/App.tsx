@@ -496,7 +496,7 @@ export function AboutPage() {
         </h1>
 
         <p>
-          TradingNInvestment turns financial data, market history, and
+          TradingNInvestment (TNI) turns financial data, market history, and
           quantitative research into clear visual intelligence for investors,
           researchers, and market participants.
         </p>

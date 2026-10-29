@@ -7,8 +7,8 @@ import { renderToStaticMarkup } from 'react-dom/server'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dist = path.join(root, 'dist')
-const title = 'About TradingNInvestment | Research, Data & Market Intelligence'
-const description = 'Learn how TradingNInvestment uses market history, quantitative research, and clear visualizations to help investors understand the market.'
+const title = 'About TNI (TradingNInvestment) | Research, Data & Market Intelligence'
+const description = 'Learn how TNI (TradingNInvestment) uses market history, quantitative research, and clear visualizations to help investors understand the market.'
 const canonical = 'https://tradingninvestment.com/about/'
 const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')
 
