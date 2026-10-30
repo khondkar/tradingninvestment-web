@@ -1,7 +1,7 @@
 {
   "ticker": "SNXX",
   "source": "Yahoo Finance 30-minute historical OHLC",
-  "generatedAt": "2026-10-29T02:46:39.616788+00:00",
+  "generatedAt": "2026-10-30T02:54:29.760380+00:00",
   "weekdays": {
     "Monday": {
       "sampleSize": 11,
@@ -21,31 +21,31 @@
         {
           "start": "10:00",
           "end": "11:00",
-          "averageReturnPct": 0.5879,
+          "averageReturnPct": 0.5823,
           "positiveCount": 6,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 2.2198,
+          "averageGainPct": 2.2095,
           "averageLossPct": -1.3703
         },
         {
           "start": "11:00",
           "end": "12:00",
-          "averageReturnPct": 0.0897,
+          "averageReturnPct": 0.0941,
           "positiveCount": 5,
           "negativeCount": 6,
           "neutralCount": 0,
-          "averageGainPct": 2.1495,
+          "averageGainPct": 2.1592,
           "averageLossPct": -1.6268
         },
         {
           "start": "12:00",
           "end": "13:00",
-          "averageReturnPct": 0.2886,
+          "averageReturnPct": 0.2472,
           "positiveCount": 7,
           "negativeCount": 4,
           "neutralCount": 0,
-          "averageGainPct": 1.3918,
+          "averageGainPct": 1.3268,
           "averageLossPct": -1.6422
         },
         {
@@ -61,12 +61,12 @@
         {
           "start": "14:00",
           "end": "15:00",
-          "averageReturnPct": -0.7877,
+          "averageReturnPct": -0.8078,
           "positiveCount": 3,
           "negativeCount": 8,
           "neutralCount": 0,
           "averageGainPct": 2.0815,
-          "averageLossPct": -1.8636
+          "averageLossPct": -1.8913
         },
         {
           "start": "15:00",
@@ -88,31 +88,31 @@
         {
           "start": "09:30",
           "end": "10:00",
-          "averageReturnPct": 1.6042,
+          "averageReturnPct": 1.44,
           "positiveCount": 6,
           "negativeCount": 6,
           "neutralCount": 0,
-          "averageGainPct": 4.9988,
+          "averageGainPct": 4.6702,
           "averageLossPct": -1.7903
         },
         {
           "start": "10:00",
           "end": "11:00",
-          "averageReturnPct": -0.2925,
+          "averageReturnPct": -0.2912,
           "positiveCount": 6,
           "negativeCount": 6,
           "neutralCount": 0,
           "averageGainPct": 1.9891,
-          "averageLossPct": -2.574
+          "averageLossPct": -2.5715
         },
         {
           "start": "11:00",
           "end": "12:00",
-          "averageReturnPct": 0.6976,
+          "averageReturnPct": 0.7032,
           "positiveCount": 8,
           "negativeCount": 4,
           "neutralCount": 0,
-          "averageGainPct": 1.7189,
+          "averageGainPct": 1.7272,
           "averageLossPct": -1.3449
         },
         {
@@ -148,165 +148,165 @@
         {
           "start": "15:00",
           "end": "16:00",
-          "averageReturnPct": 0.2645,
+          "averageReturnPct": 0.26,
           "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
           "averageGainPct": 1.6233,
-          "averageLossPct": -1.6377
+          "averageLossPct": -1.6486
         }
       ]
     },
     "Wednesday": {
-      "sampleSize": 13,
-      "firstDate": "2026-08-05",
+      "sampleSize": 12,
+      "firstDate": "2026-08-12",
       "lastDate": "2026-10-28",
       "intervals": [
         {
           "start": "09:30",
           "end": "10:00",
-          "averageReturnPct": -0.2177,
-          "positiveCount": 8,
+          "averageReturnPct": -0.7223,
+          "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 2.9063,
+          "averageGainPct": 2.4875,
           "averageLossPct": -5.216
         },
         {
           "start": "10:00",
           "end": "11:00",
-          "averageReturnPct": 0.136,
-          "positiveCount": 7,
-          "negativeCount": 6,
+          "averageReturnPct": 0.6856,
+          "positiveCount": 8,
+          "negativeCount": 4,
           "neutralCount": 0,
-          "averageGainPct": 1.5392,
-          "averageLossPct": -1.5012
+          "averageGainPct": 1.3747,
+          "averageLossPct": -0.6927
         },
         {
           "start": "11:00",
           "end": "12:00",
-          "averageReturnPct": 0.3413,
-          "positiveCount": 8,
+          "averageReturnPct": 0.2339,
+          "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 1.3026,
+          "averageGainPct": 1.2558,
           "averageLossPct": -1.1966
         },
         {
           "start": "12:00",
           "end": "13:00",
-          "averageReturnPct": 0.1714,
-          "positiveCount": 7,
+          "averageReturnPct": -0.0105,
+          "positiveCount": 6,
           "negativeCount": 6,
           "neutralCount": 0,
-          "averageGainPct": 1.1588,
+          "averageGainPct": 0.9596,
           "averageLossPct": -0.9807
         },
         {
           "start": "13:00",
           "end": "14:00",
-          "averageReturnPct": -0.1526,
+          "averageReturnPct": -0.119,
           "positiveCount": 6,
-          "negativeCount": 7,
+          "negativeCount": 6,
           "neutralCount": 0,
           "averageGainPct": 0.8359,
-          "averageLossPct": -0.9998
+          "averageLossPct": -1.0739
         },
         {
           "start": "14:00",
           "end": "15:00",
-          "averageReturnPct": -0.6973,
+          "averageReturnPct": -0.5562,
           "positiveCount": 5,
-          "negativeCount": 8,
+          "negativeCount": 7,
           "neutralCount": 0,
-          "averageGainPct": 0.9785,
-          "averageLossPct": -1.7447
+          "averageGainPct": 0.9694,
+          "averageLossPct": -1.6459
         },
         {
           "start": "15:00",
           "end": "16:00",
-          "averageReturnPct": -0.8209,
+          "averageReturnPct": -0.307,
           "positiveCount": 6,
-          "negativeCount": 7,
+          "negativeCount": 6,
           "neutralCount": 0,
           "averageGainPct": 0.3806,
-          "averageLossPct": -1.8508
+          "averageLossPct": -0.9946
         }
       ]
     },
     "Thursday": {
-      "sampleSize": 12,
+      "sampleSize": 13,
       "firstDate": "2026-08-06",
-      "lastDate": "2026-10-22",
+      "lastDate": "2026-10-29",
       "intervals": [
         {
           "start": "09:30",
           "end": "10:00",
-          "averageReturnPct": 1.7817,
+          "averageReturnPct": 1.3861,
           "positiveCount": 7,
-          "negativeCount": 5,
+          "negativeCount": 6,
           "neutralCount": 0,
           "averageGainPct": 6.2848,
-          "averageLossPct": -4.5227
+          "averageLossPct": -4.329
         },
         {
           "start": "10:00",
           "end": "11:00",
-          "averageReturnPct": 0.3,
-          "positiveCount": 7,
+          "averageReturnPct": 0.3302,
+          "positiveCount": 8,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 2.1093,
-          "averageLossPct": -2.2331
+          "averageGainPct": 2.039,
+          "averageLossPct": -2.4039
         },
         {
           "start": "11:00",
           "end": "12:00",
-          "averageReturnPct": 1.3433,
-          "positiveCount": 7,
+          "averageReturnPct": 1.2672,
+          "positiveCount": 8,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 3.3515,
+          "averageGainPct": 2.9768,
           "averageLossPct": -1.4683
         },
         {
           "start": "12:00",
           "end": "13:00",
-          "averageReturnPct": -0.1054,
+          "averageReturnPct": -0.2793,
           "positiveCount": 6,
-          "negativeCount": 6,
+          "negativeCount": 7,
           "neutralCount": 0,
           "averageGainPct": 1.8158,
-          "averageLossPct": -2.0267
+          "averageLossPct": -2.0752
         },
         {
           "start": "13:00",
           "end": "14:00",
-          "averageReturnPct": 0.1923,
+          "averageReturnPct": -0.0542,
           "positiveCount": 8,
-          "negativeCount": 4,
+          "negativeCount": 5,
           "neutralCount": 0,
           "averageGainPct": 1.1532,
-          "averageLossPct": -1.7294
+          "averageLossPct": -1.986
         },
         {
           "start": "14:00",
           "end": "15:00",
-          "averageReturnPct": -0.222,
+          "averageReturnPct": -0.3414,
           "positiveCount": 5,
-          "negativeCount": 6,
+          "negativeCount": 7,
           "neutralCount": 1,
-          "averageGainPct": 0.5148,
-          "averageLossPct": -0.8731
+          "averageGainPct": 0.4991,
+          "averageLossPct": -0.9905
         },
         {
           "start": "15:00",
           "end": "16:00",
-          "averageReturnPct": 0.3601,
-          "positiveCount": 8,
+          "averageReturnPct": 0.4237,
+          "positiveCount": 9,
           "negativeCount": 4,
           "neutralCount": 0,
-          "averageGainPct": 1.6066,
+          "averageGainPct": 1.56,
           "averageLossPct": -2.133
         }
       ]
@@ -319,41 +319,41 @@
         {
           "start": "09:30",
           "end": "10:00",
-          "averageReturnPct": -0.926,
+          "averageReturnPct": -0.9478,
           "positiveCount": 4,
           "negativeCount": 8,
           "neutralCount": 0,
           "averageGainPct": 6.3085,
-          "averageLossPct": -4.5432
+          "averageLossPct": -4.576
         },
         {
           "start": "10:00",
           "end": "11:00",
-          "averageReturnPct": 0.238,
+          "averageReturnPct": 0.2491,
           "positiveCount": 8,
           "negativeCount": 4,
           "neutralCount": 0,
-          "averageGainPct": 1.3004,
-          "averageLossPct": -1.8869
+          "averageGainPct": 1.304,
+          "averageLossPct": -1.8605
         },
         {
           "start": "11:00",
           "end": "12:00",
-          "averageReturnPct": 0.4047,
+          "averageReturnPct": 0.4124,
           "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 1.3969,
+          "averageGainPct": 1.4101,
           "averageLossPct": -0.9844
         },
         {
           "start": "12:00",
           "end": "13:00",
-          "averageReturnPct": 0.0818,
+          "averageReturnPct": 0.0843,
           "positiveCount": 7,
           "negativeCount": 5,
           "neutralCount": 0,
-          "averageGainPct": 1.1635,
+          "averageGainPct": 1.1677,
           "averageLossPct": -1.4325
         },
         {
