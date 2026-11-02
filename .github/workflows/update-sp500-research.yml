@@ -147,4 +147,5 @@ jobs:
 
           git status --short
           git commit -m "Update S&P 500 research data"
-          git push
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
