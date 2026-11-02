@@ -10,34 +10,34 @@
     "start_year": 1928,
     "start_month": 1,
     "end_year": 2026,
-    "end_month": 10,
-    "observations": 1186
+    "end_month": 11,
+    "observations": 1187
   },
   "current_month": {
     "year": 2026,
-    "month": 10,
-    "month_name": "October",
-    "label": "October 2026 MTD",
-    "return_pct": -0.9341,
-    "through_date": "2026-10-30"
+    "month": 11,
+    "month_name": "November",
+    "label": "November 2026 MTD",
+    "return_pct": -0.5102,
+    "through_date": "2026-11-02"
   },
   "current_month_risk": {
-    "month": 10,
-    "month_name": "October",
-    "through_date": "2026-10-30",
-    "previous_month_end_close": 7651.54,
-    "current_max_drawdown_pct": -3.0549,
-    "current_adverse_excursion_pct": -1.6203,
+    "month": 11,
+    "month_name": "November",
+    "through_date": "2026-11-02",
+    "previous_month_end_close": 7580.0698,
+    "current_max_drawdown_pct": -0.5102,
+    "current_adverse_excursion_pct": -0.5368,
     "historical_observations": 98,
-    "average_max_drawdown_pct": -5.4164,
-    "median_max_drawdown_pct": -3.6132,
-    "worst_max_drawdown_pct": -33.6904,
+    "average_max_drawdown_pct": -4.6417,
+    "median_max_drawdown_pct": -3.2519,
+    "worst_max_drawdown_pct": -26.8737,
     "worst_max_drawdown_year": 1929,
-    "average_adverse_excursion_pct": -4.2909,
-    "median_adverse_excursion_pct": -2.468,
-    "worst_adverse_excursion_pct": -32.7409,
-    "worst_adverse_excursion_year": 1987,
-    "drawdown_percentile": 58.16
+    "average_adverse_excursion_pct": -3.2697,
+    "median_adverse_excursion_pct": -1.6877,
+    "worst_adverse_excursion_pct": -26.8737,
+    "worst_adverse_excursion_year": 1929,
+    "drawdown_percentile": 96.94
   },
   "leaders": {
     "highest_positive_frequency": {
@@ -191,14 +191,14 @@
     {
       "month": 10,
       "month_name": "October",
-      "observations": 98,
+      "observations": 99,
       "positive_count": 58,
-      "negative_count": 40,
+      "negative_count": 41,
       "flat_count": 0,
-      "positive_pct": 59.18,
-      "negative_pct": 40.82,
-      "average_return_pct": 0.5472,
-      "median_return_pct": 1.0284,
+      "positive_pct": 58.59,
+      "negative_pct": 41.41,
+      "average_return_pct": 0.5322,
+      "median_return_pct": 0.9317,
       "best_return_pct": 16.3047,
       "worst_return_pct": -21.763
     },
@@ -8532,6 +8532,13 @@
       "month": 10,
       "month_name": "October",
       "value": -0.9341,
+      "status": "negative"
+    },
+    {
+      "year": 2026,
+      "month": 11,
+      "month_name": "November",
+      "value": -0.5102,
       "status": "negative"
     }
   ]
