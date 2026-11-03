@@ -41,13 +41,13 @@ export default function AppleIphoneResearchPage() {
   const [errors,setErrors] = useState<string[]>([])
   const [originalHtml,setOriginalHtml] = useState<string>('')
   useEffect(() => {
-    document.title = 'iPhone Releases, Apple Stock Returns & Sales Impact | TradingNInvestment'
+    document.title = 'AAPL Earnings 2026 | Do iPhone Releases Impact Apple Earnings & Stock? | TNI'
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
     canonical.href = 'https://tradingninvestment.com/new-iphone-release-apple-stock-price-history/'
     let description = document.querySelector<HTMLMetaElement>('meta[name="description"]')
     if (!description) { description = document.createElement('meta'); description.name = 'description'; document.head.appendChild(description) }
-    description.content = 'Historical research on Apple iPhone announcements, AAPL returns, iPhone sales and market reactions.'
+    description.content = "Apple's 2026 earnings reveal strong iPhone sales growth. Explore Q4 revenue, annual iPhone sales, AAPL stock performance, and historical iPhone launches."
     let active = true
     const load = async <T,>(url:string, set:(v:T)=>void) => {
       try { const r = await fetch(url); if (!r.ok) throw Error(`${r.status}`); const data = await r.json(); if (!Array.isArray(data)) throw Error('Expected array'); if (active) set(data as T) }
@@ -65,7 +65,16 @@ export default function AppleIphoneResearchPage() {
   const meanExcess = paired.length ? paired.reduce((a,r)=>a+(r.returns?.[horizon] ?? 0)-(r.benchmark?.[horizon] ?? 0),0)/paired.length : null
   return <main className="tni-iphone">
     <nav className="tni-iphone-crumb"><a href="/">Home</a> / <a href="/research/">Research</a> / Apple iPhone</nav>
-    <header className="tni-iphone-hero"><p className="tni-iphone-eyebrow">TRADINGNINVESTMENT · HISTORICAL STOCK RESEARCH</p><h1>iPhone Releases & Apple Stock Performance</h1>
+    <header className="tni-iphone-hero"><p className="tni-iphone-eyebrow">TRADINGNINVESTMENT · HISTORICAL STOCK RESEARCH</p><h1>AAPL Earnings 2026: Do iPhone Releases Impact Apple Earnings and Stock Performance?</h1><div style={{display:'flex',flexWrap:'wrap',gap:12,marginTop:18,marginBottom:18}}>
+  <a href="https://app.tradingninvestment.com/prediction-lab?ticker=SPY"
+     style={{display:'inline-block',background:'#123c53',color:'#ffffff',padding:'12px 18px',borderRadius:8,fontWeight:800,textDecoration:'none'}}>
+    Explore TNI Prediction Lab ↗
+  </a>
+  <a href="/aapl-stock-yearly-return/"
+     style={{display:'inline-block',background:'#ffffff',color:'#123c53',border:'2px solid #123c53',padding:'10px 16px',borderRadius:8,fontWeight:800,textDecoration:'none'}}>
+    Apple (AAPL) Yearly Returns ↗
+  </a>
+</div>
 <div className="tni-iphone-introduction">
   <p>
     The iPhone brought the world into people's hands, transforming how
@@ -84,6 +93,34 @@ export default function AppleIphoneResearchPage() {
   </p>
 </div>
 <p>How has AAPL performed after iPhone announcements? What happens when reported iPhone sales exceed or miss expectations? Explore the evidence without confusing correlation with causation.</p><div className="tni-iphone-links"><a href="#timeline">2018–2026 timeline ↓</a><a href="#announcements">Announcement study ↓</a><a href="#sales">Sales impact ↓</a><a href="#original">Original research ↓</a></div></header>
+<section id="iphone-earnings-2026" style={{padding:'30px 0',color:'#172331'}}>
+  <p className="tni-iphone-eyebrow">UPDATED NOVEMBER 2, 2026 · APPLE EARNINGS INTELLIGENCE</p>
+  <h2>Apple Q4 2026 Earnings: iPhone Revenue Reaches a New September-Quarter Record</h2>
+  <p>Apple reported fiscal fourth-quarter revenue of $114.48 billion, up 11.7% year over year. iPhone revenue reached $57.58 billion, increasing 17.5% from $49.03 billion a year earlier.</p>
+  <p>For the full fiscal year, iPhone revenue rose to $254.10 billion from $209.59 billion, representing approximately 21.2% growth.</p>
+
+  <div className="tni-iphone-table">
+    <table data-tni-readable-table="data">
+      <thead><tr><th>Financial Metric</th><th>FY2025</th><th>FY2026</th><th>Growth</th></tr></thead>
+      <tbody>
+        <tr><td>Q4 iPhone revenue</td><td>$49.03B</td><td>$57.58B</td><td>+17.5%</td></tr>
+        <tr><td>Annual iPhone revenue</td><td>$209.59B</td><td>$254.10B</td><td>+21.2%</td></tr>
+        <tr><td>Q4 total revenue</td><td>$102.47B</td><td>$114.48B</td><td>+11.7%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Do Strong iPhone Sales Translate Into Higher AAPL Stock Returns?</h2>
+  <p>Apple reported diluted earnings of $2.10 per share and a companywide gross margin of 47.9%. However, strong iPhone sales do not automatically produce positive stock returns.</p>
+  <p>Investors evaluate reported earnings against expectations, future guidance, profit margins and valuation. Rising component costs can pressure future profitability even when product revenue reaches record levels.</p>
+  <p>The historical iPhone announcement study below provides a separate perspective on how AAPL performed after product launches compared with the S&amp;P 500.</p>
+
+  <p className="tni-iphone-note">
+    Source: <a href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/" target="_blank" rel="noopener noreferrer">Apple Fiscal Q4 2026 Results ↗</a>.
+    Revenue amounts measure sales dollars, not iPhone unit shipments.
+  </p>
+</section>
+
     <section id="timeline"><p className="tni-iphone-eyebrow">01 / VERIFIED APPLE ANNOUNCEMENTS</p><h2>iPhone generations, 2018–2026</h2><p>Announcement dates and product changes below are sourced directly from Apple Newsroom. These are product milestones, not evidence of a positive or negative stock-market reaction.</p><div className="tni-iphone-timeline">{announcements.filter(row => row.description).map(row => <article className="tni-iphone-milestone" key={row.date}><time dateTime={row.date}>{row.date}</time><div><h3>{row.model}</h3><p>{row.description}</p><a href={row.source} target="_blank" rel="noopener noreferrer">Apple announcement ↗</a></div></article>)}</div></section>
     <section id="announcements"><p className="tni-iphone-eyebrow">02 / EVENT STUDY</p><h2>After the announcement</h2><p>Returns are measured from the last closing price before the announcement to the closing price at each horizon. The 3-, 6- and 12-month horizons use 63, 126 and 252 trading sessions.</p><div className="tni-iphone-tabs" aria-label="Return horizon">{horizons.map(([key,label])=><button key={key} aria-pressed={horizon===key} onClick={()=>setHorizon(key)} title={label}>{key}</button>)}</div><div className="tni-iphone-stat"><span>Average AAPL return · {horizon}</span><strong>{fmt(mean)}</strong><small>{valid.length} verified observations in selected window</small></div><div className="tni-iphone-summary-grid"><div><span>Average AAPL</span><strong>{fmt(mean)}</strong></div><div><span>Average S&amp;P 500</span><strong>{fmt(meanBenchmark)}</strong></div><div><span>Average excess</span><strong>{fmt(meanExcess)}</strong></div><div><span>Paired observations</span><strong>{paired.length}</strong></div></div><AnnouncementChart rows={announcements} horizon={horizon} /><h3 className="tni-iphone-table-heading">Detailed announcement-return table · {horizon}</h3><div className="tni-iphone-table"><table data-tni-readable-table="data"><thead><tr><th>iPhone</th><th>Announcement</th><th>AAPL</th><th>S&P 500</th><th>Excess</th><th>Source</th></tr></thead><tbody>{announcements.length ? announcements.map(row=>{const a=row.returns?.[horizon];const b=row.benchmark?.[horizon];return <tr key={row.date+row.model}><td>{row.model}</td><td>{row.date}</td><td>{fmt(a)}</td><td>{fmt(b)}</td><td>{fmt(a != null && b != null ? a-b : null)}</td><td>{row.source ? <a href={row.source} rel="noopener noreferrer" target="_blank">Reference ↗</a> : 'Pending'}</td></tr>}) : <tr><td colSpan={6}>Historical announcement returns will appear after source verification and price-data processing.</td></tr>}{paired.length > 0 && <tr className="tni-iphone-average-row"><th scope="row">Sample average</th><td>N = {paired.length}</td><td>{fmt(paired.reduce((sum,r)=>sum+(r.returns?.[horizon] ?? 0),0)/paired.length)}</td><td>{fmt(meanBenchmark)}</td><td>{fmt(meanExcess)}</td><td>Calculated</td></tr>}</tbody></table></div></section>
     <section id="sales"><p className="tni-iphone-eyebrow">03 / SALES & EARNINGS</p><h2>Did iPhone sales move Apple shares?</h2><p>Quarterly iPhone revenue growth and the surprise relative to analyst consensus are different metrics. Stock reactions are measured around the earnings publication, not assigned to iPhone sales alone.</p><div className="tni-iphone-table"><table data-tni-readable-table="data"><thead><tr><th>Quarter</th><th>Reported</th><th>iPhone revenue</th><th>YoY growth</th><th>Sales surprise</th><th>AAPL reaction</th><th>Source</th></tr></thead><tbody>{sales.length ? sales.map(row=><tr key={row.quarter}><td>{row.quarter}</td><td>{row.reportDate}</td><td>{row.revenueBillion == null ? 'Not available' : `$${row.revenueBillion.toFixed(3)}B`}</td><td>{fmt(row.revenueBillion != null && row.priorYearBillion ? (row.revenueBillion/row.priorYearBillion-1)*100 : null)}</td><td>{fmt(row.revenueBillion != null && row.consensusBillion ? (row.revenueBillion/row.consensusBillion-1)*100 : null)}</td><td>{fmt(row.reaction)}</td><td>{row.source ? <a href={row.source} rel="noopener noreferrer" target="_blank">Filing ↗</a> : 'Pending'}</td></tr>) : <tr><td colSpan={7}>No verified sales observations loaded.</td></tr>}</tbody></table></div><p className="tni-iphone-note">Apple's earnings releases also contain services revenue, margins, guidance and other information. These can affect AAPL simultaneously; observed returns are not a causal estimate of iPhone sales alone.</p></section>
