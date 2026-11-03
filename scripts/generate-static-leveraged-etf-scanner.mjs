@@ -14,9 +14,9 @@ const dist = path.join(root, 'dist')
 const articlePath = '/research/scanners/leveraged-etf/'
 
 const origin = 'https://tradingninvestment.com'
-const title = 'Leveraged ETF Scanner | TradingNInvestment'
+const title = "Free Leveraged ETF Scanner | 2x, 3x & Inverse ETFs | TNI"
 
-const description = 'Explore leveraged and inverse ETFs with sortable fund information, leverage, assets, trading volume, expense ratios, and research snapshots.'
+const description = "Compare leveraged and inverse ETFs, including TQQQ and SOXL. Explore available fees, volume and historical returns. Free access, no sign-up required."
 
 const escapeHtml = (value) =>
   String(value)
@@ -53,6 +53,9 @@ const markup = renderToString(
 )
 
 if (
+  !markup.includes('tni-les-guide-toggle') ||
+  !markup.includes('How to use the leveraged ETF scanner') ||
+  !markup.includes('Try it: compare TQQQ and SOXL') ||
   !markup.includes('tni-les-featured-history') ||
   !markup.includes('100 Years of Dow Jones History') ||
   !markup.includes('Average Stock Market Return')

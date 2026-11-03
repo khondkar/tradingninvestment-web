@@ -7,7 +7,11 @@ on:
         type: boolean
         default: true
   schedule:
-    - cron: '30 23 * * 1-5'
+    # Daily at 23:30 UTC (18:30 EST / 19:30 EDT); GitHub may start later.
+    - cron: '30 23 * * *'
+concurrency:
+  group: leveraged-etf-daily-${{ github.ref }}
+  cancel-in-progress: false
 permissions:
   contents: write
 jobs:
@@ -24,7 +28,11 @@ jobs:
       - name: Update Yahoo research snapshot
         run: python scripts/update_leveraged_etf_data.py --project . --metadata
       - name: Update SNXX hourly weekday returns
-        run: python scripts/generate-snxx-hourly-returns.py --project .
+        run: |
+          if ! python scripts/generate-snxx-hourly-returns.py --project .; then
+            echo '::warning::SNXX refresh failed; preserving its previous data and continuing the ETF update.'
+            git restore -- src/data/charts/snxxHourlyWeekdayReturns.json
+          fi
 
       - name: Commit snapshot if changed
         run: |
@@ -32,4 +40,6 @@ jobs:
           git add src/data/charts/snxxHourlyWeekdayReturns.json
           if git diff --cached --quiet; then echo 'No changes'; exit 0; fi
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'data: update leveraged ETF daily snapshot'
-          git push
+          # Incorporate unrelated automated commits without forcing a push.
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
