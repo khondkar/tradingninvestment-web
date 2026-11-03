@@ -30,6 +30,13 @@
 .tni-editorial .editorial-study p { color: #526a85; font-size: 16px; line-height: 1.5; margin: 0 0 10px; }
 .tni-editorial .editorial-study-image { display: block; border-radius: 12px; overflow: hidden; aspect-ratio: 1200 / 630; background: #f6f9fd; }
 .tni-editorial .editorial-study-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+/* Apple feature: readable copy and the existing banner's natural proportions. */
+.tni-editorial .editorial-study-apple h2 { font-weight: 700; }
+.tni-editorial .editorial-study-apple p { color: #172d39; font-weight: 650; }
+.tni-editorial .editorial-study-apple .editorial-tag { color: #064a83; font-weight: 800; }
+.tni-editorial .editorial-study-apple .editorial-link { color: #064a83; font-weight: 750; }
+.tni-editorial .editorial-study-apple .editorial-study-image { aspect-ratio: 1508 / 334; }
+.tni-editorial .editorial-study-apple .editorial-study-image img { height: auto; }
 .tni-editorial .editorial-browse { display: flex; justify-content: space-between; margin-top: 24px; padding-block: 12px; border-block: 1px solid #dce6f0; }
 .tni-editorial .editorial-more { padding-block: 36px; }
 .tni-editorial .editorial-more > div { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }

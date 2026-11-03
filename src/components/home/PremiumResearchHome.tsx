@@ -20,7 +20,7 @@ const homeThumbnails: Record<string, string> = {
   '/images/social/average-stock-market-return-og.png': 'market-history',
 }
 
-const priorities = ['/research/doji-candlestick-spy-26-year-study/', '/average-stock-market-return/']
+const priorities = ['/new-iphone-release-apple-stock-price-history/', '/average-stock-market-return/']
 const featured = researchItems.filter(item => item.homepagePlacement === 'featured').sort((a, b) => {
   const rank = (path: string) => priorities.includes(path) ? priorities.indexOf(path) : 2
   return rank(a.path) - rank(b.path)
@@ -78,20 +78,20 @@ export default function PremiumResearchHome() {
       <h2 className="tni-home-featured-heading">Featured Research</h2>
       <section id="featured-research" className="editorial-studies" aria-label="Featured research">
         {lead.map(item => {
-          const doji = item.path === priorities[0]
-          return <article className="editorial-study" key={item.path}>
+          const apple = item.path === priorities[0]
+          return <article className={apple ? 'editorial-study editorial-study-apple' : 'editorial-study'} key={item.path}>
             <div className="editorial-study-copy">
-              <span className="editorial-tag">{doji ? 'TRADING' : 'INVESTMENT'}</span>
-              <h2><a href={item.path}>{doji ? 'Does the Doji candlestick work?' : 'Market history. A longer perspective.'}</a></h2>
-              <p>{doji ? 'A 26-year SPY study.' : '150+ years of U.S. market data.'}</p>
-              <a className="editorial-link" href={item.path}>{doji ? 'Explore the study' : 'Explore market history'} ↗</a>
+              <span className="editorial-tag">{apple ? 'APPLE RESEARCH' : 'INVESTMENT'}</span>
+              <h2><a href={item.path}>{apple ? 'Do iPhone Launches Move Apple Stock?' : 'Market history. A longer perspective.'}</a></h2>
+              <p>{apple ? 'Apple’s 2026 earnings and evidence from 20 annual iPhone announcements.' : '150+ years of U.S. market data.'}</p>
+              <a className="editorial-link" href={item.path}>{apple ? 'Explore the research' : 'Explore market history'} ↗</a>
             </div>
             {item.image && <a className="editorial-study-image" href={item.path} aria-label={`Read ${item.title}`}>
               <picture>
                 {homeThumbnails[item.image] && <source type="image/webp"
                   srcSet={`/images/home-thumbnails/${homeThumbnails[item.image]}-480.webp 480w, /images/home-thumbnails/${homeThumbnails[item.image]}-960.webp 960w`}
                   sizes="(max-width: 700px) calc(100vw - 28px), 600px" />}
-                <img src={item.image} alt={`${item.name} — TNI research chart`} width="1200" height="630" loading="lazy" decoding="async" />
+                <img src={item.image} alt={apple ? 'Apple iPhone and stock market illustration' : `${item.name} — TNI research chart`} width={apple ? 1508 : 1200} height={apple ? 334 : 630} loading="lazy" decoding="async" />
               </picture>
             </a>}
           </article>

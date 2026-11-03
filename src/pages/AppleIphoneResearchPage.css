@@ -238,5 +238,5 @@
   .tni-iphone-summary-grid > div { padding: 13px; }
   .tni-iphone-summary-grid strong { font-size: 27px; }
   .tni-iphone table { font-size: 20px; }
-  .tni-iphone-original-content table { display: block; overflow-x: auto; white-space: nowrap; }
+  .tni-iphone-original-content table { display: block; min-width: 0; overflow-x: auto; white-space: nowrap; }
 }

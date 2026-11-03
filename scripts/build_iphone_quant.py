@@ -40,14 +40,19 @@ for row in rows:
         raise RuntimeError(f'Missing baseline near {announcement}')
     row['returns'] = {}; row['benchmark'] = {}
     row['baselineDate'] = dates[idx]
+    row['horizonDates'] = {}
+    row['priceObservations'] = {'baseline': {'date': dates[idx], 'aaplAdjustedClose': ap[dates[idx]], 'sp500Close': sp[dates[idx]]}}
     row['methodology'] = 'Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index'
     for key,period in HORIZONS.items():
         end = idx+period
         if end>=len(dates):
             row['returns'][key]=None;row['benchmark'][key]=None
+            row['horizonDates'][key]=None
         else:
             row['returns'][key]=round(100*(ap[dates[end]]/ap[dates[idx]]-1),4)
             row['benchmark'][key]=round(100*(sp[dates[end]]/sp[dates[idx]]-1),4)
+            row['horizonDates'][key]=dates[end]
+            row['priceObservations'][key]={'date':dates[end], 'aaplAdjustedClose':ap[dates[end]], 'sp500Close':sp[dates[end]]}
     row['priceSource'] = 'Yahoo Finance historical daily series via yfinance; downloaded on '+date.today().isoformat()
 
 # Avoid overwriting with incomplete data; write only after every event processed.

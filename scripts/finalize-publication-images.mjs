@@ -14,7 +14,7 @@ try {
     if (!['none','regular','featured'].includes(options.homepagePlacement || 'none')) throw new Error(`Invalid homepage placement: ${url}`)
   }
   const featuredPaths = [
-    '/research/doji-candlestick-spy-26-year-study/',
+    '/new-iphone-release-apple-stock-price-history/',
     '/average-stock-market-return/',
   ]
   const expectedHomePaths = new Set([
@@ -32,14 +32,17 @@ try {
   for (const item of researchItems) {
     const image = publicationImages[item.path]
     if (!image || image !== item.image) throw new Error(`Missing or stale generated image: ${item.path}. Run the full build.`)
-    const builtImage = localImage(path.join(root,'dist'),image)
-    if (!builtImage || !fs.existsSync(builtImage)) throw new Error(`Missing deployed OG asset: ${image}`)
+    const socialImage = publicationSettings[item.path]?.socialImage || image
+    for (const asset of new Set([image, socialImage])) {
+      const builtImage = localImage(path.join(root,'dist'),asset)
+      if (!builtImage || !fs.existsSync(builtImage)) throw new Error(`Missing deployed publication asset: ${asset}`)
+    }
     const target = path.join(root,'dist',item.path.slice(1),'index.html')
     if (!fs.existsSync(target)) throw new Error(`Missing published article: ${item.path}`)
-    const html = applyArticleImage(fs.readFileSync(target,'utf8'),`https://tradingninvestment.com${image}`)
+    const html = applyArticleImage(fs.readFileSync(target,'utf8'),`https://tradingninvestment.com${socialImage}`,publicationSettings[item.path]?.socialImageAlt)
     fs.writeFileSync(target,html)
     if (item.homepagePlacement === 'none' && home.includes(`href="${item.path}"`)) throw new Error(`Research-only article unexpectedly linked on homepage: ${item.path}`)
     if (expectedHomePaths.has(item.path) && !home.includes(`href="${item.path}"`)) throw new Error(`Required homepage article is absent: ${item.path}`)
   }
-  console.log(`TNI publication checks passed: ${researchItems.length} articles have matching research-card and social images; homepage choices respected.`)
+  console.log(`TNI publication checks passed: ${researchItems.length} articles have verified research-card and social images; homepage choices respected.`)
 } finally { await vite.close() }

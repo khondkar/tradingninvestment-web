@@ -63,10 +63,15 @@
     "homepagePlacement": "regular"
   },
   "/research/doji-candlestick-spy-26-year-study/": {
-    "homepagePlacement": "featured",
+    "homepagePlacement": "regular",
     "image": "/images/social/research/doji-candlestick-spy-26-year-study-tni-og.png"
   },
   "/research/jpm-vs-gs-earnings-analysis/": {
     "image": "/images/social/research/jpm-vs-gs-earnings-analysis-tni-og.png"
+  },
+  "/new-iphone-release-apple-stock-price-history/": {
+    "homepagePlacement": "featured",
+    "socialImage": "/images/social/iphone-announcements-2007-2026-og.png",
+    "socialImageAlt": "Twenty annual flagship iPhone announcement dates, 2007–2026, with AAPL and S&P 500 returns over 20 trading sessions from the previous close."
   }
 }

@@ -1,5 +1,863 @@
 [
   {
+    "date": "2007-01-09",
+    "model": "iPhone (1st generation)",
+    "description": "The original iPhone combines a phone, iPod and internet communicator.",
+    "source": "https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/",
+    "baselineDate": "2007-01-08",
+    "returns": {
+      "1D": 8.307,
+      "5D": 13.6071,
+      "10D": 0.2691,
+      "20D": -1.5444,
+      "3M": 10.2726,
+      "6M": 54.8497,
+      "1Y": 100.3627
+    },
+    "benchmark": {
+      "1D": -0.0517,
+      "5D": 1.3491,
+      "10D": 1.0723,
+      "20D": 2.4886,
+      "3M": 2.5162,
+      "6M": 6.8854,
+      "1Y": -1.6032
+    },
+    "horizonDates": {
+      "1D": "2007-01-09",
+      "5D": "2007-01-16",
+      "10D": "2007-01-23",
+      "20D": "2007-02-06",
+      "3M": "2007-04-10",
+      "6M": "2007-07-10",
+      "1Y": "2008-01-08"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2007-01-08",
+        "aaplAdjustedClose": 2.556375741958618,
+        "sp500Close": 1412.8399658203125
+      },
+      "1D": {
+        "date": "2007-01-09",
+        "aaplAdjustedClose": 2.7687342166900635,
+        "sp500Close": 1412.1099853515625
+      },
+      "5D": {
+        "date": "2007-01-16",
+        "aaplAdjustedClose": 2.9042253494262695,
+        "sp500Close": 1431.9000244140625
+      },
+      "10D": {
+        "date": "2007-01-23",
+        "aaplAdjustedClose": 2.563255548477173,
+        "sp500Close": 1427.989990234375
+      },
+      "20D": {
+        "date": "2007-02-06",
+        "aaplAdjustedClose": 2.5168943405151367,
+        "sp500Close": 1448.0
+      },
+      "3M": {
+        "date": "2007-04-10",
+        "aaplAdjustedClose": 2.818981647491455,
+        "sp500Close": 1448.3900146484375
+      },
+      "6M": {
+        "date": "2007-07-10",
+        "aaplAdjustedClose": 3.958540201187134,
+        "sp500Close": 1510.1199951171875
+      },
+      "1Y": {
+        "date": "2008-01-08",
+        "aaplAdjustedClose": 5.1220245361328125,
+        "sp500Close": 1390.18994140625
+      }
+    }
+  },
+  {
+    "date": "2008-06-09",
+    "model": "iPhone 3G",
+    "description": "3G networking and GPS arrive on iPhone.",
+    "source": "https://www.apple.com/newsroom/2008/06/09Apple-Introduces-the-New-iPhone-3G/",
+    "baselineDate": "2008-06-06",
+    "returns": {
+      "1D": -2.1709,
+      "5D": -7.1483,
+      "10D": -5.5861,
+      "20D": -5.6453,
+      "3M": -13.7147,
+      "6M": -50.7595,
+      "1Y": -22.5113
+    },
+    "benchmark": {
+      "1D": 0.0794,
+      "5D": -0.0478,
+      "10D": -3.1418,
+      "20D": -7.9644,
+      "3M": -8.6993,
+      "6M": -37.8825,
+      "1Y": -30.9801
+    },
+    "horizonDates": {
+      "1D": "2008-06-09",
+      "5D": "2008-06-13",
+      "10D": "2008-06-20",
+      "20D": "2008-07-07",
+      "3M": "2008-09-05",
+      "6M": "2008-12-04",
+      "1Y": "2009-06-08"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2008-06-06",
+        "aaplAdjustedClose": 5.552424430847168,
+        "sp500Close": 1360.6800537109375
+      },
+      "1D": {
+        "date": "2008-06-09",
+        "aaplAdjustedClose": 5.431887149810791,
+        "sp500Close": 1361.760009765625
+      },
+      "5D": {
+        "date": "2008-06-13",
+        "aaplAdjustedClose": 5.15552282333374,
+        "sp500Close": 1360.030029296875
+      },
+      "10D": {
+        "date": "2008-06-20",
+        "aaplAdjustedClose": 5.242260456085205,
+        "sp500Close": 1317.9300537109375
+      },
+      "20D": {
+        "date": "2008-07-07",
+        "aaplAdjustedClose": 5.238970756530762,
+        "sp500Close": 1252.31005859375
+      },
+      "3M": {
+        "date": "2008-09-05",
+        "aaplAdjustedClose": 4.790926456451416,
+        "sp500Close": 1242.31005859375
+      },
+      "6M": {
+        "date": "2008-12-04",
+        "aaplAdjustedClose": 2.734039068222046,
+        "sp500Close": 845.219970703125
+      },
+      "1Y": {
+        "date": "2009-06-08",
+        "aaplAdjustedClose": 4.302500247955322,
+        "sp500Close": 939.1400146484375
+      }
+    }
+  },
+  {
+    "date": "2009-06-08",
+    "model": "iPhone 3GS",
+    "description": "A faster processor, video recording and voice control.",
+    "source": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+    "baselineDate": "2009-06-05",
+    "returns": {
+      "1D": -0.5668,
+      "5D": -5.3224,
+      "10D": -3.5875,
+      "20D": -4.1888,
+      "3M": 15.1241,
+      "6M": 35.8126,
+      "1Y": 73.4569
+    },
+    "benchmark": {
+      "1D": -0.1011,
+      "5D": 0.651,
+      "10D": -2.0062,
+      "20D": -4.4006,
+      "3M": 6.7174,
+      "6M": 17.0016,
+      "1Y": 11.7414
+    },
+    "horizonDates": {
+      "1D": "2009-06-08",
+      "5D": "2009-06-12",
+      "10D": "2009-06-19",
+      "20D": "2009-07-06",
+      "3M": "2009-09-03",
+      "6M": "2009-12-03",
+      "1Y": "2010-06-07"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2009-06-05",
+        "aaplAdjustedClose": 4.327025890350342,
+        "sp500Close": 940.0900268554688
+      },
+      "1D": {
+        "date": "2009-06-08",
+        "aaplAdjustedClose": 4.302500247955322,
+        "sp500Close": 939.1400146484375
+      },
+      "5D": {
+        "date": "2009-06-12",
+        "aaplAdjustedClose": 4.096723556518555,
+        "sp500Close": 946.2100219726562
+      },
+      "10D": {
+        "date": "2009-06-19",
+        "aaplAdjustedClose": 4.171794414520264,
+        "sp500Close": 921.22998046875
+      },
+      "20D": {
+        "date": "2009-07-06",
+        "aaplAdjustedClose": 4.1457743644714355,
+        "sp500Close": 898.719970703125
+      },
+      "3M": {
+        "date": "2009-09-03",
+        "aaplAdjustedClose": 4.981449127197266,
+        "sp500Close": 1003.239990234375
+      },
+      "6M": {
+        "date": "2009-12-03",
+        "aaplAdjustedClose": 5.876644611358643,
+        "sp500Close": 1099.9200439453125
+      },
+      "1Y": {
+        "date": "2010-06-07",
+        "aaplAdjustedClose": 7.505523681640625,
+        "sp500Close": 1050.469970703125
+      }
+    }
+  },
+  {
+    "date": "2010-06-07",
+    "model": "iPhone 4",
+    "description": "Retina display and FaceTime debut in a new glass design.",
+    "source": "https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/",
+    "baselineDate": "2010-06-04",
+    "returns": {
+      "1D": -1.9612,
+      "5D": -0.9571,
+      "10D": 7.0753,
+      "20D": -3.524,
+      "3M": -1.4807,
+      "6M": 24.2968,
+      "1Y": 34.1772
+    },
+    "benchmark": {
+      "1D": -1.3532,
+      "5D": 2.5092,
+      "10D": 4.9423,
+      "20D": -3.9723,
+      "3M": 2.3683,
+      "6M": 14.7106,
+      "1Y": 22.0945
+    },
+    "horizonDates": {
+      "1D": "2010-06-07",
+      "5D": "2010-06-11",
+      "10D": "2010-06-18",
+      "20D": "2010-07-02",
+      "3M": "2010-09-02",
+      "6M": "2010-12-02",
+      "1Y": "2011-06-03"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2010-06-04",
+        "aaplAdjustedClose": 7.65566873550415,
+        "sp500Close": 1064.8800048828125
+      },
+      "1D": {
+        "date": "2010-06-07",
+        "aaplAdjustedClose": 7.505523681640625,
+        "sp500Close": 1050.469970703125
+      },
+      "5D": {
+        "date": "2010-06-11",
+        "aaplAdjustedClose": 7.582393169403076,
+        "sp500Close": 1091.5999755859375
+      },
+      "10D": {
+        "date": "2010-06-18",
+        "aaplAdjustedClose": 8.1973295211792,
+        "sp500Close": 1117.510009765625
+      },
+      "20D": {
+        "date": "2010-07-02",
+        "aaplAdjustedClose": 7.3858819007873535,
+        "sp500Close": 1022.5800170898438
+      },
+      "3M": {
+        "date": "2010-09-02",
+        "aaplAdjustedClose": 7.542314529418945,
+        "sp500Close": 1090.0999755859375
+      },
+      "6M": {
+        "date": "2010-12-02",
+        "aaplAdjustedClose": 9.515748977661133,
+        "sp500Close": 1221.530029296875
+      },
+      "1Y": {
+        "date": "2011-06-03",
+        "aaplAdjustedClose": 10.272160530090332,
+        "sp500Close": 1300.1600341796875
+      }
+    }
+  },
+  {
+    "date": "2011-10-04",
+    "model": "iPhone 4S",
+    "description": "Siri, an A5 chip and an upgraded camera.",
+    "source": "https://www.apple.com/newsroom/2011/10/04Apple-Launches-iPhone-4S-iOS-5-iCloud/",
+    "baselineDate": "2011-10-03",
+    "returns": {
+      "1D": -0.5606,
+      "5D": 3.7934,
+      "10D": 12.1169,
+      "20D": 8.0566,
+      "3M": 9.7785,
+      "6M": 67.9979,
+      "1Y": 77.2956
+    },
+    "benchmark": {
+      "1D": 2.2488,
+      "5D": 8.7025,
+      "10D": 9.2456,
+      "20D": 14.0162,
+      "3M": 16.1777,
+      "6M": 28.5791,
+      "1Y": 31.5239
+    },
+    "horizonDates": {
+      "1D": "2011-10-04",
+      "5D": "2011-10-10",
+      "10D": "2011-10-17",
+      "20D": "2011-10-31",
+      "3M": "2012-01-03",
+      "6M": "2012-04-03",
+      "1Y": "2012-10-02"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2011-10-03",
+        "aaplAdjustedClose": 11.204146385192871,
+        "sp500Close": 1099.22998046875
+      },
+      "1D": {
+        "date": "2011-10-04",
+        "aaplAdjustedClose": 11.141336441040039,
+        "sp500Close": 1123.949951171875
+      },
+      "5D": {
+        "date": "2011-10-10",
+        "aaplAdjustedClose": 11.629162788391113,
+        "sp500Close": 1194.8900146484375
+      },
+      "10D": {
+        "date": "2011-10-17",
+        "aaplAdjustedClose": 12.561745643615723,
+        "sp500Close": 1200.8599853515625
+      },
+      "20D": {
+        "date": "2011-10-31",
+        "aaplAdjustedClose": 12.106820106506348,
+        "sp500Close": 1253.300048828125
+      },
+      "3M": {
+        "date": "2012-01-03",
+        "aaplAdjustedClose": 12.299738883972168,
+        "sp500Close": 1277.06005859375
+      },
+      "6M": {
+        "date": "2012-04-03",
+        "aaplAdjustedClose": 18.822731018066406,
+        "sp500Close": 1413.3800048828125
+      },
+      "1Y": {
+        "date": "2012-10-02",
+        "aaplAdjustedClose": 19.864463806152344,
+        "sp500Close": 1445.75
+      }
+    }
+  },
+  {
+    "date": "2012-09-12",
+    "model": "iPhone 5",
+    "description": "A larger four-inch display and LTE connectivity.",
+    "source": "https://www.apple.com/newsroom/2012/09/12Apple-Introduces-iPhone-5/",
+    "baselineDate": "2012-09-11",
+    "returns": {
+      "1D": 1.3927,
+      "5D": 6.255,
+      "10D": 1.9604,
+      "20D": -3.7451,
+      "3M": -18.0336,
+      "6M": -32.1389,
+      "1Y": -27.9467
+    },
+    "benchmark": {
+      "1D": 0.2093,
+      "5D": 1.7969,
+      "10D": 0.5601,
+      "20D": 0.5525,
+      "3M": -0.3544,
+      "6M": 8.8688,
+      "1Y": 17.7481
+    },
+    "horizonDates": {
+      "1D": "2012-09-12",
+      "5D": "2012-09-18",
+      "10D": "2012-09-25",
+      "20D": "2012-10-09",
+      "3M": "2012-12-12",
+      "6M": "2013-03-15",
+      "1Y": "2013-09-13"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2012-09-11",
+        "aaplAdjustedClose": 19.842830657958984,
+        "sp500Close": 1433.56005859375
+      },
+      "1D": {
+        "date": "2012-09-12",
+        "aaplAdjustedClose": 20.119184494018555,
+        "sp500Close": 1436.56005859375
+      },
+      "5D": {
+        "date": "2012-09-18",
+        "aaplAdjustedClose": 21.083995819091797,
+        "sp500Close": 1459.3199462890625
+      },
+      "10D": {
+        "date": "2012-09-25",
+        "aaplAdjustedClose": 20.231828689575195,
+        "sp500Close": 1441.5899658203125
+      },
+      "20D": {
+        "date": "2012-10-09",
+        "aaplAdjustedClose": 19.09969139099121,
+        "sp500Close": 1441.47998046875
+      },
+      "3M": {
+        "date": "2012-12-12",
+        "aaplAdjustedClose": 16.264450073242188,
+        "sp500Close": 1428.47998046875
+      },
+      "6M": {
+        "date": "2013-03-15",
+        "aaplAdjustedClose": 13.465568542480469,
+        "sp500Close": 1560.699951171875
+      },
+      "1Y": {
+        "date": "2013-09-13",
+        "aaplAdjustedClose": 14.297408103942871,
+        "sp500Close": 1687.989990234375
+      }
+    }
+  },
+  {
+    "date": "2013-09-10",
+    "model": "iPhone 5s / 5c",
+    "description": "The flagship iPhone 5s introduces Touch ID and a 64-bit A7 chip.",
+    "source": "https://www.apple.com/newsroom/2013/09/10Apple-Announces-iPhone-5s-The-Most-Forward-Thinking-Smartphone-in-the-World/",
+    "baselineDate": "2013-09-09",
+    "returns": {
+      "1D": -2.2779,
+      "5D": -11.0734,
+      "10D": -3.0681,
+      "20D": -3.6391,
+      "3M": 11.2846,
+      "6M": 7.1671,
+      "1Y": 38.5726
+    },
+    "benchmark": {
+      "1D": 0.7346,
+      "5D": 1.5487,
+      "10D": 1.8023,
+      "20D": 0.2638,
+      "3M": 7.9787,
+      "6M": 11.7197,
+      "1Y": 18.9465
+    },
+    "horizonDates": {
+      "1D": "2013-09-10",
+      "5D": "2013-09-16",
+      "10D": "2013-09-23",
+      "20D": "2013-10-07",
+      "3M": "2013-12-06",
+      "6M": "2014-03-11",
+      "1Y": "2014-09-09"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2013-09-09",
+        "aaplAdjustedClose": 15.566617012023926,
+        "sp500Close": 1671.7099609375
+      },
+      "1D": {
+        "date": "2013-09-10",
+        "aaplAdjustedClose": 15.212028503417969,
+        "sp500Close": 1683.989990234375
+      },
+      "5D": {
+        "date": "2013-09-16",
+        "aaplAdjustedClose": 13.842870712280273,
+        "sp500Close": 1697.5999755859375
+      },
+      "10D": {
+        "date": "2013-09-23",
+        "aaplAdjustedClose": 15.089012145996094,
+        "sp500Close": 1701.8399658203125
+      },
+      "20D": {
+        "date": "2013-10-07",
+        "aaplAdjustedClose": 15.00013542175293,
+        "sp500Close": 1676.1199951171875
+      },
+      "3M": {
+        "date": "2013-12-06",
+        "aaplAdjustedClose": 17.32324981689453,
+        "sp500Close": 1805.0899658203125
+      },
+      "6M": {
+        "date": "2014-03-11",
+        "aaplAdjustedClose": 16.682289123535156,
+        "sp500Close": 1867.6300048828125
+      },
+      "1Y": {
+        "date": "2014-09-09",
+        "aaplAdjustedClose": 21.57105827331543,
+        "sp500Close": 1988.43994140625
+      }
+    }
+  },
+  {
+    "date": "2014-09-09",
+    "model": "iPhone 6 / 6 Plus",
+    "description": "Larger displays and Apple Pay debut.",
+    "source": "https://www.apple.com/newsroom/2014/09/09Apple-Announces-iPhone-6-iPhone-6-Plus-The-Biggest-Advancements-in-iPhone-History/",
+    "baselineDate": "2014-09-08",
+    "returns": {
+      "1D": -0.3762,
+      "5D": 3.3245,
+      "10D": 2.745,
+      "20D": 1.281,
+      "3M": 17.4244,
+      "6M": 27.6366,
+      "1Y": 16.1345
+    },
+    "benchmark": {
+      "1D": -0.6545,
+      "5D": -0.8698,
+      "10D": -0.3622,
+      "20D": -1.8346,
+      "3M": 3.6887,
+      "6M": 2.1294,
+      "1Y": -1.6053
+    },
+    "horizonDates": {
+      "1D": "2014-09-09",
+      "5D": "2014-09-15",
+      "10D": "2014-09-22",
+      "20D": "2014-10-06",
+      "3M": "2014-12-05",
+      "6M": "2015-03-10",
+      "1Y": "2015-09-08"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2014-09-08",
+        "aaplAdjustedClose": 21.652517318725586,
+        "sp500Close": 2001.5400390625
+      },
+      "1D": {
+        "date": "2014-09-09",
+        "aaplAdjustedClose": 21.57105827331543,
+        "sp500Close": 1988.43994140625
+      },
+      "5D": {
+        "date": "2014-09-15",
+        "aaplAdjustedClose": 22.37236213684082,
+        "sp500Close": 1984.1300048828125
+      },
+      "10D": {
+        "date": "2014-09-22",
+        "aaplAdjustedClose": 22.246877670288086,
+        "sp500Close": 1994.2900390625
+      },
+      "20D": {
+        "date": "2014-10-06",
+        "aaplAdjustedClose": 21.92987632751465,
+        "sp500Close": 1964.8199462890625
+      },
+      "3M": {
+        "date": "2014-12-05",
+        "aaplAdjustedClose": 25.42533302307129,
+        "sp500Close": 2075.3701171875
+      },
+      "6M": {
+        "date": "2015-03-10",
+        "aaplAdjustedClose": 27.63654136657715,
+        "sp500Close": 2044.1600341796875
+      },
+      "1Y": {
+        "date": "2015-09-08",
+        "aaplAdjustedClose": 25.14603614807129,
+        "sp500Close": 1969.4100341796875
+      }
+    }
+  },
+  {
+    "date": "2015-09-09",
+    "model": "iPhone 6s / 6s Plus",
+    "description": "3D Touch and Live Photos arrive.",
+    "source": "https://www.apple.com/newsroom/2015/09/09Apple-Introduces-iPhone-6s-iPhone-6s-Plus/",
+    "baselineDate": "2015-09-08",
+    "returns": {
+      "1D": -1.9232,
+      "5D": 3.5349,
+      "10D": 0.9705,
+      "20D": -0.8904,
+      "3M": 5.7665,
+      "6M": -9.0874,
+      "1Y": -1.4541
+    },
+    "benchmark": {
+      "1D": -1.3898,
+      "5D": 0.4407,
+      "10D": -1.3542,
+      "20D": 0.5337,
+      "3M": 5.4666,
+      "6M": 1.0079,
+      "1Y": 11.0058
+    },
+    "horizonDates": {
+      "1D": "2015-09-09",
+      "5D": "2015-09-15",
+      "10D": "2015-09-22",
+      "20D": "2015-10-06",
+      "3M": "2015-12-07",
+      "6M": "2016-03-09",
+      "1Y": "2016-09-07"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2015-09-08",
+        "aaplAdjustedClose": 25.14603614807129,
+        "sp500Close": 1969.4100341796875
+      },
+      "1D": {
+        "date": "2015-09-09",
+        "aaplAdjustedClose": 24.662416458129883,
+        "sp500Close": 1942.0400390625
+      },
+      "5D": {
+        "date": "2015-09-15",
+        "aaplAdjustedClose": 26.034914016723633,
+        "sp500Close": 1978.0899658203125
+      },
+      "10D": {
+        "date": "2015-09-22",
+        "aaplAdjustedClose": 25.390085220336914,
+        "sp500Close": 1942.739990234375
+      },
+      "20D": {
+        "date": "2015-10-06",
+        "aaplAdjustedClose": 24.92214584350586,
+        "sp500Close": 1979.9200439453125
+      },
+      "3M": {
+        "date": "2015-12-07",
+        "aaplAdjustedClose": 26.596080780029297,
+        "sp500Close": 2077.070068359375
+      },
+      "6M": {
+        "date": "2016-03-09",
+        "aaplAdjustedClose": 22.860910415649414,
+        "sp500Close": 1989.260009765625
+      },
+      "1Y": {
+        "date": "2016-09-07",
+        "aaplAdjustedClose": 24.780376434326172,
+        "sp500Close": 2186.159912109375
+      }
+    }
+  },
+  {
+    "date": "2016-09-07",
+    "model": "iPhone 7 / 7 Plus",
+    "description": "Water resistance and upgraded cameras, including dual cameras on Plus.",
+    "source": "https://www.apple.com/newsroom/2016/09/apple-introduces-iphone-7-iphone-7-plus/",
+    "baselineDate": "2016-09-06",
+    "returns": {
+      "1D": 0.6128,
+      "5D": 0.2321,
+      "10D": 5.4503,
+      "20D": 4.9211,
+      "3M": 1.8294,
+      "6M": 30.2873,
+      "1Y": 52.9861
+    },
+    "benchmark": {
+      "1D": -0.0146,
+      "5D": -2.7194,
+      "10D": -2.1368,
+      "20D": -1.646,
+      "3M": 0.8338,
+      "6M": 8.0723,
+      "1Y": 12.763
+    },
+    "horizonDates": {
+      "1D": "2016-09-07",
+      "5D": "2016-09-13",
+      "10D": "2016-09-20",
+      "20D": "2016-10-04",
+      "3M": "2016-12-05",
+      "6M": "2017-03-08",
+      "1Y": "2017-09-06"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2016-09-06",
+        "aaplAdjustedClose": 24.629440307617188,
+        "sp500Close": 2186.47998046875
+      },
+      "1D": {
+        "date": "2016-09-07",
+        "aaplAdjustedClose": 24.780376434326172,
+        "sp500Close": 2186.159912109375
+      },
+      "5D": {
+        "date": "2016-09-13",
+        "aaplAdjustedClose": 24.686616897583008,
+        "sp500Close": 2127.02001953125
+      },
+      "10D": {
+        "date": "2016-09-20",
+        "aaplAdjustedClose": 25.971824645996094,
+        "sp500Close": 2139.760009765625
+      },
+      "20D": {
+        "date": "2016-10-04",
+        "aaplAdjustedClose": 25.841480255126953,
+        "sp500Close": 2150.489990234375
+      },
+      "3M": {
+        "date": "2016-12-05",
+        "aaplAdjustedClose": 25.08000373840332,
+        "sp500Close": 2204.7099609375
+      },
+      "6M": {
+        "date": "2017-03-08",
+        "aaplAdjustedClose": 32.089027404785156,
+        "sp500Close": 2362.97998046875
+      },
+      "1Y": {
+        "date": "2017-09-06",
+        "aaplAdjustedClose": 37.67961120605469,
+        "sp500Close": 2465.5400390625
+      }
+    }
+  },
+  {
+    "date": "2017-09-12",
+    "model": "iPhone 8 / 8 Plus / X",
+    "description": "iPhone X introduces Face ID and an all-screen design alongside iPhone 8.",
+    "source": "https://www.apple.com/newsroom/2017/09/the-future-is-here-iphone-x/",
+    "baselineDate": "2017-09-11",
+    "returns": {
+      "1D": -0.3963,
+      "5D": -1.7523,
+      "10D": -6.7802,
+      "20D": -3.5047,
+      "3M": 5.25,
+      "6M": 12.2931,
+      "1Y": 40.7025
+    },
+    "benchmark": {
+      "1D": 0.3364,
+      "5D": 0.6334,
+      "10D": 0.3436,
+      "20D": 2.2756,
+      "3M": 6.5668,
+      "6M": 11.141,
+      "1Y": 16.0676
+    },
+    "horizonDates": {
+      "1D": "2017-09-12",
+      "5D": "2017-09-18",
+      "10D": "2017-09-25",
+      "20D": "2017-10-09",
+      "3M": "2017-12-08",
+      "6M": "2018-03-13",
+      "1Y": "2018-09-11"
+    },
+    "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "priceObservations": {
+      "baseline": {
+        "date": "2017-09-11",
+        "aaplAdjustedClose": 37.58421325683594,
+        "sp500Close": 2488.110107421875
+      },
+      "1D": {
+        "date": "2017-09-12",
+        "aaplAdjustedClose": 37.43526840209961,
+        "sp500Close": 2496.47998046875
+      },
+      "5D": {
+        "date": "2017-09-18",
+        "aaplAdjustedClose": 36.92560958862305,
+        "sp500Close": 2503.8701171875
+      },
+      "10D": {
+        "date": "2017-09-25",
+        "aaplAdjustedClose": 35.03592300415039,
+        "sp500Close": 2496.659912109375
+      },
+      "20D": {
+        "date": "2017-10-09",
+        "aaplAdjustedClose": 36.26700210571289,
+        "sp500Close": 2544.72998046875
+      },
+      "3M": {
+        "date": "2017-12-08",
+        "aaplAdjustedClose": 39.557395935058594,
+        "sp500Close": 2651.5
+      },
+      "6M": {
+        "date": "2018-03-13",
+        "aaplAdjustedClose": 42.2044792175293,
+        "sp500Close": 2765.31005859375
+      },
+      "1Y": {
+        "date": "2018-09-11",
+        "aaplAdjustedClose": 52.88194274902344,
+        "sp500Close": 2887.889892578125
+      }
+    }
+  },
+  {
     "date": "2018-09-12",
     "model": "iPhone XS / XS Max",
     "description": "A12 Bionic, Face ID and larger OLED display",
@@ -24,7 +882,58 @@
     },
     "baselineDate": "2018-09-11",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2018-09-12",
+      "5D": "2018-09-18",
+      "10D": "2018-09-25",
+      "20D": "2018-10-09",
+      "3M": "2018-12-11",
+      "6M": "2019-03-14",
+      "1Y": "2019-09-12"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2018-09-11",
+        "aaplAdjustedClose": 52.88194274902344,
+        "sp500Close": 2887.889892578125
+      },
+      "1D": {
+        "date": "2018-09-12",
+        "aaplAdjustedClose": 52.22521209716797,
+        "sp500Close": 2888.919921875
+      },
+      "5D": {
+        "date": "2018-09-18",
+        "aaplAdjustedClose": 51.55663299560547,
+        "sp500Close": 2904.31005859375
+      },
+      "10D": {
+        "date": "2018-09-25",
+        "aaplAdjustedClose": 52.489768981933594,
+        "sp500Close": 2915.56005859375
+      },
+      "20D": {
+        "date": "2018-10-09",
+        "aaplAdjustedClose": 53.595367431640625,
+        "sp500Close": 2880.340087890625
+      },
+      "3M": {
+        "date": "2018-12-11",
+        "aaplAdjustedClose": 39.975860595703125,
+        "sp500Close": 2636.780029296875
+      },
+      "6M": {
+        "date": "2019-03-14",
+        "aaplAdjustedClose": 43.742305755615234,
+        "sp500Close": 2808.47998046875
+      },
+      "1Y": {
+        "date": "2019-09-12",
+        "aaplAdjustedClose": 53.52021789550781,
+        "sp500Close": 3009.570068359375
+      }
+    }
   },
   {
     "date": "2019-09-10",
@@ -33,7 +942,7 @@
     "source": "https://www.apple.com/newsroom/2019/09/apple-introduces-dual-camera-iphone-11/",
     "returns": {
       "1D": 1.1813,
-      "5D": 2.6755,
+      "5D": 2.6754,
       "10D": 2.1245,
       "20D": 6.0186,
       "3M": 26.7791,
@@ -51,7 +960,58 @@
     },
     "baselineDate": "2019-09-09",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2019-09-10",
+      "5D": "2019-09-16",
+      "10D": "2019-09-23",
+      "20D": "2019-10-07",
+      "3M": "2019-12-06",
+      "6M": "2020-03-10",
+      "1Y": "2020-09-08"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2019-09-09",
+        "aaplAdjustedClose": 51.380271911621094,
+        "sp500Close": 2978.429931640625
+      },
+      "1D": {
+        "date": "2019-09-10",
+        "aaplAdjustedClose": 51.98722839355469,
+        "sp500Close": 2979.389892578125
+      },
+      "5D": {
+        "date": "2019-09-16",
+        "aaplAdjustedClose": 52.75492477416992,
+        "sp500Close": 2997.9599609375
+      },
+      "10D": {
+        "date": "2019-09-23",
+        "aaplAdjustedClose": 52.471839904785156,
+        "sp500Close": 2991.780029296875
+      },
+      "20D": {
+        "date": "2019-10-07",
+        "aaplAdjustedClose": 54.47262954711914,
+        "sp500Close": 2938.7900390625
+      },
+      "3M": {
+        "date": "2019-12-06",
+        "aaplAdjustedClose": 65.13943481445312,
+        "sp500Close": 3145.909912109375
+      },
+      "6M": {
+        "date": "2020-03-10",
+        "aaplAdjustedClose": 68.82272338867188,
+        "sp500Close": 2882.22998046875
+      },
+      "1Y": {
+        "date": "2020-09-08",
+        "aaplAdjustedClose": 109.3381118774414,
+        "sp500Close": 3331.840087890625
+      }
+    }
   },
   {
     "date": "2020-10-13",
@@ -59,13 +1019,13 @@
     "description": "5G, OLED and MagSafe",
     "source": "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/",
     "returns": {
-      "1D": -2.6527,
+      "1D": -2.6528,
       "5D": -6.7685,
       "10D": -7.5161,
-      "20D": -6.3338,
+      "20D": -6.3339,
       "3M": 3.7156,
       "6M": 6.4754,
-      "1Y": 14.4857
+      "1Y": 14.4856
     },
     "benchmark": {
       "1D": -0.6307,
@@ -78,7 +1038,58 @@
     },
     "baselineDate": "2020-10-12",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2020-10-13",
+      "5D": "2020-10-19",
+      "10D": "2020-10-26",
+      "20D": "2020-11-09",
+      "3M": "2021-01-12",
+      "6M": "2021-04-14",
+      "1Y": "2021-10-12"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2020-10-12",
+        "aaplAdjustedClose": 120.56076049804688,
+        "sp500Close": 3534.219970703125
+      },
+      "1D": {
+        "date": "2020-10-13",
+        "aaplAdjustedClose": 117.36257934570312,
+        "sp500Close": 3511.929931640625
+      },
+      "5D": {
+        "date": "2020-10-19",
+        "aaplAdjustedClose": 112.40060424804688,
+        "sp500Close": 3426.919921875
+      },
+      "10D": {
+        "date": "2020-10-26",
+        "aaplAdjustedClose": 111.49931335449219,
+        "sp500Close": 3400.969970703125
+      },
+      "20D": {
+        "date": "2020-11-09",
+        "aaplAdjustedClose": 112.9245834350586,
+        "sp500Close": 3550.5
+      },
+      "3M": {
+        "date": "2021-01-12",
+        "aaplAdjustedClose": 125.04032897949219,
+        "sp500Close": 3801.18994140625
+      },
+      "6M": {
+        "date": "2021-04-14",
+        "aaplAdjustedClose": 128.36758422851562,
+        "sp500Close": 4124.66015625
+      },
+      "1Y": {
+        "date": "2021-10-12",
+        "aaplAdjustedClose": 138.02474975585938,
+        "sp500Close": 4350.64990234375
+      }
+    }
   },
   {
     "date": "2021-09-14",
@@ -88,10 +1099,10 @@
     "returns": {
       "1D": -0.9562,
       "5D": -4.4199,
-      "10D": -2.795,
-      "20D": -4.5068,
+      "10D": -2.7951,
+      "20D": -4.5069,
       "3M": 20.1684,
-      "6M": 0.991,
+      "6M": 0.9909,
       "1Y": 3.445
     },
     "benchmark": {
@@ -105,7 +1116,58 @@
     },
     "baselineDate": "2021-09-13",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2021-09-14",
+      "5D": "2021-09-20",
+      "10D": "2021-09-27",
+      "20D": "2021-10-11",
+      "3M": "2021-12-10",
+      "6M": "2022-03-14",
+      "1Y": "2022-09-13"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2021-09-13",
+        "aaplAdjustedClose": 145.8667755126953,
+        "sp500Close": 4468.72998046875
+      },
+      "1D": {
+        "date": "2021-09-14",
+        "aaplAdjustedClose": 144.47198486328125,
+        "sp500Close": 4443.0498046875
+      },
+      "5D": {
+        "date": "2021-09-20",
+        "aaplAdjustedClose": 139.41954040527344,
+        "sp500Close": 4357.72998046875
+      },
+      "10D": {
+        "date": "2021-09-27",
+        "aaplAdjustedClose": 141.78970336914062,
+        "sp500Close": 4443.10986328125
+      },
+      "20D": {
+        "date": "2021-10-11",
+        "aaplAdjustedClose": 139.292724609375,
+        "sp500Close": 4361.18994140625
+      },
+      "3M": {
+        "date": "2021-12-10",
+        "aaplAdjustedClose": 175.28579711914062,
+        "sp500Close": 4712.02001953125
+      },
+      "6M": {
+        "date": "2022-03-14",
+        "aaplAdjustedClose": 147.3122100830078,
+        "sp500Close": 4173.10986328125
+      },
+      "1Y": {
+        "date": "2022-09-13",
+        "aaplAdjustedClose": 150.8919219970703,
+        "sp500Close": 3932.68994140625
+      }
+    }
   },
   {
     "date": "2022-09-07",
@@ -132,7 +1194,58 @@
     },
     "baselineDate": "2022-09-06",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2022-09-07",
+      "5D": "2022-09-13",
+      "10D": "2022-09-20",
+      "20D": "2022-10-04",
+      "3M": "2022-12-05",
+      "6M": "2023-03-08",
+      "1Y": "2023-09-07"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2022-09-06",
+        "aaplAdjustedClose": 151.56869506835938,
+        "sp500Close": 3908.18994140625
+      },
+      "1D": {
+        "date": "2022-09-07",
+        "aaplAdjustedClose": 152.9712677001953,
+        "sp500Close": 3979.8701171875
+      },
+      "5D": {
+        "date": "2022-09-13",
+        "aaplAdjustedClose": 150.8919219970703,
+        "sp500Close": 3932.68994140625
+      },
+      "10D": {
+        "date": "2022-09-20",
+        "aaplAdjustedClose": 153.89329528808594,
+        "sp500Close": 3855.929931640625
+      },
+      "20D": {
+        "date": "2022-10-04",
+        "aaplAdjustedClose": 143.3002471923828,
+        "sp500Close": 3790.929931640625
+      },
+      "3M": {
+        "date": "2022-12-05",
+        "aaplAdjustedClose": 144.05868530273438,
+        "sp500Close": 3998.840087890625
+      },
+      "6M": {
+        "date": "2023-03-08",
+        "aaplAdjustedClose": 150.4185333251953,
+        "sp500Close": 3992.010009765625
+      },
+      "1Y": {
+        "date": "2023-09-07",
+        "aaplAdjustedClose": 175.1905059814453,
+        "sp500Close": 4451.14013671875
+      }
+    }
   },
   {
     "date": "2023-09-12",
@@ -140,12 +1253,12 @@
     "description": "USB-C, Dynamic Island and 48MP main camera",
     "source": "https://www.apple.com/newsroom/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/",
     "returns": {
-      "1D": -1.7061,
+      "1D": -1.706,
       "5D": -0.775,
       "10D": -1.8287,
       "20D": -0.2063,
       "3M": 9.2595,
-      "6M": -3.167,
+      "6M": -3.1671,
       "1Y": 24.7766
     },
     "benchmark": {
@@ -159,7 +1272,58 @@
     },
     "baselineDate": "2023-09-11",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2023-09-12",
+      "5D": "2023-09-18",
+      "10D": "2023-09-25",
+      "20D": "2023-10-09",
+      "3M": "2023-12-08",
+      "6M": "2024-03-12",
+      "1Y": "2024-09-11"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2023-09-11",
+        "aaplAdjustedClose": 176.9665069580078,
+        "sp500Close": 4487.4599609375
+      },
+      "1D": {
+        "date": "2023-09-12",
+        "aaplAdjustedClose": 173.94737243652344,
+        "sp500Close": 4461.89990234375
+      },
+      "5D": {
+        "date": "2023-09-18",
+        "aaplAdjustedClose": 175.59506225585938,
+        "sp500Close": 4453.52978515625
+      },
+      "10D": {
+        "date": "2023-09-25",
+        "aaplAdjustedClose": 173.73028564453125,
+        "sp500Close": 4337.43994140625
+      },
+      "20D": {
+        "date": "2023-10-09",
+        "aaplAdjustedClose": 176.60145568847656,
+        "sp500Close": 4335.66015625
+      },
+      "3M": {
+        "date": "2023-12-08",
+        "aaplAdjustedClose": 193.35272216796875,
+        "sp500Close": 4604.3701171875
+      },
+      "6M": {
+        "date": "2024-03-12",
+        "aaplAdjustedClose": 171.36187744140625,
+        "sp500Close": 5175.27001953125
+      },
+      "1Y": {
+        "date": "2024-09-11",
+        "aaplAdjustedClose": 220.8128662109375,
+        "sp500Close": 5554.1298828125
+      }
+    }
   },
   {
     "date": "2024-09-09",
@@ -167,7 +1331,7 @@
     "description": "Camera Control and A18 chip",
     "source": "https://www.apple.com/newsroom/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/",
     "returns": {
-      "1D": 0.0407,
+      "1D": 0.0408,
       "5D": 0.7608,
       "10D": 3.3421,
       "20D": 2.7081,
@@ -186,7 +1350,58 @@
     },
     "baselineDate": "2024-09-06",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2024-09-09",
+      "5D": "2024-09-13",
+      "10D": "2024-09-20",
+      "20D": "2024-10-04",
+      "3M": "2024-12-05",
+      "6M": "2025-03-11",
+      "1Y": "2025-09-10"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2024-09-06",
+        "aaplAdjustedClose": 218.98812866210938,
+        "sp500Close": 5408.419921875
+      },
+      "1D": {
+        "date": "2024-09-09",
+        "aaplAdjustedClose": 219.07737731933594,
+        "sp500Close": 5471.0498046875
+      },
+      "5D": {
+        "date": "2024-09-13",
+        "aaplAdjustedClose": 220.6541748046875,
+        "sp500Close": 5626.02001953125
+      },
+      "10D": {
+        "date": "2024-09-20",
+        "aaplAdjustedClose": 226.306884765625,
+        "sp500Close": 5702.5498046875
+      },
+      "20D": {
+        "date": "2024-10-04",
+        "aaplAdjustedClose": 224.9185028076172,
+        "sp500Close": 5751.06982421875
+      },
+      "3M": {
+        "date": "2024-12-05",
+        "aaplAdjustedClose": 241.28895568847656,
+        "sp500Close": 6075.10986328125
+      },
+      "6M": {
+        "date": "2025-03-11",
+        "aaplAdjustedClose": 219.48997497558594,
+        "sp500Close": 5572.06982421875
+      },
+      "1Y": {
+        "date": "2025-09-10",
+        "aaplAdjustedClose": 225.95533752441406,
+        "sp500Close": 6532.0400390625
+      }
+    }
   },
   {
     "date": "2025-09-09",
@@ -195,10 +1410,10 @@
     "source": "https://www.apple.com/newsroom/2025/09/apple-debuts-iphone-17/",
     "returns": {
       "1D": -1.4839,
-      "5D": -0.496,
+      "5D": -0.4961,
       "10D": 7.6509,
       "20D": 7.9073,
-      "3M": 17.3071,
+      "3M": 17.3072,
       "6M": 9.8567,
       "1Y": 33.0523
     },
@@ -213,7 +1428,58 @@
     },
     "baselineDate": "2025-09-08",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2025-09-09",
+      "5D": "2025-09-15",
+      "10D": "2025-09-22",
+      "20D": "2025-10-06",
+      "3M": "2025-12-05",
+      "6M": "2026-03-10",
+      "1Y": "2026-09-09"
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2025-09-08",
+        "aaplAdjustedClose": 237.0045166015625,
+        "sp500Close": 6495.14990234375
+      },
+      "1D": {
+        "date": "2025-09-09",
+        "aaplAdjustedClose": 233.4875030517578,
+        "sp500Close": 6512.60986328125
+      },
+      "5D": {
+        "date": "2025-09-15",
+        "aaplAdjustedClose": 235.82884216308594,
+        "sp500Close": 6615.27978515625
+      },
+      "10D": {
+        "date": "2025-09-22",
+        "aaplAdjustedClose": 255.13751220703125,
+        "sp500Close": 6693.75
+      },
+      "20D": {
+        "date": "2025-10-06",
+        "aaplAdjustedClose": 255.7452850341797,
+        "sp500Close": 6740.27978515625
+      },
+      "3M": {
+        "date": "2025-12-05",
+        "aaplAdjustedClose": 278.02325439453125,
+        "sp500Close": 6870.39990234375
+      },
+      "6M": {
+        "date": "2026-03-10",
+        "aaplAdjustedClose": 260.3653564453125,
+        "sp500Close": 6781.47998046875
+      },
+      "1Y": {
+        "date": "2026-09-09",
+        "aaplAdjustedClose": 315.3399963378906,
+        "sp500Close": 7636.35986328125
+      }
+    }
   },
   {
     "date": "2026-09-09",
@@ -240,6 +1506,42 @@
     },
     "baselineDate": "2026-09-08",
     "methodology": "Adjusted AAPL close versus S&P 500 price-index close; baseline previous trading session; no dividends in index",
-    "priceSource": "Yahoo Finance historical daily series via yfinance; downloaded on 2026-10-18"
+    "priceSource": "Yahoo Finance historical daily series; downloaded on 2026-11-03; data through 2026-11-02",
+    "horizonDates": {
+      "1D": "2026-09-09",
+      "5D": "2026-09-15",
+      "10D": "2026-09-22",
+      "20D": "2026-10-06",
+      "3M": null,
+      "6M": null,
+      "1Y": null
+    },
+    "priceObservations": {
+      "baseline": {
+        "date": "2026-09-08",
+        "aaplAdjustedClose": 316.2200012207031,
+        "sp500Close": 7673.52001953125
+      },
+      "1D": {
+        "date": "2026-09-09",
+        "aaplAdjustedClose": 315.3399963378906,
+        "sp500Close": 7636.35986328125
+      },
+      "5D": {
+        "date": "2026-09-15",
+        "aaplAdjustedClose": 331.3399963378906,
+        "sp500Close": 7585.72998046875
+      },
+      "10D": {
+        "date": "2026-09-22",
+        "aaplAdjustedClose": 339.75,
+        "sp500Close": 7764.64013671875
+      },
+      "20D": {
+        "date": "2026-10-06",
+        "aaplAdjustedClose": 333.6300048828125,
+        "sp500Close": 7818.93017578125
+      }
+    }
   }
 ]

@@ -1,9 +1,10 @@
 const escape = (value) => String(value).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
-export function applyArticleImage(html, image) {
+export function applyArticleImage(html, image, alt = '') {
   if (!html.includes('</head>')) throw new Error('Missing document head')
   // Remove only image-related social metadata; retain all unrelated metadata.
   html = html.replace(/<meta\b[^>]*>/gi, (tag) => /\b(?:property|name)\s*=\s*["'](?:og:image(?::[^"']*)?|twitter:image(?::[^"']*)?|twitter:card)["']/i.test(tag) ? '' : tag)
   html = html.replace('</head>', `<meta property="og:image" content="${escape(image)}" />\n<meta name="twitter:image" content="${escape(image)}" />\n<meta name="twitter:card" content="summary_large_image" />\n</head>`)
+  if (alt) html = html.replace('</head>', `<meta property="og:image:alt" content="${escape(alt)}" />\n<meta name="twitter:image:alt" content="${escape(alt)}" />\n</head>`)
   return html.replace(/(<script\b[^>]*type=["']application\/ld\+json["'][^>]*>)([\s\S]*?)(<\/script>)/gi, (all,start,text,end) => {
     const data = JSON.parse(text)
     function visit(value) {

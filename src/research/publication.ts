@@ -2,7 +2,7 @@ import settings from './publication-settings.json'
 import generatedImages from './generated/publication-images.json'
 
 export type HomepagePlacement = 'none' | 'regular' | 'featured'
-export type PublicationOptions = { homepagePlacement?: HomepagePlacement; image?: string }
+export type PublicationOptions = { homepagePlacement?: HomepagePlacement; image?: string; socialImage?: string; socialImageAlt?: string }
 export const publicationSettings = settings as Record<string, PublicationOptions>
 export const publicationImages = generatedImages as Record<string, string>
 export const getHomepagePlacement = (path: string): HomepagePlacement =>
