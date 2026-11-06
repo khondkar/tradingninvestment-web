@@ -260,7 +260,7 @@ export default function MarketSnapshotSharing(props: Props) {
       if (typeof id !== 'string' || !/^[a-f0-9]{64}$/.test(id)) {
         throw new Error('The chart preview returned an invalid identifier.')
       }
-      const shareUrl = endpoint.href + '/' + id
+      const shareUrl = `https://tradingninvestment.com/market/share-snapshots/${id}`
       const destination = new URL(platform === 'x'
         ? 'https://x.com/intent/tweet'
         : 'https://www.linkedin.com/sharing/share-offsite/')
