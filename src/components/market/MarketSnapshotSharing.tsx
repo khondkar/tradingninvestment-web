@@ -398,30 +398,41 @@ export default function MarketSnapshotSharing(props: Props) {
   }
 
 
-  function shareSocial(kind: Kind, platform: 'linkedin' | 'x') {
-    const sectorName = props.sector === 'all'
-      ? 'S&P 500'
-      : shortSector(props.sector)
-
-    const description = kind === 'leaders'
-      ? 'Leaders & Laggards + Heatmap'
-      : kind === 'top5'
-        ? 'Top 5 Gainers & Losers + Heatmap'
-        : 'Heatmap'
-
-    const title = `${sectorName} ${description} | TradingNInvestment`
-    const pageUrl =
-      'https://tradingninvestment.com/stock-market-today/heatmap/'
-
-    const destination = platform === 'linkedin'
-      ? `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`
-      : `https://x.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(pageUrl)}`
-
-    // Open the composer directly from the user click.
-    window.open(destination, '_blank', 'noopener,noreferrer')
-
-    // Download the matching selected-sector PNG.
-    void exportCard(kind, false)
+  async function shareSocial(kind: Kind, platform: 'linkedin' | 'x') {
+    const composer = window.open('about:blank', '_blank')
+    if (!composer) {
+      setStatus('Allow the sharing window and try again.')
+      return
+    }
+    composer.opener = null
+    try {
+      setStatus('Preparing the selected chart…')
+      const { canvas, title } = createImage({ ...props, kind })
+      const dataURL = canvas.toDataURL('image/png')
+      const binary = atob(dataURL.slice(dataURL.indexOf(',') + 1))
+      const png = new Blob([Uint8Array.from(binary, char => char.charCodeAt(0))],
+        { type: 'image/png' })
+      const api = new URL(import.meta.env.VITE_API_BASE_URL ||
+        'https://quant-ai-agent.onrender.com', window.location.origin)
+      const endpoint = new URL(api.href.replace(/\/$/, '') + '/market/share-snapshots')
+      const response = await fetch(endpoint, { method: 'POST', body: png })
+      if (!response.ok) throw new Error('Could not publish the chart preview. Please retry.')
+      const { id } = await response.json()
+      if (typeof id !== 'string' || !/^[a-f0-9]{64}$/.test(id)) {
+        throw new Error('The chart preview returned an invalid identifier.')
+      }
+      const shareUrl = endpoint.href + '/' + id
+      const destination = new URL(platform === 'x'
+        ? 'https://x.com/intent/tweet'
+        : 'https://www.linkedin.com/sharing/share-offsite/')
+      destination.searchParams.set('url', shareUrl)
+      if (platform === 'x') destination.searchParams.set('text', title)
+      if (!composer.closed) composer.location.replace(destination.href)
+      setStatus(composer.closed ? 'Sharing window closed.' : 'Chart ready in the sharing window.')
+    } catch (error) {
+      composer.close()
+      setStatus(error instanceof Error ? error.message : 'Unable to share the selected chart.')
+    }
   }
 
   return (
@@ -502,8 +513,7 @@ export default function MarketSnapshotSharing(props: Props) {
         color: '#344458',
         marginTop: 14
       }}>
-        LinkedIn and X open a sharing window and download
-        the selected PNG. Attach the PNG before posting.
+        LinkedIn and X share a link to the selected chart.
       </p>
 
       <p role="status" style={{
