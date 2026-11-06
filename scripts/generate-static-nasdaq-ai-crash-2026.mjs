@@ -14,7 +14,7 @@ const dist = path.join(root, 'dist')
 const canonical =
   'https://tradingninvestment.com/nasdaq-ai-crash-2026/'
 const title = "Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble | TNI"
-const description = "Compare the Nasdaq Composite’s November 5, 2026 point loss with the dot-com cycle using daily closes, historical declines and AI stock drawdowns."
+const description = "Nasdaq fell 5.52% on Nov. 5, 2026. Compare AI stock drawdowns with the 2000 dot-com crash and discover what happened after historic Nasdaq selloffs."
 const image = "https://tradingninvestment.com/images/social/nasdaq-ai-crash-2026-og.png"
 
 const escape = (value) =>
@@ -101,6 +101,8 @@ const schema = {
   '@type': 'Article',
   headline: 'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble',
   description,
+  datePublished: '2026-11-06',
+  dateModified: '2026-11-06',
   mainEntityOfPage: canonical,
   image,
   author: {

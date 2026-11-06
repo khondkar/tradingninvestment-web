@@ -125,7 +125,7 @@ const scenarios = [20, 30, 40, 55.7, 77.9]
 export default function NasdaqAICrash2026Page() {
   useEffect(() => {
     document.title =
-      'Nasdaq Crash 2026: AI Stocks vs. the 2000 Dot-Com Bubble | TNI'
+      'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble | TNI'
     let canonical = document.querySelector<HTMLLinkElement>(
       'link[rel="canonical"]'
     )
