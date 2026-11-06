@@ -3,3 +3,38 @@
 @media(min-width:1100px){.tni-hm-map{grid-template-columns:repeat(3,minmax(0,1fr))}.tni-hm-map>.tni-hm-sector:first-child{grid-column:auto}}
 .tni-hm-map.is-focused{grid-template-columns:minmax(0,1fr)}.tni-hm-map.is-focused>.tni-hm-sector:first-child{grid-column:auto}
 @media(hover:none){.tni-hm-tooltip{display:none}}
+
+
+/* TNI heatmap readability v2 */
+.tni-hm-sector h3 {
+  font-size: 16px;
+  font-weight: 850;
+  line-height: 1.35;
+  min-height: 32px;
+}
+
+.tni-hm-sector h3 b {
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.tni-hm-tile text {
+  fill: #FFFFFF;
+  font-size: 15px;
+  font-weight: 900;
+  paint-order: stroke fill;
+  stroke: #101923;
+  stroke-width: 2.5px;
+  stroke-linejoin: round;
+}
+
+.tni-hm-tile .tni-hm-tile-return {
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.tni-hm-legend {
+  color: #1C2B3D;
+  font-size: 14px;
+  font-weight: 750;
+}
