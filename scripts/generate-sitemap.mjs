@@ -27,6 +27,7 @@ const paths = [
   '/research-license/',
   '/average-stock-market-return/',
   '/snxx-etf/',
+  '/nasdaq-ai-crash-2026/',
   '/research/scanners/leveraged-etf/',
   ...marketTodayPaths,
   ...JSON.parse(fs.readFileSync(path.join(root, 'src/components/trading/routes.json'), 'utf8')).map(route => route.path),

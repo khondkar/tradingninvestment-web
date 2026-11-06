@@ -27,6 +27,7 @@ let AppleIphoneResearchPage: typeof import('./pages/AppleIphoneResearchPage')['d
 let GravestoneDojiArticle: typeof import('./pages/GravestoneDojiArticle')['default']
 let MagicDojiPage: typeof import('./pages/MagicDojiPage')['default']
 let NasdaqSelloff2026Page: typeof import('./pages/NasdaqSelloff2026Page')['default']
+let NasdaqAICrash2026Page: typeof import('./pages/NasdaqAICrash2026Page')['default']
 let StockMarketCrash1929Page: typeof import('./pages/StockMarketCrash1929Page')['default']
 let SP500ReturnsPage: typeof import('./pages/SP500ReturnsPage')['default']
 let AverageStockMarketReturnPage: typeof import('./pages/AverageStockMarketReturnPage')['default']
@@ -92,6 +93,7 @@ export async function prepareApp(pathname: string) {
   }
   if (path === '/magic-doji-or-myth-and-how-to-use-doji-for-stock-trading') { MagicDojiPage = (await import('./pages/MagicDojiPage')).default; return }
   if (path === '/nasdaq-selloff-2026') { NasdaqSelloff2026Page = (await import('./pages/NasdaqSelloff2026Page')).default; return }
+  if (path === '/nasdaq-ai-crash-2026') { NasdaqAICrash2026Page = (await import('./pages/NasdaqAICrash2026Page')).default; return }
   if (path === '/stock-market-crash-of-1929') { StockMarketCrash1929Page = (await import('./pages/StockMarketCrash1929Page')).default; return }
   if (path === '/stock-market-today/earnings-calendar') { StockMarketEarningsCalendarPage = (await import('./pages/StockMarketEarningsCalendarPage')).default; return }
   if (path === '/stock-market-today/sector-health') { StockMarketSectorHealthPage = (await import('./pages/StockMarketSectorHealthPage')).default; return }
@@ -1024,6 +1026,15 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
       <div className="site">
         <Header pathname={pathname} page="research" setPage={setPage} />
         <NasdaqSelloff2026Page />
+        <Footer setPage={setPage} />
+      </div>
+    )
+  }
+  if (normalizedPath === '/nasdaq-ai-crash-2026') {
+    return (
+      <div className="site">
+        <Header pathname={pathname} page="research" setPage={setPage} />
+        <NasdaqAICrash2026Page />
         <Footer setPage={setPage} />
       </div>
     )
