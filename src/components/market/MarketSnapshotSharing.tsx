@@ -397,6 +397,33 @@ export default function MarketSnapshotSharing(props: Props) {
     }
   }
 
+
+  function shareSocial(kind: Kind, platform: 'linkedin' | 'x') {
+    const sectorName = props.sector === 'all'
+      ? 'S&P 500'
+      : shortSector(props.sector)
+
+    const description = kind === 'leaders'
+      ? 'Leaders & Laggards + Heatmap'
+      : kind === 'top5'
+        ? 'Top 5 Gainers & Losers + Heatmap'
+        : 'Heatmap'
+
+    const title = `${sectorName} ${description} | TradingNInvestment`
+    const pageUrl =
+      'https://tradingninvestment.com/stock-market-today/heatmap/'
+
+    const destination = platform === 'linkedin'
+      ? `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`
+      : `https://x.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(pageUrl)}`
+
+    // Open the composer directly from the user click.
+    window.open(destination, '_blank', 'noopener,noreferrer')
+
+    // Download the matching selected-sector PNG.
+    void exportCard(kind, false)
+  }
+
   return (
     <section
       aria-label="Download and share market snapshots"
@@ -454,10 +481,30 @@ export default function MarketSnapshotSharing(props: Props) {
                 onClick={() => void exportCard(format.key, true)}>
                 Share
               </button>
+              <button type="button"
+                disabled={!props.stocks.length}
+                onClick={() => shareSocial(format.key, 'linkedin')}>
+                LinkedIn
+              </button>
+              <button type="button"
+                disabled={!props.stocks.length}
+                onClick={() => shareSocial(format.key, 'x')}>
+                Post to X
+              </button>
             </div>
           </div>
         ))}
       </div>
+
+      <p style={{
+        fontSize: 13,
+        fontWeight: 700,
+        color: '#344458',
+        marginTop: 14
+      }}>
+        LinkedIn and X open a sharing window and download
+        the selected PNG. Attach the PNG before posting.
+      </p>
 
       <p role="status" style={{
         fontSize: 14,
