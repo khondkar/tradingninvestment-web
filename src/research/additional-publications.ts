@@ -18,6 +18,20 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'nasdaq-ai-crash-2026',
+    path: '/nasdaq-ai-crash-2026/',
+    title: 'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble',
+    description: 'Original research comparing the Nasdaq AI selloff with the dot-com crash, major technology-stock drawdowns and historical forward returns after severe market declines.',
+    name: 'Nasdaq Composite',
+    symbol: 'IXIC',
+    image: '/images/social/nasdaq-ai-crash-2026-og.png',
+    categories: ['index', 'nasdaq', 'market-history', 'market-crash', 'drawdowns'],
+    topics: ['risk', 'history'],
+    kind: 'article',
+    publishedAt: '2026-11-06',
+  },
+
+  {
     slug: 'ibm-earnings-prediction-october-2026',
     topics: ['earnings'],
     path: '/research/ibm-earnings-prediction-october-2026/',

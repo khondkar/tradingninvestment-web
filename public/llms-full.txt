@@ -116,6 +116,14 @@ Subject: Morgan Stanley
 Symbol: MS
 Description: Explore Morgan Stanley MS historical returns, dividends, long-term performance, growth of $10,000, rolling returns, and comparison with the S&P 500.
 
+## Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble
+
+URL: https://tradingninvestment.com/nasdaq-ai-crash-2026/
+Type: article
+Subject: Nasdaq Composite
+Symbol: IXIC
+Description: Original research comparing the Nasdaq AI selloff with the dot-com crash, major technology-stock drawdowns and historical forward returns after severe market declines.
+
 ## Nasdaq Historical Returns by Year (1972–2026)
 
 URL: https://tradingninvestment.com/nasdaq-historical-annual-returns/

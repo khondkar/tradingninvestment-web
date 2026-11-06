@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import data from '../data/articles/nasdaq-ai-crash-2026.json'
+import forwardReturns from '../data/articles/nasdaq-crash-forward-returns.json'
 import './NasdaqAICrash2026Page.css'
 
 type Point = { date: string; close: number; normalized: number }
@@ -90,28 +91,6 @@ function HistoricalComparison() {
         Both series start at 100 and are aligned by trading session.
         Source: Yahoo Finance daily closing prices.
       </figcaption>
-      <table aria-label="Nasdaq indexed levels by period">
-        <caption>Nasdaq Composite daily closes, indexed to 100</caption>
-        <thead>
-          <tr><th scope="col">Period</th><th scope="col">Peak level (date)</th><th scope="col">Ending level (date)</th></tr>
-        </thead>
-        <tbody>
-          {[
-            { name: 'Dot-com, 1997–2002', points: dotcom },
-            { name: 'AI boom, 2023–2026', points: ai },
-          ].map(({ name, points }) => {
-            const peak = points.reduce((a, b) => b.normalized > a.normalized ? b : a)
-            const last = points[points.length - 1]
-            return (
-              <tr key={name}>
-                <th scope="row">{name}</th>
-                <td>{peak.normalized.toFixed(1)} ({peak.date})</td>
-                <td>{last.normalized.toFixed(1)} ({last.date})</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
     </figure>
   )
 }
@@ -124,8 +103,7 @@ const scenarios = [20, 30, 40, 55.7, 77.9]
 
 export default function NasdaqAICrash2026Page() {
   useEffect(() => {
-    document.title =
-      'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble | TNI'
+    document.title = 'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble | TNI'
     let canonical = document.querySelector<HTMLLinkElement>(
       'link[rel="canonical"]'
     )
@@ -181,6 +159,33 @@ export default function NasdaqAICrash2026Page() {
             Nasdaq series, which begins in December 1996.
             This is not the largest daily percentage decline.
           </p>
+        </section>
+
+
+        <section className="nac-crosslinks nac-crosslinks--under-record"
+          aria-label="Explore market outlook and history">
+
+          <a className="nac-crosslinks__card"
+            href="https://app.tradingninvestment.com/prediction-lab?ticker=QQQ"
+            target="_blank" rel="noopener noreferrer">
+            <span className="nac-crosslinks__eyebrow">
+              TNI MARKET INTELLIGENCE
+            </span>
+            <strong>Explore Nasdaq Outlook — Prediction Lab</strong>
+            <span>View QQQ model outlooks, evidence and community voting.</span>
+            <b>Open Prediction Lab ↗</b>
+          </a>
+
+          <a className="nac-crosslinks__card"
+            href="/100-years-dow-jones-industrial-average-djia-events-history-chart/">
+            <span className="nac-crosslinks__eyebrow">
+              100 YEARS OF MARKET HISTORY
+            </span>
+            <strong>Dow Jones: 100 Years of Market History</strong>
+            <span>Explore historical crashes, recoveries and major events.</span>
+            <b>Explore Dow Jones History →</b>
+          </a>
+
         </section>
 
         <div className="nac-metrics">
@@ -310,6 +315,87 @@ export default function NasdaqAICrash2026Page() {
           />
         </section>
 
+
+        <section className="nac-section nac-forward-study">
+          <h2>What Happened After Nasdaq Crashed 5% or More?</h2>
+          <p>
+            We analyzed Nasdaq Composite daily prices from February
+            1971 through November 5, 2026. Historical forward returns
+            cover approximately 1, 3, 6 and 12 months.
+          </p>
+
+          {forwardReturns.groups.map(group => (
+            <div className="nac-forward-group" key={group.title}>
+              <h3>{group.title}</h3>
+              <p>{group.events} qualifying crash sessions</p>
+              <div className="nac-forward-grid">
+                {group.results.map(row => (
+                  <div className="nac-forward-card" key={row[0]}>
+                    <strong>{row[0]}</strong>
+                    <span>Average forward return</span>
+                    <b>{Number(row[2]) > 0 ? '+' : ''}
+                      {Number(row[2]).toFixed(2)}%</b>
+                    <div className="nac-forward-track">
+                      <div style={{
+                        width: `${Math.min(100,
+                          Math.abs(Number(row[2])) / 13 * 100)}%`
+                      }}/>
+                    </div>
+                    <small>Median: {Number(row[3]).toFixed(2)}%</small>
+                    <small>Positive: {Number(row[4]).toFixed(1)}%</small>
+                    <small>Observations: {row[1]}</small>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <h3>Nasdaq's 10 Worst Crash Days: Forward Returns</h3>
+          <div className="nac-forward-scroll">
+            <table className="nac-forward-table">
+              <thead>
+                <tr>
+                  <th>Date</th><th>Crash</th><th>1M</th>
+                  <th>3M</th><th>6M</th><th>1Y</th>
+                </tr>
+              </thead>
+              <tbody>
+                {forwardReturns.worst_days.map(row => (
+                  <tr key={row[0]}>
+                    <td>{row[0]}</td>
+                    {row.slice(1).map((value, i) => (
+                      <td key={i}
+                        className={Number(value) >= 0
+                          ? 'nac-gain' : 'nac-loss'}>
+                        {Number(value) > 0 ? '+' : ''}
+                        {Number(value).toFixed(2)}%
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3>The Critical Difference: 1998 vs. 2000</h3>
+          <p>
+            After the August 31, 1998 crash, the Nasdaq gained 82.71%
+            over the following 252 trading sessions. After the
+            April 14, 2000 crash, it fell another 42.09%.
+          </p>
+          <p>
+            One-day crashes did not consistently predict recoveries.
+            Market conditions and valuation regimes mattered.
+          </p>
+          <p className="nac-forward-note">
+            Source: Yahoo Finance daily Nasdaq Composite closes;
+            TNI calculations. Horizons: 21, 63, 126 and 252 trading
+            sessions. Crash observations may overlap and are not
+            statistically independent. November 5, 2026 has no
+            completed forward-return period.
+          </p>
+        </section>
+
         <section className="nac-section">
           <h2>How deep could a further Nasdaq correction become?</h2>
           <p>
@@ -367,6 +453,43 @@ export default function NasdaqAICrash2026Page() {
               is wrong. Compare valuations, earnings and drawdowns
               rather than assuming that a historical crash must repeat.
             </p>
+          </div>
+        </section>
+
+
+        <section className="nac-crosslinks-bottom"
+          aria-labelledby="nac-more-history-title">
+
+          <h2 id="nac-more-history-title">
+            Explore More Historical Market Returns
+          </h2>
+
+          <div className="nac-crosslinks">
+            <a className="nac-crosslinks__card"
+              href="/nasdaq-historical-annual-returns/">
+              <span className="nac-crosslinks__eyebrow">
+                NASDAQ COMPOSITE
+              </span>
+              <strong>Nasdaq Returns by Year</strong>
+              <span>
+                Explore historical annual returns, gains, losses
+                and long-term performance.
+              </span>
+              <b>Explore Nasdaq Returns →</b>
+            </a>
+
+            <a className="nac-crosslinks__card"
+              href="/sp-500-returns/">
+              <span className="nac-crosslinks__eyebrow">
+                S&P 500 INDEX
+              </span>
+              <strong>S&P 500 Returns by Year</strong>
+              <span>
+                Explore nearly a century of annual returns,
+                corrections and market performance.
+              </span>
+              <b>Explore S&P 500 Returns →</b>
+            </a>
           </div>
         </section>
 

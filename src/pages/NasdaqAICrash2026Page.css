@@ -201,3 +201,129 @@
   .nac-record { padding: 19px; }
   .nac-scenarios > div { grid-template-columns: 65px minmax(0,1fr) 73px; gap: 7px; font-size: 13px; }
 }
+
+
+/* Historical Nasdaq forward returns */
+.nac-forward-group { margin:28px 0; }
+.nac-forward-group h3,.nac-forward-study h3 {
+  font-size:23px;font-weight:850;color:#14263c;
+}
+.nac-forward-grid {
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;margin:20px 0;
+}
+.nac-forward-card {
+  display:flex;flex-direction:column;gap:9px;
+  background:#fff;border:1px solid #aab9c8;
+  border-radius:12px;padding:15px;
+}
+.nac-forward-card strong { font-size:17px;font-weight:850; }
+.nac-forward-card span,.nac-forward-card small {
+  font-size:13px;color:#243b53;font-weight:750;
+}
+.nac-forward-card b {font-size:29px;color:#076b3d;font-weight:900;}
+.nac-forward-track {height:10px;background:#e3e9ef;border-radius:5px;}
+.nac-forward-track div {height:100%;background:#087544;border-radius:5px;}
+.nac-forward-scroll {overflow-x:auto;margin:22px 0;}
+.nac-forward-table {
+  width:100%;min-width:690px;border-collapse:collapse;
+  font-size:15px;font-weight:750;
+}
+.nac-forward-table th,.nac-forward-table td {
+  padding:12px 9px;border:1px solid #bbc7d3;text-align:right;
+}
+.nac-forward-table th:first-child,
+.nac-forward-table td:first-child {text-align:left;}
+.nac-forward-table th {background:#14263c;color:#fff;}
+.nac-forward-table .nac-gain {background:#e4f5e9;color:#075f36;}
+.nac-forward-table .nac-loss {background:#fbe5e7;color:#a21e2a;}
+.nac-forward-note {font-size:14px!important;font-weight:700;}
+@media(max-width:700px) {
+  .nac-forward-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .nac-forward-card {padding:12px;}
+  .nac-forward-card b {font-size:25px;}
+}
+
+
+/* Related research cards: Nasdaq AI Crash article */
+.nac-crosslinks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.nac-crosslinks__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 23px;
+  border: 2px solid #B0BECC;
+  border-radius: 13px;
+  background: #FFFFFF;
+  color: #14263C !important;
+  text-decoration: none;
+  transition: border-color .15s, background .15s;
+}
+
+.nac-crosslinks__card:hover,
+.nac-crosslinks__card:focus-visible {
+  border-color: #124C82;
+  background: #EDF4FA;
+}
+
+.nac-crosslinks__card:focus-visible {
+  outline: 3px solid #124C82;
+  outline-offset: 3px;
+}
+
+.nac-crosslinks__eyebrow {
+  color: #244969;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .04em;
+}
+
+.nac-crosslinks__card strong {
+  font-size: 21px;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.nac-crosslinks__card > span:not(.nac-crosslinks__eyebrow) {
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.5;
+  color: #263B51;
+}
+
+.nac-crosslinks__card b {
+  margin-top: auto;
+  color: #124C82;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.nac-crosslinks-bottom {
+  margin: 42px 0 30px;
+}
+
+.nac-crosslinks-bottom h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 850;
+  color: #14263C;
+}
+
+@media(max-width: 650px) {
+  .nac-crosslinks {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .nac-crosslinks__card {
+    padding: 18px;
+  }
+  .nac-crosslinks__card strong {
+    font-size: 19px;
+  }
+}
