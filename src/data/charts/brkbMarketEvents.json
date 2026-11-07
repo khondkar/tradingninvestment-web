@@ -1,0 +1,364 @@
+{
+  "asset": "BRK.B",
+  "benchmark": "S&P 500",
+  "through_date": "2026-11-06",
+  "first_date": "1996-05-09",
+  "source": "Yahoo Finance (stock); TNI S&P 500 daily dataset",
+  "nber_source": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions",
+  "recession_chronology_checked": "2026-11-07",
+  "methodology": {
+    "episodes": "Distinct 10%+ S&P 500 running-peak declines; a new episode begins only after the previous peak is regained. Nested selloffs are not counted separately.",
+    "comparison": "Maximum closing drawdown for each asset within the same S&P 500 peak-to-trough window, resetting each running peak at the window start. This is not necessarily the return between the endpoints.",
+    "recessions": "Last available close in the NBER peak month through last available close in the trough month. Peak month is the final expansion month; these windows differ from stock-market peaks and troughs.",
+    "benchmark": "S&P 500 price index, excluding reinvested dividends. This is a market benchmark proxy, not actual SPY ETF returns."
+  },
+  "corrections": [
+    {
+      "id": "Correction-1997-10-07",
+      "label": "1997",
+      "kind": "Correction",
+      "start": "1997-10-07",
+      "end": "1997-10-27",
+      "observations": 15,
+      "asset": {
+        "drawdown_pct": -6.2378,
+        "peak_date": "1997-10-07",
+        "trough_date": "1997-10-27",
+        "window_return_pct": -6.2378
+      },
+      "benchmark": {
+        "drawdown_pct": -10.7952,
+        "peak_date": "1997-10-07",
+        "trough_date": "1997-10-27",
+        "window_return_pct": -10.7952
+      },
+      "difference_pp": 4.5574,
+      "sp500_recovery": "1997-12-05",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    },
+    {
+      "id": "Correction-1998-07-17",
+      "label": "1998",
+      "kind": "Correction",
+      "start": "1998-07-17",
+      "end": "1998-08-31",
+      "observations": 32,
+      "asset": {
+        "drawdown_pct": -21.1002,
+        "peak_date": "1998-07-20",
+        "trough_date": "1998-08-31",
+        "window_return_pct": -20.4437
+      },
+      "benchmark": {
+        "drawdown_pct": -19.336,
+        "peak_date": "1998-07-17",
+        "trough_date": "1998-08-31",
+        "window_return_pct": -19.336
+      },
+      "difference_pp": -1.7642,
+      "sp500_recovery": "1998-11-23",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    },
+    {
+      "id": "Correction-1999-07-16",
+      "label": "1999",
+      "kind": "Correction",
+      "start": "1999-07-16",
+      "end": "1999-10-15",
+      "observations": 65,
+      "asset": {
+        "drawdown_pct": -19.4384,
+        "peak_date": "1999-07-16",
+        "trough_date": "1999-10-01",
+        "window_return_pct": -17.4199
+      },
+      "benchmark": {
+        "drawdown_pct": -12.0787,
+        "peak_date": "1999-07-16",
+        "trough_date": "1999-10-15",
+        "window_return_pct": -12.0787
+      },
+      "difference_pp": -7.3597,
+      "sp500_recovery": "1999-11-16",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    },
+    {
+      "id": "Bear market-2000-03-24",
+      "label": "2000\u201302",
+      "kind": "Bear market",
+      "start": "2000-03-24",
+      "end": "2002-10-09",
+      "observations": 638,
+      "asset": {
+        "drawdown_pct": -23.254,
+        "peak_date": "2002-05-17",
+        "trough_date": "2002-07-23",
+        "window_return_pct": 25.8477
+      },
+      "benchmark": {
+        "drawdown_pct": -49.1469,
+        "peak_date": "2000-03-24",
+        "trough_date": "2002-10-09",
+        "window_return_pct": -49.1469
+      },
+      "difference_pp": 25.8929,
+      "sp500_recovery": "2007-05-30",
+      "episode_status": "Recovered",
+      "recession_overlap": [
+        "2001 recession"
+      ]
+    },
+    {
+      "id": "Bear market-2007-10-09",
+      "label": "2007\u201309",
+      "kind": "Bear market",
+      "start": "2007-10-09",
+      "end": "2009-03-09",
+      "observations": 356,
+      "asset": {
+        "drawdown_pct": -53.8616,
+        "peak_date": "2007-12-10",
+        "trough_date": "2009-03-05",
+        "window_return_pct": -43.507
+      },
+      "benchmark": {
+        "drawdown_pct": -56.7754,
+        "peak_date": "2007-10-09",
+        "trough_date": "2009-03-09",
+        "window_return_pct": -56.7754
+      },
+      "difference_pp": 2.9138,
+      "sp500_recovery": "2013-03-28",
+      "episode_status": "Recovered",
+      "recession_overlap": [
+        "2007\u201309 recession"
+      ]
+    },
+    {
+      "id": "Correction-2015-05-21",
+      "label": "2015\u201316",
+      "kind": "Correction",
+      "start": "2015-05-21",
+      "end": "2016-02-11",
+      "observations": 184,
+      "asset": {
+        "drawdown_pct": -14.5522,
+        "peak_date": "2015-05-21",
+        "trough_date": "2016-01-25",
+        "window_return_pct": -13.8914
+      },
+      "benchmark": {
+        "drawdown_pct": -14.1608,
+        "peak_date": "2015-05-21",
+        "trough_date": "2016-02-11",
+        "window_return_pct": -14.1608
+      },
+      "difference_pp": -0.3914,
+      "sp500_recovery": "2016-07-11",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    },
+    {
+      "id": "Correction-2018-01-26",
+      "label": "2018",
+      "kind": "Correction",
+      "start": "2018-01-26",
+      "end": "2018-02-08",
+      "observations": 10,
+      "asset": {
+        "drawdown_pct": -11.8895,
+        "peak_date": "2018-02-01",
+        "trough_date": "2018-02-08",
+        "window_return_pct": -11.8652
+      },
+      "benchmark": {
+        "drawdown_pct": -10.1595,
+        "peak_date": "2018-01-26",
+        "trough_date": "2018-02-08",
+        "window_return_pct": -10.1595
+      },
+      "difference_pp": -1.73,
+      "sp500_recovery": "2018-08-24",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    },
+    {
+      "id": "Correction-2018-09-20",
+      "label": "2018",
+      "kind": "Correction",
+      "start": "2018-09-20",
+      "end": "2018-12-24",
+      "observations": 66,
+      "asset": {
+        "drawdown_pct": -16.0887,
+        "peak_date": "2018-10-09",
+        "trough_date": "2018-12-24",
+        "window_return_pct": -15.3013
+      },
+      "benchmark": {
+        "drawdown_pct": -19.7782,
+        "peak_date": "2018-09-20",
+        "trough_date": "2018-12-24",
+        "window_return_pct": -19.7782
+      },
+      "difference_pp": 3.6895,
+      "sp500_recovery": "2019-04-23",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    },
+    {
+      "id": "Bear market-2020-02-19",
+      "label": "2020",
+      "kind": "Bear market",
+      "start": "2020-02-19",
+      "end": "2020-03-23",
+      "observations": 24,
+      "asset": {
+        "drawdown_pct": -29.3027,
+        "peak_date": "2020-02-21",
+        "trough_date": "2020-03-23",
+        "window_return_pct": -29.275
+      },
+      "benchmark": {
+        "drawdown_pct": -33.925,
+        "peak_date": "2020-02-19",
+        "trough_date": "2020-03-23",
+        "window_return_pct": -33.925
+      },
+      "difference_pp": 4.6223,
+      "sp500_recovery": "2020-08-18",
+      "episode_status": "Recovered",
+      "recession_overlap": [
+        "2020 recession"
+      ]
+    },
+    {
+      "id": "Bear market-2022-01-03",
+      "label": "2022",
+      "kind": "Bear market",
+      "start": "2022-01-03",
+      "end": "2022-10-12",
+      "observations": 196,
+      "asset": {
+        "drawdown_pct": -26.579,
+        "peak_date": "2022-03-28",
+        "trough_date": "2022-10-12",
+        "window_return_pct": -12.2311
+      },
+      "benchmark": {
+        "drawdown_pct": -25.4251,
+        "peak_date": "2022-01-03",
+        "trough_date": "2022-10-12",
+        "window_return_pct": -25.4251
+      },
+      "difference_pp": -1.1539,
+      "sp500_recovery": "2024-01-19",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    },
+    {
+      "id": "Correction-2025-02-19",
+      "label": "2025",
+      "kind": "Correction",
+      "start": "2025-02-19",
+      "end": "2025-04-08",
+      "observations": 35,
+      "asset": {
+        "drawdown_pct": -8.8038,
+        "peak_date": "2025-04-02",
+        "trough_date": "2025-04-07",
+        "window_return_pct": 1.8335
+      },
+      "benchmark": {
+        "drawdown_pct": -18.9022,
+        "peak_date": "2025-02-19",
+        "trough_date": "2025-04-08",
+        "window_return_pct": -18.9022
+      },
+      "difference_pp": 10.0984,
+      "sp500_recovery": "2025-06-27",
+      "episode_status": "Recovered",
+      "recession_overlap": []
+    }
+  ],
+  "recessions": [
+    {
+      "id": "NBER recession-2001-03-30",
+      "label": "2001 recession",
+      "kind": "NBER recession",
+      "start": "2001-03-30",
+      "end": "2001-11-30",
+      "observations": 167,
+      "asset": {
+        "drawdown_pct": -13.0361,
+        "peak_date": "2001-07-09",
+        "trough_date": "2001-09-19",
+        "window_return_pct": 7.2151
+      },
+      "benchmark": {
+        "drawdown_pct": -26.4337,
+        "peak_date": "2001-05-21",
+        "trough_date": "2001-09-21",
+        "window_return_pct": -1.7995
+      },
+      "difference_pp": 13.3976,
+      "sp500_recovery": null,
+      "peak_month": "2001-03",
+      "trough_month": "2001-11"
+    },
+    {
+      "id": "NBER recession-2007-12-31",
+      "label": "2007\u201309 recession",
+      "kind": "NBER recession",
+      "start": "2007-12-31",
+      "end": "2009-06-30",
+      "observations": 378,
+      "asset": {
+        "drawdown_pct": -52.0334,
+        "peak_date": "2008-02-15",
+        "trough_date": "2009-03-05",
+        "window_return_pct": -38.8514
+      },
+      "benchmark": {
+        "drawdown_pct": -53.9261,
+        "peak_date": "2007-12-31",
+        "trough_date": "2009-03-09",
+        "window_return_pct": -37.3914
+      },
+      "difference_pp": 1.8927,
+      "sp500_recovery": null,
+      "peak_month": "2007-12",
+      "trough_month": "2009-06"
+    },
+    {
+      "id": "NBER recession-2020-02-28",
+      "label": "2020 recession",
+      "kind": "NBER recession",
+      "start": "2020-02-28",
+      "end": "2020-04-30",
+      "observations": 44,
+      "asset": {
+        "drawdown_pct": -25.5806,
+        "peak_date": "2020-03-04",
+        "trough_date": "2020-03-23",
+        "window_return_pct": -9.1984
+      },
+      "benchmark": {
+        "drawdown_pct": -28.5203,
+        "peak_date": "2020-03-04",
+        "trough_date": "2020-03-23",
+        "window_return_pct": -1.4146
+      },
+      "difference_pp": 2.9397,
+      "sp500_recovery": null,
+      "peak_month": "2020-02",
+      "trough_month": "2020-04"
+    }
+  ],
+  "asset_shallower_count": 6,
+  "asset_deeper_count": 5,
+  "ties": 0
+}

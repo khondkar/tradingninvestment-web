@@ -43,7 +43,16 @@ def main() -> None:
         help="Generate only the annual-return dataset and skip return-method and social assets.",
     )
 
+    parser.add_argument(
+        "--methods-only",
+        action="store_true",
+        help="Generate only the total-return methods JSON; skip annual data and OG assets.",
+    )
+
     args = parser.parse_args()
+
+    if args.annual_only and args.methods_only:
+        parser.error("--annual-only and --methods-only cannot be combined.")
 
     ticker = args.ticker.upper()
 
@@ -220,10 +229,25 @@ def main() -> None:
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    output.write_text(
-        json.dumps(payload, indent=2),
-        encoding="utf-8",
-    )
+    if not args.methods_only:
+        output.write_text(
+            json.dumps(payload, indent=2),
+            encoding="utf-8",
+        )
+
+    # Keep Berkshire drawdowns synchronized with annual-return updates.
+    # Methods-only runs avoid a duplicate refresh.
+    if ticker.replace(".", "-") == "BRK-B" and not args.methods_only:
+        subprocess.run(
+            [
+                sys.executable,
+                str(Path(__file__).resolve().parent / "refresh-brkb-drawdowns.py"),
+                "--expected-through",
+                data_through,
+            ],
+            cwd=Path(__file__).resolve().parents[1],
+            check=True,
+        )
 
     if args.annual_only:
         print(f"Generated annual returns: {output}")
@@ -309,7 +333,38 @@ def main() -> None:
         encoding="utf-8",
     )
 
+    # Automatically register total-return data for existing stocks.
+    # Only register datasets written inside src/data/charts.
+    root = Path(__file__).resolve().parents[1]
+    charts_dir = (root / "src/data/charts").resolve()
+
+    if methods_output.resolve().parent == charts_dir:
+        registration_script = (
+            Path(__file__).resolve().parent
+            / "register-stock-return-methods.py"
+        )
+
+        subprocess.run(
+            [
+                sys.executable,
+                str(registration_script),
+                "--ticker",
+                ticker.replace("-", "."),
+            ],
+            cwd=root,
+            check=True,
+        )
+
+    if args.methods_only:
+        print(f"Generated total-return methods: {methods_output}")
+        return
+
     # --------------------------------------------------------
+    # Berkshire OG is generated with the synchronized drawdown dataset.
+    if ticker.replace(".", "-") == "BRK-B":
+        print("BRK.B comparison OG already refreshed with drawdowns.")
+        return
+
     # BRANDED TNI SOCIAL / OPEN GRAPH ASSET
     #
     # Every generated stock research article receives the same

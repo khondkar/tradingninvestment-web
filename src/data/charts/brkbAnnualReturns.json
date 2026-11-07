@@ -1,5 +1,5 @@
 {
-  "symbol": "Berkshire Hathaway",
+  "symbol": "Berkshire Hathaway Inc.",
   "ticker": "BRK-B",
   "metric": "Annual Price Return %",
   "return_type": "price_return",
@@ -31,7 +31,8 @@
   "current_year": {
     "year": 2026,
     "label": "2026 YTD",
-    "return_pct": -0.43
+    "return_pct": 13.58,
+    "through_date": "2026-11-06"
   },
   "data": [
     {

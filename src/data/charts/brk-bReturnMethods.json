@@ -1,5 +1,5 @@
 {
-  "dataset": "Berkshire Hathaway price return and total return",
+  "dataset": "Berkshire Hathaway Inc. price return and total return",
   "ticker": "BRK-B",
   "start_year": 1997,
   "end_year": 2026,
@@ -297,10 +297,10 @@
     },
     {
       "year": 2026,
-      "price_return": -0.4277,
-      "total_return": -0.4277,
+      "price_return": 13.5761,
+      "total_return": 13.5761,
       "is_ytd": true,
-      "data_through": "2026-10-01",
+      "data_through": "2026-11-06",
       "price_source": "Yahoo Finance BRK-B Close",
       "total_return_source": "Yahoo Finance BRK-B Adjusted Close",
       "methodology": "yahoo_close_and_adjusted_close"

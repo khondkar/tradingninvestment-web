@@ -1,0 +1,32 @@
+.tni-brkb-capital { margin-top: 42px; scroll-margin-top: 100px; color: #10233f; }
+.tni-brkb-capital h2 { color: #10233f; font-size: 28px; font-weight: 800; line-height: 1.3; }
+.tni-brkb-capital h3 { font-size: 22px; font-weight: 800; }
+.tni-brkb-capital p { font-size: 16px; line-height: 1.75; font-weight: 700; color: #10233f; }
+.tni-brkb-capital a { color: #174fa6; font-weight: 800; text-decoration: underline; }
+.tni-brkb-capital__latest { padding: 20px; border: 2px solid #174fa6; border-radius: 14px; margin: 24px 0; }
+.tni-brkb-capital__cards { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.tni-brkb-capital__cards span { display: block; font-weight: 700; font-size: 15px; line-height: 1.5; }
+.tni-brkb-capital__cards strong { display: block; font-size: 30px; font-weight: 800; margin: 8px 0; }
+.tni-brkb-capital__charts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
+.tni-brkb-capital figure { margin: 0; min-width: 0; }
+.tni-brkb-capital figcaption { font-weight: 800; font-size: 20px; line-height: 1.4; }
+.tni-brkb-capital .tni-brkb-capital__scale { font-size: 14px; }
+.tni-brkb-capital__row { display: grid; grid-template-columns: 44px minmax(0,1fr) 92px; gap: 10px; align-items: center; margin: 15px 0; font-weight: 800; font-size: 15px; }
+.tni-brkb-capital__row strong { text-align: right; white-space: nowrap; }
+.tni-brkb-capital__track { height: 22px; border-radius: 4px; background: #e8eef6; overflow: hidden; }
+.tni-brkb-capital__track > div { height: 100%; }
+.tni-brkb-capital .cash { background: #174fa6; }
+.tni-brkb-capital .buybacks { background: #a51c3c; }
+.tni-brkb-capital__table { overflow-x: auto; margin-top: 22px; }
+.tni-brkb-capital table { width: 100%; border-collapse: collapse; font-size: 15px; font-weight: 700; }
+.tni-brkb-capital caption { text-align: left; font-weight: 800; font-size: 18px; margin-bottom: 12px; }
+.tni-brkb-capital th,.tni-brkb-capital td { text-align: left; padding: 12px; border-bottom: 1px solid #9badc2; }
+.tni-brkb-capital thead { background: #e8eef6; }
+.tni-brkb-capital summary { font-size: 16px; font-weight: 800; padding: 18px 0; cursor: pointer; }
+.tni-brkb-capital a:focus-visible,.tni-brkb-capital summary:focus-visible { outline: 3px solid #10233f; outline-offset: 4px; }
+@media(max-width:800px) {
+ .tni-brkb-capital__charts,.tni-brkb-capital__cards { grid-template-columns: 1fr; }
+ .tni-brkb-capital { padding: 20px 14px; }
+ .tni-brkb-capital__latest { padding: 14px; }
+ .tni-brkb-capital h2 { font-size: 25px; }
+}

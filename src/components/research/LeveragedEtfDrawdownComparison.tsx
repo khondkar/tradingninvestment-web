@@ -136,6 +136,8 @@ function recoveryGain(
 export default function LeveragedEtfDrawdownComparison({
   dataset,
 }: Props) {
+  const isBerkshire = ["BRK.B", "BRK-B"].includes(dataset.asset)
+
   const chartRef =
     useRef<HTMLDivElement | null>(
       null,
@@ -218,11 +220,23 @@ export default function LeveragedEtfDrawdownComparison({
         </h2>
 
         <p className="tni-leveraged-drawdown__lede">
-          Drawdown measures the decline from a previous
-          investment peak. For a daily leveraged ETF,
-          drawdown helps show how leverage, volatility and
-          compounding can change the depth of losses and the
-          time required to recover.
+          {isBerkshire ? (
+            <>
+              Compare Berkshire Hathaway with the S&amp;P 500 during
+              market declines. Drawdown measures the loss from each
+              investment&apos;s previous peak. The chart shows the depth
+              of losses over the same dates; the recovery timeline
+              tracks Berkshire&apos;s deepest decline.
+            </>
+          ) : (
+            <>
+              Drawdown measures the decline from a previous
+              investment peak. For a daily leveraged ETF,
+              drawdown helps show how leverage, volatility and
+              compounding can change the depth of losses and the
+              time required to recover.
+            </>
+          )}
         </p>
       </div>
 
@@ -335,6 +349,7 @@ export default function LeveragedEtfDrawdownComparison({
             of a percentage loss matters: the gain required to
             recover becomes increasingly large as drawdowns deepen.</p>
 
+          {!isBerkshire && (
           <p>
             For a different long-term equity perspective, see
             TNI&apos;s{" "}
@@ -343,6 +358,7 @@ export default function LeveragedEtfDrawdownComparison({
             </a>
             .
           </p>
+          )}
         </>
       </div>
 
@@ -490,8 +506,20 @@ export default function LeveragedEtfDrawdownComparison({
         from {dataset.range.first_date} through{' '}
         {dataset.range.last_date}. Each series is measured
         from its own running peak over the identical comparison
-        period. Past performance does not guarantee future
-        results.
+        period.
+        {isBerkshire && (
+          <>
+            {" "}Benchmark note: this comparison uses the S&amp;P 500
+            price index as a market benchmark proxy for SPY, not
+            actual SPY ETF returns. The index series excludes
+            reinvested dividends and does not include SPY fund
+            expenses or tracking differences. Each maximum drawdown
+            is measured from that series&apos; own peak and may span
+            different dates. Data through{" "}
+            {formatDate(dataset.range.last_date)}.
+          </>
+        )}
+        {" "}Past performance does not guarantee future results.
       </p>
     </section>
   )

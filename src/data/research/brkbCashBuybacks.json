@@ -1,0 +1,198 @@
+{
+  "reviewed_on": "2026-11-07",
+  "unit": "USD millions",
+  "annual": [
+    {
+      "year": 2016,
+      "period_end": "2016-12-31",
+      "cash_equivalents_m": 28048,
+      "treasury_bills_m": 58322,
+      "gross_liquidity_m": 86370,
+      "buybacks_cash_paid_m": 0,
+      "balance_source": "https://www.berkshirehathaway.com/2017ar/2017ar.pdf#page=94",
+      "buyback_source": "https://www.berkshirehathaway.com/2016ar/201610-K.pdf",
+      "cash_components_m": [
+        23581,
+        3939,
+        528
+      ],
+      "treasury_components_m": [
+        47338,
+        10984
+      ]
+    },
+    {
+      "year": 2017,
+      "period_end": "2017-12-31",
+      "cash_equivalents_m": 31583,
+      "treasury_bills_m": 84371,
+      "gross_liquidity_m": 115954,
+      "buybacks_cash_paid_m": 0,
+      "balance_source": "https://www.berkshirehathaway.com/2017ar/2017ar.pdf#page=94",
+      "buyback_source": "https://www.berkshirehathaway.com/2017ar/2017ar.pdf#page=98",
+      "cash_components_m": [
+        25460,
+        2910,
+        3213
+      ],
+      "treasury_components_m": [
+        78515,
+        5856
+      ]
+    },
+    {
+      "year": 2018,
+      "period_end": "2018-12-31",
+      "cash_equivalents_m": 30361,
+      "treasury_bills_m": 81506,
+      "gross_liquidity_m": 111867,
+      "buybacks_cash_paid_m": 1346,
+      "balance_source": "https://www.berkshirehathaway.com/2019ar/2019ar.pdf#page=86",
+      "buyback_source": "https://www.berkshirehathaway.com/2019ar/2019ar.pdf#page=90",
+      "cash_components_m": [
+        27749,
+        2612
+      ],
+      "treasury_components_m": [
+        81506
+      ]
+    },
+    {
+      "year": 2019,
+      "period_end": "2019-12-31",
+      "cash_equivalents_m": 64175,
+      "treasury_bills_m": 63822,
+      "gross_liquidity_m": 127997,
+      "buybacks_cash_paid_m": 4850,
+      "balance_source": "https://www.berkshirehathaway.com/2019ar/2019ar.pdf#page=86",
+      "buyback_source": "https://www.berkshirehathaway.com/2019ar/2019ar.pdf#page=90",
+      "cash_components_m": [
+        61151,
+        3024
+      ],
+      "treasury_components_m": [
+        63822
+      ]
+    },
+    {
+      "year": 2020,
+      "period_end": "2020-12-31",
+      "cash_equivalents_m": 47990,
+      "treasury_bills_m": 90300,
+      "gross_liquidity_m": 138290,
+      "buybacks_cash_paid_m": 24706,
+      "balance_source": "https://www.berkshirehathaway.com/2021ar/2021ar.pdf#page=85",
+      "buyback_source": "https://www.berkshirehathaway.com/2021ar/2021ar.pdf#page=89",
+      "cash_components_m": [
+        44714,
+        3276
+      ],
+      "treasury_components_m": [
+        90300
+      ]
+    },
+    {
+      "year": 2021,
+      "period_end": "2021-12-31",
+      "cash_equivalents_m": 88184,
+      "treasury_bills_m": 58535,
+      "gross_liquidity_m": 146719,
+      "buybacks_cash_paid_m": 27061,
+      "balance_source": "https://www.berkshirehathaway.com/2021ar/2021ar.pdf#page=85",
+      "buyback_source": "https://www.berkshirehathaway.com/2021ar/2021ar.pdf#page=89",
+      "cash_components_m": [
+        85319,
+        2865
+      ],
+      "treasury_components_m": [
+        58535
+      ]
+    },
+    {
+      "year": 2022,
+      "period_end": "2022-12-31",
+      "cash_equivalents_m": 35811,
+      "treasury_bills_m": 92774,
+      "gross_liquidity_m": 128585,
+      "buybacks_cash_paid_m": 7854,
+      "balance_source": "https://www.berkshirehathaway.com/2023ar/2023ar.pdf#page=94",
+      "buyback_source": "https://www.berkshirehathaway.com/2023ar/2023ar.pdf#page=98",
+      "cash_components_m": [
+        32260,
+        3551
+      ],
+      "treasury_components_m": [
+        92774
+      ]
+    },
+    {
+      "year": 2023,
+      "period_end": "2023-12-31",
+      "cash_equivalents_m": 38022,
+      "treasury_bills_m": 129619,
+      "gross_liquidity_m": 167641,
+      "buybacks_cash_paid_m": 9171,
+      "balance_source": "https://www.berkshirehathaway.com/2023ar/2023ar.pdf#page=94",
+      "buyback_source": "https://www.berkshirehathaway.com/2023ar/2023ar.pdf#page=98",
+      "cash_components_m": [
+        33672,
+        4350
+      ],
+      "treasury_components_m": [
+        129619
+      ]
+    },
+    {
+      "year": 2024,
+      "period_end": "2024-12-31",
+      "cash_equivalents_m": 47729,
+      "treasury_bills_m": 286472,
+      "gross_liquidity_m": 334201,
+      "buybacks_cash_paid_m": 2918,
+      "balance_source": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf#page=92",
+      "buyback_source": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf#page=96",
+      "cash_components_m": [
+        44333,
+        3396
+      ],
+      "treasury_components_m": [
+        286472
+      ]
+    },
+    {
+      "year": 2025,
+      "period_end": "2025-12-31",
+      "cash_equivalents_m": 51877,
+      "treasury_bills_m": 321434,
+      "gross_liquidity_m": 373311,
+      "buybacks_cash_paid_m": 0,
+      "balance_source": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf#page=92",
+      "buyback_source": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf#page=96",
+      "cash_components_m": [
+        47719,
+        4158
+      ],
+      "treasury_components_m": [
+        321434
+      ]
+    }
+  ],
+  "latest": {
+    "label": "First nine months of 2026",
+    "period_end": "2026-09-30",
+    "cash_equivalents_m": 40700,
+    "treasury_bills_m": 336735,
+    "gross_liquidity_m": 377435,
+    "treasury_purchase_payables_m": 20489,
+    "liquidity_net_of_treasury_payables_m": 356946,
+    "buybacks_cash_paid_m": 13757,
+    "buybacks_executed_rounded_b": 14.4,
+    "balance_source": "https://www.berkshirehathaway.com/qtrly/3rdqtr26.pdf#page=3",
+    "buyback_source": "https://www.berkshirehathaway.com/qtrly/3rdqtr26.pdf#page=8"
+  },
+  "methodology": {
+    "cash": "Consolidated cash and cash equivalents plus separately reported short-term U.S. Treasury bills, summed across balance-sheet business groups. Excludes restricted cash reported in other assets. Treasury bills already included in cash equivalents are not counted twice. Figures are gross of payables for unsettled Treasury purchases.",
+    "buybacks": "Cash paid for acquisitions of Berkshire treasury stock, from consolidated statements of cash flows; includes Class A and Class B shares. Excludes subsidiaries buying their own shares and purchases of other companies. Settlement timing can differ from the value of repurchases executed.",
+    "updates": "Financial-report dates are independent of daily market-data dates. Figures require review when a new quarterly or annual filing is released."
+  }
+}

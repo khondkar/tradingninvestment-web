@@ -1,6 +1,10 @@
 import type { AnnualReturnsAssetConfig } from "./types"
 import { kamalResearchAuthor } from "../author"
 
+import brkbMarketEvents from "../../data/charts/brkbMarketEvents.json"
+
+const brkbSeoDescription = `Explore BRK.B vs S&P 500 across ${brkbMarketEvents.corrections.length} market declines. Compare drawdowns, recovery times and returns, plus Berkshire’s cash reserves and share buybacks.`
+
 export const brkbAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "BRK.B",
   slug: "look-berkshire-hathaway-stock-brk-b-berkshire-hathaway-performance-vs-sp-500",
@@ -60,14 +64,15 @@ export const brkbAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   },
 
   seo: {
+    description: brkbSeoDescription,
     title:
-      "Berkshire Hathaway (BRK.B) Stock Performance vs S&P 500",
+      "Is Berkshire Really Safer Than the S&P 500?",
 
     socialTitle:
-      "Berkshire Hathaway (BRK.B) Stock Returns",
+      "Is Berkshire Really Safer Than the S&P 500?",
 
     socialDescription:
-      "Explore Berkshire Hathaway BRK.B historical returns, long-term performance, growth of $10,000, rolling 10-year performance, and comparison with the S&P 500.",
+      brkbSeoDescription,
 
     socialImage:
       "/images/social/brkb-stock-intelligence-og.png",

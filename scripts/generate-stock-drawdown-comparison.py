@@ -134,7 +134,7 @@ def main():
     print(f"Generated: {output}")
     print(f"Observations: {len(rows)}")
     print(f"Period: {rows[0]['date']} through {rows[-1]['date']}")
-    print(f"CRM maximum drawdown: {payload['asset_summary']['max_drawdown_pct']}%")
+    print(f"{args.ticker.upper()} maximum drawdown: {payload['asset_summary']['max_drawdown_pct']}%")
     print(f"S&P 500 maximum drawdown: {payload['benchmark_summary']['max_drawdown_pct']}%")
 
 

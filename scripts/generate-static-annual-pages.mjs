@@ -283,7 +283,9 @@ for (
       )
 
   const pageHeadline =
-    `${config.name} Returns by Year: ${config.startYear} to Present`
+    config.symbol === "BRK.B"
+      ? "Is Berkshire Really Safer Than the S&P 500?"
+      : `${config.name} Returns by Year: ${config.startYear} to Present`
 
   const seoDescription =
     buildSeoDescription(

@@ -66,6 +66,8 @@ export type GenericAnnualReturnsPageProps = {
   benchmarkName?: string
   assetAsOfDate?: string
   benchmarkAsOfDate?: string
+  introContent?: ReactNode
+  afterIntroduction?: ReactNode
   beforeGrowthExplorer?: ReactNode
   beforeReturnExplorer?: ReactNode
   afterPeriodReturns?: ReactNode
@@ -74,6 +76,7 @@ export type GenericAnnualReturnsPageProps = {
   afterRollingComparison?: ReactNode
   afterArticle?: ReactNode
   afterMethodology?: ReactNode
+  finalSection?: ReactNode
 }
 
 // ============================================================================
@@ -87,6 +90,8 @@ export default function GenericAnnualReturnsPage({
   benchmarkName = 'S&P 500',
   assetAsOfDate,
   benchmarkAsOfDate,
+  introContent,
+  afterIntroduction,
   beforeGrowthExplorer,
   beforeReturnExplorer,
   afterPeriodReturns,
@@ -95,6 +100,7 @@ export default function GenericAnnualReturnsPage({
   afterRollingComparison,
   afterArticle,
   afterMethodology,
+  finalSection,
 }: GenericAnnualReturnsPageProps) {
 
   // ==========================================================================
@@ -166,9 +172,9 @@ export default function GenericAnnualReturnsPage({
       )
 
     const pageHeadline =
-      buildAnnualReturnsHeadline(
-        config,
-      )
+      config.symbol === "BRK.B"
+        ? "Is Berkshire Really Safer Than the S&P 500?"
+        : buildAnnualReturnsHeadline(config)
 
     const canonicalUrl =
       `https://tradingninvestment.com${config.canonicalPath}`
@@ -1004,9 +1010,9 @@ export default function GenericAnnualReturnsPage({
               Dedicated typography prevents multi-line headline overlap.
           ============================================================= */}
           <h1 className="tni-sp500-research-title">
-            {buildAnnualReturnsHeadline(
-              config,
-            )}
+            {config.symbol === "BRK.B"
+              ? "Is Berkshire Really Safer Than the S&P 500?"
+              : buildAnnualReturnsHeadline(config)}
           </h1>
 
           {dataset.current_year.through_date && (
@@ -1030,7 +1036,7 @@ export default function GenericAnnualReturnsPage({
             </div>
           )}
 
-          {config.slug===
+          {introContent ?? (config.slug===
             'stock-market-historical-returns'? (<><p
               style={{
                 maxWidth: '820px',
@@ -1094,7 +1100,7 @@ export default function GenericAnnualReturnsPage({
                 ).toLowerCase()} returns, average historical returns,
                 positive and negative market years, and long-term market
                 performance using the interactive research explorer.
-              </p>)}
+              </p>))}
 
           {/* =============================================================
               TNI S&P 500 RESEARCH — VISIBLE AUTHORSHIP & ENTITY SIGNAL
@@ -1124,6 +1130,8 @@ export default function GenericAnnualReturnsPage({
             • {config.author.role} • TradingNInvestment
           </p>
         </section>
+
+        {afterIntroduction}
 
         {/* =================================================================
             TNI S&P 500 RESEARCH CENTER — RETURN HORIZON NAVIGATION
@@ -1191,7 +1199,7 @@ export default function GenericAnnualReturnsPage({
         )}
 
         <ResearchShareButtons
-          title={`${config.name} Historical Annual Returns`}
+          title={config.symbol === "BRK.B" ? "Is Berkshire Really Safer Than the S&P 500?" : `${config.name} Historical Annual Returns`}
           symbol={config.symbol}
           researchType="annual"
         />
@@ -3389,6 +3397,8 @@ export default function GenericAnnualReturnsPage({
           </a>
 
         </section>
+
+        {finalSection}
       </div>
     </main>
   )

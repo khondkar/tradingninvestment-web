@@ -1,0 +1,49 @@
+/* Berkshire-only styles; preserve the established TNI drawdown section layout. */
+.tni-brkb-events { color: #10233f; }
+.tni-brkb-events p,
+.tni-brkb-events .tni-leveraged-drawdown__lede,
+.tni-brkb-events .tni-leveraged-drawdown__methodology,
+.tni-brkb-events .tni-leveraged-drawdown__card small,
+.tni-brkb-events .tni-leveraged-drawdown__card span {
+  color: #10233f; font-weight: 700; font-size: 15px; line-height: 1.65;
+}
+.tni-brkb-events .tni-leveraged-drawdown__eyebrow { color: #174fa6; font-size: 13px; }
+.tni-brkb-events__controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.tni-brkb-events__controls button {
+  font: inherit; font-weight: 800; font-size: 15px; padding: 12px 16px;
+  background: #fff; color: #10233f; border: 2px solid #174fa6; border-radius: 9px; cursor: pointer;
+}
+.tni-brkb-events__controls button[aria-pressed="true"] { background: #174fa6; color: #fff; }
+.tni-brkb-events button:focus-visible,.tni-brkb-events summary:focus-visible,.tni-brkb-events a:focus-visible {
+  outline: 3px solid #10233f; outline-offset: 4px;
+}
+.tni-brkb-events__legend { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; font-weight: 800; margin: 22px 0; }
+.tni-brkb-events__legend span { display: inline-flex; align-items: center; gap: 8px; }
+.tni-brkb-events__legend i { width: 20px; height: 14px; border-radius: 3px; }
+.tni-brkb-events__key--asset,.tni-brkb-events__fill--asset { background: #174fa6; }
+.tni-brkb-events__key--benchmark,.tni-brkb-events__fill--benchmark { background: #b51f35; }
+.tni-brkb-events__event { padding: 22px 0; border-top: 1px solid #9badc2; }
+.tni-brkb-events__event-heading h3 { font-size: 22px; font-weight: 800; color: #10233f; margin: 0; }
+.tni-brkb-events__event-heading h3 span { font-size: 14px; margin-left: 10px; }
+.tni-brkb-events__event-heading p { margin: 5px 0 14px; }
+.tni-brkb-events__bar-row { display: grid; grid-template-columns: 78px minmax(0,1fr) 90px; gap: 12px; align-items: center; margin: 10px 0; font-size: 16px; font-weight: 800; }
+.tni-brkb-events__bar-row strong { text-align: right; white-space: nowrap; }
+.tni-brkb-events__track { height: 22px; background: #e8eef6; border-radius: 4px; overflow: hidden; }
+.tni-brkb-events__track > div { height: 100%; border-radius: 4px; }
+.tni-brkb-events__difference { margin: 14px 0 8px; }
+.tni-brkb-events summary { font-size: 15px; font-weight: 800; cursor: pointer; padding: 8px 0; }
+.tni-brkb-events__table-scroll { overflow-x: auto; }
+.tni-brkb-events table { width: 100%; border-collapse: collapse; font-size: 14px; font-weight: 700; }
+.tni-brkb-events th,.tni-brkb-events td { text-align: left; padding: 10px; border-bottom: 1px solid #9badc2; white-space: nowrap; }
+.tni-brkb-events caption { text-align: left; font-weight: 800; margin: 8px 0; }
+.tni-brkb-events__social { margin: 26px 0; }
+.tni-brkb-events__social img { width: 100%; height: auto; display: block; border: 1px solid #9badc2; border-radius: 12px; }
+.tni-brkb-events__social figcaption { color: #10233f; font-size: 14px; font-weight: 700; margin: 10px 0; }
+.tni-brkb-events a { color: #174fa6; font-weight: 800; text-decoration: underline; }
+@media(max-width:600px) {
+ .tni-brkb-events { padding: 18px 14px; }
+ .tni-brkb-events h2 { font-size: 24px; }
+ .tni-brkb-events .tni-leveraged-drawdown__cards { grid-template-columns: 1fr; }
+ .tni-brkb-events__bar-row { grid-template-columns: 64px minmax(0,1fr) 77px; gap: 7px; font-size: 14px; }
+ .tni-brkb-events__event-heading h3 span { display: block; margin: 3px 0; }
+}
