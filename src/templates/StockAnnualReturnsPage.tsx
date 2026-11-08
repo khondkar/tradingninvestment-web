@@ -82,6 +82,64 @@ export default function StockAnnualReturnsPage({
             periods Berkshire struggled through. Both assets are measured within
             the same S&amp;P 500 peak-to-trough windows.
           </p>
+          <aside
+            id="brkb-prediction-lab"
+            aria-labelledby="brkb-prediction-lab-title"
+            style={{
+              marginTop: 24,
+              padding: "clamp(20px, 4vw, 30px)",
+              borderRadius: 16,
+              border: "2px solid #08776d",
+              background: "#edf8f4",
+              color: "#10233f",
+            }}
+          >
+            <p style={{ margin: "0 0 10px", color: "#075e53", fontSize: 13, fontWeight: 850, letterSpacing: "0.05em" }}>
+              TNI PREDICTION LAB
+            </p>
+            <h2
+              id="brkb-prediction-lab-title"
+              style={{
+                margin: "0 0 12px",
+                color: "#10233f",
+                fontSize: "clamp(23px, 3vw, 30px)",
+                fontWeight: 850,
+                lineHeight: 1.25,
+              }}
+            >
+              You&apos;ve seen Berkshire&apos;s history.
+              {" "}Explore TNI&apos;s market outlook.
+            </h2>
+            <p style={{ margin: "0 0 18px", maxWidth: 760, color: "#17384c", fontSize: 17, fontWeight: 700, lineHeight: 1.65 }}>
+              Compare your view with TNI&apos;s model, review risk context,
+              and explore recorded market moves in the Prediction Lab.
+            </p>
+            <a
+              href="https://app.tradingninvestment.com/prediction-lab?ticker=SPY&utm_source=brkb_research&utm_medium=article_cta&utm_campaign=prediction_lab"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: 50,
+                maxWidth: "100%",
+                boxSizing: "border-box",
+                padding: "14px 20px",
+                borderRadius: 10,
+                background: "#075e53",
+                color: "#ffffff",
+                fontSize: 17,
+                fontWeight: 850,
+                lineHeight: 1.4,
+                textAlign: "center",
+                textDecoration: "none",
+              }}
+            >
+              Explore Prediction Lab →
+            </a>
+            <p style={{ margin: "12px 0 0", color: "#17384c", fontSize: 14, fontWeight: 750, lineHeight: 1.5 }}>
+              Free to explore SPY, QQQ and IWM. Sign in for detailed agent evidence.
+            </p>
+          </aside>
           <nav aria-label="Berkshire research sections" style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
             <a href="#brkb-market-declines" style={{ color: "#174fa6", fontWeight: 800, fontSize: 16, padding: "10px 0" }}>Compare market declines</a>
             <a href="#brkb-drawdown-recovery" style={{ color: "#174fa6", fontWeight: 800, fontSize: 16, padding: "10px 0" }}>Explore recovery</a>
