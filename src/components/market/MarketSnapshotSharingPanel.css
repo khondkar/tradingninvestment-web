@@ -1,0 +1,132 @@
+/* Scoped market snapshot sharing panel. */
+.tni-snapshot-share-panel {
+  box-sizing: border-box;
+  margin: 24px 0;
+  padding: clamp(18px, 3vw, 28px);
+  border: 2px solid #08776d;
+  border-top: 6px solid #08776d;
+  border-radius: 16px;
+  background: #edf8f4;
+  color: #102b42;
+  box-shadow: 0 8px 24px #102b4210;
+}
+.tni-snapshot-share-panel * { box-sizing: border-box; min-width: 0; }
+.tni-snapshot-share-panel .tni-snapshot-share-eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #075e53;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .05em;
+  line-height: 1.5;
+}
+.tni-snapshot-share-panel h2 {
+  margin: 0 0 10px;
+  color: #102b42;
+  font-size: clamp(25px, 3vw, 32px);
+  font-weight: 900;
+  line-height: 1.2;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-intro {
+  max-width: 760px;
+  margin: 0 0 22px;
+  color: #17384c;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+.tni-snapshot-share-formats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 14px;
+}
+.tni-snapshot-share-format {
+  padding: 16px;
+  border: 1px solid #92b9ad;
+  border-radius: 12px;
+  background: #ffffff;
+}
+.tni-snapshot-share-format > strong {
+  display: block;
+  min-height: 44px;
+  margin-bottom: 12px;
+  color: #102b42;
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1.4;
+}
+.tni-snapshot-share-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-actions button {
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  padding: 11px 8px;
+  border: 1px solid #8faabd;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #102b42;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.35;
+  white-space: normal;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-actions .tni-snapshot-share-primary {
+  grid-column: 1 / -1;
+  border-color: #075e53;
+  background: #075e53;
+  color: #ffffff;
+  font-size: 16px;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-actions .tni-snapshot-share-download {
+  grid-column: 1 / -1;
+  border-color: #102b42;
+  background: #102b42;
+  color: #ffffff;
+  font-size: 15px;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-actions button:hover:not(:disabled) {
+  outline: 2px solid #08776d;
+  outline-offset: 2px;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-actions button:focus-visible {
+  outline: 3px solid #1264c0;
+  outline-offset: 3px;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-actions button:disabled {
+  background: #e0e8ed;
+  border-color: #9cb0be;
+  color: #40596b;
+  cursor: not-allowed;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-help {
+  margin: 18px 0 0;
+  color: #29495e;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.6;
+}
+.tni-snapshot-share-panel .tni-snapshot-share-status {
+  margin: 12px 0 0;
+  color: #075e53;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.tni-snapshot-share-status:empty { display: none; }
+@media (max-width: 600px) {
+  .tni-snapshot-share-formats { grid-template-columns: 1fr; }
+  .tni-snapshot-share-actions { grid-template-columns: 1fr; }
+  .tni-snapshot-share-format > strong { min-height: 0; }
+  .tni-snapshot-share-panel .tni-snapshot-share-actions button {
+    min-height: 50px;
+    font-size: 15px;
+  }
+}

@@ -81,12 +81,6 @@ export default function StockMarketHeatmapPage() {
       </section>
       <div className="tni-hm-section-head"><h2>Explore the Heatmap</h2><span>Sectors ranked by largest stock move · 1D</span></div>
       <div className="tni-hm-controls"><label>Sector<select value={sector} onChange={e => setSector(e.target.value)}><option value="all">All {sectors.length} sectors</option>{sectors.map(s => <option key={s}>{s}</option>)}</select></label><span className="tni-hm-period" aria-label="Timeframe: one day">1D</span><button type="button" aria-pressed={expanded} onClick={() => setExpanded(!expanded)}>{expanded ? '↙ Exit expanded view' : '⛶ Expand heatmap'}</button></div>
-      <MarketSnapshotSharing
-        stocks={stocks}
-        sectors={snapshot.sectors ?? []}
-        sector={sector}
-        timestamp={snapshot.generated_at_et}
-      />
       <section className="tni-hm-movers-in-view" aria-label="Top ten movers in selected sector">
         <h2>{sector === 'all' ? 'S&P 500' :
       sector.replace('Information Technology', 'Technology')
@@ -98,6 +92,12 @@ export default function StockMarketHeatmapPage() {
         </div>
       </section>
       <SP500DailyHeatmap stocks={stocks} sector={sector} onSelect={setSelected} />
+      <MarketSnapshotSharing
+        stocks={stocks}
+        sectors={snapshot.sectors ?? []}
+        sector={sector}
+        timestamp={snapshot.generated_at_et}
+      />
       <section className="tni-hm-guide"><h2>How to Read the S&amp;P 500 Heatmap</h2><p>Green indicates a gain versus the previous close; red indicates a decline. Stronger colors represent larger moves. Tile size reflects absolute daily price movement within each sector, not company market value.</p><p>Choose a sector to inspect its stocks. Hover on desktop or tap a tile to view the latest available price, daily change, sector and industry. Sector percentages are equal-weight averages of available stock returns.</p><p>Market data may be delayed. Price movements do not constitute investment recommendations.</p></section>
     </main>
     <dialog ref={dialog} className="tni-hm-dialog" aria-labelledby="tni-hm-detail-title" onClose={() => setSelected(null)} onClick={e => { if (e.target === e.currentTarget) dialog.current?.close() }}>
