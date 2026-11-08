@@ -106,6 +106,53 @@ function RecordedReplay({ ticker, choice }: { ticker: string; choice: View | nul
       <line x1="24" x2="576" y1={y(0)} y2={y(0)} stroke="#92a9b8" strokeDasharray="5 5" />
       <text x="24" y="222">{prices[0].date}</text><text x="576" y="222" textAnchor="end">{prices[prices.length-1].date}</text>
       {values.slice(1, index+1).map((v,i) => <line key={i} x1={x(i)} y1={y(values[i])} x2={x(i+1)} y2={y(v)} stroke={v < values[i] ? '#b41c3e' : '#08776d'} strokeWidth="5" strokeLinecap="round" />)}
+      {values.slice(0, index + 1).map((v, i) => {
+        const recorded = data.rows.find(
+          signal => signal.signal_date === prices[i].date
+        )
+        if (!recorded || !['BUY', 'HOLD', 'SELL'].includes(recorded.action)) {
+          return null
+        }
+        const color = recorded.action === 'BUY'
+          ? '#08776d'
+          : recorded.action === 'SELL'
+            ? '#b41c3e'
+            : '#7a5300'
+        const left = Math.max(1, Math.min(549, x(i) - 25))
+        const top = Math.max(4, y(v) - 33)
+        return (
+          <g
+            key={'signal-' + prices[i].date}
+            className="tni-mini-signal-badge"
+            pointerEvents="none"
+          >
+            <title>{`${day(prices[i].date)}: recorded ${recorded.action}, ${recorded.horizon} trading days`}</title>
+            <rect
+              x={left}
+              y={top}
+              width={50}
+              height={23}
+              rx={6}
+              fill={color}
+              stroke="white"
+              strokeWidth={1.5}
+            />
+            <text
+              x={left + 25}
+              y={top + 16}
+              textAnchor="middle"
+              style={{
+                fill: '#ffffff',
+                fontSize: 14,
+                fontWeight: 900,
+                fontFamily: 'system-ui, sans-serif',
+              }}
+            >
+              {recorded.action}
+            </text>
+          </g>
+        )
+      })}
       {values.slice(0,index+1).map((v,i) => <circle key={i} cx={x(i)} cy={y(v)} r={i===index?9:4} role="button" tabIndex={0} aria-label={`${day(prices[i].date)}, market return ${percent(v)}`} onClick={()=>select(i)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}}} style={{cursor:'pointer'}} fill={i>0&&v<values[i-1]?'#b41c3e':'#08776d'} stroke="white" strokeWidth="2" />)}
     </svg>
     <label className="tni-mini-session-label">Explore a session <input type="range" min="0" max={prices.length-1} value={index} onChange={e => select(Number(e.target.value))} aria-valuetext={`${day(prices[index].date)}, market return ${percent(value)}`} /></label>
