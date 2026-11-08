@@ -29,6 +29,7 @@ import tslaAnnualReturns from "../../data/charts/tslaAnnualReturns.json"
 import tslaReturnMethods from "../../data/charts/tslaReturnMethods.json"
 import msftAnnualReturns from "../../data/charts/msftAnnualReturns.json"
 import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
+import nvdaDrawdowns from "../../data/charts/nvdaVsSp500Drawdowns.json"
 
 import type {
   AnnualReturnsPageData,
@@ -135,6 +136,7 @@ export const stockResearchDataRegistry:
     NVDA: {
       annualReturns:
         nvdaAnnualReturns as AnnualReturnsPageData,
+      drawdownData: nvdaDrawdowns as LeveragedEtfDrawdownDataset,
     },
     JNJ: {
       annualReturns: jnjAnnualReturns as AnnualReturnsPageData,

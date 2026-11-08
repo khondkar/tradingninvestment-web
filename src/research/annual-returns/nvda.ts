@@ -1,3 +1,4 @@
+import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
 import type { AnnualReturnsAssetConfig } from "./types"
 import { kamalResearchAuthor } from "../author"
 
@@ -29,8 +30,10 @@ export const nvdaAnnualReturnsConfig: AnnualReturnsAssetConfig = {
     height: 540,
   },
   seo: {
-    title: "NVIDIA (NVDA) Returns by Year: Historical Performance",
-    socialTitle: "NVIDIA (NVDA) Returns by Year",
-    socialDescription: "Explore NVIDIA annual returns, historical performance, positive and negative years, major gains and declines, and current-year performance.",
+    title: `NVIDIA (NVDA) Returns, Drawdowns & Recovery, 2000–${nvdaAnnualReturns.current_year.year} | Charts & Data`,
+    h1: `NVIDIA (NVDA) Returns, Drawdowns & Recovery, 2000–${nvdaAnnualReturns.current_year.year}`,
+    description: `Explore NVIDIA returns, drawdowns and recovery times from 2000–${nvdaAnnualReturns.current_year.year}. Compare NVDA with the S&P 500 using interactive charts and download annual return data.`,
+    socialTitle: "NVIDIA Returns, Drawdowns & Recovery vs. S&P 500",
+    socialDescription: `How deep were NVIDIA’s biggest losses, and how long did recovery take? Explore NVDA vs. S&P 500 drawdowns and annual returns from 2000–${nvdaAnnualReturns.current_year.year}.`,
   },
 }

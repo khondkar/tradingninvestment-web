@@ -1,13 +1,13 @@
 {
-  "symbol": "NVDA",
+  "symbol": "NVIDIA",
   "ticker": "NVDA",
-  "metric": "annual_return_pct",
+  "metric": "Annual Price Return %",
   "return_type": "price_return",
-  "source": "Yahoo Finance",
+  "source": "Yahoo Finance / NVDA",
   "development_source_only": true,
   "methodology": {
-    "calculation": "Calendar-year price return using Yahoo Finance closing prices, which are normalized for stock splits. Dividends are excluded.",
-    "current_year": "Current-year return is year-to-date through the latest available closing price."
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
   },
   "summary": {
     "completed_years_analyzed": 26,
@@ -31,7 +31,8 @@
   "current_year": {
     "year": 2026,
     "label": "2026 YTD",
-    "return_pct": 13.56
+    "return_pct": 0.08,
+    "through_date": "2026-11-06"
   },
   "data": [
     {
@@ -192,7 +193,7 @@
     },
     {
       "year": 2026,
-      "value": 13.563,
+      "value": 0.08,
       "label": "2026 YTD",
       "status": "positive"
     }

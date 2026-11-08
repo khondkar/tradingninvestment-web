@@ -208,6 +208,100 @@ export default function LeveragedEtfDrawdownComparison({
     [dataset],
   )
 
+  const recoveryTimeline = (
+      <div className="tni-leveraged-drawdown__timeline">
+        <div className="tni-leveraged-drawdown__timeline-heading">
+          <span>{dataset.asset} DRAWDOWN HISTORY</span>
+          <h3>From peak to recovery</h3>
+          <p>
+            The timeline of {dataset.asset}&apos;s deepest
+            historical decline.
+          </p>
+        </div>
+
+        <div className="tni-leveraged-drawdown__recovery-grid">
+          <article>
+            <span>Previous peak</span>
+            <strong>{formatDate(analysis.asset.peak_date)}</strong>
+          </article>
+
+          <article>
+            <span>{dataset.asset} drawdown low</span>
+            <strong>{formatDate(analysis.asset.trough_date)}</strong>
+          </article>
+
+          <article>
+            <span>Previous peak regained</span>
+            <strong>
+              {analysis.asset.recovery_date
+                ? formatDate(analysis.asset.recovery_date)
+                : 'Not yet recovered'}
+            </strong>
+          </article>
+        </div>
+
+        {dataset.asset === 'NVDA' && (
+          <div className="tni-leveraged-drawdown__duration">
+            <span>TIME FROM THE LOW TO RECOVERY</span>
+            <div>
+              <strong>
+                {analysis.asset.calendar_days_trough_to_recovery === null
+                  ? 'Ongoing'
+                  : analysis.asset.calendar_days_trough_to_recovery.toLocaleString()}
+              </strong>
+              {analysis.asset.calendar_days_trough_to_recovery !== null && (
+                <span>calendar days</span>
+              )}
+            </div>
+          </div>
+        )}
+
+        <div className="tni-leveraged-drawdown__duration">
+          <span>TOTAL TIME BELOW PREVIOUS PEAK</span>
+          <div>
+            <strong>
+              {analysis.asset.total_calendar_days_underwater !== null
+                ? analysis.asset.total_calendar_days_underwater.toLocaleString()
+                : 'Ongoing'}
+            </strong>
+            {analysis.asset.total_calendar_days_underwater !== null && (
+              <span>calendar days</span>
+            )}
+          </div>
+        </div>
+
+        <div className="tni-leveraged-drawdown__perspective">
+          <h3>Drawdown perspective</h3>
+          <p>
+            {dataset.asset} declined from its{' '}
+            {formatDate(analysis.asset.peak_date)} peak
+            to its lowest point on{' '}
+            {formatDate(analysis.asset.trough_date)}.
+            {analysis.asset.recovery_date
+              ? (
+                  <>
+                    {' '}It regained that previous high on{' '}
+                    {formatDate(analysis.asset.recovery_date)},
+                    completing a decline-and-recovery cycle
+                    of{' '}
+                    <strong>
+                      {analysis.asset.total_calendar_days_underwater?.toLocaleString()}
+                      {' '}calendar days
+                    </strong>.
+                  </>
+                )
+              : (
+                  <>
+                    {' '}The stock had not regained its
+                    previous peak by the end of the
+                    comparison period.
+                  </>
+                )}
+          </p>
+        </div>
+      </div>
+  )
+
   return (
     <section className="tni-leveraged-drawdown">
       <div className="tni-leveraged-drawdown__header">
@@ -227,6 +321,13 @@ export default function LeveragedEtfDrawdownComparison({
               investment&apos;s previous peak. The chart shows the depth
               of losses over the same dates; the recovery timeline
               tracks Berkshire&apos;s deepest decline.
+            </>
+          ) : dataset.asset === 'NVDA' ? (
+            <>
+              Compare NVIDIA with the S&amp;P 500 during market declines.
+              Drawdown measures the loss from each investment&apos;s previous peak.
+              The chart compares losses over the same dates. The recovery
+              timeline follows NVIDIA&apos;s deepest decline within this dataset.
             </>
           ) : (
             <>
@@ -362,6 +463,8 @@ export default function LeveragedEtfDrawdownComparison({
         </>
       </div>
 
+      {dataset.asset === 'NVDA' && recoveryTimeline}
+
       <div
         className="tni-leveraged-drawdown__chart"
         ref={chartRef}
@@ -424,81 +527,7 @@ export default function LeveragedEtfDrawdownComparison({
           </figure>
         )}
 
-      <div className="tni-leveraged-drawdown__timeline">
-        <div className="tni-leveraged-drawdown__timeline-heading">
-          <span>{dataset.asset} DRAWDOWN HISTORY</span>
-          <h3>From peak to recovery</h3>
-          <p>
-            The timeline of {dataset.asset}&apos;s deepest
-            historical decline.
-          </p>
-        </div>
-
-        <div className="tni-leveraged-drawdown__recovery-grid">
-          <article>
-            <span>Previous peak</span>
-            <strong>{formatDate(analysis.asset.peak_date)}</strong>
-          </article>
-
-          <article>
-            <span>{dataset.asset} drawdown low</span>
-            <strong>{formatDate(analysis.asset.trough_date)}</strong>
-          </article>
-
-          <article>
-            <span>Previous peak regained</span>
-            <strong>
-              {analysis.asset.recovery_date
-                ? formatDate(analysis.asset.recovery_date)
-                : 'Not yet recovered'}
-            </strong>
-          </article>
-        </div>
-
-        <div className="tni-leveraged-drawdown__duration">
-          <span>TOTAL TIME BELOW PREVIOUS PEAK</span>
-          <div>
-            <strong>
-              {analysis.asset.total_calendar_days_underwater !== null
-                ? analysis.asset.total_calendar_days_underwater.toLocaleString()
-                : 'Ongoing'}
-            </strong>
-            {analysis.asset.total_calendar_days_underwater !== null && (
-              <span>calendar days</span>
-            )}
-          </div>
-        </div>
-
-        <div className="tni-leveraged-drawdown__perspective">
-          <h3>Drawdown perspective</h3>
-          <p>
-            {dataset.asset} declined from its{' '}
-            {formatDate(analysis.asset.peak_date)} peak
-            to its lowest point on{' '}
-            {formatDate(analysis.asset.trough_date)}.
-            {analysis.asset.recovery_date
-              ? (
-                  <>
-                    {' '}It regained that previous high on{' '}
-                    {formatDate(analysis.asset.recovery_date)},
-                    completing a decline-and-recovery cycle
-                    of{' '}
-                    <strong>
-                      {analysis.asset.total_calendar_days_underwater?.toLocaleString()}
-                      {' '}calendar days
-                    </strong>.
-                  </>
-                )
-              : (
-                  <>
-                    {' '}The stock had not regained its
-                    previous peak by the end of the
-                    comparison period.
-                  </>
-                )}
-          </p>
-        </div>
-      </div>
+      {dataset.asset !== 'NVDA' && recoveryTimeline}
 
       <p className="tni-leveraged-drawdown__methodology">
         Source: {dataset.source}. Drawdowns are calculated
@@ -517,6 +546,15 @@ export default function LeveragedEtfDrawdownComparison({
             is measured from that series&apos; own peak and may span
             different dates. Data through{" "}
             {formatDate(dataset.range.last_date)}.
+          </>
+        )}
+        {dataset.asset === 'NVDA' && (
+          <>
+            {" "}NVIDIA uses adjusted closing prices. The S&amp;P 500 benchmark
+            is a price index and excludes reinvested dividends. Each maximum
+            drawdown uses its own peak and trough dates. Recovery means the
+            first daily close at or above the prior peak. Durations count
+            calendar days, including weekends and holidays.
           </>
         )}
         {" "}Past performance does not guarantee future results.

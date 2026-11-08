@@ -146,6 +146,67 @@ export default function StockAnnualReturnsPage({
             <a href="#brkb-cash-buybacks" style={{ color: "#174fa6", fontWeight: 800, fontSize: 16, padding: "10px 0" }}>Cash &amp; buybacks</a>
           </nav>
         </>
+      ) : config.symbol === "NVDA" ? (
+        <>
+          <p style={{ maxWidth: 900, margin: "18px 0 0", color: "#10233f", fontSize: 18, fontWeight: 700, lineHeight: 1.75 }}>
+            How deep have NVIDIA&apos;s losses been, and how long did recovery take?
+            Compare NVDA and the S&amp;P 500 through market declines, follow the
+            recovery from NVIDIA&apos;s deepest drawdown, and explore annual returns
+            from {config.startYear} through {dataset.current_year.year}.
+          </p>
+          <aside
+            aria-label="NVIDIA market intelligence tools"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
+              gap: 16,
+              marginTop: 24,
+            }}
+          >
+            <a
+              href="/#prediction-lab"
+              style={{
+                display: "block",
+                padding: 20,
+                border: "2px solid #075e53",
+                borderRadius: 12,
+                background: "#edf8f4",
+                color: "#10233f",
+                textDecoration: "none",
+              }}
+            >
+              <strong style={{ display: "block", fontSize: 20, fontWeight: 800 }}>
+                Mini Prediction Lab →
+              </strong>
+              <span style={{ display: "block", marginTop: 10, fontSize: 16, fontWeight: 700, lineHeight: 1.6 }}>
+                Vote on SPY, QQQ or IWM, reveal TNI&apos;s outlook, and replay recorded market moves.
+              </span>
+            </a>
+            <a
+              href="https://app.tradingninvestment.com/live/news"
+              style={{
+                display: "block",
+                padding: 20,
+                border: "2px solid #174fa6",
+                borderRadius: 12,
+                background: "#f2f6ff",
+                color: "#10233f",
+                textDecoration: "none",
+              }}
+            >
+              <strong style={{ display: "block", fontSize: 20, fontWeight: 800 }}>
+                TNI News Agent →
+              </strong>
+              <span style={{ display: "block", marginTop: 10, fontSize: 16, fontWeight: 700, lineHeight: 1.6 }}>
+                Explore company and market news for context on earnings, risks, and stock-price moves.
+              </span>
+            </a>
+          </aside>
+          <nav aria-label="NVIDIA research sections" style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 20, fontSize: 16, fontWeight: 800 }}>
+            <a href="#nvda-drawdown-recovery" style={{ color: "#174fa6", padding: "10px 0" }}>Drawdowns &amp; recovery</a>
+            <a href="#nvda-return-research" style={{ color: "#174fa6", padding: "10px 0" }}>Returns &amp; data</a>
+          </nav>
+        </>
       ) : undefined}
       afterIntroduction={config.symbol === "BRK.B" ? (
         <>
@@ -168,9 +229,24 @@ export default function StockAnnualReturnsPage({
             </p>
           </section>
         </>
+      ) : config.symbol === "NVDA" && effectiveDrawdownData ? (
+        <>
+          <div id="nvda-drawdown-recovery" style={{ scrollMarginTop: 100 }}>
+            <LeveragedEtfDrawdownComparison dataset={effectiveDrawdownData} />
+          </div>
+          <section id="nvda-return-research" aria-labelledby="nvda-return-research-title" style={{ scrollMarginTop: 100, margin: "36px 0 24px", color: "#10233f" }}>
+            <h2 id="nvda-return-research-title" style={{ fontSize: 28, fontWeight: 800, lineHeight: 1.3 }}>NVIDIA returns by year and long-term performance</h2>
+            <p style={{ fontSize: 18, fontWeight: 700, lineHeight: 1.75 }}>
+              Explore annual price returns, compare NVIDIA with the S&amp;P 500,
+              and download the annual return data below. The drawdown section
+              uses NVIDIA adjusted closing prices, which account for stock splits
+              and dividends. Annual price returns exclude dividends.
+            </p>
+          </section>
+        </>
       ) : undefined}
       afterBenchmarkComparison={
-        config.symbol !== "NKE" && config.symbol !== "BRK.B" && effectiveDrawdownData ? (
+        config.symbol !== "NKE" && config.symbol !== "BRK.B" && config.symbol !== "NVDA" && effectiveDrawdownData ? (
           <LeveragedEtfDrawdownComparison dataset={effectiveDrawdownData} />
         ) : undefined
       }

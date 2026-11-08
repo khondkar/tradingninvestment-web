@@ -188,13 +188,13 @@ Subject: GraniteShares 2x Long NVDA Daily ETF
 Symbol: NVDL
 Description: Research NVDL ETF performance, holdings, historical returns, growth of $10,000, drawdowns, and NVDL vs NVDA using independent TNI analysis.
 
-## NVIDIA (NVDA) Returns by Year
+## NVIDIA Returns, Drawdowns & Recovery vs. S&P 500
 
 URL: https://tradingninvestment.com/nvda-returns/
 Type: annual
 Subject: NVIDIA
 Symbol: NVDA
-Description: Explore NVIDIA annual returns, historical performance, positive and negative years, major gains and declines, and current-year performance.
+Description: How deep were NVIDIA’s biggest losses, and how long did recovery take? Explore NVDA vs. S&P 500 drawdowns and annual returns from 2000–2026.
 
 ## QQQ Historical Returns by Year
 

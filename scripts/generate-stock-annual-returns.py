@@ -229,7 +229,28 @@ def main() -> None:
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    if not args.methods_only:
+    root = Path(__file__).resolve().parents[1]
+    if (
+        ticker == "NVDA"
+        and not args.methods_only
+        and output.resolve() == root / "src/data/charts/nvdaAnnualReturns.json"
+    ):
+        import tempfile
+
+        with tempfile.TemporaryDirectory(prefix="tni-nvda-annual-") as temporary:
+            pending = Path(temporary) / "annual.json"
+            pending.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+            subprocess.run(
+                [
+                    sys.executable,
+                    str(root / "scripts/refresh-nvda-drawdowns.py"),
+                    "--annual-input", str(pending),
+                    "--annual-output", str(output.resolve()),
+                ],
+                cwd=root,
+                check=True,
+            )
+    elif not args.methods_only:
         output.write_text(
             json.dumps(payload, indent=2),
             encoding="utf-8",
