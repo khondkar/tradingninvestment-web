@@ -95,7 +95,7 @@ export default function StockAnnualReturnsPage({
             }}
           >
             <p style={{ margin: "0 0 10px", color: "#075e53", fontSize: 13, fontWeight: 850, letterSpacing: "0.05em" }}>
-              TNI PREDICTION LAB
+              TNI MINI LAB
             </p>
             <h2
               id="brkb-prediction-lab-title"
@@ -107,15 +107,14 @@ export default function StockAnnualReturnsPage({
                 lineHeight: 1.25,
               }}
             >
-              You&apos;ve seen Berkshire&apos;s history.
-              {" "}Explore TNI&apos;s market outlook.
+              What&apos;s your call on the market?
             </h2>
             <p style={{ margin: "0 0 18px", maxWidth: 760, color: "#17384c", fontSize: 17, fontWeight: 700, lineHeight: 1.65 }}>
-              Compare your view with TNI&apos;s model, review risk context,
-              and explore recorded market moves in the Prediction Lab.
+              Vote up, flat, or down. Reveal TNI&apos;s outlook, then replay
+              recorded market moves in the interactive Mini Lab.
             </p>
             <a
-              href="https://app.tradingninvestment.com/prediction-lab?ticker=SPY&utm_source=brkb_research&utm_medium=article_cta&utm_campaign=prediction_lab"
+              href="/#prediction-lab"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -134,10 +133,10 @@ export default function StockAnnualReturnsPage({
                 textDecoration: "none",
               }}
             >
-              Explore Prediction Lab →
+              Try the Mini Lab →
             </a>
             <p style={{ margin: "12px 0 0", color: "#17384c", fontSize: 14, fontWeight: 750, lineHeight: 1.5 }}>
-              Free to explore SPY, QQQ and IWM. Sign in for detailed agent evidence.
+              Explore SPY, QQQ and IWM. No account needed for the Mini Lab.
             </p>
           </aside>
           <nav aria-label="Berkshire research sections" style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 20 }}>
