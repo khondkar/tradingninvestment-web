@@ -15,7 +15,7 @@ type Outlook = { ticker: string; horizon: number; decision: { action: string; re
 type Community = { poll_id: string; counts: Record<View, number>; total: number; your_view?: View; submission_id?: string }
 type Price = { date: string; close: number }
 type Signal = { signal_date: string; action: string; horizon: number; status: string; correct: boolean | null; reference_date?: string | null; outcome_date?: string | null }
-type History = { ticker: string; rows: Signal[]; price_history?: Price[]; method: string; warning?: string | null }
+type History = { ticker: string; rows: Signal[]; price_history?: Price[]; replay_price_history?: Price[]; replay_rows?: Signal[]; method: string; warning?: string | null }
 type Job = { poll_token: string; voter_id: string; submission_id: string; view: View }
 function track(name: string, ticker: string) {
   const w = window as Window & { gtag?: (...args: unknown[]) => void }
@@ -61,15 +61,17 @@ function RecordedReplay({ ticker, choice }: { ticker: string; choice: View | nul
     request('/prediction-lab/signals/' + ticker, controller.signal).then((value: History) => {
       if (controller.signal.aborted) return
       if (value.ticker !== ticker || !Array.isArray(value.rows)) throw new Error('Recorded signals are unavailable.')
-      const prices = value.price_history
+      const prices = value.replay_price_history ?? value.price_history
       if (prices && (!Array.isArray(prices) || prices.some((p, i) => !/^\d{4}-\d{2}-\d{2}$/.test(p.date) || !Number.isFinite(p.close) || p.close <= 0 || (i > 0 && p.date <= prices[i-1].date)))) throw new Error('The price history is incomplete. Please retry.')
+      if (value.replay_rows && !Array.isArray(value.replay_rows)) throw new Error('Recorded replay signals are unavailable.')
       setData(value)
       if (prices && prices.length > 1 && !reduced.current && !document.hidden) setPlaying(true)
     }).catch(e => { if (!controller.signal.aborted) setError(e.message) })
     const timed = window.setTimeout(() => { if (controller.signal.aborted) setError('History is taking longer than expected. Please retry.') }, 60010)
     return () => { controller.abort(); clearTimeout(timeout); clearTimeout(timed) }
   }, [ticker, attempt])
-  const prices = data?.price_history || []
+  const prices = data?.replay_price_history ?? data?.price_history ?? []
+  const signals = data?.replay_rows ?? data?.rows ?? []
   useEffect(() => {
     if (!playing || prices.length < 2) return
     const initial = performance.now() - progress * 10000
@@ -94,7 +96,7 @@ function RecordedReplay({ ticker, choice }: { ticker: string; choice: View | nul
   const low = Math.min(0, ...values), high = Math.max(0, ...values), span = Math.max(1, high - low)
   const x = (i: number) => 24 + i / (prices.length - 1) * 552
   const y = (v: number) => 190 - (v - low) / span * 155
-  const row = data.rows.find(r => r.signal_date === prices[index].date)
+  const row = signals.find(r => r.signal_date === prices[index].date)
   const status = !row ? 'No recorded signal' : row.status === 'evaluated' ? row.correct ? 'Direction matched' : 'Direction missed' : row.status === 'not_scored' ? 'HOLD · not scored' : row.status === 'unavailable' ? 'Unavailable' : 'Pending'
   const viewLabel = views.find(v => v.id === choice)?.label || 'Not selected'
   return <section className="tni-mini-replay" aria-label="Recorded market replay">
@@ -107,10 +109,10 @@ function RecordedReplay({ ticker, choice }: { ticker: string; choice: View | nul
       <text x="24" y="222">{prices[0].date}</text><text x="576" y="222" textAnchor="end">{prices[prices.length-1].date}</text>
       {values.slice(1, index+1).map((v,i) => <line key={i} x1={x(i)} y1={y(values[i])} x2={x(i+1)} y2={y(v)} stroke={v < values[i] ? '#b41c3e' : '#08776d'} strokeWidth="5" strokeLinecap="round" />)}
       {values.slice(0, index + 1).map((v, i) => {
-        const recorded = data.rows.find(
+        const recorded = signals.find(
           signal => signal.signal_date === prices[i].date
         )
-        if (!recorded || !['BUY', 'HOLD', 'SELL'].includes(recorded.action)) {
+        if (i !== index || !recorded || !['BUY', 'HOLD', 'SELL'].includes(recorded.action)) {
           return null
         }
         const color = recorded.action === 'BUY'
@@ -155,12 +157,19 @@ function RecordedReplay({ ticker, choice }: { ticker: string; choice: View | nul
       })}
       {values.slice(0,index+1).map((v,i) => <circle key={i} cx={x(i)} cy={y(v)} r={i===index?9:4} role="button" tabIndex={0} aria-label={`${day(prices[i].date)}, market return ${percent(v)}`} onClick={()=>select(i)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(i)}}} style={{cursor:'pointer'}} fill={i>0&&v<values[i-1]?'#b41c3e':'#08776d'} stroke="white" strokeWidth="2" />)}
     </svg>
+    <div aria-label="Recorded signals by trading session" style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(80px,1fr))',gap:8,margin:'14px 0'}}>
+      {prices.slice(1,index+1).map((price,i)=>{
+        const signal=signals.find(r=>r.signal_date===price.date)
+        const action=signal && ['BUY','HOLD','SELL'].includes(signal.action)?signal.action:'No signal'
+        return <button type="button" key={price.date} aria-pressed={index===i+1} onClick={()=>select(i+1)} style={{padding:'10px 6px',border:index===i+1?'2px solid #102b42':'1px solid #a7bdcd',borderRadius:8,background:'#ffffff',color:'#102b42',fontWeight:800}}><span style={{display:'block',fontSize:12}}>{price.date.slice(5)}</span><strong style={{display:'block',fontSize:14,color:action==='BUY'?'#006b57':action==='SELL'?'#b51d40':'#102b42'}}>{action}</strong></button>
+      })}
+    </div>
     <label className="tni-mini-session-label">Explore a session <input type="range" min="0" max={prices.length-1} value={index} onChange={e => select(Number(e.target.value))} aria-valuetext={`${day(prices[index].date)}, market return ${percent(value)}`} /></label>
     <div className="tni-mini-record"><div><small>{day(prices[index].date)}</small><strong>{row?.action || 'No recorded signal'}</strong></div><div><small>Direction check</small><strong>{status}</strong></div><div><small>Forecast horizon</small><strong>{row ? `${row.horizon} trading days` : 'Unavailable'}</strong></div><div><small>Change from prior session</small><strong>{index ? percent(daily) : 'Baseline'}</strong></div></div>
     <div className="tni-mini-replay-controls"><button disabled={index===0} onClick={() => select(index-1)}>← Previous</button><button onClick={() => { if(playing) setPlaying(false); else { if(progress>=1){setIndex(0);setProgress(0)} setPlaying(true);track('mini_lab_replay_started',ticker) } }}>{playing?'Pause':progress>0&&progress<1?'Resume':'Replay · 10 sec'}</button><button disabled={index===prices.length-1} onClick={() => select(index+1)}>Next →</button></div>
     <progress max="1" value={progress} aria-label="Replay progress" /><p className="tni-mini-time">{Math.min(10, Math.floor(progress*10))} / 10 seconds · Adjusted daily closes. Market return is not model performance.</p>
     <details className="tni-mini-why"><summary>{row?.status==='evaluated'&&row.correct===false?'Direction missed — review risk context':'What did the Risk Agent say at the time?'}</summary><p>Historical Risk Agent assessments are not included in this record. We cannot infer whether it agreed or warned at the time. A falling session alone does not mean a multi-day forecast failed.</p><a className="tni-mini-text-button" href={LAB+'?ticker='+ticker}>Open Prediction Lab for current risk evidence →</a></details>
-    <MiniLabSharing snapshot={{ticker,kind:'replay',view:viewLabel,returnPct:value,startDate:prices[0].date,endDate:prices[index].date}} onOpen={()=>setPlaying(false)}/>
+    <MiniLabSharing snapshot={{ticker,kind:'replay',view:viewLabel,returnPct:value,startDate:prices[0].date,endDate:prices[index].date,priceSeries:prices.slice(0,index+1),recordedSignals:signals.filter(signal=>prices.slice(1,index+1).some(price=>price.date===signal.signal_date)),action:row?.action,horizon:row?.horizon,signalStatus:status}} onOpen={()=>setPlaying(false)}/>
     <details className="tni-mini-why"><summary>How this history is measured</summary><p>{data.method}</p><p>Replay starts at the first displayed adjusted close. Signal dates match exactly; no missing signals are reconstructed.</p>{data.warning&&<p>{data.warning}</p>}</details>
   </section>
 }
@@ -243,7 +252,7 @@ function MarketOutlook({ ticker, name }: { ticker: string; name: string }) {
         {voteError&&<div className="tni-mini-error-text" role="alert"><p>{voteError}</p>{queue.current.length>0&&<button className="tni-mini-text-button" onClick={()=>{failed.current=false;setVoteError('');void drain()}}>Retry unconfirmed votes</button>}<button className="tni-mini-text-button" onClick={()=>setAttempt(a=>a+1)}>Refresh outlook</button></div>}
         {community&&<div className="tni-mini-community"><div className="tni-mini-total"><span>Votes submitted today<small>{ticker} · {outlook.horizon}-day poll · ET</small></span><strong>{community.total.toLocaleString()}</strong></div>{choice&&community.total>0&&views.map(v=><div className="tni-mini-result" key={v.id}><span>{v.label}</span><meter min="0" max={community.total} value={community.counts[v.id]} aria-label={v.label}/><b>{(community.counts[v.id]/community.total*100).toFixed(1)}%</b></div>)}<small>Repeat submissions count. Totals are not unique people or evidence of model accuracy.</small></div>}
       </div>
-      {!revealed?<button className="tni-mini-cover" onClick={()=>{setRevealed(true);track('mini_lab_outlook_revealed',ticker)}}><span>TNI’S OUTLOOK</span><strong>{choice?'Compare with TNI →':'Reveal TNI’s outlook →'}</strong><small>Tap anywhere on this card</small></button>:<section className="tni-mini-revealed" aria-label="TNI outlook"><div className="tni-mini-your-view">Your view: {choiceLabel||'Not selected'}</div><div className={'tni-mini-decision tni-mini-'+outlook.decision.action.toLowerCase()}><span>TNI outlook</span><strong>{outlook.decision.action}</strong><b>Next {outlook.horizon} trading days</b></div><p className="tni-mini-reason">{outlook.decision.reason||'Open Prediction Lab to explore the evidence.'}</p><p className="tni-mini-time">Generated {new Date(outlook.as_of).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET</p><div className="tni-mini-risk"><strong>Before acting, review risk.</strong><a href={LAB+'?ticker='+ticker}>Open Risk Agent in Prediction Lab →</a><small>Sign in for detailed agent evidence.</small></div><MiniLabSharing snapshot={{ticker,kind:'outlook',view:choiceLabel||'Not selected',action:outlook.decision.action,horizon:outlook.horizon,asOf:outlook.as_of}}/><button className="tni-mini-explore" aria-expanded={historyOpen} onClick={()=>{setHistoryOpen(o=>!o);if(!historyOpen)track('mini_lab_history_opened',ticker)}}>{historyOpen?'Hide recorded signals ↑':'Explore recorded signals · 10-sec replay ↓'}</button>{historyOpen&&<RecordedReplay ticker={ticker} choice={choice}/>}</section>}
+      {!revealed?<button className="tni-mini-cover" onClick={()=>{setRevealed(true);track('mini_lab_outlook_revealed',ticker)}}><span>TNI’S OUTLOOK</span><strong>{choice?'Compare with TNI →':'Reveal TNI’s outlook →'}</strong><small>Tap anywhere on this card</small></button>:<section className="tni-mini-revealed" aria-label="TNI outlook"><div className="tni-mini-your-view">Your view: {choiceLabel||'Not selected'}</div><div className={'tni-mini-decision tni-mini-'+outlook.decision.action.toLowerCase()}><span>TNI outlook</span><strong>{outlook.decision.action}</strong><b>Next {outlook.horizon} trading days</b></div><p className="tni-mini-reason">{outlook.decision.reason||'Open Prediction Lab to explore the evidence.'}</p><p className="tni-mini-time">Generated {new Date(outlook.as_of).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})} ET</p><div className="tni-mini-risk"><strong>Before acting, review risk.</strong><a href={LAB+'?ticker='+ticker}>Open Risk Agent in Prediction Lab →</a><small>Sign in for detailed agent evidence.</small></div><MiniLabSharing snapshot={{ticker,kind:'outlook',view:choiceLabel||'Not selected',action:outlook.decision.action,horizon:outlook.horizon,asOf:outlook.as_of,community}}/><button className="tni-mini-explore" aria-expanded={historyOpen} onClick={()=>{setHistoryOpen(o=>!o);if(!historyOpen)track('mini_lab_history_opened',ticker)}}>{historyOpen?'Hide recorded signals ↑':'Explore recorded signals · 10-sec replay ↓'}</button>{historyOpen&&<RecordedReplay ticker={ticker} choice={choice}/>}</section>}
     </>}
     <a className="tni-mini-cta" href={LAB+'?ticker='+ticker} onClick={()=>track('mini_lab_open_full',ticker)}>Open full Prediction Lab →</a>
     <p className="tni-mini-note">Research and education. Not investment advice.</p>

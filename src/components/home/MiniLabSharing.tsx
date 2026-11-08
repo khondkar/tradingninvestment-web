@@ -1,18 +1,8 @@
+import { drawMiniLabShareCard, type ShareSnapshot } from "./miniLabShareCard"
 import { useEffect, useRef, useState } from 'react'
 
 const SHARE_API = ((import.meta as ImportMeta & { env?: { VITE_MINI_LAB_API_URL?: string } }).env?.VITE_MINI_LAB_API_URL || 'https://quant-ai-agent.onrender.com').replace(/\/$/, '')
 
-type ShareSnapshot = {
-  ticker: string
-  kind: 'outlook' | 'replay'
-  view: string
-  action?: string
-  horizon?: number
-  asOf?: string
-  returnPct?: number
-  startDate?: string
-  endDate?: string
-}
 const fmt = (v: number) => `${v > 0 ? '+' : v < 0 ? '−' : ''}${Math.abs(v).toFixed(2)}%`
 function record(platform: string, ticker: string) {
   const w = window as Window & { gtag?: (...args: unknown[]) => void }
@@ -32,28 +22,7 @@ function Card({ snapshot, canvasRef, imageFile, onReady }: { snapshot: ShareSnap
     const c = canvas.getContext('2d')
     if (!c) return
     canvas.width = 1200; canvas.height = 630
-    c.fillStyle = '#102b42'; c.fillRect(0, 0, 1200, 630)
-    c.fillStyle = '#b8f4de'; c.font = '850 25px system-ui'; c.fillText('TNI / MARKET INTELLIGENCE', 48, 58)
-    c.fillStyle = '#fff'; c.font = '850 47px system-ui'
-    c.fillText(snapshot.kind === 'replay' ? `${snapshot.ticker} market replay` : `What’s your call on ${snapshot.ticker}?`, 48, 132)
-    c.fillRect(48, 172, 1104, 330)
-    c.fillStyle = '#29495e'; c.font = '850 24px system-ui'
-    c.fillText(snapshot.kind === 'replay' ? 'CUMULATIVE MARKET RETURN' : 'YOUR VIEW', 80, 222)
-    c.fillStyle = snapshot.kind === 'replay' && (snapshot.returnPct ?? 0) < 0 ? '#ae1639' : '#066756'
-    c.font = '900 76px system-ui'; c.fillText(snapshot.kind === 'replay' ? fmt(snapshot.returnPct ?? 0) : snapshot.view, 80, 320)
-    c.fillStyle = '#102b42'
-    if (snapshot.kind === 'replay') {
-      c.font = '850 27px system-ui'; c.fillText(`${snapshot.startDate} → ${snapshot.endDate}`, 80, 385)
-      c.font = '750 24px system-ui'; c.fillText('Adjusted daily closes · Market return—not model performance', 80, 457)
-    } else {
-      c.fillStyle = '#29495e'; c.font = '850 24px system-ui'; c.fillText('TNI OUTLOOK', 660, 222)
-      c.fillStyle = '#102b42'; c.font = '900 76px system-ui'; c.fillText(snapshot.action || 'Unavailable', 660, 320)
-      c.font = '750 26px system-ui'; c.fillText(`Next ${snapshot.horizon} trading days`, 660, 377)
-      c.font = '750 24px system-ui'; c.fillText('Generated ' + new Date(snapshot.asOf!).toISOString().replace('T', ' ').slice(0, 16) + ' UTC', 80, 457)
-    }
-    c.fillStyle = '#b8f4de'; c.font = '850 29px system-ui'; c.fillText('Make your call. Compare with TNI. →', 48, 553)
-    c.fillStyle = '#fff'; c.font = '750 21px system-ui'; c.fillText('tradingninvestment.com/#prediction-lab', 48, 594)
-    c.font = '750 18px system-ui'; c.textAlign = 'right'; c.fillText('Dated snapshot · Not investment advice', 1152, 594); c.textAlign = 'left'
+    drawMiniLabShareCard(c, snapshot)
     canvas.toBlob(blob => {
       if (current && blob) {
         imageFile.current = new File([blob], `TNI-${snapshot.ticker}-${snapshot.kind}.png`, {type:'image/png'})
@@ -62,7 +31,7 @@ function Card({ snapshot, canvasRef, imageFile, onReady }: { snapshot: ShareSnap
     }, 'image/png')
     return () => { current = false; imageFile.current = null }
   }, [snapshot, canvasRef, imageFile, onReady])
-  return <canvas ref={canvasRef} aria-label={`${snapshot.ticker} ${snapshot.kind} share card`} />
+  return <canvas style={{display:"block",width:"100%",height:"auto",aspectRatio:"1200 / 630"}} ref={canvasRef} aria-label={`${snapshot.ticker} ${snapshot.kind} share card`} />
 }
 export default function MiniLabSharing({ snapshot, onOpen }: { snapshot: ShareSnapshot; onOpen?: () => void }) {
   const [saved, setSaved] = useState<ShareSnapshot | null>(null)
@@ -117,7 +86,7 @@ export default function MiniLabSharing({ snapshot, onOpen }: { snapshot: ShareSn
     document.body.append(a); a.click(); a.remove(); setMessage('Image download requested. The personalized link also provides an image preview.'); record('download', saved.ticker)
   }
   return <div className="tni-mini-sharing">
-    <button className="tni-mini-share-trigger" aria-expanded={!!saved} onClick={() => { if(saved) { setSaved(null); setBlob(null); setShareUrl('') } else { onOpen?.(); setBlob(null); setShareUrl(''); setUploadError(''); setSaved({...snapshot}); setMessage(''); setManualCopy('') } }}>{snapshot.kind === 'outlook' ? 'Share my view ↗' : 'Share this replay ↗'}</button>
+    <button className="tni-mini-share-trigger" aria-expanded={!!saved} onClick={() => { if(saved) { setSaved(null); setBlob(null); setShareUrl('') } else { onOpen?.(); setBlob(null); setShareUrl(''); setUploadError(''); setSaved({...snapshot, community: snapshot.community ? {...snapshot.community, counts: {...snapshot.community.counts}} : null, priceSeries: snapshot.priceSeries?.map(p=>({...p})), recordedSignals: snapshot.recordedSignals?.map(signal=>({...signal}))}); setMessage(''); setManualCopy('') } }}>{snapshot.kind === 'outlook' ? 'Share my view ↗' : 'Share this replay ↗'}</button>
     {saved && <section className="tni-mini-share-panel" aria-label="Personalized sharing preview">
       <h4>Your share card</h4><p>This creates a public, dated card of the values shown here.</p><Card snapshot={saved} canvasRef={canvas} imageFile={imageFile} onReady={setBlob}/>
       {!shareUrl && !uploadError && <p role="status">Preparing your personalized share link…</p>}
