@@ -30,6 +30,7 @@ export const nvdaAnnualReturnsConfig: AnnualReturnsAssetConfig = {
     height: 540,
   },
   seo: {
+    socialImage: "/images/social/nvda-sp500-drawdown-og.png",
     title: `NVIDIA (NVDA) Returns, Drawdowns & Recovery, 2000–${nvdaAnnualReturns.current_year.year} | Charts & Data`,
     h1: `NVIDIA (NVDA) Returns, Drawdowns & Recovery, 2000–${nvdaAnnualReturns.current_year.year}`,
     description: `Explore NVIDIA returns, drawdowns and recovery times from 2000–${nvdaAnnualReturns.current_year.year}. Compare NVDA with the S&P 500 using interactive charts and download annual return data.`,

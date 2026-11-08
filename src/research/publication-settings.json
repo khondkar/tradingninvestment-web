@@ -6,7 +6,8 @@
     "homepagePlacement": "featured"
   },
   "/nvda-returns/": {
-    "homepagePlacement": "none"
+    "homepagePlacement": "none",
+    "image": "/images/social/nvda-sp500-drawdown-og.png"
   },
   "/nasdaq-historical-annual-returns/": {
     "homepagePlacement": "featured"
