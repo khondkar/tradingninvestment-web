@@ -73,6 +73,9 @@
   "/new-iphone-release-apple-stock-price-history/": {
     "homepagePlacement": "featured",
     "socialImage": "/images/social/iphone-announcements-2007-2026-og.png",
-    "socialImageAlt": "Twenty annual flagship iPhone announcement dates, 2007–2026, with AAPL and S&P 500 returns over 20 trading sessions from the previous close."
+    "socialImageAlt": "Twenty annual flagship iPhone announcement dates, 2007\u20132026, with AAPL and S&P 500 returns over 20 trading sessions from the previous close."
+  },
+  "/upro-etf/": {
+    "image": "/images/social/upro-tqqq-spy-drawdown-og.png"
   }
 }

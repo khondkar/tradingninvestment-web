@@ -30,6 +30,8 @@ const datasetLoaders: Record<
       '../../data/charts/tqqqVsQqqPeriodReturns.json'
     ),
 
+  UPRO: () => import("../../data/charts/uproVsSpyPeriodReturns.json"),
+
   TSLL: () =>
     import(
       '../../data/charts/tsllVsTslaPeriodReturns.json'

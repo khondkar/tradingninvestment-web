@@ -1,3 +1,7 @@
+import uproAnnualReturns from "../../data/charts/uproAnnualReturns.json"
+import uproReturnMethods from "../../data/charts/uproReturnMethods.json"
+import uproBenchmarkAnnualReturns from "../../data/charts/uproBenchmarkAnnualReturns.json"
+import uproVsSpyDrawdowns from "../../data/charts/uproVsSpyDrawdowns.json"
 import tqqqAnnualReturns from "../../data/charts/tqqqAnnualReturns.json"
 import tqqqReturnMethods from "../../data/charts/tqqqReturnMethods.json"
 import qqqAnnualReturns from "../../data/charts/qqqAnnualReturns.json"
@@ -75,6 +79,13 @@ export const leveragedEtfResearchDataRegistry:
         nvdlVsNvdaDrawdowns as LeveragedEtfDrawdownDataset,
     },
 
+    UPRO: {
+      annualReturns: uproAnnualReturns as AnnualReturnsPageData,
+      returnMethods: uproReturnMethods.data as ReturnMethodRow[],
+      benchmarkAnnualReturns: uproBenchmarkAnnualReturns as AnnualReturnsPageData,
+      benchmarkName: "SPY",
+      drawdownData: uproVsSpyDrawdowns as LeveragedEtfDrawdownDataset,
+    },
     TSLL: {
       annualReturns:
         tsllAnnualReturns as AnnualReturnsPageData,

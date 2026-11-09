@@ -299,3 +299,11 @@ Type: annual
 Subject: Direxion Daily TSLA Bull 2X Shares
 Symbol: TSLL
 Description: Independent research on TSLL performance, historical returns, growth of $10,000, drawdowns and TSLL vs TSLA.
+
+## UPRO vs TQQQ vs SPY: Returns, Drawdowns and Recovery
+
+URL: https://tradingninvestment.com/upro-etf/
+Type: annual
+Subject: ProShares UltraPro S&P500
+Symbol: UPRO
+Description: Compare UPRO, TQQQ and SPY over matching dates: historical returns, maximum drawdowns and time from the low to recovery.

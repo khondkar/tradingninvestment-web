@@ -1,0 +1,137 @@
+{
+  "symbol": "SPY",
+  "ticker": "SPY",
+  "asset_type": "etf",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance / SPY",
+  "development_source_only": true,
+  "methodology": {
+    "calculation": "Annual price return is calculated using the final available close of each calendar year relative to the final available close of the prior calendar year.",
+    "current_year": "The current calendar year is shown as YTD and is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 16,
+    "start_year": 2010,
+    "end_year": 2025,
+    "positive_years": 12,
+    "negative_years": 4,
+    "positive_year_pct": 75.0,
+    "negative_year_pct": 25.0,
+    "average_annual_return_pct": 12.84,
+    "median_annual_return_pct": 14.82,
+    "best_year": {
+      "year": 2013,
+      "return_pct": 29.69
+    },
+    "worst_year": {
+      "year": 2022,
+      "return_pct": -19.48
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 10.38,
+    "through_date": "2026-11-09"
+  },
+  "data": [
+    {
+      "year": 2010,
+      "value": 12.841,
+      "label": "2010",
+      "status": "positive"
+    },
+    {
+      "year": 2011,
+      "value": -0.1988,
+      "label": "2011",
+      "status": "negative"
+    },
+    {
+      "year": 2012,
+      "value": 13.4741,
+      "label": "2012",
+      "status": "positive"
+    },
+    {
+      "year": 2013,
+      "value": 29.6889,
+      "label": "2013",
+      "status": "positive"
+    },
+    {
+      "year": 2014,
+      "value": 11.2892,
+      "label": "2014",
+      "status": "positive"
+    },
+    {
+      "year": 2015,
+      "value": -0.8125,
+      "label": "2015",
+      "status": "negative"
+    },
+    {
+      "year": 2016,
+      "value": 9.6434,
+      "label": "2016",
+      "status": "positive"
+    },
+    {
+      "year": 2017,
+      "value": 19.3844,
+      "label": "2017",
+      "status": "positive"
+    },
+    {
+      "year": 2018,
+      "value": -6.3479,
+      "label": "2018",
+      "status": "negative"
+    },
+    {
+      "year": 2019,
+      "value": 28.7852,
+      "label": "2019",
+      "status": "positive"
+    },
+    {
+      "year": 2020,
+      "value": 16.1623,
+      "label": "2020",
+      "status": "positive"
+    },
+    {
+      "year": 2021,
+      "value": 27.0354,
+      "label": "2021",
+      "status": "positive"
+    },
+    {
+      "year": 2022,
+      "value": -19.4816,
+      "label": "2022",
+      "status": "negative"
+    },
+    {
+      "year": 2023,
+      "value": 24.2868,
+      "label": "2023",
+      "status": "positive"
+    },
+    {
+      "year": 2024,
+      "value": 23.3048,
+      "label": "2024",
+      "status": "positive"
+    },
+    {
+      "year": 2025,
+      "value": 16.3527,
+      "label": "2025",
+      "status": "positive"
+    }
+  ],
+  "data_through": "2026-11-09"
+}

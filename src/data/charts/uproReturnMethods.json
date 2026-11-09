@@ -1,0 +1,124 @@
+{
+  "ticker": "UPRO",
+  "data": [
+    {
+      "year": 2010,
+      "price_return": 35.99919062694965,
+      "total_return": 36.331362774991845,
+      "is_ytd": false,
+      "data_through": "2010-12-31"
+    },
+    {
+      "year": 2011,
+      "price_return": -11.936946295478412,
+      "total_return": -11.88290894574634,
+      "is_ytd": false,
+      "data_through": "2011-12-31"
+    },
+    {
+      "year": 2012,
+      "price_return": 46.71653487727423,
+      "total_return": 46.79516648325366,
+      "is_ytd": false,
+      "data_through": "2012-12-31"
+    },
+    {
+      "year": 2013,
+      "price_return": 118.26630228848138,
+      "total_return": 118.49366444042246,
+      "is_ytd": false,
+      "data_through": "2013-12-31"
+    },
+    {
+      "year": 2014,
+      "price_return": 37.69078635920309,
+      "total_return": 38.008487533544425,
+      "is_ytd": false,
+      "data_through": "2014-12-31"
+    },
+    {
+      "year": 2015,
+      "price_return": -5.55763823481541,
+      "total_return": -5.24400053693963,
+      "is_ytd": false,
+      "data_through": "2015-12-31"
+    },
+    {
+      "year": 2016,
+      "price_return": 30.59724466422915,
+      "total_return": 30.784847134959215,
+      "is_ytd": false,
+      "data_through": "2016-12-31"
+    },
+    {
+      "year": 2017,
+      "price_return": 71.37441960032301,
+      "total_return": 71.37442394595048,
+      "is_ytd": false,
+      "data_through": "2017-12-31"
+    },
+    {
+      "year": 2018,
+      "price_return": -25.551198571607515,
+      "total_return": -25.112901854038494,
+      "is_ytd": false,
+      "data_through": "2018-12-31"
+    },
+    {
+      "year": 2019,
+      "price_return": 101.29386024563227,
+      "total_return": 102.2981043630729,
+      "is_ytd": false,
+      "data_through": "2019-12-31"
+    },
+    {
+      "year": 2020,
+      "price_return": 9.784314048143973,
+      "total_return": 10.088173586465654,
+      "is_ytd": false,
+      "data_through": "2020-12-31"
+    },
+    {
+      "year": 2021,
+      "price_return": 98.49075767252447,
+      "total_return": 98.63929016579208,
+      "is_ytd": false,
+      "data_through": "2021-12-31"
+    },
+    {
+      "year": 2022,
+      "price_return": -57.039851884924566,
+      "total_return": -56.84377673240554,
+      "is_ytd": false,
+      "data_through": "2022-12-31"
+    },
+    {
+      "year": 2023,
+      "price_return": 67.04302994752666,
+      "total_return": 68.52928824497148,
+      "is_ytd": false,
+      "data_through": "2023-12-31"
+    },
+    {
+      "year": 2024,
+      "price_return": 61.92911339371947,
+      "total_return": 63.5670578952108,
+      "is_ytd": false,
+      "data_through": "2024-12-31"
+    },
+    {
+      "year": 2025,
+      "price_return": 30.595671179290605,
+      "total_return": 31.87691334629332,
+      "is_ytd": false,
+      "data_through": "2025-12-31"
+    },
+    {
+      "year": 2026,
+      "price_return": 19.134416998206348,
+      "total_return": 19.876156342338614,
+      "is_ytd": true,
+      "data_through": "2026-11-09"
+    }
+  ]
+}

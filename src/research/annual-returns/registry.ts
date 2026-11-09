@@ -1,3 +1,4 @@
+import { uproAnnualReturnsConfig } from "./upro"
 // ============================================================================
 // TNI ANNUAL RETURNS — PUBLISHED RESEARCH REGISTRY
 //
@@ -172,6 +173,7 @@ export const annualReturnsResearchRegistry:
       legacyPublished: true,
       featured: false,
     },
+    { config: uproAnnualReturnsConfig, legacyPublished: true, featured: false, previewImage: "/images/social/upro-tqqq-spy-drawdown-og.png" },
     {
       config: tsllAnnualReturnsConfig,
       legacyPublished: true,

@@ -44,6 +44,7 @@ Research index: https://tradingninvestment.com/research/
 - [TQQQ Returns](https://tradingninvestment.com/tqqq-returns/): Explore TQQQ historical returns, price return, total return, growth of $10,000, annual performance, and comparison with QQQ.
 - [Trading Setups for Bearish and Bullish Gravestone Doji](https://tradingninvestment.com/gravestone-doji-candlestick-pattern/): Original 2016 TradingNInvestment article explaining Gravestone Doji candlestick formations, bullish and bearish trading setups, and historical chart examples.
 - [TSLL ETF: Performance, Holdings & TSLL vs TSLA](https://tradingninvestment.com/tsll-etf/): Independent research on TSLL performance, historical returns, growth of $10,000, drawdowns and TSLL vs TSLA.
+- [UPRO vs TQQQ vs SPY: Returns, Drawdowns and Recovery](https://tradingninvestment.com/upro-etf/): Compare UPRO, TQQQ and SPY over matching dates: historical returns, maximum drawdowns and time from the low to recovery.
 
 ## Research Areas
 
