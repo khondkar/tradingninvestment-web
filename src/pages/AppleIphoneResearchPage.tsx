@@ -34,12 +34,28 @@ function AnnouncementChart({ rows, horizon }: { rows: EventRow[]; horizon: strin
     <p className="tni-iphone-chart-caption">Tap a legend item to show or hide a series. Hover or tap a bar for its value. Scroll the table below for exact observations. Missing horizons are excluded, not treated as zero.</p>
   </div>
 }
-export default function AppleIphoneResearchPage() {
+export type AppleIphoneInitialData = {
+  announcements: EventRow[]
+  sales: SalesRow[]
+  originalHtml: string
+}
+function readAppleInitialData(): AppleIphoneInitialData | undefined {
+  if (typeof document === 'undefined') return undefined
+  const text = document.getElementById('tni-iphone-initial-data')?.textContent
+  if (!text) return undefined
+  try {
+    const value = JSON.parse(text)
+    if (Array.isArray(value.announcements) && Array.isArray(value.sales) && typeof value.originalHtml === 'string') return value
+  } catch { /* Local dev can load the existing public data endpoints. */ }
+  return undefined
+}
+export default function AppleIphoneResearchPage({ initialData }: { initialData?: AppleIphoneInitialData } = {}) {
+  const [initial] = useState(() => initialData ?? readAppleInitialData())
   const [horizon,setHorizon] = useState<string>('20D')
-  const [announcements,setAnnouncements] = useState<EventRow[]>([])
-  const [sales,setSales] = useState<SalesRow[]>([])
+  const [announcements,setAnnouncements] = useState<EventRow[]>(initial?.announcements ?? [])
+  const [sales,setSales] = useState<SalesRow[]>(initial?.sales ?? [])
   const [errors,setErrors] = useState<string[]>([])
-  const [originalHtml,setOriginalHtml] = useState<string>('')
+  const [originalHtml,setOriginalHtml] = useState<string>(initial?.originalHtml ?? '')
   useEffect(() => {
     document.title = 'AAPL Earnings 2026 | Do iPhone Releases Impact Apple Earnings & Stock? | TNI'
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
@@ -75,6 +91,7 @@ export default function AppleIphoneResearchPage() {
     Apple (AAPL) Yearly Returns ↗
   </a>
 </div>
+<p className="tni-iphone-byline" style={{fontWeight:700,color:"#172331"}}>By <a href="/about/" rel="author">Kamal Khondkar</a> · Quantitative Research</p>
 <div className="tni-iphone-introduction">
   <p>
     The iPhone brought the world into people's hands, transforming how
