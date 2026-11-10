@@ -1,3 +1,4 @@
+import { AboutAuthorBio } from "./components/research/AuthorBiography"
 import ScannerLinks from './components/market/ScannerLinks'
 import fundedRoutes from './components/trading/funded-routes.json'
 import TradingLinks from './components/trading/TradingLinks'
@@ -504,6 +505,8 @@ export function AboutPage() {
         </p>
       </section>
 
+
+      <AboutAuthorBio />
 
       {/* ==================================================================
           TNI ABOUT — RESEARCH PHILOSOPHY

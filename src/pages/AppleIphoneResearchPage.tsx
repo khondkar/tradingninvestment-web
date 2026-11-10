@@ -1,3 +1,4 @@
+import { ArticleAuthorBio } from "../components/research/AuthorBiography"
 import { useEffect, useMemo, useState } from 'react'
 import './AppleIphoneResearchPage.css'
 
@@ -91,7 +92,7 @@ export default function AppleIphoneResearchPage({ initialData }: { initialData?:
     Apple (AAPL) Yearly Returns ↗
   </a>
 </div>
-<p className="tni-iphone-byline" style={{fontWeight:700,color:"#172331"}}>By <a href="/about/" rel="author">Kamal Khondkar</a> · Quantitative Research</p>
+<p className="tni-iphone-byline" style={{fontWeight:700,color:"#172331"}}>By <a href="/about/#kamal-khondkar" rel="author">Kamal Khondkar</a> · Quantitative Research</p>
 <div className="tni-iphone-introduction">
   <p>
     The iPhone brought the world into people's hands, transforming how
@@ -143,6 +144,7 @@ export default function AppleIphoneResearchPage({ initialData }: { initialData?:
     <section id="sales"><p className="tni-iphone-eyebrow">03 / SALES & EARNINGS</p><h2>Did iPhone sales move Apple shares?</h2><p>Quarterly iPhone revenue growth and the surprise relative to analyst consensus are different metrics. Stock reactions are measured around the earnings publication, not assigned to iPhone sales alone.</p><div className="tni-iphone-table"><table data-tni-readable-table="data"><thead><tr><th>Quarter</th><th>Reported</th><th>iPhone revenue</th><th>YoY growth</th><th>Sales surprise</th><th>AAPL reaction</th><th>Source</th></tr></thead><tbody>{sales.length ? sales.map(row=><tr key={row.quarter}><td>{row.quarter}</td><td>{row.reportDate}</td><td>{row.revenueBillion == null ? 'Not available' : `$${row.revenueBillion.toFixed(3)}B`}</td><td>{fmt(row.revenueBillion != null && row.priorYearBillion ? (row.revenueBillion/row.priorYearBillion-1)*100 : null)}</td><td>{fmt(row.revenueBillion != null && row.consensusBillion ? (row.revenueBillion/row.consensusBillion-1)*100 : null)}</td><td>{fmt(row.reaction)}</td><td>{row.source ? <a href={row.source} rel="noopener noreferrer" target="_blank">Filing ↗</a> : 'Pending'}</td></tr>) : <tr><td colSpan={7}>No verified sales observations loaded.</td></tr>}</tbody></table></div><p className="tni-iphone-note">Apple's earnings releases also contain services revenue, margins, guidance and other information. These can affect AAPL simultaneously; observed returns are not a causal estimate of iPhone sales alone.</p></section>
     <section id="original"><p className="tni-iphone-eyebrow">04 / ORIGINAL 2017 RESEARCH</p><h2>New iPhone Release and Apple Stock Performance Year Over Year</h2><p className="tni-iphone-note">Originally published September 18, 2017 · Last updated September 25, 2017. The following is the historical article, preserved as originally written. Its interpretations and calendar-year figures reflect the original publication, not newly verified event-study results.</p>{originalHtml ? <div onErrorCapture={event => { const target = event.target; if (target instanceof HTMLImageElement) { const fallback = target.dataset.archiveFallback; if (fallback && !target.dataset.triedArchive) { target.dataset.triedArchive = 'yes'; target.removeAttribute('srcset'); target.src = fallback; } else { target.hidden = true; const note = target.parentElement?.parentElement?.querySelector<HTMLElement>('.tni-iphone-chart-missing'); if (note) note.hidden = false; } } }} dangerouslySetInnerHTML={{__html:originalHtml}} /> : <p>Loading original historical article…</p>}</section>
     {errors.length > 0 && <p className="tni-iphone-note" role="status">Some research data could not load. Verify the data files are deployed.</p>}
+    <ArticleAuthorBio />
     <footer className="tni-iphone-footer">Methodology: adjusted AAPL returns versus S&amp;P 500 price-index returns; the dividend treatments differ. These observations do not establish announcement-driven causality. Missing data is shown as unavailable. Historical outcomes do not predict future performance.</footer>
   </main>
 }

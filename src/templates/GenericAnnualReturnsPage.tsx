@@ -1,3 +1,4 @@
+import { ArticleAuthorBio } from "../components/research/AuthorBiography"
 // ============================================================================
 // TNI ANNUAL RETURNS — GENERIC PAGE BASELINE
 //
@@ -3354,6 +3355,8 @@ export default function GenericAnnualReturnsPage({
         </section>
 
         {afterMethodology}
+
+        {config.author.name === "Kamal Khondkar" && <ArticleAuthorBio />}
 
         {/* =================================================================
             TNI ANNUAL RETURNS — LIVE MARKET INTELLIGENCE BRIDGE

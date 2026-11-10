@@ -7,7 +7,7 @@ export type ResearchAuthor = {
 
 export const kamalResearchAuthor: ResearchAuthor = {
   name: 'Kamal Khondkar',
-  role: 'Quant Researcher',
-  bio: 'Independent quantitative researcher focused on historical market data, investment analysis, and risk.',
-  url: '/about/',
+  role: 'Quantitative Researcher',
+  bio: "Kamal Khondkar is a quantitative researcher focused on systematic trading, derivatives, and applied AI. He brings more than a decade of financial-market experience and holds an M.S. in Finance from the University of Rochester’s Simon Business School.",
+  url: '/about/#kamal-khondkar',
 }
