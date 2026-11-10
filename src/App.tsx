@@ -276,6 +276,7 @@ function Header({
             <summary className={page === 'market' ? 'active' : ''}>Stock Market Today <span aria-hidden="true">⌄</span></summary>
             <nav className="tni-market-dropdown-panel" aria-label="Stock Market Today destinations">
               <a href="/stock-market-today/">Overview</a>
+              <a href="https://app.tradingninvestment.com/live/news">News Agent</a>
               <details className="tni-scanner-group" open={pathname.includes('/stock-market-today/heatmap') || undefined}><summary>Heatmap + Scanner <span aria-hidden="true">⌄</span></summary><a href="/stock-market-today/heatmap/">S&amp;P 500</a></details>
               <a href="/stock-market-today/sector-health/">Sector Health</a>
               <a href="/stock-market-today/earnings-calendar/">Earnings Calendar</a>
@@ -330,6 +331,7 @@ function Header({
               <summary>Stock Market Today <span aria-hidden="true">⌄</span></summary>
               <div className="tni-mobile-research-links">
                 <a href="/stock-market-today/">Overview</a>
+                <a href="https://app.tradingninvestment.com/live/news">News Agent</a>
                 <details className="tni-scanner-group" open={pathname.includes('/stock-market-today/heatmap') || undefined}><summary>Heatmap + Scanner <span aria-hidden="true">⌄</span></summary><a href="/stock-market-today/heatmap/">S&amp;P 500</a></details>
                 <a href="/stock-market-today/sector-health/">Sector Health</a>
                 <a href="/stock-market-today/earnings-calendar/">Earnings Calendar</a>
