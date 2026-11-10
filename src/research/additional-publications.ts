@@ -133,8 +133,8 @@ export const additionalPublications: ResearchItem[] = [
   {
     slug: 'average-stock-market-return',
     path: '/average-stock-market-return/',
-    title: 'Average Stock Market Return: Dividends, Inflation & 150+ Years of History',
-    description: 'Explore more than 150 years of U.S. stock market returns, comparing total return with dividends reinvested, inflation-adjusted real return, and price return.',
+    title: 'Average Stock Market Return: The Power of Reinvested Dividends',
+    description: '$10,000 grew to $8.12 billion in a 1872–2025 historical model. Dividends and reinvestment explain 99.8% of ending wealth versus price-only growth. Explore the data.',
     name: 'U.S. Stock Market',
     symbol: 'SP500',
     categories: ['index', 'sp500', 'market-history'],

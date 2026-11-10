@@ -194,3 +194,16 @@
 .tni-dividend-table-takeaway strong {
   color: #0b1f33;
 }
+
+/* TNI readable research introduction */
+.tni-return-methods .tni-return-methods__header > p {
+  color: #10233f !important;
+  font-size: 18px !important;
+  font-weight: 650 !important;
+  line-height: 1.8 !important;
+  opacity: 1 !important;
+}
+.tni-return-methods .tni-return-methods__header > p strong {
+  color: #10233f !important;
+  font-weight: 800 !important;
+}

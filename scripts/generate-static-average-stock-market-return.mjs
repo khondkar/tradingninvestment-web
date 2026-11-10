@@ -55,13 +55,13 @@ const canonicalUrl =
   siteOrigin + canonicalPath
 
 const title =
-  "Average Stock Market Return: Historical Returns With Dividends & Inflation"
+  "Average Stock Market Return: The Power of Reinvested Dividends"
 
 const description =
-  "Explore historical stock market returns with dividends reinvested, inflation-adjusted real returns, and S&P 500 price returns from 1872 through the latest available data."
+  "$10,000 grew to $8.12 billion in a 1872–2025 historical model. Dividends and reinvestment explain 99.8% of ending wealth versus price-only growth. Explore the data."
 
 const ogTitle =
-  "Average Stock Market Return: Dividends, Inflation & 150+ Years of History"
+  "Average Stock Market Return: The Power of Reinvested Dividends"
 
 const imageUrl =
   siteOrigin +

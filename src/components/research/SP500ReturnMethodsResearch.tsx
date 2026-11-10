@@ -1,3 +1,4 @@
+import { ArticleAuthorBio } from './AuthorBiography'
 import {
   lazy,
   Suspense,
@@ -1427,10 +1428,7 @@ export default function SP500ReturnMethodsResearch() {
           TNI HISTORICAL RETURN RESEARCH
         </span>
 
-        <h1>
-          Average Stock Market Return:
-          <span>S&amp;P 500 Returns by Year</span>
-        </h1>
+        <h1>Average Stock Market Return: The Power of Reinvested Dividends</h1>
 
         {latestRow?.data_through && (
           <div
@@ -1456,40 +1454,37 @@ export default function SP500ReturnMethodsResearch() {
         )}
 
         <div className="tni-return-methods__byline">
-          <span>By Kamal Khondkar</span>
+          <span>By <a href="/about/#kamal-khondkar" rel="author" style={{color:"#064ca1",fontWeight:800,textDecoration:"underline"}}>Kamal Khondkar</a></span>
           <span aria-hidden="true">·</span>
           <span>TradingNInvestment Research</span>
         </div>
 
         <div className="tni-return-methods__share">
           <ResearchShareButton
-            title="Average Stock Market Return: S&P 500 Returns by Year"
-            text={`Explore U.S. stock market returns from ${dataset.start_year} through ${dataset.end_year}${dataset.current_year_is_ytd ? ' YTD' : ''}, including dividends and inflation.`}
+            title="Average Stock Market Return: The Power of Reinvested Dividends"
+            text="$10,000 grew to $8.12 billion in a 1872–2025 historical model. Dividends and reinvestment explain 99.8% of ending wealth versus price-only growth. Explore the data."
             url="https://tradingninvestment.com/average-stock-market-return/"
           />
         </div>
 
         <p>
-          Explore U.S. stock market returns
-          from {dataset.start_year} through{' '}
-          {dataset.end_year}
-          {dataset.current_year_is_ytd
-            ? ' YTD'
-            : ''}, comparing total return
-          with dividends reinvested,
-          inflation-adjusted real total
-          return, and price return.
+          A hypothetical $10,000 investment compounded to approximately
+          <strong> $8.12 billion</strong> across the article’s 1872–2025
+          historical model with dividends reinvested.
         </p>
-
         <p>
-          Total return is the primary
-          measure in this research because
-          it includes reinvested dividends.
-          Real total return shows the
-          historical result after
-          inflation, while price return is
-          provided as a comparison
-          benchmark.
+          Compared with price-only growth, dividends and their compounded
+          reinvestment effect account for <strong>99.8% of the ending wealth</strong>.
+          This is not the share paid out as dividends: it includes the growth
+          of reinvested distributions over 154 completed calendar years.
+        </p>
+        <p>
+          Explore the average stock market return, compound annual growth,
+          annual returns and growth of $10,000 in the interactive charts and
+          tables below. The long-run model combines historical U.S. market
+          observations, predecessor indexes and modern S&amp;P 500 data.
+          These are hypothetical nominal results, not an investor’s realized
+          performance or a forecast.
         </p>
       </header>
 
@@ -5382,6 +5377,7 @@ export default function SP500ReturnMethodsResearch() {
           }
         }
       `}</style>
+      <ArticleAuthorBio />
     </section>
   )
 }
