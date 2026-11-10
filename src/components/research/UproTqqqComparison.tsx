@@ -65,6 +65,7 @@ export default function UproTqqqComparison() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       '@context': 'https://schema.org', '@type': 'Dataset',
       name: 'UPRO, TQQQ and SPY historical comparison data',
+      license: 'https://tradingninvestment.com/research-license/',
       description: 'Common-date adjusted closing prices, growth of $10,000 and drawdowns from previous peaks. Source: Yahoo Finance. Historical returns are not forecasts.',
       url: 'https://tradingninvestment.com/upro-etf/',
       temporalCoverage: `${dataset.first_date}/${dataset.through}`,
