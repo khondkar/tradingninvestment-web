@@ -5,6 +5,7 @@ import './EditorialHome.css'
 import './HomeTop.css'
 import './HomeTradingCard.css'
 import './HomeArt.css'
+import './NewsAgentHomeSlides.css'
 import { HomeGlobe, HomeIcon } from './HomeVisuals'
 
 const citations = [
@@ -41,14 +42,28 @@ export default function PremiumResearchHome() {
     <div className="editorial-wrap">
       <MiniPredictionLab />
       <div className="tni-home-feature-stack">
-        <section className="tni-home-feature tni-home-feature-intelligence">
-          <div className="tni-home-feature-icon"><HomeIcon kind="brain" /></div><div className="tni-home-feature-label">TNI Intelligence</div>
-          <h2>Smarter market decisions start here.</h2>
-          <p>Explore quantitative signals, AI-powered research, and market intelligence.</p>
-          <a href="https://app.tradingninvestment.com/live/news">Launch TNI <span aria-hidden="true">→</span></a>
+        <section className="tni-home-feature tni-home-feature-intelligence tni-home-promo-slide tni-home-promo-news">
+          <div className="tni-home-feature-label">TNI Intelligence</div>
+          <h2>News Agent: What’s Moving Markets</h2>
+          <ul className="tni-home-news-capabilities">
+            <li>
+              <span className="tni-home-news-symbol" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 8h10M11 12h6M11 16h6"/><path d="M7 12h.01M7 16h.01"/></svg>
+              </span>
+              <div><strong>AI News Ratings</strong><span>Market impact · Bullish / Bearish / Neutral</span></div>
+            </li>
+            <li>
+              <span className="tni-home-news-symbol" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="12" width="4" height="9" rx="2"/><rect x="17" y="12" width="4" height="9" rx="2"/></svg>
+              </span>
+              <div><strong>AI Audio Brief</strong><span>Listen to the stories that matter.</span></div>
+            </li>
+          </ul>
+          <p className="tni-home-news-extra">Plus earnings, guidance &amp; macro developments.</p>
+          <a href="https://app.tradingninvestment.com/live/news">Open News Agent <span aria-hidden="true">→</span></a>
         </section>
-        <section className="tni-home-feature tni-home-feature-market">
-          <div className="tni-home-feature-icon"><HomeIcon kind="market" /></div><div className="tni-home-feature-label">Stock Market Today</div>
+        <section className="tni-home-feature tni-home-feature-market tni-home-promo-slide tni-home-promo-market">
+          <div className="tni-home-feature-label">Stock Market Today</div>
           <h2>See what’s moving the market.</h2>
           <p>Follow market benchmarks, sector performance, heatmaps, and earnings developments.</p>
           <a href="/stock-market-today/">Explore Stock Market Today <span aria-hidden="true">↗</span></a>

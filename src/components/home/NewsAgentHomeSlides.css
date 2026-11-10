@@ -1,0 +1,15 @@
+.tni-editorial .tni-home-promo-slide{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:18px;border-top:6px solid #0755ed;background:#eaf4ff}
+.tni-editorial .tni-home-promo-market{border-color:#00877f;background:#e4f8f3}
+.tni-editorial .tni-home-promo-slide .tni-home-feature-label{font-size:12px;font-weight:850;letter-spacing:.025em;text-transform:uppercase}
+.tni-editorial .tni-home-promo-slide h2{color:#080e36;font-size:21px;font-weight:850;line-height:1.2}
+.tni-editorial .tni-home-promo-market h2{font-size:28px}
+.tni-editorial .tni-home-promo-slide p{color:#101b35;font-size:15px;font-weight:700}
+.tni-home-news-capabilities{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.tni-home-news-capabilities li{display:flex;align-items:center;gap:10px}
+.tni-home-news-symbol{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:8px;background:#fff;color:#0645d9}
+.tni-home-news-symbol svg{width:24px;height:24px}
+.tni-home-news-capabilities strong{display:block;color:#0640ca;font-size:18px;font-weight:850;line-height:1.25}
+.tni-home-news-capabilities li>div>span{display:block;color:#101b35;font-size:14px;font-weight:700;line-height:1.35}
+.tni-editorial .tni-home-promo-slide .tni-home-news-extra{font-size:14px}
+.tni-editorial .tni-home-promo-slide>a{align-self:flex-start;gap:10px;max-width:100%;box-sizing:border-box;min-height:44px;margin:auto 0 0;padding:10px 14px;border-radius:6px;background:#0645e8;font-size:15px;font-weight:800}
+.tni-editorial .tni-home-promo-market>a{background:#006e67}
