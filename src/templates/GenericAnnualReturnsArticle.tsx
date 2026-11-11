@@ -624,6 +624,13 @@ export default function GenericAnnualReturnsArticle(
           Understanding the type of return used on this page is essential.
         </p>
 
+        {config.symbol === "TQQQ" ? (
+          <>
+            <p>The annual price-return chart, historical annual table and annual summary statistics measure changes in TQQQ’s closing price. Dividends are excluded from those figures.</p>
+            <p>The growth explorer’s total-return view and the TQQQ–QLD–QQQ comparison use adjusted closing prices as a proxy for reinvested distributions. Their returns, drawdowns and recovery dates follow that adjusted-close basis.</p>
+          </>
+        ) : (
+        <>
         <p>
           The historical figures presented here are{" "}
           <strong>{config.name} price returns</strong>.
@@ -652,6 +659,8 @@ export default function GenericAnnualReturnsArticle(
           The chart, historical table, filters, and statistics on this page
           represent {config.name} price performance only.
         </p>
+        </>
+        )}
       </section>
 
       {/* ==================================================================

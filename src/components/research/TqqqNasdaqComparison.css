@@ -1,0 +1,68 @@
+.tni-nasdaq-comparison {
+  margin: 40px 0;
+  padding: 28px;
+  border: 2px solid #a8bad0;
+  border-radius: 16px;
+  background: #fff;
+  color: #10233f;
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.7;
+  scroll-margin-top: 110px;
+}
+.tni-nasdaq-comparison h2 { margin: 0 0 18px; font-size: 30px; line-height: 1.25; font-weight: 850; }
+.tni-nasdaq-comparison h3 { margin: 30px 0 16px; font-size: 23px; line-height: 1.3; font-weight: 800; }
+.tni-nasdaq-comparison strong { font-weight: 850; }
+.tni-nasdaq-sections { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0; }
+.tni-nasdaq-sections a { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 14px; border: 2px solid #10233f; border-radius: 8px; text-decoration: none; }
+.tni-nasdaq-sections a:first-child { background: #10233f; color: #fff; }
+.tni-nasdaq-section { margin: 28px 0 38px; padding-top: 12px; border-top: 3px solid #10233f; scroll-margin-top: 120px; }
+.tni-nasdaq-section h3 { margin-top: 12px; }
+.tni-nasdaq-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0; }
+.tni-nasdaq-summary article { padding: 18px; border: 2px solid #b1c0d2; border-radius: 10px; text-align: left; }
+.tni-nasdaq-summary h4 { margin: 0 0 6px; font-size: 19px; font-weight: 850; }
+.tni-nasdaq-summary strong { display: block; font-size: 30px; line-height: 1.3; }
+.tni-nasdaq-summary span { display: block; margin-top: 7px; font-size: 15px; font-weight: 750; }
+.tni-nasdaq-summary p { margin: 10px 0 0; font-size: 15px; line-height: 1.5; text-align: left; }
+.tni-nasdaq-summary b { display: block; font-weight: 800; }
+.tni-nasdaq-table-heading { margin: 24px 0 10px; font-size: 20px; font-weight: 800; }
+.tni-nasdaq-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+.tni-nasdaq-controls button, .tni-nasdaq-more {
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 2px solid #667e9b;
+  border-radius: 8px;
+  background: #fff;
+  color: #10233f;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+.tni-nasdaq-controls button[aria-pressed=true] { color: #fff; background: #10233f; border-color: #10233f; }
+.tni-nasdaq-comparison :is(button,input,a):focus-visible { outline: 3px solid #075ac8; outline-offset: 4px; }
+.tni-nasdaq-legend { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 17px; font-weight: 800; }
+.tni-nasdaq-legend span { display: inline-flex; gap: 10px; }
+.tni-nasdaq-chart { overflow-x: auto; margin: 16px 0; }
+.tni-nasdaq-chart svg { display: block; width: 100%; min-width: 760px; }
+.tni-nasdaq-chart text { fill: #10233f; font-size: 17px; font-weight: 800; }
+.tni-nasdaq-slider { display: block; font-size: 16px; font-weight: 750; }
+.tni-nasdaq-slider input { display: block; width: 100%; min-height: 36px; accent-color: #075ac8; }
+.tni-nasdaq-table { overflow-x: auto; margin: 18px 0; }
+.tni-nasdaq-table table { width: 100%; min-width: 620px; border-collapse: collapse; font-size: 16px; }
+.tni-nasdaq-table :is(th,td) { padding: 13px 12px; border-bottom: 1px solid #b1c0d2; text-align: left; vertical-align: top; }
+.tni-nasdaq-table th { font-weight: 800; }
+.tni-nasdaq-table thead { background: #e9f0f8; }
+.tni-nasdaq-table caption { text-align: left; margin: 0 0 14px; color: #10233f; font-weight: 650; }
+.tni-nasdaq-note { font-size: 15px; font-weight: 650; color: #10233f; }
+.tni-nasdaq-comparison a { color: #0753b8; font-weight: 800; text-underline-offset: 3px; }
+.tni-nasdaq-download { display: inline-flex; align-items: center; min-height: 46px; padding: 12px 18px; border-radius: 8px; background: #10233f; color: #fff !important; text-decoration: none; }
+.tni-nasdaq-downloads { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 600px) {
+  .tni-nasdaq-comparison { padding: 20px 14px; font-size: 16px; }
+  .tni-nasdaq-comparison h2 { font-size: 25px; }
+  .tni-nasdaq-comparison h3 { font-size: 21px; }
+  .tni-nasdaq-controls { gap: 8px; }
+  .tni-nasdaq-controls button { padding: 8px 11px; }
+  .tni-nasdaq-summary { grid-template-columns: 1fr; }
+  .tni-nasdaq-summary article { padding: 15px; }
+}

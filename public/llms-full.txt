@@ -276,13 +276,13 @@ Subject: Tesla, Inc.
 Symbol: TSLA
 Description: Explore Tesla TSLA historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
 
-## TQQQ Returns
+## TQQQ Drawdowns, Recovery & Returns: Yearly, Monthly, Weekly & Daily | TQQQ vs. QLD vs. QQQ
 
 URL: https://tradingninvestment.com/tqqq-returns/
 Type: annual
 Subject: ProShares UltraPro QQQ
 Symbol: TQQQ
-Description: Explore TQQQ historical returns, price return, total return, growth of $10,000, annual performance, and comparison with QQQ.
+Description: TQQQ fell 81.66%—how long did recovery take? Compare TQQQ (3x), QLD (2x) and QQQ drawdowns, recovery times and yearly, monthly, weekly and daily returns.
 
 ## Trading Setups for Bearish and Bullish Gravestone Doji
 

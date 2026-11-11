@@ -1,4 +1,5 @@
 import UproTqqqComparison from "../components/research/UproTqqqComparison"
+import TqqqNasdaqComparison from "../components/research/TqqqNasdaqComparison"
 import type {
   AnnualReturnsAssetConfig,
 } from "../research/annual-returns/types"
@@ -57,9 +58,19 @@ export default function LeveragedEtfAnnualReturnsPage({
       benchmarkDataset={benchmarkDataset}
       benchmarkName={benchmarkName}
       introContent={config.symbol === "TQQQ" ? (
+        <>
         <p style={{ color: "#10233f", fontSize: 18, fontWeight: 600, lineHeight: 1.7 }}>
           {config.seo.description}
         </p>
+        <nav aria-label="TQQQ comparison sections" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px 28px", margin: "24px 0" }}>
+          <a href="#nasdaq-drawdown-recovery" style={{ color: "#0753b8", fontSize: 18, fontWeight: 800 }}>
+            Compare TQQQ, QLD and QQQ drawdowns &amp; recovery ↓
+          </a>
+          <a href="#nasdaq-period-returns" style={{ color: "#0753b8", fontSize: 18, fontWeight: 800 }}>
+            Compare yearly, monthly, weekly &amp; daily returns ↓
+          </a>
+        </nav>
+        </>
       ) : config.symbol === "UPRO" && drawdownData ? (
         <div style={{ color: "#10233f", fontSize: 18, fontWeight: 600, lineHeight: 1.75, marginTop: 18 }}>
           <p>How much can UPRO lose—and how long can it take to recover? In the UPRO–SPY dataset beginning {drawdownData.range.first_date}, UPRO’s deepest drawdown reached <strong>{Math.abs(drawdownData.asset_summary.max_drawdown_pct).toFixed(2)}%</strong>.
@@ -70,7 +81,9 @@ export default function LeveragedEtfAnnualReturnsPage({
           <p>How does UPRO compare with TQQQ and SPY? Explore returns across matching holding periods, compare losses from previous peaks, and see how long each fund took to recover. Use the interactive UPRO vs TQQQ chart and tables below to compare YTD, 1-, 3-, 5- and 10-year outcomes and growth of $10,000.</p>
         </div>
       ) : undefined}
-      afterIntroduction={config.symbol === "UPRO" && config.companyContext ? (
+      afterIntroduction={config.symbol === "TQQQ" ? (
+        <TqqqNasdaqComparison />
+      ) : config.symbol === "UPRO" && config.companyContext ? (
         <section aria-labelledby="upro-research-introduction" style={{ color: "#10233f", fontWeight: 600, fontSize: 17, lineHeight: 1.75, margin: "28px 0" }}>
           <h2 id="upro-research-introduction" style={{ fontSize: 26, fontWeight: 800 }}>{config.companyContext.title}</h2>
           {config.companyContext.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
@@ -99,7 +112,7 @@ export default function LeveragedEtfAnnualReturnsPage({
       }
       afterRollingComparison={
         <>
-          {drawdownData && <LeveragedEtfDrawdownComparison dataset={drawdownData} />}
+          {drawdownData && config.symbol !== "TQQQ" && <LeveragedEtfDrawdownComparison dataset={drawdownData} />}
           {config.symbol === "UPRO" && <UproTqqqComparison />}
         </>
       }

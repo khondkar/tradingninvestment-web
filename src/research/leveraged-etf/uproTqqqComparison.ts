@@ -2,7 +2,7 @@ export type PairPoint = { date: string; upro: number; tqqq: number }
 export type PairRange = 'YTD' | '1Y' | '3Y' | '5Y' | '10Y' | 'ALL'
 export const pairRanges: PairRange[] = ['YTD', '1Y', '3Y', '5Y', '10Y', 'ALL']
 const day = (date: string) => Date.parse(date + 'T00:00:00Z')
-export function selectPairRange(data: PairPoint[], range: PairRange) {
+export function selectPairRange<T extends { date: string }>(data: T[], range: PairRange) {
   if (range === 'ALL') return data
   const end = new Date(day(data[data.length - 1].date))
   const year = end.getUTCFullYear()
@@ -13,7 +13,7 @@ export function selectPairRange(data: PairPoint[], range: PairRange) {
   for (let i = 0; i < data.length && day(data[i].date) <= target; i++) start = i
   return start < 0 ? [] : data.slice(start)
 }
-export function pairStats(rows: PairPoint[], key: 'upro' | 'tqqq') {
+export function pairStats<K extends string>(rows: ({ date: string } & Record<K, number>)[], key: K) {
   if (rows.length < 2) return null
   const first = rows[0], last = rows[rows.length - 1]
   const growth = last[key] / first[key]
@@ -28,6 +28,8 @@ export function pairStats(rows: PairPoint[], key: 'upro' | 'tqqq') {
   const days = (a: number, b: number) => Math.round((day(rows[a].date) - day(rows[b].date)) / 86400000)
   return { total: (growth - 1) * 100, cagr: (Math.pow(growth, 1 / years) - 1) * 100,
     ending: 10000 * growth, drawdown: worst * 100,
+    currentDrawdown: (last[key] / peak - 1) * 100,
+    peakToTrough: days(troughIndex, worstPeakIndex),
     peakDate: rows[worstPeakIndex].date, troughDate: rows[troughIndex].date,
     recoveryDate: recoveryIndex < 0 ? null : rows[recoveryIndex].date,
     lowToRecovery: recoveryIndex < 0 ? null : days(recoveryIndex, troughIndex),

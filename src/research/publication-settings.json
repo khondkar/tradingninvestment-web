@@ -40,7 +40,10 @@
     "homepagePlacement": "regular"
   },
   "/tqqq-returns/": {
-    "homepagePlacement": "regular"
+    "homepagePlacement": "regular",
+    "image": "/images/social/tqqq-qld-qqq-drawdown-recovery-og.png",
+    "socialImage": "/images/social/tqqq-qld-qqq-drawdown-recovery-og.png",
+    "socialImageAlt": "TQQQ, QLD and QQQ maximum adjusted-close drawdowns of 81.66%, 63.68% and 35.12%, with 707, 513 and 405 calendar days from their lows to recovery. Matching daily history from February 11, 2010 through November 10, 2026; chart shows the 2021–2024 recovery cycle."
   },
   "/googl-stock-returns/": {
     "homepagePlacement": "regular"

@@ -1,7 +1,7 @@
 import type { AnnualReturnsAssetConfig } from "./types"
 import { kamalResearchAuthor } from "../author"
 
-const articleTitle = "TQQQ Drawdowns, Recovery & Returns: Yearly, Monthly, Weekly & Daily | TQQQ vs. QQQ"
+const articleTitle = "TQQQ Drawdowns, Recovery & Returns: Yearly, Monthly, Weekly & Daily | TQQQ vs. QLD vs. QQQ"
 
 export const tqqqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "TQQQ",
@@ -37,6 +37,7 @@ export const tqqqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
 
   newsSymbols: [
     "TQQQ",
+    "QLD",
     "QQQ",
   ],
 
@@ -80,10 +81,10 @@ export const tqqqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   seo: {
     title: articleTitle,
     h1: articleTitle,
-    description: "How long did TQQQ take to recover from an 81.66% drop? Explore yearly, monthly, weekly and daily returns, and compare TQQQ vs. QQQ drawdowns and recovery times.",
+    description: "TQQQ fell 81.66%—how long did recovery take? Compare TQQQ (3x), QLD (2x) and QQQ drawdowns, recovery times and yearly, monthly, weekly and daily returns.",
     socialTitle: articleTitle,
-    socialDescription: "How long did TQQQ take to recover from an 81.66% drop? Explore yearly, monthly, weekly and daily returns, and compare TQQQ vs. QQQ drawdowns and recovery times.",
+    socialDescription: "TQQQ fell 81.66%—how long did recovery take? Compare TQQQ (3x), QLD (2x) and QQQ drawdowns, recovery times and yearly, monthly, weekly and daily returns.",
     socialImage:
-      "/images/social/tqqq-leveraged-etf-intelligence-og.png",
+      "/images/social/tqqq-qld-qqq-drawdown-recovery-og.png",
   },
 }
