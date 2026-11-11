@@ -1,6 +1,8 @@
 import type { AnnualReturnsAssetConfig } from "./types"
 import { kamalResearchAuthor } from "../author"
 
+const articleTitle = "TQQQ Drawdowns, Recovery & Returns: Yearly, Monthly, Weekly & Daily | TQQQ vs. QQQ"
+
 export const tqqqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "TQQQ",
   slug: "tqqq-returns",
@@ -76,15 +78,11 @@ export const tqqqAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   },
 
   seo: {
-    title:
-      "TQQQ Returns: Historical Performance vs QQQ",
-
-    socialTitle:
-      "TQQQ Returns",
-
-    socialDescription:
-      "Explore TQQQ historical returns, price return, total return, growth of $10,000, annual performance, and comparison with QQQ.",
-
+    title: articleTitle,
+    h1: articleTitle,
+    description: "How long did TQQQ take to recover from an 81.66% drop? Explore yearly, monthly, weekly and daily returns, and compare TQQQ vs. QQQ drawdowns and recovery times.",
+    socialTitle: articleTitle,
+    socialDescription: "How long did TQQQ take to recover from an 81.66% drop? Explore yearly, monthly, weekly and daily returns, and compare TQQQ vs. QQQ drawdowns and recovery times.",
     socialImage:
       "/images/social/tqqq-leveraged-etf-intelligence-og.png",
   },

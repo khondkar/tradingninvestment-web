@@ -56,7 +56,11 @@ export default function LeveragedEtfAnnualReturnsPage({
       dataset={dataset}
       benchmarkDataset={benchmarkDataset}
       benchmarkName={benchmarkName}
-      introContent={config.symbol === "UPRO" && drawdownData ? (
+      introContent={config.symbol === "TQQQ" ? (
+        <p style={{ color: "#10233f", fontSize: 18, fontWeight: 600, lineHeight: 1.7 }}>
+          {config.seo.description}
+        </p>
+      ) : config.symbol === "UPRO" && drawdownData ? (
         <div style={{ color: "#10233f", fontSize: 18, fontWeight: 600, lineHeight: 1.75, marginTop: 18 }}>
           <p>How much can UPRO lose—and how long can it take to recover? In the UPRO–SPY dataset beginning {drawdownData.range.first_date}, UPRO’s deepest drawdown reached <strong>{Math.abs(drawdownData.asset_summary.max_drawdown_pct).toFixed(2)}%</strong>.
             {drawdownData.asset_summary.calendar_days_trough_to_recovery !== null

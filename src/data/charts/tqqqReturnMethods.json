@@ -164,10 +164,10 @@
     },
     {
       "year": 2026,
-      "price_return": 53.3858,
-      "total_return": 54.2909,
+      "price_return": 7.2838,
+      "total_return": 7.9168,
       "is_ytd": true,
-      "data_through": "2026-10-02",
+      "data_through": "2026-11-10",
       "price_source": "Yahoo Finance TQQQ Close",
       "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
       "methodology": "yahoo_close_and_adjusted_close"

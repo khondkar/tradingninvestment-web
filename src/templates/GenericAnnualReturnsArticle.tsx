@@ -171,11 +171,6 @@ export default function GenericAnnualReturnsArticle(
         </p>
 
         <p>
-          In other words, roughly two-thirds of the completed calendar-year
-          observations finished at or above where they began.
-        </p>
-
-        <p>
           Across those <strong>{statistics.nonNegativeCount} non-negative years</strong>, the average
           annual {config.name} price return was{" "}
           <strong>

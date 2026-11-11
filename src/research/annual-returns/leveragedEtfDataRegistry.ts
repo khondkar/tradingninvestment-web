@@ -4,7 +4,7 @@ import uproBenchmarkAnnualReturns from "../../data/charts/uproBenchmarkAnnualRet
 import uproVsSpyDrawdowns from "../../data/charts/uproVsSpyDrawdowns.json"
 import tqqqAnnualReturns from "../../data/charts/tqqqAnnualReturns.json"
 import tqqqReturnMethods from "../../data/charts/tqqqReturnMethods.json"
-import qqqAnnualReturns from "../../data/charts/qqqAnnualReturns.json"
+import qqqAnnualReturns from "../../data/charts/tqqqBenchmarkAnnualReturns.json"
 import tqqqVsQqqDrawdowns from "../../data/charts/tqqqVsQqqDrawdowns.json"
 
 import nvdlAnnualReturns from "../../data/charts/nvdlAnnualReturns.json"

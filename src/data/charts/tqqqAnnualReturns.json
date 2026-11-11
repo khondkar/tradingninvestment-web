@@ -38,7 +38,8 @@
   "current_year": {
     "year": 2026,
     "label": "2026 YTD",
-    "return_pct": 53.39
+    "return_pct": 7.28,
+    "through_date": "2026-11-10"
   },
   "data": [
     {
