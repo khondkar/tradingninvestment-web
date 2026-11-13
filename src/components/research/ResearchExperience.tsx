@@ -3,9 +3,9 @@ import { getHub, getHubItems, getResearchBreadcrumbs, getResearchCompanies, getR
 import './ResearchExperience.css'
 
 const PAGE_SIZE = 12
-const collectionPaths = ['/research/indexes/', '/research/stocks/', '/research/etfs/', '/research/history-and-risk/', '/research/trading/']
-const collectionNames = ['Indexes', 'Stocks', 'ETFs', 'History & Risk', 'Technical Analysis']
-const collectionDescriptions = ['The broad market, in perspective.', 'One company. A deeper understanding.', 'Look beneath the fund.', 'Past cycles. Enduring lessons.', 'Patterns, price action, and trading evidence.']
+const collectionPaths = ['/research/indexes/', '/research/stocks/', '/research/stock-forecasts/', '/research/etfs/', '/research/history-and-risk/', '/research/trading/']
+const collectionNames = ['Indexes', 'Stocks', 'Stock Forecasts', 'ETFs', 'History & Risk', 'Technical Analysis']
+const collectionDescriptions = ['The broad market, in perspective.', 'One company. A deeper understanding.', '15-day stock outlooks from TNI Prediction Lab.', 'Look beneath the fund.', 'Past cycles. Enduring lessons.', 'Patterns, price action, and trading evidence.']
 
 function StudyCard({ item, eager = false }: { item: ResearchItem; eager?: boolean }) {
   const [broken, setBroken] = useState(false)

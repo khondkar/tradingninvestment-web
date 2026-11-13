@@ -405,6 +405,14 @@ for (const hub of [...researchHubs]) {
     topicHubs(hub, getHubItems(hub))
   }
 }
+newHub({
+  path: '/research/stock-forecasts/',
+  title: 'AI Stock Forecasts',
+  description: 'Explore TNI’s 15-trading-day stock forecasts and the model signals, news, and risk factors behind each outlook.',
+  parent: '/research/',
+  view: 'studies',
+  match: (item) => has(item, 'stock-forecast'),
+})
 newHub({ path: '/research/archive/', title: 'The Research Library', description: 'Search every published study by company, ticker, title, or topic.',
   parent: '/research/', view: 'studies', match: () => true })
 newHub({ path: '/research/history-and-risk/', title: 'Market History & Risk',

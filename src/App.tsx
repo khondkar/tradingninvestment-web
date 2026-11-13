@@ -21,6 +21,7 @@ import { loadResearchData } from './performance/researchData'
 function currentPathname() { return typeof window === 'undefined' ? '/' : window.location.pathname }
 
 let LeveragedEtfScannerPage: typeof import('./pages/LeveragedEtfScannerPage')['default']
+let AmdNvidiaForecast: typeof import('./pages/AmdNvidiaForecast')['default']
 let IBMEarningsResearchPage: typeof import('./pages/IBMEarningsResearchPage')['default']
 let JPMvsGSEarningsResearchPage: typeof import('./pages/JPMvsGSEarningsResearchPage')['default']
 let SPYDojiResearchPage: typeof import('./pages/SPYDojiResearchPage')['default']
@@ -84,6 +85,7 @@ export async function prepareApp(pathname: string) {
     return
   }
   if (path === '/research/scanners/leveraged-etf') { LeveragedEtfScannerPage = (await import('./pages/LeveragedEtfScannerPage')).default; return }
+  if (path === '/research/amd-nvidia-stock-forecast-november-2026') { AmdNvidiaForecast = (await import('./pages/AmdNvidiaForecast')).default; return }
   if (path === '/research/ibm-earnings-prediction-october-2026') { IBMEarningsResearchPage = (await import('./pages/IBMEarningsResearchPage')).default; return }
   if (path === '/research/jpm-vs-gs-earnings-analysis') { JPMvsGSEarningsResearchPage = (await import('./pages/JPMvsGSEarningsResearchPage')).default; return }
   if (path === '/research/doji-candlestick-spy-26-year-study') { SPYDojiResearchPage = (await import('./pages/SPYDojiResearchPage')).default; return }
@@ -984,6 +986,16 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
 
   if (normalizedPath === '/research/scanners/leveraged-etf') {
     return <div className="site"><Header pathname={pathname} page="research" setPage={setPage} /><LeveragedEtfScannerPage /><Footer setPage={setPage} /></div>
+  }
+  if (normalizedPath === '/research/amd-nvidia-stock-forecast-november-2026') {
+    return (
+      <div className="site">
+        <Header pathname={pathname} page="research" setPage={setPage} />
+        <AmdNvidiaForecast />
+        <TniKitSubscriptionPopup delayMs={30000} onceEver />
+        <Footer setPage={setPage} />
+      </div>
+    )
   }
   if (normalizedPath === '/research/ibm-earnings-prediction-october-2026') {
     return (

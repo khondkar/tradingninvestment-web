@@ -18,6 +18,14 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'amd-nvidia-stock-forecast-november-2026',
+    path: '/research/amd-nvidia-stock-forecast-november-2026/',
+    title: 'Are AMD and Nvidia a Buy, or Could Both Fall Again? TNI’s 15-Day Stock Forecast',
+    description: 'TNI’s 15-day stock forecast rates AMD and Nvidia HOLD. See why Nvidia’s Quant Agent signaled BUY and what the price trends show for both stocks.',
+    name: 'AMD and Nvidia', symbol: 'AMD', categories: ['stock', 'nasdaq', 'stock-forecast'], kind: 'article',
+    image: '/images/social/research/amd-outlook-nov13.png', publishedAt: '2026-11-13',
+  },
+  {
     slug: 'nasdaq-ai-crash-2026',
     path: '/nasdaq-ai-crash-2026/',
     title: 'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble',
