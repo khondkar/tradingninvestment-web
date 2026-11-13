@@ -136,6 +136,8 @@ function recoveryGain(
 export default function LeveragedEtfDrawdownComparison({
   dataset,
 }: Props) {
+  const showStockRecovery = dataset.asset === 'NVDA' || dataset.asset === 'AMD'
+  const stockName = dataset.asset === 'NVDA' ? 'NVIDIA' : dataset.asset
   const isBerkshire = ["BRK.B", "BRK-B"].includes(dataset.asset)
 
   const chartRef =
@@ -209,7 +211,7 @@ export default function LeveragedEtfDrawdownComparison({
   )
 
   const recoveryTimeline = (
-      <div className="tni-leveraged-drawdown__timeline">
+      <div className="tni-leveraged-drawdown__timeline" id={dataset.asset === "AMD" ? "amd-recovery" : undefined} style={{scrollMarginTop:100}}>
         <div className="tni-leveraged-drawdown__timeline-heading">
           <span>{dataset.asset} DRAWDOWN HISTORY</span>
           <h3>From peak to recovery</h3>
@@ -240,7 +242,7 @@ export default function LeveragedEtfDrawdownComparison({
           </article>
         </div>
 
-        {dataset.asset === 'NVDA' && (
+        {showStockRecovery && (
           <div className="tni-leveraged-drawdown__duration">
             <span>TIME FROM THE LOW TO RECOVERY</span>
             <div>
@@ -322,12 +324,12 @@ export default function LeveragedEtfDrawdownComparison({
               of losses over the same dates; the recovery timeline
               tracks Berkshire&apos;s deepest decline.
             </>
-          ) : dataset.asset === 'NVDA' ? (
+          ) : showStockRecovery ? (
             <>
-              Compare NVIDIA with the S&amp;P 500 during market declines.
+              Compare {stockName} with the S&amp;P 500 during market declines.
               Drawdown measures the loss from each investment&apos;s previous peak.
               The chart compares losses over the same dates. The recovery
-              timeline follows NVIDIA&apos;s deepest decline within this dataset.
+              timeline follows {stockName}&apos;s deepest decline within this dataset.
             </>
           ) : (
             <>
@@ -463,7 +465,7 @@ export default function LeveragedEtfDrawdownComparison({
         </>
       </div>
 
-      {dataset.asset === 'NVDA' && recoveryTimeline}
+      {showStockRecovery && recoveryTimeline}
 
       <div
         className="tni-leveraged-drawdown__chart"
@@ -527,7 +529,7 @@ export default function LeveragedEtfDrawdownComparison({
           </figure>
         )}
 
-      {dataset.asset !== 'NVDA' && recoveryTimeline}
+      {!showStockRecovery && recoveryTimeline}
 
       <p className="tni-leveraged-drawdown__methodology">
         Source: {dataset.source}. Drawdowns are calculated
@@ -548,9 +550,9 @@ export default function LeveragedEtfDrawdownComparison({
             {formatDate(dataset.range.last_date)}.
           </>
         )}
-        {dataset.asset === 'NVDA' && (
+        {showStockRecovery && (
           <>
-            {" "}NVIDIA uses adjusted closing prices. The S&amp;P 500 benchmark
+            {" "}{stockName} uses adjusted closing prices. The S&amp;P 500 benchmark
             is a price index and excludes reinvested dividends. Each maximum
             drawdown uses its own peak and trough dates. Recovery means the
             first daily close at or above the prior peak. Durations count

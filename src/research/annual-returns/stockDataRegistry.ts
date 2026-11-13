@@ -28,6 +28,8 @@ import amznReturnMethods from "../../data/charts/amznReturnMethods.json"
 import tslaAnnualReturns from "../../data/charts/tslaAnnualReturns.json"
 import tslaReturnMethods from "../../data/charts/tslaReturnMethods.json"
 import msftAnnualReturns from "../../data/charts/msftAnnualReturns.json"
+import amdAnnualReturns from "../../data/charts/amdAnnualReturns.json"
+import amdDrawdowns from "../../data/charts/amdVsSp500Drawdowns.json"
 import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
 import nvdaDrawdowns from "../../data/charts/nvdaVsSp500Drawdowns.json"
 
@@ -133,6 +135,7 @@ export const stockResearchDataRegistry:
         msftAnnualReturns as AnnualReturnsPageData,
     },
 
+    AMD: { annualReturns: amdAnnualReturns as AnnualReturnsPageData, drawdownData: amdDrawdowns as LeveragedEtfDrawdownDataset },
     NVDA: {
       annualReturns:
         nvdaAnnualReturns as AnnualReturnsPageData,

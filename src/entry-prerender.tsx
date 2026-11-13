@@ -152,7 +152,7 @@ export function renderAnnualPage(page: AnnualPrerenderPage) {
     )
   }
 
-  if (page.returnMethodsData) {
+  if (page.returnMethodsData || page.config.symbol === 'AMD') {
     return renderToStaticMarkup(
       <StockAnnualReturnsPage
         config={page.config}

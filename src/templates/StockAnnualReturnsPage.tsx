@@ -1,3 +1,4 @@
+import AmdAnnualComparison, { AmdCompanyResearch, AmdFourWayChart } from "../components/research/AmdAnnualComparison"
 import BerkshireCashBuybacks from "../components/research/BerkshireCashBuybacks"
 import brkbMarketEvents from "../data/charts/brkbMarketEvents.json"
 import BerkshireMarketDrawdowns from "../components/research/BerkshireMarketDrawdowns"
@@ -69,7 +70,7 @@ export default function StockAnnualReturnsPage({
       dataset={dataset}
       benchmarkDataset={benchmarkDataset}
       benchmarkName="S&P 500"
-      finalSection={config.symbol === "BRK.B" ? <BerkshireCashBuybacks /> : undefined}
+      finalSection={config.symbol === "AMD" ? <AmdAnnualComparison /> : config.symbol === "BRK.B" ? <BerkshireCashBuybacks /> : undefined}
       introContent={config.symbol === "BRK.B" ? (
         <>
           <p style={{ maxWidth: 900, margin: "18px 0 0", color: "#10233f", fontSize: 18, fontWeight: 700, lineHeight: 1.75 }}>
@@ -145,6 +146,21 @@ export default function StockAnnualReturnsPage({
             <a href="#brkb-return-research" style={{ color: "#174fa6", fontWeight: 800, fontSize: 16, padding: "10px 0" }}>View returns</a>
             <a href="#brkb-cash-buybacks" style={{ color: "#174fa6", fontWeight: 800, fontSize: 16, padding: "10px 0" }}>Cash &amp; buybacks</a>
           </nav>
+        </>
+      ) : config.symbol === "AMD" ? (
+        <>
+          <nav aria-label="In this AMD article" style={{display:'flex',flexWrap:'wrap',gap:10,margin:'16px 0'}}>
+            {[
+              ['amd-drawdowns','Drawdowns & recovery'],
+              ['amd-four-way-chart','Four-way return chart'],
+              ['company','Business & outlook'],
+              ['amd-annual-heading','Year-by-year returns'],
+            ].map(([id,label]) => <a key={id} href={'#'+id} style={{background:'#14344c',color:'white',fontWeight:750,padding:'9px 15px',borderRadius:6}}>{label}</a>)}
+          </nav>
+          <h2 id="amd-drawdowns" style={{scrollMarginTop:100}}>How did AMD’s worst decline compare with the S&amp;P 500?</h2>
+          <p>AMD took nearly two decades to regain its June 2000 closing high. Its worst drawdown was 96.59%, compared with 56.78% for the S&amp;P 500 over the same study period. The two losses occurred in different market cycles.</p>
+          <p>AMD peaked on June 21, 2000, reached its low on July 27, 2015, and regained the peak on January 2, 2020: 7,134 calendar days from peak to recovery. The S&amp;P 500’s deepest decline began on October 9, 2007. It bottomed on March 9, 2009, and recovered on March 28, 2013, after 1,997 days.</p>
+          <p><a href="/#prediction-lab">Prediction Mini Lab</a> · <a href="https://app.tradingninvestment.com/live/news">News Agent</a></p>
         </>
       ) : config.symbol === "NVDA" ? (
         <>
@@ -229,6 +245,12 @@ export default function StockAnnualReturnsPage({
             </p>
           </section>
         </>
+      ) : config.symbol === "AMD" ? (
+        <>
+          {effectiveDrawdownData && <LeveragedEtfDrawdownComparison dataset={effectiveDrawdownData} />}
+          <AmdFourWayChart />
+          <AmdCompanyResearch />
+        </>
       ) : config.symbol === "NVDA" && effectiveDrawdownData ? (
         <>
           <div id="nvda-drawdown-recovery" style={{ scrollMarginTop: 100 }}>
@@ -246,7 +268,7 @@ export default function StockAnnualReturnsPage({
         </>
       ) : undefined}
       afterBenchmarkComparison={
-        config.symbol !== "NKE" && config.symbol !== "BRK.B" && config.symbol !== "NVDA" && effectiveDrawdownData ? (
+        config.symbol !== "NKE" && config.symbol !== "BRK.B" && config.symbol !== "NVDA" && config.symbol !== "AMD" && effectiveDrawdownData ? (
           <LeveragedEtfDrawdownComparison dataset={effectiveDrawdownData} />
         ) : undefined
       }

@@ -29,6 +29,7 @@ import { tslaAnnualReturnsConfig } from "./tsla"
 import { dowAnnualReturnsConfig } from "./dow"
 import { msftAnnualReturnsConfig } from "./msft"
 import { nasdaqAnnualReturnsConfig } from "./nasdaq"
+import { amdAnnualReturnsConfig } from "./amd"
 import { nvdaAnnualReturnsConfig } from "./nvda"
 import { sp500AnnualReturnsConfig } from "./sp500"
 import type { AnnualReturnsAssetConfig } from "./types"
@@ -80,6 +81,9 @@ export const annualReturnsResearchRegistry:
       featured: false,
       previewImage:
         "/images/social/nasdaq-vs-sp500-historical-returns-og.svg",
+    },
+    {
+      config: amdAnnualReturnsConfig, legacyPublished: true, featured: false,
     },
     {
       config: nvdaAnnualReturnsConfig,
