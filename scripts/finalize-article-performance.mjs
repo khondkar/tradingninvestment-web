@@ -12,7 +12,7 @@ const vite = await createServer({ root, server: { middlewareMode: true }, appTyp
 try {
   const { publishedAnnualReturnsResearchRegistry: annual } = await vite.ssrLoadModule('/src/research/annual-returns/registry.ts')
   const { default: App, prepareApp } = await vite.ssrLoadModule('/src/App.tsx')
-  const routes = [...new Set([...annual.map(({ config }) => config.canonicalPath), '/sp-500-monthly-returns/'])]
+  const routes = [...new Set([...annual.map(({ config }) => config.canonicalPath), '/sp-500-monthly-returns/', '/nasdaq-monthly-returns/'])]
   let maxCss = 0
   for (const route of routes) {
     const filename = path.join(dist, route, 'index.html')

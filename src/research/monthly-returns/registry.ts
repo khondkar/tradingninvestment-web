@@ -1,6 +1,20 @@
+import { nasdaqMonthlyReturnsConfig } from "./nasdaq"
 import { sp500MonthlyReturnsConfig } from "./sp500"
 
 export const monthlyReturnsRegistry = [
+  {
+    config: {
+      ...nasdaqMonthlyReturnsConfig,
+      seo: {
+        ...nasdaqMonthlyReturnsConfig.seo,
+        socialTitle: nasdaqMonthlyReturnsConfig.seo.title,
+        socialDescription: nasdaqMonthlyReturnsConfig.seo.description,
+      },
+    },
+    featured: true,
+    previewImage: "/images/social/nasdaq-monthly-return-context.png",
+  },
+
   {
     config: {
       ...sp500MonthlyReturnsConfig,

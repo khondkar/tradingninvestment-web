@@ -25,6 +25,7 @@ const routes = new Map([
   ['/stock-market-historical-returns/', 'src/pages/DowReturnsPage.tsx'],
   ['/nasdaq-historical-annual-returns/', 'src/pages/NasdaqReturnsPage.tsx'],
   ['/sp-500-monthly-returns/', 'src/pages/SP500MonthlyReturnsPage.tsx'],
+  ['/nasdaq-monthly-returns/', 'src/pages/NasdaqMonthlyReturnsPage.tsx'],
   ['/stock-market-correction-myth-and-reality/', 'src/pages/SP500DrawdownsPage.tsx'],
 ])
 for (const { config } of entries) {

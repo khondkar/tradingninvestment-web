@@ -36,6 +36,7 @@ let AverageStockMarketReturnPage: typeof import('./pages/AverageStockMarketRetur
 let DowReturnsPage: typeof import('./pages/DowReturnsPage')['default']
 let NasdaqReturnsPage: typeof import('./pages/NasdaqReturnsPage')['default']
 let SP500MonthlyReturnsPage: typeof import('./pages/SP500MonthlyReturnsPage')['default']
+let NasdaqMonthlyReturnsPage: typeof import('./pages/NasdaqMonthlyReturnsPage')['default']
 let SP500DrawdownsPage: typeof import('./pages/SP500DrawdownsPage')['default']
 let NVDAReturnsPage: typeof import('./pages/NVDAReturnsPage')['default']
 let MSFTReturnsPage: typeof import('./pages/MSFTReturnsPage')['default']
@@ -106,6 +107,7 @@ export async function prepareApp(pathname: string) {
   if (path === '/average-stock-market-return') { AverageStockMarketReturnPage = (await import('./pages/AverageStockMarketReturnPage')).default; return }
   if (path === '/stock-market-historical-returns') { DowReturnsPage = (await import('./pages/DowReturnsPage')).default; return }
   if (path === '/sp-500-monthly-returns') { SP500MonthlyReturnsPage = (await import('./pages/SP500MonthlyReturnsPage')).default; return }
+  if (path === '/nasdaq-monthly-returns') { NasdaqMonthlyReturnsPage = (await import('./pages/NasdaqMonthlyReturnsPage')).default; return }
   if (path === '/stock-market-correction-myth-and-reality') { SP500DrawdownsPage = (await import('./pages/SP500DrawdownsPage')).default; return }
   const embed = path.match(/^\/embed\/([^/]+)\/10000-growth$/)
   const entry = publishedAnnualReturnsResearchRegistry.find(({ config }) =>
@@ -1224,6 +1226,20 @@ function App({ pathname = currentPathname() }: { pathname?: string } = {}) {
         <SP500MonthlyReturnsPage />
         <TniKitSubscriptionPopup />
         <ResearchConnections path="/sp-500-monthly-returns/" />
+      </div>
+    )
+  }
+
+  if (normalizedPath === '/nasdaq-monthly-returns') {
+    return (
+      <div className="site">
+        <Header pathname={pathname}
+          page="research"
+          setPage={setPage}
+        />
+        <NasdaqMonthlyReturnsPage />
+        <TniKitSubscriptionPopup />
+        <ResearchConnections path="/nasdaq-monthly-returns/" />
       </div>
     )
   }

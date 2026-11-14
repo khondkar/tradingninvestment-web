@@ -340,7 +340,7 @@ export default function GenericMonthlyReturnsPage({
         </div>
 
         <div className="tni-monthly-research-nav">
-          <a href="/sp-500-returns/">
+          <a href={config.symbol === "^IXIC" ? "/nasdaq-historical-annual-returns/" : "/sp-500-returns/"}>
             Annual Returns
           </a>
 
@@ -597,7 +597,7 @@ export default function GenericMonthlyReturnsPage({
 
               <div className="tni-monthly-context-action">
                 <a
-                  href="/images/social/sp500-monthly-return-context.png"
+                  href={config.symbol === "^IXIC" ? "/images/social/nasdaq-monthly-return-context.png" : "/images/social/sp500-monthly-return-context.png"}
                   download
                 >
                   Download Return Context Chart
@@ -723,16 +723,15 @@ export default function GenericMonthlyReturnsPage({
                 </div>
 
                 <p className="tni-monthly-risk-note">
-                  So far, this month's closing-price
-                  drawdown is shallower than every
-                  completed historical {
-                    currentMonth.month_name
-                  } observation in the dataset.
+                  {dataset.current_month_risk.drawdown_percentile.toFixed(2)}%
+                  {' '}of completed historical {currentMonth.month_name}
+                  {' '}observations had an equal or more severe
+                  closing-price drawdown. The current month is incomplete.
                 </p>
 
                 <div className="tni-monthly-context-action">
                   <a
-                    href="/images/social/sp500-monthly-risk-context.png"
+                    href={config.symbol === "^IXIC" ? "/images/social/nasdaq-monthly-risk-context.png" : "/images/social/sp500-monthly-risk-context.png"}
                     download
                   >
                     Download Risk Context Chart
@@ -1131,7 +1130,7 @@ export default function GenericMonthlyReturnsPage({
         </div>
 
         <a
-          href="/sp-500-returns/"
+          href={config.symbol === "^IXIC" ? "/nasdaq-historical-annual-returns/" : "/sp-500-returns/"}
           className="tni-monthly-related-link"
         >
           {config.shortName} Annual Returns
