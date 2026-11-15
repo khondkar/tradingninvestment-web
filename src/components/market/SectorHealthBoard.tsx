@@ -1,3 +1,4 @@
+import { downloadSectorPng } from './downloadSectorPng'
 import {
   useMarketTodaySnapshot,
 } from '../../hooks/useMarketTodaySnapshot'
@@ -154,6 +155,14 @@ export default function SectorHealthBoard() {
                   )}
                 </span>
               </div>
+              <button
+                type="button"
+                aria-label={`Download ${config.eyebrow.toLowerCase()} chart as PNG`}
+                style={{ background: '#fff', color: '#102b42', border: '2px solid #102b42', borderRadius: 6, padding: '8px 12px', fontWeight: 700, cursor: 'pointer' }}
+                onClick={() => downloadSectorPng(config.eyebrow, horizon.updated_at_et, sectors)}
+              >
+                Download PNG
+              </button>
             </header>
 
             <div className="sector-bars">

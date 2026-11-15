@@ -49,6 +49,13 @@ for (const page of pages) {
   ]
 
   let html = template
+  if (page.path === '/stock-market-today/sector-health/') {
+    // Sector Health charts are shared as individual PNGs.
+    html = html
+      .replace(/<meta\b[^>]*\b(?:property|name)=["'](?:og|twitter):image(?::[^"']+)?["'][^>]*>/gi, '')
+      .replace(/(<meta\b[^>]*\bname="twitter:card"[^>]*\bcontent=")summary_large_image(")/i, '$1summary$2')
+  }
+
   for (const [pattern, replacement] of replacements) {
     if (!pattern.test(html)) {
       throw new Error(`Missing metadata in ${page.path}: ${pattern}`)
