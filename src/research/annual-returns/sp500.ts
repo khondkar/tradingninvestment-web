@@ -33,7 +33,8 @@ export const sp500AnnualReturnsConfig: AnnualReturnsAssetConfig = {
   },
 
   seo: {
-    title: "S&P 500 Returns by Year: 100-Year History & Performance",
+    description: "The S&P 500 fell in 31 of 98 calendar years from 1928 through 2025. See every annual price return, the best and worst years, and the latest YTD figure.",
+    title: "S&P 500 Returns by Year Since 1928: How Often Did It Fall?",
     socialTitle: "S&P 500 Returns by Year (1928–2026)",
     socialDescription: "Nearly a century of S&P 500 market history, including annual returns, average return, positive and negative years, and 2026 YTD performance.",
     socialImage: "/images/sp500-returns-linkedin.png",

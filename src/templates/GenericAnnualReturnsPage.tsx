@@ -1016,6 +1016,12 @@ export default function GenericAnnualReturnsPage({
               : buildAnnualReturnsHeadline(config)}
           </h1>
 
+          {config.slug === 'sp-500-returns' && (
+            <p style={{ color: '#10233f', fontSize: 18, fontWeight: 650 }}>
+              The S&P 500 finished lower in 31 of the 98 calendar years from 1928 through 2025. How did your year compare?
+            </p>
+          )}
+
           {dataset.current_year.through_date && (
             <div
               style={{
