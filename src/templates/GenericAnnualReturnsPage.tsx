@@ -1,3 +1,4 @@
+import Sp500IndexComparisons from "../components/research/Sp500IndexComparisons"
 import { ArticleAuthorBio } from "../components/research/AuthorBiography"
 // ============================================================================
 // TNI ANNUAL RETURNS — GENERIC PAGE BASELINE
@@ -1016,12 +1017,6 @@ export default function GenericAnnualReturnsPage({
               : buildAnnualReturnsHeadline(config)}
           </h1>
 
-          {config.slug === 'sp-500-returns' && (
-            <p style={{ color: '#10233f', fontSize: 18, fontWeight: 650 }}>
-              The S&P 500 finished lower in 31 of the 98 calendar years from 1928 through 2025. How did your year compare?
-            </p>
-          )}
-
           {dataset.current_year.through_date && (
             <div
               style={{
@@ -1043,7 +1038,18 @@ export default function GenericAnnualReturnsPage({
             </div>
           )}
 
-          {introContent ?? (config.slug===
+          {config.slug === 'sp-500-returns' && (
+            <nav className="tni-index-jumps" aria-label="In this article">
+              <a href="#sp500-annual-returns">Returns</a>
+              <a href="#index-cumulative-comparison">Comparison charts</a>
+              <a href="#sp500-dow-drawdown">Drawdowns</a>
+            </nav>
+          )}
+
+          {(config.slug === 'sp-500-returns' ? <div className="tni-sp500-article-intro">
+            <p>The S&amp;P 500 gained 16.26% in 2020. By March 23 of that same year, it had fallen 33.92% from its February high. The Dow fell even further, losing 37.09%. The S&amp;P recovered its high in August. Dow investors waited until November.</p>
+            <p>Which index came out ahead over your holding period? Start with S&amp;P 500 returns by year going back to 1928, then choose a start and end year to compare cumulative price returns for the S&amp;P 500, Dow Jones, and Nasdaq Composite. The drawdown chart shows how far the S&amp;P and Dow fell along the way and how long each took to recover.</p>
+          </div> : introContent) ?? (config.slug===
             'stock-market-historical-returns'? (<><p
               style={{
                 maxWidth: '820px',
@@ -2326,7 +2332,7 @@ export default function GenericAnnualReturnsPage({
 
         {beforeAnnualChart}
 
-        <section
+        <section id={config.slug === 'sp-500-returns' ? 'sp500-annual-returns' : undefined}
           style={{
             marginBottom: '42px',
           }}
@@ -2704,6 +2710,8 @@ export default function GenericAnnualReturnsPage({
             figures shown on this page are {config.name} price returns.
           </div>
         </section>
+
+        {config.slug === 'sp-500-returns' && <Sp500IndexComparisons />}
 
         {/* =================================================================
             TNI ANNUAL RETURNS — DYNAMIC FILTERED STATISTICS
