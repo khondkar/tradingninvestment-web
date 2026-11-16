@@ -33,6 +33,7 @@ export const sp500AnnualReturnsConfig: AnnualReturnsAssetConfig = {
   },
 
   seo: {
+    h1: "S&P 500 Returns & Drawdowns vs. the Dow and Nasdaq",
     description: "Which index gained more, and how deep were the losses? Compare S&P 500, Dow and Nasdaq returns, then see how far the S&P and Dow fell and when they recovered.",
     title: "S&P 500 Returns & Drawdowns vs. the Dow and Nasdaq",
     socialTitle: "S&P 500 Returns & Drawdowns vs. the Dow and Nasdaq",
