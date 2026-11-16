@@ -1,0 +1,72 @@
+[
+  {
+    "symbol": "CRWV",
+    "peak_date": "2026-05-06",
+    "peak_close": 137.97999572753906,
+    "latest_close": 53.130001068115234,
+    "drawdown_pct": -61.49441751467517
+  },
+  {
+    "symbol": "SNDK",
+    "peak_date": "2026-06-25",
+    "peak_close": 2335.0,
+    "latest_close": 885.010009765625,
+    "drawdown_pct": -62.09807238691114
+  },
+  {
+    "symbol": "INTC",
+    "peak_date": "2026-06-22",
+    "peak_close": 140.94000244140625,
+    "latest_close": 59.65999984741211,
+    "drawdown_pct": -57.66993130838429
+  },
+  {
+    "symbol": "NBIS",
+    "peak_date": "2026-06-18",
+    "peak_close": 286.69000244140625,
+    "latest_close": 115.87999725341797,
+    "drawdown_pct": -59.580035485506144
+  },
+  {
+    "symbol": "MRVL",
+    "peak_date": "2026-06-04",
+    "peak_close": 316.42999267578125,
+    "latest_close": 156.75999450683594,
+    "drawdown_pct": -50.45981792647118
+  },
+  {
+    "symbol": "MU",
+    "peak_date": "2026-06-25",
+    "peak_close": 1213.56005859375,
+    "latest_close": 778.3099975585938,
+    "drawdown_pct": -35.86555588682736
+  },
+  {
+    "symbol": "AVGO",
+    "peak_date": "2026-06-02",
+    "peak_close": 481.57000732421875,
+    "latest_close": 347.010009765625,
+    "drawdown_pct": -27.94193897295617
+  },
+  {
+    "symbol": "AMD",
+    "peak_date": "2026-10-06",
+    "peak_close": 649.4199829101562,
+    "latest_close": 534.0599975585938,
+    "drawdown_pct": -17.763541065462096
+  },
+  {
+    "symbol": "QCOM",
+    "peak_date": "2026-05-29",
+    "peak_close": 251.02000427246094,
+    "latest_close": 172.47000122070312,
+    "drawdown_pct": -31.292327987732182
+  },
+  {
+    "symbol": "NVDA",
+    "peak_date": "2026-10-06",
+    "peak_close": 239.24000549316406,
+    "latest_close": 162.85000610351562,
+    "drawdown_pct": -31.930278229253418
+  }
+]

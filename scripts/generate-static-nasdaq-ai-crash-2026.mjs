@@ -13,9 +13,9 @@ const root = path.resolve(
 const dist = path.join(root, 'dist')
 const canonical =
   'https://tradingninvestment.com/nasdaq-ai-crash-2026/'
-const title = "Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble | TNI"
-const description = "Nasdaq fell 5.52% on Nov. 5, 2026. Compare AI stock drawdowns with the 2000 dot-com crash and discover what happened after historic Nasdaq selloffs."
-const image = "https://tradingninvestment.com/images/social/nasdaq-ai-crash-2026-og.png"
+const title = "Nasdaq AI Stock Crash 2026: How Much Did the Nasdaq Recover?"
+const description = "The Nasdaq lost 1,421 points in one day. By Nov. 13, it had rebounded 3.38% but was still 8.93% below its peak. See how 10 AI stocks compare."
+const image = "https://tradingninvestment.com/images/social/nasdaq-ai-crash-2026-nov13.png"
 
 const escape = (value) =>
   String(value)
@@ -99,7 +99,7 @@ html = html.replace(
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble',
+  headline: "Nasdaq AI Stock Crash 2026: How Much Did the Nasdaq Recover?",
   description,
   datePublished: '2026-11-06',
   dateModified: '2026-11-06',

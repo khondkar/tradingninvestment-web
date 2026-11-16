@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import data from '../data/articles/nasdaq-ai-crash-2026.json'
+import updatedStocks from '../data/articles/nasdaq-ai-stocks-2026-11-13.json'
 import forwardReturns from '../data/articles/nasdaq-crash-forward-returns.json'
 import './NasdaqAICrash2026Page.css'
 
@@ -32,11 +33,6 @@ function maxDrawdown(points: Point[]) {
     worst = Math.min(worst, (p.close / peak - 1) * 100)
   }
   return worst
-}
-
-function currentDrawdown(points: Point[]) {
-  const peak = Math.max(...points.map(p => p.close))
-  return (points[points.length - 1].close / peak - 1) * 100
 }
 
 const percent = (n: number) => `${n.toFixed(2)}%`
@@ -72,7 +68,7 @@ function Bars({ rows, title, note }: {
 }
 
 function HistoricalComparison() {
-  const chartUrl = '/images/social/nasdaq-ai-crash-2026-og.png'
+  const chartUrl = '/images/social/nasdaq-ai-crash-2026-nov13.png'
 
   return (
     <figure className="nac-figure">
@@ -83,19 +79,19 @@ function HistoricalComparison() {
           src={chartUrl}
           width={1200}
           height={630}
-          alt="Nasdaq Composite daily closes indexed to 100. The blue line tracks the 1997–2002 dot-com cycle and the red line tracks the 2023–2026 AI boom. Each line has its own calendar-year labels."
+          alt="Nasdaq Composite daily closes indexed to 100. The blue line tracks the 1997–2002 dot-com cycle and the red line tracks the 2023–2026 AI boom. The horizontal axis measures trading sessions from each starting close."
           style={{ display: 'block', width: '100%', height: 'auto' }}
         />
       </a>
       <figcaption className="nac-source">
-        Both series start at 100 and are aligned by trading session.
+        Both series start at 100 and are aligned by trading session. The AI series ends November 13, 2026.
         Source: Yahoo Finance daily closing prices.
       </figcaption>
     </figure>
   )
 }
 
-const stocks2026 = [...data.stocks_2026]
+const stocks2026 = [...updatedStocks]
   .sort((a, b) => a.drawdown_pct - b.drawdown_pct)
 
 const peakAI = Math.max(...ai.map(point => point.close))
@@ -103,7 +99,8 @@ const scenarios = [20, 30, 40, 55.7, 77.9]
 
 export default function NasdaqAICrash2026Page() {
   useEffect(() => {
-    document.title = 'Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble | TNI'
+    document.title =
+      'Nasdaq AI Stock Crash 2026: How Much Did the Nasdaq Recover?'
     let canonical = document.querySelector<HTMLLinkElement>(
       'link[rel="canonical"]'
     )
@@ -127,15 +124,15 @@ export default function NasdaqAICrash2026Page() {
       <article>
         <header className="nac-hero">
           <span className="nac-eyebrow">
-            TNI ORIGINAL RESEARCH · NOVEMBER 5, 2026
+            TNI ORIGINAL RESEARCH · UPDATED NOVEMBER 16, 2026
           </span>
-          <h1>Nasdaq AI Stock Crash 2026 vs. the 2000 Dot-Com Bubble</h1>
+          <h1>Nasdaq AI Stock Crash 2026: How Much Did the Nasdaq Recover?</h1>
           <p>
-            On November 5, 2026, the Nasdaq Composite fell 1,421.51 points (5.52%), its largest one-day point drop in our daily closing-price data going back to December 1996. What could come next for AI stocks? To put the selloff in context, we compare today’s AI boom with the dot-com bubble, from the 1998 correction through the 2000 peak and the decline that followed. Where do the two booms look similar, and where do their paths diverge?
+            The Nasdaq Composite closed November 13 at 25,136.27, up 3.38% from its November 5 close of 24,315.00. That rebound left the index 8.93% below its closing peak. The chart compares this recovery with the dot-com cycle, and the stock rankings show how far individual AI companies remain below their highs.
           </p>
           <p className="nac-byline">
             By <a href="/about/" rel="author">Kamal Khondkar</a> ·
-            Quantitative Research · Data through November 5, 2026
+            Quantitative Research · Market data through November 13, 2026
           </p>
         </header>
 
@@ -190,8 +187,8 @@ export default function NasdaqAICrash2026Page() {
 
         <div className="nac-metrics">
           <div>
-            <span>AI BOOM · 2026 CORRECTION</span>
-            <strong>{percent(currentDrawdown(ai))}</strong>
+            <span>NASDAQ DRAWDOWN · NOVEMBER 13</span>
+            <strong>-8.93%</strong>
             <small>From prior closing peak</small>
           </div>
           <div>
@@ -245,21 +242,21 @@ export default function NasdaqAICrash2026Page() {
         </section>
 
         <section className="nac-section">
-          <h2>10 AI and semiconductor stocks: 2026 peak drawdowns</h2>
+          <h2>10 AI and semiconductor stocks: November 13 drawdowns</h2>
           <p>
             The index-level selloff conceals much deeper declines in
             individual technology companies. Each figure below is
             calculated from the highest daily closing price during
-            the preceding 12 months through November 5.
+            the preceding 12 months through November 13.
           </p>
           <Bars
-            title="Selected AI-related stocks: peak-to-November 5 drawdown"
+            title="Selected AI-related stocks: peak-to-November 13 drawdown"
             rows={stocks2026.map(s => ({
               name: s.symbol,
               value: s.drawdown_pct,
-              note: `Peak: ${s.peak_date} · ${s.peak_close.toFixed(2)} to ${s.nov5_close.toFixed(2)}`
+              note: `Peak: ${s.peak_date} · ${s.peak_close.toFixed(2)} to ${s.latest_close.toFixed(2)}`
             }))}
-            note="Source: Yahoo Finance daily Close, downloaded through November 5, 2026. TNI calculations. This is a selected group, not a ranking of Nasdaq index contributions."
+            note="Source: Yahoo Finance daily Close, downloaded through November 13, 2026. TNI calculations. This is a selected group, not a ranking of Nasdaq index contributions."
           />
         </section>
 

@@ -32,7 +32,7 @@ export const additionalPublications: ResearchItem[] = [
     description: 'Original research comparing the Nasdaq AI selloff with the dot-com crash, major technology-stock drawdowns and historical forward returns after severe market declines.',
     name: 'Nasdaq Composite',
     symbol: 'IXIC',
-    image: '/images/social/nasdaq-ai-crash-2026-og.png',
+    image: '/images/social/nasdaq-ai-crash-2026-nov13.png',
     categories: ['index', 'nasdaq', 'market-history', 'market-crash', 'drawdowns'],
     topics: ['risk', 'history'],
     kind: 'article',
