@@ -35,11 +35,29 @@ for (const [attribute, name, content] of [
 }
 html = html.replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${origin + route}" />`)
 html = html.replace('<div id="root"></div>', `<div id="root" data-tni-hydrate="article">${markup}</div>`)
+const video = {
+  "@type": "VideoObject",
+  "@id": "https://tradingninvestment.com/research/anthropic-ipo-debut-performance/#ipo-video",
+  "name": "Anthropic IPO: Who Really Gets the First-Day Gains?",
+  "description": "A research walkthrough of 15 major US IPOs, comparing offer-price and opening-trade returns before examining Anthropic’s financial risks. Research snapshot: November 17, 2026.",
+  "thumbnailUrl": [
+    "https://tradingninvestment.com/images/social/research/mega-ipo-outcomes-youtube-thumbnail.png"
+  ],
+  "uploadDate": "2026-11-18",
+  "duration": "PT6M55S",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/52f_PlXMaOk?rel=0",
+  "url": "https://www.youtube.com/watch?v=52f_PlXMaOk",
+  "creator": {
+    "@id": "https://tradingninvestment.com/#organization"
+  },
+  "inLanguage": "en"
+}
 const schema = {
   '@context': 'https://schema.org', '@type': 'Article', headline, description, image,
-  datePublished: '2026-11-17', dateModified: '2026-11-17', mainEntityOfPage: origin + route,
+  datePublished: '2026-11-17', dateModified: '2026-11-18', mainEntityOfPage: origin + route,
   author: { '@type': 'Person', name: 'Kamal Khondkar', url: origin + '/about/#kamal-khondkar' },
   publisher: { '@id': origin + '/#organization' },
+  video,
   citation: ['https://ipo.anthropic.com/us/', 'https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm', 'https://www.renaissancecapital.com/IPO-Center/Stats/Largest-US-IPOs'],
 }
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dist/.vite/manifest.json'), 'utf8'))

@@ -72,6 +72,23 @@ export default function AnthropicIpoResearch() {
       <p className="ipo-lead">Three of the 11 IPOs in this study that closed above their offer price still lost money from the opening trade. The median offer-to-close return was 19.22%; the median opening-to-close return was 3.03%. The price used to measure a debut changes the story investors see.</p>
       <p>This article examines the three largest eligible traditional US IPOs in each calendar year from 2022 through November 17, 2026. Anthropic’s proposed listing provides current context. It has no observed debut return at the research cutoff and is excluded from every historical statistic below.</p>
 
+      <section id="ipo-video" className="ipo-video" aria-labelledby="ipo-video-title">
+        <h2 id="ipo-video-title">Watch: Who gets the first-day IPO gains?</h2>
+        <p>The 6-minute, 55-second walkthrough compares IPO offer prices with opening trades, then examines Anthropic’s financial risks. Research snapshot: November 17, 2026.</p>
+        <div className="ipo-video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/52f_PlXMaOk?rel=0"
+            title="Anthropic IPO: Who Really Gets the First-Day Gains? — TNI Market Intelligence"
+            width="960"
+            height="540"
+            loading="lazy"
+            allow="encrypted-media; picture-in-picture; fullscreen"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+        <p className="ipo-video-link"><a href="https://youtu.be/52f_PlXMaOk" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+      </section>
 
       <section id="ipo-comparison"><h2>How the biggest IPOs performed on debut day, 2022–2026</h2>
         <p>Selection uses gross base proceeds before the underwriters’ additional-share option. We take three offerings per year rather than letting 2026 dominate the sample. SPACs, direct listings, closed-end funds and US cross-listings of companies already trading abroad are excluded. INNIO therefore enters the 2026 group; SK hynix’s US depositary-share listing does not.</p>
