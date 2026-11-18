@@ -59,6 +59,10 @@ export default function AnthropicIpoResearch() {
     <header className="ipo-hero">
       <a className="ipo-eyebrow" href="/research/">TNI RESEARCH · IPO HISTORY</a>
       <h1>Anthropic IPO: Who Gets the First-Day Gains?</h1>
+      <nav className="ipo-tools" aria-label="TNI research tools">
+        <a href="https://app.tradingninvestment.com/prediction-lab">Prediction Lab <span aria-hidden="true">→</span></a>
+        <a href="https://app.tradingninvestment.com/live/news">News Agent <span aria-hidden="true">→</span></a>
+      </nav>
       <p className="ipo-deck">A descriptive study of 15 large US listings: offer prices, opening premiums, first-day gains and losses, and Anthropic’s reported financial risks.</p>
       <p className="ipo-byline">By <a href="/about/#kamal-khondkar" rel="author">Kamal Khondkar</a> · Published November 17, 2026 · Research cutoff November 17, 2026</p>
       <nav className="ipo-jumps" aria-label="Article sections"><a href="#ipo-comparison">IPO results</a><a href="#entry-price">Gains & losses</a><a href="#anthropic-terms">Anthropic financials</a><a href="#ipo-methodology">Data & sources</a></nav>
@@ -88,6 +92,15 @@ export default function AnthropicIpoResearch() {
         <p>Arm’s $51 offer became a $56.10 opening trade and a $63.59 close in September 2023. The corresponding returns were 24.69% and 13.35%. Medline also rewarded both groups in December 2025, closing at $41 after a $29 offer and $35 opening trade. Neither example establishes a repeatable result for a future listing.</p>
         <p>Lineage and Viking illustrate a subtler outcome. Each finished above its offer price but below its opening trade. CoreWeave reversed the pattern: its $40 close matched the offer but exceeded the $39 open. Reporting only the offer-based return misses the experience of investors trading after the listing begins.</p>
       </section>
+
+      <aside className="ipo-related" aria-labelledby="ipo-related-title">
+        <h2 id="ipo-related-title">Related return and drawdown research</h2>
+        <div className="ipo-related-links">
+          <a href="/sp-500-returns/"><strong>S&amp;P 500 yearly returns</strong><span>Annual returns and index comparisons →</span></a>
+          <a href="/nasdaq-historical-annual-returns/"><strong>Nasdaq yearly returns</strong><span>Historical annual gains and losses →</span></a>
+          <a href="/amd-stock-returns-drawdowns-and-recovery/"><strong>AMD returns and drawdowns</strong><span>Return history, drawdowns and recovery →</span></a>
+        </div>
+      </aside>
 
       <section id="anthropic-terms"><h2>Anthropic’s proposed offer and financial position</h2>
         <p>Anthropic’s IPO website expects pricing on November 18 and public trading on November 19, subject to regulatory clearance. The proposed Nasdaq ticker is <strong>ANT</strong>. These are expected milestones. At this article’s November 17 cutoff, there is no final offer price, opening trade or debut-day closing return.</p>
