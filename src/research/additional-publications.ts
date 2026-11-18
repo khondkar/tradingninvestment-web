@@ -18,6 +18,14 @@ import type { ResearchItem } from './discovery'
 
 export const additionalPublications: ResearchItem[] = [
   {
+    slug: 'anthropic-ipo-debut-performance',
+    path: '/research/anthropic-ipo-debut-performance/',
+    title: 'Anthropic IPO: Can a Blockbuster Debut Still Lose You Money?',
+    description: 'Compare offer-to-close and opening-to-close returns for 15 major US IPOs from 2022–2026, with Anthropic’s proposed terms, sourced data and interactive charts.',
+    name: 'Anthropic IPO', symbol: 'ANT', categories: ['stock', 'nasdaq', 'market-history', 'ipo'], kind: 'article',
+    image: '/images/social/research/anthropic-ipo-debut-performance-tni-og.png', publishedAt: '2026-11-17',
+  },
+  {
     slug: 'amd-nvidia-stock-forecast-november-2026',
     path: '/research/amd-nvidia-stock-forecast-november-2026/',
     title: 'Are AMD and Nvidia a Buy, or Could Both Fall Again? TNI’s 15-Day Stock Forecast',
