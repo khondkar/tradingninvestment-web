@@ -20,10 +20,10 @@ export const additionalPublications: ResearchItem[] = [
   {
     slug: 'anthropic-ipo-debut-performance',
     path: '/research/anthropic-ipo-debut-performance/',
-    title: 'Anthropic IPO: Can a Blockbuster Debut Still Lose You Money?',
-    description: 'Compare offer-to-close and opening-to-close returns for 15 major US IPOs from 2022–2026, with Anthropic’s proposed terms, sourced data and interactive charts.',
+    title: 'Anthropic IPO: Who Gets the First-Day Gains?',
+    description: 'Three of 15 IPOs gained from their offer price but fell from their opening trade. Compare debut returns, entry prices and Anthropic’s financial risks.',
     name: 'Anthropic IPO', symbol: 'ANT', categories: ['stock', 'nasdaq', 'market-history', 'ipo'], kind: 'article',
-    image: '/images/social/research/anthropic-ipo-debut-performance-tni-og.png', publishedAt: '2026-11-17',
+    image: '/images/social/research/mega-ipo-yearly-medians.png', publishedAt: '2026-11-17',
   },
   {
     slug: 'amd-nvidia-stock-forecast-november-2026',

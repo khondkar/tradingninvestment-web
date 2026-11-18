@@ -8,11 +8,11 @@ import { renderToString } from 'react-dom/server'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const route = '/research/anthropic-ipo-debut-performance/'
 const origin = 'https://tradingninvestment.com'
-const title = 'Anthropic IPO: Big IPO Debut Returns, 2022–2026 | TNI'
-const description = 'A 68% IPO gain can still leave an opening buyer down 11%. Compare 15 major IPO debuts before Anthropic’s listing, with offer prices, charts and sources.'
-const headline = 'Anthropic IPO: Can a Blockbuster Debut Still Lose You Money?'
-const image = `${origin}/images/social/research/anthropic-ipo-debut-performance-tni-og.png`
-const imageAlt = 'Offer-to-close and opening-to-close returns for 15 selected US IPOs in 2022–2026. Median returns are 19.22% and 3.03%, respectively.'
+const title = 'Anthropic IPO: Who Gets the First-Day Gains? | TNI'
+const description = 'Three of 15 IPOs gained from their offer price but fell from their opening trade. Compare debut returns, entry prices and Anthropic’s financial risks.'
+const headline = 'Anthropic IPO: Who Gets the First-Day Gains?'
+const image = `${origin}/images/social/research/mega-ipo-yearly-medians.png`
+const imageAlt = 'Median first-day returns for 2022–2026 in two labeled panels: bought at IPO offer price and bought at market opening. Both returns end at the first-day close; three selected IPOs per year.'
 const template = fs.readFileSync(path.join(root, 'dist/index.html'), 'utf8')
 const vite = await createServer({ root, server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 let markup
@@ -40,7 +40,7 @@ const schema = {
   datePublished: '2026-11-17', dateModified: '2026-11-17', mainEntityOfPage: origin + route,
   author: { '@type': 'Person', name: 'Kamal Khondkar', url: origin + '/about/#kamal-khondkar' },
   publisher: { '@id': origin + '/#organization' },
-  citation: ['https://ipo.anthropic.com/us/', 'https://ipo.anthropic.com/documents/us/prospectus.pdf', 'https://www.renaissancecapital.com/IPO-Center/Stats/Largest-US-IPOs'],
+  citation: ['https://ipo.anthropic.com/us/', 'https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm', 'https://www.renaissancecapital.com/IPO-Center/Stats/Largest-US-IPOs'],
 }
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'dist/.vite/manifest.json'), 'utf8'))
 const assets = new Set()

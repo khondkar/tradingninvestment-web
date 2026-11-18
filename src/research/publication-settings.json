@@ -83,7 +83,8 @@
   },
   "/research/anthropic-ipo-debut-performance/": {
     "homepagePlacement": "regular",
-    "image": "/images/social/research/anthropic-ipo-debut-performance-tni-og.png",
-    "socialImage": "/images/social/research/anthropic-ipo-debut-performance-tni-og.png"
+    "image": "/images/social/research/mega-ipo-yearly-medians.png",
+    "socialImage": "/images/social/research/mega-ipo-yearly-medians.png",
+    "socialImageAlt": "First-day IPO returns by year, comparing purchase at the IPO offer price with purchase at the first public market trade. Three selected IPOs per year, 2022\u20132026 through November 17."
   }
 }

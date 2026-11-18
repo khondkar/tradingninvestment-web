@@ -190,5 +190,19 @@
       "openSource": "https://www.reuters.com/business/gas-engine-maker-innio-set-nasdaq-debut-after-upsized-243-billion-ipo-2026-06-04/",
       "closeSource": "https://www.reuters.com/business/gas-engine-maker-innio-set-nasdaq-debut-after-upsized-243-billion-ipo-2026-06-04/"
     }
-  ]
+  ],
+  "anthropic": {
+    "period": "Q3 2026",
+    "revenueBillions": 17.0,
+    "operatingLossBillions": 0.567,
+    "netLossBillions": 23.3,
+    "nonCashFairValueChargeBillions": 21.9,
+    "adjustedOperatingMarginPct": 15.0,
+    "founderVotingPowerPct": 50.1,
+    "computeInfrastructureCommitmentsBillions": 895.4,
+    "commitmentsNext12MonthsBillions": 70.0,
+    "filingSource": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074338/anthropicpbc-sx1ax3.htm",
+    "quarterlySource": "https://ipo.anthropic.com/eu/",
+    "commitmentSource": "https://apnews.com/article/0cbd1a649a4cce904be59af8f6b30179"
+  }
 }
