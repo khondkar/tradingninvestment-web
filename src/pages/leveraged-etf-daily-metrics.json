@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T04:40:30+00:00",
+  "updatedAt": "2026-11-19T04:22:09+00:00",
   "source": "Yahoo Finance via yfinance (research only)",
   "refreshSummary": {
     "requested": 272,
@@ -9,769 +9,769 @@
   },
   "funds": {
     "SOXL": {
-      "price": 49.06999969482422,
-      "changePct": 0.6358,
-      "volume": 257670000,
-      "sessionDate": "2026-11-17",
+      "price": 49.2599983215332,
+      "changePct": 0.3872,
+      "volume": 203027200,
+      "sessionDate": "2026-11-18",
       "aum": 18286372864.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TQQQ": {
-      "price": 51.810001373291016,
-      "changePct": -2.3006,
-      "volume": 118324900,
-      "sessionDate": "2026-11-17",
+      "price": 52.439998626708984,
+      "changePct": 1.216,
+      "volume": 92179400,
+      "sessionDate": "2026-11-18",
       "aum": 32062332928.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SQQQ": {
-      "price": 46.95000076293945,
-      "changePct": 2.2876,
-      "volume": 71871100,
-      "sessionDate": "2026-11-17",
+      "price": 46.349998474121094,
+      "changePct": -1.278,
+      "volume": 55165300,
+      "sessionDate": "2026-11-18",
       "aum": 2040131840.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SOXS": {
-      "price": 58.77000045776367,
-      "changePct": -0.6928,
-      "volume": 105091300,
-      "sessionDate": "2026-11-17",
+      "price": 58.400001525878906,
+      "changePct": -0.6296,
+      "volume": 78573000,
+      "sessionDate": "2026-11-18",
       "aum": 4952628736.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NVDL": {
-      "price": 16.219999313354492,
-      "changePct": -0.7951,
-      "volume": 65488800,
-      "sessionDate": "2026-11-17",
+      "price": 15.239999771118164,
+      "changePct": -6.0419,
+      "volume": 56812900,
+      "sessionDate": "2026-11-18",
       "aum": 2931027200.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TSLL": {
-      "price": 9.8100004196167,
-      "changePct": 0.102,
-      "volume": 35771500,
-      "sessionDate": "2026-11-17",
+      "price": 10.0,
+      "changePct": 1.9368,
+      "volume": 32737700,
+      "sessionDate": "2026-11-18",
       "aum": 3729984256.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "LABU": {
-      "price": 192.66000366210938,
-      "changePct": -1.3113,
-      "volume": 295600,
-      "sessionDate": "2026-11-17",
+      "price": 191.7100067138672,
+      "changePct": -0.4931,
+      "volume": 295200,
+      "sessionDate": "2026-11-18",
       "aum": 649185088.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UPRO": {
-      "price": 126.54000091552734,
-      "changePct": -3.168,
-      "volume": 4424100,
-      "sessionDate": "2026-11-17",
+      "price": 125.4000015258789,
+      "changePct": -0.9009,
+      "volume": 2518500,
+      "sessionDate": "2026-11-18",
       "aum": 5194822656.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TMF": {
-      "price": 27.549999237060547,
-      "changePct": 0.5842,
-      "volume": 3938400,
-      "sessionDate": "2026-11-17",
+      "price": 28.229999542236328,
+      "changePct": 2.4682,
+      "volume": 4562000,
+      "sessionDate": "2026-11-18",
       "aum": 1968739072.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QLD": {
-      "price": 73.9800033569336,
-      "changePct": -1.4651,
-      "volume": 8842600,
-      "sessionDate": "2026-11-17",
+      "price": 74.51000213623047,
+      "changePct": 0.7164,
+      "volume": 6749800,
+      "sessionDate": "2026-11-18",
       "aum": 13255691264.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SPXL": {
-      "price": 242.10000610351562,
-      "changePct": -3.1948,
-      "volume": 4642300,
-      "sessionDate": "2026-11-17",
+      "price": 239.97000122070312,
+      "changePct": -0.8798,
+      "volume": 3009600,
+      "sessionDate": "2026-11-18",
       "aum": 6661058560.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SPXS": {
-      "price": 27.780000686645508,
-      "changePct": 3.1563,
-      "volume": 17322200,
-      "sessionDate": "2026-11-17",
+      "price": 28.040000915527344,
+      "changePct": 0.9359,
+      "volume": 11251100,
+      "sessionDate": "2026-11-18",
       "aum": 329946304.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TNA": {
-      "price": 50.650001525878906,
-      "changePct": -4.3618,
-      "volume": 6956100,
-      "sessionDate": "2026-11-17",
+      "price": 51.27000045776367,
+      "changePct": 1.2241,
+      "volume": 4646900,
+      "sessionDate": "2026-11-18",
       "aum": 1329492224.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TZA": {
-      "price": 51.43000030517578,
-      "changePct": 4.3628,
-      "volume": 4201200,
-      "sessionDate": "2026-11-17",
+      "price": 50.79999923706055,
+      "changePct": -1.225,
+      "volume": 5248700,
+      "sessionDate": "2026-11-18",
       "aum": 200088960.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FAS": {
-      "price": 166.97999572753906,
-      "changePct": -5.6983,
-      "volume": 371700,
-      "sessionDate": "2026-11-17",
+      "price": 161.36000061035156,
+      "changePct": -3.3657,
+      "volume": 439500,
+      "sessionDate": "2026-11-18",
       "aum": 2121171584.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FAZ": {
-      "price": 32.13999938964844,
-      "changePct": 5.5501,
-      "volume": 2622200,
-      "sessionDate": "2026-11-17",
+      "price": 33.25,
+      "changePct": 3.4536,
+      "volume": 2823200,
+      "sessionDate": "2026-11-18",
       "aum": 88202328.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ERX": {
-      "price": 104.5199966430664,
-      "changePct": -1.1725,
-      "volume": 1131000,
-      "sessionDate": "2026-11-17",
+      "price": 97.69000244140625,
+      "changePct": -6.5346,
+      "volume": 984200,
+      "sessionDate": "2026-11-18",
       "aum": 297954720.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DRIP": {
-      "price": 37.130001068115234,
-      "changePct": 2.6825,
-      "volume": 733400,
-      "sessionDate": "2026-11-17",
+      "price": 39.65999984741211,
+      "changePct": 6.8139,
+      "volume": 1889400,
+      "sessionDate": "2026-11-18",
       "aum": 134904528.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "GUSH": {
-      "price": 38.720001220703125,
-      "changePct": -2.7136,
-      "volume": 484400,
-      "sessionDate": "2026-11-17",
+      "price": 36.060001373291016,
+      "changePct": -6.8698,
+      "volume": 664000,
+      "sessionDate": "2026-11-18",
       "aum": 235615744.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DUST": {
-      "price": 44.779998779296875,
-      "changePct": -1.1261,
-      "volume": 863500,
-      "sessionDate": "2026-11-17",
+      "price": 49.95000076293945,
+      "changePct": 11.5453,
+      "volume": 1465200,
+      "sessionDate": "2026-11-18",
       "aum": 73182672.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NUGT": {
-      "price": 116.20999908447266,
-      "changePct": 1.6799,
-      "volume": 680900,
-      "sessionDate": "2026-11-17",
+      "price": 102.31999969482422,
+      "changePct": -11.9525,
+      "volume": 1433200,
+      "sessionDate": "2026-11-18",
       "aum": 762220992.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "JNUG": {
-      "price": 100.0999984741211,
-      "changePct": 1.0397,
-      "volume": 361600,
-      "sessionDate": "2026-11-17",
+      "price": 87.94000244140625,
+      "changePct": -12.1478,
+      "volume": 711600,
+      "sessionDate": "2026-11-18",
       "aum": 305917152.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "JDST": {
-      "price": 32.0,
-      "changePct": -0.8367,
-      "volume": 755200,
-      "sessionDate": "2026-11-17",
+      "price": 35.88999938964844,
+      "changePct": 12.1562,
+      "volume": 1013500,
+      "sessionDate": "2026-11-18",
       "aum": 46884108.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BOIL": {
-      "price": 18.139999389648438,
-      "changePct": 4.0138,
-      "volume": 5252700,
-      "sessionDate": "2026-11-17",
+      "price": 20.25,
+      "changePct": 11.6318,
+      "volume": 8118300,
+      "sessionDate": "2026-11-18",
       "aum": 405735680.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "KOLD": {
-      "price": 29.059999465942383,
-      "changePct": -4.345,
-      "volume": 1960100,
-      "sessionDate": "2026-11-17",
+      "price": 25.829999923706055,
+      "changePct": -11.1149,
+      "volume": 4286000,
+      "sessionDate": "2026-11-18",
       "aum": 54725048.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UCO": {
-      "price": 49.029998779296875,
-      "changePct": -0.8293,
-      "volume": 647000,
-      "sessionDate": "2026-11-17",
+      "price": 47.13999938964844,
+      "changePct": -3.8548,
+      "volume": 782600,
+      "sessionDate": "2026-11-18",
       "aum": 509682208.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SCO": {
-      "price": 20.579999923706055,
-      "changePct": 0.7835,
-      "volume": 3116500,
-      "sessionDate": "2026-11-17",
+      "price": 21.399999618530273,
+      "changePct": 3.9844,
+      "volume": 5253500,
+      "sessionDate": "2026-11-18",
       "aum": 841279872.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UGL": {
-      "price": 38.540000915527344,
-      "changePct": -0.233,
-      "volume": 1612700,
-      "sessionDate": "2026-11-17",
+      "price": 36.09000015258789,
+      "changePct": -6.357,
+      "volume": 2109900,
+      "sessionDate": "2026-11-18",
       "aum": 619785216.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "GLL": {
-      "price": 29.040000915527344,
-      "changePct": 0.2416,
-      "volume": 2299000,
-      "sessionDate": "2026-11-17",
+      "price": 30.90999984741211,
+      "changePct": 6.4394,
+      "volume": 1274400,
+      "sessionDate": "2026-11-18",
       "aum": 111055216.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AGQ": {
-      "price": 39.54999923706055,
-      "changePct": 1.1509,
-      "volume": 3135300,
-      "sessionDate": "2026-11-17",
+      "price": 35.86000061035156,
+      "changePct": -9.33,
+      "volume": 6021500,
+      "sessionDate": "2026-11-18",
       "aum": 846830848.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ZSL": {
-      "price": 42.869998931884766,
-      "changePct": -1.244,
-      "volume": 1497900,
-      "sessionDate": "2026-11-17",
+      "price": 46.90999984741211,
+      "changePct": 9.4238,
+      "volume": 1703400,
+      "sessionDate": "2026-11-18",
       "aum": 68354104.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UVXY": {
-      "price": 22.68000030517578,
-      "changePct": 10.9046,
-      "volume": 30032100,
-      "sessionDate": "2026-11-17",
+      "price": 21.770000457763672,
+      "changePct": -4.0123,
+      "volume": 15003100,
+      "sessionDate": "2026-11-18",
       "aum": 224763792.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SVXY": {
-      "price": 54.0,
-      "changePct": -3.6403,
-      "volume": 1790000,
-      "sessionDate": "2026-11-17",
+      "price": 54.70000076293945,
+      "changePct": 1.2963,
+      "volume": 1256400,
+      "sessionDate": "2026-11-18",
       "aum": 200956112.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "VXX": {
-      "price": 22.139999389648438,
-      "changePct": 7.6848,
-      "volume": 28604500,
-      "sessionDate": "2026-11-17",
+      "price": 21.299999237060547,
+      "changePct": -3.794,
+      "volume": 14653200,
+      "sessionDate": "2026-11-18",
       "aum": 566132928.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SSO": {
-      "price": 63.18000030517578,
-      "changePct": -2.092,
-      "volume": 4483300,
-      "sessionDate": "2026-11-17",
+      "price": 62.810001373291016,
+      "changePct": -0.5856,
+      "volume": 5001700,
+      "sessionDate": "2026-11-18",
       "aum": 8451818496.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SDS": {
-      "price": 59.18000030517578,
-      "changePct": 2.1049,
-      "volume": 6858700,
-      "sessionDate": "2026-11-17",
+      "price": 59.540000915527344,
+      "changePct": 0.6083,
+      "volume": 4156600,
+      "sessionDate": "2026-11-18",
       "aum": 372388448.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SH": {
-      "price": 33.900001525878906,
-      "changePct": 1.0432,
-      "volume": 13935000,
-      "sessionDate": "2026-11-17",
+      "price": 34.0,
+      "changePct": 0.295,
+      "volume": 12745900,
+      "sessionDate": "2026-11-18",
       "aum": 950363712.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "PSQ": {
-      "price": 27.8799991607666,
-      "changePct": 0.7225,
-      "volume": 18571300,
-      "sessionDate": "2026-11-17",
+      "price": 27.770000457763672,
+      "changePct": -0.3945,
+      "volume": 12728000,
+      "sessionDate": "2026-11-18",
       "aum": 610581760.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QID": {
-      "price": 16.389999389648438,
-      "changePct": 1.4861,
-      "volume": 20333300,
-      "sessionDate": "2026-11-17",
+      "price": 16.270000457763672,
+      "changePct": -0.7321,
+      "volume": 14871400,
+      "sessionDate": "2026-11-18",
       "aum": 310849344.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QQQM": {
-      "price": 270.4200134277344,
-      "changePct": -0.7597,
-      "volume": 5599600,
-      "sessionDate": "2026-11-17",
+      "price": 271.5799865722656,
+      "changePct": 0.429,
+      "volume": 4904700,
+      "sessionDate": "2026-11-18",
       "aum": 106027843584.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TBT": {
-      "price": 40.29999923706055,
-      "changePct": -0.2475,
-      "volume": 107300,
-      "sessionDate": "2026-11-17",
+      "price": 39.61000061035156,
+      "changePct": -1.7122,
+      "volume": 130800,
+      "sessionDate": "2026-11-18",
       "aum": 289195104.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TLT": {
-      "price": 79.55000305175781,
-      "changePct": 0.2142,
-      "volume": 34827700,
-      "sessionDate": "2026-11-17",
+      "price": 80.22000122070312,
+      "changePct": 0.8422,
+      "volume": 41805000,
+      "sessionDate": "2026-11-18",
       "aum": 47518568448.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TBF": {
-      "price": 26.18000030517578,
-      "changePct": -0.1906,
-      "volume": 215400,
-      "sessionDate": "2026-11-17",
+      "price": 25.950000762939453,
+      "changePct": -0.8785,
+      "volume": 86700,
+      "sessionDate": "2026-11-18",
       "aum": 121770480.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TMV": {
-      "price": 46.11000061035156,
-      "changePct": -0.6464,
-      "volume": 976400,
-      "sessionDate": "2026-11-17",
+      "price": 44.9900016784668,
+      "changePct": -2.429,
+      "volume": 888900,
+      "sessionDate": "2026-11-18",
       "aum": 188039488.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TYD": {
-      "price": 20.739999771118164,
-      "changePct": 0.582,
-      "volume": 20100,
-      "sessionDate": "2026-11-17",
+      "price": 20.90999984741211,
+      "changePct": 0.8197,
+      "volume": 13100,
+      "sessionDate": "2026-11-18",
       "aum": 30174668.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UBT": {
-      "price": 13.9399995803833,
-      "changePct": 0.4323,
-      "volume": 42100,
-      "sessionDate": "2026-11-17",
+      "price": 14.15999984741211,
+      "changePct": 1.5782,
+      "volume": 91300,
+      "sessionDate": "2026-11-18",
       "aum": 68287128.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DIG": {
-      "price": 67.33000183105469,
-      "changePct": -1.1597,
-      "volume": 15800,
-      "sessionDate": "2026-11-17",
+      "price": 62.9900016784668,
+      "changePct": -6.4459,
+      "volume": 42400,
+      "sessionDate": "2026-11-18",
       "aum": 103971120.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DUG": {
-      "price": 14.390000343322754,
-      "changePct": 1.1244,
-      "volume": 333200,
-      "sessionDate": "2026-11-17",
+      "price": 15.3100004196167,
+      "changePct": 6.3933,
+      "volume": 818000,
+      "sessionDate": "2026-11-18",
       "aum": 31196922.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UYM": {
-      "price": 28.84000015258789,
-      "changePct": -2.5676,
-      "volume": 4700,
-      "sessionDate": "2026-11-17",
+      "price": 28.489999771118164,
+      "changePct": -1.2136,
+      "volume": 5100,
+      "sessionDate": "2026-11-18",
       "aum": 39602252.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SMN": {
-      "price": 20.06999969482422,
-      "changePct": 2.6074,
-      "volume": 1200,
-      "sessionDate": "2026-11-17",
+      "price": 20.34000015258789,
+      "changePct": 1.3453,
+      "volume": 2700,
+      "sessionDate": "2026-11-18",
       "aum": 3783222.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ROM": {
-      "price": 107.61000061035156,
-      "changePct": -1.6272,
-      "volume": 72400,
-      "sessionDate": "2026-11-17",
+      "price": 108.30999755859375,
+      "changePct": 0.6505,
+      "volume": 123300,
+      "sessionDate": "2026-11-18",
       "aum": 1145301376.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "REW": {
-      "price": 14.239999771118164,
-      "changePct": 1.787,
-      "volume": 47100,
-      "sessionDate": "2026-11-17",
+      "price": 14.130000114440918,
+      "changePct": -0.7725,
+      "volume": 23000,
+      "sessionDate": "2026-11-18",
       "aum": 4283513.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TECL": {
-      "price": 124.5,
-      "changePct": -2.5517,
-      "volume": 1621400,
-      "sessionDate": "2026-11-17",
+      "price": 125.5,
+      "changePct": 0.8032,
+      "volume": 857400,
+      "sessionDate": "2026-11-18",
       "aum": 5074167296.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TECS": {
-      "price": 81.52999877929688,
-      "changePct": 2.9289,
-      "volume": 723400,
-      "sessionDate": "2026-11-17",
+      "price": 80.70999908447266,
+      "changePct": -1.0058,
+      "volume": 633100,
+      "sessionDate": "2026-11-18",
       "aum": 83120896.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "WEBL": {
-      "price": 19.100000381469727,
-      "changePct": -5.865,
-      "volume": 90300,
-      "sessionDate": "2026-11-17",
+      "price": 19.75,
+      "changePct": 3.4031,
+      "volume": 88600,
+      "sessionDate": "2026-11-18",
       "aum": 66300664.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "WEBS": {
-      "price": 19.350000381469727,
-      "changePct": 5.68,
-      "volume": 137800,
-      "sessionDate": "2026-11-17",
+      "price": 18.641000747680664,
+      "changePct": -3.6641,
+      "volume": 44500,
+      "sessionDate": "2026-11-18",
       "aum": 7959904.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FNGU": {
-      "price": 21.489999771118164,
-      "changePct": -2.628,
-      "volume": 2510000,
-      "sessionDate": "2026-11-17",
+      "price": 21.93000030517578,
+      "changePct": 2.0475,
+      "volume": 2693500,
+      "sessionDate": "2026-11-18",
       "aum": 2081090944.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FNGD": {
-      "price": 35.09000015258789,
-      "changePct": 2.1543,
-      "volume": 961000,
-      "sessionDate": "2026-11-17",
+      "price": 34.45000076293945,
+      "changePct": -1.8239,
+      "volume": 547000,
+      "sessionDate": "2026-11-18",
       "aum": 62084328.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BULZ": {
-      "price": 21.170000076293945,
-      "changePct": -2.6219,
-      "volume": 1157100,
-      "sessionDate": "2026-11-17",
+      "price": 21.600000381469727,
+      "changePct": 2.0312,
+      "volume": 974800,
+      "sessionDate": "2026-11-18",
       "aum": 2407692544.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BERZ": {
-      "price": 26.93000030517578,
-      "changePct": 2.3176,
-      "volume": 104900,
-      "sessionDate": "2026-11-17",
+      "price": 26.440000534057617,
+      "changePct": -1.8195,
+      "volume": 70300,
+      "sessionDate": "2026-11-18",
       "aum": 8065195.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DPST": {
-      "price": 113.44999694824219,
-      "changePct": -5.411,
-      "volume": 380200,
-      "sessionDate": "2026-11-17",
+      "price": 111.55999755859375,
+      "changePct": -1.6659,
+      "volume": 225900,
+      "sessionDate": "2026-11-18",
       "aum": 315686752.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DRV": {
-      "price": 19.139999389648438,
-      "changePct": 4.362,
-      "volume": 179500,
-      "sessionDate": "2026-11-17",
+      "price": 19.100000381469727,
+      "changePct": -0.209,
+      "volume": 176400,
+      "sessionDate": "2026-11-18",
       "aum": 27487768.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CURE": {
-      "price": 167.16000366210938,
-      "changePct": -4.2612,
-      "volume": 45900,
-      "sessionDate": "2026-11-17",
+      "price": 155.41000366210938,
+      "changePct": -7.0292,
+      "volume": 94600,
+      "sessionDate": "2026-11-18",
       "aum": 201378240.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "LABD": {
-      "price": 8.220000267028809,
-      "changePct": 1.6069,
-      "volume": 37332000,
-      "sessionDate": "2026-11-17",
+      "price": 8.25,
+      "changePct": 0.365,
+      "volume": 25649600,
+      "sessionDate": "2026-11-18",
       "aum": 80659144.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "YINN": {
-      "price": 21.889999389648438,
-      "changePct": -3.9069,
-      "volume": 1736800,
-      "sessionDate": "2026-11-17",
+      "price": 20.90999984741211,
+      "changePct": -4.4769,
+      "volume": 2501100,
+      "sessionDate": "2026-11-18",
       "aum": 564701760.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "YANG": {
-      "price": 35.02000045776367,
-      "changePct": 3.8861,
-      "volume": 581900,
-      "sessionDate": "2026-11-17",
+      "price": 36.619998931884766,
+      "changePct": 4.5688,
+      "volume": 1096200,
+      "sessionDate": "2026-11-18",
       "aum": 80274824.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CHAU": {
-      "price": 16.020000457763672,
-      "changePct": -0.5587,
-      "volume": 60700,
-      "sessionDate": "2026-11-17",
+      "price": 16.040000915527344,
+      "changePct": 0.1248,
+      "volume": 38800,
+      "sessionDate": "2026-11-18",
       "aum": 66067128.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FXP": {
-      "price": 23.209999084472656,
-      "changePct": 1.62,
-      "volume": 1600,
-      "sessionDate": "2026-11-17",
+      "price": 24.059999465942383,
+      "changePct": 3.6622,
+      "volume": 7000,
+      "sessionDate": "2026-11-18",
       "aum": 5924658.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "EDC": {
-      "price": 48.369998931884766,
-      "changePct": -3.1438,
-      "volume": 115200,
-      "sessionDate": "2026-11-17",
+      "price": 47.369998931884766,
+      "changePct": -2.0674,
+      "volume": 75000,
+      "sessionDate": "2026-11-18",
       "aum": 118968616.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "EDZ": {
-      "price": 20.829999923706055,
-      "changePct": 3.221,
-      "volume": 312200,
-      "sessionDate": "2026-11-17",
+      "price": 21.25,
+      "changePct": 2.0163,
+      "volume": 153800,
+      "sessionDate": "2026-11-18",
       "aum": 25037700.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "EURL": {
-      "price": 41.209999084472656,
-      "changePct": -3.8497,
-      "volume": 10900,
-      "sessionDate": "2026-11-17",
+      "price": 39.65999984741211,
+      "changePct": -3.7612,
+      "volume": 13400,
+      "sessionDate": "2026-11-18",
       "aum": 40525264.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "EUO": {
-      "price": 33.650001525878906,
-      "changePct": -0.2076,
-      "volume": 26800,
-      "sessionDate": "2026-11-17",
+      "price": 33.86000061035156,
+      "changePct": 0.6241,
+      "volume": 12400,
+      "sessionDate": "2026-11-18",
       "aum": 45649532.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ULE": {
-      "price": 11.449999809265137,
-      "changePct": 0.175,
-      "volume": 4100,
-      "sessionDate": "2026-11-17",
+      "price": 11.380000114440918,
+      "changePct": -0.6114,
+      "volume": 3400,
+      "sessionDate": "2026-11-18",
       "aum": 3541585.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "YCS": {
-      "price": 55.77000045776367,
-      "changePct": -0.1254,
-      "volume": 2900,
-      "sessionDate": "2026-11-17",
+      "price": 55.7400016784668,
+      "changePct": -0.0538,
+      "volume": 3400,
+      "sessionDate": "2026-11-18",
       "aum": 27011284.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "YCL": {
       "price": 17.790000915527344,
-      "changePct": 0.1126,
-      "volume": 4100,
-      "sessionDate": "2026-11-17",
+      "changePct": 0.0,
+      "volume": 18700,
+      "sessionDate": "2026-11-18",
       "aum": 29144792.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BRZU": {
-      "price": 63.52000045776367,
-      "changePct": 0.1577,
-      "volume": 74600,
-      "sessionDate": "2026-11-17",
+      "price": 59.65999984741211,
+      "changePct": -6.0768,
+      "volume": 127400,
+      "sessionDate": "2026-11-18",
       "aum": 123490552.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BZQ": {
-      "price": 23.239999771118164,
-      "changePct": -0.1718,
-      "volume": 3300,
-      "sessionDate": "2026-11-17",
+      "price": 24.59000015258789,
+      "changePct": 5.809,
+      "volume": 9800,
+      "sessionDate": "2026-11-18",
       "aum": 2440645.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "INDL": {
-      "price": 48.349998474121094,
-      "changePct": 1.4052,
-      "volume": 29800,
-      "sessionDate": "2026-11-17",
+      "price": 47.45000076293945,
+      "changePct": -1.8614,
+      "volume": 15200,
+      "sessionDate": "2026-11-18",
       "aum": 53302360.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "INDZ": {
-      "price": 25.520000457763672,
-      "changePct": 0.0392,
-      "volume": 300,
-      "sessionDate": "2026-11-17",
+      "price": 25.389999389648438,
+      "changePct": -0.5094,
+      "volume": 100,
+      "sessionDate": "2026-11-18",
       "aum": 5152283.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "KORU": {
-      "price": 6.480000019073486,
-      "changePct": -2.8486,
-      "volume": 54280600,
-      "sessionDate": "2026-11-17",
+      "price": 6.670000076293945,
+      "changePct": 2.9321,
+      "volume": 36448600,
+      "sessionDate": "2026-11-18",
       "aum": 1059361664.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MEXX": {
-      "price": 28.19099998474121,
-      "changePct": 1.7358,
-      "volume": 6300,
-      "sessionDate": "2026-11-17",
+      "price": 24.639999389648438,
+      "changePct": -12.5962,
+      "volume": 15800,
+      "sessionDate": "2026-11-18",
       "aum": 14659114.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NAIL": {
-      "price": 30.68000030517578,
-      "changePct": -5.5419,
-      "volume": 868000,
-      "sessionDate": "2026-11-17",
+      "price": 31.56999969482422,
+      "changePct": 2.9009,
+      "volume": 793200,
+      "sessionDate": "2026-11-18",
       "aum": 615086080.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "PILL": {
-      "price": 14.5600004196167,
-      "changePct": -5.27,
-      "volume": 47700,
-      "sessionDate": "2026-11-17",
+      "price": 14.550000190734863,
+      "changePct": -0.0687,
+      "volume": 49300,
+      "sessionDate": "2026-11-18",
       "aum": 16006761.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RETL": {
-      "price": 8.4399995803833,
-      "changePct": -4.3084,
-      "volume": 337000,
-      "sessionDate": "2026-11-17",
+      "price": 8.989999771118164,
+      "changePct": 6.5166,
+      "volume": 550800,
+      "sessionDate": "2026-11-18",
       "aum": 32196132.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "WANT": {
-      "price": 39.20000076293945,
-      "changePct": -2.8019,
-      "volume": 26000,
-      "sessionDate": "2026-11-17",
+      "price": 41.349998474121094,
+      "changePct": 5.4847,
+      "volume": 33800,
+      "sessionDate": "2026-11-18",
       "aum": 19142744.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "PASS": {
       "price": null,
@@ -783,274 +783,274 @@
       "fundAsOf": null
     },
     "HIBL": {
-      "price": 59.97999954223633,
-      "changePct": -3.4449,
-      "volume": 95400,
-      "sessionDate": "2026-11-17",
+      "price": 60.56999969482422,
+      "changePct": 0.9837,
+      "volume": 35900,
+      "sessionDate": "2026-11-18",
       "aum": 68621120.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "HIBS": {
-      "price": 24.920000076293945,
-      "changePct": 2.9752,
-      "volume": 275100,
-      "sessionDate": "2026-11-17",
+      "price": 24.850000381469727,
+      "changePct": -0.2809,
+      "volume": 332900,
+      "sessionDate": "2026-11-18",
       "aum": 21222356.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MIDU": {
-      "price": 57.150001525878906,
-      "changePct": -3.9657,
-      "volume": 23100,
-      "sessionDate": "2026-11-17",
+      "price": 57.540000915527344,
+      "changePct": 0.6824,
+      "volume": 13300,
+      "sessionDate": "2026-11-18",
       "aum": 61794760.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MZZ": {
-      "price": 6.679999828338623,
-      "changePct": 2.6114,
-      "volume": 3700,
-      "sessionDate": "2026-11-17",
+      "price": 6.639999866485596,
+      "changePct": -0.5988,
+      "volume": 9800,
+      "sessionDate": "2026-11-18",
       "aum": 4585732.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SAA": {
-      "price": 31.559999465942383,
-      "changePct": -2.7427,
+      "price": 31.979999542236328,
+      "changePct": 1.3308,
       "volume": 500,
-      "sessionDate": "2026-11-17",
+      "sessionDate": "2026-11-18",
       "aum": 26155552.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SDD": {
-      "price": 9.396499633789062,
-      "changePct": 2.8063,
-      "volume": 807,
-      "sessionDate": "2026-11-17",
+      "price": 9.25,
+      "changePct": -1.5957,
+      "volume": 8750,
+      "sessionDate": "2026-11-18",
       "aum": 1563894.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "URTY": {
-      "price": 58.83000183105469,
-      "changePct": -4.3259,
-      "volume": 590600,
-      "sessionDate": "2026-11-17",
+      "price": 59.5,
+      "changePct": 1.1389,
+      "volume": 667200,
+      "sessionDate": "2026-11-18",
       "aum": 278424736.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SRTY": {
-      "price": 28.969999313354492,
-      "changePct": 4.3212,
-      "volume": 2983800,
-      "sessionDate": "2026-11-17",
+      "price": 28.639999389648438,
+      "changePct": -1.1391,
+      "volume": 1724900,
+      "sessionDate": "2026-11-18",
       "aum": 68194864.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UDOW": {
-      "price": 60.91999816894531,
-      "changePct": -4.8868,
-      "volume": 2153600,
-      "sessionDate": "2026-11-17",
+      "price": 58.869998931884766,
+      "changePct": -3.3651,
+      "volume": 2399300,
+      "sessionDate": "2026-11-18",
       "aum": 840793472.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SDOW": {
-      "price": 26.149999618530273,
-      "changePct": 4.8096,
-      "volume": 4392500,
-      "sessionDate": "2026-11-17",
+      "price": 27.049999237060547,
+      "changePct": 3.4417,
+      "volume": 4152600,
+      "sessionDate": "2026-11-18",
       "aum": 153745312.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DDM": {
-      "price": 60.25,
-      "changePct": -3.2439,
-      "volume": 200500,
-      "sessionDate": "2026-11-17",
+      "price": 58.900001525878906,
+      "changePct": -2.2407,
+      "volume": 234000,
+      "sessionDate": "2026-11-18",
       "aum": 507029184.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DXD": {
-      "price": 18.280000686645508,
-      "changePct": 3.3352,
-      "volume": 6849800,
-      "sessionDate": "2026-11-17",
+      "price": 18.690000534057617,
+      "changePct": 2.2429,
+      "volume": 4918900,
+      "sessionDate": "2026-11-18",
       "aum": 41700784.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DOG": {
-      "price": 22.450000762939453,
-      "changePct": 1.6757,
-      "volume": 16262100,
-      "sessionDate": "2026-11-17",
+      "price": 22.700000762939453,
+      "changePct": 1.1136,
+      "volume": 16214500,
+      "sessionDate": "2026-11-18",
       "aum": 115035504.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RXL": {
-      "price": 69.8499984741211,
-      "changePct": -2.9592,
-      "volume": 8500,
-      "sessionDate": "2026-11-17",
+      "price": 67.02999877929688,
+      "changePct": -4.0372,
+      "volume": 14200,
+      "sessionDate": "2026-11-18",
       "aum": 112860928.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RXD": {
-      "price": 12.34000015258789,
-      "changePct": 3.2636,
-      "volume": 25900,
-      "sessionDate": "2026-11-17",
+      "price": 12.819999694824219,
+      "changePct": 3.8898,
+      "volume": 28700,
+      "sessionDate": "2026-11-18",
       "aum": 2969359.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UTSL": {
-      "price": 37.97999954223633,
-      "changePct": -4.7643,
-      "volume": 155700,
-      "sessionDate": "2026-11-17",
+      "price": 38.22999954223633,
+      "changePct": 0.6582,
+      "volume": 228800,
+      "sessionDate": "2026-11-18",
       "aum": 70714160.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SRS": {
-      "price": 40.7599983215332,
-      "changePct": 3.216,
-      "volume": 6200,
-      "sessionDate": "2026-11-17",
+      "price": 40.630001068115234,
+      "changePct": -0.3189,
+      "volume": 8400,
+      "sessionDate": "2026-11-18",
       "aum": 16541021.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TSLS": {
-      "price": 52.22999954223633,
-      "changePct": -0.1147,
-      "volume": 103500,
-      "sessionDate": "2026-11-17",
+      "price": 51.77000045776367,
+      "changePct": -0.8807,
+      "volume": 71600,
+      "sessionDate": "2026-11-18",
       "aum": 39637168.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NVD": {
-      "price": 7.260000228881836,
-      "changePct": 0.8333,
-      "volume": 88014500,
-      "sessionDate": "2026-11-17",
+      "price": 7.690000057220459,
+      "changePct": 5.9229,
+      "volume": 60435700,
+      "sessionDate": "2026-11-18",
       "aum": 64579876.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SBIT": {
-      "price": 49.9900016784668,
-      "changePct": 3.6492,
-      "volume": 1441200,
-      "sessionDate": "2026-11-17",
+      "price": 52.20000076293945,
+      "changePct": 4.4209,
+      "volume": 1408800,
+      "sessionDate": "2026-11-18",
       "aum": 124658864.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BITX": {
-      "price": 11.050000190734863,
-      "changePct": -3.4091,
-      "volume": 6030200,
-      "sessionDate": "2026-11-17",
+      "price": 10.539999961853027,
+      "changePct": -4.6154,
+      "volume": 9003700,
+      "sessionDate": "2026-11-18",
       "aum": 1031791296.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BITU": {
-      "price": 8.550000190734863,
-      "changePct": -3.4989,
-      "volume": 5371200,
-      "sessionDate": "2026-11-17",
+      "price": 8.180000305175781,
+      "changePct": -4.3275,
+      "volume": 7014300,
+      "sessionDate": "2026-11-18",
       "aum": 477555360.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BITI": {
-      "price": 22.729999542236328,
-      "changePct": 1.7002,
-      "volume": 1511300,
-      "sessionDate": "2026-11-17",
+      "price": 23.25,
+      "changePct": 2.2877,
+      "volume": 2011600,
+      "sessionDate": "2026-11-18",
       "aum": 73173176.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ETHU": {
-      "price": 12.9399995803833,
-      "changePct": -2.4868,
-      "volume": 4183200,
-      "sessionDate": "2026-11-17",
+      "price": 12.210000038146973,
+      "changePct": -5.6414,
+      "volume": 4884200,
+      "sessionDate": "2026-11-18",
       "aum": 842286016.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ETHT": {
-      "price": 8.239999771118164,
-      "changePct": -2.3697,
-      "volume": 2183700,
-      "sessionDate": "2026-11-17",
+      "price": 7.789999961853027,
+      "changePct": -5.4612,
+      "volume": 1604600,
+      "sessionDate": "2026-11-18",
       "aum": 213198464.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSTU": {
-      "price": 14.149999618530273,
-      "changePct": -12.6004,
-      "volume": 4644900,
-      "sessionDate": "2026-11-17",
+      "price": 12.319999694824219,
+      "changePct": -12.9329,
+      "volume": 6948100,
+      "sessionDate": "2026-11-18",
       "aum": 536078784.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSTZ": {
-      "price": 5.519999980926514,
-      "changePct": 12.5382,
-      "volume": 37730100,
-      "sessionDate": "2026-11-17",
+      "price": 6.230000019073486,
+      "changePct": 12.8623,
+      "volume": 41391900,
+      "sessionDate": "2026-11-18",
       "aum": 86729632.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CONL": {
-      "price": 2.0,
-      "changePct": -8.6758,
-      "volume": 28728400,
-      "sessionDate": "2026-11-17",
+      "price": 1.840000033378601,
+      "changePct": -8.0,
+      "volume": 17668500,
+      "sessionDate": "2026-11-18",
       "aum": 380707072.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CONI": {
-      "price": 52.45000076293945,
-      "changePct": 7.9218,
-      "volume": 89700,
-      "sessionDate": "2026-11-17",
+      "price": 56.560001373291016,
+      "changePct": 7.836,
+      "volume": 118800,
+      "sessionDate": "2026-11-18",
       "aum": 9898811.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AMDL": {
-      "price": 45.689998626708984,
-      "changePct": -0.2402,
-      "volume": 4189000,
-      "sessionDate": "2026-11-17",
+      "price": 50.5099983215332,
+      "changePct": 10.5494,
+      "volume": 4894400,
+      "sessionDate": "2026-11-18",
       "aum": 803037824.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AMDS": {
       "price": null,
@@ -1062,868 +1062,868 @@
       "fundAsOf": null
     },
     "GGLL": {
-      "price": 63.04999923706055,
-      "changePct": -2.7456,
-      "volume": 1107500,
-      "sessionDate": "2026-11-17",
+      "price": 64.16000366210938,
+      "changePct": 1.7605,
+      "volume": 886100,
+      "sessionDate": "2026-11-18",
       "aum": 948156288.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "GGLS": {
-      "price": 70.2300033569336,
-      "changePct": 1.2178,
-      "volume": 46400,
-      "sessionDate": "2026-11-17",
+      "price": 69.5999984741211,
+      "changePct": -0.8971,
+      "volume": 25100,
+      "sessionDate": "2026-11-18",
       "aum": 21293904.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AAPU": {
-      "price": 48.4900016784668,
-      "changePct": -0.5741,
-      "volume": 432300,
-      "sessionDate": "2026-11-17",
+      "price": 48.59000015258789,
+      "changePct": 0.2062,
+      "volume": 279600,
+      "sessionDate": "2026-11-18",
       "aum": 136011472.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AAPD": {
-      "price": 9.75,
-      "changePct": 0.3086,
-      "volume": 11585100,
-      "sessionDate": "2026-11-17",
+      "price": 9.739999771118164,
+      "changePct": -0.1026,
+      "volume": 9118300,
+      "sessionDate": "2026-11-18",
       "aum": 23957632.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSFU": {
-      "price": 37.34000015258789,
-      "changePct": -4.6719,
-      "volume": 2801500,
-      "sessionDate": "2026-11-17",
+      "price": 37.61000061035156,
+      "changePct": 0.7231,
+      "volume": 1530900,
+      "sessionDate": "2026-11-18",
       "aum": 402851776.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSFD": {
-      "price": 10.069999694824219,
-      "changePct": 2.4415,
-      "volume": 3321200,
-      "sessionDate": "2026-11-17",
+      "price": 10.020000457763672,
+      "changePct": -0.4965,
+      "volume": 1068400,
+      "sessionDate": "2026-11-18",
       "aum": 10317007.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SNXX": {
-      "price": 2.869999885559082,
-      "changePct": -3.0405,
-      "volume": 138028400,
-      "sessionDate": "2026-11-17",
+      "price": 2.7100000381469727,
+      "changePct": -5.5749,
+      "volume": 113205100,
+      "sessionDate": "2026-11-18",
       "aum": 855123456.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "USD": {
-      "price": 49.81999969482422,
-      "changePct": 0.2818,
-      "volume": 1125100,
-      "sessionDate": "2026-11-17",
+      "price": 49.459999084472656,
+      "changePct": -0.7226,
+      "volume": 841400,
+      "sessionDate": "2026-11-18",
       "aum": 2193423616.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "GDXU": {
-      "price": 65.29000091552734,
-      "changePct": 1.9519,
-      "volume": 2146700,
-      "sessionDate": "2026-11-17",
+      "price": 53.54999923706055,
+      "changePct": -17.9813,
+      "volume": 6588800,
+      "sessionDate": "2026-11-18",
       "aum": 642729792.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MULL": {
-      "price": 9.920000076293945,
-      "changePct": -1.8793,
-      "volume": 7261900,
-      "sessionDate": "2026-11-17",
+      "price": 9.6899995803833,
+      "changePct": -2.3186,
+      "volume": 9463300,
+      "sessionDate": "2026-11-18",
       "aum": 387388896.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FNGO": {
-      "price": 117.28700256347656,
-      "changePct": -2.0887,
-      "volume": 4200,
-      "sessionDate": "2026-11-17",
+      "price": 119.62699890136719,
+      "changePct": 1.9951,
+      "volume": 2300,
+      "sessionDate": "2026-11-18",
       "aum": 660989376.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UYG": {
-      "price": 94.37999725341797,
-      "changePct": -3.9292,
-      "volume": 22800,
-      "sessionDate": "2026-11-17",
+      "price": 92.44000244140625,
+      "changePct": -2.0555,
+      "volume": 7700,
+      "sessionDate": "2026-11-18",
       "aum": 777231616.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SPYU": {
-      "price": 26.670000076293945,
-      "changePct": -4.3743,
-      "volume": 1124600,
-      "sessionDate": "2026-11-17",
+      "price": 26.40999984741211,
+      "changePct": -0.9749,
+      "volume": 1510600,
+      "sessionDate": "2026-11-18",
       "aum": 501558176.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NVDU": {
-      "price": 64.66000366210938,
-      "changePct": -0.6301,
-      "volume": 1944800,
-      "sessionDate": "2026-11-17",
+      "price": 60.619998931884766,
+      "changePct": -6.2481,
+      "volume": 1447200,
+      "sessionDate": "2026-11-18",
       "aum": 410770144.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NVDX": {
-      "price": 9.09000015258789,
-      "changePct": -1.0881,
-      "volume": 23172300,
-      "sessionDate": "2026-11-17",
+      "price": 8.550000190734863,
+      "changePct": -5.9406,
+      "volume": 20465000,
+      "sessionDate": "2026-11-18",
       "aum": 318145248.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "INTW": {
-      "price": 5.070000171661377,
-      "changePct": -0.9766,
-      "volume": 8832700,
-      "sessionDate": "2026-11-17",
+      "price": 4.980000019073486,
+      "changePct": -1.7752,
+      "volume": 12685300,
+      "sessionDate": "2026-11-18",
       "aum": 213211232.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "PTIR": {
-      "price": 13.949999809265137,
-      "changePct": -4.8431,
-      "volume": 1174100,
-      "sessionDate": "2026-11-17",
+      "price": 13.979999542236328,
+      "changePct": 0.2151,
+      "volume": 894800,
+      "sessionDate": "2026-11-18",
       "aum": 262074880.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AMZU": {
-      "price": 35.25,
-      "changePct": -0.0567,
-      "volume": 897000,
-      "sessionDate": "2026-11-17",
+      "price": 37.90999984741211,
+      "changePct": 7.5461,
+      "volume": 1294100,
+      "sessionDate": "2026-11-18",
       "aum": 290952960.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSTX": {
-      "price": 6.46999979019165,
-      "changePct": -12.4493,
-      "volume": 8454500,
-      "sessionDate": "2026-11-17",
+      "price": 5.610000133514404,
+      "changePct": -13.2921,
+      "volume": 10952300,
+      "sessionDate": "2026-11-18",
       "aum": 247719840.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MVLL": {
-      "price": 9.369999885559082,
-      "changePct": 4.5759,
-      "volume": 4740000,
-      "sessionDate": "2026-11-17",
+      "price": 8.960000038146973,
+      "changePct": -4.3757,
+      "volume": 4047200,
+      "sessionDate": "2026-11-18",
       "aum": 182085728.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SPUU": {
-      "price": 201.9199981689453,
-      "changePct": -2.2842,
-      "volume": 35000,
-      "sessionDate": "2026-11-17",
+      "price": 201.27999877929688,
+      "changePct": -0.317,
+      "volume": 28700,
+      "sessionDate": "2026-11-18",
       "aum": 288739776.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DFEN": {
-      "price": 46.29999923706055,
-      "changePct": -0.194,
-      "volume": 203600,
-      "sessionDate": "2026-11-17",
+      "price": 45.880001068115234,
+      "changePct": -0.9071,
+      "volume": 175100,
+      "sessionDate": "2026-11-18",
       "aum": 296567264.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MQQQ": {
-      "price": 186.2050018310547,
-      "changePct": -1.6864,
-      "volume": 16900,
-      "sessionDate": "2026-11-17",
+      "price": 188.1490020751953,
+      "changePct": 1.044,
+      "volume": 4600,
+      "sessionDate": "2026-11-18",
       "aum": 223560912.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NBIL": {
-      "price": 4.119999885559082,
-      "changePct": -1.6706,
-      "volume": 21059600,
-      "sessionDate": "2026-11-17",
+      "price": 4.159999847412109,
+      "changePct": 0.9709,
+      "volume": 29538800,
+      "sessionDate": "2026-11-18",
       "aum": 162137600.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UWM": {
-      "price": 52.43000030517578,
-      "changePct": -2.8534,
-      "volume": 394000,
-      "sessionDate": "2026-11-17",
+      "price": 52.810001373291016,
+      "changePct": 0.7248,
+      "volume": 1481500,
+      "sessionDate": "2026-11-18",
       "aum": 216385664.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XDEC": {
-      "price": 43.65299987792969,
-      "changePct": -0.4266,
-      "volume": 8511,
-      "sessionDate": "2026-11-17",
+      "price": 43.660099029541016,
+      "changePct": 0.0163,
+      "volume": 5133,
+      "sessionDate": "2026-11-18",
       "aum": 207792752.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NOWL": {
-      "price": 2.7799999713897705,
-      "changePct": -13.125,
-      "volume": 11038800,
-      "sessionDate": "2026-11-17",
+      "price": 2.630000114440918,
+      "changePct": -5.3957,
+      "volume": 12700000,
+      "sessionDate": "2026-11-18",
       "aum": 114124752.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AVGX": {
-      "price": 33.40999984741211,
-      "changePct": 4.7335,
-      "volume": 374000,
-      "sessionDate": "2026-11-17",
+      "price": 35.79999923706055,
+      "changePct": 7.1535,
+      "volume": 482600,
+      "sessionDate": "2026-11-18",
       "aum": 157461984.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DLLL": {
-      "price": 10.109999656677246,
-      "changePct": 1.4042,
-      "volume": 1672000,
-      "sessionDate": "2026-11-17",
+      "price": 9.5600004196167,
+      "changePct": -5.4402,
+      "volume": 1420600,
+      "sessionDate": "2026-11-18",
       "aum": 124636960.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CWEB": {
-      "price": 14.600000381469727,
-      "changePct": -4.5128,
-      "volume": 908200,
-      "sessionDate": "2026-11-17",
+      "price": 14.119999885559082,
+      "changePct": -3.2877,
+      "volume": 1041700,
+      "sessionDate": "2026-11-18",
       "aum": 142756224.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FBL": {
-      "price": 22.3799991607666,
-      "changePct": -2.5261,
-      "volume": 288800,
-      "sessionDate": "2026-11-17",
+      "price": 22.190000534057617,
+      "changePct": -0.849,
+      "volume": 147500,
+      "sessionDate": "2026-11-18",
       "aum": 140455984.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MVV": {
-      "price": 77.7699966430664,
-      "changePct": -2.4828,
-      "volume": 5500,
-      "sessionDate": "2026-11-17",
+      "price": 78.2300033569336,
+      "changePct": 0.5915,
+      "volume": 24500,
+      "sessionDate": "2026-11-18",
       "aum": 147002336.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SMCX": {
-      "price": 4.110000133514404,
-      "changePct": -7.0136,
-      "volume": 8615200,
-      "sessionDate": "2026-11-17",
+      "price": 4.170000076293945,
+      "changePct": 1.4599,
+      "volume": 6112200,
+      "sessionDate": "2026-11-18",
       "aum": 138954624.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XJUN": {
-      "price": 44.619998931884766,
-      "changePct": -0.5793,
-      "volume": 1400,
-      "sessionDate": "2026-11-17",
+      "price": 44.59000015258789,
+      "changePct": -0.0672,
+      "volume": 1193,
+      "sessionDate": "2026-11-18",
       "aum": 137367584.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BABX": {
-      "price": 10.170000076293945,
-      "changePct": -8.7074,
-      "volume": 861100,
-      "sessionDate": "2026-11-17",
+      "price": 9.630000114440918,
+      "changePct": -5.3097,
+      "volume": 1073700,
+      "sessionDate": "2026-11-18",
       "aum": 91194672.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FNGG": {
-      "price": 205.10000610351562,
-      "changePct": -1.5925,
-      "volume": 2800,
-      "sessionDate": "2026-11-17",
+      "price": 208.44700622558594,
+      "changePct": 1.6319,
+      "volume": 900,
+      "sessionDate": "2026-11-18",
       "aum": 99253424.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NRGU": {
-      "price": 51.04399871826172,
-      "changePct": -1.7061,
-      "volume": 26100,
-      "sessionDate": "2026-11-17",
+      "price": 45.66999816894531,
+      "changePct": -10.5282,
+      "volume": 44700,
+      "sessionDate": "2026-11-18",
       "aum": 103565144.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "IONX": {
-      "price": 7.21999979019165,
-      "changePct": -12.6965,
-      "volume": 2209900,
-      "sessionDate": "2026-11-17",
+      "price": 6.420000076293945,
+      "changePct": -11.0803,
+      "volume": 3138400,
+      "sessionDate": "2026-11-18",
       "aum": 93848256.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XSEP": {
-      "price": 44.52899932861328,
-      "changePct": -0.6803,
-      "volume": 323,
-      "sessionDate": "2026-11-17",
+      "price": 44.55799865722656,
+      "changePct": 0.0651,
+      "volume": 1560,
+      "sessionDate": "2026-11-18",
       "aum": 98691192.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ROBN": {
-      "price": 11.199999809265137,
-      "changePct": -8.1967,
-      "volume": 1070500,
-      "sessionDate": "2026-11-17",
+      "price": 11.220000267028809,
+      "changePct": 0.1786,
+      "volume": 966900,
+      "sessionDate": "2026-11-18",
       "aum": 69407504.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XBJA": {
-      "price": 34.43389892578125,
-      "changePct": -0.5806,
-      "volume": 932,
-      "sessionDate": "2026-11-17",
+      "price": 34.477500915527344,
+      "changePct": 0.1263,
+      "volume": 492,
+      "sessionDate": "2026-11-18",
       "aum": 93938096.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "OILU": {
-      "price": 46.349998474121094,
-      "changePct": -2.5442,
-      "volume": 27300,
-      "sessionDate": "2026-11-17",
+      "price": 42.22999954223633,
+      "changePct": -8.8889,
+      "volume": 35400,
+      "sessionDate": "2026-11-18",
       "aum": 98609552.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "OKLL": {
-      "price": 2.930000066757202,
-      "changePct": -5.4839,
-      "volume": 1618700,
-      "sessionDate": "2026-11-17",
+      "price": 2.759999990463257,
+      "changePct": -5.8021,
+      "volume": 2052700,
+      "sessionDate": "2026-11-18",
       "aum": 58530040.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BIB": {
-      "price": 109.8499984741211,
-      "changePct": -1.3205,
-      "volume": 5400,
-      "sessionDate": "2026-11-17",
+      "price": 108.37999725341797,
+      "changePct": -1.3382,
+      "volume": 1900,
+      "sessionDate": "2026-11-18",
       "aum": 103730960.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TSLR": {
-      "price": 17.059999465942383,
-      "changePct": 0.1174,
-      "volume": 863300,
-      "sessionDate": "2026-11-17",
+      "price": 17.389999389648438,
+      "changePct": 1.9343,
+      "volume": 590200,
+      "sessionDate": "2026-11-18",
       "aum": 79412152.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XDSQ": {
-      "price": 42.83700180053711,
-      "changePct": -1.2904,
-      "volume": 4352,
-      "sessionDate": "2026-11-17",
+      "price": 42.81840133666992,
+      "changePct": -0.0434,
+      "volume": 3040,
+      "sessionDate": "2026-11-18",
       "aum": 68831480.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CRWL": {
-      "price": 66.7699966430664,
-      "changePct": -3.3258,
-      "volume": 73600,
-      "sessionDate": "2026-11-17",
+      "price": 77.41999816894531,
+      "changePct": 15.9503,
+      "volume": 181000,
+      "sessionDate": "2026-11-18",
       "aum": 68020456.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "APPX": {
-      "price": 17.889999389648438,
-      "changePct": -7.7835,
-      "volume": 632400,
-      "sessionDate": "2026-11-17",
+      "price": 17.15999984741211,
+      "changePct": -4.0805,
+      "volume": 220700,
+      "sessionDate": "2026-11-18",
       "aum": 47520784.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SPCU": {
-      "price": 10.8100004196167,
-      "changePct": 6.7127,
-      "volume": 2358400,
-      "sessionDate": "2026-11-17",
+      "price": 11.029999732971191,
+      "changePct": 2.0351,
+      "volume": 4106100,
+      "sessionDate": "2026-11-18",
       "aum": 52435384.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSFL": {
-      "price": 24.860000610351562,
-      "changePct": -4.6633,
-      "volume": 110900,
-      "sessionDate": "2026-11-17",
+      "price": 25.18000030517578,
+      "changePct": 1.2872,
+      "volume": 277100,
+      "sessionDate": "2026-11-18",
       "aum": 58277768.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XBOC": {
-      "price": 35.5880012512207,
-      "changePct": -0.9794,
-      "volume": 7300,
-      "sessionDate": "2026-11-17",
+      "price": 35.625999450683594,
+      "changePct": 0.1068,
+      "volume": 800,
+      "sessionDate": "2026-11-18",
       "aum": 59014900.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "GOOX": {
-      "price": 44.97999954223633,
-      "changePct": -2.3023,
-      "volume": 91900,
-      "sessionDate": "2026-11-17",
+      "price": 45.380001068115234,
+      "changePct": 0.8893,
+      "volume": 79200,
+      "sessionDate": "2026-11-18",
       "aum": 51952936.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TSYY": {
-      "price": 18.69099998474121,
-      "changePct": -0.0748,
-      "volume": 17300,
-      "sessionDate": "2026-11-17",
+      "price": 18.847999572753906,
+      "changePct": 0.84,
+      "volume": 22700,
+      "sessionDate": "2026-11-18",
       "aum": 56073440.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "HIMZ": {
-      "price": 7.960000038146973,
-      "changePct": -11.2598,
-      "volume": 563800,
-      "sessionDate": "2026-11-17",
+      "price": 7.519999980926514,
+      "changePct": -5.5276,
+      "volume": 526200,
+      "sessionDate": "2026-11-18",
       "aum": 52114176.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "IONL": {
-      "price": 4.090000152587891,
-      "changePct": -12.4197,
-      "volume": 1775800,
-      "sessionDate": "2026-11-17",
+      "price": 3.640000104904175,
+      "changePct": -11.0024,
+      "volume": 3718700,
+      "sessionDate": "2026-11-18",
       "aum": 54728624.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QCML": {
-      "price": 13.980999946594238,
-      "changePct": -3.0444,
-      "volume": 113600,
-      "sessionDate": "2026-11-17",
+      "price": 12.90999984741211,
+      "changePct": -7.6604,
+      "volume": 148800,
+      "sessionDate": "2026-11-18",
       "aum": 35284304.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RDTL": {
-      "price": 3.7200000286102295,
-      "changePct": 3.3333,
-      "volume": 915200,
-      "sessionDate": "2026-11-17",
+      "price": 3.700000047683716,
+      "changePct": -0.5376,
+      "volume": 354200,
+      "sessionDate": "2026-11-18",
       "aum": 23442032.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AMZZ": {
-      "price": 33.10300064086914,
-      "changePct": -0.003,
-      "volume": 77500,
-      "sessionDate": "2026-11-17",
+      "price": 35.73899841308594,
+      "changePct": 7.963,
+      "volume": 57200,
+      "sessionDate": "2026-11-18",
       "aum": 42521400.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "WTIU": {
-      "price": 21.57699966430664,
-      "changePct": -2.7406,
-      "volume": 2900,
-      "sessionDate": "2026-11-17",
+      "price": 19.148000717163086,
+      "changePct": -11.2574,
+      "volume": 13200,
+      "sessionDate": "2026-11-18",
       "aum": 45803656.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSOX": {
-      "price": 1.4800000190734863,
-      "changePct": -1.9868,
-      "volume": 2602600,
-      "sessionDate": "2026-11-17",
+      "price": 1.4299999475479126,
+      "changePct": -3.3784,
+      "volume": 1783000,
+      "sessionDate": "2026-11-18",
       "aum": 42120332.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TEMT": {
-      "price": 20.520000457763672,
-      "changePct": -3.9101,
-      "volume": 194700,
-      "sessionDate": "2026-11-17",
+      "price": 20.690000534057617,
+      "changePct": 0.8285,
+      "volume": 167300,
+      "sessionDate": "2026-11-18",
       "aum": 31567332.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AVGU": {
-      "price": 24.652999877929688,
-      "changePct": 4.2851,
-      "volume": 110300,
-      "sessionDate": "2026-11-17",
+      "price": 26.48900032043457,
+      "changePct": 7.4474,
+      "volume": 206800,
+      "sessionDate": "2026-11-18",
       "aum": 32339444.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DUSL": {
-      "price": 68.76000213623047,
-      "changePct": -1.7434,
-      "volume": 10400,
-      "sessionDate": "2026-11-17",
+      "price": 68.88999938964844,
+      "changePct": 0.1891,
+      "volume": 6500,
+      "sessionDate": "2026-11-18",
       "aum": 40480444.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TSMU": {
-      "price": 45.52000045776367,
-      "changePct": -7.2837,
-      "volume": 107600,
-      "sessionDate": "2026-11-17",
+      "price": 46.01599884033203,
+      "changePct": 1.0896,
+      "volume": 38700,
+      "sessionDate": "2026-11-18",
       "aum": 37951576.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SEMY": {
-      "price": 10.385000228881836,
-      "changePct": 0.0964,
-      "volume": 21100,
-      "sessionDate": "2026-11-17",
+      "price": 10.352999687194824,
+      "changePct": -0.3081,
+      "volume": 32800,
+      "sessionDate": "2026-11-18",
       "aum": 34754632.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "EET": {
-      "price": 80.7699966430664,
-      "changePct": -2.1681,
-      "volume": 3700,
-      "sessionDate": "2026-11-17",
+      "price": 79.55999755859375,
+      "changePct": -1.4981,
+      "volume": 12800,
+      "sessionDate": "2026-11-18",
       "aum": 31291900.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "VRTL": {
-      "price": 12.279999732971191,
-      "changePct": 1.5715,
-      "volume": 294100,
-      "sessionDate": "2026-11-17",
+      "price": 12.890000343322754,
+      "changePct": 4.9674,
+      "volume": 256300,
+      "sessionDate": "2026-11-18",
       "aum": 38632560.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SPAL": {
-      "price": 14.029999732971191,
-      "changePct": 6.1271,
-      "volume": 1312800,
-      "sessionDate": "2026-11-17",
+      "price": 14.380000114440918,
+      "changePct": 2.4947,
+      "volume": 1141100,
+      "sessionDate": "2026-11-18",
       "aum": 30264644.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SMCL": {
-      "price": 5.820000171661377,
-      "changePct": -7.3248,
-      "volume": 1249400,
-      "sessionDate": "2026-11-17",
+      "price": 5.929999828338623,
+      "changePct": 1.89,
+      "volume": 574500,
+      "sessionDate": "2026-11-18",
       "aum": 31335072.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UBRL": {
-      "price": 12.65999984741211,
-      "changePct": -3.285,
-      "volume": 117400,
-      "sessionDate": "2026-11-17",
+      "price": 12.640999794006348,
+      "changePct": -0.1501,
+      "volume": 43600,
+      "sessionDate": "2026-11-18",
       "aum": 27769088.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MVPL": {
-      "price": 39.263099670410156,
-      "changePct": -1.0681,
-      "volume": 1390,
-      "sessionDate": "2026-11-17",
+      "price": 39.257598876953125,
+      "changePct": -0.0138,
+      "volume": 129,
+      "sessionDate": "2026-11-18",
       "aum": 31145056.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QTJA": {
-      "price": 32.861000061035156,
-      "changePct": -0.9136,
-      "volume": 600,
-      "sessionDate": "2026-11-17",
+      "price": 33.13199996948242,
+      "changePct": 0.8247,
+      "volume": 300,
+      "sessionDate": "2026-11-18",
       "aum": 26221996.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BNKU": {
-      "price": 29.84000015258789,
-      "changePct": -5.1795,
-      "volume": 5400,
-      "sessionDate": "2026-11-17",
+      "price": 28.889999389648438,
+      "changePct": -3.1836,
+      "volume": 10500,
+      "sessionDate": "2026-11-18",
       "aum": 30669878.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "GMEU": {
-      "price": 9.109999656677246,
-      "changePct": -2.043,
-      "volume": 375800,
-      "sessionDate": "2026-11-17",
+      "price": 9.930000305175781,
+      "changePct": 9.0011,
+      "volume": 807100,
+      "sessionDate": "2026-11-18",
       "aum": 22213206.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QQUP": {
-      "price": 52.632999420166016,
-      "changePct": -1.155,
-      "volume": 3600,
-      "sessionDate": "2026-11-17",
+      "price": 53.3120002746582,
+      "changePct": 1.2901,
+      "volume": 4700,
+      "sessionDate": "2026-11-18",
       "aum": 23311352.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UMDD": {
-      "price": 28.600000381469727,
-      "changePct": -3.7685,
-      "volume": 4900,
-      "sessionDate": "2026-11-17",
+      "price": 28.8700008392334,
+      "changePct": 0.9441,
+      "volume": 600,
+      "sessionDate": "2026-11-18",
       "aum": 26978818.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NFLU": {
-      "price": 10.399999618530273,
-      "changePct": -3.525,
-      "volume": 95400,
-      "sessionDate": "2026-11-17",
+      "price": 10.4399995803833,
+      "changePct": 0.3846,
+      "volume": 101600,
+      "sessionDate": "2026-11-18",
       "aum": 22197976.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MRAL": {
-      "price": 10.109000205993652,
-      "changePct": -6.3114,
-      "volume": 126300,
-      "sessionDate": "2026-11-17",
+      "price": 10.550000190734863,
+      "changePct": 4.3624,
+      "volume": 170400,
+      "sessionDate": "2026-11-18",
       "aum": 21331306.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UXI": {
-      "price": 48.58000183105469,
-      "changePct": -1.4004,
-      "volume": 2600,
-      "sessionDate": "2026-11-17",
+      "price": 48.79999923706055,
+      "changePct": 0.4529,
+      "volume": 400,
+      "sessionDate": "2026-11-18",
       "aum": 25361000.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "EFO": {
-      "price": 67.18000030517578,
-      "changePct": -2.5671,
-      "volume": 3500,
-      "sessionDate": "2026-11-17",
+      "price": 65.7699966430664,
+      "changePct": -2.0988,
+      "volume": 16900,
+      "sessionDate": "2026-11-18",
       "aum": 24952362.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NVYY": {
-      "price": 9.274999618530273,
-      "changePct": -0.4294,
-      "volume": 25700,
-      "sessionDate": "2026-11-17",
+      "price": 9.21399974822998,
+      "changePct": -0.6577,
+      "volume": 24400,
+      "sessionDate": "2026-11-18",
       "aum": 21790638.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UBOT": {
-      "price": 15.039999961853027,
-      "changePct": -3.0303,
-      "volume": 22200,
-      "sessionDate": "2026-11-17",
+      "price": 15.069999694824219,
+      "changePct": 0.1995,
+      "volume": 12000,
+      "sessionDate": "2026-11-18",
       "aum": 19237304.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XTAP": {
-      "price": 46.22700119018555,
-      "changePct": -0.843,
-      "volume": 4800,
-      "sessionDate": "2026-11-17",
+      "price": 46.34000015258789,
+      "changePct": 0.2444,
+      "volume": 3500,
+      "sessionDate": "2026-11-18",
       "aum": 18689378.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AAPB": {
-      "price": 47.472999572753906,
-      "changePct": -0.655,
-      "volume": 12300,
-      "sessionDate": "2026-11-17",
+      "price": 47.816001892089844,
+      "changePct": 0.7225,
+      "volume": 16800,
+      "sessionDate": "2026-11-18",
       "aum": 17951572.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSFX": {
-      "price": 24.649999618530273,
-      "changePct": -4.7159,
-      "volume": 25800,
-      "sessionDate": "2026-11-17",
+      "price": 24.829999923706055,
+      "changePct": 0.7302,
+      "volume": 12100,
+      "sessionDate": "2026-11-18",
       "aum": 16537102.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XTOC": {
-      "price": 36.029998779296875,
-      "changePct": -1.1658,
-      "volume": 19400,
-      "sessionDate": "2026-11-17",
+      "price": 35.97999954223633,
+      "changePct": -0.1388,
+      "volume": 11000,
+      "sessionDate": "2026-11-18",
       "aum": 17621660.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XTJL": {
-      "price": 40.98680114746094,
-      "changePct": -1.189,
-      "volume": 51728,
-      "sessionDate": "2026-11-17",
+      "price": 41.01620101928711,
+      "changePct": 0.0712,
+      "volume": 18712,
+      "sessionDate": "2026-11-18",
       "aum": 16898592.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XTJA": {
-      "price": 34.76300048828125,
-      "changePct": -0.8782,
+      "price": 34.83000183105469,
+      "changePct": 0.1927,
       "volume": 100,
-      "sessionDate": "2026-11-17",
+      "sessionDate": "2026-11-18",
       "aum": 16760040.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QTOC": {
-      "price": 35.233001708984375,
-      "changePct": -1.0531,
-      "volume": 9500,
-      "sessionDate": "2026-11-17",
+      "price": 35.5099983215332,
+      "changePct": 0.7862,
+      "volume": 800,
+      "sessionDate": "2026-11-18",
       "aum": 15831673.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MSTP": {
-      "price": 10.050000190734863,
-      "changePct": -12.2271,
-      "volume": 43300,
-      "sessionDate": "2026-11-17",
+      "price": 8.779999732971191,
+      "changePct": -12.6368,
+      "volume": 40200,
+      "sessionDate": "2026-11-18",
       "aum": 11873497.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SMHB": {
-      "price": 3.0,
-      "changePct": -3.8462,
-      "volume": 138400,
-      "sessionDate": "2026-11-17",
+      "price": 3.009999990463257,
+      "changePct": 0.3333,
+      "volume": 99100,
+      "sessionDate": "2026-11-18",
       "aum": 17312880.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "GOU": {
-      "price": 15.92199993133545,
-      "changePct": -2.6773,
-      "volume": 108500,
-      "sessionDate": "2026-11-17",
+      "price": 16.200000762939453,
+      "changePct": 1.746,
+      "volume": 76700,
+      "sessionDate": "2026-11-18",
       "aum": 20219484.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TPOR": {
-      "price": 33.59000015258789,
-      "changePct": -5.4655,
-      "volume": 16100,
-      "sessionDate": "2026-11-17",
+      "price": 34.22999954223633,
+      "changePct": 1.9053,
+      "volume": 11000,
+      "sessionDate": "2026-11-18",
       "aum": 16634741.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "COYY": {
-      "price": 11.039999961853027,
-      "changePct": -0.316,
-      "volume": 27300,
-      "sessionDate": "2026-11-17",
+      "price": 11.010000228881836,
+      "changePct": -0.2717,
+      "volume": 15100,
+      "sessionDate": "2026-11-18",
       "aum": 13401875.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RIOX": {
-      "price": 13.880000114440918,
-      "changePct": -0.072,
-      "volume": 120700,
-      "sessionDate": "2026-11-17",
+      "price": 15.84000015258789,
+      "changePct": 14.121,
+      "volume": 298400,
+      "sessionDate": "2026-11-18",
       "aum": 12636108.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UPSX": {
-      "price": 4.949999809265137,
-      "changePct": -10.4883,
-      "volume": 79700,
-      "sessionDate": "2026-11-17",
+      "price": 4.885000228881836,
+      "changePct": -1.3131,
+      "volume": 191900,
+      "sessionDate": "2026-11-18",
       "aum": 12537418.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "KPDD": {
       "price": 4.855000019073486,
@@ -1932,232 +1932,232 @@
       "sessionDate": "2026-10-29",
       "aum": 14190265.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TARK": {
-      "price": 32.750999450683594,
-      "changePct": -1.8285,
-      "volume": 33400,
-      "sessionDate": "2026-11-17",
+      "price": 32.84000015258789,
+      "changePct": 0.2717,
+      "volume": 23400,
+      "sessionDate": "2026-11-18",
       "aum": 11153681.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QQQP": {
-      "price": 177.375,
-      "changePct": -1.8314,
-      "volume": 3600,
-      "sessionDate": "2026-11-17",
+      "price": 179.42300415039062,
+      "changePct": 1.1546,
+      "volume": 900,
+      "sessionDate": "2026-11-18",
       "aum": 10573083.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RVNL": {
-      "price": 12.607000350952148,
-      "changePct": -3.6898,
-      "volume": 43800,
-      "sessionDate": "2026-11-17",
+      "price": 12.439000129699707,
+      "changePct": -1.3326,
+      "volume": 69000,
+      "sessionDate": "2026-11-18",
       "aum": 14773192.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UPW": {
-      "price": 21.389999389648438,
-      "changePct": -3.0811,
-      "volume": 7200,
-      "sessionDate": "2026-11-17",
+      "price": 21.530000686645508,
+      "changePct": 0.6545,
+      "volume": 14800,
+      "sessionDate": "2026-11-18",
       "aum": 12893210.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SPYQ": {
-      "price": 174.5,
-      "changePct": -2.3181,
-      "volume": 900,
-      "sessionDate": "2026-11-17",
+      "price": 174.03500366210938,
+      "changePct": -0.2665,
+      "volume": 1000,
+      "sessionDate": "2026-11-18",
       "aum": 12549092.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "EZJ": {
-      "price": 56.04999923706055,
-      "changePct": -2.7922,
-      "volume": 900,
-      "sessionDate": "2026-11-17",
+      "price": 55.369998931884766,
+      "changePct": -1.2132,
+      "volume": 3400,
+      "sessionDate": "2026-11-18",
       "aum": 10577605.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "QUBX": {
-      "price": 9.057999610900879,
-      "changePct": -5.793,
-      "volume": 84600,
-      "sessionDate": "2026-11-17",
+      "price": 9.029999732971191,
+      "changePct": -0.3091,
+      "volume": 22100,
+      "sessionDate": "2026-11-18",
       "aum": 12962114.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TSL": {
-      "price": 14.279999732971191,
-      "changePct": 0.0,
-      "volume": 300300,
-      "sessionDate": "2026-11-17",
+      "price": 14.4399995803833,
+      "changePct": 1.1204,
+      "volume": 193000,
+      "sessionDate": "2026-11-18",
       "aum": 12075198.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UPV": {
-      "price": 92.25,
-      "changePct": -2.5151,
-      "volume": 4100,
-      "sessionDate": "2026-11-17",
+      "price": 90.01000213623047,
+      "changePct": -2.4282,
+      "volume": 11900,
+      "sessionDate": "2026-11-18",
       "aum": 11756964.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "HOOX": {
-      "price": 12.597000122070312,
-      "changePct": -8.0108,
-      "volume": 45900,
-      "sessionDate": "2026-11-17",
+      "price": 12.569999694824219,
+      "changePct": -0.2143,
+      "volume": 7500,
+      "sessionDate": "2026-11-18",
       "aum": 8108480.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ISUL": {
-      "price": 17.801000595092773,
-      "changePct": -3.1765,
-      "volume": 8600,
-      "sessionDate": "2026-11-17",
+      "price": 17.06599998474121,
+      "changePct": -4.129,
+      "volume": 15700,
+      "sessionDate": "2026-11-18",
       "aum": 9096342.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RBLU": {
-      "price": 4.010000228881836,
-      "changePct": -9.1733,
-      "volume": 69400,
-      "sessionDate": "2026-11-17",
+      "price": 4.619999885559082,
+      "changePct": 15.212,
+      "volume": 203800,
+      "sessionDate": "2026-11-18",
       "aum": 6636660.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MLPR": {
-      "price": 64.80799865722656,
-      "changePct": 0.1669,
-      "volume": 1700,
-      "sessionDate": "2026-11-17",
+      "price": 63.74700164794922,
+      "changePct": -1.6371,
+      "volume": 100,
+      "sessionDate": "2026-11-18",
       "aum": 10807470.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AAPX": {
-      "price": 43.7599983215332,
-      "changePct": -0.2052,
-      "volume": 10700,
-      "sessionDate": "2026-11-17",
+      "price": 43.84000015258789,
+      "changePct": 0.1828,
+      "volume": 6700,
+      "sessionDate": "2026-11-18",
       "aum": 7615551.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "AMYY": {
-      "price": 11.605999946594238,
-      "changePct": -0.2578,
-      "volume": 20000,
-      "sessionDate": "2026-11-17",
+      "price": 11.696000099182129,
+      "changePct": 0.7755,
+      "volume": 21500,
+      "sessionDate": "2026-11-18",
       "aum": 9000903.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UGE": {
-      "price": 22.0,
-      "changePct": -2.3957,
-      "volume": 35300,
-      "sessionDate": "2026-11-17",
+      "price": 21.889999389648438,
+      "changePct": -0.5,
+      "volume": 177700,
+      "sessionDate": "2026-11-18",
       "aum": 11417787.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "HOYY": {
-      "price": 3.690000057220459,
-      "changePct": -0.5391,
-      "volume": 17000,
-      "sessionDate": "2026-11-17",
+      "price": 3.6600000858306885,
+      "changePct": -0.813,
+      "volume": 84800,
+      "sessionDate": "2026-11-18",
       "aum": 7712905.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UCC": {
-      "price": 45.83000183105469,
-      "changePct": -1.8209,
-      "volume": 4300,
-      "sessionDate": "2026-11-17",
+      "price": 47.65999984741211,
+      "changePct": 3.993,
+      "volume": 2100,
+      "sessionDate": "2026-11-18",
       "aum": 8767824.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SMHD": {
-      "price": 60.650001525878906,
-      "changePct": 2.4839,
-      "volume": 1700,
-      "sessionDate": "2026-11-17",
+      "price": 60.16999816894531,
+      "changePct": -0.7914,
+      "volume": 500,
+      "sessionDate": "2026-11-18",
       "aum": 23427076.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "YSPY": {
-      "price": 14.486000061035156,
-      "changePct": -0.9437,
-      "volume": 2400,
-      "sessionDate": "2026-11-17",
+      "price": 14.437000274658203,
+      "changePct": -0.3383,
+      "volume": 2000,
+      "sessionDate": "2026-11-18",
       "aum": 7273111.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XPP": {
-      "price": 17.639999389648438,
-      "changePct": -2.4336,
+      "price": 17.1200008392334,
+      "changePct": -2.9478,
       "volume": 1200,
-      "sessionDate": "2026-11-17",
+      "sessionDate": "2026-11-18",
       "aum": 7082847.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "PDDL": {
-      "price": 10.1899995803833,
-      "changePct": -2.0192,
-      "volume": 10400,
-      "sessionDate": "2026-11-17",
+      "price": 10.220000267028809,
+      "changePct": 0.2944,
+      "volume": 9600,
+      "sessionDate": "2026-11-18",
       "aum": 5976221.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SKYU": {
-      "price": 39.518001556396484,
-      "changePct": -5.362,
-      "volume": 4200,
-      "sessionDate": "2026-11-17",
+      "price": 40.45899963378906,
+      "changePct": 2.3812,
+      "volume": 3100,
+      "sessionDate": "2026-11-18",
       "aum": 3647184.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "DJTU": {
-      "price": 1.684999942779541,
-      "changePct": -3.9886,
-      "volume": 70200,
-      "sessionDate": "2026-11-17",
+      "price": 1.690000057220459,
+      "changePct": 0.2967,
+      "volume": 174800,
+      "sessionDate": "2026-11-18",
       "aum": 3762648.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BDCX": {
-      "price": 17.899700164794922,
-      "changePct": -2.5283,
-      "volume": 128,
-      "sessionDate": "2026-11-17",
+      "price": 17.791000366210938,
+      "changePct": -0.6089,
+      "volume": 100,
+      "sessionDate": "2026-11-18",
       "aum": 6515460.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "KMLI": {
       "price": 8.930000305175781,
@@ -2166,115 +2166,115 @@
       "sessionDate": "2026-10-29",
       "aum": 6291396.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "SMYY": {
-      "price": 5.010000228881836,
-      "changePct": 0.5015,
-      "volume": 35500,
-      "sessionDate": "2026-11-17",
+      "price": 4.965000152587891,
+      "changePct": -0.8982,
+      "volume": 47500,
+      "sessionDate": "2026-11-18",
       "aum": 5408558.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RGTU": {
-      "price": 2.5899999141693115,
-      "changePct": -13.0873,
-      "volume": 134800,
-      "sessionDate": "2026-11-17",
+      "price": 2.509999990463257,
+      "changePct": -3.0888,
+      "volume": 56200,
+      "sessionDate": "2026-11-18",
       "aum": 5425941.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "NUGY": {
-      "price": 10.592000007629395,
-      "changePct": -0.0755,
-      "volume": 17400,
-      "sessionDate": "2026-11-17",
+      "price": 10.470000267028809,
+      "changePct": -1.1518,
+      "volume": 14900,
+      "sessionDate": "2026-11-18",
       "aum": 5108349.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TQQY": {
-      "price": 10.888999938964844,
-      "changePct": -0.7384,
-      "volume": 4200,
-      "sessionDate": "2026-11-17",
+      "price": 10.847999572753906,
+      "changePct": -0.3765,
+      "volume": 800,
+      "sessionDate": "2026-11-18",
       "aum": 4692644.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FLYU": {
-      "price": 37.9630012512207,
-      "changePct": -6.1599,
-      "volume": 800,
-      "sessionDate": "2026-11-17",
+      "price": 39.58599853515625,
+      "changePct": 4.2752,
+      "volume": 100,
+      "sessionDate": "2026-11-18",
       "aum": 5703587.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RTYY": {
-      "price": 6.489999771118164,
-      "changePct": 0.1852,
-      "volume": 43900,
-      "sessionDate": "2026-11-17",
+      "price": 6.636000156402588,
+      "changePct": 2.2496,
+      "volume": 69400,
+      "sessionDate": "2026-11-18",
       "aum": 5009113.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "LTL": {
-      "price": 21.170000076293945,
-      "changePct": -2.8899,
-      "volume": 4432,
-      "sessionDate": "2026-11-17",
+      "price": 21.36090087890625,
+      "changePct": 0.9018,
+      "volume": 2463,
+      "sessionDate": "2026-11-18",
       "aum": 3644030.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "HDLB": {
-      "price": 16.50079917907715,
-      "changePct": -3.8135,
-      "volume": 896,
-      "sessionDate": "2026-11-17",
+      "price": 16.421100616455078,
+      "changePct": -0.4842,
+      "volume": 4080,
+      "sessionDate": "2026-11-18",
       "aum": 5223168.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "ARCX": {
-      "price": 4.380000114440918,
-      "changePct": -11.4436,
-      "volume": 53000,
-      "sessionDate": "2026-11-17",
+      "price": 3.7049999237060547,
+      "changePct": -15.411,
+      "volume": 95100,
+      "sessionDate": "2026-11-18",
       "aum": 4554984.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MAAY": {
-      "price": 3.619999885559082,
-      "changePct": -0.8219,
-      "volume": 60700,
-      "sessionDate": "2026-11-17",
+      "price": 3.625,
+      "changePct": 0.1381,
+      "volume": 61300,
+      "sessionDate": "2026-11-18",
       "aum": 4212569.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "UBR": {
-      "price": 20.940000534057617,
-      "changePct": 0.2394,
-      "volume": 2100,
-      "sessionDate": "2026-11-17",
+      "price": 19.65999984741211,
+      "changePct": -6.1127,
+      "volume": 8700,
+      "sessionDate": "2026-11-18",
       "aum": 2118111.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "IOYY": {
-      "price": 4.699999809265137,
-      "changePct": 0.2132,
-      "volume": 24200,
-      "sessionDate": "2026-11-17",
+      "price": 4.65500020980835,
+      "changePct": -0.9574,
+      "volume": 24700,
+      "sessionDate": "2026-11-18",
       "aum": 3576563.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "KBAB": {
       "price": 6.445000171661377,
@@ -2283,97 +2283,97 @@
       "sessionDate": "2026-10-29",
       "aum": 2533152.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CARU": {
-      "price": 17.766000747680664,
-      "changePct": -1.5952,
-      "volume": 100,
-      "sessionDate": "2026-11-17",
+      "price": 18.048999786376953,
+      "changePct": 1.5929,
+      "volume": 8117,
+      "sessionDate": "2026-11-18",
       "aum": 3058048.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "RGYY": {
-      "price": 4.429999828338623,
-      "changePct": -0.6727,
-      "volume": 15500,
-      "sessionDate": "2026-11-17",
-      "aum": 2446190.0,
-      "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
-    },
-    "PLYY": {
-      "price": 7.389999866485596,
-      "changePct": -0.8054,
-      "volume": 2500,
-      "sessionDate": "2026-11-17",
-      "aum": 2129303.0,
-      "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
-    },
-    "AZYY": {
-      "price": 14.055999755859375,
-      "changePct": 0.1354,
-      "volume": 1800,
-      "sessionDate": "2026-11-17",
-      "aum": 1934674.0,
-      "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
-    },
-    "PUL": {
-      "price": 32.619998931884766,
-      "changePct": -3.3195,
-      "volume": 3300,
-      "sessionDate": "2026-11-17",
-      "aum": 1631756.0,
-      "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
-    },
-    "QBY": {
       "price": 4.409999847412109,
       "changePct": -0.4515,
-      "volume": 11200,
-      "sessionDate": "2026-11-17",
+      "volume": 600,
+      "sessionDate": "2026-11-18",
+      "aum": 2446190.0,
+      "expenseRatioPct": null,
+      "fundAsOf": "2026-11-19"
+    },
+    "PLYY": {
+      "price": 7.360000133514404,
+      "changePct": -0.406,
+      "volume": 1000,
+      "sessionDate": "2026-11-18",
+      "aum": 2129303.0,
+      "expenseRatioPct": null,
+      "fundAsOf": "2026-11-19"
+    },
+    "AZYY": {
+      "price": 14.359999656677246,
+      "changePct": 2.1628,
+      "volume": 3400,
+      "sessionDate": "2026-11-18",
+      "aum": 1934674.0,
+      "expenseRatioPct": null,
+      "fundAsOf": "2026-11-19"
+    },
+    "PUL": {
+      "price": 31.8700008392334,
+      "changePct": -2.2992,
+      "volume": 14400,
+      "sessionDate": "2026-11-18",
+      "aum": 1631756.0,
+      "expenseRatioPct": null,
+      "fundAsOf": "2026-11-19"
+    },
+    "QBY": {
+      "price": 4.375,
+      "changePct": -0.7936,
+      "volume": 3700,
+      "sessionDate": "2026-11-18",
       "aum": 1936412.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CRY": {
-      "price": 12.75,
-      "changePct": -1.1628,
-      "volume": 2800,
-      "sessionDate": "2026-11-17",
+      "price": 12.710000038146973,
+      "changePct": -0.3137,
+      "volume": 3000,
+      "sessionDate": "2026-11-18",
       "aum": 2341105.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BIOY": {
-      "price": 18.307300567626953,
-      "changePct": -0.287,
-      "volume": 8797,
-      "sessionDate": "2026-11-17",
+      "price": 18.32029914855957,
+      "changePct": 0.0563,
+      "volume": 4386,
+      "sessionDate": "2026-11-18",
       "aum": 1534930.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "MTYY": {
-      "price": 15.024999618530273,
-      "changePct": -0.4967,
-      "volume": 8100,
-      "sessionDate": "2026-11-17",
+      "price": 15.0,
+      "changePct": -0.1664,
+      "volume": 100,
+      "sessionDate": "2026-11-18",
       "aum": 1181517.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "CWY": {
-      "price": 11.979999542236328,
-      "changePct": -0.1667,
-      "volume": 5500,
-      "sessionDate": "2026-11-17",
+      "price": 11.90999984741211,
+      "changePct": -0.5843,
+      "volume": 1900,
+      "sessionDate": "2026-11-18",
       "aum": 1160207.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "KBDU": {
       "price": 8.739999771118164,
@@ -2382,79 +2382,79 @@
       "sessionDate": "2026-10-29",
       "aum": 778718.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "HMYY": {
-      "price": 4.534999847412109,
-      "changePct": -0.7659,
-      "volume": 11900,
-      "sessionDate": "2026-11-17",
+      "price": 4.519999980926514,
+      "changePct": -0.3308,
+      "volume": 10500,
+      "sessionDate": "2026-11-18",
       "aum": 874168.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TMYY": {
-      "price": 18.15999984741211,
-      "changePct": -1.0354,
-      "volume": 2200,
-      "sessionDate": "2026-11-17",
+      "price": 18.149999618530273,
+      "changePct": -0.0551,
+      "volume": 200,
+      "sessionDate": "2026-11-18",
       "aum": 783914.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BBUL": {
-      "price": 10.270000457763672,
-      "changePct": -14.1304,
-      "volume": 2700,
-      "sessionDate": "2026-11-17",
+      "price": 11.3100004196167,
+      "changePct": 10.1266,
+      "volume": 8100,
+      "sessionDate": "2026-11-18",
       "aum": 899362.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FINY": {
-      "price": 24.959999084472656,
-      "changePct": -1.3049,
-      "volume": 379,
-      "sessionDate": "2026-11-17",
+      "price": 24.723899841308594,
+      "changePct": -0.9459,
+      "volume": 5430,
+      "sessionDate": "2026-11-18",
       "aum": 747601.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "BBYY": {
-      "price": 7.699999809265137,
-      "changePct": -0.7732,
-      "volume": 900,
-      "sessionDate": "2026-11-17",
+      "price": 7.670000076293945,
+      "changePct": -0.3896,
+      "volume": 1500,
+      "sessionDate": "2026-11-18",
       "aum": 571267.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "XCOM": {
-      "price": 22.809999465942383,
-      "changePct": -0.4365,
-      "volume": 300,
-      "sessionDate": "2026-11-17",
+      "price": 21.81999969482422,
+      "changePct": -4.3402,
+      "volume": 100,
+      "sessionDate": "2026-11-18",
       "aum": 571372.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "TECY": {
-      "price": 17.285999298095703,
-      "changePct": -0.6552,
-      "volume": 207,
-      "sessionDate": "2026-11-17",
+      "price": 17.360599517822266,
+      "changePct": 0.4083,
+      "volume": 105,
+      "sessionDate": "2026-11-18",
       "aum": 385116.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     },
     "FBYY": {
-      "price": 9.802000045776367,
-      "changePct": -0.3862,
-      "volume": 300,
-      "sessionDate": "2026-11-17",
+      "price": 9.803000450134277,
+      "changePct": 0.0102,
+      "volume": 200,
+      "sessionDate": "2026-11-18",
       "aum": 295285.0,
       "expenseRatioPct": null,
-      "fundAsOf": "2026-11-18"
+      "fundAsOf": "2026-11-19"
     }
   }
 }
