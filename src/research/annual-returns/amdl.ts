@@ -3,14 +3,14 @@ import { kamalResearchAuthor } from "../author"
 
 export const amdlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "AMDL",
-  slug: "amdl-returns-drawdowns-and-recovery",
+  slug: "amdl-return-drawdown-and-recovery",
   name: "GraniteShares 2x Long AMD Daily ETF",
   shortName: "AMDL",
   startYear: 2024,
   author: kamalResearchAuthor,
   intelligenceEyebrow: "AMDL LEVERAGED ETF INTELLIGENCE",
-  canonicalPath: "/amdl-returns-drawdowns-and-recovery/",
-  embedPath: "/embed/amdl-returns-drawdowns-and-recovery/",
+  canonicalPath: "/amdl-return-drawdown-and-recovery/",
+  embedPath: "/embed/amdl-return-drawdown-and-recovery/",
   csvPath: "/data/amdl-annual-returns.csv",
   returnType: "AMDL Price Return",
   sourceLabel: "Yahoo Finance — GraniteShares 2x Long AMD Daily ETF (AMDL)",

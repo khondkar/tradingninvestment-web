@@ -22,7 +22,7 @@ Description: Explore Alphabet GOOGL historical returns, long-term performance, g
 
 ## AMDL Returns, Drawdowns & Recovery
 
-URL: https://tradingninvestment.com/amdl-returns-drawdowns-and-recovery/
+URL: https://tradingninvestment.com/amdl-return-drawdown-and-recovery/
 Type: annual
 Subject: GraniteShares 2x Long AMD Daily ETF
 Symbol: AMDL
