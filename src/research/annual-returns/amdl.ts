@@ -3,14 +3,14 @@ import { kamalResearchAuthor } from "../author"
 
 export const amdlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   symbol: "AMDL",
-  slug: "amdl-etf",
+  slug: "amdl-returns-drawdowns-and-recovery",
   name: "GraniteShares 2x Long AMD Daily ETF",
   shortName: "AMDL",
   startYear: 2024,
   author: kamalResearchAuthor,
   intelligenceEyebrow: "AMDL LEVERAGED ETF INTELLIGENCE",
-  canonicalPath: "/amdl-etf/",
-  embedPath: "/embed/amdl-etf/",
+  canonicalPath: "/amdl-returns-drawdowns-and-recovery/",
+  embedPath: "/embed/amdl-returns-drawdowns-and-recovery/",
   csvPath: "/data/amdl-annual-returns.csv",
   returnType: "AMDL Price Return",
   sourceLabel: "Yahoo Finance — GraniteShares 2x Long AMD Daily ETF (AMDL)",
@@ -18,11 +18,12 @@ export const amdlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
   newsSymbols: ["AMDL", "AMD"],
   companyContext: {
     eyebrow: "How to read the record",
-    title: "AMDL is a daily leveraged trading vehicle",
+    title: "AMDL returns, drawdowns and recovery",
     paragraphs: [
       "AMDL seeks 2× the daily percentage change of Advanced Micro Devices (AMD), before fees and expenses. That objective resets each trading day. It does not promise twice AMD’s return over a month, a year, or any other holding period longer than one day.",
       "AMDL’s first trading session was March 18, 2024. From that first close through December 31, 2024, AMDL fell 69.97% and AMD fell 36.64%. That is a partial-period comparison; it is shown separately from full calendar-year statistics. In 2025, AMDL gained 103.00% and AMD gained 77.30% on a price-return basis.",
-      "This page compares annual price returns with AMD and explains the effects of daily compounding, volatility, derivatives and fund costs. 2026 year-to-date results are through November 18, 2026, the latest completed session in this dataset.",
+      "AMDL, NVDL, QLD and TQQQ all reset their leverage daily, but they track different exposures: AMD, NVIDIA, and the Nasdaq-100. QLD targets 2× the Nasdaq-100; TQQQ targets 3×. Their longer-term returns therefore depend on each fund’s path, volatility, fees and distributions—not just the leverage label.",
+      "The 2025 comparison below uses the last available close of 2024 and 2025. It is a matched calendar-year comparison, not a forecast. Daily AMDL price history is not yet available in this research dataset, so this version does not publish a historical maximum drawdown or recovery date for AMDL.",
     ],
   },
   leveragedEtf: {
@@ -54,12 +55,12 @@ export const amdlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
     height: 540,
   },
   seo: {
-    title: "AMDL ETF: Performance, Daily Leverage & AMDL vs AMD",
-    h1: "AMDL ETF: Performance, Daily Leverage & AMDL vs AMD",
+    title: "AMDL Returns, Drawdowns & Recovery | AMDL vs NVDL, QLD & TQQQ",
+    h1: "AMDL Returns, Drawdowns & Recovery",
     description:
-      "Explore AMDL ETF annual performance, price returns, daily 2× AMD exposure and the risks of compounding. Compare GraniteShares AMDL with AMD and review fund details.",
-    socialTitle: "AMDL ETF Performance & AMDL vs AMD",
+      "Review AMDL’s annual returns, daily 2× AMD exposure and recovery risks. Compare AMDL with NVDL, QLD and TQQQ, including each fund’s daily leverage objective and 2025 return.",
+    socialTitle: "AMDL Returns, Drawdowns & Recovery",
     socialDescription:
-      "Independent TNI research on AMDL’s annual returns, daily leverage, compounding risks and performance alongside AMD.",
+      "Independent TNI research comparing AMDL, NVDL, QLD and TQQQ, with annual returns, daily leverage objectives and recovery-risk context.",
   },
 }

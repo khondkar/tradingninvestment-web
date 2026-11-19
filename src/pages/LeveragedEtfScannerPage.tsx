@@ -113,7 +113,7 @@ export default function LeveragedEtfScannerPage() {
           <p className="tni-les-kicker tni-les-ink">ETF INTELLIGENCE</p>
           <h2>Explore leveraged ETFs</h2>
           <p>Use this ETF screener to filter by direction, leverage and asset class, then compare up to four funds.</p>
-          <p className="tni-les-research-links">Historical research: <a href="/tqqq-returns/">TQQQ returns</a>, <a href="/soxl-etf/">SOXL</a>, <a href="/nvdl-etf/">NVDL</a>, <a href="/amdl-etf/">AMDL</a> and <a href="/tsll-etf/">TSLL</a>.</p>
+          <p className="tni-les-research-links">Historical research: <a href="/tqqq-returns/">TQQQ returns</a>, <a href="/soxl-etf/">SOXL</a>, <a href="/nvdl-etf/">NVDL</a>, <a href="/amdl-returns-drawdowns-and-recovery/">AMDL returns, drawdowns and recovery</a> and <a href="/tsll-etf/">TSLL</a>.</p>
         </div>
         <span className="tni-les-count">{results.length} matches</span>
       </div>

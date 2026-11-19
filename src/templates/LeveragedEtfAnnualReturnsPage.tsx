@@ -21,6 +21,7 @@ import LeveragedEtfAnnualReturnsFAQ from "../components/research/LeveragedEtfAnn
 import LeveragedEtfFundFacts from "../components/research/LeveragedEtfFundFacts"
 import LeveragedEtfResearchContext from "../components/research/LeveragedEtfResearchContext"
 import LazyLeveragedEtfPeriodComparison from "../components/research/LazyLeveragedEtfPeriodComparison"
+import AmdlLeveragedComparison from "../components/research/AmdlLeveragedComparison"
 
 
 // ============================================================================
@@ -83,6 +84,8 @@ export default function LeveragedEtfAnnualReturnsPage({
       ) : undefined}
       afterIntroduction={config.symbol === "TQQQ" ? (
         <TqqqNasdaqComparison />
+      ) : config.symbol === "AMDL" ? (
+        <AmdlLeveragedComparison />
       ) : config.symbol === "UPRO" && config.companyContext ? (
         <section aria-labelledby="upro-research-introduction" style={{ color: "#10233f", fontWeight: 600, fontSize: 17, lineHeight: 1.75, margin: "28px 0" }}>
           <h2 id="upro-research-introduction" style={{ fontSize: 26, fontWeight: 800 }}>{config.companyContext.title}</h2>

@@ -20,13 +20,13 @@ Subject: Alphabet Inc.
 Symbol: GOOGL
 Description: Explore Alphabet GOOGL historical returns, long-term performance, growth of $10,000, rolling performance, and comparison with the S&P 500.
 
-## AMDL ETF Performance & AMDL vs AMD
+## AMDL Returns, Drawdowns & Recovery
 
-URL: https://tradingninvestment.com/amdl-etf/
+URL: https://tradingninvestment.com/amdl-returns-drawdowns-and-recovery/
 Type: annual
 Subject: GraniteShares 2x Long AMD Daily ETF
 Symbol: AMDL
-Description: Independent TNI research on AMDL’s annual returns, daily leverage, compounding risks and performance alongside AMD.
+Description: Compare AMD vs AMDL and AMD vs NVDL, QLD and TQQQ by daily leverage objective and 2025 return. AMDL daily drawdown and recovery analysis requires a complete daily price series.
 
 ## Amazon (AMZN) Stock Returns
 
