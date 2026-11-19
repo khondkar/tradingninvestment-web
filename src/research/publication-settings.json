@@ -18,6 +18,11 @@
   "/nvdl-etf/": {
     "homepagePlacement": "regular"
   },
+  "/amdl-return-drawdown-and-recovery/": {
+    "image": "/images/social/research/amdl-return-drawdown-and-recovery-tni-og.png",
+    "socialImage": "/images/social/research/amdl-return-drawdown-and-recovery-tni-og.png",
+    "socialImageAlt": "2025 adjusted-close return comparison: AMD gained 77.30%, AMDL gained 103.00%, and NVDL gained 32.57%."
+  },
   "/aapl-stock-yearly-return/": {
     "homepagePlacement": "regular"
   },

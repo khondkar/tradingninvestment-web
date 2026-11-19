@@ -182,6 +182,8 @@ export const annualReturnsResearchRegistry:
       config: amdlAnnualReturnsConfig,
       legacyPublished: true,
       featured: false,
+      previewImage:
+        "/images/social/research/amdl-return-drawdown-and-recovery-tni-og.png",
     },
     { config: uproAnnualReturnsConfig, legacyPublished: true, featured: false, previewImage: "/images/social/upro-tqqq-spy-drawdown-og.png" },
     {
