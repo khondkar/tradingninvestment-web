@@ -23,6 +23,7 @@ import { tqqqAnnualReturnsConfig } from "./tqqq"
 import { qqqAnnualReturnsConfig } from "./qqq"
 import { iwmAnnualReturnsConfig } from "./iwm"
 import { nvdlAnnualReturnsConfig } from "./nvdl"
+import { amdlAnnualReturnsConfig } from "./amdl"
 import { tsllAnnualReturnsConfig } from "./tsll"
 import { soxlAnnualReturnsConfig } from "./soxl"
 import { tslaAnnualReturnsConfig } from "./tsla"
@@ -174,6 +175,11 @@ export const annualReturnsResearchRegistry:
     },
     {
       config: nvdlAnnualReturnsConfig,
+      legacyPublished: true,
+      featured: false,
+    },
+    {
+      config: amdlAnnualReturnsConfig,
       legacyPublished: true,
       featured: false,
     },

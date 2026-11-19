@@ -113,7 +113,7 @@ export default function LeveragedEtfScannerPage() {
           <p className="tni-les-kicker tni-les-ink">ETF INTELLIGENCE</p>
           <h2>Explore leveraged ETFs</h2>
           <p>Use this ETF screener to filter by direction, leverage and asset class, then compare up to four funds.</p>
-          <p className="tni-les-research-links">Historical research: <a href="/tqqq-returns/">TQQQ returns</a>, <a href="/soxl-etf/">SOXL</a>, <a href="/nvdl-etf/">NVDL</a> and <a href="/tsll-etf/">TSLL</a>.</p>
+          <p className="tni-les-research-links">Historical research: <a href="/tqqq-returns/">TQQQ returns</a>, <a href="/soxl-etf/">SOXL</a>, <a href="/nvdl-etf/">NVDL</a>, <a href="/amdl-etf/">AMDL</a> and <a href="/tsll-etf/">TSLL</a>.</p>
         </div>
         <span className="tni-les-count">{results.length} matches</span>
       </div>
@@ -131,7 +131,7 @@ export default function LeveragedEtfScannerPage() {
             <li><h3>Choose direction and leverage</h3><p>Select <strong>Long</strong> or <strong>Inverse</strong>. Open <strong>Filters</strong> to choose 2× or 3× leverage and an asset class. Classifications can be preliminary; funds with unknown classifications appear only when the relevant filters are set to <strong>All</strong>.</p></li>
             <li><h3>Sort and read the saved data</h3><p>Use <strong>Sort</strong> to put research coverage, AUM, volume or daily change first. Read the dates beside each metric and open <strong>Data sources &amp; dates</strong>. Prices are saved snapshots, and unavailable values are not zero.</p></li>
             <li><h3>Compare two to four ETFs</h3><p>Check <strong>Compare</strong> on each fund card, then press <strong>Compare</strong> in the selection bar. Your selections stay selected when you change the search or filters. Remove a selected ticker to replace it, or use <strong>Clear all</strong> to start again.</p></li>
-            <li><h3>Open details and historical research</h3><p>Choose <strong>Details</strong> to see the available profile or research. Annual research is available for TQQQ, SOXL, NVDL and TSLL; SNXX has separate monthly research. Other entries may have only directory information and saved market data.</p></li>
+            <li><h3>Open details and historical research</h3><p>Choose <strong>Details</strong> to see the available profile or research. Annual research is available for TQQQ, SOXL, NVDL, AMDL and TSLL; SNXX has separate monthly research. Other entries may have only directory information and saved market data.</p></li>
           </ol>
           <aside className="tni-les-guide-example" aria-labelledby="tni-les-example-title">
             <h3 id="tni-les-example-title">Try it: compare TQQQ and SOXL</h3>

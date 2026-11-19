@@ -1,0 +1,46 @@
+{
+  "dataset": "AMDL price return and total return",
+  "ticker": "AMDL",
+  "asset_type": "leveraged_etf",
+  "issuer": "GraniteShares",
+  "leverage": "2",
+  "direction": "long",
+  "benchmark": "Advanced Micro Devices",
+  "benchmark_ticker": "AMD",
+  "inception_date": "2024-03-15",
+  "start_year": 2024,
+  "end_year": 2026,
+  "current_year_is_ytd": true,
+  "data": [
+    {
+      "year": 2024,
+      "price_return": -69.9726,
+      "total_return": -69.9726,
+      "is_ytd": false,
+      "data_through": "2024-12-31",
+      "price_source": "Yahoo Finance AMDL Close",
+      "total_return_source": "Yahoo Finance AMDL Adjusted Close",
+      "methodology": "Yahoo Finance closes; partial period from first trading close 2024-03-18 through 2024-12-31; no distribution in sampled adjusted-close series"
+    },
+    {
+      "year": 2025,
+      "price_return": 103.0026,
+      "total_return": 103.0026,
+      "is_ytd": false,
+      "data_through": "2025-12-31",
+      "price_source": "Yahoo Finance AMDL Close",
+      "total_return_source": "Yahoo Finance AMDL Adjusted Close",
+      "methodology": "Yahoo Finance closes; no AMDL distribution was recorded in these observations"
+    },
+    {
+      "year": 2026,
+      "price_return": 224.8232,
+      "total_return": 224.8232,
+      "is_ytd": true,
+      "data_through": "2026-11-18",
+      "price_source": "Yahoo Finance AMDL Close",
+      "total_return_source": "Yahoo Finance AMDL Adjusted Close",
+      "methodology": "Yahoo Finance closes; no AMDL distribution was recorded in these observations"
+    }
+  ]
+}

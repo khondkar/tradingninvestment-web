@@ -1,0 +1,47 @@
+{
+  "symbol": "Advanced Micro Devices",
+  "ticker": "AMD",
+  "asset_type": "stock",
+  "benchmark": "Advanced Micro Devices",
+  "benchmark_ticker": "AMD",
+  "metric": "Annual Price Return %",
+  "return_type": "price_return",
+  "source": "Yahoo Finance historical close and adjusted-close data; calendar endpoints checked through November 18, 2026",
+  "methodology": {
+    "calculation": "Full-year price return uses the final available split-adjusted close of each calendar year relative to the final available close of the prior calendar year. AMDL\u2019s 2024 launch-to-year-end partial period is described separately and excluded from completed-year summary statistics.",
+    "current_year": "2026 YTD is measured from the final 2025 close through November 18, 2026. The current calendar year is excluded from completed-year summary statistics."
+  },
+  "summary": {
+    "completed_years_analyzed": 1,
+    "start_year": 2025,
+    "end_year": 2025,
+    "positive_years": 1,
+    "negative_years": 0,
+    "positive_year_pct": 100.0,
+    "negative_year_pct": 0.0,
+    "average_annual_return_pct": 77.2994,
+    "median_annual_return_pct": 77.2994,
+    "best_year": {
+      "year": 2025,
+      "return_pct": 77.3
+    },
+    "worst_year": {
+      "year": 2025,
+      "return_pct": 77.3
+    }
+  },
+  "current_year": {
+    "year": 2026,
+    "label": "2026 YTD",
+    "return_pct": 147.5439,
+    "through_date": "2026-11-18"
+  },
+  "data": [
+    {
+      "year": 2025,
+      "value": 77.2994,
+      "label": "2025",
+      "status": "positive"
+    }
+  ]
+}

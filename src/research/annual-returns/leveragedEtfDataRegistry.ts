@@ -11,6 +11,9 @@ import nvdlAnnualReturns from "../../data/charts/nvdlAnnualReturns.json"
 import nvdlReturnMethods from "../../data/charts/nvdlReturnMethods.json"
 import nvdaAnnualReturns from "../../data/charts/nvdaAnnualReturns.json"
 import nvdlVsNvdaDrawdowns from "../../data/charts/nvdlVsNvdaDrawdowns.json"
+import amdlAnnualReturns from "../../data/charts/amdlAnnualReturns.json"
+import amdlReturnMethods from "../../data/charts/amdlReturnMethods.json"
+import amdlBenchmarkAnnualReturns from "../../data/charts/amdlBenchmarkAnnualReturns.json"
 
 import tsllAnnualReturns from "../../data/charts/tsllAnnualReturns.json"
 import tsllReturnMethods from "../../data/charts/tsllReturnMethods.json"
@@ -77,6 +80,12 @@ export const leveragedEtfResearchDataRegistry:
 
       drawdownData:
         nvdlVsNvdaDrawdowns as LeveragedEtfDrawdownDataset,
+    },
+    AMDL: {
+      annualReturns: amdlAnnualReturns as AnnualReturnsPageData,
+      returnMethods: amdlReturnMethods.data as ReturnMethodRow[],
+      benchmarkAnnualReturns: amdlBenchmarkAnnualReturns as AnnualReturnsPageData,
+      benchmarkName: "AMD",
     },
 
     UPRO: {
