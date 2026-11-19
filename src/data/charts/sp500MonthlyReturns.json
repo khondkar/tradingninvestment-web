@@ -18,16 +18,16 @@
     "month": 11,
     "month_name": "November",
     "label": "November 2026 MTD",
-    "return_pct": -3.1601,
-    "through_date": "2026-11-17"
+    "return_pct": -3.3831,
+    "through_date": "2026-11-18"
   },
   "current_month_risk": {
     "month": 11,
     "month_name": "November",
-    "through_date": "2026-11-17",
+    "through_date": "2026-11-18",
     "previous_month_end_close": 7580.0698,
-    "current_max_drawdown_pct": -4.5273,
-    "current_adverse_excursion_pct": -3.8486,
+    "current_max_drawdown_pct": -4.7471,
+    "current_adverse_excursion_pct": -3.8827,
     "historical_observations": 98,
     "average_max_drawdown_pct": -4.6417,
     "median_max_drawdown_pct": -3.2519,
@@ -37,7 +37,7 @@
     "median_adverse_excursion_pct": -1.6877,
     "worst_adverse_excursion_pct": -26.8737,
     "worst_adverse_excursion_year": 1929,
-    "drawdown_percentile": 33.67
+    "drawdown_percentile": 30.61
   },
   "leaders": {
     "highest_positive_frequency": {
@@ -8538,7 +8538,7 @@
       "year": 2026,
       "month": 11,
       "month_name": "November",
-      "value": -3.1601,
+      "value": -3.3831,
       "status": "negative"
     }
   ]
