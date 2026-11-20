@@ -31,7 +31,8 @@
   "current_year": {
     "year": 2026,
     "label": "2026 YTD",
-    "return_pct": 16.3884
+    "return_pct": 2.74,
+    "through_date": "2026-11-19"
   },
   "data": [
     {
@@ -356,12 +357,6 @@
       "year": 2025,
       "value": 20.3575,
       "label": "2025",
-      "status": "positive"
-    },
-    {
-      "year": 2026,
-      "value": 16.3884,
-      "label": "2026 YTD",
       "status": "positive"
     }
   ]
