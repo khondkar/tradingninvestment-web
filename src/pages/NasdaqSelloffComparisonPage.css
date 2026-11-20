@@ -1,0 +1,15 @@
+
+.tni-comparison figure { margin: 1.5rem 0; }
+.tni-comparison img { max-width: 100%; height: auto; }
+.tni-comparison .scroll-table { overflow-x: auto; }
+.tni-comparison table { width: 100%; border-collapse: collapse; }
+.tni-comparison td, .tni-comparison th {
+  padding: .65rem; text-align: left; border-bottom: 1px solid #ccd3da;
+}
+.tni-comparison .num { text-align: right; white-space: nowrap; }
+.tni-comparison .stat-grid {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.tni-comparison .stat b, .tni-comparison .stat span { display: block; }
+.tni-comparison .sources { margin-top: 2rem; }
