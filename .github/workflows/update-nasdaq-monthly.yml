@@ -1,0 +1,118 @@
+name: Update Nasdaq monthly and annual returns
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 22 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-nasdaq-monthly
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install research dependencies
+        run: python -m pip install pandas numpy yfinance matplotlib pandas-market-calendars
+
+      - name: Find the latest completed Nasdaq session
+        run: |
+          python - <<'PY'
+          import os
+          import pandas as pd
+          import pandas_market_calendars as calendars
+
+          now = pd.Timestamp.now(tz="UTC")
+          sessions = calendars.get_calendar("NASDAQ").schedule(
+              start_date=(now - pd.Timedelta(days=14)).date(),
+              end_date=now.date(),
+          )
+          last = sessions.loc[sessions.market_close <= now].index[-1]
+          with open(os.environ["GITHUB_ENV"], "a") as env:
+              print(f"EXPECTED_CLOSE={last.date()}", file=env)
+              print(f"END_EXCLUSIVE={(last + pd.Timedelta(days=1)).date()}", file=env)
+          PY
+
+      - name: Refresh monthly returns, annual returns, and charts
+        run: |
+          python scripts/generate-monthly-returns.py \
+            --symbol '^IXIC' --ticker NASDAQ --name 'Nasdaq Composite' \
+            --start-year 1972 --end-exclusive "$END_EXCLUSIVE" --asset-id nasdaq \
+            --output src/data/charts/nasdaqMonthlyReturns.json
+
+          python scripts/generate-stock-annual-returns.py \
+            --ticker '^IXIC' --name 'Nasdaq Composite' \
+            --start 1971-02-05 --end-exclusive "$END_EXCLUSIVE" --asset-slug nasdaq \
+            --annual-only --output src/data/charts/nasdaqAnnualReturns.json
+
+          python scripts/generate-monthly-context-social-charts.py \
+            --data src/data/charts/nasdaqMonthlyReturns.json \
+            --name 'Nasdaq Composite' --symbol NASDAQ \
+            --return-output public/images/social/nasdaq-monthly-return-context.png \
+            --risk-output public/images/social/nasdaq-monthly-risk-context.png
+
+      - name: Check both pages against the completed close
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import subprocess
+          from io import BytesIO
+          from pathlib import Path
+          import pandas as pd
+
+          charts = Path("src/data/charts")
+          archive = Path("src/data/market/nasdaq")
+          annual = json.loads((charts / "nasdaqAnnualReturns.json").read_text())
+          monthly = json.loads((charts / "nasdaqMonthlyReturns.json").read_text())
+          meta = json.loads((archive / "metadata.json").read_text())
+          daily = pd.read_csv(archive / "daily.csv", index_col="Date")
+          old = subprocess.check_output(["git", "show", f"HEAD:{archive}/daily.csv"])
+          old_dates = pd.read_csv(BytesIO(old), usecols=["Date"])["Date"]
+          expected = os.environ["EXPECTED_CLOSE"]
+
+          assert daily.index.is_unique and daily.index.is_monotonic_increasing
+          assert old_dates.isin(daily.index).all() and daily.Close.gt(0).all()
+          assert daily.index[-1] == meta["last_date"] == expected
+          assert monthly["current_month"]["through_date"] == expected
+          assert monthly["current_month_risk"]["through_date"] == expected
+          assert annual["summary"]["start_year"] == 1972
+
+          ytd = annual["current_year"]
+          if ytd is not None:
+              assert ytd["through_date"] == expected
+              prior = daily.loc[daily.index < expected[:4] + "-01-01", "Close"].iloc[-1]
+              calculated = 100 * (daily.Close.iloc[-1] / prior - 1)
+              assert abs(ytd["return_pct"] - calculated) <= 0.0051
+          else:
+              assert annual["summary"]["end_year"] == int(expected[:4])
+          print(f"Verified monthly and annual Nasdaq data through {expected}")
+          PY
+
+      - name: Publish updated Nasdaq data
+        run: |
+          git add src/data/charts/nasdaq{Annual,Monthly}Returns.json \
+            src/data/market/nasdaq/daily.csv \
+            public/images/social/nasdaq-monthly-{return,risk}-context.png
+          if git diff --cached --quiet; then exit 0; fi
+          git add src/data/market/nasdaq/metadata.json
+          git config user.name "TNI Research Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "Update Nasdaq monthly and annual returns"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 5
+          done
+          exit 1

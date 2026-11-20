@@ -50,6 +50,7 @@ def parse_args():
     parser.add_argument("--asset-id", required=True)
     parser.add_argument("--output", required=True)
 
+    parser.add_argument("--end-exclusive")
     return parser.parse_args()
 
 
@@ -82,6 +83,7 @@ def main():
 
     df = yf.Ticker(args.symbol).history(
         start=fetch_start,
+        end=args.end_exclusive,
         auto_adjust=False,
         actions=False,
     )

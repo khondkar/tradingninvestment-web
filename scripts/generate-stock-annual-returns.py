@@ -49,6 +49,7 @@ def main() -> None:
         help="Generate only the total-return methods JSON; skip annual data and OG assets.",
     )
 
+    parser.add_argument("--end-exclusive")
     args = parser.parse_args()
 
     if args.annual_only and args.methods_only:
@@ -59,6 +60,7 @@ def main() -> None:
     history = yf.download(
         ticker,
         start=args.start,
+        end=args.end_exclusive,
         auto_adjust=False,
         progress=False,
     )
