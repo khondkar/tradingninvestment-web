@@ -92,6 +92,17 @@ export default function StockMarketHeatmapPage() {
         </div>
       </section>
       <SP500DailyHeatmap stocks={stocks} sector={sector} onSelect={setSelected} />
+      <details className="tni-hm-walkthrough">
+        <summary>Watch how to use the S&amp;P 500 heatmap</summary>
+        <iframe
+          title="How to Read an S&P 500 Heatmap to Spot Gainers and Weak Sectors"
+          src="https://www.youtube-nocookie.com/embed/gQyjYwVpELM"
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allow="encrypted-media; fullscreen; picture-in-picture"
+          allowFullScreen
+        />
+      </details>
       <MarketSnapshotSharing
         stocks={stocks}
         sectors={snapshot.sectors ?? []}
