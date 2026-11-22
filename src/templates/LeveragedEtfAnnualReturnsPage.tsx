@@ -86,7 +86,22 @@ export default function LeveragedEtfAnnualReturnsPage({
         </div>
       ) : undefined}
       afterIntroduction={config.symbol === "SOXL" ? (
-        <SoxlRecoveryComparison />
+        <>
+          <section aria-labelledby="soxl-video-title">
+            <h2 id="soxl-video-title">Watch how a 225% SOXL rebound left $100 worth $46</h2>
+            <iframe
+              title="SOXL returns, drawdowns and recovery compared with SMH and the Nasdaq"
+              src="https://www.youtube-nocookie.com/embed/-L0TU7_usDY"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+              style={{ display: "block", width: "100%", aspectRatio: "16 / 9", height: "auto", border: 0 }}
+            />
+            <p><a href="https://youtu.be/-L0TU7_usDY">Watch on YouTube (8:12)</a></p>
+          </section>
+          <SoxlRecoveryComparison />
+        </>
       ) : config.symbol === "TQQQ" ? (
         <TqqqNasdaqComparison />
       ) : config.symbol === "AMDL" ? (
