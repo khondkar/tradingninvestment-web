@@ -1,0 +1,46 @@
+{
+  "start": "2010-03-11",
+  "end": "2026-11-20",
+  "sessions": 4202,
+  "assets": [
+    {
+      "name": "SOXL",
+      "color": "#aa3425",
+      "peak": "2021-12-27",
+      "trough": "2022-10-14",
+      "loss": -90.46,
+      "recovery": "2026-02-25",
+      "fromLow": 1230,
+      "fromPeak": 1521,
+      "latestPeak": "2026-06-22",
+      "current": -89.73,
+      "elapsed": 151
+    },
+    {
+      "name": "SMH",
+      "color": "#125391",
+      "peak": "2021-12-27",
+      "trough": "2022-10-14",
+      "loss": -45.3,
+      "recovery": "2023-07-13",
+      "fromLow": 272,
+      "fromPeak": 563,
+      "latestPeak": "2026-06-22",
+      "current": -40.19,
+      "elapsed": 151
+    },
+    {
+      "name": "Nasdaq Composite",
+      "color": "#175e48",
+      "peak": "2021-11-19",
+      "trough": "2022-12-28",
+      "loss": -36.4,
+      "recovery": "2024-02-29",
+      "fromLow": 428,
+      "fromPeak": 832,
+      "latestPeak": "2026-10-06",
+      "current": -18.05,
+      "elapsed": 45
+    }
+  ]
+}

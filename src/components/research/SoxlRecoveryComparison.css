@@ -1,0 +1,16 @@
+.soxl-recovery {color:#173047; line-height:1.6; margin:40px auto; max-width:960px; text-align:left}
+.soxl-recovery h2 {font-size:clamp(24px,3vw,33px);line-height:1.2}
+.soxl-recovery h3 {margin:22px 0 8px}
+.soxl-recovery figure {margin:24px 0}
+.soxl-recovery figure img {display:block;width:100%;height:auto;max-width:800px}
+.soxl-recovery-controls,.soxl-recovery-legend {display:flex;flex-wrap:wrap;gap:10px 16px;margin:12px 0}
+.soxl-recovery-controls button {font:inherit;font-size:14px;color:#173047;background:#fff;border:1px solid #879cac;border-radius:5px;padding:5px 10px;cursor:pointer}
+.soxl-recovery-controls button[aria-pressed=true] {color:white;background:#173047}
+.soxl-recovery-legend {font-size:15px;font-weight:700}
+.soxl-recovery-scroll {overflow-x:auto}
+.soxl-recovery table {width:100%;border-collapse:collapse;font-size:15px}
+.soxl-recovery th,.soxl-recovery td {text-align:left;padding:8px;border-bottom:1px solid #d5dfe5}
+.soxl-recovery td {white-space:nowrap;font-variant-numeric:tabular-nums}
+.soxl-recovery-method {font-size:14px}
+
+#soxl-annual-returns,#soxl-drawdown-recovery {scroll-margin-top:100px}

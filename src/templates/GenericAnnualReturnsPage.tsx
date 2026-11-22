@@ -1038,6 +1038,13 @@ export default function GenericAnnualReturnsPage({
             </div>
           )}
 
+          {config.symbol === 'SOXL' && (
+            <nav className="tni-index-jumps" aria-label="In this article">
+              <a href="#soxl-drawdown-recovery">Drawdown &amp; recovery</a>
+              <a href="#soxl-annual-returns">Returns by year</a>
+            </nav>
+          )}
+
           {config.slug === 'sp-500-returns' && (
             <nav className="tni-index-jumps" aria-label="In this article">
               <a href="#sp500-annual-returns">Returns</a>
@@ -2152,7 +2159,7 @@ export default function GenericAnnualReturnsPage({
               Download {config.name} Annual Returns CSV
             </a>
 
-            {config.seo.socialImage ? (
+            {config.symbol === "SOXL" ? null : config.seo.socialImage ? (
               <a
                 href={config.seo.socialImage}
                 download={config.symbol === 'IWM'
@@ -2356,7 +2363,7 @@ export default function GenericAnnualReturnsPage({
             }}
           >
             <div>
-              <h2
+              <h2 id={config.symbol === "SOXL" ? "soxl-annual-returns" : undefined}
                 style={{
                   margin: 0,
 

@@ -87,13 +87,13 @@ export const soxlAnnualReturnsConfig: AnnualReturnsAssetConfig = {
 
   seo: {
     title:
-      "SOXL ETF: Holdings, Performance & Historical Returns",
+      "SOXL ETF Returns, Drawdown & Recovery Time vs. SMH and Nasdaq",
 
     h1:
-      "SOXL ETF: Performance, Holdings & Historical Returns",
+      "SOXL ETF Drawdowns, Recovery Times & Historical Returns",
 
     description:
-      "Analyze SOXL ETF performance, holdings, historical returns, drawdowns and growth of $10,000, including how 3× daily semiconductor exposure affects risk.",
+      "SOXL gained 224.72% in 2023. Why did recovery from its 2022 low take 1,230 days? See annual returns and compare drawdowns with SMH and the Nasdaq Composite.",
 
     socialTitle:
       "SOXL ETF: Performance, Holdings & Historical Returns",

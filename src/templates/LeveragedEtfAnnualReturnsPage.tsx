@@ -1,3 +1,4 @@
+import SoxlRecoveryComparison from "../components/research/SoxlRecoveryComparison"
 import UproTqqqComparison from "../components/research/UproTqqqComparison"
 import TqqqNasdaqComparison from "../components/research/TqqqNasdaqComparison"
 import type {
@@ -58,7 +59,9 @@ export default function LeveragedEtfAnnualReturnsPage({
       dataset={dataset}
       benchmarkDataset={benchmarkDataset}
       benchmarkName={benchmarkName}
-      introContent={config.symbol === "TQQQ" ? (
+      introContent={config.symbol === "SOXL" ? (
+        <p>SOXL and SMH hit bottom on the same day in 2022. From that low, SMH took <strong>272 days</strong> to regain its previous high. SOXL took <strong>1,230 days</strong>, even after gaining 224.72% in 2023. How deep was the loss that a gain that large still left investors waiting?</p>
+      ) : config.symbol === "TQQQ" ? (
         <>
         <p style={{ color: "#10233f", fontSize: 18, fontWeight: 600, lineHeight: 1.7 }}>
           {config.seo.description}
@@ -82,7 +85,9 @@ export default function LeveragedEtfAnnualReturnsPage({
           <p>How does UPRO compare with TQQQ and SPY? Explore returns across matching holding periods, compare losses from previous peaks, and see how long each fund took to recover. Use the interactive UPRO vs TQQQ chart and tables below to compare YTD, 1-, 3-, 5- and 10-year outcomes and growth of $10,000.</p>
         </div>
       ) : undefined}
-      afterIntroduction={config.symbol === "TQQQ" ? (
+      afterIntroduction={config.symbol === "SOXL" ? (
+        <SoxlRecoveryComparison />
+      ) : config.symbol === "TQQQ" ? (
         <TqqqNasdaqComparison />
       ) : config.symbol === "AMDL" ? (
         <AmdlLeveragedComparison />
@@ -115,7 +120,7 @@ export default function LeveragedEtfAnnualReturnsPage({
       }
       afterRollingComparison={
         <>
-          {drawdownData && config.symbol !== "TQQQ" && <LeveragedEtfDrawdownComparison dataset={drawdownData} />}
+          {drawdownData && config.symbol !== "TQQQ" && config.symbol !== "SOXL" && <LeveragedEtfDrawdownComparison dataset={drawdownData} />}
           {config.symbol === "UPRO" && <UproTqqqComparison />}
         </>
       }
