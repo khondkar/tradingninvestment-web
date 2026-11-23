@@ -15,7 +15,7 @@ const escapeHtml = (value) => value.replaceAll('&', '&amp;').replaceAll('<', '&l
 const vite = await createServer({ root, server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' })
 let AboutPage
 try {
-  ;({ AboutPage } = await vite.ssrLoadModule('/src/App.tsx'))
+  ;({ default: AboutPage } = await vite.ssrLoadModule('/src/pages/AboutPage.tsx'))
 } finally {
   await vite.close()
 }

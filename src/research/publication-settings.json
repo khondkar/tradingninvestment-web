@@ -48,7 +48,7 @@
     "homepagePlacement": "regular",
     "image": "/images/social/tqqq-qld-qqq-drawdown-recovery-og.png",
     "socialImage": "/images/social/tqqq-qld-qqq-drawdown-recovery-og.png",
-    "socialImageAlt": "TQQQ, QLD and QQQ maximum adjusted-close drawdowns of 81.66%, 63.68% and 35.12%, with 707, 513 and 405 calendar days from their lows to recovery. Matching daily history from February 11, 2010 through November 10, 2026; chart shows the 2021\u20132024 recovery cycle."
+    "socialImageAlt": "TQQQ, QLD and QQQ maximum adjusted-close drawdowns of 81.66%, 63.68% and 35.12%, with 707, 513 and 405 calendar days from their lows to recovery. Matching daily history from February 11, 2010 through November 10, 2026; chart shows the 2021–2024 recovery cycle."
   },
   "/googl-stock-returns/": {
     "homepagePlacement": "regular"
@@ -81,7 +81,7 @@
   "/new-iphone-release-apple-stock-price-history/": {
     "homepagePlacement": "featured",
     "socialImage": "/images/social/iphone-announcements-2007-2026-og.png",
-    "socialImageAlt": "Twenty annual flagship iPhone announcement dates, 2007\u20132026, with AAPL and S&P 500 returns over 20 trading sessions from the previous close."
+    "socialImageAlt": "Twenty annual flagship iPhone announcement dates, 2007–2026, with AAPL and S&P 500 returns over 20 trading sessions from the previous close."
   },
   "/upro-etf/": {
     "image": "/images/social/upro-tqqq-spy-drawdown-og.png"
@@ -90,6 +90,11 @@
     "homepagePlacement": "regular",
     "image": "/images/social/research/mega-ipo-yearly-medians.png",
     "socialImage": "/images/social/research/mega-ipo-yearly-medians.png",
-    "socialImageAlt": "First-day IPO returns by year, comparing purchase at the IPO offer price with purchase at the first public market trade. Three selected IPOs per year, 2022\u20132026 through November 17."
+    "socialImageAlt": "First-day IPO returns by year, comparing purchase at the IPO offer price with purchase at the first public market trade. Three selected IPOs per year, 2022–2026 through November 17."
+  },
+  "/10-sec-accounting-cases-enron-nvidia-stock-recovery/": {
+    "image": "/images/social/research/sec-enron-nvidia-recovery.png",
+    "socialImage": "/images/social/research/sec-enron-nvidia-recovery.png",
+    "socialImageAlt": "Enron: $100 fell to $27 in one month. Nvidia: $100 grew to $152 one year after its 2022 SEC settlement."
   }
 }

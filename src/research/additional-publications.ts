@@ -17,6 +17,7 @@ import type { ResearchItem } from './discovery'
 // }
 
 export const additionalPublications: ResearchItem[] = [
+  {"slug": "10-sec-accounting-cases-enron-nvidia-stock-recovery", "path": "/10-sec-accounting-cases-enron-nvidia-stock-recovery/", "title": "10 SEC Cases", "description": "Stock returns.", "name": "Nvidia", "symbol": "NVDA", "categories": ["stock", "market-history"], "kind": "article"},
   {
     slug: 'anthropic-ipo-debut-performance',
     path: '/research/anthropic-ipo-debut-performance/',
