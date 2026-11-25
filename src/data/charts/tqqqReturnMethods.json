@@ -25,7 +25,7 @@
     {
       "year": 2012,
       "price_return": 52.287,
-      "total_return": 52.2869,
+      "total_return": 52.287,
       "is_ytd": false,
       "data_through": "2012-12-31",
       "price_source": "Yahoo Finance TQQQ Close",
@@ -35,7 +35,7 @@
     {
       "year": 2013,
       "price_return": 139.7334,
-      "total_return": 139.7335,
+      "total_return": 139.7334,
       "is_ytd": false,
       "data_through": "2013-12-31",
       "price_source": "Yahoo Finance TQQQ Close",
@@ -135,7 +135,7 @@
     {
       "year": 2023,
       "price_return": 193.0636,
-      "total_return": 198.0487,
+      "total_return": 198.0488,
       "is_ytd": false,
       "data_through": "2023-12-31",
       "price_source": "Yahoo Finance TQQQ Close",
@@ -164,10 +164,10 @@
     },
     {
       "year": 2026,
-      "price_return": 7.2838,
-      "total_return": 7.9168,
+      "price_return": -14.1123,
+      "total_return": -13.6055,
       "is_ytd": true,
-      "data_through": "2026-11-10",
+      "data_through": "2026-11-25",
       "price_source": "Yahoo Finance TQQQ Close",
       "total_return_source": "Yahoo Finance TQQQ Adjusted Close",
       "methodology": "yahoo_close_and_adjusted_close"

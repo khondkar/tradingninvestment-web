@@ -518,6 +518,7 @@ def main() -> None:
 
         current_snapshot = {
             "year": current_year,
+            "through_date": latest_market_date.date().isoformat(),
             "label": f"{current_year} YTD",
             "return_pct": round(
                 float(row["return_pct"]), 2
