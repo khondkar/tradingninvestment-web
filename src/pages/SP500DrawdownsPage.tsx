@@ -839,134 +839,26 @@ export default function SP500DrawdownsPage() {
           SEPTEMBER 2026 MARKET CONTEXT
       ==================================================================== */}
 
-      <section className="tni-drawdown-2026-context">
-
-        <div className="tni-context-heading-row">
-          <div>
-            <span className="tni-drawdown-section-label">
-              2026 MARKET CONTEXT
-            </span>
-
-            <h2>
-              Is a Stock Market Correction Coming?
-            </h2>
-          </div>
-
-          <span className="tni-context-date">
-            UPDATED SEPTEMBER 2026
-          </span>
-        </div>
-
-        <p>
-          September has historically been the
-          weakest S&amp;P 500 month in TNI&apos;s
-          completed-month dataset, with an average
-          return of −1.12%. Investor sentiment is
-          also unusually pessimistic: the AAII
-          Sentiment Survey reported 53.3% bearish
-          sentiment for the week ending September
-          16, 2026, compared with its 31.5%
-          historical average.
-        </p>
-
-        <div className="tni-context-signal-grid">
-
-          <article>
-            <span>
-              SEPTEMBER HISTORICAL AVERAGE
-            </span>
-            <strong>−1.12%</strong>
-            <small>
-              Weakest average S&amp;P 500 month in
-              TNI&apos;s completed-month dataset.
-            </small>
-          </article>
-
-          <article>
-            <span>
-              AAII BEARISH SENTIMENT
-            </span>
-            <strong>53.3%</strong>
-            <small>
-              Week ending September 16, 2026.
-              Historical average: 31.5%.
-            </small>
-          </article>
-
-          <article>
-            <span>
-              CURRENT S&amp;P 500 DRAWDOWN
-            </span>
-            <strong>
-              {formatPercent(currentDrawdown)}
-            </strong>
-            <small>
-              Through {
-                formatResearchDate(
-                  dataset.current_drawdown.date,
-                )
-              }.
-            </small>
-          </article>
-
-        </div>
-
-        <p className="tni-context-caution">
-          Seasonal weakness and bearish sentiment
-          do not establish that a correction is
-          coming. They describe current context,
-          not a forecast. TNI therefore compares
-          current conditions with observed
-          historical drawdowns rather than treating
-          either indicator as a prediction.
-        </p>
-
-
-        <div className="tni-crash-2026">
-
-          <span className="tni-drawdown-section-label">
-            CRASH RISK IN CONTEXT
-          </span>
-
-          <h2>
-            Will the Stock Market Crash in 2026?
-          </h2>
-
-          <>
-            <p>
-              A stock market crash in 2026 cannot be
-              known in advance. Historical drawdowns
-              can, however, show how often meaningful
-              declines became substantially deeper.
-              Under TNI&apos;s closing-price,
-              peak-to-full-recovery methodology, the
-              S&amp;P 500 recorded {drawdownCount}
-              independent declines of at least 10%
-              across this historical sample.</p>
-
-            <p> Of
-              those, {bearMarketCount} reached the
-              20% bear-market threshold.
-            </p>
-          </>
-
-          <p>
-            In other words, {
-              formatPercent(
-                percentReachingBear,
-              )
-            } of the 10%+ drawdown episodes in this
-            dataset eventually reached 20% or more.
-            That historical rate provides context
-            for correction risk, but it does not
-            predict whether the market will crash
-            in 2026 or whether a future correction
-            will become a bear market.
-          </p>
-
-        </div>
-
-      </section>
+      <section id="november-2026-correction" className="tni-drawdown-2026-context">
+  <span className="tni-drawdown-section-label">NOVEMBER 2026 MARKET CONTEXT</span>
+  <h2>AI and chip stocks led the November S&amp;P 500 correction</h2>
+  <p>On November 20, chip stocks fell roughly 11%, the Nasdaq Composite lost 5.3%, and the S&amp;P 500 dropped 3.7%. The heaviest selling hit the companies most closely tied to AI spending. By the closing bell, the S&amp;P 500 had fallen 11.62% from its October 6 high.</p>
+  <p><a href="https://malaysia.news.yahoo.com/nasdaq-plunges-5-day-anthropic-211724232.html">Reuters reporting on the November 20 selloff</a></p>
+  <figure>
+    <img style={{width:"100%",maxWidth:760,height:"auto"}} src="/images/research/november-2026-correction/index.svg" alt="Daily S&amp;P 500 closes from the October 6 peak of 7,818.93 through the November 20 low of 6,910.39 and November 25 rebound to 7,182.78." />
+    <figcaption>The index regained the 7,037 correction line by November 25. At 7,182.78, it remained 8.14% below its October peak. The historical table therefore still counts this as one open episode.</figcaption>
+  </figure>
+  <h3>Nvidia’s SEC inquiry added pressure on chip stocks</h3>
+  <p>On November 20, Reuters reported that the SEC was examining potential accounting issues at Nvidia. Nvidia’s shares extended their losses after the report. The specific accounting questions were still unclear. The timing matters: the index had already been falling for weeks when the report added pressure on one of the largest AI stocks.</p>
+  <p><a href="https://www.reuters.com/world/us-secs-nvidia-probe-is-examining-potential-accounting-issues-sources-say-2026-11-20/">Reuters reporting on the Nvidia inquiry</a></p>
+  <h3>Anthropic’s IPO showed how quickly the AI premium faded</h3>
+  <p>On November 19, Anthropic opened at $111.50 after pricing its IPO at $83. It closed at $97.17. An investor who received the offer price finished the day up 17.1%, while someone who bought the first public trade lost 12.9%. Anthropic fell again the next day as the technology selloff broadened.</p>
+  <figure>
+    <img style={{width:"100%",maxWidth:760,height:"auto"}} src="/images/research/november-2026-correction/ipo.svg" alt="Anthropic buyers at the IPO offer gained 17.1% and buyers at the first public trade lost 12.9% by the same closing bell." />
+    <figcaption>Both returns end at the November 19 close of $97.17. Only the entry price changes.</figcaption>
+  </figure>
+  <p><a href="https://youtu.be/52f_PlXMaOk">Watch TNI’s full 15-IPO entry-price study</a> · <a href="https://ca.investing.com/news/economy-news/wall-st-futures-slip-as-anthropic-debut-fails-to-reassure-ai-investors-4971829">Read the November 20 market recap</a></p>
+</section>
 
 
       {/* ====================================================================
@@ -1054,6 +946,7 @@ export default function SP500DrawdownsPage() {
             <thead>
               <tr>
                 <th>Peak</th>
+                <th>First 10% close</th>
                 <th>Trough</th>
                 <th>Max Drawdown</th>
                 <th>Type</th>
@@ -1064,7 +957,7 @@ export default function SP500DrawdownsPage() {
             </thead>
 
             <tbody>
-              {dataset.events.map((event) => (
+              {dataset.events.slice().reverse().map((event) => (
                 <tr key={event.event}>
                   <td>
                     {formatResearchDate(
@@ -1072,6 +965,9 @@ export default function SP500DrawdownsPage() {
                     )}
                   </td>
 
+                  <td>
+                    {formatResearchDate(event.correction_threshold_date)}
+                  </td>
                   <td>
                     {formatResearchDate(
                       event.trough_date,
