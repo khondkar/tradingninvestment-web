@@ -18,13 +18,13 @@
     "month": 11,
     "month_name": "November",
     "label": "November 2026 MTD",
-    "return_pct": -5.2972,
-    "through_date": "2026-11-23"
+    "return_pct": -6.6968,
+    "through_date": "2026-11-24"
   },
   "current_month_risk": {
     "month": 11,
     "month_name": "November",
-    "through_date": "2026-11-23",
+    "through_date": "2026-11-24",
     "previous_month_end_close": 25437.0,
     "current_max_drawdown_pct": -12.1181,
     "current_adverse_excursion_pct": -11.495,
@@ -4842,7 +4842,7 @@
       "year": 2026,
       "month": 11,
       "month_name": "November",
-      "value": -5.2972,
+      "value": -6.6968,
       "status": "negative"
     }
   ]
