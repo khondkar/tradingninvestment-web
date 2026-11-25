@@ -103,7 +103,22 @@ export default function LeveragedEtfAnnualReturnsPage({
           <SoxlRecoveryComparison />
         </>
       ) : config.symbol === "TQQQ" ? (
-        <TqqqNasdaqComparison />
+        <>
+          <section aria-labelledby="tqqq-video-title">
+            <h2 id="tqqq-video-title">Watch the 10-year TQQQ vs. QQQ backtest</h2>
+            <iframe
+              title="How $10,000 in TQQQ and QQQ performed over 10 years"
+              src="https://www.youtube-nocookie.com/embed/VyQn9NH37tw"
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allow="encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+              style={{ display: "block", width: "100%", aspectRatio: "16 / 9", height: "auto", border: 0 }}
+            />
+            <p><a href="https://youtu.be/VyQn9NH37tw">Watch on YouTube</a></p>
+          </section>
+          <TqqqNasdaqComparison />
+        </>
       ) : config.symbol === "AMDL" ? (
         <AmdlLeveragedComparison />
       ) : config.symbol === "UPRO" && config.companyContext ? (
