@@ -4,5 +4,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: { manifest: true },
+  build: { manifest: true, rolldownOptions: { input: { index: 'index.html', siteSearch: 'src/site-search-entry.tsx' } } },
 })

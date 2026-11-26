@@ -1,0 +1,16 @@
+#tni-site-search{display:block;position:relative;z-index:150;margin:0;padding:7px 16px;background:#112a46;color:white;font:15px/1.4 system-ui,sans-serif}
+.tni-global-search{position:relative;max-width:860px;margin:0 auto}
+.tni-global-search form{display:flex;align-items:center;gap:14px;margin:0}
+.tni-global-search label{font:700 15px/1.2 system-ui,sans-serif;white-space:nowrap;color:white}
+.tni-query-wrap{display:flex;align-items:center;flex:1;min-width:0;background:white;border-radius:8px}
+.tni-query-wrap input{background:transparent;color:#112a46;border:0;min-width:0;width:100%;font:16px/1.4 system-ui,sans-serif;padding:9px 12px}
+.tni-query-wrap button{background:transparent;color:#174c88;border:0;display:grid;place-items:center;min-width:44px;height:40px;cursor:pointer}
+.tni-query-wrap:focus-within{outline:3px solid #78b7ff}
+.tni-matches{position:absolute;left:0;right:0;top:calc(100% + 4px);max-height:55vh;overflow:auto;background:white;color:#17283b;box-shadow:0 10px 28px #112a4638;border:1px solid #cad6e4;border-radius:8px;padding:9px 12px;text-align:left}
+.tni-matches[hidden]{display:none}
+.tni-matches [role=status]{font-size:13px;color:#46596d}
+.tni-matches ul{list-style:none;padding:0;margin:4px 0}
+.tni-matches li{margin:0;padding:0}
+.tni-matches li a{display:block;color:#173552;text-decoration:none;font:600 15px/1.4 system-ui,sans-serif;padding:10px 6px}
+.tni-matches li[aria-selected=true],.tni-matches a:hover,.tni-matches a:focus-visible{background:#edf4ff}
+@media(max-width:540px){#tni-site-search{padding:6px 8px}.tni-global-search form{gap:7px}.tni-global-search label{font-size:13px}.tni-query-wrap input{padding-left:8px}}

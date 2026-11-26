@@ -14,7 +14,7 @@ import { drawdownsResearchRegistry } from './research/drawdowns/registry'
 import { ResearchConnections, ResearchHubPage, ResearchTrail } from './components/research/ResearchDiscovery'
 import { getHub } from './research/discovery'
 import PremiumResearchHome from './components/home/PremiumResearchHome'
-import HomeSearch from './components/home/HomeSearch'
+import './components/home/HomeTop.css'
 import './SiteShell.css'
 
 import { loadResearchData } from './performance/researchData'
@@ -311,7 +311,6 @@ function Header({
         </nav>
 
         {isHome && <button className="tni-home-share" type="button" onClick={shareCurrentPage} aria-label="Share this page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4m-6.8 7 6.8 4"/></svg></button>}
-        {isHome && <HomeSearch />}
         {isHome && <a className="tni-home-header-launch" href="https://app.tradingninvestment.com/live/news">Launch TNI <span aria-hidden="true">→</span></a>}
         <div className="header-actions">
 

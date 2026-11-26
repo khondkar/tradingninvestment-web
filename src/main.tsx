@@ -6,6 +6,7 @@ import './components/research/ArticleProse.css'
 import App, { prepareApp } from './App.tsx'
 
 async function start() {
+  if (import.meta.env.DEV) await import('./site-search-entry')
   const dowPath = '/100-years-dow-jones-industrial-average-djia-events-history-chart'
 
   if (window.location.pathname.replace(/\/$/, '') === dowPath) {
