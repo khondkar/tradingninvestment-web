@@ -35,6 +35,14 @@ export const additionalPublications: ResearchItem[] = [
     image: '/images/social/research/amd-outlook-nov13.png', publishedAt: '2026-11-13',
   },
   {
+    slug: 'ai-chip-stocks-vs-dot-com-crash', path: '/ai-chip-stocks-vs-dot-com-crash/',
+    title: 'Are AI chip stocks following the dot-com crash?', description: 'Compare the 2026 AI chip selloff with the dot-com crash using SOX, Nasdaq-100, Nvidia, historical chip stocks, drawdown charts and downloadable data.',
+    name: 'PHLX Semiconductor Index', symbol: 'SOX',
+    image: '/ai-chip-stocks-vs-dot-com-crash/sox-bounce-og.png',
+    categories: ['index', 'nasdaq', 'market-history', 'market-crash', 'drawdowns'],
+    topics: ['risk', 'history'], kind: 'article', publishedAt: '2026-11-26',
+  },
+  {
     slug: 'nasdaq-ai-selloff-vs-dot-com-crash',
     path: '/nasdaq-ai-selloff-vs-dot-com-crash/',
     title: "The Nasdaq Fell 13.48%. How Does Today\u2019s AI Sell-Off Compare With the Dot-Com Crash?",
