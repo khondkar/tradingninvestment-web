@@ -26,3 +26,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tradingninvestment.com/sitemap.xml
+Sitemap: https://tradingninvestment.com/sitemap-sox-research.xml
