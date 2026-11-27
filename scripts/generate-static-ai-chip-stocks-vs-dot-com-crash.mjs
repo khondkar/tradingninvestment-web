@@ -15,7 +15,7 @@ const canonical =
   'https://tradingninvestment.com/ai-chip-stocks-vs-dot-com-crash/'
 const title = 'Are AI chip stocks following the dot-com crash? | TNI'
 const description = 'Compare the 2026 AI chip selloff with the dot-com crash using SOX, Nasdaq-100, Nvidia, historical chip stocks, drawdown charts and downloadable data.'
-const image = 'https://tradingninvestment.com/ai-chip-stocks-vs-dot-com-crash/sox-bounce-og.png'
+const image = 'https://tradingninvestment.com/ai-chip-stocks-vs-dot-com-crash/sox-cycle.png'
 
 const escape = (value) =>
   String(value)
@@ -68,7 +68,7 @@ setMeta('property', 'og:description', description)
 setMeta('property', 'og:url', canonical)
 setMeta('property', 'og:type', 'article')
 setMeta('property', 'og:image', image)
-setMeta('property', 'og:image:alt', 'Nasdaq Composite: Dot-com boom and AI boom, indexed to 100')
+setMeta('property', 'og:image:alt', 'SOX selloffs from their 2000 and 2026 peaks, with the matched-stage rebound and dot-com low annotated')
 setMeta('name', 'twitter:title', title)
 setMeta('name', 'twitter:description', description)
 setMeta('name', 'twitter:image', image)
